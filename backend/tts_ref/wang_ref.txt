@@ -1,0 +1,9 @@
+rotation like you do third generation fan beam geometry.
+So in this case, the projection profile shown here
+is transversely truncated.
+Truncated both sides, you cannot use Fourier slice theorem
+anymore.
+So how can you deal with this transverse data truncation
+problem?
+This is very challenging.
+And then mathematicians prove that.

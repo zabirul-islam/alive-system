@@ -1,0 +1,113 @@
+# ============================================================
+# configs/alive_lora.yml
+# Axolotl LoRA fine-tuning config for ALIVE-ED
+#
+# Base model:  meta-llama/Llama-3.1-8B-Instruct
+# Adapter:     LoRA  (rank 32, alpha 64)
+# Dataset:     Medical imaging QA from 23 lecture slides
+# Hardware:    Single H100 (CUDA_VISIBLE_DEVICES=0)
+#
+# Run:
+#   conda activate finetune
+#   CUDA_VISIBLE_DEVICES=0 axolotl train configs/alive_lora.yml 2>&1 | tee logs/finetune.log
+# ============================================================
+
+# ── BASE MODEL ───────────────────────────────────────────────
+base_model: meta-llama/Meta-Llama-3.1-8B-Instruct
+model_type: LlamaForCausalLM
+tokenizer_type: AutoTokenizer
+trust_remote_code: true
+
+# ── LoRA ADAPTER ─────────────────────────────────────────────
+adapter: lora
+lora_r: 32
+lora_alpha: 64          # rule of thumb: alpha = 2 * r
+lora_dropout: 0.05
+lora_target_modules:
+  - q_proj
+  - v_proj
+  - k_proj
+  - o_proj
+  - gate_proj
+  - up_proj
+  - down_proj
+# All 7 projection types gives best domain adaptation coverage.
+# Reduces to q_proj + v_proj only if GPU OOM occurs.
+
+# ── DATASET ──────────────────────────────────────────────────
+datasets:
+  - path: data/finetune/train.jsonl
+    type: alpaca               # matches our to_alpaca() format
+
+dataset_prepared_path: data/finetune/prepared
+test_path: data/finetune/val.jsonl
+
+# Alpaca prompt template — must match what we saved in clean_and_split.py
+# axolotl auto-applies the standard Alpaca template:
+#   Below is an instruction... ### Instruction: ... ### Input: ... ### Response:
+
+# ── SEQUENCE & BATCHING ──────────────────────────────────────
+sequence_len: 2048          # covers longest slide context + question + answer
+sample_packing: true        # packs multiple short examples into one sequence
+                            # improves H100 GPU utilization significantly
+pad_to_sequence_len: true
+
+micro_batch_size: 2         # per-GPU batch size
+gradient_accumulation_steps: 8    # effective batch = 2 * 8 = 16
+
+# ── TRAINING DURATION ────────────────────────────────────────
+num_epochs: 3
+# At ~4000 train examples, 3 epochs = ~750 gradient steps
+# Expected training time on H100: 2-3 hours
+# If val_loss plateaus before epoch 3, stop early (see below)
+
+# ── OPTIMIZER ────────────────────────────────────────────────
+optimizer: adamw_torch   # 8-bit Adam saves ~2GB vs standard Adam
+lr_scheduler: cosine
+learning_rate: 0.0002       # 2e-4 is standard for LoRA
+warmup_steps: 50            # ~6% of total steps
+
+# ── EVALUATION & CHECKPOINTING ───────────────────────────────
+eval_steps: 100             # evaluate on val set every 100 steps
+save_steps: 200             # save checkpoint every 200 steps
+save_total_limit: 3         # keep only 3 most recent checkpoints
+logging_steps: 10
+
+# Early stopping: uncomment if you want automatic stopping
+# early_stopping_patience: 3    # stop if val_loss doesn't improve for 3 evals
+
+# Output directory
+output_dir: checkpoints/alive-llama-lora
+
+# ── HARDWARE & PRECISION ─────────────────────────────────────
+bf16: true                  # H100 supports bfloat16 natively
+tf32: true                  # additional matmul speedup on Ampere+
+gradient_checkpointing: true  # trade compute for memory (allows larger batches)
+flash_attention: true       # FlashAttention-2 — significant speedup + memory saving
+
+# ── SPECIAL TOKENS ───────────────────────────────────────────
+# Llama-3.1 uses its own chat template tokens
+# axolotl handles these automatically with type: alpaca
+# No special token configuration needed
+
+# ── WEIGHTS & BIASES LOGGING (OPTIONAL) ──────────────────────
+# Uncomment if you want training curves logged to wandb
+# (useful for the training loss figure in the paper)
+# wandb_project: alive-ed-paper1
+# wandb_run_id: lora-llama31-8b
+
+# ── NOTES FOR PAPER ──────────────────────────────────────────
+# Table 3 (Hyperparameters) should report:
+#   Base model:         meta-llama/Llama-3.1-8B-Instruct
+#   LoRA rank (r):      32
+#   LoRA alpha:         64
+#   LoRA dropout:       0.05
+#   Target modules:     q,k,v,o,gate,up,down projections (7 modules)
+#   Batch size:         16 (effective)
+#   Learning rate:      2e-4
+#   LR schedule:        cosine with 50 warmup steps
+#   Epochs:             3
+#   Sequence length:    2048
+#   Optimizer:          AdamW 8-bit
+#   Precision:          bfloat16
+#   Hardware:           NVIDIA H100

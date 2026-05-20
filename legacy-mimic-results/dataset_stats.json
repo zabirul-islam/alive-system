@@ -1,0 +1,53 @@
+{
+  "total_pairs": 5207,
+  "train": 4191,
+  "val": 508,
+  "test": 508,
+  "difficulty": {
+    "basic": 1245,
+    "intermediate": 2013,
+    "advanced": 1949
+  },
+  "lectures": {
+    "Lecture 1": 240,
+    "Lecture 10": 229,
+    "Lecture 11": 316,
+    "Lecture 12": 239,
+    "Lecture 13": 236,
+    "Lecture 14": 278,
+    "Lecture 15": 140,
+    "Lecture 16": 266,
+    "Lecture 17": 269,
+    "Lecture 18": 255,
+    "Lecture 19": 264,
+    "Lecture 2": 220,
+    "Lecture 20": 255,
+    "Lecture 21": 204,
+    "Lecture 22": 212,
+    "Lecture 23": 236,
+    "Lecture 3": 197,
+    "Lecture 4": 228,
+    "Lecture 5": 206,
+    "Lecture 6": 178,
+    "Lecture 7": 217,
+    "Lecture 8": 193,
+    "Lecture 9": 129
+  },
+  "question_len": {
+    "min": 5,
+    "max": 32,
+    "mean": 12.5,
+    "median": 12
+  },
+  "answer_len": {
+    "min": 10,
+    "max": 66,
+    "mean": 23.4,
+    "median": 23
+  },
+  "slide_text_len": {
+    "min": 0,
+    "max": 0,
+    "mean": 0
+  }
+}

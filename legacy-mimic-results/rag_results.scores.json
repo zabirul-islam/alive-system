@@ -1,0 +1,19 @@
+{
+  "input": "data/eval/rag_results.jsonl",
+  "pred_key": "base_rag_answer",
+  "n": 508,
+  "bertscore_f1": 0.7443476319313049,
+  "bertscore_f1_std": 0.09511573612689972,
+  "bertscore_precision": 0.7226622700691223,
+  "bertscore_precision_std": 0.10295747965574265,
+  "bertscore_recall": 0.7710849642753601,
+  "bertscore_recall_std": 0.09884116798639297,
+  "rouge1": 0.5045843107921372,
+  "rouge2": 0.3166218601877148,
+  "rougeL": 0.4325554635559916,
+  "factual_error_rate": 0.003937007874015748,
+  "factual_errors": 2,
+  "answer_length_mean": 33.354330708661415,
+  "answer_length_median": 32.0,
+  "answer_length_std": 12.070815087172855
+}

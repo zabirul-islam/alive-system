@@ -1,0 +1,98 @@
+# ============================================================
+# .gitignore for ALIVE-ED
+# ~/islamm11/alive/backend/
+# ============================================================
+
+# ── Python ───────────────────────────────────────────────────
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.Python
+*.egg-info/
+dist/
+build/
+.eggs/
+*.egg
+
+# ── Virtual envs (use conda, not venv) ───────────────────────
+.venv/
+venv/
+env/
+
+# ── Large model files ─────────────────────────────────────────
+*.pt
+*.pth
+*.bin
+*.safetensors
+*.gguf
+*.ggml
+checkpoints/
+SadTalker/checkpoints/
+SadTalker/gfpgan/
+MuseTalk/models/
+MuseTalk/weights/
+
+# ── Generated data (too large for git) ───────────────────────
+data/qa_raw/
+data/finetune/prepared/
+rag_store/faiss.index
+
+# ── Keep these data files (small, important) ─────────────────
+!rag_store/chunks.json
+!rag_store/meta.json
+!data/finetune/stats.json
+!data_pipeline/audit_report.json
+
+# ── Media outputs ────────────────────────────────────────────
+results/
+*.mp4
+*.wav
+*.mp3
+*.webm
+
+# ── Temporary TTS/avatar files ───────────────────────────────
+tmp_tts_*.wav
+backend/tmp_*
+
+# ── Lecture slide images (large JPEGs) ───────────────────────
+Lectures/*/Images/
+# Keep Texts/ (small .txt files — these are your corpus)
+!Lectures/*/Texts/
+
+# ── Redis / Celery ───────────────────────────────────────────
+dump.rdb
+celerybeat-schedule
+celerybeat.pid
+
+# ── Logs ─────────────────────────────────────────────────────
+logs/
+*.log
+nohup.out
+
+# ── IDE / OS ─────────────────────────────────────────────────
+.idea/
+.vscode/
+*.swp
+*.swo
+.DS_Store
+Thumbs.db
+*~
+
+# ── Jupyter ──────────────────────────────────────────────────
+.ipynb_checkpoints/
+*.ipynb
+
+# ── Evaluation outputs (commit only final results) ───────────
+evaluation/results_base.json
+evaluation/results_finetuned.json
+evaluation/latency_sadtalker.json
+evaluation/latency_musetalk.json
+# Uncomment to exclude all eval outputs:
+# evaluation/
+
+# ── Environment files (never commit secrets) ─────────────────
+.env
+.env.*
+secrets.yaml
+api_keys.txt

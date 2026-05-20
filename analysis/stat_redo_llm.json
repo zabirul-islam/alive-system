@@ -1,0 +1,134 @@
+{
+  "n": 508,
+  "bertscore_f1": {
+    "base_mean": 0.7371620076495832,
+    "base_std": 0.09415517888809712,
+    "fine_mean": 0.7685281908887578,
+    "fine_std": 0.09606855129414747,
+    "delta_mean": 0.03136618323917464,
+    "delta_ci95": [
+      0.02421307130680075,
+      0.03881132090684232
+    ],
+    "wilcoxon": {
+      "W": 35839.0,
+      "p": 1.9660818444377252e-17,
+      "n_pairs": 508,
+      "n_nonzero": 504
+    },
+    "cohens_d_paired": 0.3774410180104655,
+    "cliffs_delta": 0.1821214892429785
+  },
+  "bertscore_precision": {
+    "base": 0.7151443958282471,
+    "fine": 0.7591004967689514,
+    "delta": 0.043956100940704346,
+    "note": "per-example precision not stored; no paired test available"
+  },
+  "bertscore_recall": {
+    "base": 0.7643795609474182,
+    "fine": 0.7806946635246277,
+    "delta": 0.016315102577209473,
+    "note": "per-example recall not stored; no paired test available"
+  },
+  "rouge1": {
+    "base_mean": 0.494240539802345,
+    "fine_mean": 0.544830411031446,
+    "rag_mean": 0.5045843107921372,
+    "rag_ci95": [
+      0.4892296153745207,
+      0.5197962614458181
+    ],
+    "delta_mean_fine_vs_base": 0.05058987122910106,
+    "delta_ci95_fine_vs_base": [
+      0.037287274456454335,
+      0.0638456021725091
+    ],
+    "wilcoxon_fine_vs_base": {
+      "W": 39538.0,
+      "p": 2.0639117957776914e-12,
+      "n_pairs": 508,
+      "n_nonzero": 498
+    },
+    "cohens_d_paired_fine_vs_base": 0.32143880508644357
+  },
+  "rouge2": {
+    "base_mean": 0.30493900040798205,
+    "fine_mean": 0.35045148521698133,
+    "rag_mean": 0.3166218601877148,
+    "rag_ci95": [
+      0.29691392563466734,
+      0.33567839344195394
+    ],
+    "delta_mean_fine_vs_base": 0.04551248480899928,
+    "delta_ci95_fine_vs_base": [
+      0.030895233510045684,
+      0.06137414989591855
+    ],
+    "wilcoxon_fine_vs_base": {
+      "W": 41127.0,
+      "p": 3.972416274408283e-09,
+      "n_pairs": 508,
+      "n_nonzero": 487
+    },
+    "cohens_d_paired_fine_vs_base": 0.2512740023121726
+  },
+  "rougeL": {
+    "base_mean": 0.42171131453190636,
+    "fine_mean": 0.47610147298570704,
+    "rag_mean": 0.4325554635559916,
+    "rag_ci95": [
+      0.414891992433483,
+      0.45065787906277555
+    ],
+    "delta_mean_fine_vs_base": 0.05439015845380061,
+    "delta_ci95_fine_vs_base": [
+      0.04019442609551565,
+      0.0700047512911964
+    ],
+    "wilcoxon_fine_vs_base": {
+      "W": 38181.0,
+      "p": 6.026764256684529e-14,
+      "n_pairs": 508,
+      "n_nonzero": 499
+    },
+    "cohens_d_paired_fine_vs_base": 0.3236209061284599
+  },
+  "factual_error": {
+    "base": {
+      "k": 1,
+      "n": 508,
+      "rate": 0.001968503937007874,
+      "ci95": [
+        0.0003475738379107784,
+        0.0110650593515794
+      ]
+    },
+    "fine": {
+      "k": 0,
+      "n": 508,
+      "rate": 0.0,
+      "ci95": [
+        0.0,
+        0.007505173241622552
+      ]
+    },
+    "rag": {
+      "k": 2,
+      "n": 508,
+      "rate": 0.003937007874015748,
+      "ci95": [
+        0.0010803343521626338,
+        0.014239758785195171
+      ]
+    },
+    "mcnemar_base_vs_fine": {
+      "n10_base_err_fine_ok": 1,
+      "n01_base_ok_fine_err": 0,
+      "n11": 0,
+      "n00": 507,
+      "p_exact": 1.0
+    },
+    "note": "Metric is a strict substring check for numeric quantities; near floor on this corpus."
+  }
+}

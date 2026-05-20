@@ -1,0 +1,12 @@
+{
+  "input": "data/finetune/test_full.jsonl",
+  "output": "data/finetune/test_full_enriched.jsonl",
+  "n_records": 508,
+  "qa_raw_exact_hits": 0,
+  "st_nn_hits": 508,
+  "miss": 0,
+  "nn_score_mean": 0.6152448976837744,
+  "nn_score_median": 0.6343554258346558,
+  "nn_score_min": 0.16035178303718567,
+  "low_score_count_lt_0.4": 30
+}

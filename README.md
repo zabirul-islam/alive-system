@@ -37,7 +37,7 @@ github/
 │   ├── raw/                 per-question Base, Base+RAG, ALIVE answers and scores
 │   ├── results/             aggregated summaries used in paper tables
 │   └── scripts/             portable rerun helpers
-├── legacy-mimic-results/    aggregated results from the predecessor mimic repo
+├── legacy-mimic-results/    prior aggregated results retained for provenance
 └── docs/
     ├── startup_commands.md  five-terminal launch sequence
     └── reproducibility.md   seeds, package versions, expected outputs

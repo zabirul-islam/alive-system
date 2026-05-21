@@ -116,14 +116,6 @@ Random seed 42 across all evaluation scripts.
 }
 ```
 
-## Not included
-
-- The MuseTalk talking-head server code (third-party model with its
-  own license)
-- Raw lecture videos (covered by course copyright)
-- Reference frames and the avatar identity dataset
-- LoRA adapter checkpoint and the merged ALIVE model weights — these
-  will be uploaded to this repository before publication
 
 ## License
 

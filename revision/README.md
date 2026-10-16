@@ -13,6 +13,7 @@ question-answer corpus, and the FAISS index are in the companion dataset
 | `scripts/` | Analysis and experiment scripts (vLLM 0.11.0, PyTorch 2.8.0, Transformers 4.57.1, PEFT 0.18.1, bert-score 0.3.13). |
 | `results/` | All JSON/JSONL outputs, including per-example generations (`gen/`, `gen2/`, `e4/`), per-answer judge outputs (`judge/`), and logs. |
 | `generated/` | LaTeX tables written by `scripts/make_supp_tables.py` from `results/`. |
+| `figures/` | Regenerated supplementary latency figure (Fig. S2). |
 | `annotation/` | Second annotator's slide-relevance labels for the 50 retrieval questions, with the instructions they followed. |
 | `expert/` | The two external experts' rating workbooks (100 items each), the rater guide, and the A/B unblinding key. |
 | `data/srt/` | Subtitle files used to align slide timestamps. |
@@ -31,7 +32,8 @@ question-answer corpus, and the FAISS index are in the companion dataset
 | Second annotator (Sec. XI-C; Table SXV) | `make_free_annotation_sheet.py`, `analyze_retrieval_irr.py` | `retrieval_irr.json`, `retrieval_gt_*.json`, `retrieval_v2_{annotator2,intersection,union}*.json` |
 | Slide timings from raw ASR, E6 (Table SI) | `e6_asr.py`, `e6_compare.py` | `e6/`, `e6_portability.json` |
 | Latency under load, E5 (Table SIV) | `latency_load.py` | `e5/latency_load.json` |
-| Survey composites and per-item tests (Table SXIX) | `survey_r17.py` (uses `analysis/survey_redo.py`) | `survey_r17.json` |
+| Survey composites, per-item tests, input-method counts (Q4) and the post hoc Q1+Q2 usability check (Table SXIX; Sec. X) | `survey_r17.py` (uses `analysis/survey_redo.py`) | `survey_r17.json` |
+| Component latency (Table SIII; Fig. S2) | `fig_latency.py` | `backend/alive_scripts/evaluation/latency_{base,finetuned}.json`, `figures/fig_latency.*` |
 | All supplementary tables | `make_supp_tables.py` | `generated/*.tex` |
 
 `e4_items_v1_discarded.jsonl` and `e4_items_v2_discarded.jsonl` are the two

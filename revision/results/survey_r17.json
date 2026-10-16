@@ -634,5 +634,10 @@
   "Typed text (chat)": 27,
   "I did not use ALIVE": 2,
   "\u2014": 2
+ },
+ "usability_q1q2_post_hoc": {
+  "n": 31,
+  "mean": 3.48,
+  "p_vs_3": 0.001773543209913852
  }
 }

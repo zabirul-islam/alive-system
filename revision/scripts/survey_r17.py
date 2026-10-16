@@ -56,6 +56,9 @@ out["holm_reconciliation"] = sorted(set(out["all"]["sig_items"]) ^ set(out["subm
 out["q3_frequency_counts"] = {int(k): int(v) for k, v in q3.value_counts().sort_index().items()}
 out["n_nonusers"] = int(nonuser.sum())
 out["q4_counts"] = df[q4col[0]].astype(str).value_counts().to_dict() if q4col else None
+u = P[["Q1", "Q2"]].dropna().mean(1)  # post hoc: usability without the frequency item Q3
+out["usability_q1q2_post_hoc"] = {"n": int(len(u)), "mean": round(float(u.mean()), 2),
+                                  "p_vs_3": float(stats.wilcoxon(u - 3, alternative="greater").pvalue)}
 json.dump(out, open(ROOT / "revision/results/survey_r17.json", "w"), indent=1, default=float)
 for k in ["all", "excluding_nonusers"]:
     o = out[k]

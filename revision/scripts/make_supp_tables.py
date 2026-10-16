@@ -162,14 +162,14 @@ write("tab_judge.tex", r"""\begin{table}[!htbp]
 \par\medskip
 \begin{tabular}{llcccccc}
 \toprule
-\textbf{Judge} & \textbf{Condition} & \textbf{None} & \textbf{Conceptual} & \textbf{Math.} & \textbf{Causal} & \textbf{Numerical} & \textbf{Other} \\
+\textbf{Judge} & \textbf{Condition} & \textbf{None} & \textbf{Conceptual} & \textbf{Math.} & \textbf{Causal} & \textbf{Numerical} & \textbf{Other/unparsed} \\
 \midrule
 """ + "\n".join(etypes) + r"""
 \bottomrule
 \end{tabular}
 \tabnotes{Each answer was judged independently against the same lecture excerpts. Axes (1--5): F factuality, P pedagogical
 clarity, G conciseness and length fit, A agreement with the reference. $\Delta$ = ALIVE $-$ Base with bootstrap 95\% CI;
-W/T/L = share of questions where ALIVE scored higher, equal, or lower (\%); $p_{\textrm{Holm}}$ = Wilcoxon, Holm-adjusted within judge.
+W/T/L = share of questions where ALIVE scored higher, equal, or lower (\%); $p_{\textrm{Holm}}$ = Wilcoxon, Holm-adjusted within judge. GPT-4o returned the off-rubric label ``factual'' for nine answers (eight base/lecture, one base/retrieved), counted under Other/unparsed.
 Lower table: most serious error type per answer (counts). """ + agree + r"""}
 \end{table}
 """)
@@ -283,7 +283,8 @@ for lab, b, a, f in EX:
 if (R / "results/e4/score_e4_lecture.json").exists() and "claude-sonnet-4-6|E4" in je:
     for ctx, lab in [("lecture", "E4: cross-seg., Eq.~(\\ref{eq:retrieval})"), ("retrieved", "E4: cross-seg., semantic")]:
         x = J(f"e4/score_e4_{ctx}.json")
-        mrows.append(f"{lab} & {x['words']['base']:.0f} / {x['words']['new']:.0f} & {x['all']['bertscore_f1']['base']:.3f} / {x['all']['bertscore_f1']['adapted']:.3f} & " +
+        xw = J("e4/e4_pr.json")[ctx]  # full precision; score_e4_*.json stores pre-rounded words
+        mrows.append(f"{lab} & {xw['base']['words']:.0f} / {xw['alive']['words']:.0f} & {x['all']['bertscore_f1']['base']:.3f} / {x['all']['bertscore_f1']['adapted']:.3f} & " +
                      " & ".join((f"{100*je[j + '|E4']['cells'][f'base|{ctx}']['err']:.0f} / {100*je[j + '|E4']['cells'][f'alive|{ctx}']['err']:.0f}"
                                  if j + "|E4" in je else "---") for j, _ in JN) + " \\\\")
 write("tab_extra_main.tex", "\n".join(mrows) + "\n")

@@ -34,7 +34,7 @@ Retrieved & Any error & 30.1\% & 31.5\% & & & \\
 \par\medskip
 \begin{tabular}{llcccccc}
 \toprule
-\textbf{Judge} & \textbf{Condition} & \textbf{None} & \textbf{Conceptual} & \textbf{Math.} & \textbf{Causal} & \textbf{Numerical} & \textbf{Other} \\
+\textbf{Judge} & \textbf{Condition} & \textbf{None} & \textbf{Conceptual} & \textbf{Math.} & \textbf{Causal} & \textbf{Numerical} & \textbf{Other/unparsed} \\
 \midrule
 gpt-4o & base / lecture & 364 & 136 & 0 & 0 & 0 & 8 \\
 gpt-4o & alive / lecture & 398 & 109 & 1 & 0 & 0 & 0 \\
@@ -48,6 +48,6 @@ claude-sonnet-4-6 & alive / retrieved & 348 & 129 & 1 & 5 & 0 & 25 \\
 \end{tabular}
 \tabnotes{Each answer was judged independently against the same lecture excerpts. Axes (1--5): F factuality, P pedagogical
 clarity, G conciseness and length fit, A agreement with the reference. $\Delta$ = ALIVE $-$ Base with bootstrap 95\% CI;
-W/T/L = share of questions where ALIVE scored higher, equal, or lower (\%); $p_{\textrm{Holm}}$ = Wilcoxon, Holm-adjusted within judge.
+W/T/L = share of questions where ALIVE scored higher, equal, or lower (\%); $p_{\textrm{Holm}}$ = Wilcoxon, Holm-adjusted within judge. GPT-4o returned the off-rubric label ``factual'' for nine answers (eight base/lecture, one base/retrieved), counted under Other/unparsed.
 Lower table: most serious error type per answer (counts). Inter-judge agreement (same answer): F: exact 76\%, quadratic-weighted $\kappa$ = 0.78; P: exact 53\%, quadratic-weighted $\kappa$ = 0.70; G: exact 19\%, quadratic-weighted $\kappa$ = 0.09; A: exact 53\%, quadratic-weighted $\kappa$ = 0.74; any-error label: exact 87\%, $\kappa$ = 0.69.}
 \end{table}

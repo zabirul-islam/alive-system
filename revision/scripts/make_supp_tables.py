@@ -332,7 +332,7 @@ context. E3: each question's slide is inferred, a pause is drawn inside that sli
 (Eq.~1, $\lambda=0.05$) supplies the top-4 segments. $\Delta$ with bootstrap 95\% CI; $p$ = Wilcoxon for metrics, Holm-adjusted
 Wilcoxon within judge for judge axes, exact McNemar for errors. Segment-aware NLI (any 1,024-character context window),
 $\Delta$ entailment: E2 ALIVE $-$ length-instructed Base """ +
-      f"${n2['delta']:+.3f}$ {ci(n2['ci95'])} ({n2c['alive_lecture']['entail']:.3f} vs.\\ {n2c['base_brief']['entail']:.3f})" + r"""; E3 """ + f"${n3['delta']:+.3f}$ {ci(n3['ci95'])}" + r""".}
+      f"${n2['delta']:+.3f}$ {ci(n2['ci95'])} ({n2c['alive_lecture']['entail']:.3f} vs.\\ {n2c['base_brief']['entail']:.3f})" + r"""; E3 """ + f"${n3['delta']:+.3f}$ {ci(n3['ci95'])}" + r""". Claude has no score for one answer in each E3 condition (API failures), so its E3 contrasts use the """ + str(je["claude-sonnet-4-6"]["contrasts"]["E3:F"]["n"]) + r""" questions judged in both conditions.}
 \end{table}
 """)
 

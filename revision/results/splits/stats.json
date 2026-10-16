@@ -1,0 +1,58 @@
+{
+ "n_records": 5207,
+ "lectures_traced_exactly": 23,
+ "lectures": 23,
+ "untraced_records": 0,
+ "mean_within_chunk_slide_sim": 0.603,
+ "distinct_slides": 723,
+ "slide_grouped": {
+  "train": 4039,
+  "val": 479,
+  "test": 689,
+  "test_lectures": [
+   1,
+   2,
+   3,
+   4,
+   5,
+   6,
+   7,
+   8,
+   9,
+   10,
+   11,
+   12,
+   13,
+   14,
+   15,
+   16,
+   17,
+   18,
+   19,
+   20,
+   21,
+   22,
+   23
+  ],
+  "test_slides": 88,
+  "slide_overlap_train_test": 0,
+  "test_maxcos_ge_0.90": 67,
+  "test_maxcos_ge_0.95": 27
+ },
+ "lecture_heldout": {
+  "train": 3465,
+  "val": 501,
+  "test": 1241,
+  "test_lectures": [
+   5,
+   13,
+   14,
+   16,
+   20
+  ],
+  "test_slides": 162,
+  "slide_overlap_train_test": 0,
+  "test_maxcos_ge_0.90": 40,
+  "test_maxcos_ge_0.95": 15
+ }
+}

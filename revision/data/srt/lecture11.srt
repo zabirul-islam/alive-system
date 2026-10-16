@@ -1,0 +1,10172 @@
+1
+00:00:01,760 --> 00:00:05,920
+Welcome everyone. Today we begin lecture
+
+2
+00:00:04,080 --> 00:00:07,680
+11 which is all about image quality
+
+3
+00:00:05,920 --> 00:00:09,599
+assessment.
+
+4
+00:00:07,680 --> 00:00:12,000
+This is really a landmark lecture in our
+
+5
+00:00:09,599 --> 00:00:14,480
+course. After today we'll move on to
+
+6
+00:00:12,000 --> 00:00:16,560
+imaging modalities themselves. By then
+
+7
+00:00:14,480 --> 00:00:18,800
+the green textbook you have will serve
+
+8
+00:00:16,560 --> 00:00:21,279
+as your main reference and I'll continue
+
+9
+00:00:18,800 --> 00:00:22,960
+using my slides to bring in a consistent
+
+10
+00:00:21,279 --> 00:00:26,720
+story and sometimes involving
+
+11
+00:00:22,960 --> 00:00:28,560
+state-of-the-art developments.
+
+12
+00:00:26,720 --> 00:00:30,320
+So why is quality assessment so
+
+13
+00:00:28,560 --> 00:00:32,079
+important?
+
+14
+00:00:30,320 --> 00:00:34,000
+Think about it this way. Once an imaging
+
+15
+00:00:32,079 --> 00:00:36,480
+system produces an image, the very first
+
+16
+00:00:34,000 --> 00:00:38,480
+question we must ask is, is this image
+
+17
+00:00:36,480 --> 00:00:40,399
+good enough?
+
+18
+00:00:38,480 --> 00:00:42,559
+Is it clear, reliable, and suitable for
+
+19
+00:00:40,399 --> 00:00:44,719
+diagnosis? That is what quality
+
+20
+00:00:42,559 --> 00:00:46,719
+assessment is all about. It's the final
+
+21
+00:00:44,719 --> 00:00:49,760
+piece of the foundation we need before
+
+22
+00:00:46,719 --> 00:00:51,680
+diving into the modalities.
+
+23
+00:00:49,760 --> 00:00:56,199
+So with that background, let's begin our
+
+24
+00:00:51,680 --> 00:00:56,199
+journey into image quality assessment.
+
+25
+00:00:57,920 --> 00:01:01,920
+We are right on schedule in our journey
+
+26
+00:00:59,760 --> 00:01:03,199
+through this material. If you've had a
+
+27
+00:01:01,920 --> 00:01:05,119
+chance to look over the reading
+
+28
+00:01:03,199 --> 00:01:07,119
+materials for today's lecture, that's
+
+29
+00:01:05,119 --> 00:01:09,760
+great. It will make it easier to connect
+
+30
+00:01:07,119 --> 00:01:12,000
+the ideas we cover. If not, that's fine,
+
+31
+00:01:09,760 --> 00:01:13,760
+too. I encourage you to follow along
+
+32
+00:01:12,000 --> 00:01:16,240
+closely and take time afterward to
+
+33
+00:01:13,760 --> 00:01:18,479
+review the main points.
+
+34
+00:01:16,240 --> 00:01:20,479
+Consistently reinforcing concepts as you
+
+35
+00:01:18,479 --> 00:01:22,880
+go will help you develop a stronger and
+
+36
+00:01:20,479 --> 00:01:24,640
+more intuitive grasp, especially as the
+
+37
+00:01:22,880 --> 00:01:28,280
+material becomes more mathematically
+
+38
+00:01:24,640 --> 00:01:28,280
+detailed. Here
+
+39
+00:01:29,439 --> 00:01:33,119
+you can see the textbook's outline of
+
+40
+00:01:31,200 --> 00:01:35,520
+chapter 5 which I have actually moved
+
+41
+00:01:33,119 --> 00:01:37,360
+earlier in our course.
+
+42
+00:01:35,520 --> 00:01:39,439
+The reason is simple. Once you
+
+43
+00:01:37,360 --> 00:01:41,680
+understand the basics of image quality
+
+44
+00:01:39,439 --> 00:01:44,960
+assessment, you can apply these ideas to
+
+45
+00:01:41,680 --> 00:01:46,560
+almost any imaging modality.
+
+46
+00:01:44,960 --> 00:01:49,280
+No matter whether we're talking about
+
+47
+00:01:46,560 --> 00:01:51,439
+X-ray, kinetic, MRI, ultrasound, or
+
+48
+00:01:49,280 --> 00:01:53,600
+optical imaging, the general principles
+
+49
+00:01:51,439 --> 00:01:55,840
+remain the same. Concepts such as
+
+50
+00:01:53,600 --> 00:01:57,920
+resolution, signal to noise ratio,
+
+51
+00:01:55,840 --> 00:02:00,079
+contrast to noise ratio, and artifacts
+
+52
+00:01:57,920 --> 00:02:01,920
+are universal. They may appear in
+
+53
+00:02:00,079 --> 00:02:05,680
+different forms, but the underlying
+
+54
+00:02:01,920 --> 00:02:07,759
+logic applies everywhere.
+
+55
+00:02:05,680 --> 00:02:09,920
+The good news is that this chapter is
+
+56
+00:02:07,759 --> 00:02:12,160
+relatively easy reading compared to some
+
+57
+00:02:09,920 --> 00:02:14,239
+of the heavier mathematical topics we've
+
+58
+00:02:12,160 --> 00:02:16,560
+already tackled. The ideas are
+
+59
+00:02:14,239 --> 00:02:18,239
+straightforward. If you follow carefully
+
+60
+00:02:16,560 --> 00:02:20,400
+and think through the examples, you'll
+
+61
+00:02:18,239 --> 00:02:22,319
+see how each concept connects to real
+
+62
+00:02:20,400 --> 00:02:24,000
+images.
+
+63
+00:02:22,319 --> 00:02:26,000
+For today's lecture, I will guide you
+
+64
+00:02:24,000 --> 00:02:28,800
+mainly through three key aspects of
+
+65
+00:02:26,000 --> 00:02:30,720
+image quality assessment.
+
+66
+00:02:28,800 --> 00:02:32,959
+We'll start with general mathematical
+
+67
+00:02:30,720 --> 00:02:35,360
+measures, then move to systemsp specific
+
+68
+00:02:32,959 --> 00:02:38,640
+characteristics, and finally consider
+
+69
+00:02:35,360 --> 00:02:40,319
+taskspecific and human observer models.
+
+70
+00:02:38,640 --> 00:02:42,400
+This will give you a well-rounded view
+
+71
+00:02:40,319 --> 00:02:46,040
+of what it means to evaluate image
+
+72
+00:02:42,400 --> 00:02:46,040
+quality in practice.
+
+73
+00:02:47,599 --> 00:02:51,760
+Here's the outline for today's lecture.
+
+74
+00:02:49,920 --> 00:02:53,680
+We'll approach image quality assessment
+
+75
+00:02:51,760 --> 00:02:56,000
+from three perspectives. General
+
+76
+00:02:53,680 --> 00:02:58,640
+measures, system specific measures, and
+
+77
+00:02:56,000 --> 00:03:00,080
+task specific measures.
+
+78
+00:02:58,640 --> 00:03:02,000
+First, we'll talk about general
+
+79
+00:03:00,080 --> 00:03:03,680
+measures.
+
+80
+00:03:02,000 --> 00:03:05,680
+Imagine you have an image and you also
+
+81
+00:03:03,680 --> 00:03:08,159
+know the ground truth, the ideal image
+
+82
+00:03:05,680 --> 00:03:10,000
+you want to reconstruct. The goal is to
+
+83
+00:03:08,159 --> 00:03:12,239
+measure how close your reconstructed
+
+84
+00:03:10,000 --> 00:03:14,000
+image is to the ground truth. The
+
+85
+00:03:12,239 --> 00:03:16,400
+simplest way is to calculate the
+
+86
+00:03:14,000 --> 00:03:18,400
+difference between the two.
+
+87
+00:03:16,400 --> 00:03:20,480
+In mathematics, we often describe this
+
+88
+00:03:18,400 --> 00:03:23,200
+using the idea of a distance in a vector
+
+89
+00:03:20,480 --> 00:03:25,280
+space. The most familiar example is the
+
+90
+00:03:23,200 --> 00:03:28,959
+uklidian distance, which leads directly
+
+91
+00:03:25,280 --> 00:03:31,599
+to the mean squared error or MSE.
+
+92
+00:03:28,959 --> 00:03:33,440
+There are other distances, too.
+
+93
+00:03:31,599 --> 00:03:36,319
+One example I'll briefly mention is the
+
+94
+00:03:33,440 --> 00:03:38,319
+Kback Liler divergence or KL distance.
+
+95
+00:03:36,319 --> 00:03:40,799
+This is a bit trickier, so I won't test
+
+96
+00:03:38,319 --> 00:03:42,720
+you on it, but it's good to be aware of.
+
+97
+00:03:40,799 --> 00:03:44,480
+And then there is a very practical and
+
+98
+00:03:42,720 --> 00:03:47,280
+powerful concept called structural
+
+99
+00:03:44,480 --> 00:03:49,440
+similarity or SSIM.
+
+100
+00:03:47,280 --> 00:03:51,519
+This has become extremely influential.
+
+101
+00:03:49,440 --> 00:03:53,280
+The original paper has been cited tens
+
+102
+00:03:51,519 --> 00:03:55,360
+of thousands of times because it
+
+103
+00:03:53,280 --> 00:03:57,840
+captures how humans actually perceive
+
+104
+00:03:55,360 --> 00:04:01,760
+similarity between images. We'll look at
+
+105
+00:03:57,840 --> 00:04:03,599
+why this idea is so effective.
+
+106
+00:04:01,760 --> 00:04:05,360
+Next, we move to system specific
+
+107
+00:04:03,599 --> 00:04:07,280
+measures.
+
+108
+00:04:05,360 --> 00:04:09,519
+Think of the imaging system as a kind of
+
+109
+00:04:07,280 --> 00:04:12,480
+camera. It could be an X-ray detector,
+
+110
+00:04:09,519 --> 00:04:16,000
+an ultrasound probe, or an MRI scanner.
+
+111
+00:04:12,480 --> 00:04:18,079
+Every camera has its own specifications.
+
+112
+00:04:16,000 --> 00:04:20,320
+Here we'll talk about how noisy the
+
+113
+00:04:18,079 --> 00:04:22,160
+images are, how well the system can
+
+114
+00:04:20,320 --> 00:04:24,400
+distinguish a signal from background
+
+115
+00:04:22,160 --> 00:04:27,120
+noise, and what kind of resolution it
+
+116
+00:04:24,400 --> 00:04:29,440
+provides. Resolution itself has several
+
+117
+00:04:27,120 --> 00:04:31,520
+dimensions, spatial resolution, contrast
+
+118
+00:04:29,440 --> 00:04:33,840
+resolution, temporal resolution, and
+
+119
+00:04:31,520 --> 00:04:36,240
+spectral resolution.
+
+120
+00:04:33,840 --> 00:04:38,240
+We'll also talk about artifacts. Those
+
+121
+00:04:36,240 --> 00:04:40,240
+misleading structures that appear in
+
+122
+00:04:38,240 --> 00:04:43,040
+images even though they don't exist in
+
+123
+00:04:40,240 --> 00:04:45,040
+reality. Understanding noise resolution
+
+124
+00:04:43,040 --> 00:04:48,960
+and artifacts is key to judging the
+
+125
+00:04:45,040 --> 00:04:50,800
+performance of any imaging system.
+
+126
+00:04:48,960 --> 00:04:52,560
+Finally, we'll cover task specific
+
+127
+00:04:50,800 --> 00:04:54,720
+measures.
+
+128
+00:04:52,560 --> 00:04:57,280
+This perspective is slightly different.
+
+129
+00:04:54,720 --> 00:04:59,600
+Instead of asking how good is my camera,
+
+130
+00:04:57,280 --> 00:05:02,160
+we ask how well does this imaging system
+
+131
+00:04:59,600 --> 00:05:03,919
+perform a specific clinical task. For
+
+132
+00:05:02,160 --> 00:05:06,320
+example, can it reliably detect whether
+
+133
+00:05:03,919 --> 00:05:08,400
+a bone is fractured? Can it identify a
+
+134
+00:05:06,320 --> 00:05:10,080
+tumor in the lung?
+
+135
+00:05:08,400 --> 00:05:12,080
+The most important thing in medicine is
+
+136
+00:05:10,080 --> 00:05:14,639
+whether the imaging system helps doctors
+
+137
+00:05:12,080 --> 00:05:16,880
+and patients make correct decisions.
+
+138
+00:05:14,639 --> 00:05:18,800
+Even if a system isn't perfect in a
+
+139
+00:05:16,880 --> 00:05:20,639
+technical sense, if it consistently
+
+140
+00:05:18,800 --> 00:05:23,840
+allows us to succeed in the clinical
+
+141
+00:05:20,639 --> 00:05:26,240
+task, then it's doing its job.
+
+142
+00:05:23,840 --> 00:05:28,320
+So these three aspects, general, system
+
+143
+00:05:26,240 --> 00:05:30,160
+specific, and task specific are
+
+144
+00:05:28,320 --> 00:05:31,840
+connected, but they are not identical.
+
+145
+00:05:30,160 --> 00:05:34,400
+Together they give us a complete picture
+
+146
+00:05:31,840 --> 00:05:38,600
+of how to assess image quality. We'll
+
+147
+00:05:34,400 --> 00:05:38,600
+begin with the first general measures.
+
+148
+00:05:40,160 --> 00:05:43,919
+Let's begin with one of the most basic
+
+149
+00:05:41,759 --> 00:05:47,440
+and widely used quality measures, the
+
+150
+00:05:43,919 --> 00:05:49,520
+mean squared error or MSE.
+
+151
+00:05:47,440 --> 00:05:51,600
+Suppose we have two images. The true
+
+152
+00:05:49,520 --> 00:05:53,360
+image which we'll call Y and the
+
+153
+00:05:51,600 --> 00:05:56,000
+reconstructed image which we'll call
+
+154
+00:05:53,360 --> 00:05:59,919
+Yhat. Each image is made up of many
+
+155
+00:05:56,000 --> 00:06:02,960
+pixels indexed by I. If the image is 512
+
+156
+00:05:59,919 --> 00:06:06,520
+x 512, then the total number of pixels n
+
+157
+00:06:02,960 --> 00:06:06,520
+is over 260,000.
+
+158
+00:06:06,880 --> 00:06:13,280
+The formula for MSE is simple. MSE= 1 /n
+
+159
+00:06:10,800 --> 00:06:15,840
+* the sum from i = 1 to n of the
+
+160
+00:06:13,280 --> 00:06:17,520
+difference between y sub i and y sub i
+
+161
+00:06:15,840 --> 00:06:19,280
+squar.
+
+162
+00:06:17,520 --> 00:06:22,240
+In words, this means we compare the two
+
+163
+00:06:19,280 --> 00:06:24,160
+images pixel by pixel. At each pixel, we
+
+164
+00:06:22,240 --> 00:06:26,000
+take the difference, square it so that
+
+165
+00:06:24,160 --> 00:06:28,319
+positive and negative errors don't
+
+166
+00:06:26,000 --> 00:06:30,880
+cancel out, and then average over all
+
+167
+00:06:28,319 --> 00:06:33,360
+pixels. That gives us the mean squared
+
+168
+00:06:30,880 --> 00:06:35,520
+error.
+
+169
+00:06:33,360 --> 00:06:38,000
+Now, let's go a bit deeper. When we
+
+170
+00:06:35,520 --> 00:06:41,280
+estimate a parameter, say theta, we
+
+171
+00:06:38,000 --> 00:06:43,440
+often write the estimate as theta hat.
+
+172
+00:06:41,280 --> 00:06:45,440
+The error between theta hat and the true
+
+173
+00:06:43,440 --> 00:06:48,000
+value theta can be analyzed in
+
+174
+00:06:45,440 --> 00:06:50,560
+expectation, meaning averaged over many
+
+175
+00:06:48,000 --> 00:06:52,240
+trials. When you expand the algebra, you
+
+176
+00:06:50,560 --> 00:06:55,360
+find that the mean squared error
+
+177
+00:06:52,240 --> 00:06:57,600
+naturally splits into two parts.
+
+178
+00:06:55,360 --> 00:06:58,960
+The first part is the variance. This
+
+179
+00:06:57,600 --> 00:07:01,199
+tells us how much our estimates
+
+180
+00:06:58,960 --> 00:07:02,880
+fluctuate around their average value.
+
+181
+00:07:01,199 --> 00:07:05,199
+You can think of variance as a measure
+
+182
+00:07:02,880 --> 00:07:07,520
+of random scatter.
+
+183
+00:07:05,199 --> 00:07:09,199
+The second part is the bias squared.
+
+184
+00:07:07,520 --> 00:07:11,120
+This measures the difference between the
+
+185
+00:07:09,199 --> 00:07:13,360
+average of our estimates and the true
+
+186
+00:07:11,120 --> 00:07:17,520
+value. If our method consistently
+
+187
+00:07:13,360 --> 00:07:19,919
+overshoots or undershoots, that's bias.
+
+188
+00:07:17,520 --> 00:07:22,560
+So in summary, MSE equals variance plus
+
+189
+00:07:19,919 --> 00:07:24,720
+bias squared. Variance captures random
+
+190
+00:07:22,560 --> 00:07:26,639
+error, bias captures systematic error,
+
+191
+00:07:24,720 --> 00:07:29,520
+and together they define the total
+
+192
+00:07:26,639 --> 00:07:32,080
+error. This decomposition is very
+
+193
+00:07:29,520 --> 00:07:34,160
+useful. It reminds us that an algorithm
+
+194
+00:07:32,080 --> 00:07:36,880
+might have low variance but high bias or
+
+195
+00:07:34,160 --> 00:07:38,960
+vice versa. Understanding both helps us
+
+196
+00:07:36,880 --> 00:07:43,160
+judge the quality of an estimator or an
+
+197
+00:07:38,960 --> 00:07:43,160
+image reconstruction method.
+
+198
+00:07:44,720 --> 00:07:48,720
+Now the mean squared error is not the
+
+199
+00:07:46,639 --> 00:07:50,560
+only way to measure differences. There
+
+200
+00:07:48,720 --> 00:07:52,720
+are several variants each with slightly
+
+201
+00:07:50,560 --> 00:07:54,479
+different properties.
+
+202
+00:07:52,720 --> 00:07:57,280
+The first which we've already discussed
+
+203
+00:07:54,479 --> 00:07:58,639
+is the mean squared error or MSE. This
+
+204
+00:07:57,280 --> 00:08:00,240
+is the average of the squared
+
+205
+00:07:58,639 --> 00:08:01,840
+differences between prediction and
+
+206
+00:08:00,240 --> 00:08:03,759
+truth.
+
+207
+00:08:01,840 --> 00:08:06,960
+A closely related measure is the root
+
+208
+00:08:03,759 --> 00:08:08,720
+mean squared error or RMSSE.
+
+209
+00:08:06,960 --> 00:08:12,160
+Here we simply take the square root of
+
+210
+00:08:08,720 --> 00:08:13,840
+the mean squared error. Why?
+
+211
+00:08:12,160 --> 00:08:15,199
+because this brings the units back to
+
+212
+00:08:13,840 --> 00:08:17,120
+the same scale as the original
+
+213
+00:08:15,199 --> 00:08:19,440
+measurement.
+
+214
+00:08:17,120 --> 00:08:22,560
+For example, if we are measuring pixel
+
+215
+00:08:19,440 --> 00:08:24,720
+intensities, RMSE will be expressed in
+
+216
+00:08:22,560 --> 00:08:27,759
+the same units as those intensities,
+
+217
+00:08:24,720 --> 00:08:29,759
+which makes it easier to interpret.
+
+218
+00:08:27,759 --> 00:08:32,080
+One important property of squaring is
+
+219
+00:08:29,759 --> 00:08:35,039
+that it emphasizes larger errors much
+
+220
+00:08:32,080 --> 00:08:37,440
+more strongly. If a difference is 100,
+
+221
+00:08:35,039 --> 00:08:39,919
+squaring turns it into 10,000. That
+
+222
+00:08:37,440 --> 00:08:42,240
+means MSE and RMSSE heavily penalize
+
+223
+00:08:39,919 --> 00:08:43,919
+large deviations.
+
+224
+00:08:42,240 --> 00:08:46,560
+Sometimes we want a measure that treats
+
+225
+00:08:43,919 --> 00:08:48,560
+all errors more equally.
+
+226
+00:08:46,560 --> 00:08:51,200
+That's where the mean absolute error or
+
+227
+00:08:48,560 --> 00:08:52,640
+MAE comes in. Instead of squaring, we
+
+228
+00:08:51,200 --> 00:08:55,040
+take the absolute value of the
+
+229
+00:08:52,640 --> 00:08:57,279
+difference at each pixel than average.
+
+230
+00:08:55,040 --> 00:09:00,240
+This is also called the L1 norm while
+
+231
+00:08:57,279 --> 00:09:02,560
+MSE is associated with the L2 norm. The
+
+232
+00:09:00,240 --> 00:09:06,080
+L1 norm is less sensitive to outliers
+
+233
+00:09:02,560 --> 00:09:07,839
+compared to the L2 norm.
+
+234
+00:09:06,080 --> 00:09:10,399
+Finally, we have the mean absolute
+
+235
+00:09:07,839 --> 00:09:12,160
+percentage error or MATE.
+
+236
+00:09:10,399 --> 00:09:14,000
+This is the mean absolute error
+
+237
+00:09:12,160 --> 00:09:16,560
+expressed as a percentage of the true
+
+238
+00:09:14,000 --> 00:09:18,080
+value. In other words, it's may divided
+
+239
+00:09:16,560 --> 00:09:21,440
+by the ground truth at each point
+
+240
+00:09:18,080 --> 00:09:23,920
+multiplied by 100%. This can be useful
+
+241
+00:09:21,440 --> 00:09:27,040
+when we want to understand an error in
+
+242
+00:09:23,920 --> 00:09:29,920
+relative terms. For example, saying the
+
+243
+00:09:27,040 --> 00:09:32,720
+error is 5% rather than giving a raw
+
+244
+00:09:29,920 --> 00:09:34,880
+number.
+
+245
+00:09:32,720 --> 00:09:38,080
+So these different distance measures
+
+246
+00:09:34,880 --> 00:09:40,320
+MSE, RMSSE, ME and MATE give us
+
+247
+00:09:38,080 --> 00:09:42,080
+different perspectives on error. The
+
+248
+00:09:40,320 --> 00:09:44,160
+choice depends on the problem. Do we
+
+249
+00:09:42,080 --> 00:09:45,839
+want to penalize large errors more or do
+
+250
+00:09:44,160 --> 00:09:48,839
+we care more about relative error
+
+251
+00:09:45,839 --> 00:09:48,839
+percentages?
+
+252
+00:09:50,720 --> 00:09:55,040
+So far these measures seem very
+
+253
+00:09:52,480 --> 00:09:57,360
+reasonable. Think about it this way. You
+
+254
+00:09:55,040 --> 00:10:01,200
+have one signal or one image and you
+
+255
+00:09:57,360 --> 00:10:03,680
+also have a standard, the ground truth.
+
+256
+00:10:01,200 --> 00:10:05,040
+By comparing them pixel by pixel, we're
+
+257
+00:10:03,680 --> 00:10:06,959
+essentially measuring the difference
+
+258
+00:10:05,040 --> 00:10:09,680
+between two curves or between two
+
+259
+00:10:06,959 --> 00:10:11,839
+surfaces or even between two volumes in
+
+260
+00:10:09,680 --> 00:10:13,760
+three dimensions.
+
+261
+00:10:11,839 --> 00:10:15,680
+The formula reduces to something very
+
+262
+00:10:13,760 --> 00:10:17,839
+intuitive. It's about the area between
+
+263
+00:10:15,680 --> 00:10:19,920
+the two curves. The yellow region you
+
+264
+00:10:17,839 --> 00:10:21,760
+see here represents those differences.
+
+265
+00:10:19,920 --> 00:10:23,279
+The larger the area, the greater the
+
+266
+00:10:21,760 --> 00:10:25,760
+error.
+
+267
+00:10:23,279 --> 00:10:28,160
+This is why MSE and related measures are
+
+268
+00:10:25,760 --> 00:10:30,320
+so widely used. They give us a direct
+
+269
+00:10:28,160 --> 00:10:33,360
+and interpretable way to say how close
+
+270
+00:10:30,320 --> 00:10:35,120
+or how far two images are. It's simple,
+
+271
+00:10:33,360 --> 00:10:37,920
+mathematically neat and visually
+
+272
+00:10:35,120 --> 00:10:39,360
+intuitive.
+
+273
+00:10:37,920 --> 00:10:41,279
+But here's an important point. While
+
+274
+00:10:39,360 --> 00:10:43,279
+this is a good first step, it is not the
+
+275
+00:10:41,279 --> 00:10:45,120
+whole story.
+
+276
+00:10:43,279 --> 00:10:47,200
+Measuring differences point by point
+
+277
+00:10:45,120 --> 00:10:49,680
+tells us something, but not everything.
+
+278
+00:10:47,200 --> 00:10:52,160
+In medical imaging, we also care about
+
+279
+00:10:49,680 --> 00:10:55,200
+structural similarity, system behavior,
+
+280
+00:10:52,160 --> 00:10:56,640
+and clinical tasks. So as we continue
+
+281
+00:10:55,200 --> 00:10:59,640
+you'll see that this is only the
+
+282
+00:10:56,640 --> 00:10:59,640
+beginning.
+
+283
+00:11:01,200 --> 00:11:04,880
+Now let me briefly mention another type
+
+284
+00:11:03,200 --> 00:11:07,360
+of distance called information
+
+285
+00:11:04,880 --> 00:11:10,480
+divergence. This is where probability
+
+286
+00:11:07,360 --> 00:11:12,320
+theory comes in.
+
+287
+00:11:10,480 --> 00:11:14,320
+Suppose you don't just have two images
+
+288
+00:11:12,320 --> 00:11:16,320
+but instead you have two probability
+
+289
+00:11:14,320 --> 00:11:18,880
+distributions. For example, two
+
+290
+00:11:16,320 --> 00:11:20,959
+different histograms of pixel values.
+
+291
+00:11:18,880 --> 00:11:22,480
+The question becomes how do we measure
+
+292
+00:11:20,959 --> 00:11:25,480
+the difference between these two
+
+293
+00:11:22,480 --> 00:11:25,480
+distributions?
+
+294
+00:11:25,680 --> 00:11:30,079
+One option is to use uklitian distance
+
+295
+00:11:27,920 --> 00:11:31,839
+just as before.
+
+296
+00:11:30,079 --> 00:11:34,240
+But there is a more meaningful way in
+
+297
+00:11:31,839 --> 00:11:36,160
+the context of information theory. This
+
+298
+00:11:34,240 --> 00:11:39,200
+is called the Kullback Liler divergence
+
+299
+00:11:36,160 --> 00:11:42,079
+or KL distance for short.
+
+300
+00:11:39,200 --> 00:11:44,720
+The formula looks a bit unusual. KL
+
+301
+00:11:42,079 --> 00:11:47,279
+divergence equals the sum over X of P of
+
+302
+00:11:44,720 --> 00:11:49,760
+X multiplied by the logarithm of P of X
+
+303
+00:11:47,279 --> 00:11:51,440
+/ Q ofX.
+
+304
+00:11:49,760 --> 00:11:53,839
+You don't need to worry too much about
+
+305
+00:11:51,440 --> 00:11:56,959
+the details. This is beyond the scope of
+
+306
+00:11:53,839 --> 00:11:59,120
+our lecture. But the idea is important.
+
+307
+00:11:56,959 --> 00:12:01,680
+The KL divergence is always greater than
+
+308
+00:11:59,120 --> 00:12:03,360
+or equal to zero and it becomes exactly
+
+309
+00:12:01,680 --> 00:12:06,399
+zero if and only if the two
+
+310
+00:12:03,360 --> 00:12:08,399
+distributions are identical.
+
+311
+00:12:06,399 --> 00:12:11,279
+One interesting property is that the KL
+
+312
+00:12:08,399 --> 00:12:13,200
+divergence is not symmetric.
+
+313
+00:12:11,279 --> 00:12:14,959
+In other words, the distance from P to Q
+
+314
+00:12:13,200 --> 00:12:17,279
+is not the same as the distance from Q
+
+315
+00:12:14,959 --> 00:12:19,600
+to P. That may sound strange, but it has
+
+316
+00:12:17,279 --> 00:12:21,519
+a good analogy. Think of climbing a
+
+317
+00:12:19,600 --> 00:12:23,279
+mountain. Going uphill is much harder
+
+318
+00:12:21,519 --> 00:12:25,920
+than going back downhill, even though
+
+319
+00:12:23,279 --> 00:12:27,760
+it's the same physical path. In the same
+
+320
+00:12:25,920 --> 00:12:31,839
+way, KL divergence measures
+
+321
+00:12:27,760 --> 00:12:34,079
+directionality in information.
+
+322
+00:12:31,839 --> 00:12:36,000
+So, while we won't use this directly in
+
+323
+00:12:34,079 --> 00:12:38,880
+our course, it's good to be aware that
+
+324
+00:12:36,000 --> 00:12:40,639
+such information-based distances exist.
+
+325
+00:12:38,880 --> 00:12:42,800
+They play a big role in areas like
+
+326
+00:12:40,639 --> 00:12:45,800
+machine learning and statistical signal
+
+327
+00:12:42,800 --> 00:12:45,800
+processing.
+
+328
+00:12:47,600 --> 00:12:51,120
+Now just for your broader knowledge, let
+
+329
+00:12:49,440 --> 00:12:53,279
+me connect this to another important
+
+330
+00:12:51,120 --> 00:12:55,360
+concept in information theory. Mutual
+
+331
+00:12:53,279 --> 00:12:57,120
+information.
+
+332
+00:12:55,360 --> 00:12:59,200
+Mutual information is a way to measure
+
+333
+00:12:57,120 --> 00:13:01,600
+how much knowing one random variable
+
+334
+00:12:59,200 --> 00:13:03,040
+tells us about another.
+
+335
+00:13:01,600 --> 00:13:05,279
+For example, suppose we have two
+
+336
+00:13:03,040 --> 00:13:07,440
+variables X and Y. If they are
+
+337
+00:13:05,279 --> 00:13:10,000
+completely independent then measuring X
+
+338
+00:13:07,440 --> 00:13:12,480
+tells us nothing about Y. In that case
+
+339
+00:13:10,000 --> 00:13:14,720
+their mutual information is zero. On the
+
+340
+00:13:12,480 --> 00:13:17,200
+other hand if X and Y are perfectly
+
+341
+00:13:14,720 --> 00:13:19,680
+dependent meaning that once you know X
+
+342
+00:13:17,200 --> 00:13:22,320
+you completely know Y then their mutual
+
+343
+00:13:19,680 --> 00:13:24,000
+information is very high. Most real
+
+344
+00:13:22,320 --> 00:13:26,720
+world situations fall somewhere in
+
+345
+00:13:24,000 --> 00:13:28,560
+between.
+
+346
+00:13:26,720 --> 00:13:30,480
+Mathematically mutual information can
+
+347
+00:13:28,560 --> 00:13:33,040
+actually be expressed in terms of the KL
+
+348
+00:13:30,480 --> 00:13:34,399
+divergence. Specifically, it's the KL
+
+349
+00:13:33,040 --> 00:13:36,639
+divergence between the joint
+
+350
+00:13:34,399 --> 00:13:39,200
+distribution of X and Y and the product
+
+351
+00:13:36,639 --> 00:13:41,200
+of their marginal distributions. Don't
+
+352
+00:13:39,200 --> 00:13:43,519
+worry about the details of the formula.
+
+353
+00:13:41,200 --> 00:13:45,760
+The key idea is that it quantifies how
+
+354
+00:13:43,519 --> 00:13:48,880
+much information one variable provides
+
+355
+00:13:45,760 --> 00:13:50,560
+about the other.
+
+356
+00:13:48,880 --> 00:13:52,560
+You can also think of it this way. When
+
+357
+00:13:50,560 --> 00:13:54,240
+you measure one variable, how much does
+
+358
+00:13:52,560 --> 00:13:56,800
+your uncertainty about the other
+
+359
+00:13:54,240 --> 00:13:58,880
+variable decrease?
+
+360
+00:13:56,800 --> 00:14:02,079
+That decrease in uncertainty is exactly
+
+361
+00:13:58,880 --> 00:14:04,160
+what mutual information captures.
+
+362
+00:14:02,079 --> 00:14:06,079
+In practice, this idea is very useful in
+
+363
+00:14:04,160 --> 00:14:08,480
+areas like image registration where we
+
+364
+00:14:06,079 --> 00:14:10,160
+align two images.
+
+365
+00:14:08,480 --> 00:14:12,800
+Instead of just matching pixel
+
+366
+00:14:10,160 --> 00:14:15,279
+intensities, we can maximize the mutual
+
+367
+00:14:12,800 --> 00:14:17,040
+information between the two images. That
+
+368
+00:14:15,279 --> 00:14:18,800
+way, even if the images look very
+
+369
+00:14:17,040 --> 00:14:20,959
+different in terms of brightness or
+
+370
+00:14:18,800 --> 00:14:24,199
+contrast, we can still measure how well
+
+371
+00:14:20,959 --> 00:14:24,199
+they correspond.
+
+372
+00:14:24,240 --> 00:14:28,959
+So, mutual information is essentially a
+
+373
+00:14:26,720 --> 00:14:31,600
+generalization of correlation. But in
+
+374
+00:14:28,959 --> 00:14:33,360
+the language of information theory, it
+
+375
+00:14:31,600 --> 00:14:35,279
+goes beyond simple linear relationships
+
+376
+00:14:33,360 --> 00:14:38,279
+and captures any kind of statistical
+
+377
+00:14:35,279 --> 00:14:38,279
+dependence.
+
+378
+00:14:40,000 --> 00:14:43,519
+Mutual information which we just
+
+379
+00:14:41,680 --> 00:14:45,519
+discussed is actually defined in terms
+
+380
+00:14:43,519 --> 00:14:48,399
+of another very fundamental concept
+
+381
+00:14:45,519 --> 00:14:51,680
+entropy.
+
+382
+00:14:48,399 --> 00:14:54,000
+So what is entropy in this context?
+
+383
+00:14:51,680 --> 00:14:55,920
+Think of it as a measure of uncertainty.
+
+384
+00:14:54,000 --> 00:14:58,079
+If you have a probability distribution
+
+385
+00:14:55,920 --> 00:15:00,160
+that is very spread out and uniform,
+
+386
+00:14:58,079 --> 00:15:01,600
+then you have a lot of uncertainty. You
+
+387
+00:15:00,160 --> 00:15:04,880
+don't really know what the outcome will
+
+388
+00:15:01,600 --> 00:15:07,120
+be. That means the entropy is high.
+
+389
+00:15:04,880 --> 00:15:09,600
+On the other hand, if the distribution
+
+390
+00:15:07,120 --> 00:15:12,000
+is sharply peaked like a delta function
+
+391
+00:15:09,600 --> 00:15:14,320
+where one outcome is guaranteed, then
+
+392
+00:15:12,000 --> 00:15:17,519
+there is no uncertainty. In that case,
+
+393
+00:15:14,320 --> 00:15:19,839
+the entropy is very low, even zero.
+
+394
+00:15:17,519 --> 00:15:21,839
+So entropy tells us how much information
+
+395
+00:15:19,839 --> 00:15:24,399
+or how much unpredictability is
+
+396
+00:15:21,839 --> 00:15:26,079
+contained in a random variable. In
+
+397
+00:15:24,399 --> 00:15:28,240
+information theory, this is a central
+
+398
+00:15:26,079 --> 00:15:31,680
+concept because information itself is
+
+399
+00:15:28,240 --> 00:15:33,680
+really about reducing uncertainty.
+
+400
+00:15:31,680 --> 00:15:35,600
+Now mutual information can be written as
+
+401
+00:15:33,680 --> 00:15:37,839
+the difference between two entropies.
+
+402
+00:15:35,600 --> 00:15:40,560
+The entropy of Y by itself minus the
+
+403
+00:15:37,839 --> 00:15:42,800
+entropy of Y given X. In other words, it
+
+404
+00:15:40,560 --> 00:15:45,360
+measures how much uncertainty about Y is
+
+405
+00:15:42,800 --> 00:15:47,440
+reduced when you know X. That's exactly
+
+406
+00:15:45,360 --> 00:15:49,440
+what we mean by how much does X tell us
+
+407
+00:15:47,440 --> 00:15:51,199
+about Y.
+
+408
+00:15:49,440 --> 00:15:53,839
+Again, you don't need to get bogged down
+
+409
+00:15:51,199 --> 00:15:56,320
+in the formulas here. The key point is
+
+410
+00:15:53,839 --> 00:15:58,560
+entropy captures uncertainty and mutual
+
+411
+00:15:56,320 --> 00:16:02,720
+information measures how two variables
+
+412
+00:15:58,560 --> 00:16:04,320
+share or reduce that uncertainty.
+
+413
+00:16:02,720 --> 00:16:06,320
+For our purposes, I just want you to
+
+414
+00:16:04,320 --> 00:16:08,639
+know that these information theoretic
+
+415
+00:16:06,320 --> 00:16:10,880
+measures KL divergence, mutual
+
+416
+00:16:08,639 --> 00:16:12,480
+information, and entropy are very
+
+417
+00:16:10,880 --> 00:16:14,639
+powerful, but they are more advanced
+
+418
+00:16:12,480 --> 00:16:16,320
+than what we need right now. Think of
+
+419
+00:16:14,639 --> 00:16:18,000
+them as tools in the background which
+
+420
+00:16:16,320 --> 00:16:20,480
+complement the simpler measures like
+
+421
+00:16:18,000 --> 00:16:22,320
+mean squared error.
+
+422
+00:16:20,480 --> 00:16:24,000
+And with that, we will soon return to
+
+423
+00:16:22,320 --> 00:16:25,839
+the more practical measures that are
+
+424
+00:16:24,000 --> 00:16:28,839
+directly used in image quality
+
+425
+00:16:25,839 --> 00:16:28,839
+assessment.
+
+426
+00:16:30,399 --> 00:16:35,600
+Now let's see why mean squared error or
+
+427
+00:16:32,560 --> 00:16:37,440
+MSE is not always good enough.
+
+428
+00:16:35,600 --> 00:16:39,519
+At the top left we have the original
+
+429
+00:16:37,440 --> 00:16:42,320
+image. The best version taken under
+
+430
+00:16:39,519 --> 00:16:44,160
+ideal conditions. Below it you see five
+
+431
+00:16:42,320 --> 00:16:46,800
+different degraded versions of the same
+
+432
+00:16:44,160 --> 00:16:49,279
+image. Some look noisy, some are blurry
+
+433
+00:16:46,800 --> 00:16:51,199
+and some have other distortions. Clearly
+
+434
+00:16:49,279 --> 00:16:53,519
+to the human eye these images do not
+
+435
+00:16:51,199 --> 00:16:55,519
+look equally good.
+
+436
+00:16:53,519 --> 00:16:57,440
+But here's the problem. When we compute
+
+437
+00:16:55,519 --> 00:16:59,199
+the mean squared error between the
+
+438
+00:16:57,440 --> 00:17:02,160
+original image and each of these five
+
+439
+00:16:59,199 --> 00:17:03,839
+degraded ones, the result is the same
+
+440
+00:17:02,160 --> 00:17:05,839
+225.
+
+441
+00:17:03,839 --> 00:17:09,679
+Mathematically, MSE tells us they are
+
+442
+00:17:05,839 --> 00:17:11,439
+equally different from the original.
+
+443
+00:17:09,679 --> 00:17:14,079
+Visually though, that's obviously not
+
+444
+00:17:11,439 --> 00:17:15,839
+true. Some versions look much closer to
+
+445
+00:17:14,079 --> 00:17:18,160
+the original while others look far
+
+446
+00:17:15,839 --> 00:17:21,360
+worse. Our eyes immediately pick up
+
+447
+00:17:18,160 --> 00:17:23,520
+those differences, but MSE cannot.
+
+448
+00:17:21,360 --> 00:17:26,640
+And this is the key point. MSE does not
+
+449
+00:17:23,520 --> 00:17:28,720
+reflect human perception very well. It
+
+450
+00:17:26,640 --> 00:17:30,400
+measures pixel-wise differences, but it
+
+451
+00:17:28,720 --> 00:17:33,520
+cannot capture whether the overall
+
+452
+00:17:30,400 --> 00:17:35,120
+structure of the image is preserved.
+
+453
+00:17:33,520 --> 00:17:37,200
+This leads us to the next important
+
+454
+00:17:35,120 --> 00:17:39,840
+idea. We need a measure that better
+
+455
+00:17:37,200 --> 00:17:42,400
+matches what humans actually see. That's
+
+456
+00:17:39,840 --> 00:17:45,400
+where structural similarity or SSM comes
+
+457
+00:17:42,400 --> 00:17:45,400
+in.
+
+458
+00:17:46,720 --> 00:17:50,400
+Now, let's think about this from the
+
+459
+00:17:48,320 --> 00:17:52,640
+perspective of the human visual system
+
+460
+00:17:50,400 --> 00:17:54,559
+or HVS.
+
+461
+00:17:52,640 --> 00:17:56,799
+The human eye does not look at images
+
+462
+00:17:54,559 --> 00:17:59,760
+pixel by pixel the way mean squared
+
+463
+00:17:56,799 --> 00:18:01,919
+error does. MSE simply compares each
+
+464
+00:17:59,760 --> 00:18:04,160
+pixel individually, treats every error
+
+465
+00:18:01,919 --> 00:18:06,320
+the same, and then adds them up. That's
+
+466
+00:18:04,160 --> 00:18:10,400
+a bottomup approach, starting from the
+
+467
+00:18:06,320 --> 00:18:12,160
+smallest units and working upward.
+
+468
+00:18:10,400 --> 00:18:13,919
+But our visual system works very
+
+469
+00:18:12,160 --> 00:18:16,240
+differently.
+
+470
+00:18:13,919 --> 00:18:18,320
+We are much more sensitive to structural
+
+471
+00:18:16,240 --> 00:18:20,000
+information, the patterns, edges, and
+
+472
+00:18:18,320 --> 00:18:22,640
+relationships that give an image its
+
+473
+00:18:20,000 --> 00:18:24,320
+overall form. For example, even a small
+
+474
+00:18:22,640 --> 00:18:26,320
+change in the background or a shift in
+
+475
+00:18:24,320 --> 00:18:28,799
+texture is something we can notice right
+
+476
+00:18:26,320 --> 00:18:30,480
+away. Our brains are highly adapted to
+
+477
+00:18:28,799 --> 00:18:32,320
+detect these kinds of contextual
+
+478
+00:18:30,480 --> 00:18:34,720
+changes.
+
+479
+00:18:32,320 --> 00:18:36,320
+In the classical view, the focus was on
+
+480
+00:18:34,720 --> 00:18:38,799
+error visibility. If you see a
+
+481
+00:18:36,320 --> 00:18:40,640
+discrepancy, count it as an error. In
+
+482
+00:18:38,799 --> 00:18:42,720
+the newer view, the focus shifts to
+
+483
+00:18:40,640 --> 00:18:44,400
+structural distortion. What matters is
+
+484
+00:18:42,720 --> 00:18:46,400
+whether the structure of the image has
+
+485
+00:18:44,400 --> 00:18:48,320
+been preserved.
+
+486
+00:18:46,400 --> 00:18:51,120
+This also connects to the way our vision
+
+487
+00:18:48,320 --> 00:18:53,360
+system interprets images.
+
+488
+00:18:51,120 --> 00:18:55,280
+Rather than starting with tiny details,
+
+489
+00:18:53,360 --> 00:18:57,760
+many researchers argue that we first
+
+490
+00:18:55,280 --> 00:18:59,840
+process the global structure, sometimes
+
+491
+00:18:57,760 --> 00:19:01,840
+described in terms of topological
+
+492
+00:18:59,840 --> 00:19:03,760
+features. These are high-level
+
+493
+00:19:01,840 --> 00:19:05,600
+properties such as whether objects are
+
+494
+00:19:03,760 --> 00:19:07,679
+connected, how many distinct regions
+
+495
+00:19:05,600 --> 00:19:10,080
+there are, or whether certain shapes
+
+496
+00:19:07,679 --> 00:19:11,840
+remain intact. Importantly, these
+
+497
+00:19:10,080 --> 00:19:16,080
+properties don't change if the image is
+
+498
+00:19:11,840 --> 00:19:18,080
+stretched, rotated, or rescaled.
+
+499
+00:19:16,080 --> 00:19:20,160
+So, here's the philosophical shift.
+
+500
+00:19:18,080 --> 00:19:22,720
+Instead of measuring differences pixel
+
+501
+00:19:20,160 --> 00:19:24,559
+by pixel, we want to measure how much of
+
+502
+00:19:22,720 --> 00:19:26,720
+the structural information has been
+
+503
+00:19:24,559 --> 00:19:28,720
+preserved. That is what structural
+
+504
+00:19:26,720 --> 00:19:30,720
+similarity is all about. And it's why it
+
+505
+00:19:28,720 --> 00:19:34,360
+is far more aligned with how humans
+
+506
+00:19:30,720 --> 00:19:34,360
+actually see images.
+
+507
+00:19:35,919 --> 00:19:40,240
+Here we arrive at what I like to call an
+
+508
+00:19:37,679 --> 00:19:43,039
+instant classic. This is the landmark
+
+509
+00:19:40,240 --> 00:19:45,679
+2004 paper by Joe Wang, Alan Bovic,
+
+510
+00:19:43,039 --> 00:19:48,080
+Hamid Shik, and Eero Simmonelli titled
+
+511
+00:19:45,679 --> 00:19:51,760
+image quality assessment from error
+
+512
+00:19:48,080 --> 00:19:53,679
+visibility to structural similarity.
+
+513
+00:19:51,760 --> 00:19:56,160
+Before this work, most image quality
+
+514
+00:19:53,679 --> 00:19:57,919
+measures focused on error visibility,
+
+515
+00:19:56,160 --> 00:20:00,160
+essentially counting differences pixel
+
+516
+00:19:57,919 --> 00:20:02,640
+by pixel, the way mean squared error
+
+517
+00:20:00,160 --> 00:20:04,160
+does. What this paper introduced was a
+
+518
+00:20:02,640 --> 00:20:05,840
+completely different perspective.
+
+519
+00:20:04,160 --> 00:20:08,799
+Instead of measuring errors, we should
+
+520
+00:20:05,840 --> 00:20:10,640
+measure structural similarity.
+
+521
+00:20:08,799 --> 00:20:12,960
+The idea is built on the assumption that
+
+522
+00:20:10,640 --> 00:20:15,280
+the human visual system is highly tuned
+
+523
+00:20:12,960 --> 00:20:17,039
+to extract structural information from
+
+524
+00:20:15,280 --> 00:20:19,200
+images.
+
+525
+00:20:17,039 --> 00:20:22,080
+So rather than asking how many errors
+
+526
+00:20:19,200 --> 00:20:23,520
+can we see, the SSM framework asks how
+
+527
+00:20:22,080 --> 00:20:26,400
+well is the structure of the image
+
+528
+00:20:23,520 --> 00:20:28,240
+preserved.
+
+529
+00:20:26,400 --> 00:20:30,640
+This shift in thinking turned out to be
+
+530
+00:20:28,240 --> 00:20:32,320
+incredibly powerful.
+
+531
+00:20:30,640 --> 00:20:34,720
+The paper has been cited tens of
+
+532
+00:20:32,320 --> 00:20:36,880
+thousands of times and SSIM quickly
+
+533
+00:20:34,720 --> 00:20:38,720
+became a standard tool not only in image
+
+534
+00:20:36,880 --> 00:20:40,640
+processing research but also in
+
+535
+00:20:38,720 --> 00:20:42,400
+practical applications like video
+
+536
+00:20:40,640 --> 00:20:44,559
+compression, image restoration and
+
+537
+00:20:42,400 --> 00:20:46,480
+medical imaging.
+
+538
+00:20:44,559 --> 00:20:48,799
+So from this point forward when we talk
+
+539
+00:20:46,480 --> 00:20:50,559
+about perceptual image quality we are
+
+540
+00:20:48,799 --> 00:20:53,960
+really building on the foundation laid
+
+541
+00:20:50,559 --> 00:20:53,960
+by this work.
+
+542
+00:20:55,280 --> 00:20:59,840
+Now let's look at an example to see how
+
+543
+00:20:57,120 --> 00:21:02,559
+the structural similarity index or SSIM
+
+544
+00:20:59,840 --> 00:21:04,320
+actually works in practice.
+
+545
+00:21:02,559 --> 00:21:07,520
+On the top left we have the reference
+
+546
+00:21:04,320 --> 00:21:09,679
+image the original undistorted version.
+
+547
+00:21:07,520 --> 00:21:12,320
+If we compare this image with itself the
+
+548
+00:21:09,679 --> 00:21:15,039
+SSM score is exactly one. That makes
+
+549
+00:21:12,320 --> 00:21:16,799
+sense because they are identical.
+
+550
+00:21:15,039 --> 00:21:20,320
+Now compare the original with the two
+
+551
+00:21:16,799 --> 00:21:22,720
+images next to it on the top row. Both
+
+552
+00:21:20,320 --> 00:21:26,480
+look quite similar to the original. one
+
+553
+00:21:22,720 --> 00:21:28,400
+produces an SSM value of 0.949 comma the
+
+554
+00:21:26,480 --> 00:21:30,240
+other 0.989.
+
+555
+00:21:28,400 --> 00:21:32,000
+These numbers are very close to one
+
+556
+00:21:30,240 --> 00:21:35,039
+reflecting the fact that the images are
+
+557
+00:21:32,000 --> 00:21:36,880
+almost identical to our eyes.
+
+558
+00:21:35,039 --> 00:21:39,039
+On the bottom row, however, we see very
+
+559
+00:21:36,880 --> 00:21:41,120
+different results.
+
+560
+00:21:39,039 --> 00:21:43,039
+One image has been heavily pixelated,
+
+561
+00:21:41,120 --> 00:21:45,039
+another blurred, and another corrupted
+
+562
+00:21:43,039 --> 00:21:47,520
+with noise. When compared to the
+
+563
+00:21:45,039 --> 00:21:51,039
+original, their SSM values drop
+
+564
+00:21:47,520 --> 00:21:55,200
+significantly around 0.67,
+
+565
+00:21:51,039 --> 00:21:57,280
+0.69. 69 comma and about 0.72.
+
+566
+00:21:55,200 --> 00:21:59,919
+That means they retain only about 2/3 of
+
+567
+00:21:57,280 --> 00:22:02,000
+the structural similarity.
+
+568
+00:21:59,919 --> 00:22:04,159
+The important thing here is that SSM
+
+569
+00:22:02,000 --> 00:22:06,559
+values line up with what we visually
+
+570
+00:22:04,159 --> 00:22:08,880
+perceive. Images that look good to us
+
+571
+00:22:06,559 --> 00:22:11,679
+score close to one. Images that look
+
+572
+00:22:08,880 --> 00:22:13,760
+distorted or degraded score much lower.
+
+573
+00:22:11,679 --> 00:22:15,679
+That is the power of SSIM. It bridges
+
+574
+00:22:13,760 --> 00:22:19,240
+the gap between mathematical measurement
+
+575
+00:22:15,679 --> 00:22:19,240
+and human vision.
+
+576
+00:22:20,640 --> 00:22:24,320
+Now let's look at how the structural
+
+577
+00:22:22,080 --> 00:22:26,159
+similarity index or SSIM is actually
+
+578
+00:22:24,320 --> 00:22:28,000
+computed.
+
+579
+00:22:26,159 --> 00:22:31,120
+Suppose we have two images which we'll
+
+580
+00:22:28,000 --> 00:22:32,559
+call signal X and signal Y.
+
+581
+00:22:31,120 --> 00:22:34,480
+The first step is to look at their
+
+582
+00:22:32,559 --> 00:22:36,559
+luminance which simply means the average
+
+583
+00:22:34,480 --> 00:22:38,400
+brightness level. We measure the mean
+
+584
+00:22:36,559 --> 00:22:41,440
+intensity of each image and make sure we
+
+585
+00:22:38,400 --> 00:22:43,760
+are comparing them on the same scale.
+
+586
+00:22:41,440 --> 00:22:45,840
+Next, we look at the contrast. This is
+
+587
+00:22:43,760 --> 00:22:47,840
+captured by the standard deviation, how
+
+588
+00:22:45,840 --> 00:22:50,320
+much the pixel values vary around the
+
+589
+00:22:47,840 --> 00:22:52,159
+mean. A high standard deviation means
+
+590
+00:22:50,320 --> 00:22:54,159
+strong contrast, while a low standard
+
+591
+00:22:52,159 --> 00:22:56,480
+deviation means the image looks flat or
+
+592
+00:22:54,159 --> 00:22:58,720
+washed out. So, we compute the standard
+
+593
+00:22:56,480 --> 00:23:00,720
+deviation for each image to quantify its
+
+594
+00:22:58,720 --> 00:23:02,799
+contrast.
+
+595
+00:23:00,720 --> 00:23:04,799
+After normalizing for luminance and
+
+596
+00:23:02,799 --> 00:23:07,440
+contrast, we focus on the most important
+
+597
+00:23:04,799 --> 00:23:09,440
+part, the structure. This step captures
+
+598
+00:23:07,440 --> 00:23:11,600
+how patterns of pixels in one image
+
+599
+00:23:09,440 --> 00:23:14,240
+relate to patterns in the other. Whether
+
+600
+00:23:11,600 --> 00:23:17,120
+the edges, textures, and fine details
+
+601
+00:23:14,240 --> 00:23:19,600
+line up.
+
+602
+00:23:17,120 --> 00:23:21,919
+Finally, SSIM combines all three
+
+603
+00:23:19,600 --> 00:23:24,159
+comparisons, luminance, contrast, and
+
+604
+00:23:21,919 --> 00:23:26,720
+structure into a single value between
+
+605
+00:23:24,159 --> 00:23:29,039
+zero and one. A score of one means the
+
+606
+00:23:26,720 --> 00:23:30,720
+images are structurally identical. A
+
+607
+00:23:29,039 --> 00:23:33,200
+lower score means important structural
+
+608
+00:23:30,720 --> 00:23:35,760
+information has been lost.
+
+609
+00:23:33,200 --> 00:23:37,919
+So in summary, SIM works by checking
+
+610
+00:23:35,760 --> 00:23:39,760
+three things. Do the images have the
+
+611
+00:23:37,919 --> 00:23:42,080
+same brightness, the same contrast, and
+
+612
+00:23:39,760 --> 00:23:44,080
+the same structural patterns. When all
+
+613
+00:23:42,080 --> 00:23:47,080
+three align, we say the images are very
+
+614
+00:23:44,080 --> 00:23:47,080
+similar.
+
+615
+00:23:48,559 --> 00:23:51,520
+As I mentioned, the structural
+
+616
+00:23:49,840 --> 00:23:53,520
+similarity index is built on three
+
+617
+00:23:51,520 --> 00:23:57,039
+components. Luminance, contrast, and
+
+618
+00:23:53,520 --> 00:23:59,600
+structure, or LC and S for short.
+
+619
+00:23:57,039 --> 00:24:01,280
+Let's start with luminance.
+
+620
+00:23:59,600 --> 00:24:03,679
+Suppose we have an image X with n
+
+621
+00:24:01,280 --> 00:24:05,760
+pixels. To find its average brightness
+
+622
+00:24:03,679 --> 00:24:08,480
+or mean, we simply add up all the pixel
+
+623
+00:24:05,760 --> 00:24:11,840
+values and divide by n. This gives us
+
+624
+00:24:08,480 --> 00:24:13,919
+the mean value, which we call mu of x.
+
+625
+00:24:11,840 --> 00:24:16,559
+Next, we remove the mean by subtracting
+
+626
+00:24:13,919 --> 00:24:18,559
+the mean of x from every pixel. This is
+
+627
+00:24:16,559 --> 00:24:20,480
+the first step of normalization. It
+
+628
+00:24:18,559 --> 00:24:22,799
+centers the image so that the average
+
+629
+00:24:20,480 --> 00:24:24,480
+brightness is zero.
+
+630
+00:24:22,799 --> 00:24:27,360
+Once we have the mean, we can also
+
+631
+00:24:24,480 --> 00:24:29,360
+compute the standard deviation.
+
+632
+00:24:27,360 --> 00:24:31,679
+This measures how much the pixel values
+
+633
+00:24:29,360 --> 00:24:34,799
+vary around the mean. Notice that the
+
+634
+00:24:31,679 --> 00:24:36,880
+formula here uses 1 / n minus one, not
+
+635
+00:24:34,799 --> 00:24:38,960
+just n. That detail comes from
+
+636
+00:24:36,880 --> 00:24:42,880
+statistics. It gives us an unbiased
+
+637
+00:24:38,960 --> 00:24:44,880
+estimate of the standard deviation.
+
+638
+00:24:42,880 --> 00:24:46,960
+Finally, we can normalize the image even
+
+639
+00:24:44,880 --> 00:24:49,440
+further by dividing each pixel by the
+
+640
+00:24:46,960 --> 00:24:51,600
+standard deviation.
+
+641
+00:24:49,440 --> 00:24:53,440
+After this second step of normalization,
+
+642
+00:24:51,600 --> 00:24:56,400
+the transformed image will have a mean
+
+643
+00:24:53,440 --> 00:24:58,240
+of zero and a standard deviation of one.
+
+644
+00:24:56,400 --> 00:24:59,919
+In other words, it has been rescaled so
+
+645
+00:24:58,240 --> 00:25:01,919
+that brightness and contrast are
+
+646
+00:24:59,919 --> 00:25:04,240
+standardized.
+
+647
+00:25:01,919 --> 00:25:06,720
+We repeat this process for both images X
+
+648
+00:25:04,240 --> 00:25:08,480
+and Y. Only then do we compare them
+
+649
+00:25:06,720 --> 00:25:10,320
+first in terms of luminance, then
+
+650
+00:25:08,480 --> 00:25:12,240
+contrast, and finally their structural
+
+651
+00:25:10,320 --> 00:25:14,320
+relationship.
+
+652
+00:25:12,240 --> 00:25:17,360
+So these are the basic operations behind
+
+653
+00:25:14,320 --> 00:25:19,279
+SSM. They are simple statistical tools,
+
+654
+00:25:17,360 --> 00:25:21,520
+but together they allow us to capture
+
+655
+00:25:19,279 --> 00:25:26,039
+how similar two images are in terms of
+
+656
+00:25:21,520 --> 00:25:26,039
+brightness, contrast, and structure.
+
+657
+00:25:26,640 --> 00:25:30,559
+When we construct a similarity measure,
+
+658
+00:25:28,720 --> 00:25:32,400
+the goal is to capture not just how
+
+659
+00:25:30,559 --> 00:25:35,679
+different two images are, but how
+
+660
+00:25:32,400 --> 00:25:37,520
+similar they are. To do this properly,
+
+661
+00:25:35,679 --> 00:25:40,640
+we want our measure to satisfy three
+
+662
+00:25:37,520 --> 00:25:43,200
+basic conditions or postulates.
+
+663
+00:25:40,640 --> 00:25:45,120
+First, symmetry. The similarity between
+
+664
+00:25:43,200 --> 00:25:47,600
+X and Y should be the same as the
+
+665
+00:25:45,120 --> 00:25:49,760
+similarity between Y and X. In other
+
+666
+00:25:47,600 --> 00:25:51,919
+words, order doesn't matter. If you
+
+667
+00:25:49,760 --> 00:25:54,000
+compare image A with image B, you should
+
+668
+00:25:51,919 --> 00:25:57,039
+get the same result as comparing image B
+
+669
+00:25:54,000 --> 00:25:59,520
+with image A.
+
+670
+00:25:57,039 --> 00:26:01,679
+Second, boundedness. The similarity
+
+671
+00:25:59,520 --> 00:26:04,240
+value should always be between zero and
+
+672
+00:26:01,679 --> 00:26:06,559
+one. A score of one means the images are
+
+673
+00:26:04,240 --> 00:26:09,440
+perfectly identical. A score closer to
+
+674
+00:26:06,559 --> 00:26:12,320
+zero means they are very different.
+
+675
+00:26:09,440 --> 00:26:14,320
+Third, a unique maximum. The similarity
+
+676
+00:26:12,320 --> 00:26:16,480
+should only reach the maximum value of
+
+677
+00:26:14,320 --> 00:26:18,799
+one if the two images are exactly the
+
+678
+00:26:16,480 --> 00:26:20,559
+same pixel for pixel. That way the
+
+679
+00:26:18,799 --> 00:26:22,640
+measure has a clear and meaningful
+
+680
+00:26:20,559 --> 00:26:24,720
+interpretation.
+
+681
+00:26:22,640 --> 00:26:27,120
+These three conditions symmetry,
+
+682
+00:26:24,720 --> 00:26:29,360
+boundedness, and unique maximum make
+
+683
+00:26:27,120 --> 00:26:32,320
+sure that a similarity measure behaves
+
+684
+00:26:29,360 --> 00:26:36,600
+logically and reliably. SSM is designed
+
+685
+00:26:32,320 --> 00:26:36,600
+to satisfy all of these postulates.
+
+686
+00:26:38,240 --> 00:26:43,600
+So let's begin with the first component
+
+687
+00:26:39,840 --> 00:26:45,440
+of SSM, the luminance comparison.
+
+688
+00:26:43,600 --> 00:26:48,159
+Remember luminance simply means the
+
+689
+00:26:45,440 --> 00:26:50,000
+average brightness of an image.
+
+690
+00:26:48,159 --> 00:26:51,919
+If two images have the same mean
+
+691
+00:26:50,000 --> 00:26:54,559
+intensity, they should score highly on
+
+692
+00:26:51,919 --> 00:26:56,480
+luminance similarity. If one image is
+
+693
+00:26:54,559 --> 00:26:59,360
+much brighter or darker than the other,
+
+694
+00:26:56,480 --> 00:27:01,360
+the similarity should be lower.
+
+695
+00:26:59,360 --> 00:27:03,760
+Mathematically, the luminance comparison
+
+696
+00:27:01,360 --> 00:27:08,080
+is written like this.
+
+697
+00:27:03,760 --> 00:27:12,240
+L of x and y = 2 * mux * muy plus a
+
+698
+00:27:08,080 --> 00:27:15,279
+constant c1 all divided by mux^2 + muy 2
+
+699
+00:27:12,240 --> 00:27:17,840
+plus that same constant c1.
+
+700
+00:27:15,279 --> 00:27:20,480
+Here mux and muy represent the average
+
+701
+00:27:17,840 --> 00:27:23,039
+brightness of images x and y. The
+
+702
+00:27:20,480 --> 00:27:25,200
+constant c1 is added to make the formula
+
+703
+00:27:23,039 --> 00:27:27,200
+stable. Otherwise, if both means are
+
+704
+00:27:25,200 --> 00:27:30,960
+very close to zero, the denominator
+
+705
+00:27:27,200 --> 00:27:33,840
+becomes tiny and the ratio unstable.
+
+706
+00:27:30,960 --> 00:27:36,240
+To choose c1, we take the square of k1 *
+
+707
+00:27:33,840 --> 00:27:39,200
+l, where l is the dynamic range of pixel
+
+708
+00:27:36,240 --> 00:27:41,279
+values. For an 8bit grayscale image, l
+
+709
+00:27:39,200 --> 00:27:43,279
+is 255.
+
+710
+00:27:41,279 --> 00:27:45,279
+K1 is just a very small number, much
+
+711
+00:27:43,279 --> 00:27:47,840
+less than one.
+
+712
+00:27:45,279 --> 00:27:49,840
+Now notice a few important properties.
+
+713
+00:27:47,840 --> 00:27:52,000
+If the two means are equal, then the
+
+714
+00:27:49,840 --> 00:27:54,480
+numerator and denominator are the same.
+
+715
+00:27:52,000 --> 00:27:57,360
+So the luminance comparison equals 1,
+
+716
+00:27:54,480 --> 00:27:59,279
+meaning perfect similarity.
+
+717
+00:27:57,360 --> 00:28:01,600
+If the two means are very different, the
+
+718
+00:27:59,279 --> 00:28:03,760
+numerator becomes small relative to the
+
+719
+00:28:01,600 --> 00:28:05,360
+denominator. So the luminance comparison
+
+720
+00:28:03,760 --> 00:28:07,520
+approaches zero, meaning poor
+
+721
+00:28:05,360 --> 00:28:09,279
+similarity.
+
+722
+00:28:07,520 --> 00:28:11,840
+This simple formula ensures that
+
+723
+00:28:09,279 --> 00:28:14,080
+luminance similarity satisfies the three
+
+724
+00:28:11,840 --> 00:28:16,640
+postulates we discussed earlier. It is
+
+725
+00:28:14,080 --> 00:28:18,799
+symmetric bounded between zero and one
+
+726
+00:28:16,640 --> 00:28:20,960
+and it reaches the maximum value of one
+
+727
+00:28:18,799 --> 00:28:23,200
+only when the two images have identical
+
+728
+00:28:20,960 --> 00:28:24,880
+mean brightness.
+
+729
+00:28:23,200 --> 00:28:27,279
+So luminance is the first step in
+
+730
+00:28:24,880 --> 00:28:31,320
+measuring structural similarity. Next
+
+731
+00:28:27,279 --> 00:28:31,320
+we'll look at contrast comparison.
+
+732
+00:28:33,120 --> 00:28:36,559
+Let's take a closer look at the
+
+733
+00:28:34,559 --> 00:28:40,080
+luminance term and see why it behaves
+
+734
+00:28:36,559 --> 00:28:41,919
+the way we want. Here we let mux the
+
+735
+00:28:40,080 --> 00:28:44,399
+mean of image x be represented by the
+
+736
+00:28:41,919 --> 00:28:46,720
+letter a and we let mui the mean of
+
+737
+00:28:44,399 --> 00:28:49,679
+image y be represented by the variable
+
+738
+00:28:46,720 --> 00:28:51,919
+x. Now the question is as x changes what
+
+739
+00:28:49,679 --> 00:28:54,640
+value of x will maximize the luminance
+
+740
+00:28:51,919 --> 00:28:56,559
+comparison.
+
+741
+00:28:54,640 --> 00:28:58,559
+To answer this we take the formula for
+
+742
+00:28:56,559 --> 00:29:01,360
+the luminance term and compute its first
+
+743
+00:28:58,559 --> 00:29:03,440
+derivative with respect to x. By setting
+
+744
+00:29:01,360 --> 00:29:04,799
+that derivative equal to zero we can
+
+745
+00:29:03,440 --> 00:29:07,360
+find the point where the function
+
+746
+00:29:04,799 --> 00:29:09,200
+reaches its maximum.
+
+747
+00:29:07,360 --> 00:29:11,440
+When we go through the algebra, the
+
+748
+00:29:09,200 --> 00:29:14,240
+conclusion is very clear. The maximum
+
+749
+00:29:11,440 --> 00:29:16,480
+occurs when X equals A. In other words,
+
+750
+00:29:14,240 --> 00:29:19,200
+when the mean brightness of image Y is
+
+751
+00:29:16,480 --> 00:29:20,880
+equal to the mean brightness of image X.
+
+752
+00:29:19,200 --> 00:29:22,799
+At that point, the luminance comparison
+
+753
+00:29:20,880 --> 00:29:24,799
+reaches its maximum possible value,
+
+754
+00:29:22,799 --> 00:29:27,039
+which is one.
+
+755
+00:29:24,799 --> 00:29:28,799
+This confirms the intuition. Two images
+
+756
+00:29:27,039 --> 00:29:30,559
+will only be perfectly similar in
+
+757
+00:29:28,799 --> 00:29:33,200
+luminance if their average brightness
+
+758
+00:29:30,559 --> 00:29:35,120
+levels are the same. If one image is
+
+759
+00:29:33,200 --> 00:29:36,799
+brighter or darker than the other, the
+
+760
+00:29:35,120 --> 00:29:39,600
+luminance comparison will drop
+
+761
+00:29:36,799 --> 00:29:41,840
+accordingly.
+
+762
+00:29:39,600 --> 00:29:44,320
+So this mathematical exercise is really
+
+763
+00:29:41,840 --> 00:29:46,640
+just a proof of what we already expect.
+
+764
+00:29:44,320 --> 00:29:48,240
+The luminance term is maximized when the
+
+765
+00:29:46,640 --> 00:29:50,240
+two images have the same mean
+
+766
+00:29:48,240 --> 00:29:51,919
+brightness.
+
+767
+00:29:50,240 --> 00:29:54,240
+That's the first aspect of structural
+
+768
+00:29:51,919 --> 00:29:58,600
+similarity. Next, we'll move on to the
+
+769
+00:29:54,240 --> 00:29:58,600
+second aspect, contrast comparison.
+
+770
+00:30:00,240 --> 00:30:04,480
+The second component of SSM is the
+
+771
+00:30:02,080 --> 00:30:06,559
+contrast comparison.
+
+772
+00:30:04,480 --> 00:30:08,320
+Even if two images have the same average
+
+773
+00:30:06,559 --> 00:30:10,080
+brightness, they may still look very
+
+774
+00:30:08,320 --> 00:30:11,600
+different if their contrast is not the
+
+775
+00:30:10,080 --> 00:30:13,600
+same.
+
+776
+00:30:11,600 --> 00:30:15,919
+One might look sharp and vivid while the
+
+777
+00:30:13,600 --> 00:30:17,440
+other looks flat or washed out. To
+
+778
+00:30:15,919 --> 00:30:19,919
+capture this, we use the standard
+
+779
+00:30:17,440 --> 00:30:23,520
+deviation of pixel values. Sigma X for
+
+780
+00:30:19,919 --> 00:30:25,360
+image X and sigma Y for image Y.
+
+781
+00:30:23,520 --> 00:30:27,200
+The formula for contrast comparison
+
+782
+00:30:25,360 --> 00:30:30,559
+looks very similar to the one we used
+
+783
+00:30:27,200 --> 00:30:33,840
+for luminance. It is written as C of X
+
+784
+00:30:30,559 --> 00:30:38,240
+and Y equals 2 * sigma X * sigma Y plus
+
+785
+00:30:33,840 --> 00:30:41,279
+a constant C2 / sigma X^ 2 + sigma Y^ 2
+
+786
+00:30:38,240 --> 00:30:43,120
+plus that same constant C2.
+
+787
+00:30:41,279 --> 00:30:44,880
+Here again the constant is added to
+
+788
+00:30:43,120 --> 00:30:48,640
+prevent instability when values are
+
+789
+00:30:44,880 --> 00:30:50,960
+close to zero. C2 is defined as K2 * L^
+
+790
+00:30:48,640 --> 00:30:52,559
+2 where L is the dynamic range of the
+
+791
+00:30:50,960 --> 00:30:55,039
+image.
+
+792
+00:30:52,559 --> 00:30:57,360
+Now notice how this works. If the two
+
+793
+00:30:55,039 --> 00:30:59,279
+images have the same standard deviation,
+
+794
+00:30:57,360 --> 00:31:01,679
+meaning their contrast are the same,
+
+795
+00:30:59,279 --> 00:31:06,399
+then the numerator and denominator match
+
+796
+00:31:01,679 --> 00:31:08,559
+and the contrast comparison equals 1.
+
+797
+00:31:06,399 --> 00:31:10,640
+If one image has much higher or lower
+
+798
+00:31:08,559 --> 00:31:12,480
+contrast than the other, then the ratio
+
+799
+00:31:10,640 --> 00:31:14,320
+becomes smaller and the similarity
+
+800
+00:31:12,480 --> 00:31:16,240
+drops.
+
+801
+00:31:14,320 --> 00:31:19,120
+This design is also consistent with how
+
+802
+00:31:16,240 --> 00:31:21,200
+the human visual system works.
+
+803
+00:31:19,120 --> 00:31:22,880
+For example, in a very dark room, small
+
+804
+00:31:21,200 --> 00:31:25,200
+changes in brightness can be quite
+
+805
+00:31:22,880 --> 00:31:27,120
+noticeable. But in a very bright, high
+
+806
+00:31:25,200 --> 00:31:29,440
+contrast scene, the same small changes
+
+807
+00:31:27,120 --> 00:31:31,039
+are much harder to see. The formula
+
+808
+00:31:29,440 --> 00:31:33,360
+reflects this effect, sometimes called
+
+809
+00:31:31,039 --> 00:31:35,279
+contrast masking.
+
+810
+00:31:33,360 --> 00:31:37,519
+So contrast is the second pillar of
+
+811
+00:31:35,279 --> 00:31:39,279
+structural similarity. It ensures that
+
+812
+00:31:37,519 --> 00:31:41,039
+two images not only have the same
+
+813
+00:31:39,279 --> 00:31:44,399
+average brightness but also the same
+
+814
+00:31:41,039 --> 00:31:46,000
+level of variation around that average.
+
+815
+00:31:44,399 --> 00:31:49,640
+Next, we'll look at the third pillar,
+
+816
+00:31:46,000 --> 00:31:49,640
+the structural comparison.
+
+817
+00:31:51,360 --> 00:31:55,679
+Now, let's analyze the contrast term a
+
+818
+00:31:53,600 --> 00:31:57,679
+bit more carefully.
+
+819
+00:31:55,679 --> 00:31:59,360
+The key idea here is that the human
+
+820
+00:31:57,679 --> 00:32:01,279
+visual system does not respond to
+
+821
+00:31:59,360 --> 00:32:04,159
+absolute changes in brightness, but
+
+822
+00:32:01,279 --> 00:32:05,840
+rather to relative changes.
+
+823
+00:32:04,159 --> 00:32:08,080
+This is exactly what Weber's law
+
+824
+00:32:05,840 --> 00:32:10,159
+describes. It states that the smallest
+
+825
+00:32:08,080 --> 00:32:11,919
+noticeable change in a stimulus is
+
+826
+00:32:10,159 --> 00:32:14,000
+proportional to the background level of
+
+827
+00:32:11,919 --> 00:32:15,679
+that stimulus.
+
+828
+00:32:14,000 --> 00:32:17,600
+For example, if you are in a very dark
+
+829
+00:32:15,679 --> 00:32:19,919
+room, even a tiny spot of light is
+
+830
+00:32:17,600 --> 00:32:22,240
+noticeable right away. But if you are in
+
+831
+00:32:19,919 --> 00:32:24,399
+a brightly lit room, the very same tiny
+
+832
+00:32:22,240 --> 00:32:26,159
+light would be invisible. The background
+
+833
+00:32:24,399 --> 00:32:28,480
+intensity is so high that the small
+
+834
+00:32:26,159 --> 00:32:29,919
+change is masked.
+
+835
+00:32:28,480 --> 00:32:32,399
+You've probably experienced this
+
+836
+00:32:29,919 --> 00:32:34,960
+outdoors at night under a dark sky. You
+
+837
+00:32:32,399 --> 00:32:36,880
+can see countless stars, but during the
+
+838
+00:32:34,960 --> 00:32:38,480
+day, those same stars are still there,
+
+839
+00:32:36,880 --> 00:32:41,679
+yet you can't see them because the
+
+840
+00:32:38,480 --> 00:32:44,080
+bright background light overwhelms them.
+
+841
+00:32:41,679 --> 00:32:46,240
+The same principle applies to hearing.
+
+842
+00:32:44,080 --> 00:32:48,480
+In a quiet room, even a whisper can be
+
+843
+00:32:46,240 --> 00:32:51,200
+heard. But in a noisy party, you need to
+
+844
+00:32:48,480 --> 00:32:52,880
+shout for anyone to notice.
+
+845
+00:32:51,200 --> 00:32:54,559
+Mathematically, this means that the
+
+846
+00:32:52,880 --> 00:32:56,640
+sensitivity of the contrast measure
+
+847
+00:32:54,559 --> 00:32:59,760
+depends on the ratio of the change delta
+
+848
+00:32:56,640 --> 00:33:02,399
+x to the baseline x. If X is small, even
+
+849
+00:32:59,760 --> 00:33:04,399
+a small delta makes a big difference. If
+
+850
+00:33:02,399 --> 00:33:06,320
+X is large, the same delta hardly
+
+851
+00:33:04,399 --> 00:33:09,600
+matters.
+
+852
+00:33:06,320 --> 00:33:12,080
+So the contrast term in SSM naturally
+
+853
+00:33:09,600 --> 00:33:13,919
+captures this idea. It reflects the fact
+
+854
+00:33:12,080 --> 00:33:16,880
+that our visual system is tuned to
+
+855
+00:33:13,919 --> 00:33:18,799
+relative, not absolute differences. This
+
+856
+00:33:16,880 --> 00:33:22,200
+is why the measure agrees so well with
+
+857
+00:33:18,799 --> 00:33:22,200
+human perception.
+
+858
+00:33:23,919 --> 00:33:28,240
+Here's a simple example of a changeover
+
+859
+00:33:25,840 --> 00:33:30,000
+background. Look at the first column on
+
+860
+00:33:28,240 --> 00:33:32,000
+the left.
+
+861
+00:33:30,000 --> 00:33:34,399
+The top image has about 10 dots while
+
+862
+00:33:32,000 --> 00:33:36,799
+the bottom has about 20 dots. The
+
+863
+00:33:34,399 --> 00:33:38,480
+difference is 10. When you compare them,
+
+864
+00:33:36,799 --> 00:33:41,360
+it's very obvious that the bottom one
+
+865
+00:33:38,480 --> 00:33:43,600
+has more dots than the top one.
+
+866
+00:33:41,360 --> 00:33:46,240
+Now look at the second column. The top
+
+867
+00:33:43,600 --> 00:33:49,120
+image has about 110 dots and the bottom
+
+868
+00:33:46,240 --> 00:33:51,279
+has about 120 dots. Again, the
+
+869
+00:33:49,120 --> 00:33:54,559
+difference is 10, but this time it's
+
+870
+00:33:51,279 --> 00:33:57,279
+much harder to notice the difference.
+
+871
+00:33:54,559 --> 00:33:59,200
+Why?
+
+872
+00:33:57,279 --> 00:34:01,760
+Because the background level, the total
+
+873
+00:33:59,200 --> 00:34:03,760
+number of dots is so much higher. A
+
+874
+00:34:01,760 --> 00:34:05,600
+change of 10 is a large fraction when
+
+875
+00:34:03,760 --> 00:34:07,360
+the background is only 10, but it's a
+
+876
+00:34:05,600 --> 00:34:09,919
+tiny fraction when the background is
+
+877
+00:34:07,360 --> 00:34:11,839
+already 110.
+
+878
+00:34:09,919 --> 00:34:14,079
+This illustrates the principle we just
+
+879
+00:34:11,839 --> 00:34:16,399
+discussed. What our visual system
+
+880
+00:34:14,079 --> 00:34:19,280
+detects is not the absolute change, but
+
+881
+00:34:16,399 --> 00:34:21,040
+the relative change delta divided by the
+
+882
+00:34:19,280 --> 00:34:22,960
+background.
+
+883
+00:34:21,040 --> 00:34:24,800
+So when we design a similarity measure,
+
+884
+00:34:22,960 --> 00:34:27,200
+we want it to reflect this property of
+
+885
+00:34:24,800 --> 00:34:30,399
+human vision. And that's exactly what
+
+886
+00:34:27,200 --> 00:34:32,159
+the contrast comparison in SSM does. It
+
+887
+00:34:30,399 --> 00:34:35,560
+behaves in a way that is consistent with
+
+888
+00:34:32,159 --> 00:34:35,560
+how we see.
+
+889
+00:34:37,040 --> 00:34:41,919
+The third and final component of SSM is
+
+890
+00:34:39,280 --> 00:34:44,560
+the structural comparison.
+
+891
+00:34:41,919 --> 00:34:46,800
+Here's the idea. Once we normalize each
+
+892
+00:34:44,560 --> 00:34:49,280
+image, removing its mean brightness and
+
+893
+00:34:46,800 --> 00:34:51,520
+adjusting its contrast, what's left is
+
+894
+00:34:49,280 --> 00:34:53,599
+essentially its structure. This is where
+
+895
+00:34:51,520 --> 00:34:57,599
+we ask, do the patterns, textures, and
+
+896
+00:34:53,599 --> 00:34:59,599
+shapes in the two images align.
+
+897
+00:34:57,599 --> 00:35:01,440
+Mathematically, this is captured using
+
+898
+00:34:59,599 --> 00:35:04,320
+the crossorrelation between the two
+
+899
+00:35:01,440 --> 00:35:06,400
+images. We call it sigma xy, which
+
+900
+00:35:04,320 --> 00:35:08,960
+measures how the variations in image x
+
+901
+00:35:06,400 --> 00:35:10,640
+line up with the variations in image y.
+
+902
+00:35:08,960 --> 00:35:12,400
+To make the measure stable, we again
+
+903
+00:35:10,640 --> 00:35:15,280
+introduce a constant just like we did
+
+904
+00:35:12,400 --> 00:35:17,040
+with luminance and contrast.
+
+905
+00:35:15,280 --> 00:35:18,960
+Another way to think about this is in
+
+906
+00:35:17,040 --> 00:35:20,880
+terms of vectors in highdimensional
+
+907
+00:35:18,960 --> 00:35:23,200
+space.
+
+908
+00:35:20,880 --> 00:35:26,000
+Imagine each image as a vector with each
+
+909
+00:35:23,200 --> 00:35:27,680
+pixel value being one coordinate. The
+
+910
+00:35:26,000 --> 00:35:29,520
+structural similarity is then like
+
+911
+00:35:27,680 --> 00:35:32,240
+taking the inner product of these two
+
+912
+00:35:29,520 --> 00:35:34,240
+vectors normalized by their lengths.
+
+913
+00:35:32,240 --> 00:35:37,200
+Geometrically, this is just the coine of
+
+914
+00:35:34,240 --> 00:35:39,839
+the angle between the two vectors.
+
+915
+00:35:37,200 --> 00:35:42,240
+If the two vectors point in exactly the
+
+916
+00:35:39,839 --> 00:35:44,880
+same direction, meaning the images are
+
+917
+00:35:42,240 --> 00:35:48,800
+identical up to scaling, the angle is
+
+918
+00:35:44,880 --> 00:35:50,720
+zero and the similarity is maximized.
+
+919
+00:35:48,800 --> 00:35:52,160
+If they are completely uncorrelated, the
+
+920
+00:35:50,720 --> 00:35:54,480
+inner product is small and the
+
+921
+00:35:52,160 --> 00:35:56,720
+similarity is low.
+
+922
+00:35:54,480 --> 00:35:59,359
+This is the same intuition we used when
+
+923
+00:35:56,720 --> 00:36:01,680
+studying for analysis. A forier
+
+924
+00:35:59,359 --> 00:36:04,400
+coefficient is computed by projecting a
+
+925
+00:36:01,680 --> 00:36:06,320
+signal onto a basis function. Here we
+
+926
+00:36:04,400 --> 00:36:10,480
+are projecting one image onto another
+
+927
+00:36:06,320 --> 00:36:13,119
+and measuring how well they align.
+
+928
+00:36:10,480 --> 00:36:15,920
+So structural comparison boils down to
+
+929
+00:36:13,119 --> 00:36:18,160
+asking once brightness and contrast are
+
+930
+00:36:15,920 --> 00:36:21,599
+accounted for. Do the fine details and
+
+931
+00:36:18,160 --> 00:36:24,000
+patterns of the two images still match.
+
+932
+00:36:21,599 --> 00:36:26,320
+That completes the three pillars of SSM,
+
+933
+00:36:24,000 --> 00:36:27,920
+luminance, contrast, and structure.
+
+934
+00:36:26,320 --> 00:36:32,040
+Next, we'll see how they combine into
+
+935
+00:36:27,920 --> 00:36:32,040
+the full similarity measure.
+
+936
+00:36:32,480 --> 00:36:35,599
+Now let's connect this to a very
+
+937
+00:36:34,079 --> 00:36:38,720
+important mathematical principle. The
+
+938
+00:36:35,599 --> 00:36:40,400
+couchy Schwarz inequality.
+
+939
+00:36:38,720 --> 00:36:42,240
+You may remember this from linear
+
+940
+00:36:40,400 --> 00:36:44,320
+algebra.
+
+941
+00:36:42,240 --> 00:36:46,960
+It tells us that the inner product of
+
+942
+00:36:44,320 --> 00:36:49,119
+two vectors is always less than or equal
+
+943
+00:36:46,960 --> 00:36:51,280
+to the product of their lengths.
+
+944
+00:36:49,119 --> 00:36:53,200
+Equality holds only when the two vectors
+
+945
+00:36:51,280 --> 00:36:55,440
+are linearly related. In other words,
+
+946
+00:36:53,200 --> 00:36:57,040
+when one is just a scaled version of the
+
+947
+00:36:55,440 --> 00:36:59,440
+other.
+
+948
+00:36:57,040 --> 00:37:01,280
+Why is this important here? Well, recall
+
+949
+00:36:59,440 --> 00:37:03,280
+that in structural comparison, we
+
+950
+00:37:01,280 --> 00:37:05,680
+represent each image as a vector in a
+
+951
+00:37:03,280 --> 00:37:07,680
+highdimensional space. The structural
+
+952
+00:37:05,680 --> 00:37:10,960
+similarity is essentially the normalized
+
+953
+00:37:07,680 --> 00:37:13,280
+inner product between those two vectors.
+
+954
+00:37:10,960 --> 00:37:15,280
+The Koshi Schwarz inequality guarantees
+
+955
+00:37:13,280 --> 00:37:17,760
+that this similarity value will always
+
+956
+00:37:15,280 --> 00:37:19,680
+lie between 0 and one and it will reach
+
+957
+00:37:17,760 --> 00:37:21,520
+one only when the two images are
+
+958
+00:37:19,680 --> 00:37:24,400
+structurally identical, differing at
+
+959
+00:37:21,520 --> 00:37:26,400
+most by a scaling factor.
+
+960
+00:37:24,400 --> 00:37:28,079
+So this inequality is the mathematical
+
+961
+00:37:26,400 --> 00:37:30,560
+reason why the structural comparison
+
+962
+00:37:28,079 --> 00:37:32,960
+term works. It's not just a rule chosen
+
+963
+00:37:30,560 --> 00:37:34,800
+arbitrarily. It's grounded in solid
+
+964
+00:37:32,960 --> 00:37:36,720
+geometry.
+
+965
+00:37:34,800 --> 00:37:38,560
+And as engineers and scientists, it's
+
+966
+00:37:36,720 --> 00:37:41,119
+always valuable to know not just how
+
+967
+00:37:38,560 --> 00:37:43,119
+something works, but why. Understanding
+
+968
+00:37:41,119 --> 00:37:45,440
+the principle behind the rule allows you
+
+969
+00:37:43,119 --> 00:37:48,760
+to be creative and adapt these ideas in
+
+970
+00:37:45,440 --> 00:37:48,760
+new situations.
+
+971
+00:37:50,720 --> 00:37:54,079
+And now we can finally put everything
+
+972
+00:37:52,400 --> 00:37:55,839
+together.
+
+973
+00:37:54,079 --> 00:37:57,760
+We've defined three components.
+
+974
+00:37:55,839 --> 00:38:00,160
+Luminance comparison, contrast
+
+975
+00:37:57,760 --> 00:38:02,320
+comparison, and structural comparison.
+
+976
+00:38:00,160 --> 00:38:04,960
+Each one captures a different aspect of
+
+977
+00:38:02,320 --> 00:38:07,599
+how two images may look alike or differ.
+
+978
+00:38:04,960 --> 00:38:10,640
+The structural similarity index or SSIM
+
+979
+00:38:07,599 --> 00:38:13,520
+is built by combining all three.
+
+980
+00:38:10,640 --> 00:38:16,240
+Mathematically, the SSM of X and Y is
+
+981
+00:38:13,520 --> 00:38:18,800
+written as luminance term raised to the
+
+982
+00:38:16,240 --> 00:38:21,520
+power alpha multiplied by the contrast
+
+983
+00:38:18,800 --> 00:38:23,359
+term raised to the power beta multiplied
+
+984
+00:38:21,520 --> 00:38:26,320
+by the structure term raised to the
+
+985
+00:38:23,359 --> 00:38:29,040
+power gamma.
+
+986
+00:38:26,320 --> 00:38:31,040
+The parameters alpha, beta, and gamma
+
+987
+00:38:29,040 --> 00:38:33,520
+simply allow us to adjust the relative
+
+988
+00:38:31,040 --> 00:38:35,680
+importance of the three components. In
+
+989
+00:38:33,520 --> 00:38:37,200
+practice, we usually set all three equal
+
+990
+00:38:35,680 --> 00:38:40,240
+to one, giving equal weight to
+
+991
+00:38:37,200 --> 00:38:42,240
+luminance, contrast, and structure.
+
+992
+00:38:40,240 --> 00:38:45,839
+To keep the formula stable, we also
+
+993
+00:38:42,240 --> 00:38:48,000
+include constants C1, C2, and C3. These
+
+994
+00:38:45,839 --> 00:38:50,480
+prevent divisions by very small numbers,
+
+995
+00:38:48,000 --> 00:38:52,640
+which could make the result unstable.
+
+996
+00:38:50,480 --> 00:38:55,680
+For convenience, researchers often set
+
+997
+00:38:52,640 --> 00:38:57,760
+C3 equal to half of C2. These are
+
+998
+00:38:55,680 --> 00:39:00,800
+empirical design choices, not strict
+
+999
+00:38:57,760 --> 00:39:02,640
+theory, but they work well in practice.
+
+1000
+00:39:00,800 --> 00:39:05,119
+With these simplifications, we arrive at
+
+1001
+00:39:02,640 --> 00:39:07,280
+the familiar form of SSM that is widely
+
+1002
+00:39:05,119 --> 00:39:08,960
+used today. This measure is often
+
+1003
+00:39:07,280 --> 00:39:12,160
+referred to as the universal quality
+
+1004
+00:39:08,960 --> 00:39:14,240
+index with stabilizing constants added.
+
+1005
+00:39:12,160 --> 00:39:15,839
+The remarkable thing is how well SSM
+
+1006
+00:39:14,240 --> 00:39:17,680
+works.
+
+1007
+00:39:15,839 --> 00:39:19,680
+Despite its simplicity, it has become
+
+1008
+00:39:17,680 --> 00:39:21,760
+one of the most widely used metrics for
+
+1009
+00:39:19,680 --> 00:39:24,480
+image quality both in research and in
+
+1010
+00:39:21,760 --> 00:39:26,560
+industry. Even today, when we use deep
+
+1011
+00:39:24,480 --> 00:39:30,000
+learning and advanced algorithms for
+
+1012
+00:39:26,560 --> 00:39:31,760
+image processing, SSIM and mean squared
+
+1013
+00:39:30,000 --> 00:39:33,760
+error remain the standard reference
+
+1014
+00:39:31,760 --> 00:39:36,160
+metrics.
+
+1015
+00:39:33,760 --> 00:39:38,800
+So this is the moment where SSIM is
+
+1016
+00:39:36,160 --> 00:39:41,440
+born. A simple but powerful measure that
+
+1017
+00:39:38,800 --> 00:39:45,560
+aligns closely with human perception and
+
+1018
+00:39:41,440 --> 00:39:45,560
+has stood the test of time.
+
+1019
+00:39:47,040 --> 00:39:51,119
+Here's another example that demonstrates
+
+1020
+00:39:48,880 --> 00:39:53,520
+the power of sim.
+
+1021
+00:39:51,119 --> 00:39:56,640
+The image in the top left marked A is
+
+1022
+00:39:53,520 --> 00:39:58,640
+the reference image, the ground truth.
+
+1023
+00:39:56,640 --> 00:40:00,400
+The other five images are distorted
+
+1024
+00:39:58,640 --> 00:40:03,119
+versions, each with a different type of
+
+1025
+00:40:00,400 --> 00:40:05,760
+degradation. contrast stretching, mean
+
+1026
+00:40:03,119 --> 00:40:08,160
+shift, JPEG compression, blurring, and
+
+1027
+00:40:05,760 --> 00:40:10,240
+salt and pepper noise.
+
+1028
+00:40:08,160 --> 00:40:12,240
+If we were to use mean squared error,
+
+1029
+00:40:10,240 --> 00:40:14,800
+all of these distorted images would end
+
+1030
+00:40:12,240 --> 00:40:16,480
+up with roughly the same error value.
+
+1031
+00:40:14,800 --> 00:40:18,480
+But visually, they do not look equally
+
+1032
+00:40:16,480 --> 00:40:22,160
+bad. Some are close to the original,
+
+1033
+00:40:18,480 --> 00:40:25,760
+while others are clearly worse.
+
+1034
+00:40:22,160 --> 00:40:28,160
+Now look at the SSM scores shown here.
+
+1035
+00:40:25,760 --> 00:40:30,960
+The contrast stretched image has an SM
+
+1036
+00:40:28,160 --> 00:40:32,800
+close to 0.92 comma which makes sense
+
+1037
+00:40:30,960 --> 00:40:35,760
+because it looks fairly good. The
+
+1038
+00:40:32,800 --> 00:40:38,320
+meanshifted version scores about 0.90
+
+1039
+00:40:35,760 --> 00:40:40,320
+comma also quite close but the JPEG
+
+1040
+00:40:38,320 --> 00:40:43,119
+compressed version drops down to around
+
+1041
+00:40:40,320 --> 00:40:44,800
+0.69 comma and the blurred version to
+
+1042
+00:40:43,119 --> 00:40:46,800
+0.70.
+
+1043
+00:40:44,800 --> 00:40:49,599
+The salt and pepper noisy image scores
+
+1044
+00:40:46,800 --> 00:40:51,280
+about 0.77.
+
+1045
+00:40:49,599 --> 00:40:53,040
+If you compare these numbers with what
+
+1046
+00:40:51,280 --> 00:40:55,440
+your eyes tell you, the agreement is
+
+1047
+00:40:53,040 --> 00:40:57,520
+clear. Images that look closer to the
+
+1048
+00:40:55,440 --> 00:41:00,160
+original score higher. Images that look
+
+1049
+00:40:57,520 --> 00:41:03,760
+worse score lower.
+
+1050
+00:41:00,160 --> 00:41:05,839
+This is why SSM is so widely used.
+
+1051
+00:41:03,760 --> 00:41:07,920
+It captures the essential aspects of the
+
+1052
+00:41:05,839 --> 00:41:09,920
+human visual system, brightness,
+
+1053
+00:41:07,920 --> 00:41:12,319
+contrast, and structure in a single
+
+1054
+00:41:09,920 --> 00:41:15,680
+number. And in practice, this means we
+
+1055
+00:41:12,319 --> 00:41:17,280
+can use SIM to guide optimization.
+
+1056
+00:41:15,680 --> 00:41:19,040
+For example, when designing a
+
+1057
+00:41:17,280 --> 00:41:20,640
+communication channel or an imaging
+
+1058
+00:41:19,040 --> 00:41:22,960
+system, we can adjust the system
+
+1059
+00:41:20,640 --> 00:41:24,880
+parameters to maximize SIM, ensuring
+
+1060
+00:41:22,960 --> 00:41:26,960
+that the images produced look good to
+
+1061
+00:41:24,880 --> 00:41:29,040
+the human eye.
+
+1062
+00:41:26,960 --> 00:41:31,200
+So, SSIM is not just a theoretical
+
+1063
+00:41:29,040 --> 00:41:33,359
+measure. It is a practical tool that
+
+1064
+00:41:31,200 --> 00:41:36,359
+connects mathematics directly to human
+
+1065
+00:41:33,359 --> 00:41:36,359
+perception.
+
+1066
+00:41:38,079 --> 00:41:42,160
+Because SSM works so well, researchers
+
+1067
+00:41:40,319 --> 00:41:43,680
+have developed many extensions of the
+
+1068
+00:41:42,160 --> 00:41:45,119
+method.
+
+1069
+00:41:43,680 --> 00:41:47,119
+The version we've been discussing
+
+1070
+00:41:45,119 --> 00:41:50,079
+applies to grayscale images where each
+
+1071
+00:41:47,119 --> 00:41:53,520
+pixel has only one intensity value. But
+
+1072
+00:41:50,079 --> 00:41:55,599
+in reality, most images are in color.
+
+1073
+00:41:53,520 --> 00:41:57,920
+So naturally, the first extension was to
+
+1074
+00:41:55,599 --> 00:42:00,160
+adapt SSIM for color image quality
+
+1075
+00:41:57,920 --> 00:42:02,160
+assessment. This involves measuring
+
+1076
+00:42:00,160 --> 00:42:04,240
+similarity not only in brightness and
+
+1077
+00:42:02,160 --> 00:42:06,960
+contrast, but also in the relationships
+
+1078
+00:42:04,240 --> 00:42:08,960
+between color channels.
+
+1079
+00:42:06,960 --> 00:42:12,720
+Another extension is to video quality
+
+1080
+00:42:08,960 --> 00:42:14,960
+assessment. Here SSM is applied not just
+
+1081
+00:42:12,720 --> 00:42:16,480
+frame by frame but also across time
+
+1082
+00:42:14,960 --> 00:42:19,119
+because our eyes are sensitive to
+
+1083
+00:42:16,480 --> 00:42:20,880
+temporal consistency. This has become
+
+1084
+00:42:19,119 --> 00:42:23,280
+very important in areas like video
+
+1085
+00:42:20,880 --> 00:42:25,680
+compression and streaming.
+
+1086
+00:42:23,280 --> 00:42:27,839
+There is also multiscale SSM which
+
+1087
+00:42:25,680 --> 00:42:29,760
+evaluates images at different levels of
+
+1088
+00:42:27,839 --> 00:42:31,680
+resolution.
+
+1089
+00:42:29,760 --> 00:42:34,079
+This is especially useful because human
+
+1090
+00:42:31,680 --> 00:42:36,720
+vision itself operates on a multiscale
+
+1091
+00:42:34,079 --> 00:42:38,560
+level. We notice both fine details and
+
+1092
+00:42:36,720 --> 00:42:40,880
+large structures depending on how we
+
+1093
+00:42:38,560 --> 00:42:43,440
+view an image. And finally, there is
+
+1094
+00:42:40,880 --> 00:42:45,599
+complex wavelet SSIM, which can handle
+
+1095
+00:42:43,440 --> 00:42:48,319
+images that have complex values, such as
+
+1096
+00:42:45,599 --> 00:42:50,000
+those produced in MRI.
+
+1097
+00:42:48,319 --> 00:42:52,480
+This is a powerful extension that
+
+1098
+00:42:50,000 --> 00:42:54,800
+broadens SSIM to applications in medical
+
+1099
+00:42:52,480 --> 00:42:57,440
+imaging and beyond.
+
+1100
+00:42:54,800 --> 00:43:00,079
+The core idea of SSIM, comparing
+
+1101
+00:42:57,440 --> 00:43:02,400
+luminance, contrast, and structure, has
+
+1102
+00:43:00,079 --> 00:43:06,640
+proven to be so flexible that it has
+
+1103
+00:43:02,400 --> 00:43:08,400
+been adapted to various domains.
+
+1104
+00:43:06,640 --> 00:43:10,079
+Now, let me pause here and use an
+
+1105
+00:43:08,400 --> 00:43:12,079
+analogy that connects to your own
+
+1106
+00:43:10,079 --> 00:43:14,160
+experience.
+
+1107
+00:43:12,079 --> 00:43:15,920
+When we design an exam, we want the
+
+1108
+00:43:14,160 --> 00:43:19,440
+scores to spread out enough to show
+
+1109
+00:43:15,920 --> 00:43:21,680
+meaningful differences among students.
+
+1110
+00:43:19,440 --> 00:43:24,079
+If everyone scores 90 or higher, we
+
+1111
+00:43:21,680 --> 00:43:25,760
+can't distinguish performance very well.
+
+1112
+00:43:24,079 --> 00:43:27,440
+Ideally, the mean should be somewhere in
+
+1113
+00:43:25,760 --> 00:43:30,079
+the middle, say around 50, with
+
+1114
+00:43:27,440 --> 00:43:31,920
+variation above and below. That way, the
+
+1115
+00:43:30,079 --> 00:43:33,760
+test reveals the true distribution of
+
+1116
+00:43:31,920 --> 00:43:36,000
+understanding.
+
+1117
+00:43:33,760 --> 00:43:38,160
+It's the same idea with SSIM. We
+
+1118
+00:43:36,000 --> 00:43:40,480
+normalize by the mean and by the
+
+1119
+00:43:38,160 --> 00:43:42,160
+variation so we can focus on the
+
+1120
+00:43:40,480 --> 00:43:44,640
+meaningful structural differences
+
+1121
+00:43:42,160 --> 00:43:47,119
+between signals.
+
+1122
+00:43:44,640 --> 00:43:48,880
+So whether we're evaluating images or
+
+1123
+00:43:47,119 --> 00:43:51,040
+student performance, the principle is
+
+1124
+00:43:48,880 --> 00:43:53,680
+the same. Measure differences relative
+
+1125
+00:43:51,040 --> 00:43:57,240
+to expectations and variability, not in
+
+1126
+00:43:53,680 --> 00:43:57,240
+absolute terms.
+
+1127
+00:43:58,720 --> 00:44:03,839
+Now we move into the second part of our
+
+1128
+00:44:00,480 --> 00:44:05,440
+lecture, system specific measures.
+
+1129
+00:44:03,839 --> 00:44:07,599
+So far we've discussed general
+
+1130
+00:44:05,440 --> 00:44:09,920
+mathematical ways of comparing images.
+
+1131
+00:44:07,599 --> 00:44:12,720
+Measures like mean squared error, KL
+
+1132
+00:44:09,920 --> 00:44:14,079
+divergence and SSIM. These are important
+
+1133
+00:44:12,720 --> 00:44:15,680
+but they don't tell the whole story
+
+1134
+00:44:14,079 --> 00:44:20,079
+because image quality also depends
+
+1135
+00:44:15,680 --> 00:44:22,079
+heavily on the imaging system itself.
+
+1136
+00:44:20,079 --> 00:44:24,480
+Every imaging system whether it's an
+
+1137
+00:44:22,079 --> 00:44:26,400
+X-ray detector, an MRI scanner or an
+
+1138
+00:44:24,480 --> 00:44:28,800
+ultrasound probe has its own
+
+1139
+00:44:26,400 --> 00:44:30,960
+characteristics and limitations. To
+
+1140
+00:44:28,800 --> 00:44:32,800
+assess the quality of images produced by
+
+1141
+00:44:30,960 --> 00:44:36,240
+a system, we need to look at metrics
+
+1142
+00:44:32,800 --> 00:44:38,960
+that reflect the systems performance.
+
+1143
+00:44:36,240 --> 00:44:40,960
+This includes measures such as noise and
+
+1144
+00:44:38,960 --> 00:44:43,920
+the related quantity signal to noise
+
+1145
+00:44:40,960 --> 00:44:45,920
+ratio SNR and contrast to noise ratio
+
+1146
+00:44:43,920 --> 00:44:47,839
+CNR.
+
+1147
+00:44:45,920 --> 00:44:50,000
+Resolution, which can be spatial,
+
+1148
+00:44:47,839 --> 00:44:51,680
+contrast, temporal or spectral depending
+
+1149
+00:44:50,000 --> 00:44:53,680
+on what aspect of the system we are
+
+1150
+00:44:51,680 --> 00:44:55,520
+evaluating.
+
+1151
+00:44:53,680 --> 00:44:57,520
+And finally, artifacts, which are false
+
+1152
+00:44:55,520 --> 00:44:59,359
+or misleading structures that appear in
+
+1153
+00:44:57,520 --> 00:45:01,839
+the image because of imperfections in
+
+1154
+00:44:59,359 --> 00:45:04,000
+the imaging process.
+
+1155
+00:45:01,839 --> 00:45:06,000
+Together, these system specific measures
+
+1156
+00:45:04,000 --> 00:45:07,680
+tell us how good a given imaging device
+
+1157
+00:45:06,000 --> 00:45:09,520
+is at capturing and representing
+
+1158
+00:45:07,680 --> 00:45:11,440
+reality.
+
+1159
+00:45:09,520 --> 00:45:13,280
+So, let's begin this section with one of
+
+1160
+00:45:11,440 --> 00:45:15,760
+the most important system specific
+
+1161
+00:45:13,280 --> 00:45:18,760
+measures, the signal to noise ratio or
+
+1162
+00:45:15,760 --> 00:45:18,760
+SNR.
+
+1163
+00:45:20,480 --> 00:45:24,480
+In engineering, one of the most familiar
+
+1164
+00:45:22,480 --> 00:45:27,839
+terms you'll encounter is the signal to
+
+1165
+00:45:24,480 --> 00:45:29,520
+noise ratio or SNR.
+
+1166
+00:45:27,839 --> 00:45:32,079
+Whenever we take a measurement, whether
+
+1167
+00:45:29,520 --> 00:45:34,079
+it's a photograph, an MRI scan, or an
+
+1168
+00:45:32,079 --> 00:45:37,920
+ultrasound image, we always have some
+
+1169
+00:45:34,079 --> 00:45:39,760
+amount of noise. Noise is unavoidable.
+
+1170
+00:45:37,920 --> 00:45:42,400
+It arises from the fundamental
+
+1171
+00:45:39,760 --> 00:45:44,160
+randomness of physical processes and
+
+1172
+00:45:42,400 --> 00:45:46,480
+ultimately from quantum mechanics
+
+1173
+00:45:44,160 --> 00:45:48,160
+itself. Nothing is ever perfectly
+
+1174
+00:45:46,480 --> 00:45:50,000
+certain.
+
+1175
+00:45:48,160 --> 00:45:51,839
+On top of this background noise, we have
+
+1176
+00:45:50,000 --> 00:45:53,359
+the signal. The part of the measurement
+
+1177
+00:45:51,839 --> 00:45:55,359
+that actually carries meaningful
+
+1178
+00:45:53,359 --> 00:45:57,520
+information.
+
+1179
+00:45:55,359 --> 00:45:59,280
+SNR is a simple but powerful way of
+
+1180
+00:45:57,520 --> 00:46:01,680
+expressing how strong the signal is
+
+1181
+00:45:59,280 --> 00:46:03,520
+relative to the noise.
+
+1182
+00:46:01,680 --> 00:46:06,000
+Mathematically, it is defined as the
+
+1183
+00:46:03,520 --> 00:46:07,920
+ratio of signal power to noise power.
+
+1184
+00:46:06,000 --> 00:46:09,920
+Since power is proportional to the
+
+1185
+00:46:07,920 --> 00:46:11,760
+square of amplitude, you can also write
+
+1186
+00:46:09,920 --> 00:46:13,520
+SNR as the square of the signal
+
+1187
+00:46:11,760 --> 00:46:15,440
+amplitude divided by the noise
+
+1188
+00:46:13,520 --> 00:46:18,240
+amplitude.
+
+1189
+00:46:15,440 --> 00:46:20,000
+Here's the intuition. If the SNR is
+
+1190
+00:46:18,240 --> 00:46:22,400
+around one, the signal varies in the
+
+1191
+00:46:20,000 --> 00:46:25,040
+same range as the noise. That means the
+
+1192
+00:46:22,400 --> 00:46:27,839
+signal is barely visible.
+
+1193
+00:46:25,040 --> 00:46:29,760
+If the SNR is 5 or 10 or higher, the
+
+1194
+00:46:27,839 --> 00:46:33,040
+signal stands out clearly above the
+
+1195
+00:46:29,760 --> 00:46:34,960
+noise and it can be easily detected.
+
+1196
+00:46:33,040 --> 00:46:37,920
+A related measure is the contrast to
+
+1197
+00:46:34,960 --> 00:46:39,839
+noise ratio or CNR.
+
+1198
+00:46:37,920 --> 00:46:41,440
+Instead of comparing one signal to
+
+1199
+00:46:39,839 --> 00:46:44,319
+background noise, we compare the
+
+1200
+00:46:41,440 --> 00:46:46,079
+difference between two signals.
+
+1201
+00:46:44,319 --> 00:46:48,720
+For example, a feature versus its
+
+1202
+00:46:46,079 --> 00:46:50,560
+background divided by the noise level.
+
+1203
+00:46:48,720 --> 00:46:52,640
+This measure is very common in medical
+
+1204
+00:46:50,560 --> 00:46:54,640
+imaging because it directly reflects how
+
+1205
+00:46:52,640 --> 00:46:57,680
+well we can distinguish one structure
+
+1206
+00:46:54,640 --> 00:47:00,000
+from another.
+
+1207
+00:46:57,680 --> 00:47:02,640
+So, SNR tells us whether a signal can
+
+1208
+00:47:00,000 --> 00:47:04,560
+rise above the noise at all, while CNR
+
+1209
+00:47:02,640 --> 00:47:06,240
+tells us whether two signals can be
+
+1210
+00:47:04,560 --> 00:47:08,640
+distinguished against that noisy
+
+1211
+00:47:06,240 --> 00:47:10,560
+background. And next, we'll move on to
+
+1212
+00:47:08,640 --> 00:47:14,200
+another fundamental aspect of image
+
+1213
+00:47:10,560 --> 00:47:14,200
+quality, resolution.
+
+1214
+00:47:16,079 --> 00:47:19,520
+Next, let's talk about spatial
+
+1215
+00:47:17,920 --> 00:47:22,640
+resolution, which is one of the most
+
+1216
+00:47:19,520 --> 00:47:24,560
+important measures of image quality.
+
+1217
+00:47:22,640 --> 00:47:26,560
+The simplest way to think about spatial
+
+1218
+00:47:24,560 --> 00:47:28,319
+resolution is in terms of how well an
+
+1219
+00:47:26,560 --> 00:47:31,119
+imaging system can distinguish two
+
+1220
+00:47:28,319 --> 00:47:33,040
+objects that are close together.
+
+1221
+00:47:31,119 --> 00:47:35,760
+For example, imagine two very small
+
+1222
+00:47:33,040 --> 00:47:37,920
+bright points like two tiny tumors.
+
+1223
+00:47:35,760 --> 00:47:40,240
+Mathematically, we describe each of
+
+1224
+00:47:37,920 --> 00:47:43,520
+those points as a delta function which
+
+1225
+00:47:40,240 --> 00:47:45,599
+represents a perfect single dot.
+
+1226
+00:47:43,520 --> 00:47:48,079
+But in reality, no imaging system can
+
+1227
+00:47:45,599 --> 00:47:50,240
+reproduce a perfect dot. Instead, each
+
+1228
+00:47:48,079 --> 00:47:52,720
+point becomes blurred into a small disc,
+
+1229
+00:47:50,240 --> 00:47:54,560
+usually shaped like a Gaussian curve.
+
+1230
+00:47:52,720 --> 00:47:57,119
+This blur is called the point spread
+
+1231
+00:47:54,560 --> 00:47:58,720
+function or PSF. It tells us how the
+
+1232
+00:47:57,119 --> 00:48:01,440
+system responds to a single point
+
+1233
+00:47:58,720 --> 00:48:03,839
+source.
+
+1234
+00:48:01,440 --> 00:48:05,680
+Now, suppose we have two points. If they
+
+1235
+00:48:03,839 --> 00:48:07,440
+are far apart, even though each one is
+
+1236
+00:48:05,680 --> 00:48:09,920
+blurry, you can still clearly see two
+
+1237
+00:48:07,440 --> 00:48:11,599
+separate spots. But as they move closer
+
+1238
+00:48:09,920 --> 00:48:13,680
+together, the two blurred shapes begin
+
+1239
+00:48:11,599 --> 00:48:15,520
+to overlap.
+
+1240
+00:48:13,680 --> 00:48:17,680
+Eventually, when the separation between
+
+1241
+00:48:15,520 --> 00:48:19,920
+them is too small, the two spots merge
+
+1242
+00:48:17,680 --> 00:48:22,079
+and appear as one.
+
+1243
+00:48:19,920 --> 00:48:25,599
+The critical threshold is defined by the
+
+1244
+00:48:22,079 --> 00:48:28,160
+full width at half maximum or FWHM of
+
+1245
+00:48:25,599 --> 00:48:29,520
+the point spread function.
+
+1246
+00:48:28,160 --> 00:48:31,599
+In other words, when the distance
+
+1247
+00:48:29,520 --> 00:48:33,599
+between the two points is equal to the
+
+1248
+00:48:31,599 --> 00:48:35,280
+width of the blur at half its height,
+
+1249
+00:48:33,599 --> 00:48:38,240
+that's about the limit of what the
+
+1250
+00:48:35,280 --> 00:48:40,160
+imaging system can resolve. Any closer
+
+1251
+00:48:38,240 --> 00:48:42,319
+and the system can no longer distinguish
+
+1252
+00:48:40,160 --> 00:48:44,960
+the two points.
+
+1253
+00:48:42,319 --> 00:48:46,880
+This is why we say spatial resolution is
+
+1254
+00:48:44,960 --> 00:48:50,400
+the minimum separation at which two
+
+1255
+00:48:46,880 --> 00:48:52,640
+objects can still be seen as distinct.
+
+1256
+00:48:50,400 --> 00:48:54,800
+Often when people talk about resolution
+
+1257
+00:48:52,640 --> 00:48:58,000
+in imaging, this is what they mean, the
+
+1258
+00:48:54,800 --> 00:49:00,160
+ability to resolve fine detail.
+
+1259
+00:48:58,000 --> 00:49:02,240
+Another way to analyze resolution, which
+
+1260
+00:49:00,160 --> 00:49:05,440
+we'll get to shortly, is through the
+
+1261
+00:49:02,240 --> 00:49:08,000
+modulation transfer function or MTF,
+
+1262
+00:49:05,440 --> 00:49:09,920
+which uses Forier analysis to quantify
+
+1263
+00:49:08,000 --> 00:49:13,960
+how well different spatial frequencies
+
+1264
+00:49:09,920 --> 00:49:13,960
+are preserved in the image.
+
+1265
+00:49:15,359 --> 00:49:18,720
+Another way to describe spatial
+
+1266
+00:49:17,040 --> 00:49:21,760
+resolution is through the modulation
+
+1267
+00:49:18,720 --> 00:49:23,680
+transfer function or MTF.
+
+1268
+00:49:21,760 --> 00:49:25,920
+Here's the idea. Every image can be
+
+1269
+00:49:23,680 --> 00:49:28,720
+broken down into sinosoidal components
+
+1270
+00:49:25,920 --> 00:49:31,359
+using forier analysis. These components
+
+1271
+00:49:28,720 --> 00:49:33,839
+can be low frequency representing smooth
+
+1272
+00:49:31,359 --> 00:49:35,839
+gradual changes or high frequency
+
+1273
+00:49:33,839 --> 00:49:39,599
+representing fine details like sharp
+
+1274
+00:49:35,839 --> 00:49:41,680
+edges or thin lines.
+
+1275
+00:49:39,599 --> 00:49:43,520
+If we feed a sinosoidal pattern into an
+
+1276
+00:49:41,680 --> 00:49:45,920
+imaging system, the system does not pass
+
+1277
+00:49:43,520 --> 00:49:48,000
+all frequencies equally well. Low
+
+1278
+00:49:45,920 --> 00:49:49,920
+frequency components pass through almost
+
+1279
+00:49:48,000 --> 00:49:51,440
+perfectly. But as the frequency
+
+1280
+00:49:49,920 --> 00:49:54,880
+increases, the system begins to
+
+1281
+00:49:51,440 --> 00:49:57,040
+attenuate or weaken those components.
+
+1282
+00:49:54,880 --> 00:49:58,800
+At very high frequencies, the system may
+
+1283
+00:49:57,040 --> 00:50:00,640
+blur them so much that they become
+
+1284
+00:49:58,800 --> 00:50:03,920
+invisible.
+
+1285
+00:50:00,640 --> 00:50:05,599
+The MTF curve shows this behavior.
+
+1286
+00:50:03,920 --> 00:50:08,640
+On the left side, at low frequencies,
+
+1287
+00:50:05,599 --> 00:50:10,400
+the modulation is close to 100%. As
+
+1288
+00:50:08,640 --> 00:50:12,800
+frequency increases, the response
+
+1289
+00:50:10,400 --> 00:50:14,559
+gradually drops. Eventually, at very
+
+1290
+00:50:12,800 --> 00:50:16,480
+high frequencies, the response falls to
+
+1291
+00:50:14,559 --> 00:50:20,000
+zero, meaning the system can no longer
+
+1292
+00:50:16,480 --> 00:50:21,839
+reproduce those details.
+
+1293
+00:50:20,000 --> 00:50:24,079
+A practical way to think about this is
+
+1294
+00:50:21,839 --> 00:50:26,079
+with a line pair phantom where black and
+
+1295
+00:50:24,079 --> 00:50:27,680
+white bars alternate like a test
+
+1296
+00:50:26,079 --> 00:50:29,760
+pattern.
+
+1297
+00:50:27,680 --> 00:50:31,440
+At low frequencies, the bars are wide
+
+1298
+00:50:29,760 --> 00:50:33,119
+and the system can reproduce them
+
+1299
+00:50:31,440 --> 00:50:34,960
+clearly.
+
+1300
+00:50:33,119 --> 00:50:37,200
+At high frequencies, the bars get
+
+1301
+00:50:34,960 --> 00:50:38,559
+narrower and closer together. At some
+
+1302
+00:50:37,200 --> 00:50:40,720
+point, the system can no longer
+
+1303
+00:50:38,559 --> 00:50:43,280
+distinguish the bars. They blur into a
+
+1304
+00:50:40,720 --> 00:50:45,920
+uniform gray. That point defines the
+
+1305
+00:50:43,280 --> 00:50:48,720
+systems resolution limit.
+
+1306
+00:50:45,920 --> 00:50:51,359
+So MTF gives us a frequency domain way
+
+1307
+00:50:48,720 --> 00:50:53,359
+of measuring resolution. It tells us not
+
+1308
+00:50:51,359 --> 00:50:55,680
+just whether two points can be separated
+
+1309
+00:50:53,359 --> 00:50:58,319
+but how well the system preserves detail
+
+1310
+00:50:55,680 --> 00:51:00,000
+across different scales.
+
+1311
+00:50:58,319 --> 00:51:02,720
+This measure is widely used in both
+
+1312
+00:51:00,000 --> 00:51:04,559
+medical imaging and general optics. It
+
+1313
+00:51:02,720 --> 00:51:06,640
+provides a more complete picture of
+
+1314
+00:51:04,559 --> 00:51:08,160
+resolution compared to the single number
+
+1315
+00:51:06,640 --> 00:51:11,160
+definition from the point spread
+
+1316
+00:51:08,160 --> 00:51:11,160
+function.
+
+1317
+00:51:12,720 --> 00:51:16,240
+Next let's look at contrast resolution.
+
+1318
+00:51:14,800 --> 00:51:18,160
+sometimes called low contrast
+
+1319
+00:51:16,240 --> 00:51:19,920
+resolution.
+
+1320
+00:51:18,160 --> 00:51:22,079
+This is different from the high contrast
+
+1321
+00:51:19,920 --> 00:51:23,680
+resolution we just discussed. High
+
+1322
+00:51:22,079 --> 00:51:26,079
+contrast resolution deals with
+
+1323
+00:51:23,680 --> 00:51:28,160
+distinguishing small bright details. For
+
+1324
+00:51:26,079 --> 00:51:29,920
+example, two tiny dots very close
+
+1325
+00:51:28,160 --> 00:51:31,680
+together.
+
+1326
+00:51:29,920 --> 00:51:33,280
+Contrast resolution, on the other hand,
+
+1327
+00:51:31,680 --> 00:51:35,200
+is about the ability of an imaging
+
+1328
+00:51:33,280 --> 00:51:37,520
+system to detect subtle differences in
+
+1329
+00:51:35,200 --> 00:51:39,599
+intensity. The structures may not be
+
+1330
+00:51:37,520 --> 00:51:41,280
+small, they may even be large. But if
+
+1331
+00:51:39,599 --> 00:51:43,280
+their contrast relative to the
+
+1332
+00:51:41,280 --> 00:51:46,720
+background is very low, they may be
+
+1333
+00:51:43,280 --> 00:51:48,960
+difficult to see.
+
+1334
+00:51:46,720 --> 00:51:51,040
+In the example shown here, notice how in
+
+1335
+00:51:48,960 --> 00:51:53,119
+one image, the faint circular structures
+
+1336
+00:51:51,040 --> 00:51:54,800
+stand out more clearly, while in the
+
+1337
+00:51:53,119 --> 00:51:57,040
+other they are barely visible against
+
+1338
+00:51:54,800 --> 00:51:58,640
+the noisy background. This difference
+
+1339
+00:51:57,040 --> 00:52:00,640
+reflects the systems contrast
+
+1340
+00:51:58,640 --> 00:52:03,599
+resolution.
+
+1341
+00:52:00,640 --> 00:52:05,920
+Clinically, this is very important.
+
+1342
+00:52:03,599 --> 00:52:07,839
+For example, in CT imaging, a tumor may
+
+1343
+00:52:05,920 --> 00:52:10,160
+look very similar in intensity to
+
+1344
+00:52:07,839 --> 00:52:13,040
+surrounding soft tissue because both are
+
+1345
+00:52:10,160 --> 00:52:15,119
+made of similar biological material. A
+
+1346
+00:52:13,040 --> 00:52:17,680
+system with good contrast resolution
+
+1347
+00:52:15,119 --> 00:52:20,000
+allows the tumor to be detected clearly,
+
+1348
+00:52:17,680 --> 00:52:23,280
+while a noisy or lower quality system
+
+1349
+00:52:20,000 --> 00:52:25,040
+might completely obscure it. Beyond
+
+1350
+00:52:23,280 --> 00:52:26,880
+contrast resolution, there are two more
+
+1351
+00:52:25,040 --> 00:52:28,559
+types of resolution we should briefly
+
+1352
+00:52:26,880 --> 00:52:30,319
+mention.
+
+1353
+00:52:28,559 --> 00:52:32,480
+Temporal resolution refers to how
+
+1354
+00:52:30,319 --> 00:52:35,200
+quickly an imaging system can capture a
+
+1355
+00:52:32,480 --> 00:52:37,359
+snapshot. A high-speed system can freeze
+
+1356
+00:52:35,200 --> 00:52:39,440
+motion, like capturing a sharp image of
+
+1357
+00:52:37,359 --> 00:52:41,200
+a beating heart.
+
+1358
+00:52:39,440 --> 00:52:43,520
+But if the acquisition is too slow,
+
+1359
+00:52:41,200 --> 00:52:45,200
+moving objects blur together. This is
+
+1360
+00:52:43,520 --> 00:52:46,960
+why when you take a photo of a moving
+
+1361
+00:52:45,200 --> 00:52:49,280
+car with your phone, you sometimes see
+
+1362
+00:52:46,960 --> 00:52:51,040
+motion blur. In medical imaging,
+
+1363
+00:52:49,280 --> 00:52:53,520
+temporal resolution is critical for
+
+1364
+00:52:51,040 --> 00:52:56,520
+dynamic studies such as cardiac CT or
+
+1365
+00:52:53,520 --> 00:52:56,520
+MRI.
+
+1366
+00:52:56,559 --> 00:53:00,319
+Spectral resolution refers to the
+
+1367
+00:52:58,480 --> 00:53:01,839
+ability of a system to distinguish
+
+1368
+00:53:00,319 --> 00:53:03,760
+between different frequencies or
+
+1369
+00:53:01,839 --> 00:53:05,839
+energies.
+
+1370
+00:53:03,760 --> 00:53:08,079
+In vision, this corresponds to color
+
+1371
+00:53:05,839 --> 00:53:11,280
+perception. Someone with color blindness
+
+1372
+00:53:08,079 --> 00:53:13,839
+has poor spectral resolution. In imaging
+
+1373
+00:53:11,280 --> 00:53:15,599
+systems, spectral resolution allows us
+
+1374
+00:53:13,839 --> 00:53:17,440
+to distinguish X-rays of different
+
+1375
+00:53:15,599 --> 00:53:19,680
+energies or ultrasound waves of
+
+1376
+00:53:17,440 --> 00:53:21,680
+different frequencies. Better spectral
+
+1377
+00:53:19,680 --> 00:53:23,359
+resolution means finer discrimination of
+
+1378
+00:53:21,680 --> 00:53:26,160
+subtle differences in material
+
+1379
+00:53:23,359 --> 00:53:29,520
+properties.
+
+1380
+00:53:26,160 --> 00:53:31,440
+Finally, let's talk about artifacts.
+
+1381
+00:53:29,520 --> 00:53:33,280
+Artifacts are false structures that
+
+1382
+00:53:31,440 --> 00:53:36,000
+appear in images but are not really
+
+1383
+00:53:33,280 --> 00:53:38,319
+there. They are ghosts created by
+
+1384
+00:53:36,000 --> 00:53:40,160
+limitations or mismatches in the imaging
+
+1385
+00:53:38,319 --> 00:53:42,000
+process.
+
+1386
+00:53:40,160 --> 00:53:44,160
+For example, in CT, the motion of the
+
+1387
+00:53:42,000 --> 00:53:46,880
+heart can create blurry or duplicated
+
+1388
+00:53:44,160 --> 00:53:48,640
+structures. In ultrasound, echoes may
+
+1389
+00:53:46,880 --> 00:53:50,880
+bounce back and forth and appear as
+
+1390
+00:53:48,640 --> 00:53:53,440
+multiple spots even though only one
+
+1391
+00:53:50,880 --> 00:53:55,119
+structure exists. Recognizing and
+
+1392
+00:53:53,440 --> 00:53:59,319
+understanding artifacts is critical
+
+1393
+00:53:55,119 --> 00:53:59,319
+because they can mislead interpretation.
+
+1394
+00:54:01,440 --> 00:54:05,760
+Now let's look at a specific example of
+
+1395
+00:54:03,440 --> 00:54:08,240
+artifacts. In this case, metal artifacts
+
+1396
+00:54:05,760 --> 00:54:10,079
+in CT imaging.
+
+1397
+00:54:08,240 --> 00:54:12,559
+Suppose a patient has a hip fracture and
+
+1398
+00:54:10,079 --> 00:54:14,640
+receives metal implants.
+
+1399
+00:54:12,559 --> 00:54:16,400
+When we take X-rays or CT scans, the
+
+1400
+00:54:14,640 --> 00:54:18,800
+metal is so dense that it blocks or
+
+1401
+00:54:16,400 --> 00:54:20,480
+severely distorts the X-ray beams. The
+
+1402
+00:54:18,800 --> 00:54:22,400
+reconstruction algorithm, however,
+
+1403
+00:54:20,480 --> 00:54:25,359
+assumes it has complete and accurate
+
+1404
+00:54:22,400 --> 00:54:27,119
+data along every path. It doesn't know
+
+1405
+00:54:25,359 --> 00:54:29,200
+that some of the information is missing
+
+1406
+00:54:27,119 --> 00:54:31,440
+or corrupted.
+
+1407
+00:54:29,200 --> 00:54:33,920
+As a result, the system produces streaks
+
+1408
+00:54:31,440 --> 00:54:36,000
+and bands radiating from the metal.
+
+1409
+00:54:33,920 --> 00:54:38,640
+These bright and dark lines are not real
+
+1410
+00:54:36,000 --> 00:54:40,720
+anatomical structures. They are purely
+
+1411
+00:54:38,640 --> 00:54:43,599
+computational artifacts caused by
+
+1412
+00:54:40,720 --> 00:54:45,200
+missing or distorted data.
+
+1413
+00:54:43,599 --> 00:54:47,520
+In the figure here, the first column
+
+1414
+00:54:45,200 --> 00:54:49,920
+shows uncorrected CT images with severe
+
+1415
+00:54:47,520 --> 00:54:51,599
+streak artifacts. The last column shows
+
+1416
+00:54:49,920 --> 00:54:53,680
+the ground truth, what the anatomy
+
+1417
+00:54:51,599 --> 00:54:55,520
+should look like.
+
+1418
+00:54:53,680 --> 00:54:58,319
+Researchers have developed various ways
+
+1419
+00:54:55,520 --> 00:55:00,960
+to reduce these artifacts.
+
+1420
+00:54:58,319 --> 00:55:03,119
+One common method is NMAR or normalized
+
+1421
+00:55:00,960 --> 00:55:05,599
+metal artifact reduction, which improves
+
+1422
+00:55:03,119 --> 00:55:07,520
+the image somewhat. More recently, deep
+
+1423
+00:55:05,599 --> 00:55:09,520
+learning methods such as convolutional
+
+1424
+00:55:07,520 --> 00:55:11,440
+neural networks have been applied to
+
+1425
+00:55:09,520 --> 00:55:14,480
+further clean up the image and recover
+
+1426
+00:55:11,440 --> 00:55:16,400
+structures hidden by artifacts.
+
+1427
+00:55:14,480 --> 00:55:18,400
+You can see that the CNN results are
+
+1428
+00:55:16,400 --> 00:55:21,440
+closer to the ground truth with clearer
+
+1429
+00:55:18,400 --> 00:55:23,520
+anatomy and fewer streaks.
+
+1430
+00:55:21,440 --> 00:55:25,440
+The key point here is that artifacts are
+
+1431
+00:55:23,520 --> 00:55:28,079
+not real structures, but they can easily
+
+1432
+00:55:25,440 --> 00:55:30,160
+confuse interpretation.
+
+1433
+00:55:28,079 --> 00:55:31,920
+They depend on the imaging modality, the
+
+1434
+00:55:30,160 --> 00:55:34,000
+reconstruction algorithm, and the
+
+1435
+00:55:31,920 --> 00:55:36,160
+clinical situation. That's why
+
+1436
+00:55:34,000 --> 00:55:38,160
+recognizing artifacts and knowing how to
+
+1437
+00:55:36,160 --> 00:55:41,160
+reduce them is so important in medical
+
+1438
+00:55:38,160 --> 00:55:41,160
+imaging.
+
+1439
+00:55:42,800 --> 00:55:47,920
+So far we've covered general measures
+
+1440
+00:55:44,640 --> 00:55:50,160
+like MSE, KL distance and SSIM and then
+
+1441
+00:55:47,920 --> 00:55:52,960
+system specific measures such as noise
+
+1442
+00:55:50,160 --> 00:55:54,640
+resolution and artifacts.
+
+1443
+00:55:52,960 --> 00:55:58,000
+Now we move to the third and most
+
+1444
+00:55:54,640 --> 00:56:00,160
+important part task specific measures.
+
+1445
+00:55:58,000 --> 00:56:01,839
+When manufacturers design an imaging
+
+1446
+00:56:00,160 --> 00:56:04,240
+system, they often advertise its
+
+1447
+00:56:01,839 --> 00:56:06,319
+specifications, resolution, noise
+
+1448
+00:56:04,240 --> 00:56:09,040
+levels, dose reduction, acquisition
+
+1449
+00:56:06,319 --> 00:56:10,640
+speed, and so on. These system specs are
+
+1450
+00:56:09,040 --> 00:56:12,400
+useful, but in practice, they don't
+
+1451
+00:56:10,640 --> 00:56:14,799
+directly answer the most important
+
+1452
+00:56:12,400 --> 00:56:18,799
+question. Can the system help us make
+
+1453
+00:56:14,799 --> 00:56:20,799
+the right clinical decision?
+
+1454
+00:56:18,799 --> 00:56:22,720
+Think about it.
+
+1455
+00:56:20,799 --> 00:56:25,440
+As patients or physicians, we don't
+
+1456
+00:56:22,720 --> 00:56:27,680
+actually care whether an image has 0.5
+
+1457
+00:56:25,440 --> 00:56:29,920
+millimeter resolution or 1 millimeter
+
+1458
+00:56:27,680 --> 00:56:33,200
+resolution or whether the noise level is
+
+1459
+00:56:29,920 --> 00:56:35,119
+2% or 5%. What we really care about is
+
+1460
+00:56:33,200 --> 00:56:37,440
+whether the image allows us to detect a
+
+1461
+00:56:35,119 --> 00:56:40,079
+tumor, diagnose a fracture, or rule out
+
+1462
+00:56:37,440 --> 00:56:41,920
+disease with confidence.
+
+1463
+00:56:40,079 --> 00:56:44,480
+That's why taskbased assessment is so
+
+1464
+00:56:41,920 --> 00:56:46,000
+important. It focuses on the end goal,
+
+1465
+00:56:44,480 --> 00:56:50,400
+whether the imaging system can
+
+1466
+00:56:46,000 --> 00:56:52,079
+successfully support the clinical task.
+
+1467
+00:56:50,400 --> 00:56:54,240
+So in this last part of the lecture
+
+1468
+00:56:52,079 --> 00:56:57,200
+we'll discuss task specific measures
+
+1469
+00:56:54,240 --> 00:57:00,079
+such as sensitivity and specificity ROC
+
+1470
+00:56:57,200 --> 00:57:01,920
+and AU analysis human and mathematical
+
+1471
+00:57:00,079 --> 00:57:05,200
+observers and even modern approaches
+
+1472
+00:57:01,920 --> 00:57:07,200
+like neural networks and radiomics.
+
+1473
+00:57:05,200 --> 00:57:09,280
+These measures shift our attention from
+
+1474
+00:57:07,200 --> 00:57:11,280
+the imaging device itself to the
+
+1475
+00:57:09,280 --> 00:57:13,280
+diagnostic performance of the entire
+
+1476
+00:57:11,280 --> 00:57:16,799
+workflow which is ultimately what
+
+1477
+00:57:13,280 --> 00:57:19,440
+matters most in medical imaging.
+
+1478
+00:57:16,799 --> 00:57:21,839
+Here
+
+1479
+00:57:19,440 --> 00:57:23,680
+we see a typical scene from a radiology
+
+1480
+00:57:21,839 --> 00:57:25,839
+department.
+
+1481
+00:57:23,680 --> 00:57:28,160
+A radiologist with years of training and
+
+1482
+00:57:25,839 --> 00:57:31,040
+experience carefully reviews CT scans
+
+1483
+00:57:28,160 --> 00:57:33,839
+and X-rays. Their task is not to admire
+
+1484
+00:57:31,040 --> 00:57:35,839
+image sharpness or pixel resolution. It
+
+1485
+00:57:33,839 --> 00:57:38,160
+is to answer very specific clinical
+
+1486
+00:57:35,839 --> 00:57:40,720
+questions. Does the smoker have a lung
+
+1487
+00:57:38,160 --> 00:57:43,920
+tumor?
+
+1488
+00:57:40,720 --> 00:57:45,599
+Are the coronary arteries narrowed?
+
+1489
+00:57:43,920 --> 00:57:47,839
+Is there evidence of disease that
+
+1490
+00:57:45,599 --> 00:57:49,760
+requires treatment?
+
+1491
+00:57:47,839 --> 00:57:52,000
+This highlights why task specific
+
+1492
+00:57:49,760 --> 00:57:53,599
+measures are so important. System
+
+1493
+00:57:52,000 --> 00:57:56,400
+specific measures like spatial
+
+1494
+00:57:53,599 --> 00:57:58,319
+resolution, SNR or temporal resolution
+
+1495
+00:57:56,400 --> 00:58:00,319
+are useful, but they are not the end
+
+1496
+00:57:58,319 --> 00:58:01,920
+goal. They only tell us about the
+
+1497
+00:58:00,319 --> 00:58:04,160
+technical performance of the imaging
+
+1498
+00:58:01,920 --> 00:58:05,839
+system. What really matters is whether
+
+1499
+00:58:04,160 --> 00:58:08,240
+the system can support the clinical
+
+1500
+00:58:05,839 --> 00:58:11,520
+task, detecting, diagnosing, and guiding
+
+1501
+00:58:08,240 --> 00:58:13,119
+treatment decisions.
+
+1502
+00:58:11,520 --> 00:58:15,200
+So in this part of the lecture we'll
+
+1503
+00:58:13,119 --> 00:58:18,079
+look at task specific measures such as
+
+1504
+00:58:15,200 --> 00:58:20,160
+sensitivity specificity ROC curves and
+
+1505
+00:58:18,079 --> 00:58:22,480
+observer studies which are all designed
+
+1506
+00:58:20,160 --> 00:58:25,359
+to assess performance in clinical terms
+
+1507
+00:58:22,480 --> 00:58:27,440
+rather than engineering terms.
+
+1508
+00:58:25,359 --> 00:58:29,520
+This shift in perspective is critical.
+
+1509
+00:58:27,440 --> 00:58:31,920
+We move from asking how sharp is this
+
+1510
+00:58:29,520 --> 00:58:35,640
+image to asking can this image help us
+
+1511
+00:58:31,920 --> 00:58:35,640
+detect disease reliably.
+
+1512
+00:58:37,359 --> 00:58:41,280
+Let's make this idea of task specific
+
+1513
+00:58:39,440 --> 00:58:43,280
+measures more concrete with a simple
+
+1514
+00:58:41,280 --> 00:58:45,040
+example.
+
+1515
+00:58:43,280 --> 00:58:46,960
+Imagine you are doing edge detection on
+
+1516
+00:58:45,040 --> 00:58:49,280
+an image. For instance, outlining the
+
+1517
+00:58:46,960 --> 00:58:52,000
+Eiffel Tower. Each pixel can belong to
+
+1518
+00:58:49,280 --> 00:58:54,079
+one of two classes, edge or non-edge.
+
+1519
+00:58:52,000 --> 00:58:56,319
+Similarly, in medical imaging, each case
+
+1520
+00:58:54,079 --> 00:58:58,480
+can be classified as disease present or
+
+1521
+00:58:56,319 --> 00:59:00,880
+disease absent.
+
+1522
+00:58:58,480 --> 00:59:02,720
+This gives us four possible outcomes.
+
+1523
+00:59:00,880 --> 00:59:04,559
+True positive, the patient has a tumor
+
+1524
+00:59:02,720 --> 00:59:06,559
+and the system or doctor correctly
+
+1525
+00:59:04,559 --> 00:59:08,400
+identifies it.
+
+1526
+00:59:06,559 --> 00:59:12,000
+True negative. The patient is healthy
+
+1527
+00:59:08,400 --> 00:59:13,920
+and the report correctly says no tumor.
+
+1528
+00:59:12,000 --> 00:59:16,240
+False positive. The patient is healthy
+
+1529
+00:59:13,920 --> 00:59:18,480
+but the system says there is a tumor.
+
+1530
+00:59:16,240 --> 00:59:20,480
+This can cause unnecessary anxiety,
+
+1531
+00:59:18,480 --> 00:59:22,400
+follow-up scans, or even invasive
+
+1532
+00:59:20,480 --> 00:59:24,319
+procedures.
+
+1533
+00:59:22,400 --> 00:59:26,079
+False negative. The patient does have a
+
+1534
+00:59:24,319 --> 00:59:28,559
+tumor, but the system or doctor misses
+
+1535
+00:59:26,079 --> 00:59:30,559
+it. This is often the most serious error
+
+1536
+00:59:28,559 --> 00:59:32,240
+because it can delay diagnosis and
+
+1537
+00:59:30,559 --> 00:59:34,400
+treatment.
+
+1538
+00:59:32,240 --> 00:59:36,799
+In clinical practice, both types of
+
+1539
+00:59:34,400 --> 00:59:39,040
+errors matter. False positives burden
+
+1540
+00:59:36,799 --> 00:59:41,119
+patients emotionally and financially,
+
+1541
+00:59:39,040 --> 00:59:42,640
+while false negatives can cost lives by
+
+1542
+00:59:41,119 --> 00:59:44,400
+missing opportunities for early
+
+1543
+00:59:42,640 --> 00:59:46,000
+treatment.
+
+1544
+00:59:44,400 --> 00:59:48,079
+That's why doctors and imaging
+
+1545
+00:59:46,000 --> 00:59:50,480
+researchers often talk about sensitivity
+
+1546
+00:59:48,079 --> 00:59:52,559
+and specificity.
+
+1547
+00:59:50,480 --> 00:59:55,040
+Sensitivity reflects how good a system
+
+1548
+00:59:52,559 --> 00:59:57,200
+is at detecting true positives, catching
+
+1549
+00:59:55,040 --> 00:59:59,200
+disease when it is really there.
+
+1550
+00:59:57,200 --> 01:00:01,680
+Specificity reflects how good a system
+
+1551
+00:59:59,200 --> 01:00:04,880
+is at avoiding false alarms, correctly
+
+1552
+01:00:01,680 --> 01:00:06,960
+identifying when disease is not present.
+
+1553
+01:00:04,880 --> 01:00:08,880
+These terms can be confusing at first,
+
+1554
+01:00:06,960 --> 01:00:11,599
+but they are central to evaluating
+
+1555
+01:00:08,880 --> 01:00:13,680
+diagnostic imaging systems. They shift
+
+1556
+01:00:11,599 --> 01:00:15,920
+the focus away from just image sharpness
+
+1557
+01:00:13,680 --> 01:00:18,160
+or resolution and toward what really
+
+1558
+01:00:15,920 --> 01:00:22,599
+matters, whether the imaging system can
+
+1559
+01:00:18,160 --> 01:00:22,599
+support accurate medical decisions.
+
+1560
+01:00:24,400 --> 01:00:28,400
+Now that we've defined the four possible
+
+1561
+01:00:26,480 --> 01:00:30,319
+outcomes, true positives, true
+
+1562
+01:00:28,400 --> 01:00:32,400
+negatives, false positives, and false
+
+1563
+01:00:30,319 --> 01:00:35,599
+negatives, we can formally define
+
+1564
+01:00:32,400 --> 01:00:37,520
+sensitivity and specificity.
+
+1565
+01:00:35,599 --> 01:00:39,359
+Sensitivity is the proportion of true
+
+1566
+01:00:37,520 --> 01:00:42,160
+positives among all actual positive
+
+1567
+01:00:39,359 --> 01:00:46,319
+cases. In formula form, it is
+
+1568
+01:00:42,160 --> 01:00:48,240
+sensitivity equals TP over TP plus FN.
+
+1569
+01:00:46,319 --> 01:00:50,400
+In other words, sensitivity answers the
+
+1570
+01:00:48,240 --> 01:00:54,880
+question, if the patient really has the
+
+1571
+01:00:50,400 --> 01:00:57,119
+disease, how likely are we to detect it?
+
+1572
+01:00:54,880 --> 01:00:59,280
+For example, suppose 100 patients truly
+
+1573
+01:00:57,119 --> 01:01:01,599
+have lung cancer.
+
+1574
+01:00:59,280 --> 01:01:03,760
+If our system correctly detects 50 of
+
+1575
+01:01:01,599 --> 01:01:07,119
+them, but misses the other 50, then the
+
+1576
+01:01:03,760 --> 01:01:08,640
+sensitivity is 50%. Sensitivity is
+
+1577
+01:01:07,119 --> 01:01:10,799
+essentially a measure of how confident
+
+1578
+01:01:08,640 --> 01:01:12,480
+we are when we say yes, disease is
+
+1579
+01:01:10,799 --> 01:01:14,880
+present.
+
+1580
+01:01:12,480 --> 01:01:16,720
+Now, let's move to specificity.
+
+1581
+01:01:14,880 --> 01:01:18,720
+Specificity is the proportion of true
+
+1582
+01:01:16,720 --> 01:01:22,319
+negatives among all actual negative
+
+1583
+01:01:18,720 --> 01:01:25,359
+cases. The formula is specificity equals
+
+1584
+01:01:22,319 --> 01:01:27,200
+TN over TN plus FP.
+
+1585
+01:01:25,359 --> 01:01:28,640
+This answers the question, if the
+
+1586
+01:01:27,200 --> 01:01:30,799
+patient really does not have the
+
+1587
+01:01:28,640 --> 01:01:33,839
+disease, how likely are we to correctly
+
+1588
+01:01:30,799 --> 01:01:36,079
+say no?
+
+1589
+01:01:33,839 --> 01:01:38,799
+For example, if 100 healthy people are
+
+1590
+01:01:36,079 --> 01:01:40,720
+scanned and 95 are correctly reported as
+
+1591
+01:01:38,799 --> 01:01:43,599
+negative while five are mistakenly
+
+1592
+01:01:40,720 --> 01:01:45,280
+labeled as positive, the specificity is
+
+1593
+01:01:43,599 --> 01:01:47,280
+95%.
+
+1594
+01:01:45,280 --> 01:01:49,200
+Specificity is essentially a measure of
+
+1595
+01:01:47,280 --> 01:01:51,760
+how confident we are when we say no,
+
+1596
+01:01:49,200 --> 01:01:54,720
+there is no disease.
+
+1597
+01:01:51,760 --> 01:01:57,920
+So in summary, sensitivity tells us how
+
+1598
+01:01:54,720 --> 01:01:59,760
+good we are at catching disease cases.
+
+1599
+01:01:57,920 --> 01:02:02,240
+Specificity tells us how good we are at
+
+1600
+01:01:59,760 --> 01:02:04,799
+avoiding false alarms.
+
+1601
+01:02:02,240 --> 01:02:07,040
+Both are critical in clinical imaging.
+
+1602
+01:02:04,799 --> 01:02:09,680
+High sensitivity ensures we don't miss
+
+1603
+01:02:07,040 --> 01:02:11,520
+disease while high specificity ensures
+
+1604
+01:02:09,680 --> 01:02:15,960
+we don't overwhelm patients with
+
+1605
+01:02:11,520 --> 01:02:15,960
+unnecessary worry or treatment.
+
+1606
+01:02:17,520 --> 01:02:20,960
+Now to make things even more
+
+1607
+01:02:18,960 --> 01:02:23,280
+interesting, we introduce two more
+
+1608
+01:02:20,960 --> 01:02:26,240
+important concepts. Positive predictive
+
+1609
+01:02:23,280 --> 01:02:30,880
+value PPV and negative predictive value
+
+1610
+01:02:26,240 --> 01:02:33,200
+NPV. Positive predictive value or PPV
+
+1611
+01:02:30,880 --> 01:02:35,280
+tells us if the imaging study says a
+
+1612
+01:02:33,200 --> 01:02:39,200
+patient is abnormal, how likely is it
+
+1613
+01:02:35,280 --> 01:02:42,480
+that they really have the disease?
+
+1614
+01:02:39,200 --> 01:02:44,160
+The formula is PPV equals true positives
+
+1615
+01:02:42,480 --> 01:02:45,839
+over true positives plus false
+
+1616
+01:02:44,160 --> 01:02:47,760
+positives.
+
+1617
+01:02:45,839 --> 01:02:50,160
+So among all the patients labeled as
+
+1618
+01:02:47,760 --> 01:02:52,960
+abnormal, PPV is the fraction who
+
+1619
+01:02:50,160 --> 01:02:54,799
+actually do have the disease.
+
+1620
+01:02:52,960 --> 01:02:57,680
+On the other hand, negative predictive
+
+1621
+01:02:54,799 --> 01:02:59,599
+value or NPV tells us if the imaging
+
+1622
+01:02:57,680 --> 01:03:01,280
+study says a patient is normal, how
+
+1623
+01:02:59,599 --> 01:03:04,280
+likely is it that they really are
+
+1624
+01:03:01,280 --> 01:03:04,280
+disease-free?
+
+1625
+01:03:04,319 --> 01:03:09,520
+The formula is NPV equals true negatives
+
+1626
+01:03:07,680 --> 01:03:11,280
+over true negatives plus false
+
+1627
+01:03:09,520 --> 01:03:13,040
+negatives.
+
+1628
+01:03:11,280 --> 01:03:15,280
+So among all the patients labeled as
+
+1629
+01:03:13,040 --> 01:03:17,520
+normal, NPV is the fraction who truly
+
+1630
+01:03:15,280 --> 01:03:20,400
+have no disease.
+
+1631
+01:03:17,520 --> 01:03:22,400
+Let's put this in clinical terms.
+
+1632
+01:03:20,400 --> 01:03:24,799
+Suppose we are using CT to detect a
+
+1633
+01:03:22,400 --> 01:03:27,200
+tumor. If the scan flags a suspicious
+
+1634
+01:03:24,799 --> 01:03:29,039
+spot, PPV tells us how likely it is that
+
+1635
+01:03:27,200 --> 01:03:31,359
+this really is a tumor and not just a
+
+1636
+01:03:29,039 --> 01:03:33,760
+false alarm. If the scan comes back
+
+1637
+01:03:31,359 --> 01:03:38,319
+clear, NPV tells us how confident we can
+
+1638
+01:03:33,760 --> 01:03:40,799
+be that the patient truly has no tumor.
+
+1639
+01:03:38,319 --> 01:03:42,720
+So sensitivity and specificity tell us
+
+1640
+01:03:40,799 --> 01:03:45,839
+how the test performs in an abstract
+
+1641
+01:03:42,720 --> 01:03:47,760
+sense relative to ground truth. PPV and
+
+1642
+01:03:45,839 --> 01:03:49,359
+NPV tell us what the test result
+
+1643
+01:03:47,760 --> 01:03:52,839
+actually means for the patient sitting
+
+1644
+01:03:49,359 --> 01:03:52,839
+in front of us.
+
+1645
+01:03:54,079 --> 01:03:58,319
+Here's a concrete example using
+
+1646
+01:03:55,760 --> 01:04:00,799
+tuberculosis screening with chest X-ray.
+
+1647
+01:03:58,319 --> 01:04:02,799
+In this study, nearly 2,000 people were
+
+1648
+01:04:00,799 --> 01:04:05,119
+tested, but only 30 actually had
+
+1649
+01:04:02,799 --> 01:04:07,520
+tuberculosis.
+
+1650
+01:04:05,119 --> 01:04:10,480
+Let's break this down.
+
+1651
+01:04:07,520 --> 01:04:12,400
+Among the 30 true TB patients, 22 were
+
+1652
+01:04:10,480 --> 01:04:14,559
+correctly reported as positive while
+
+1653
+01:04:12,400 --> 01:04:16,720
+eight were missed.
+
+1654
+01:04:14,559 --> 01:04:19,359
+Among the 1,790
+
+1655
+01:04:16,720 --> 01:04:21,520
+healthy individuals, 51 were incorrectly
+
+1656
+01:04:19,359 --> 01:04:23,760
+reported as positive, but the majority
+
+1657
+01:04:21,520 --> 01:04:27,440
+1,739
+
+1658
+01:04:23,760 --> 01:04:29,359
+were correctly classified as negative.
+
+1659
+01:04:27,440 --> 01:04:32,559
+Now, from this table, we can calculate
+
+1660
+01:04:29,359 --> 01:04:35,039
+the standard measures. Sensitivity, 22
+
+1661
+01:04:32,559 --> 01:04:38,160
+out of 30 true TB cases were detected,
+
+1662
+01:04:35,039 --> 01:04:41,520
+about 73%. This means the system caught
+
+1663
+01:04:38,160 --> 01:04:44,559
+almost 3/4 of real cases.
+
+1664
+01:04:41,520 --> 01:04:46,559
+Specificity 1,739
+
+1665
+01:04:44,559 --> 01:04:48,799
+out of 1,790
+
+1666
+01:04:46,559 --> 01:04:51,920
+healthy cases were correctly identified,
+
+1667
+01:04:48,799 --> 01:04:54,400
+about 97%. This shows the system rarely
+
+1668
+01:04:51,920 --> 01:04:57,280
+gave false alarms.
+
+1669
+01:04:54,400 --> 01:04:59,680
+Positive predictive value PPV. 22 out of
+
+1670
+01:04:57,280 --> 01:05:02,799
+73 reported positives were real TB
+
+1671
+01:04:59,680 --> 01:05:04,640
+cases, only 30%. This is much lower,
+
+1672
+01:05:02,799 --> 01:05:06,559
+meaning that when the system flagged a
+
+1673
+01:05:04,640 --> 01:05:09,039
+case as positive, it was wrong more
+
+1674
+01:05:06,559 --> 01:05:13,760
+often than it was right.
+
+1675
+01:05:09,039 --> 01:05:16,720
+Negative predictive value, NPV, 1,739
+
+1676
+01:05:13,760 --> 01:05:18,960
+out of 1,747
+
+1677
+01:05:16,720 --> 01:05:21,280
+reported negatives were truly healthy,
+
+1678
+01:05:18,960 --> 01:05:23,200
+nearly 99.5%.
+
+1679
+01:05:21,280 --> 01:05:25,119
+This means a negative result was highly
+
+1680
+01:05:23,200 --> 01:05:27,440
+reliable.
+
+1681
+01:05:25,119 --> 01:05:29,280
+Diagnostic accuracy, the proportion of
+
+1682
+01:05:27,440 --> 01:05:32,880
+all correct results, positive and
+
+1683
+01:05:29,280 --> 01:05:36,000
+negative, was about 97%.
+
+1684
+01:05:32,880 --> 01:05:39,839
+Prevalence, only 30 out of 1,820 people
+
+1685
+01:05:36,000 --> 01:05:41,280
+had TB, around 1.6%.
+
+1686
+01:05:39,839 --> 01:05:43,440
+Notice something important here.
+
+1687
+01:05:41,280 --> 01:05:46,240
+Although accuracy and NPV are very high,
+
+1688
+01:05:43,440 --> 01:05:48,960
+the PPV is quite low. That's because the
+
+1689
+01:05:46,240 --> 01:05:51,039
+disease is rare in this population. When
+
+1690
+01:05:48,960 --> 01:05:53,520
+prevalence is low, even a small number
+
+1691
+01:05:51,039 --> 01:05:56,319
+of false positives can outweigh the true
+
+1692
+01:05:53,520 --> 01:05:56,319
+positives.
+
+1693
+01:05:56,480 --> 01:06:00,079
+This example shows why we need to
+
+1694
+01:05:58,319 --> 01:06:02,240
+interpret these metrics carefully,
+
+1695
+01:06:00,079 --> 01:06:06,079
+especially in screening programs.
+
+1696
+01:06:02,240 --> 01:06:08,480
+Sensitivity, specificity, PPV, NPV, and
+
+1697
+01:06:06,079 --> 01:06:10,160
+prevalence all interact, and each tells
+
+1698
+01:06:08,480 --> 01:06:14,839
+us something different about how the
+
+1699
+01:06:10,160 --> 01:06:14,839
+test performs in real world conditions.
+
+1700
+01:06:16,400 --> 01:06:20,400
+Now, let me introduce one of the most
+
+1701
+01:06:18,079 --> 01:06:22,960
+powerful tools in diagnostic performance
+
+1702
+01:06:20,400 --> 01:06:26,559
+evaluation. The receiver operating
+
+1703
+01:06:22,960 --> 01:06:28,640
+characteristic curve or ROC curve.
+
+1704
+01:06:26,559 --> 01:06:30,559
+Here's the key idea. Sensitivity and
+
+1705
+01:06:28,640 --> 01:06:33,200
+specificity are not fixed properties of
+
+1706
+01:06:30,559 --> 01:06:35,359
+a test. They depend on the threshold we
+
+1707
+01:06:33,200 --> 01:06:37,119
+use to decide between disease and no
+
+1708
+01:06:35,359 --> 01:06:39,119
+disease.
+
+1709
+01:06:37,119 --> 01:06:40,640
+For example, if I set the threshold very
+
+1710
+01:06:39,119 --> 01:06:42,960
+low, I'll call almost everything
+
+1711
+01:06:40,640 --> 01:06:45,119
+abnormal. That means I'll catch nearly
+
+1712
+01:06:42,960 --> 01:06:47,520
+every true case. So sensitivity will be
+
+1713
+01:06:45,119 --> 01:06:52,079
+very high but I'll also generate many
+
+1714
+01:06:47,520 --> 01:06:53,359
+false alarms. So specificity will drop.
+
+1715
+01:06:52,079 --> 01:06:55,200
+On the other hand, if I set the
+
+1716
+01:06:53,359 --> 01:06:57,200
+threshold very high, I'll call almost
+
+1717
+01:06:55,200 --> 01:06:59,839
+everything normal. That means I'll have
+
+1718
+01:06:57,200 --> 01:07:02,000
+very few false alarms. So specificity
+
+1719
+01:06:59,839 --> 01:07:04,160
+will be excellent, but I'll also miss
+
+1720
+01:07:02,000 --> 01:07:07,359
+many real cases. So sensitivity will be
+
+1721
+01:07:04,160 --> 01:07:10,319
+low. The ROC curve captures this
+
+1722
+01:07:07,359 --> 01:07:12,240
+trade-off. On the X-axis, we plot one
+
+1723
+01:07:10,319 --> 01:07:14,559
+specificity, which is the false positive
+
+1724
+01:07:12,240 --> 01:07:17,200
+rate. On the y-axis, we plot
+
+1725
+01:07:14,559 --> 01:07:18,559
+sensitivity, the true positive rate. By
+
+1726
+01:07:17,200 --> 01:07:21,680
+sweeping through all possible
+
+1727
+01:07:18,559 --> 01:07:23,839
+thresholds, we trace out the curve.
+
+1728
+01:07:21,680 --> 01:07:25,680
+The ROC curve shows the overall
+
+1729
+01:07:23,839 --> 01:07:28,000
+performance of the test across all
+
+1730
+01:07:25,680 --> 01:07:30,160
+possible decision boundaries. And
+
+1731
+01:07:28,000 --> 01:07:33,039
+importantly, the area under the ROC
+
+1732
+01:07:30,160 --> 01:07:36,400
+curve or AU provides a single number to
+
+1733
+01:07:33,039 --> 01:07:39,920
+summarize diagnostic accuracy. An AU of
+
+1734
+01:07:36,400 --> 01:07:43,440
+1.0 means perfect classification. An au
+
+1735
+01:07:39,920 --> 01:07:47,599
+of 0.5, a diagonal line, means the test
+
+1736
+01:07:43,440 --> 01:07:49,839
+is no better than random guessing.
+
+1737
+01:07:47,599 --> 01:07:51,680
+So the ROC curve is widely used in
+
+1738
+01:07:49,839 --> 01:07:54,400
+medical imaging research because it
+
+1739
+01:07:51,680 --> 01:07:56,799
+provides a clear quantitative way to
+
+1740
+01:07:54,400 --> 01:07:59,799
+compare diagnostic systems and observer
+
+1741
+01:07:56,799 --> 01:07:59,799
+performance.
+
+1742
+01:08:01,520 --> 01:08:06,240
+Here's another way to look at the Aro
+
+1743
+01:08:03,520 --> 01:08:09,200
+curve in terms of true positive fraction
+
+1744
+01:08:06,240 --> 01:08:11,440
+and false positive fraction.
+
+1745
+01:08:09,200 --> 01:08:13,760
+The true positive fraction is simply the
+
+1746
+01:08:11,440 --> 01:08:15,599
+sensitivity. Among all real disease
+
+1747
+01:08:13,760 --> 01:08:17,440
+cases, what fraction we detect
+
+1748
+01:08:15,599 --> 01:08:19,600
+correctly?
+
+1749
+01:08:17,440 --> 01:08:22,239
+The false positive fraction is equal to
+
+1750
+01:08:19,600 --> 01:08:24,640
+one minus specificity. Among all healthy
+
+1751
+01:08:22,239 --> 01:08:26,480
+cases, what fraction we mistakenly call
+
+1752
+01:08:24,640 --> 01:08:28,640
+positive.
+
+1753
+01:08:26,480 --> 01:08:30,719
+When we plot sensitivity on the vertical
+
+1754
+01:08:28,640 --> 01:08:34,239
+axis against one specificity on the
+
+1755
+01:08:30,719 --> 01:08:36,480
+horizontal axis, we get the ROC curve.
+
+1756
+01:08:34,239 --> 01:08:38,640
+If the curve lies along the diagonal
+
+1757
+01:08:36,480 --> 01:08:40,400
+dashed line, it means the test is
+
+1758
+01:08:38,640 --> 01:08:42,560
+performing no better than random
+
+1759
+01:08:40,400 --> 01:08:44,640
+guessing. The true positive fraction
+
+1760
+01:08:42,560 --> 01:08:46,960
+increases at the same rate as the false
+
+1761
+01:08:44,640 --> 01:08:48,880
+positive fraction.
+
+1762
+01:08:46,960 --> 01:08:51,120
+But if the curve bends upward toward the
+
+1763
+01:08:48,880 --> 01:08:53,520
+top left corner, that indicates good
+
+1764
+01:08:51,120 --> 01:08:55,520
+diagnostic performance. We are capturing
+
+1765
+01:08:53,520 --> 01:08:58,239
+many true positives while keeping false
+
+1766
+01:08:55,520 --> 01:09:00,719
+positives relatively low.
+
+1767
+01:08:58,239 --> 01:09:02,640
+So in practice, the more the ROC curve
+
+1768
+01:09:00,719 --> 01:09:04,400
+bulges toward the upper left, the better
+
+1769
+01:09:02,640 --> 01:09:07,679
+the test or imaging system is at
+
+1770
+01:09:04,400 --> 01:09:09,920
+separating disease from non-d disease.
+
+1771
+01:09:07,679 --> 01:09:12,560
+This is exactly why the ROC framework is
+
+1772
+01:09:09,920 --> 01:09:15,279
+so valuable. It captures the tradeoff
+
+1773
+01:09:12,560 --> 01:09:17,440
+between sensitivity and specificity in a
+
+1774
+01:09:15,279 --> 01:09:19,600
+single curve and it gives us a clear
+
+1775
+01:09:17,440 --> 01:09:23,799
+visual and quantitative way to compare
+
+1776
+01:09:19,600 --> 01:09:23,799
+different diagnostic systems.
+
+1777
+01:09:25,279 --> 01:09:28,880
+Let's imagine the ideal case of
+
+1778
+01:09:26,960 --> 01:09:30,480
+diagnosis.
+
+1779
+01:09:28,880 --> 01:09:32,560
+Here we have two groups. On the left,
+
+1780
+01:09:30,480 --> 01:09:34,000
+the non-deseased population shown in
+
+1781
+01:09:32,560 --> 01:09:36,719
+red. On the right, the diseased
+
+1782
+01:09:34,000 --> 01:09:39,920
+population shown in green.
+
+1783
+01:09:36,719 --> 01:09:41,759
+Suppose we measure a certain feature.
+
+1784
+01:09:39,920 --> 01:09:44,239
+For example, the diameter of a vessel or
+
+1785
+01:09:41,759 --> 01:09:45,759
+the size of a tumor. In an ideal world,
+
+1786
+01:09:44,239 --> 01:09:48,159
+the distributions of healthy and
+
+1787
+01:09:45,759 --> 01:09:50,239
+diseased cases do not overlap at all.
+
+1788
+01:09:48,159 --> 01:09:52,319
+Healthy cases always fall into the red
+
+1789
+01:09:50,239 --> 01:09:54,800
+range and diseased cases always fall
+
+1790
+01:09:52,319 --> 01:09:56,880
+into the green range.
+
+1791
+01:09:54,800 --> 01:09:58,880
+With this perfect separation, we can
+
+1792
+01:09:56,880 --> 01:10:01,199
+place a threshold right between the two
+
+1793
+01:09:58,880 --> 01:10:02,960
+distributions. Anything to the right is
+
+1794
+01:10:01,199 --> 01:10:05,440
+declared diseased and anything to the
+
+1795
+01:10:02,960 --> 01:10:07,600
+left is declared healthy.
+
+1796
+01:10:05,440 --> 01:10:09,679
+In this situation, the diagnostic test
+
+1797
+01:10:07,600 --> 01:10:11,360
+is flawless.
+
+1798
+01:10:09,679 --> 01:10:13,440
+There are no false positives and no
+
+1799
+01:10:11,360 --> 01:10:16,719
+false negatives. Sensitivity and
+
+1800
+01:10:13,440 --> 01:10:18,480
+specificity are both 100%. the ROC curve
+
+1801
+01:10:16,719 --> 01:10:21,520
+would go straight up to the top left
+
+1802
+01:10:18,480 --> 01:10:24,159
+corner and across the top a perfect AU
+
+1803
+01:10:21,520 --> 01:10:25,760
+of 1.0.
+
+1804
+01:10:24,159 --> 01:10:28,159
+Of course, this is rarely the case in
+
+1805
+01:10:25,760 --> 01:10:30,320
+real clinical imaging.
+
+1806
+01:10:28,159 --> 01:10:32,159
+Features usually overlap between healthy
+
+1807
+01:10:30,320 --> 01:10:34,880
+and diseased groups, which makes things
+
+1808
+01:10:32,159 --> 01:10:36,880
+more complicated, but this ideal case
+
+1809
+01:10:34,880 --> 01:10:41,159
+provides a useful reference point for
+
+1810
+01:10:36,880 --> 01:10:41,159
+understanding what we're aiming for.
+
+1811
+01:10:42,640 --> 01:10:46,159
+In reality, things are rarely so
+
+1812
+01:10:44,320 --> 01:10:47,920
+clear-cut.
+
+1813
+01:10:46,159 --> 01:10:50,400
+Most of the time, the distributions of
+
+1814
+01:10:47,920 --> 01:10:52,320
+healthy and diseased patients overlap.
+
+1815
+01:10:50,400 --> 01:10:54,320
+That means the same measured value could
+
+1816
+01:10:52,320 --> 01:10:58,080
+belong either to a healthy individual or
+
+1817
+01:10:54,320 --> 01:10:59,920
+to someone with a disease.
+
+1818
+01:10:58,080 --> 01:11:03,440
+For example, suppose we run a blood test
+
+1819
+01:10:59,920 --> 01:11:05,520
+or measure a tumor related biioarker.
+
+1820
+01:11:03,440 --> 01:11:07,440
+Healthy patients tend to cluster around
+
+1821
+01:11:05,520 --> 01:11:09,760
+one range while diseased patients
+
+1822
+01:11:07,440 --> 01:11:12,080
+cluster around another. But because of
+
+1823
+01:11:09,760 --> 01:11:14,560
+biological variation, measurement noise,
+
+1824
+01:11:12,080 --> 01:11:16,960
+and overlapping physiology, there is no
+
+1825
+01:11:14,560 --> 01:11:19,360
+perfect separation.
+
+1826
+01:11:16,960 --> 01:11:20,880
+So when the two distributions overlap, a
+
+1827
+01:11:19,360 --> 01:11:24,480
+threshold placed in the middle will
+
+1828
+01:11:20,880 --> 01:11:26,239
+inevitably create two types of errors.
+
+1829
+01:11:24,480 --> 01:11:28,239
+Some diseased patients will fall below
+
+1830
+01:11:26,239 --> 01:11:30,960
+the threshold and be mclassified as
+
+1831
+01:11:28,239 --> 01:11:32,640
+healthy. These are false negatives. Some
+
+1832
+01:11:30,960 --> 01:11:34,640
+healthy patients will fall above the
+
+1833
+01:11:32,640 --> 01:11:38,080
+threshold and be mclassified as
+
+1834
+01:11:34,640 --> 01:11:40,480
+diseased. These are false positives.
+
+1835
+01:11:38,080 --> 01:11:42,239
+This overlap is exactly what forces us
+
+1836
+01:11:40,480 --> 01:11:44,400
+to think carefully about where to place
+
+1837
+01:11:42,239 --> 01:11:46,560
+the decision threshold. And it's what
+
+1838
+01:11:44,400 --> 01:11:48,800
+makes tools like the ROC curve so
+
+1839
+01:11:46,560 --> 01:11:50,800
+valuable because they let us analyze the
+
+1840
+01:11:48,800 --> 01:11:52,880
+tradeoff between sensitivity and
+
+1841
+01:11:50,800 --> 01:11:55,880
+specificity across all possible
+
+1842
+01:11:52,880 --> 01:11:55,880
+thresholds.
+
+1843
+01:11:57,520 --> 01:12:01,280
+Now let's take our overlapping case and
+
+1844
+01:11:59,360 --> 01:12:03,440
+place a conservative threshold shown by
+
+1845
+01:12:01,280 --> 01:12:06,400
+the blue line here.
+
+1846
+01:12:03,440 --> 01:12:08,560
+With this choice, notice what happens.
+
+1847
+01:12:06,400 --> 01:12:10,480
+For diseased patients, only those who
+
+1848
+01:12:08,560 --> 01:12:12,800
+fall far to the right of the threshold
+
+1849
+01:12:10,480 --> 01:12:14,800
+are called positive. That means many
+
+1850
+01:12:12,800 --> 01:12:17,360
+truly diseased patients on the left side
+
+1851
+01:12:14,800 --> 01:12:22,120
+are missed. The sensitivity or true
+
+1852
+01:12:17,360 --> 01:12:22,120
+positive rate drops to around 50%.
+
+1853
+01:12:22,159 --> 01:12:26,800
+On the other hand, for healthy patients,
+
+1854
+01:12:24,080 --> 01:12:28,800
+almost all are correctly classified.
+
+1855
+01:12:26,800 --> 01:12:31,520
+Only a very small slice on the right is
+
+1856
+01:12:28,800 --> 01:12:33,360
+mclassified as diseased. That means the
+
+1857
+01:12:31,520 --> 01:12:35,920
+false positive fraction is low and
+
+1858
+01:12:33,360 --> 01:12:37,920
+specificity is high.
+
+1859
+01:12:35,920 --> 01:12:39,600
+So in Aro space where we plot
+
+1860
+01:12:37,920 --> 01:12:41,600
+sensitivity against one minus
+
+1861
+01:12:39,600 --> 01:12:44,640
+specificity, this operating point
+
+1862
+01:12:41,600 --> 01:12:46,800
+appears toward the lower left corner.
+
+1863
+01:12:44,640 --> 01:12:49,040
+It reflects a cautious decisionmaking
+
+1864
+01:12:46,800 --> 01:12:51,520
+style. You're very reluctant to call a
+
+1865
+01:12:49,040 --> 01:12:53,199
+disease so you minimize false alarms.
+
+1866
+01:12:51,520 --> 01:12:55,360
+But the trade-off is that you miss a lot
+
+1867
+01:12:53,199 --> 01:12:57,679
+of true cases.
+
+1868
+01:12:55,360 --> 01:12:59,440
+This illustrates the key idea where you
+
+1869
+01:12:57,679 --> 01:13:01,360
+set the threshold directly determines
+
+1870
+01:12:59,440 --> 01:13:04,360
+the balance between sensitivity and
+
+1871
+01:13:01,360 --> 01:13:04,360
+specificity.
+
+1872
+01:13:06,320 --> 01:13:09,840
+Now let's look at a moderate threshold
+
+1873
+01:13:08,159 --> 01:13:11,840
+setting.
+
+1874
+01:13:09,840 --> 01:13:16,400
+This time we shift the decision boundary
+
+1875
+01:13:11,840 --> 01:13:18,239
+slightly to the left. What happens?
+
+1876
+01:13:16,400 --> 01:13:20,239
+More of the disease distribution now
+
+1877
+01:13:18,239 --> 01:13:21,679
+falls to the right of the threshold.
+
+1878
+01:13:20,239 --> 01:13:23,520
+That means a greater fraction of
+
+1879
+01:13:21,679 --> 01:13:25,280
+patients with the disease are correctly
+
+1880
+01:13:23,520 --> 01:13:27,840
+identified. In other words, the
+
+1881
+01:13:25,280 --> 01:13:30,159
+sensitivity increases.
+
+1882
+01:13:27,840 --> 01:13:32,239
+But the trade-off is clear. By moving
+
+1883
+01:13:30,159 --> 01:13:34,400
+the line left, we also capture more of
+
+1884
+01:13:32,239 --> 01:13:36,640
+the non-deseased distribution in the red
+
+1885
+01:13:34,400 --> 01:13:39,199
+region. That means more healthy patients
+
+1886
+01:13:36,640 --> 01:13:42,320
+are incorrectly flagged as diseased. The
+
+1887
+01:13:39,199 --> 01:13:44,400
+false positive fraction increases.
+
+1888
+01:13:42,320 --> 01:13:46,960
+On the Aro curve, you can see this move
+
+1889
+01:13:44,400 --> 01:13:49,120
+as a step upward, higher sensitivity,
+
+1890
+01:13:46,960 --> 01:13:51,840
+but also a step to the right, higher
+
+1891
+01:13:49,120 --> 01:13:53,600
+false positive fraction. In other words,
+
+1892
+01:13:51,840 --> 01:13:56,480
+we've shifted from the black cross to
+
+1893
+01:13:53,600 --> 01:13:58,719
+the yellow cross on this plot.
+
+1894
+01:13:56,480 --> 01:14:01,360
+This moderate threshold represents a
+
+1895
+01:13:58,719 --> 01:14:03,600
+more balanced decision-making strategy,
+
+1896
+01:14:01,360 --> 01:14:07,880
+better at catching true cases, but at
+
+1897
+01:14:03,600 --> 01:14:07,880
+the cost of more false alarms.
+
+1898
+01:14:09,520 --> 01:14:13,199
+Now let's look at an even more
+
+1899
+01:14:10,960 --> 01:14:15,040
+aggressive threshold.
+
+1900
+01:14:13,199 --> 01:14:17,040
+By moving the cutoff further to the
+
+1901
+01:14:15,040 --> 01:14:19,600
+left, we dramatically reduce the chance
+
+1902
+01:14:17,040 --> 01:14:21,440
+of missing diseased patients. Almost
+
+1903
+01:14:19,600 --> 01:14:23,840
+everyone with the disease is now flagged
+
+1904
+01:14:21,440 --> 01:14:27,120
+as positive. That means our sensitivity
+
+1905
+01:14:23,840 --> 01:14:30,560
+is very high, close to 100%.
+
+1906
+01:14:27,120 --> 01:14:32,640
+But the price is steep.
+
+1907
+01:14:30,560 --> 01:14:34,719
+With the threshold this low, about half
+
+1908
+01:14:32,640 --> 01:14:37,199
+of the non-deseased population also
+
+1909
+01:14:34,719 --> 01:14:38,960
+falls into the positive range. In other
+
+1910
+01:14:37,199 --> 01:14:41,679
+words, the false positive fraction
+
+1911
+01:14:38,960 --> 01:14:43,360
+climbs to nearly 50%. Many healthy
+
+1912
+01:14:41,679 --> 01:14:45,600
+patients would be told they might have a
+
+1913
+01:14:43,360 --> 01:14:47,760
+problem leading to unnecessary worry and
+
+1914
+01:14:45,600 --> 01:14:50,400
+follow-up tests.
+
+1915
+01:14:47,760 --> 01:14:52,560
+On the ROC curve, this decision strategy
+
+1916
+01:14:50,400 --> 01:14:55,920
+places us near the top right portion.
+
+1917
+01:14:52,560 --> 01:14:57,520
+Very sensitive, but much less specific.
+
+1918
+01:14:55,920 --> 01:14:59,120
+So, if you imagine sliding this
+
+1919
+01:14:57,520 --> 01:15:02,159
+threshold back and forth, you're really
+
+1920
+01:14:59,120 --> 01:15:03,840
+tracing out the ROC curve.
+
+1921
+01:15:02,159 --> 01:15:06,000
+Different thresholds give you different
+
+1922
+01:15:03,840 --> 01:15:08,640
+balances between catching true positives
+
+1923
+01:15:06,000 --> 01:15:10,080
+and avoiding false alarms. And as I'll
+
+1924
+01:15:08,640 --> 01:15:12,480
+show you next, the quality of the
+
+1925
+01:15:10,080 --> 01:15:14,960
+diagnostic test itself is reflected in
+
+1926
+01:15:12,480 --> 01:15:18,440
+how far this ROC curve bends toward the
+
+1927
+01:15:14,960 --> 01:15:18,440
+upper left corner.
+
+1928
+01:15:19,840 --> 01:15:23,760
+Now you see how the entire ROC curve is
+
+1929
+01:15:22,159 --> 01:15:25,920
+formed.
+
+1930
+01:15:23,760 --> 01:15:29,040
+At one extreme, if I simply call every
+
+1931
+01:15:25,920 --> 01:15:31,199
+patient positive, I would achieve 100%
+
+1932
+01:15:29,040 --> 01:15:33,679
+sensitivity. I would never miss a
+
+1933
+01:15:31,199 --> 01:15:36,080
+disease case. But at the same time, I
+
+1934
+01:15:33,679 --> 01:15:38,000
+would also reach 100% false positive
+
+1935
+01:15:36,080 --> 01:15:40,640
+fraction, meaning every healthy patient
+
+1936
+01:15:38,000 --> 01:15:42,800
+is incorrectly flagged.
+
+1937
+01:15:40,640 --> 01:15:45,040
+At the other extreme, if I call everyone
+
+1938
+01:15:42,800 --> 01:15:47,360
+negative, I would achieve 100%
+
+1939
+01:15:45,040 --> 01:15:49,120
+specificity, but sensitivity would drop
+
+1940
+01:15:47,360 --> 01:15:51,440
+to zero.
+
+1941
+01:15:49,120 --> 01:15:54,000
+By moving the decision threshold step by
+
+1942
+01:15:51,440 --> 01:15:55,760
+step, we trace the ROC curve from the
+
+1943
+01:15:54,000 --> 01:15:58,400
+lower left corner, where both
+
+1944
+01:15:55,760 --> 01:16:01,120
+sensitivity and false positives are low,
+
+1945
+01:15:58,400 --> 01:16:03,600
+toward the upper right corner.
+
+1946
+01:16:01,120 --> 01:16:05,760
+An ideal diagnostic system bends sharply
+
+1947
+01:16:03,600 --> 01:16:08,320
+upward and hugs the left and top axis,
+
+1948
+01:16:05,760 --> 01:16:10,320
+giving an area under the curve or AU
+
+1949
+01:16:08,320 --> 01:16:12,400
+close to one.
+
+1950
+01:16:10,320 --> 01:16:14,320
+A poor test, on the other hand, falls
+
+1951
+01:16:12,400 --> 01:16:16,239
+close to the diagonal line, which is
+
+1952
+01:16:14,320 --> 01:16:18,800
+equivalent to flipping a coin. Nothing
+
+1953
+01:16:16,239 --> 01:16:21,440
+more than random guessing.
+
+1954
+01:16:18,800 --> 01:16:23,199
+So the ROC curve captures the complete
+
+1955
+01:16:21,440 --> 01:16:25,920
+balance between sensitivity and
+
+1956
+01:16:23,199 --> 01:16:28,000
+specificity across all thresholds and
+
+1957
+01:16:25,920 --> 01:16:30,320
+the area under this curve provides a
+
+1958
+01:16:28,000 --> 01:16:33,120
+single powerful number that summarizes
+
+1959
+01:16:30,320 --> 01:16:35,199
+diagnostic performance.
+
+1960
+01:16:33,120 --> 01:16:37,280
+That's why AROC analysis has become such
+
+1961
+01:16:35,199 --> 01:16:38,880
+a central tool in medical imaging, in
+
+1962
+01:16:37,280 --> 01:16:41,880
+machine learning and in clinical
+
+1963
+01:16:38,880 --> 01:16:41,880
+decisionmaking.
+
+1964
+01:16:43,760 --> 01:16:47,280
+Now, let's step back and think about
+
+1965
+01:16:45,280 --> 01:16:49,840
+what diagnostic performance really
+
+1966
+01:16:47,280 --> 01:16:52,320
+means. Not every doctor reads images
+
+1967
+01:16:49,840 --> 01:16:54,159
+with the same skill.
+
+1968
+01:16:52,320 --> 01:16:56,239
+Some physicians with years of training
+
+1969
+01:16:54,159 --> 01:16:59,120
+and experience can clearly separate
+
+1970
+01:16:56,239 --> 01:17:00,880
+diseased from non-deseased cases. For
+
+1971
+01:16:59,120 --> 01:17:03,120
+them, the two distributions hardly
+
+1972
+01:17:00,880 --> 01:17:05,199
+overlap, and their ROC curve bends
+
+1973
+01:17:03,120 --> 01:17:08,239
+sharply toward the upper left corner.
+
+1974
+01:17:05,199 --> 01:17:10,239
+That's excellent diagnostic power.
+
+1975
+01:17:08,239 --> 01:17:12,000
+Others, perhaps junior residents still
+
+1976
+01:17:10,239 --> 01:17:14,159
+in training, may not yet recognize
+
+1977
+01:17:12,000 --> 01:17:16,159
+subtle features.
+
+1978
+01:17:14,159 --> 01:17:18,000
+Their separation is weaker, the overlap
+
+1979
+01:17:16,159 --> 01:17:20,400
+is greater, and the AROC curve lies
+
+1980
+01:17:18,000 --> 01:17:22,640
+closer to the diagonal. In the extreme
+
+1981
+01:17:20,400 --> 01:17:24,640
+case, if you cannot tell disease from
+
+1982
+01:17:22,640 --> 01:17:26,480
+normal at all, your decision is no
+
+1983
+01:17:24,640 --> 01:17:28,480
+better than flipping a coin. That's the
+
+1984
+01:17:26,480 --> 01:17:30,640
+chance line.
+
+1985
+01:17:28,480 --> 01:17:32,800
+So, diagnostic performance is shaped by
+
+1986
+01:17:30,640 --> 01:17:35,120
+two things. The reader skill and the
+
+1987
+01:17:32,800 --> 01:17:37,120
+technologies power. Better imaging
+
+1988
+01:17:35,120 --> 01:17:38,400
+systems reduce overlap, but equally
+
+1989
+01:17:37,120 --> 01:17:40,239
+important is the ability of the
+
+1990
+01:17:38,400 --> 01:17:42,000
+radiologist to interpret the image
+
+1991
+01:17:40,239 --> 01:17:44,239
+correctly.
+
+1992
+01:17:42,000 --> 01:17:45,760
+That's why in practice, the same scan
+
+1993
+01:17:44,239 --> 01:17:48,800
+might lead to different conclusions
+
+1994
+01:17:45,760 --> 01:17:50,800
+depending on who reads it. A highly
+
+1995
+01:17:48,800 --> 01:17:52,560
+trained radiologist can extract subtle
+
+1996
+01:17:50,800 --> 01:17:55,440
+discriminating features that others may
+
+1997
+01:17:52,560 --> 01:17:57,360
+miss. This is exactly what the ROC curve
+
+1998
+01:17:55,440 --> 01:18:01,560
+captures, the combined effect of
+
+1999
+01:17:57,360 --> 01:18:01,560
+technology and human expertise.
+
+2000
+01:18:03,360 --> 01:18:06,880
+Now let's quantify what we've been
+
+2001
+01:18:05,120 --> 01:18:09,040
+discussing.
+
+2002
+01:18:06,880 --> 01:18:11,679
+The receiver operating characteristic or
+
+2003
+01:18:09,040 --> 01:18:13,679
+ROC curve gives us a full picture of
+
+2004
+01:18:11,679 --> 01:18:15,840
+diagnostic performance across different
+
+2005
+01:18:13,679 --> 01:18:17,520
+decision thresholds. But how do we
+
+2006
+01:18:15,840 --> 01:18:20,239
+summarize the curve with a single
+
+2007
+01:18:17,520 --> 01:18:22,159
+number?
+
+2008
+01:18:20,239 --> 01:18:26,000
+That's where the area under the ROC
+
+2009
+01:18:22,159 --> 01:18:29,120
+curve or AU comes in. If the curve falls
+
+2010
+01:18:26,000 --> 01:18:30,960
+along the diagonal, the area is 0.5.
+
+2011
+01:18:29,120 --> 01:18:32,640
+That means the test has no predictive
+
+2012
+01:18:30,960 --> 01:18:34,960
+value. You're essentially flipping a
+
+2013
+01:18:32,640 --> 01:18:36,880
+coin. A perfect test, one that never
+
+2014
+01:18:34,960 --> 01:18:38,800
+misses disease and never gives false
+
+2015
+01:18:36,880 --> 01:18:42,320
+alarms, would trace along the top and
+
+2016
+01:18:38,800 --> 01:18:44,400
+left borders with an AU equal to one. In
+
+2017
+01:18:42,320 --> 01:18:46,159
+practice, no system achieves that ideal
+
+2018
+01:18:44,400 --> 01:18:48,560
+because there's always some chance of
+
+2019
+01:18:46,159 --> 01:18:50,480
+error.
+
+2020
+01:18:48,560 --> 01:18:52,560
+So most real diagnostic tests fall
+
+2021
+01:18:50,480 --> 01:18:54,400
+somewhere in between. The higher the
+
+2022
+01:18:52,560 --> 01:18:56,800
+area under the curve, the better the
+
+2023
+01:18:54,400 --> 01:18:59,520
+test is at distinguishing diseased from
+
+2024
+01:18:56,800 --> 01:19:01,440
+non-deseased cases.
+
+2025
+01:18:59,520 --> 01:19:03,679
+This is why AUC has become such a
+
+2026
+01:19:01,440 --> 01:19:05,440
+standard benchmark.
+
+2027
+01:19:03,679 --> 01:19:07,760
+It condenses all those trade-offs
+
+2028
+01:19:05,440 --> 01:19:09,840
+between sensitivity and specificity into
+
+2029
+01:19:07,760 --> 01:19:11,520
+a single number. And just like in
+
+2030
+01:19:09,840 --> 01:19:14,159
+teaching or training, performance
+
+2031
+01:19:11,520 --> 01:19:16,560
+varies. Some students or some doctors do
+
+2032
+01:19:14,159 --> 01:19:18,719
+exceptionally well, others struggle. The
+
+2033
+01:19:16,560 --> 01:19:20,719
+ROC and its AU make that difference
+
+2034
+01:19:18,719 --> 01:19:23,040
+visible in a very clear quantitative
+
+2035
+01:19:20,719 --> 01:19:25,280
+way.
+
+2036
+01:19:23,040 --> 01:19:27,199
+Here
+
+2037
+01:19:25,280 --> 01:19:30,560
+is a real world example that makes these
+
+2038
+01:19:27,199 --> 01:19:32,159
+abstract concepts much more concrete.
+
+2039
+01:19:30,560 --> 01:19:34,719
+This plot shows the diagnostic
+
+2040
+01:19:32,159 --> 01:19:36,880
+performance of 108 radiologists in the
+
+2041
+01:19:34,719 --> 01:19:38,960
+United States taken from a study by Beam
+
+2042
+01:19:36,880 --> 01:19:40,880
+and colleagues.
+
+2043
+01:19:38,960 --> 01:19:42,560
+On the vertical axis you see the true
+
+2044
+01:19:40,880 --> 01:19:45,120
+positive fraction in other words
+
+2045
+01:19:42,560 --> 01:19:46,880
+sensitivity. On the horizontal axis you
+
+2046
+01:19:45,120 --> 01:19:50,600
+see the false positive fraction and that
+
+2047
+01:19:46,880 --> 01:19:50,600
+is one minus specificity.
+
+2048
+01:19:50,719 --> 01:19:54,480
+Each point here represents a single
+
+2049
+01:19:52,400 --> 01:19:56,239
+radiologist's performance. And what
+
+2050
+01:19:54,480 --> 01:19:58,320
+stands out immediately is how widely
+
+2051
+01:19:56,239 --> 01:20:00,320
+they are spread.
+
+2052
+01:19:58,320 --> 01:20:02,000
+Some radiologists operate near the upper
+
+2053
+01:20:00,320 --> 01:20:04,000
+left corner, meaning they consistently
+
+2054
+01:20:02,000 --> 01:20:06,320
+detect disease with very few false
+
+2055
+01:20:04,000 --> 01:20:08,320
+alarms. Others are closer to the
+
+2056
+01:20:06,320 --> 01:20:12,560
+diagonal where their decisions are only
+
+2057
+01:20:08,320 --> 01:20:14,480
+slightly better than random guessing.
+
+2058
+01:20:12,560 --> 01:20:16,000
+So even though all of these doctors are
+
+2059
+01:20:14,480 --> 01:20:18,239
+trained professionals looking at the
+
+2060
+01:20:16,000 --> 01:20:20,880
+same kinds of images, their diagnostic
+
+2061
+01:20:18,239 --> 01:20:23,440
+accuracy varies enormously. That
+
+2062
+01:20:20,880 --> 01:20:25,440
+variation has practical consequences.
+
+2063
+01:20:23,440 --> 01:20:27,199
+Finding a skilled radiologist can make
+
+2064
+01:20:25,440 --> 01:20:30,400
+the difference between catching an early
+
+2065
+01:20:27,199 --> 01:20:32,080
+tumor and missing it altogether.
+
+2066
+01:20:30,400 --> 01:20:34,640
+It's very similar to what we see in
+
+2067
+01:20:32,080 --> 01:20:36,480
+education and research.
+
+2068
+01:20:34,640 --> 01:20:38,800
+A strong student working with the right
+
+2069
+01:20:36,480 --> 01:20:40,880
+mentor can achieve exceptional results,
+
+2070
+01:20:38,800 --> 01:20:42,719
+while another equally intelligent
+
+2071
+01:20:40,880 --> 01:20:45,120
+student might struggle under weaker
+
+2072
+01:20:42,719 --> 01:20:47,199
+guidance. In both cases, performance
+
+2073
+01:20:45,120 --> 01:20:51,000
+isn't just about the system. It's also
+
+2074
+01:20:47,199 --> 01:20:51,000
+about the human observer.
+
+2075
+01:20:52,640 --> 01:20:56,640
+Here's another striking example. This
+
+2076
+01:20:54,400 --> 01:21:01,520
+time from a classic chess film study by
+
+2077
+01:20:56,640 --> 01:21:04,000
+Dr. E. James Pchin in 1999.
+
+2078
+01:21:01,520 --> 01:21:06,000
+What you're looking at are ROC curves
+
+2079
+01:21:04,000 --> 01:21:07,600
+comparing three groups. The top 20
+
+2080
+01:21:06,000 --> 01:21:09,840
+radiologists, the bottom 20
+
+2081
+01:21:07,600 --> 01:21:12,480
+radiologists, and a group of 71
+
+2082
+01:21:09,840 --> 01:21:15,120
+radiology residents.
+
+2083
+01:21:12,480 --> 01:21:17,199
+Notice the clear separation. The top 20
+
+2084
+01:21:15,120 --> 01:21:19,760
+radiologists perform extremely well.
+
+2085
+01:21:17,199 --> 01:21:21,840
+Their ROC curve stays high close to the
+
+2086
+01:21:19,760 --> 01:21:24,080
+upper left corner. That means they
+
+2087
+01:21:21,840 --> 01:21:26,880
+consistently detect abnormalities with
+
+2088
+01:21:24,080 --> 01:21:29,120
+very few false alarms.
+
+2089
+01:21:26,880 --> 01:21:31,760
+In contrast, the bottom 20 radiologists
+
+2090
+01:21:29,120 --> 01:21:33,600
+struggle. Their ROC curve lies much
+
+2091
+01:21:31,760 --> 01:21:35,280
+closer to the diagonal, which means
+
+2092
+01:21:33,600 --> 01:21:37,360
+their decisions are only a little better
+
+2093
+01:21:35,280 --> 01:21:39,440
+than chance.
+
+2094
+01:21:37,360 --> 01:21:41,199
+And then there are the residents. They
+
+2095
+01:21:39,440 --> 01:21:43,199
+fall somewhere in between. They're still
+
+2096
+01:21:41,199 --> 01:21:44,960
+training, still developing the skills to
+
+2097
+01:21:43,199 --> 01:21:46,640
+interpret subtle features in chess
+
+2098
+01:21:44,960 --> 01:21:48,640
+films.
+
+2099
+01:21:46,640 --> 01:21:50,560
+What this tells us is that diagnostic
+
+2100
+01:21:48,640 --> 01:21:53,120
+performance is not determined by the
+
+2101
+01:21:50,560 --> 01:21:55,120
+technology alone. The human factor,
+
+2102
+01:21:53,120 --> 01:21:57,600
+training, experience, and even natural
+
+2103
+01:21:55,120 --> 01:21:59,600
+ability plays a huge role. The same
+
+2104
+01:21:57,600 --> 01:22:01,199
+X-ray image can be interpreted very
+
+2105
+01:21:59,600 --> 01:22:02,719
+differently depending on who is reading
+
+2106
+01:22:01,199 --> 01:22:04,880
+it.
+
+2107
+01:22:02,719 --> 01:22:07,440
+This is why task specific measures are
+
+2108
+01:22:04,880 --> 01:22:09,360
+so important. At the end of the day,
+
+2109
+01:22:07,440 --> 01:22:11,360
+what really matters is not just whether
+
+2110
+01:22:09,360 --> 01:22:13,120
+the imaging system produces a sharp
+
+2111
+01:22:11,360 --> 01:22:17,800
+picture, but whether that picture
+
+2112
+01:22:13,120 --> 01:22:17,800
+supports accurate clinical decisions.
+
+2113
+01:22:19,520 --> 01:22:24,000
+Now that we've seen how radiologists
+
+2114
+01:22:21,600 --> 01:22:25,920
+vary in their diagnostic performance,
+
+2115
+01:22:24,000 --> 01:22:28,159
+let's ask an important question. Can we
+
+2116
+01:22:25,920 --> 01:22:31,120
+systematically model this decision-m
+
+2117
+01:22:28,159 --> 01:22:33,120
+process?
+
+2118
+01:22:31,120 --> 01:22:35,600
+This brings us to the concept of model
+
+2119
+01:22:33,120 --> 01:22:37,600
+observers. A model observer is
+
+2120
+01:22:35,600 --> 01:22:40,159
+essentially a mathematical framework or
+
+2121
+01:22:37,600 --> 01:22:42,159
+a computational algorithm that simulates
+
+2122
+01:22:40,159 --> 01:22:44,159
+the way a human might read an image and
+
+2123
+01:22:42,159 --> 01:22:46,080
+make a decision.
+
+2124
+01:22:44,159 --> 01:22:48,560
+The idea is motivated by a practical
+
+2125
+01:22:46,080 --> 01:22:50,480
+challenge. Human reader studies are
+
+2126
+01:22:48,560 --> 01:22:52,719
+expensive, timeconuming, and often
+
+2127
+01:22:50,480 --> 01:22:55,360
+inconsistent. One doctor may interpret
+
+2128
+01:22:52,719 --> 01:22:57,120
+an image differently than another. If we
+
+2129
+01:22:55,360 --> 01:22:59,120
+want to optimize imaging systems or
+
+2130
+01:22:57,120 --> 01:23:01,199
+evaluate new reconstruction methods,
+
+2131
+01:22:59,120 --> 01:23:04,400
+relying on large-scale human studies is
+
+2132
+01:23:01,199 --> 01:23:06,400
+not always feasible.
+
+2133
+01:23:04,400 --> 01:23:08,480
+So instead, we can build a numerical
+
+2134
+01:23:06,400 --> 01:23:10,400
+observer that looks at the images and
+
+2135
+01:23:08,480 --> 01:23:12,560
+performs the task, whether that's
+
+2136
+01:23:10,400 --> 01:23:14,639
+detecting a small tumor, classifying an
+
+2137
+01:23:12,560 --> 01:23:17,040
+abnormality, or distinguishing between
+
+2138
+01:23:14,639 --> 01:23:19,360
+signal and noise.
+
+2139
+01:23:17,040 --> 01:23:21,920
+In this review paper by Shinhi and
+
+2140
+01:23:19,360 --> 01:23:24,000
+Sububach Park from the FDA, the authors
+
+2141
+01:23:21,920 --> 01:23:27,360
+summarize the foundations of model
+
+2142
+01:23:24,000 --> 01:23:29,520
+observers in medical imaging research.
+
+2143
+01:23:27,360 --> 01:23:31,840
+They describe how these observers can be
+
+2144
+01:23:29,520 --> 01:23:33,840
+based on rigorous statistical decision
+
+2145
+01:23:31,840 --> 01:23:36,000
+theory, how they can be tailored to
+
+2146
+01:23:33,840 --> 01:23:37,840
+mimic human visual performance, and how
+
+2147
+01:23:36,000 --> 01:23:39,920
+they're applied in practice. You from
+
+2148
+01:23:37,840 --> 01:23:41,679
+system optimization to regulatory
+
+2149
+01:23:39,920 --> 01:23:43,360
+science.
+
+2150
+01:23:41,679 --> 01:23:45,280
+In the next few slides, I'll introduce
+
+2151
+01:23:43,360 --> 01:23:47,199
+you to some of the key types of model
+
+2152
+01:23:45,280 --> 01:23:49,440
+observers, starting from the ideal
+
+2153
+01:23:47,199 --> 01:23:51,120
+observer and then moving toward more
+
+2154
+01:23:49,440 --> 01:23:53,280
+practical approximations like the
+
+2155
+01:23:51,120 --> 01:23:55,120
+hoteling observer and modern approaches
+
+2156
+01:23:53,280 --> 01:23:58,120
+involving machine learning and neural
+
+2157
+01:23:55,120 --> 01:23:58,120
+networks.
+
+2158
+01:23:59,760 --> 01:24:03,840
+Before we define model observers in
+
+2159
+01:24:01,840 --> 01:24:05,679
+detail, let's step back and look at how
+
+2160
+01:24:03,840 --> 01:24:08,560
+we can mathematically describe the
+
+2161
+01:24:05,679 --> 01:24:10,639
+imaging process itself.
+
+2162
+01:24:08,560 --> 01:24:12,560
+In most medical imaging systems, the
+
+2163
+01:24:10,639 --> 01:24:14,320
+process of acquiring an image can be
+
+2164
+01:24:12,560 --> 01:24:16,719
+represented by a very simple but
+
+2165
+01:24:14,320 --> 01:24:19,679
+powerful equation
+
+2166
+01:24:16,719 --> 01:24:21,360
+G equals sign HF plusn. Here F
+
+2167
+01:24:19,679 --> 01:24:23,600
+represents the object we are trying to
+
+2168
+01:24:21,360 --> 01:24:25,679
+image. For example, the radioactivity
+
+2169
+01:24:23,600 --> 01:24:29,120
+distribution in nuclear medicine or the
+
+2170
+01:24:25,679 --> 01:24:31,520
+internal structure of a patient in CT.
+
+2171
+01:24:29,120 --> 01:24:33,199
+The imaging system is described by H
+
+2172
+01:24:31,520 --> 01:24:35,120
+which acts like a mapping or an
+
+2173
+01:24:33,199 --> 01:24:36,960
+operator.
+
+2174
+01:24:35,120 --> 01:24:38,719
+You can think of it as a large matrix
+
+2175
+01:24:36,960 --> 01:24:40,320
+that tells us how each point in the
+
+2176
+01:24:38,719 --> 01:24:42,960
+object contributes to the measured
+
+2177
+01:24:40,320 --> 01:24:44,960
+image. For instance, in CT, H would
+
+2178
+01:24:42,960 --> 01:24:47,199
+represent all the X-ray projections and
+
+2179
+01:24:44,960 --> 01:24:49,679
+how they are combined.
+
+2180
+01:24:47,199 --> 01:24:52,000
+Then comes N the noise. Every real
+
+2181
+01:24:49,679 --> 01:24:53,840
+imaging system is contaminated by noise.
+
+2182
+01:24:52,000 --> 01:24:56,400
+Whether it's photon noise, electronic
+
+2183
+01:24:53,840 --> 01:24:58,159
+noise, or other random fluctuations.
+
+2184
+01:24:56,400 --> 01:25:01,360
+That uncertainty is inherent to the
+
+2185
+01:24:58,159 --> 01:25:03,520
+physics of measurement.
+
+2186
+01:25:01,360 --> 01:25:06,320
+Finally, G is what we actually record
+
+2187
+01:25:03,520 --> 01:25:08,320
+the image data. So what you see on the
+
+2188
+01:25:06,320 --> 01:25:10,320
+screen is not the object itself, but
+
+2189
+01:25:08,320 --> 01:25:12,400
+rather the result of the object being
+
+2190
+01:25:10,320 --> 01:25:14,880
+transformed by the system response and
+
+2191
+01:25:12,400 --> 01:25:16,480
+corrupted by noise.
+
+2192
+01:25:14,880 --> 01:25:18,480
+This linear system model is the
+
+2193
+01:25:16,480 --> 01:25:21,199
+foundation for both image reconstruction
+
+2194
+01:25:18,480 --> 01:25:23,760
+and image analysis. It's also where
+
+2195
+01:25:21,199 --> 01:25:26,080
+model observers come in. They take this
+
+2196
+01:25:23,760 --> 01:25:28,400
+same mathematical description and use it
+
+2197
+01:25:26,080 --> 01:25:32,360
+to predict how well a system can perform
+
+2198
+01:25:28,400 --> 01:25:32,360
+a diagnostic task.
+
+2199
+01:25:34,000 --> 01:25:38,000
+Now, let's take the imaging model and
+
+2200
+01:25:35,679 --> 01:25:40,719
+apply it to a very common clinical task,
+
+2201
+01:25:38,000 --> 01:25:43,120
+binary classification.
+
+2202
+01:25:40,719 --> 01:25:45,600
+In medicine, this usually means asking a
+
+2203
+01:25:43,120 --> 01:25:48,800
+simple yes or no question. For example,
+
+2204
+01:25:45,600 --> 01:25:50,960
+does this patient have a tumor or not?
+
+2205
+01:25:48,800 --> 01:25:53,920
+Mathematically, we describe this with
+
+2206
+01:25:50,960 --> 01:25:56,159
+two competing hypotheses.
+
+2207
+01:25:53,920 --> 01:25:58,080
+The first hypothesis says the image only
+
+2208
+01:25:56,159 --> 01:26:01,360
+contains the background. In other words,
+
+2209
+01:25:58,080 --> 01:26:03,280
+normal anatomy plus noise.
+
+2210
+01:26:01,360 --> 01:26:05,120
+The second hypothesis says the image
+
+2211
+01:26:03,280 --> 01:26:07,520
+contains both the background and an
+
+2212
+01:26:05,120 --> 01:26:09,920
+additional signal such as a tumor, again
+
+2213
+01:26:07,520 --> 01:26:11,600
+with noise added.
+
+2214
+01:26:09,920 --> 01:26:13,840
+Here we think of the background as the
+
+2215
+01:26:11,600 --> 01:26:16,000
+normal structures in the body and the
+
+2216
+01:26:13,840 --> 01:26:18,239
+signal as the diagnostic feature we're
+
+2217
+01:26:16,000 --> 01:26:19,920
+trying to detect.
+
+2218
+01:26:18,239 --> 01:26:21,840
+Depending on the situation, we might
+
+2219
+01:26:19,920 --> 01:26:24,000
+know exactly what that signal looks like
+
+2220
+01:26:21,840 --> 01:26:26,639
+or only know its general statistical
+
+2221
+01:26:24,000 --> 01:26:28,800
+properties. For example, in phantom
+
+2222
+01:26:26,639 --> 01:26:31,040
+studies, we know exactly what pattern is
+
+2223
+01:26:28,800 --> 01:26:34,719
+inserted. But in real patients, tumors
+
+2224
+01:26:31,040 --> 01:26:36,639
+can vary in shape, size, and contrast.
+
+2225
+01:26:34,719 --> 01:26:38,800
+To simplify the discussion, we often
+
+2226
+01:26:36,639 --> 01:26:41,120
+imagine a clean background image without
+
+2227
+01:26:38,800 --> 01:26:42,639
+noise and a clean signal image without
+
+2228
+01:26:41,120 --> 01:26:44,800
+noise.
+
+2229
+01:26:42,639 --> 01:26:46,880
+The actual measurement we record is just
+
+2230
+01:26:44,800 --> 01:26:49,679
+those two components combined with noise
+
+2231
+01:26:46,880 --> 01:26:52,880
+from the imaging process.
+
+2232
+01:26:49,679 --> 01:26:54,719
+So in essence the classification task is
+
+2233
+01:26:52,880 --> 01:26:57,199
+given the measured image do we believe
+
+2234
+01:26:54,719 --> 01:27:01,520
+it came from the background only case or
+
+2235
+01:26:57,199 --> 01:27:03,920
+from the background plus signal case.
+
+2236
+01:27:01,520 --> 01:27:06,480
+This very simple framework background
+
+2237
+01:27:03,920 --> 01:27:08,719
+versus background plus signal forms the
+
+2238
+01:27:06,480 --> 01:27:11,719
+basis of many observer models in medical
+
+2239
+01:27:08,719 --> 01:27:11,719
+imaging.
+
+2240
+01:27:13,199 --> 01:27:17,040
+Now let's introduce the idea of the
+
+2241
+01:27:14,960 --> 01:27:19,440
+ideal observer.
+
+2242
+01:27:17,040 --> 01:27:21,520
+In the context of binary classification,
+
+2243
+01:27:19,440 --> 01:27:23,360
+the ideal observer is defined as the one
+
+2244
+01:27:21,520 --> 01:27:25,120
+who makes use of all the statistical
+
+2245
+01:27:23,360 --> 01:27:27,600
+information available in order to
+
+2246
+01:27:25,120 --> 01:27:29,840
+maximize task performance. In other
+
+2247
+01:27:27,600 --> 01:27:31,600
+words, it's the absolute gold standard,
+
+2248
+01:27:29,840 --> 01:27:34,159
+the best decision maker you could have,
+
+2249
+01:27:31,600 --> 01:27:36,560
+whether human or machine.
+
+2250
+01:27:34,159 --> 01:27:38,159
+How does it work?
+
+2251
+01:27:36,560 --> 01:27:40,719
+Imagine you have an image which we'll
+
+2252
+01:27:38,159 --> 01:27:43,760
+call G. For this image, there are two
+
+2253
+01:27:40,719 --> 01:27:45,679
+possible explanations. Hypothesis zero
+
+2254
+01:27:43,760 --> 01:27:48,000
+says it comes from a normal case with no
+
+2255
+01:27:45,679 --> 01:27:49,760
+abnormality.
+
+2256
+01:27:48,000 --> 01:27:51,840
+Hypothesis one says it comes from an
+
+2257
+01:27:49,760 --> 01:27:53,920
+abnormal case where a signal such as a
+
+2258
+01:27:51,840 --> 01:27:56,000
+tumor is present.
+
+2259
+01:27:53,920 --> 01:27:58,480
+The ideal observer looks at both
+
+2260
+01:27:56,000 --> 01:28:00,480
+possibilities and asks given the data I
+
+2261
+01:27:58,480 --> 01:28:02,639
+see, how likely is it that it came from
+
+2262
+01:28:00,480 --> 01:28:06,960
+the normal case and how likely is it
+
+2263
+01:28:02,639 --> 01:28:09,040
+that it came from the abnormal case?
+
+2264
+01:28:06,960 --> 01:28:11,440
+The decision is then based on whichever
+
+2265
+01:28:09,040 --> 01:28:13,520
+likelihood is greater.
+
+2266
+01:28:11,440 --> 01:28:15,360
+If the abnormal case is more likely, the
+
+2267
+01:28:13,520 --> 01:28:17,360
+observer calls it abnormal. If the
+
+2268
+01:28:15,360 --> 01:28:19,520
+normal case is more likely, the observer
+
+2269
+01:28:17,360 --> 01:28:21,520
+calls it normal.
+
+2270
+01:28:19,520 --> 01:28:23,679
+This simple but powerful rule, often
+
+2271
+01:28:21,520 --> 01:28:26,480
+called the likelihood ratio test,
+
+2272
+01:28:23,679 --> 01:28:28,400
+provides an upper bound on performance.
+
+2273
+01:28:26,480 --> 01:28:30,400
+No other observer, whether it's another
+
+2274
+01:28:28,400 --> 01:28:33,040
+model or even an expert human reader,
+
+2275
+01:28:30,400 --> 01:28:34,880
+can systematically do better.
+
+2276
+01:28:33,040 --> 01:28:37,280
+That's why the ideal observer always
+
+2277
+01:28:34,880 --> 01:28:39,760
+produces the highest possible ROC curve
+
+2278
+01:28:37,280 --> 01:28:42,159
+for the task. It gives us a theoretical
+
+2279
+01:28:39,760 --> 01:28:44,239
+benchmark, a way to measure how close or
+
+2280
+01:28:42,159 --> 01:28:47,719
+how far real systems and real doctors
+
+2281
+01:28:44,239 --> 01:28:47,719
+are from perfection.
+
+2282
+01:28:49,360 --> 01:28:53,199
+The ideal observer, as we just
+
+2283
+01:28:51,199 --> 01:28:55,199
+discussed, requires complete statistical
+
+2284
+01:28:53,199 --> 01:28:57,040
+knowledge of the problem. But in
+
+2285
+01:28:55,199 --> 01:28:59,280
+practice, we almost never have that
+
+2286
+01:28:57,040 --> 01:29:01,679
+luxury. So instead, we turn to
+
+2287
+01:28:59,280 --> 01:29:03,120
+simplified models.
+
+2288
+01:29:01,679 --> 01:29:05,679
+One of the most important of these is
+
+2289
+01:29:03,120 --> 01:29:08,159
+the hoteling observer.
+
+2290
+01:29:05,679 --> 01:29:10,320
+The idea is straightforward. Rather than
+
+2291
+01:29:08,159 --> 01:29:12,639
+using all the complex statistics of the
+
+2292
+01:29:10,320 --> 01:29:15,280
+image, we take the image data and apply
+
+2293
+01:29:12,639 --> 01:29:17,440
+a linear template to it. In other words,
+
+2294
+01:29:15,280 --> 01:29:20,320
+we reduce the entire image into a single
+
+2295
+01:29:17,440 --> 01:29:22,080
+number, a test statistic. That number is
+
+2296
+01:29:20,320 --> 01:29:26,000
+then used to decide whether the case is
+
+2297
+01:29:22,080 --> 01:29:28,000
+more likely normal or abnormal.
+
+2298
+01:29:26,000 --> 01:29:30,480
+The hoteling observer is designed to be
+
+2299
+01:29:28,000 --> 01:29:32,800
+the best possible linear observer. What
+
+2300
+01:29:30,480 --> 01:29:35,120
+does best mean here? It means the
+
+2301
+01:29:32,800 --> 01:29:37,520
+observer chooses its template in a way
+
+2302
+01:29:35,120 --> 01:29:39,679
+that maximizes the signal to noise
+
+2303
+01:29:37,520 --> 01:29:42,960
+ratio, the separation between the
+
+2304
+01:29:39,679 --> 01:29:44,880
+diseased and nondesed cases. The larger
+
+2305
+01:29:42,960 --> 01:29:46,719
+the separation, the easier the decision
+
+2306
+01:29:44,880 --> 01:29:48,480
+becomes.
+
+2307
+01:29:46,719 --> 01:29:50,719
+This is why the hoteling observer is so
+
+2308
+01:29:48,480 --> 01:29:52,800
+widely studied.
+
+2309
+01:29:50,719 --> 01:29:54,320
+It strikes a balance, not as powerful as
+
+2310
+01:29:52,800 --> 01:29:56,239
+the ideal observer, but still
+
+2311
+01:29:54,320 --> 01:29:58,880
+mathematically optimal within the class
+
+2312
+01:29:56,239 --> 01:30:00,719
+of linear decision rules.
+
+2313
+01:29:58,880 --> 01:30:03,199
+And if we don't even want to use all the
+
+2314
+01:30:00,719 --> 01:30:05,199
+image data, we can go a step further. We
+
+2315
+01:30:03,199 --> 01:30:06,960
+might only use selected features or
+
+2316
+01:30:05,199 --> 01:30:09,520
+specific channels of the image instead
+
+2317
+01:30:06,960 --> 01:30:11,760
+of the full data set.
+
+2318
+01:30:09,520 --> 01:30:14,239
+That gives us the channelized hoteling
+
+2319
+01:30:11,760 --> 01:30:16,639
+observer, a practical simplification
+
+2320
+01:30:14,239 --> 01:30:20,520
+that still works well in many real world
+
+2321
+01:30:16,639 --> 01:30:20,520
+medical imaging problems.
+
+2322
+01:30:22,159 --> 01:30:26,480
+Now let's talk about what is called the
+
+2323
+01:30:23,840 --> 01:30:28,480
+channelized observer. The idea here is
+
+2324
+01:30:26,480 --> 01:30:31,520
+to simplify the problem of analyzing
+
+2325
+01:30:28,480 --> 01:30:33,120
+very highdimensional image data.
+
+2326
+01:30:31,520 --> 01:30:35,199
+Instead of working with every single
+
+2327
+01:30:33,120 --> 01:30:37,120
+pixel value, which can be overwhelming,
+
+2328
+01:30:35,199 --> 01:30:38,960
+we break the image down into a set of
+
+2329
+01:30:37,120 --> 01:30:41,120
+channels.
+
+2330
+01:30:38,960 --> 01:30:42,719
+Each channel acts like a filter or a
+
+2331
+01:30:41,120 --> 01:30:44,960
+template that extracts a particular
+
+2332
+01:30:42,719 --> 01:30:47,040
+aspect of the image. Think of them as
+
+2333
+01:30:44,960 --> 01:30:48,719
+different views or features of the same
+
+2334
+01:30:47,040 --> 01:30:50,480
+data.
+
+2335
+01:30:48,719 --> 01:30:52,320
+When we apply these channels to the
+
+2336
+01:30:50,480 --> 01:30:54,960
+image, we get a series of scalar
+
+2337
+01:30:52,320 --> 01:30:57,760
+responses, simple numbers that summarize
+
+2338
+01:30:54,960 --> 01:30:59,840
+how the image looks under each channel.
+
+2339
+01:30:57,760 --> 01:31:01,760
+We then collect these responses into a
+
+2340
+01:30:59,840 --> 01:31:03,600
+much smaller vector, which is far easier
+
+2341
+01:31:01,760 --> 01:31:05,679
+to work with than the original full
+
+2342
+01:31:03,600 --> 01:31:07,760
+image data.
+
+2343
+01:31:05,679 --> 01:31:10,239
+This is what's known as a channelized
+
+2344
+01:31:07,760 --> 01:31:11,760
+observer. Reducing the dimensionality
+
+2345
+01:31:10,239 --> 01:31:13,920
+allows us to perform statistical
+
+2346
+01:31:11,760 --> 01:31:15,600
+analysis more efficiently while still
+
+2347
+01:31:13,920 --> 01:31:17,920
+retaining the essential information
+
+2348
+01:31:15,600 --> 01:31:19,760
+needed to judge image quality or detect
+
+2349
+01:31:17,920 --> 01:31:22,159
+a signal.
+
+2350
+01:31:19,760 --> 01:31:24,239
+So in short, channelize observers strike
+
+2351
+01:31:22,159 --> 01:31:26,800
+a balance. They simplify the
+
+2352
+01:31:24,239 --> 01:31:31,080
+computational task but still capture the
+
+2353
+01:31:26,800 --> 01:31:31,080
+critical diagnostic features.
+
+2354
+01:31:32,560 --> 01:31:36,159
+To make the idea of channelized
+
+2355
+01:31:34,159 --> 01:31:39,760
+observers more concrete, let me give you
+
+2356
+01:31:36,159 --> 01:31:41,760
+an example. Here you see four channels
+
+2357
+01:31:39,760 --> 01:31:44,000
+illustrated both in the frequency domain
+
+2358
+01:31:41,760 --> 01:31:47,360
+across the top row and in the spatial
+
+2359
+01:31:44,000 --> 01:31:49,520
+domain across the bottom row. Each
+
+2360
+01:31:47,360 --> 01:31:51,360
+channel acts like a filter. In the
+
+2361
+01:31:49,520 --> 01:31:53,199
+frequency domain, these filters look
+
+2362
+01:31:51,360 --> 01:31:55,760
+like concentric rings that select
+
+2363
+01:31:53,199 --> 01:31:57,600
+specific frequency ranges. When we
+
+2364
+01:31:55,760 --> 01:31:59,440
+transform them back into the spatial
+
+2365
+01:31:57,600 --> 01:32:02,080
+domain, they appear as blurred or
+
+2366
+01:31:59,440 --> 01:32:05,280
+oscilly patterns.
+
+2367
+01:32:02,080 --> 01:32:07,120
+Why do we do this?
+
+2368
+01:32:05,280 --> 01:32:08,960
+Because instead of trying to analyze the
+
+2369
+01:32:07,120 --> 01:32:11,679
+entire frequency spectrum all at once,
+
+2370
+01:32:08,960 --> 01:32:13,600
+we divide it into pieces. Each channel
+
+2371
+01:32:11,679 --> 01:32:15,520
+captures information from one part of
+
+2372
+01:32:13,600 --> 01:32:17,280
+the spectrum. When we apply these
+
+2373
+01:32:15,520 --> 01:32:19,520
+filters to an image, we can see how
+
+2374
+01:32:17,280 --> 01:32:21,920
+strongly the image responds to each band
+
+2375
+01:32:19,520 --> 01:32:23,840
+of frequencies.
+
+2376
+01:32:21,920 --> 01:32:25,679
+This is very powerful because medical
+
+2377
+01:32:23,840 --> 01:32:28,080
+images contain structures at many
+
+2378
+01:32:25,679 --> 01:32:31,120
+different scales. Some large and smooth,
+
+2379
+01:32:28,080 --> 01:32:33,199
+others fine and detailed. Using channels
+
+2380
+01:32:31,120 --> 01:32:35,760
+allows us to separate these scales and
+
+2381
+01:32:33,199 --> 01:32:37,520
+study them systematically.
+
+2382
+01:32:35,760 --> 01:32:39,120
+So these four channels are just one
+
+2383
+01:32:37,520 --> 01:32:40,800
+example, but in practice you could
+
+2384
+01:32:39,120 --> 01:32:44,920
+design more channels depending on how
+
+2385
+01:32:40,800 --> 01:32:44,920
+much detail you want to capture.
+
+2386
+01:32:46,400 --> 01:32:50,480
+Now let's move into the topic of
+
+2387
+01:32:48,000 --> 01:32:53,040
+radomics which is an exciting area in
+
+2388
+01:32:50,480 --> 01:32:55,040
+modern medical imaging.
+
+2389
+01:32:53,040 --> 01:32:57,600
+Radiomics is all about turning images
+
+2390
+01:32:55,040 --> 01:33:00,159
+into data. Instead of relying only on
+
+2391
+01:32:57,600 --> 01:33:02,560
+what a radiologist can see with a naked
+
+2392
+01:33:00,159 --> 01:33:04,880
+eye, we extract hundreds or even
+
+2393
+01:33:02,560 --> 01:33:08,239
+thousands of quantitative features from
+
+2394
+01:33:04,880 --> 01:33:10,239
+medical images.
+
+2395
+01:33:08,239 --> 01:33:12,000
+For example, once we outline a tumor on
+
+2396
+01:33:10,239 --> 01:33:14,719
+an image, we can study different
+
+2397
+01:33:12,000 --> 01:33:16,880
+categories of features. Shape features
+
+2398
+01:33:14,719 --> 01:33:21,159
+tell us about the geometry. Is the tumor
+
+2399
+01:33:16,880 --> 01:33:21,159
+round, irregular, or elongated?
+
+2400
+01:33:21,280 --> 01:33:25,360
+Intensity features describe how bright
+
+2401
+01:33:23,360 --> 01:33:28,320
+or dark the pixels are and how their
+
+2402
+01:33:25,360 --> 01:33:30,000
+distribution looks in a histogram.
+
+2403
+01:33:28,320 --> 01:33:31,600
+Texture features capture the patterns
+
+2404
+01:33:30,000 --> 01:33:34,080
+inside the tumor, such as whether it
+
+2405
+01:33:31,600 --> 01:33:36,320
+looks smooth, coarse, or heterogeneous.
+
+2406
+01:33:34,080 --> 01:33:38,239
+These can be computed using statistical
+
+2407
+01:33:36,320 --> 01:33:41,840
+methods like gray level co-occurrence
+
+2408
+01:33:38,239 --> 01:33:43,520
+matrices or runlength matrices.
+
+2409
+01:33:41,840 --> 01:33:45,520
+After we collect these features, we
+
+2410
+01:33:43,520 --> 01:33:47,360
+don't stop there.
+
+2411
+01:33:45,520 --> 01:33:50,000
+The next step is to feed them into a
+
+2412
+01:33:47,360 --> 01:33:52,000
+prediction model. This model may perform
+
+2413
+01:33:50,000 --> 01:33:54,239
+tasks like selecting the most important
+
+2414
+01:33:52,000 --> 01:33:56,480
+features, classifying patients into
+
+2415
+01:33:54,239 --> 01:33:58,320
+groups, or predicting outcomes such as
+
+2416
+01:33:56,480 --> 01:33:59,920
+how well a patient will respond to
+
+2417
+01:33:58,320 --> 01:34:01,920
+treatment.
+
+2418
+01:33:59,920 --> 01:34:04,480
+So, radiomics really bridges imaging
+
+2419
+01:34:01,920 --> 01:34:06,560
+with data science. It takes us beyond
+
+2420
+01:34:04,480 --> 01:34:08,960
+the visual impression and allows us to
+
+2421
+01:34:06,560 --> 01:34:11,040
+mine the hidden information in images,
+
+2422
+01:34:08,960 --> 01:34:15,080
+often leading to insights that are not
+
+2423
+01:34:11,040 --> 01:34:15,080
+visible to the human eye.
+
+2424
+01:34:16,639 --> 01:34:20,400
+Up to this point, we have mostly talked
+
+2425
+01:34:18,400 --> 01:34:22,560
+about linear observers such as the
+
+2426
+01:34:20,400 --> 01:34:24,880
+hoteling observer and its channelized
+
+2427
+01:34:22,560 --> 01:34:27,840
+version. But in reality, many problems
+
+2428
+01:34:24,880 --> 01:34:29,760
+in medical imaging are nonlinear.
+
+2429
+01:34:27,840 --> 01:34:31,520
+Take the exor problem as a classic
+
+2430
+01:34:29,760 --> 01:34:33,520
+example.
+
+2431
+01:34:31,520 --> 01:34:35,600
+If you try to separate the inputs using
+
+2432
+01:34:33,520 --> 01:34:38,320
+a simple straight line, you quickly find
+
+2433
+01:34:35,600 --> 01:34:40,400
+it cannot be done. Linear observers fail
+
+2434
+01:34:38,320 --> 01:34:42,960
+in such situations because the data are
+
+2435
+01:34:40,400 --> 01:34:44,880
+not linearly separable.
+
+2436
+01:34:42,960 --> 01:34:46,639
+To overcome this, we use nonlinear
+
+2437
+01:34:44,880 --> 01:34:49,040
+observers, often built using neural
+
+2438
+01:34:46,639 --> 01:34:50,960
+networks. Here you see a simple network
+
+2439
+01:34:49,040 --> 01:34:53,600
+with two input variables, two hidden
+
+2440
+01:34:50,960 --> 01:34:55,679
+units, and one output. By combining the
+
+2441
+01:34:53,600 --> 01:34:57,440
+information in a nonlinear way, the
+
+2442
+01:34:55,679 --> 01:35:00,400
+network can correctly separate the
+
+2443
+01:34:57,440 --> 01:35:02,080
+classes.
+
+2444
+01:35:00,400 --> 01:35:04,400
+This idea is powerful for medical
+
+2445
+01:35:02,080 --> 01:35:06,239
+imaging tasks.
+
+2446
+01:35:04,400 --> 01:35:08,480
+Images are complex. Disease and
+
+2447
+01:35:06,239 --> 01:35:10,400
+non-desease patterns may overlap, and
+
+2448
+01:35:08,480 --> 01:35:12,960
+linear models are not enough to make
+
+2449
+01:35:10,400 --> 01:35:15,440
+accurate decisions. Neural networks,
+
+2450
+01:35:12,960 --> 01:35:17,679
+however, can learn complicated nonlinear
+
+2451
+01:35:15,440 --> 01:35:19,679
+boundaries, allowing them to detect
+
+2452
+01:35:17,679 --> 01:35:22,400
+subtle patterns and interactions that
+
+2453
+01:35:19,679 --> 01:35:24,639
+traditional methods miss.
+
+2454
+01:35:22,400 --> 01:35:26,639
+So nonlinear observers represent the
+
+2455
+01:35:24,639 --> 01:35:28,320
+next step, moving from simple linear
+
+2456
+01:35:26,639 --> 01:35:30,480
+discrimination toward flexible
+
+2457
+01:35:28,320 --> 01:35:35,239
+datadriven models that can capture the
+
+2458
+01:35:30,480 --> 01:35:35,239
+true complexity of biological signals.
+
+2459
+01:35:36,960 --> 01:35:40,880
+Supervised learning builds on this idea
+
+2460
+01:35:38,880 --> 01:35:42,560
+by training models directly on labeled
+
+2461
+01:35:40,880 --> 01:35:44,960
+data.
+
+2462
+01:35:42,560 --> 01:35:46,800
+For example, in the XR problem, linear
+
+2463
+01:35:44,960 --> 01:35:49,280
+classifiers cannot draw a single
+
+2464
+01:35:46,800 --> 01:35:51,199
+straight line to separate the classes.
+
+2465
+01:35:49,280 --> 01:35:53,760
+But by introducing hidden layers and
+
+2466
+01:35:51,199 --> 01:35:55,280
+nonlinear activation functions, a neural
+
+2467
+01:35:53,760 --> 01:35:57,440
+network can learn to separate the
+
+2468
+01:35:55,280 --> 01:35:59,280
+classes correctly.
+
+2469
+01:35:57,440 --> 01:36:01,360
+The figure shows how the inputs are
+
+2470
+01:35:59,280 --> 01:36:03,520
+transformed step by step through hidden
+
+2471
+01:36:01,360 --> 01:36:06,960
+units and weights leading to correct
+
+2472
+01:36:03,520 --> 01:36:09,199
+outputs for all training examples.
+
+2473
+01:36:06,960 --> 01:36:11,679
+This principle extends far beyond toy
+
+2474
+01:36:09,199 --> 01:36:13,840
+problems. It is the basis of modern deep
+
+2475
+01:36:11,679 --> 01:36:16,080
+learning where very large networks can
+
+2476
+01:36:13,840 --> 01:36:18,080
+learn hierarchical features from medical
+
+2477
+01:36:16,080 --> 01:36:21,080
+images and achieve state-of-the-art
+
+2478
+01:36:18,080 --> 01:36:21,080
+performance.
+
+2479
+01:36:22,560 --> 01:36:27,440
+Here we see a fuzzier, more realistic
+
+2480
+01:36:24,560 --> 01:36:29,280
+version of the XOR problem.
+
+2481
+01:36:27,440 --> 01:36:32,000
+Instead of perfectly separable points,
+
+2482
+01:36:29,280 --> 01:36:33,840
+the data is noisy and overlaps. This is
+
+2483
+01:36:32,000 --> 01:36:36,239
+much closer to what we encounter in
+
+2484
+01:36:33,840 --> 01:36:38,800
+medical imaging where disease and non-d
+
+2485
+01:36:36,239 --> 01:36:42,239
+disease cases are not cleanly separated,
+
+2486
+01:36:38,800 --> 01:36:44,400
+but instead distributed with overlaps.
+
+2487
+01:36:42,239 --> 01:36:46,159
+The nonlinear classifier can still learn
+
+2488
+01:36:44,400 --> 01:36:48,719
+a curved boundary that separates the
+
+2489
+01:36:46,159 --> 01:36:51,040
+classes reasonably well.
+
+2490
+01:36:48,719 --> 01:36:53,119
+This illustrates why nonlinear observers
+
+2491
+01:36:51,040 --> 01:36:55,600
+in machine learning are crucial. They
+
+2492
+01:36:53,119 --> 01:36:57,840
+can adapt to complex messy data rather
+
+2493
+01:36:55,600 --> 01:37:00,840
+than relying on oversimplified linear
+
+2494
+01:36:57,840 --> 01:37:00,840
+rules.
+
+2495
+01:37:02,480 --> 01:37:07,119
+Deep radiomics takes things one step
+
+2496
+01:37:04,560 --> 01:37:09,119
+further. Instead of manually extracting
+
+2497
+01:37:07,119 --> 01:37:11,360
+features, we use convolutional neural
+
+2498
+01:37:09,119 --> 01:37:13,679
+networks CNN's to learn them directly
+
+2499
+01:37:11,360 --> 01:37:15,760
+from the image data.
+
+2500
+01:37:13,679 --> 01:37:17,840
+In this workflow, random patches from
+
+2501
+01:37:15,760 --> 01:37:20,719
+images are used to train a CNN to
+
+2502
+01:37:17,840 --> 01:37:22,719
+recognize tumor regions. Multiple layers
+
+2503
+01:37:20,719 --> 01:37:24,719
+of convolution and pooling extract
+
+2504
+01:37:22,719 --> 01:37:27,520
+increasingly abstract features from
+
+2505
+01:37:24,719 --> 01:37:29,360
+simple edges to complex patterns. The
+
+2506
+01:37:27,520 --> 01:37:31,440
+responses from the deep layers can then
+
+2507
+01:37:29,360 --> 01:37:35,679
+be aggregated across the whole image
+
+2508
+01:37:31,440 --> 01:37:37,760
+forming highdimensional feature maps.
+
+2509
+01:37:35,679 --> 01:37:40,080
+These learned features are then encoded
+
+2510
+01:37:37,760 --> 01:37:42,400
+and passed to classifiers for prediction
+
+2511
+01:37:40,080 --> 01:37:44,880
+tasks such as distinguishing between
+
+2512
+01:37:42,400 --> 01:37:46,800
+tumor subtypes or predicting patient
+
+2513
+01:37:44,880 --> 01:37:48,880
+outcomes.
+
+2514
+01:37:46,800 --> 01:37:51,119
+Deep radiomics represents the cutting
+
+2515
+01:37:48,880 --> 01:37:52,880
+edge, combining the statistical rigor of
+
+2516
+01:37:51,119 --> 01:37:54,719
+radiomics with the power of deep
+
+2517
+01:37:52,880 --> 01:37:57,719
+learning to capture complex image
+
+2518
+01:37:54,719 --> 01:37:57,719
+biomarkers.
+
+2519
+01:37:59,679 --> 01:38:04,320
+Deep radiomics takes things one step
+
+2520
+01:38:01,679 --> 01:38:06,320
+further. Instead of manually extracting
+
+2521
+01:38:04,320 --> 01:38:08,480
+features, we use convolutional neural
+
+2522
+01:38:06,320 --> 01:38:10,880
+networks CNN's to learn them directly
+
+2523
+01:38:08,480 --> 01:38:12,880
+from the image data.
+
+2524
+01:38:10,880 --> 01:38:14,960
+In this workflow, random patches from
+
+2525
+01:38:12,880 --> 01:38:17,840
+images are used to train a CNN to
+
+2526
+01:38:14,960 --> 01:38:19,760
+recognize tumor regions.
+
+2527
+01:38:17,840 --> 01:38:22,000
+Multiple layers of convolution and
+
+2528
+01:38:19,760 --> 01:38:24,239
+pooling extract increasingly abstract
+
+2529
+01:38:22,000 --> 01:38:26,800
+features from simple edges to complex
+
+2530
+01:38:24,239 --> 01:38:28,800
+patterns. The responses from the deep
+
+2531
+01:38:26,800 --> 01:38:30,719
+layers can then be aggregated across the
+
+2532
+01:38:28,800 --> 01:38:32,719
+whole image, forming highdimensional
+
+2533
+01:38:30,719 --> 01:38:34,800
+feature maps.
+
+2534
+01:38:32,719 --> 01:38:37,119
+These learned features are then encoded
+
+2535
+01:38:34,800 --> 01:38:39,440
+and passed to classifiers for prediction
+
+2536
+01:38:37,119 --> 01:38:41,840
+tasks such as distinguishing between
+
+2537
+01:38:39,440 --> 01:38:43,840
+tumor subtypes or predicting patient
+
+2538
+01:38:41,840 --> 01:38:45,920
+outcomes.
+
+2539
+01:38:43,840 --> 01:38:48,159
+Deep radiomics represents the cutting
+
+2540
+01:38:45,920 --> 01:38:49,840
+edge, combining the statistical rigor of
+
+2541
+01:38:48,159 --> 01:38:51,760
+radiomics with the power of deep
+
+2542
+01:38:49,840 --> 01:38:54,760
+learning to capture complex image
+
+2543
+01:38:51,760 --> 01:38:54,760
+biomarkers.
+

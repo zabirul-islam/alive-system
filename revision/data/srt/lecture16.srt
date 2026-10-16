@@ -1,0 +1,8648 @@
+1
+00:00:01,680 --> 00:00:05,520
+Welcome to lecture 16 on nuclear
+
+2
+00:00:03,760 --> 00:00:06,799
+physics.
+
+3
+00:00:05,520 --> 00:00:08,480
+In this course, we focus on
+
+4
+00:00:06,799 --> 00:00:11,360
+understanding nuclear physics in the
+
+5
+00:00:08,480 --> 00:00:13,280
+context of biomedical imaging.
+
+6
+00:00:11,360 --> 00:00:15,280
+The key to learn this material is to go
+
+7
+00:00:13,280 --> 00:00:16,800
+through it more than once. First by
+
+8
+00:00:15,280 --> 00:00:18,320
+following the lecture and then by
+
+9
+00:00:16,800 --> 00:00:20,880
+reviewing the textbook or slides
+
+10
+00:00:18,320 --> 00:00:22,400
+afterwards. Repetition helps clarify the
+
+11
+00:00:20,880 --> 00:00:25,119
+concepts and makes them easier to
+
+12
+00:00:22,400 --> 00:00:27,279
+remember.
+
+13
+00:00:25,119 --> 00:00:29,679
+Now when you open the textbook chapter
+
+14
+00:00:27,279 --> 00:00:31,439
+on nuclear medicine or nuclear imaging
+
+15
+00:00:29,679 --> 00:00:33,680
+you might feel that it contains an
+
+16
+00:00:31,439 --> 00:00:35,520
+overwhelming amount of information.
+
+17
+00:00:33,680 --> 00:00:38,800
+There are details about pharmaceuticals
+
+18
+00:00:35,520 --> 00:00:40,320
+and diseases that may seem excessive.
+
+19
+00:00:38,800 --> 00:00:42,960
+For our purpose you don't need to
+
+20
+00:00:40,320 --> 00:00:44,719
+memorize those. Instead we will focus on
+
+21
+00:00:42,960 --> 00:00:46,960
+the physical principles including the
+
+22
+00:00:44,719 --> 00:00:48,879
+chemistry and instrumentation concepts
+
+23
+00:00:46,960 --> 00:00:50,320
+essential components and particularly
+
+24
+00:00:48,879 --> 00:00:52,960
+the mathematical modeling and
+
+25
+00:00:50,320 --> 00:00:54,559
+quantitative relationships.
+
+26
+00:00:52,960 --> 00:00:57,199
+These are the core concepts you should
+
+27
+00:00:54,559 --> 00:00:58,879
+master well. The clinical terms and long
+
+28
+00:00:57,199 --> 00:01:00,719
+lists are good to know but not our main
+
+29
+00:00:58,879 --> 00:01:02,160
+focus.
+
+30
+00:01:00,719 --> 00:01:04,159
+Throughout the slides, you'll notice
+
+31
+00:01:02,160 --> 00:01:06,479
+visual markers such as red diamonds or
+
+32
+00:01:04,159 --> 00:01:08,320
+green buttons. Again, these are meant to
+
+33
+00:01:06,479 --> 00:01:09,920
+highlight what is most important and to
+
+34
+00:01:08,320 --> 00:01:13,560
+guide your attention to the central
+
+35
+00:01:09,920 --> 00:01:13,560
+knowledge in this lecture.
+
+36
+00:01:14,960 --> 00:01:18,960
+As you can see from the course schedule,
+
+37
+00:01:16,720 --> 00:01:20,720
+we are right on track. We've already
+
+38
+00:01:18,960 --> 00:01:23,360
+covered the earlier topics such as
+
+39
+00:01:20,720 --> 00:01:25,680
+introduction, system concepts, forier
+
+40
+00:01:23,360 --> 00:01:27,840
+series and signal processing. More
+
+41
+00:01:25,680 --> 00:01:32,119
+recently, we completed modules on CT
+
+42
+00:01:27,840 --> 00:01:32,119
+reconstruction and mat lab applications.
+
+43
+00:01:32,159 --> 00:01:36,000
+Today's lecture is focusing on nuclear
+
+44
+00:01:33,920 --> 00:01:38,079
+physics. In the next lecture, we will
+
+45
+00:01:36,000 --> 00:01:40,560
+explain spec and pet imaging principles
+
+46
+00:01:38,079 --> 00:01:42,960
+and systems. After that, we will move on
+
+47
+00:01:40,560 --> 00:01:44,479
+to MRI, ultrasound and optical imaging
+
+48
+00:01:42,960 --> 00:01:46,640
+before wrapping up the course with the
+
+49
+00:01:44,479 --> 00:01:48,560
+final exam.
+
+50
+00:01:46,640 --> 00:01:51,560
+So everything is proceeding according to
+
+51
+00:01:48,560 --> 00:01:51,560
+plan.
+
+52
+00:01:52,960 --> 00:01:56,640
+Now we begin the section on nuclear
+
+53
+00:01:54,880 --> 00:01:58,479
+physics which marks the start of our
+
+54
+00:01:56,640 --> 00:02:01,200
+discussion on nuclear imaging as an
+
+55
+00:01:58,479 --> 00:02:03,040
+imaging modality. As with every modality
+
+56
+00:02:01,200 --> 00:02:05,200
+we cover, I'll first give you a general
+
+57
+00:02:03,040 --> 00:02:07,680
+perspective, a big picture introduction
+
+58
+00:02:05,200 --> 00:02:09,360
+to provide background and context. After
+
+59
+00:02:07,680 --> 00:02:12,160
+that we'll focus on the key elements
+
+60
+00:02:09,360 --> 00:02:13,920
+specific to this modality.
+
+61
+00:02:12,160 --> 00:02:16,239
+In this course I want you to always pay
+
+62
+00:02:13,920 --> 00:02:18,319
+attention to the outline. The outline is
+
+63
+00:02:16,239 --> 00:02:20,080
+your road map. It shows what's important
+
+64
+00:02:18,319 --> 00:02:21,920
+and helps you remember the structure of
+
+65
+00:02:20,080 --> 00:02:23,920
+the topic.
+
+66
+00:02:21,920 --> 00:02:25,599
+As in earlier lectures, I use visual
+
+67
+00:02:23,920 --> 00:02:27,200
+markers like the red diamond and the
+
+68
+00:02:25,599 --> 00:02:29,200
+green button to highlight the most
+
+69
+00:02:27,200 --> 00:02:31,440
+essential points. These are your hints
+
+70
+00:02:29,200 --> 00:02:32,959
+for where to focus.
+
+71
+00:02:31,440 --> 00:02:35,440
+Now, some of you may feel concerned
+
+72
+00:02:32,959 --> 00:02:37,840
+about prerequisites such as calculus or
+
+73
+00:02:35,440 --> 00:02:39,920
+differential equations. Don't let that
+
+74
+00:02:37,840 --> 00:02:42,160
+discourage you. Today, it's easier than
+
+75
+00:02:39,920 --> 00:02:43,840
+ever to look up mathematical concepts. A
+
+76
+00:02:42,160 --> 00:02:46,480
+quick search can bring up explanations
+
+77
+00:02:43,840 --> 00:02:48,239
+and definitions right away.
+
+78
+00:02:46,480 --> 00:02:50,160
+What matters most is your willingness to
+
+79
+00:02:48,239 --> 00:02:51,840
+learn. This field is highly
+
+80
+00:02:50,160 --> 00:02:53,920
+interdicciplinary and your goal should
+
+81
+00:02:51,840 --> 00:02:55,519
+be to explore, connect and build your
+
+82
+00:02:53,920 --> 00:02:58,080
+own understanding of the knowledge you
+
+83
+00:02:55,519 --> 00:03:00,000
+need.
+
+84
+00:02:58,080 --> 00:03:01,760
+So as we step into nuclear physics,
+
+85
+00:03:00,000 --> 00:03:04,239
+remember our approach is not to memorize
+
+86
+00:03:01,760 --> 00:03:05,920
+every detail but to see the story. First
+
+87
+00:03:04,239 --> 00:03:07,680
+we build a general understanding. Then
+
+88
+00:03:05,920 --> 00:03:09,680
+we dive into specific components like
+
+89
+00:03:07,680 --> 00:03:11,920
+radioactivity, tracer production and
+
+90
+00:03:09,680 --> 00:03:13,360
+data acquisition.
+
+91
+00:03:11,920 --> 00:03:15,680
+Once you see the big picture, the
+
+92
+00:03:13,360 --> 00:03:17,760
+details fall into place more naturally.
+
+93
+00:03:15,680 --> 00:03:19,519
+Nuclear imaging is a fascinating field
+
+94
+00:03:17,760 --> 00:03:23,080
+and I hope you'll enjoy this journey as
+
+95
+00:03:19,519 --> 00:03:23,080
+much as I do.
+
+96
+00:03:24,319 --> 00:03:28,800
+Let's begin with a bit of history to set
+
+97
+00:03:26,239 --> 00:03:30,799
+the stage. Every imaging modality we
+
+98
+00:03:28,800 --> 00:03:32,480
+study has been shaped by many talented
+
+99
+00:03:30,799 --> 00:03:35,360
+researchers whose discoveries were
+
+100
+00:03:32,480 --> 00:03:37,840
+recognized at the highest levels.
+
+101
+00:03:35,360 --> 00:03:39,280
+Nuclear imaging is no exception. If you
+
+102
+00:03:37,840 --> 00:03:40,879
+look back at the milestones in its
+
+103
+00:03:39,280 --> 00:03:42,720
+history, you'll find several famous
+
+104
+00:03:40,879 --> 00:03:44,720
+names and among the most remarkable is
+
+105
+00:03:42,720 --> 00:03:47,120
+Marie Cury.
+
+106
+00:03:44,720 --> 00:03:48,480
+Marie Cury was awarded two Nobel prizes
+
+107
+00:03:47,120 --> 00:03:51,440
+for her groundbreaking work on
+
+108
+00:03:48,480 --> 00:03:54,319
+radioactivity. In fact, element 96
+
+109
+00:03:51,440 --> 00:03:56,080
+called Curium was named in her honor.
+
+110
+00:03:54,319 --> 00:03:57,920
+Her influence extended to the next
+
+111
+00:03:56,080 --> 00:03:59,840
+generation as well. Her daughter Irene
+
+112
+00:03:57,920 --> 00:04:01,680
+became a distinguished nuclear physicist
+
+113
+00:03:59,840 --> 00:04:05,120
+in her own right and received a Nobel
+
+114
+00:04:01,680 --> 00:04:06,879
+Prize in 1935. Her other daughter Eve
+
+115
+00:04:05,120 --> 00:04:09,599
+wrote a highly acclaimed biography of
+
+116
+00:04:06,879 --> 00:04:11,439
+her mother.
+
+117
+00:04:09,599 --> 00:04:13,360
+So when we talk about nuclear imaging
+
+118
+00:04:11,439 --> 00:04:15,760
+today, we are building on a legacy that
+
+119
+00:04:13,360 --> 00:04:17,600
+began with pioneers like Marie Cury.
+
+120
+00:04:15,760 --> 00:04:19,840
+Their contributions laid the foundation
+
+121
+00:04:17,600 --> 00:04:24,359
+for our understanding of radioactivity
+
+122
+00:04:19,840 --> 00:04:24,359
+which is central to this entire field.
+
+123
+00:04:26,000 --> 00:04:29,680
+This is Michael Tpagosian a very
+
+124
+00:04:27,840 --> 00:04:31,919
+important figure in nuclear physics and
+
+125
+00:04:29,680 --> 00:04:33,680
+especially in nuclear imaging. He is
+
+126
+00:04:31,919 --> 00:04:36,080
+recognized as one of the pioneers of
+
+127
+00:04:33,680 --> 00:04:38,000
+posetron emission tomography or PET
+
+128
+00:04:36,080 --> 00:04:40,639
+which became the first truly functional
+
+129
+00:04:38,000 --> 00:04:42,720
+brain imaging technology.
+
+130
+00:04:40,639 --> 00:04:45,440
+PET was groundbreaking because unlike
+
+131
+00:04:42,720 --> 00:04:47,280
+conventional CT which shows anatomy, PET
+
+132
+00:04:45,440 --> 00:04:50,400
+allows us to evaluate the brain in
+
+133
+00:04:47,280 --> 00:04:51,919
+action during mental processes. Later in
+
+134
+00:04:50,400 --> 00:04:53,520
+this course, we will study PET in
+
+135
+00:04:51,919 --> 00:04:55,199
+detail.
+
+136
+00:04:53,520 --> 00:04:57,759
+I'd like to share a personal connection
+
+137
+00:04:55,199 --> 00:04:59,440
+here. After finishing my PhD, I was
+
+138
+00:04:57,759 --> 00:05:01,520
+hired at the Malinktrot Institute of
+
+139
+00:04:59,440 --> 00:05:04,479
+Radiology at Washington University in
+
+140
+00:05:01,520 --> 00:05:06,479
+Sat Louie. I started as a medical
+
+141
+00:05:04,479 --> 00:05:08,320
+physicist doing imaging measurements and
+
+142
+00:05:06,479 --> 00:05:09,919
+research.
+
+143
+00:05:08,320 --> 00:05:11,360
+The leader of our medical physics group
+
+144
+00:05:09,919 --> 00:05:13,759
+at that time was Professor Michael
+
+145
+00:05:11,360 --> 00:05:15,919
+Turposian. I was still young and didn't
+
+146
+00:05:13,759 --> 00:05:20,440
+fully realize how great he was. I simply
+
+147
+00:05:15,919 --> 00:05:20,440
+saw him as my immediate supervisor.
+
+148
+00:05:20,479 --> 00:05:25,280
+Looking back, I recognize his remarkable
+
+149
+00:05:22,639 --> 00:05:27,199
+contributions. Many people felt that he
+
+150
+00:05:25,280 --> 00:05:29,120
+truly deserved a Nobel Prize for his
+
+151
+00:05:27,199 --> 00:05:30,880
+invention of PET and his pioneering
+
+152
+00:05:29,120 --> 00:05:33,199
+results.
+
+153
+00:05:30,880 --> 00:05:35,199
+Unfortunately, he passed away in 1996
+
+154
+00:05:33,199 --> 00:05:36,720
+from heart disease. Beyond his
+
+155
+00:05:35,199 --> 00:05:39,120
+scientific work, he was also the
+
+156
+00:05:36,720 --> 00:05:41,199
+founding editor-inchief of the E
+
+157
+00:05:39,120 --> 00:05:43,039
+Transactions on Medical Imaging, which
+
+158
+00:05:41,199 --> 00:05:44,800
+remains the most important journal in
+
+159
+00:05:43,039 --> 00:05:46,560
+our field.
+
+160
+00:05:44,800 --> 00:05:49,039
+I remember him as not only brilliant,
+
+161
+00:05:46,560 --> 00:05:51,039
+but also humorous and downto-earth. For
+
+162
+00:05:49,039 --> 00:05:52,800
+example, he once told us that doing too
+
+163
+00:05:51,039 --> 00:05:54,720
+much simulation is like having a
+
+164
+00:05:52,800 --> 00:05:56,560
+simulated meal. It might look
+
+165
+00:05:54,720 --> 00:05:58,639
+convincing, but afterward you're still
+
+166
+00:05:56,560 --> 00:06:01,639
+hungry. That kind of humor made him
+
+167
+00:05:58,639 --> 00:06:01,639
+unforgettable.
+
+168
+00:06:03,360 --> 00:06:06,960
+Here we see X-ray CT, which you are
+
+169
+00:06:05,520 --> 00:06:08,720
+already familiar with from earlier
+
+170
+00:06:06,960 --> 00:06:10,319
+lectures. Let me give you a quick
+
+171
+00:06:08,720 --> 00:06:12,479
+review.
+
+172
+00:06:10,319 --> 00:06:15,759
+In conventional CT, the system typically
+
+173
+00:06:12,479 --> 00:06:17,360
+uses an energy integrating detector.
+
+174
+00:06:15,759 --> 00:06:19,280
+This means that all of the incoming
+
+175
+00:06:17,360 --> 00:06:20,880
+X-ray photons are combined and the
+
+176
+00:06:19,280 --> 00:06:23,520
+result is an averaged measurement over
+
+177
+00:06:20,880 --> 00:06:25,360
+the entire X-ray spectrum. That gives us
+
+178
+00:06:23,520 --> 00:06:27,199
+the grayscale images you know well where
+
+179
+00:06:25,360 --> 00:06:28,720
+tissues appear in shades from black to
+
+180
+00:06:27,199 --> 00:06:30,720
+white.
+
+181
+00:06:28,720 --> 00:06:33,199
+Now with more advanced technology, we
+
+182
+00:06:30,720 --> 00:06:35,280
+can use photon counting detectors. These
+
+183
+00:06:33,199 --> 00:06:36,880
+detectors are energy sensitive which
+
+184
+00:06:35,280 --> 00:06:38,400
+means they can record not only the
+
+185
+00:06:36,880 --> 00:06:40,160
+number of photons but also their
+
+186
+00:06:38,400 --> 00:06:42,479
+energies.
+
+187
+00:06:40,160 --> 00:06:44,639
+By sorting the detected photons into
+
+188
+00:06:42,479 --> 00:06:47,280
+many energy bins, we can see the full
+
+189
+00:06:44,639 --> 00:06:49,280
+X-ray spectrum, including characteristic
+
+190
+00:06:47,280 --> 00:06:51,280
+features called K edges for different
+
+191
+00:06:49,280 --> 00:06:53,199
+materials.
+
+192
+00:06:51,280 --> 00:06:55,520
+This approach allows us to separate and
+
+193
+00:06:53,199 --> 00:06:57,680
+identify materials such as gold, iodine,
+
+194
+00:06:55,520 --> 00:06:59,759
+calcium, and fat. In other words,
+
+195
+00:06:57,680 --> 00:07:01,680
+instead of just a grayscale image, we
+
+196
+00:06:59,759 --> 00:07:03,759
+can create color-coded images that
+
+197
+00:07:01,680 --> 00:07:05,919
+reflect the molecular composition of the
+
+198
+00:07:03,759 --> 00:07:10,000
+tissue or phantom. This is called
+
+199
+00:07:05,919 --> 00:07:12,160
+spectral or molecular kinetic.
+
+200
+00:07:10,000 --> 00:07:13,840
+So with photon counting CT we move
+
+201
+00:07:12,160 --> 00:07:15,520
+beyond structural imaging into the
+
+202
+00:07:13,840 --> 00:07:17,759
+possibility of functional and molecular
+
+203
+00:07:15,520 --> 00:07:20,919
+imaging. A very exciting direction for
+
+204
+00:07:17,759 --> 00:07:20,919
+the future.
+
+205
+00:07:22,319 --> 00:07:25,680
+Today we move into a very different
+
+206
+00:07:23,919 --> 00:07:27,840
+story. The basic idea of nuclear
+
+207
+00:07:25,680 --> 00:07:29,599
+imaging. This principle is absolutely
+
+208
+00:07:27,840 --> 00:07:31,440
+fundamental.
+
+209
+00:07:29,599 --> 00:07:33,599
+Just like in X-ray imaging we are still
+
+210
+00:07:31,440 --> 00:07:35,520
+working with radiation. But here's the
+
+211
+00:07:33,599 --> 00:07:37,680
+key difference. In nuclear imaging, the
+
+212
+00:07:35,520 --> 00:07:40,160
+radiation does not come from an external
+
+213
+00:07:37,680 --> 00:07:41,680
+source outside the body.
+
+214
+00:07:40,160 --> 00:07:43,039
+Instead, it comes from inside the
+
+215
+00:07:41,680 --> 00:07:45,440
+patient because we introduce a
+
+216
+00:07:43,039 --> 00:07:49,199
+radioactive tracer into the body. That
+
+217
+00:07:45,440 --> 00:07:50,960
+tracer emits gamma rays.
+
+218
+00:07:49,199 --> 00:07:53,360
+Now, gamma rays and x-rays are very
+
+219
+00:07:50,960 --> 00:07:54,800
+similar. Their energy ranges overlap,
+
+220
+00:07:53,360 --> 00:07:56,080
+although gamma rays are usually
+
+221
+00:07:54,800 --> 00:07:58,080
+considered to be slightly more
+
+222
+00:07:56,080 --> 00:08:00,160
+energetic. Both are forms of
+
+223
+00:07:58,080 --> 00:08:02,639
+electromagnetic radiation, part of the
+
+224
+00:08:00,160 --> 00:08:05,520
+same spectrum. Importantly, like X-rays,
+
+225
+00:08:02,639 --> 00:08:07,599
+gamma rays can penetrate the body.
+
+226
+00:08:05,520 --> 00:08:09,280
+But if we simply detect gamma rays
+
+227
+00:08:07,599 --> 00:08:11,199
+without direction, we only get a
+
+228
+00:08:09,280 --> 00:08:13,440
+collection of signals with no spatial
+
+229
+00:08:11,199 --> 00:08:15,599
+meaning. To form an image, we need to
+
+230
+00:08:13,440 --> 00:08:17,680
+know where each photon came from. This
+
+231
+00:08:15,599 --> 00:08:19,840
+is why we use a columator such as a
+
+232
+00:08:17,680 --> 00:08:21,599
+pinhole columator or a parallel hole
+
+233
+00:08:19,840 --> 00:08:24,240
+columator.
+
+234
+00:08:21,599 --> 00:08:26,080
+The columator ensures that only photons
+
+235
+00:08:24,240 --> 00:08:28,080
+traveling along certain directions are
+
+236
+00:08:26,080 --> 00:08:29,759
+recorded, giving us the directional
+
+237
+00:08:28,080 --> 00:08:31,440
+information we need for tomographic
+
+238
+00:08:29,759 --> 00:08:33,200
+imaging.
+
+239
+00:08:31,440 --> 00:08:35,680
+After passing through the columator, the
+
+240
+00:08:33,200 --> 00:08:37,519
+gamma rays strike a cintilation crystal.
+
+241
+00:08:35,680 --> 00:08:39,599
+This crystal converts the high energy
+
+242
+00:08:37,519 --> 00:08:41,200
+gamma photons into flashes of visible
+
+243
+00:08:39,599 --> 00:08:43,120
+light.
+
+244
+00:08:41,200 --> 00:08:44,800
+Next, photo multiplier tubes take that
+
+245
+00:08:43,120 --> 00:08:46,399
+light and convert it into electrical
+
+246
+00:08:44,800 --> 00:08:48,320
+signals, amplifying the signal
+
+247
+00:08:46,399 --> 00:08:49,760
+dramatically.
+
+248
+00:08:48,320 --> 00:08:52,080
+Those electrical signals are then
+
+249
+00:08:49,760 --> 00:08:53,360
+digitized and sent to a computer. One
+
+250
+00:08:52,080 --> 00:08:55,360
+measurement gives us a single
+
+251
+00:08:53,360 --> 00:08:56,959
+projection. By collecting many
+
+252
+00:08:55,360 --> 00:09:00,160
+projections from different angles, we
+
+253
+00:08:56,959 --> 00:09:01,600
+can reconstruct a tomographic image.
+
+254
+00:09:00,160 --> 00:09:03,760
+It's important to understand what the
+
+255
+00:09:01,600 --> 00:09:05,839
+resulting image represents. It is not
+
+256
+00:09:03,760 --> 00:09:08,080
+showing us anatomical structure like CT
+
+257
+00:09:05,839 --> 00:09:09,920
+does. Instead, it shows the distribution
+
+258
+00:09:08,080 --> 00:09:11,440
+of the radioactive tracer inside the
+
+259
+00:09:09,920 --> 00:09:12,880
+body.
+
+260
+00:09:11,440 --> 00:09:14,959
+That means the image reflects
+
+261
+00:09:12,880 --> 00:09:17,200
+physiology, the function of tissues
+
+262
+00:09:14,959 --> 00:09:18,880
+rather than just anatomy. This is the
+
+263
+00:09:17,200 --> 00:09:22,279
+key and very powerful idea behind
+
+264
+00:09:18,880 --> 00:09:22,279
+nuclear imaging.
+
+265
+00:09:23,839 --> 00:09:27,760
+This slide further illustrates the
+
+266
+00:09:25,600 --> 00:09:29,040
+principle of nuclear imaging. Here we
+
+267
+00:09:27,760 --> 00:09:31,200
+see the use of a parallel hole
+
+268
+00:09:29,040 --> 00:09:32,720
+columator. The purpose of the columator
+
+269
+00:09:31,200 --> 00:09:35,839
+is to make sure that the signals we
+
+270
+00:09:32,720 --> 00:09:38,240
+detect are aligned with the holes.
+
+271
+00:09:35,839 --> 00:09:40,240
+That way any photon recorded must have
+
+272
+00:09:38,240 --> 00:09:41,680
+come from directly beneath that hole.
+
+273
+00:09:40,240 --> 00:09:43,839
+And this gives us the spatial
+
+274
+00:09:41,680 --> 00:09:46,640
+information we need. Without it, we
+
+275
+00:09:43,839 --> 00:09:48,560
+would not know the photon's origin.
+
+276
+00:09:46,640 --> 00:09:50,240
+Once the gamma photon passes through the
+
+277
+00:09:48,560 --> 00:09:52,480
+columator, it hits the scintillation
+
+278
+00:09:50,240 --> 00:09:54,959
+crystal. The crystal converts that high
+
+279
+00:09:52,480 --> 00:09:56,880
+energy photon into visible light. Then
+
+280
+00:09:54,959 --> 00:09:58,640
+the photo multiplier tubes convert the
+
+281
+00:09:56,880 --> 00:10:00,320
+light into an electrical signal which
+
+282
+00:09:58,640 --> 00:10:03,200
+can be read by the computer for image
+
+283
+00:10:00,320 --> 00:10:04,800
+formation.
+
+284
+00:10:03,200 --> 00:10:07,040
+Now notice what happens after a
+
+285
+00:10:04,800 --> 00:10:09,200
+radioactive tracer is injected into the
+
+286
+00:10:07,040 --> 00:10:10,959
+bloodstream. The tracer travels through
+
+287
+00:10:09,200 --> 00:10:12,640
+the body and tends to accumulate in
+
+288
+00:10:10,959 --> 00:10:14,560
+certain locations depending on the
+
+289
+00:10:12,640 --> 00:10:16,560
+physiology.
+
+290
+00:10:14,560 --> 00:10:19,040
+In this example for cardiac imaging the
+
+291
+00:10:16,560 --> 00:10:20,800
+tracer concentrates in the heart muscle.
+
+292
+00:10:19,040 --> 00:10:22,480
+This allows us to see how it penetrates
+
+293
+00:10:20,800 --> 00:10:24,000
+the cardiac chambers and the muscle
+
+294
+00:10:22,480 --> 00:10:25,600
+wall.
+
+295
+00:10:24,000 --> 00:10:27,760
+The resulting image reflects the
+
+296
+00:10:25,600 --> 00:10:29,680
+distribution of the tracer. Since the
+
+297
+00:10:27,760 --> 00:10:31,760
+tracer participates in biochemical
+
+298
+00:10:29,680 --> 00:10:33,920
+reactions, nuclear imaging provides
+
+299
+00:10:31,760 --> 00:10:37,279
+insight into physiology, the function of
+
+300
+00:10:33,920 --> 00:10:38,959
+tissues rather than just anatomy.
+
+301
+00:10:37,279 --> 00:10:41,279
+This makes nuclear imaging highly
+
+302
+00:10:38,959 --> 00:10:43,600
+complimentary to X-ray imaging. While
+
+303
+00:10:41,279 --> 00:10:45,760
+X-ray imaging uses an external source
+
+304
+00:10:43,600 --> 00:10:48,079
+and shows structure, nuclear imaging
+
+305
+00:10:45,760 --> 00:10:50,560
+relies on an internal radioactive tracer
+
+306
+00:10:48,079 --> 00:10:52,079
+and shows biological function. Together,
+
+307
+00:10:50,560 --> 00:10:54,959
+they give us a much more complete
+
+308
+00:10:52,079 --> 00:10:54,959
+picture.
+
+309
+00:10:56,560 --> 00:11:01,040
+The physical principles of nuclear
+
+310
+00:10:58,160 --> 00:11:03,200
+imaging can be summarized as follows.
+
+311
+00:11:01,040 --> 00:11:04,640
+First, we use an unstable isotope as a
+
+312
+00:11:03,200 --> 00:11:06,800
+tracer molecule, also called a
+
+313
+00:11:04,640 --> 00:11:08,560
+radionuclide. This tracer can be
+
+314
+00:11:06,800 --> 00:11:10,480
+administered in different ways, most
+
+315
+00:11:08,560 --> 00:11:12,480
+commonly through intravenous injection.
+
+316
+00:11:10,480 --> 00:11:14,320
+But in some cases, it can also be taken
+
+317
+00:11:12,480 --> 00:11:17,040
+orally, for example, by drinking a small
+
+318
+00:11:14,320 --> 00:11:18,800
+amount of radioactive liquid.
+
+319
+00:11:17,040 --> 00:11:20,640
+Once the tracer enters the body, it
+
+320
+00:11:18,800 --> 00:11:23,279
+participates in normal metabolic
+
+321
+00:11:20,640 --> 00:11:25,600
+processes. As it does so, it emits gamma
+
+322
+00:11:23,279 --> 00:11:27,519
+rays from inside the body. These gamma
+
+323
+00:11:25,600 --> 00:11:29,279
+rays are then detected and the resulting
+
+324
+00:11:27,519 --> 00:11:31,360
+measurements reflect the distribution of
+
+325
+00:11:29,279 --> 00:11:33,200
+the tracer.
+
+326
+00:11:31,360 --> 00:11:35,120
+What makes this so powerful is that the
+
+327
+00:11:33,200 --> 00:11:37,279
+signal corresponds to metabolism and
+
+328
+00:11:35,120 --> 00:11:39,519
+physiological function rather than just
+
+329
+00:11:37,279 --> 00:11:41,279
+anatomical structure. In other words,
+
+330
+00:11:39,519 --> 00:11:42,880
+nuclear imaging allows us to see how
+
+331
+00:11:41,279 --> 00:11:44,399
+tissues are working, not just how they
+
+332
+00:11:42,880 --> 00:11:46,240
+look.
+
+333
+00:11:44,399 --> 00:11:48,480
+This sets the stage for us to compare
+
+334
+00:11:46,240 --> 00:11:50,399
+nuclear imaging with X-ray imaging and
+
+335
+00:11:48,480 --> 00:11:54,839
+to highlight both the similarities and
+
+336
+00:11:50,399 --> 00:11:54,839
+the important differences between them.
+
+337
+00:11:56,160 --> 00:12:00,320
+Here we compare X-ray CT with nuclear
+
+338
+00:11:58,480 --> 00:12:02,480
+imaging by looking at their similarities
+
+339
+00:12:00,320 --> 00:12:04,640
+and differences.
+
+340
+00:12:02,480 --> 00:12:06,880
+On the left you see a CT scanner and CT
+
+341
+00:12:04,640 --> 00:12:08,720
+images. On the right is a PET scanner
+
+342
+00:12:06,880 --> 00:12:10,639
+which represents nuclear imaging.
+
+343
+00:12:08,720 --> 00:12:13,040
+Although the images shown here may not
+
+344
+00:12:10,639 --> 00:12:15,040
+be perfectly matched, the idea is clear.
+
+345
+00:12:13,040 --> 00:12:17,920
+Both modalities use radiation and
+
+346
+00:12:15,040 --> 00:12:20,800
+produce tomographic images.
+
+347
+00:12:17,920 --> 00:12:22,639
+Let's begin with the similarities.
+
+348
+00:12:20,800 --> 00:12:24,800
+First, gamma rays and x-rays have
+
+349
+00:12:22,639 --> 00:12:26,399
+overlapping energy ranges. Their
+
+350
+00:12:24,800 --> 00:12:28,240
+energies are high enough that when
+
+351
+00:12:26,399 --> 00:12:29,839
+passing through biological tissue, we
+
+352
+00:12:28,240 --> 00:12:32,079
+can often treat them as traveling in
+
+353
+00:12:29,839 --> 00:12:34,000
+straight lines. Of course, scattering
+
+354
+00:12:32,079 --> 00:12:36,160
+occurs, but for image reconstruction, we
+
+355
+00:12:34,000 --> 00:12:39,440
+assume straight line geometry that
+
+356
+00:12:36,160 --> 00:12:41,360
+simplifies tomographic reconstruction.
+
+357
+00:12:39,440 --> 00:12:44,000
+Second, the data from both modalities
+
+358
+00:12:41,360 --> 00:12:47,440
+can be expressed as line integrals. In
+
+359
+00:12:44,000 --> 00:12:49,600
+CT, this is exactly the radon transform.
+
+360
+00:12:47,440 --> 00:12:51,120
+In nuclear imaging, it is a related but
+
+361
+00:12:49,600 --> 00:12:53,920
+slightly different mathematical
+
+362
+00:12:51,120 --> 00:12:55,920
+formulation. Still, both methods involve
+
+363
+00:12:53,920 --> 00:12:58,399
+line integrals and support tomographic
+
+364
+00:12:55,920 --> 00:13:00,800
+image reconstruction.
+
+365
+00:12:58,399 --> 00:13:02,639
+Third, both CT and nuclear imaging
+
+366
+00:13:00,800 --> 00:13:04,399
+generate two-dimensional slices,
+
+367
+00:13:02,639 --> 00:13:06,639
+three-dimensional volumes, or even
+
+368
+00:13:04,399 --> 00:13:08,880
+fourdimensional data sets when dynamics
+
+369
+00:13:06,639 --> 00:13:10,560
+are included. So in terms of imaging
+
+370
+00:13:08,880 --> 00:13:14,399
+geometry and reconstruction, they share
+
+371
+00:13:10,560 --> 00:13:16,880
+a strong common foundation.
+
+372
+00:13:14,399 --> 00:13:18,959
+Now let's turn to the differences. In
+
+373
+00:13:16,880 --> 00:13:21,200
+CT, the radiation source is external,
+
+374
+00:13:18,959 --> 00:13:23,040
+the X-ray tube outside the patient. In
+
+375
+00:13:21,200 --> 00:13:25,279
+nuclear imaging, the source is internal,
+
+376
+00:13:23,040 --> 00:13:27,680
+a radioactive tracer introduced into the
+
+377
+00:13:25,279 --> 00:13:29,360
+bloodstream. This tracer accumulates in
+
+378
+00:13:27,680 --> 00:13:31,360
+certain regions such as the heart or
+
+379
+00:13:29,360 --> 00:13:33,680
+tumors, especially malignant tumors with
+
+380
+00:13:31,360 --> 00:13:35,279
+a high blood supply.
+
+381
+00:13:33,680 --> 00:13:38,000
+Another difference is the type of
+
+382
+00:13:35,279 --> 00:13:39,600
+information provided. CT primarily gives
+
+383
+00:13:38,000 --> 00:13:42,000
+anatomical information, structural
+
+384
+00:13:39,600 --> 00:13:44,000
+details of organs and tissues. Nuclear
+
+385
+00:13:42,000 --> 00:13:45,600
+imaging by contrast provides functional
+
+386
+00:13:44,000 --> 00:13:48,399
+information showing how tissues are
+
+387
+00:13:45,600 --> 00:13:50,079
+metabolizing or reacting biologically.
+
+388
+00:13:48,399 --> 00:13:52,639
+This makes nuclear imaging highly
+
+389
+00:13:50,079 --> 00:13:54,480
+complimentary to CT.
+
+390
+00:13:52,639 --> 00:13:57,360
+Third, there is a difference in flux and
+
+391
+00:13:54,480 --> 00:13:59,600
+resolution. CT uses a strong external
+
+392
+00:13:57,360 --> 00:14:02,639
+X-ray beam producing high photon flux
+
+393
+00:13:59,600 --> 00:14:04,480
+and therefore high resolution images.
+
+394
+00:14:02,639 --> 00:14:06,320
+Nuclear imaging uses only a small
+
+395
+00:14:04,480 --> 00:14:08,880
+injected amount of tracer. So the signal
+
+396
+00:14:06,320 --> 00:14:11,279
+is weak. The data are noisier and the
+
+397
+00:14:08,880 --> 00:14:13,120
+spatial resolution is lower. Nuclear
+
+398
+00:14:11,279 --> 00:14:15,839
+images may not look as sharp as CT
+
+399
+00:14:13,120 --> 00:14:18,480
+images.
+
+400
+00:14:15,839 --> 00:14:20,639
+Finally, there is sensitivity. CT
+
+401
+00:14:18,480 --> 00:14:22,639
+detects differences in tissue density,
+
+402
+00:14:20,639 --> 00:14:24,720
+but since most tissues are made of light
+
+403
+00:14:22,639 --> 00:14:26,720
+elements, benign and malignant tumors
+
+404
+00:14:24,720 --> 00:14:29,519
+can appear very similar until they grow
+
+405
+00:14:26,720 --> 00:14:31,760
+large enough to change anatomy.
+
+406
+00:14:29,519 --> 00:14:34,160
+That means CT may detect cancer only at
+
+407
+00:14:31,760 --> 00:14:36,639
+later stages. Nuclear imaging, however,
+
+408
+00:14:34,160 --> 00:14:38,399
+is far more sensitive because the tracer
+
+409
+00:14:36,639 --> 00:14:40,959
+accumulates in areas of abnormal
+
+410
+00:14:38,399 --> 00:14:43,519
+metabolism. Nuclear imaging can reveal
+
+411
+00:14:40,959 --> 00:14:46,399
+very small or early stage tumors, often
+
+412
+00:14:43,519 --> 00:14:48,320
+before structural changes appear.
+
+413
+00:14:46,399 --> 00:14:50,240
+This sensitivity is one of the greatest
+
+414
+00:14:48,320 --> 00:14:52,240
+strengths of nuclear imaging, making it
+
+415
+00:14:50,240 --> 00:14:55,880
+an invaluable tool for early detection
+
+416
+00:14:52,240 --> 00:14:55,880
+and treatment planning.
+
+417
+00:14:57,360 --> 00:15:01,519
+CT and nuclear imaging are highly
+
+418
+00:14:59,199 --> 00:15:03,360
+complimentary. CT provides detailed
+
+419
+00:15:01,519 --> 00:15:05,440
+anatomical information while nuclear
+
+420
+00:15:03,360 --> 00:15:08,000
+imaging shows functional and biochemical
+
+421
+00:15:05,440 --> 00:15:10,720
+processes. So the natural idea is why
+
+422
+00:15:08,000 --> 00:15:12,240
+not combine them? That's exactly what
+
+423
+00:15:10,720 --> 00:15:14,480
+happened with the development of hybrid
+
+424
+00:15:12,240 --> 00:15:16,160
+scanners. One of the pioneers in this
+
+425
+00:15:14,480 --> 00:15:18,399
+effort was Simon Cherry who helped
+
+426
+00:15:16,160 --> 00:15:20,320
+establish PET CT as a practical
+
+427
+00:15:18,399 --> 00:15:22,240
+technology.
+
+428
+00:15:20,320 --> 00:15:24,160
+The major strength of nuclear imaging is
+
+429
+00:15:22,240 --> 00:15:26,240
+its ability to label many types of
+
+430
+00:15:24,160 --> 00:15:28,320
+metabolites. This makes it highly
+
+431
+00:15:26,240 --> 00:15:31,199
+sensitive for studying biochemical and
+
+432
+00:15:28,320 --> 00:15:33,040
+physiological processes inside the body.
+
+433
+00:15:31,199 --> 00:15:34,880
+The limitation of course is that nuclear
+
+434
+00:15:33,040 --> 00:15:37,040
+imaging by itself has relatively low
+
+435
+00:15:34,880 --> 00:15:40,480
+resolution. That's why it works best
+
+436
+00:15:37,040 --> 00:15:42,720
+when combined with CT or MRI.
+
+437
+00:15:40,480 --> 00:15:44,320
+CT or MRI gives us the anatomical
+
+438
+00:15:42,720 --> 00:15:46,639
+background, the structural map of
+
+439
+00:15:44,320 --> 00:15:48,720
+tissues. The nuclear tracer distribution
+
+440
+00:15:46,639 --> 00:15:50,160
+can then be precisely superimposed on
+
+441
+00:15:48,720 --> 00:15:52,240
+that background, maximizing the
+
+442
+00:15:50,160 --> 00:15:54,000
+information content. This combination
+
+443
+00:15:52,240 --> 00:15:56,720
+allows us to see both anatomy and
+
+444
+00:15:54,000 --> 00:15:58,880
+function in perfect alignment.
+
+445
+00:15:56,720 --> 00:16:01,279
+PET CT was the first successful hybrid
+
+446
+00:15:58,880 --> 00:16:03,199
+scanner. Today, in oncology departments,
+
+447
+00:16:01,279 --> 00:16:05,199
+it is rare to see a standalone PET
+
+448
+00:16:03,199 --> 00:16:07,680
+scanner. Almost always, PET is
+
+449
+00:16:05,199 --> 00:16:09,360
+integrated with CT.
+
+450
+00:16:07,680 --> 00:16:11,199
+This avoids the problems of image
+
+451
+00:16:09,360 --> 00:16:13,360
+registration that occur when separate
+
+452
+00:16:11,199 --> 00:16:15,120
+scanners are used. Moving the patient
+
+453
+00:16:13,360 --> 00:16:17,360
+between machines can change posture or
+
+454
+00:16:15,120 --> 00:16:19,360
+positioning, making alignment difficult.
+
+455
+00:16:17,360 --> 00:16:21,920
+With a single integrated scanner, those
+
+456
+00:16:19,360 --> 00:16:24,079
+issues are eliminated.
+
+457
+00:16:21,920 --> 00:16:25,920
+Later, PET MRI was also developed,
+
+458
+00:16:24,079 --> 00:16:27,839
+bringing together molecular imaging with
+
+459
+00:16:25,920 --> 00:16:29,759
+the excellent soft tissue contrast of
+
+460
+00:16:27,839 --> 00:16:31,279
+MRI. And researchers have even
+
+461
+00:16:29,759 --> 00:16:34,720
+envisioned the possibility of a
+
+462
+00:16:31,279 --> 00:16:36,800
+trimodality scanner pet and MRI all in
+
+463
+00:16:34,720 --> 00:16:38,639
+one system that would give us an even
+
+464
+00:16:36,800 --> 00:16:41,639
+more powerful tool for comprehensive
+
+465
+00:16:38,639 --> 00:16:41,639
+imaging.
+
+466
+00:16:43,120 --> 00:16:46,320
+We have now finished the general
+
+467
+00:16:44,560 --> 00:16:48,720
+perspective. So, let's move on to
+
+468
+00:16:46,320 --> 00:16:50,639
+radioactivity.
+
+469
+00:16:48,720 --> 00:16:52,800
+Radioactivity is explained in several
+
+470
+00:16:50,639 --> 00:16:54,800
+sections of the textbook. The reading
+
+471
+00:16:52,800 --> 00:16:57,120
+itself is not especially difficult, but
+
+472
+00:16:54,800 --> 00:16:58,639
+the terminology can feel confusing,
+
+473
+00:16:57,120 --> 00:17:01,199
+especially if you don't have a strong
+
+474
+00:16:58,639 --> 00:17:02,720
+background in chemistry. I've had to go
+
+475
+00:17:01,199 --> 00:17:04,480
+through these materials multiple times
+
+476
+00:17:02,720 --> 00:17:06,720
+myself.
+
+477
+00:17:04,480 --> 00:17:08,559
+Over time it becomes clearer. What we
+
+478
+00:17:06,720 --> 00:17:11,679
+are really dealing with are physical and
+
+479
+00:17:08,559 --> 00:17:14,720
+chemical phenomena at the atomic level.
+
+480
+00:17:11,679 --> 00:17:16,559
+So why does radioactivity occur?
+
+481
+00:17:14,720 --> 00:17:19,039
+The reason is that certain isotopes are
+
+482
+00:17:16,559 --> 00:17:21,199
+unstable. These isotopes undergo decay
+
+483
+00:17:19,039 --> 00:17:23,039
+releasing radiation in the process. The
+
+484
+00:17:21,199 --> 00:17:26,079
+decay can follow different mechanisms
+
+485
+00:17:23,039 --> 00:17:28,240
+which we will study in detail.
+
+486
+00:17:26,079 --> 00:17:30,720
+Importantly radioactive decay follows an
+
+487
+00:17:28,240 --> 00:17:32,640
+exponential curve. This behavior can be
+
+488
+00:17:30,720 --> 00:17:35,200
+modeled mathematically using ordinary
+
+489
+00:17:32,640 --> 00:17:36,880
+differential equations.
+
+490
+00:17:35,200 --> 00:17:39,120
+Once you see the formulation, it's not
+
+491
+00:17:36,880 --> 00:17:40,880
+as difficult as it sounds. With some
+
+492
+00:17:39,120 --> 00:17:42,400
+practice, the mathematics will become
+
+493
+00:17:40,880 --> 00:17:44,480
+straightforward and it provides a
+
+494
+00:17:42,400 --> 00:17:47,480
+precise way to describe radioactive
+
+495
+00:17:44,480 --> 00:17:47,480
+processes.
+
+496
+00:17:49,120 --> 00:17:52,880
+This slide is mainly a review of basic
+
+497
+00:17:51,120 --> 00:17:55,280
+nuclear physics concepts. The atomic
+
+498
+00:17:52,880 --> 00:17:57,440
+number and the mass number.
+
+499
+00:17:55,280 --> 00:17:59,280
+The atomic number denoted by Z is simply
+
+500
+00:17:57,440 --> 00:18:01,679
+the number of protons in the nucleus of
+
+501
+00:17:59,280 --> 00:18:04,000
+an atom. The mass number usually written
+
+502
+00:18:01,679 --> 00:18:05,679
+as A is the total number of nucleons
+
+503
+00:18:04,000 --> 00:18:08,000
+meaning the number of protons plus the
+
+504
+00:18:05,679 --> 00:18:09,919
+number of neutrons. In most cases the
+
+505
+00:18:08,000 --> 00:18:12,080
+atomic weight is approximately equal to
+
+506
+00:18:09,919 --> 00:18:13,919
+this mass number.
+
+507
+00:18:12,080 --> 00:18:16,320
+For example, in helium the atomic number
+
+508
+00:18:13,919 --> 00:18:18,320
+is two because there are two protons.
+
+509
+00:18:16,320 --> 00:18:21,280
+The mass number is four because helium
+
+510
+00:18:18,320 --> 00:18:23,039
+has two protons and two neutrons.
+
+511
+00:18:21,280 --> 00:18:24,880
+When an atom is neutral, the number of
+
+512
+00:18:23,039 --> 00:18:26,559
+electrons surrounding the nucleus
+
+513
+00:18:24,880 --> 00:18:30,480
+matches the number of protons in the
+
+514
+00:18:26,559 --> 00:18:32,240
+nucleus. This keeps the charge balanced.
+
+515
+00:18:30,480 --> 00:18:34,080
+Now, once we understand atomic number
+
+516
+00:18:32,240 --> 00:18:37,720
+and mass number, we can define what
+
+517
+00:18:34,080 --> 00:18:37,720
+isotopes are.
+
+518
+00:18:38,960 --> 00:18:44,000
+Now, let's talk about isotopes.
+
+519
+00:18:41,840 --> 00:18:45,919
+Isotopes of a chemical element all share
+
+520
+00:18:44,000 --> 00:18:48,320
+the same atomic number, meaning they
+
+521
+00:18:45,919 --> 00:18:49,919
+have the same number of protons. But
+
+522
+00:18:48,320 --> 00:18:51,520
+they differ in their mass numbers
+
+523
+00:18:49,919 --> 00:18:53,600
+because the number of neutrons is
+
+524
+00:18:51,520 --> 00:18:54,960
+different. So isotopes are the same
+
+525
+00:18:53,600 --> 00:18:56,640
+element but with different neutron
+
+526
+00:18:54,960 --> 00:18:58,720
+counts.
+
+527
+00:18:56,640 --> 00:19:00,400
+Inside the nucleus, protons and neutrons
+
+528
+00:18:58,720 --> 00:19:02,640
+are held together by the strong nuclear
+
+529
+00:19:00,400 --> 00:19:04,640
+force. When the balance between protons
+
+530
+00:19:02,640 --> 00:19:07,440
+and neutrons is within a stable range,
+
+531
+00:19:04,640 --> 00:19:09,039
+the nucleus remains stable.
+
+532
+00:19:07,440 --> 00:19:11,120
+But if the configuration becomes
+
+533
+00:19:09,039 --> 00:19:13,200
+unbalanced, for example, when there are
+
+534
+00:19:11,120 --> 00:19:15,440
+too many neutrons or too many protons
+
+535
+00:19:13,200 --> 00:19:17,520
+relative to each other, the nucleus can
+
+536
+00:19:15,440 --> 00:19:19,280
+become unstable.
+
+537
+00:19:17,520 --> 00:19:21,600
+An unstable nucleus will eventually
+
+538
+00:19:19,280 --> 00:19:23,440
+change into a more stable state. This
+
+539
+00:19:21,600 --> 00:19:25,679
+happens through radioactive decay, which
+
+540
+00:19:23,440 --> 00:19:27,440
+follows an exponential curve. We'll
+
+541
+00:19:25,679 --> 00:19:29,360
+explore that decay law in more detail
+
+542
+00:19:27,440 --> 00:19:32,360
+and even derive it mathematically later
+
+543
+00:19:29,360 --> 00:19:32,360
+on.
+
+544
+00:19:33,679 --> 00:19:37,679
+Radioactive isotopes can emit gamma
+
+545
+00:19:35,520 --> 00:19:39,440
+rays. Let's look more closely at what
+
+546
+00:19:37,679 --> 00:19:41,520
+that means.
+
+547
+00:19:39,440 --> 00:19:43,360
+On the electromagnetic spectrum, X-rays
+
+548
+00:19:41,520 --> 00:19:46,000
+and gamma rays actually overlap in terms
+
+549
+00:19:43,360 --> 00:19:48,000
+of energy. X-rays typically fall within
+
+550
+00:19:46,000 --> 00:19:50,400
+a certain energy range, while gamma rays
+
+551
+00:19:48,000 --> 00:19:52,400
+can extend both lower and higher. In
+
+552
+00:19:50,400 --> 00:19:54,400
+medical imaging, gamma rays are often in
+
+553
+00:19:52,400 --> 00:19:56,080
+the range of hundreds of kilo electron
+
+554
+00:19:54,400 --> 00:19:58,960
+volts.
+
+555
+00:19:56,080 --> 00:20:00,799
+For example, 511 kilo electron volts is
+
+556
+00:19:58,960 --> 00:20:03,600
+a key energy level used in posetron
+
+557
+00:20:00,799 --> 00:20:05,600
+emission tomography or PET. At lower
+
+558
+00:20:03,600 --> 00:20:07,600
+energies, gamma rays are used in single
+
+559
+00:20:05,600 --> 00:20:09,280
+photon emission computed tomography or
+
+560
+00:20:07,600 --> 00:20:11,360
+spec.
+
+561
+00:20:09,280 --> 00:20:13,360
+So in terms of energy, x-rays and gamma
+
+562
+00:20:11,360 --> 00:20:14,720
+rays are quite similar. The main
+
+563
+00:20:13,360 --> 00:20:16,960
+difference lies in how they are
+
+564
+00:20:14,720 --> 00:20:18,880
+generated. X-rays are produced by
+
+565
+00:20:16,960 --> 00:20:20,559
+electron interactions or for instance
+
+566
+00:20:18,880 --> 00:20:22,720
+when high energy electrons strike a
+
+567
+00:20:20,559 --> 00:20:24,559
+tungsten target generating X-rays in the
+
+568
+00:20:22,720 --> 00:20:26,559
+process.
+
+569
+00:20:24,559 --> 00:20:29,200
+In contrast, gamma rays are produced by
+
+570
+00:20:26,559 --> 00:20:31,520
+transitions inside the nucleus itself.
+
+571
+00:20:29,200 --> 00:20:33,440
+When an unstable nucleus changes from a
+
+572
+00:20:31,520 --> 00:20:35,679
+higher energy state to a lower energy
+
+573
+00:20:33,440 --> 00:20:38,400
+state, it releases that excess energy in
+
+574
+00:20:35,679 --> 00:20:40,480
+the form of a gamma photon.
+
+575
+00:20:38,400 --> 00:20:42,000
+This distinction is important. X-rays
+
+576
+00:20:40,480 --> 00:20:44,240
+come from interactions involving
+
+577
+00:20:42,000 --> 00:20:46,960
+electrons while gamma rays come directly
+
+578
+00:20:44,240 --> 00:20:49,039
+from nuclear transitions.
+
+579
+00:20:46,960 --> 00:20:50,720
+Both are powerful tools in imaging. And
+
+580
+00:20:49,039 --> 00:20:52,880
+as we move forward, we'll see in more
+
+581
+00:20:50,720 --> 00:20:55,880
+detail how gamma rays are generated and
+
+582
+00:20:52,880 --> 00:20:55,880
+used.
+
+583
+00:20:57,360 --> 00:21:01,360
+Radioactive isotopes can decay through
+
+584
+00:20:59,520 --> 00:21:04,320
+several different mechanisms and it's
+
+585
+00:21:01,360 --> 00:21:06,240
+important to understand the main ones
+
+586
+00:21:04,320 --> 00:21:08,880
+in your textbook. These are grouped into
+
+587
+00:21:06,240 --> 00:21:10,880
+four basic types. The first is alpha
+
+588
+00:21:08,880 --> 00:21:12,880
+decay. The second is beta decay which
+
+589
+00:21:10,880 --> 00:21:15,360
+includes both beta minus and beta plus
+
+590
+00:21:12,880 --> 00:21:16,960
+or posetron emission. The third is gamma
+
+591
+00:21:15,360 --> 00:21:18,640
+decay and the fourth is electron
+
+592
+00:21:16,960 --> 00:21:20,320
+capture.
+
+593
+00:21:18,640 --> 00:21:22,799
+An easy way to remember them is simply
+
+594
+00:21:20,320 --> 00:21:24,720
+in order alpha, beta, gamma and then
+
+595
+00:21:22,799 --> 00:21:26,559
+electron capture. Each of these
+
+596
+00:21:24,720 --> 00:21:28,480
+processes describes a different way in
+
+597
+00:21:26,559 --> 00:21:30,559
+which an unstable nucleus transforms
+
+598
+00:21:28,480 --> 00:21:33,200
+into a more stable state, releasing
+
+599
+00:21:30,559 --> 00:21:35,200
+radiation in the process.
+
+600
+00:21:33,200 --> 00:21:39,240
+We'll go into detail about each type of
+
+601
+00:21:35,200 --> 00:21:39,240
+decay in the following slides.
+
+602
+00:21:40,799 --> 00:21:45,679
+Let's begin with alpha decay.
+
+603
+00:21:43,360 --> 00:21:47,600
+In alpha decay, an unstable isotope
+
+604
+00:21:45,679 --> 00:21:49,919
+transforms into a daughter nucleus and
+
+605
+00:21:47,600 --> 00:21:51,840
+emits an alpha particle. An alpha
+
+606
+00:21:49,919 --> 00:21:53,919
+particle is essentially the nucleus of a
+
+607
+00:21:51,840 --> 00:21:56,559
+helium atom. two protons and two
+
+608
+00:21:53,919 --> 00:21:58,640
+neutrons bound together.
+
+609
+00:21:56,559 --> 00:22:01,280
+Alpha particles carry a relatively high
+
+610
+00:21:58,640 --> 00:22:03,679
+energy, typically in the range of 3 to 7
+
+611
+00:22:01,280 --> 00:22:06,080
+mega electron volts. Because of this,
+
+612
+00:22:03,679 --> 00:22:08,000
+they can cause severe tissue damage.
+
+613
+00:22:06,080 --> 00:22:09,919
+However, they cannot travel far, usually
+
+614
+00:22:08,000 --> 00:22:11,600
+only a few millimeters in biological
+
+615
+00:22:09,919 --> 00:22:13,679
+tissue.
+
+616
+00:22:11,600 --> 00:22:16,240
+For this reason, alpha radiation is not
+
+617
+00:22:13,679 --> 00:22:18,640
+useful for imaging. It doesn't penetrate
+
+618
+00:22:16,240 --> 00:22:21,840
+deeply enough to form images. Instead,
+
+619
+00:22:18,640 --> 00:22:23,520
+it has therapeutic applications.
+
+620
+00:22:21,840 --> 00:22:25,840
+If we can direct alpha emmitting
+
+621
+00:22:23,520 --> 00:22:27,840
+isotopes precisely to cancer cells, they
+
+622
+00:22:25,840 --> 00:22:29,600
+can deliver very localized, highly
+
+623
+00:22:27,840 --> 00:22:32,640
+destructive radiation that kills the
+
+624
+00:22:29,600 --> 00:22:34,640
+tumor while sparing surrounding tissue.
+
+625
+00:22:32,640 --> 00:22:37,039
+So while alpha decay is the first
+
+626
+00:22:34,640 --> 00:22:39,120
+mechanism of radioactive decay we study,
+
+627
+00:22:37,039 --> 00:22:42,919
+it is more relevant to radiation therapy
+
+628
+00:22:39,120 --> 00:22:42,919
+than to nuclear imaging.
+
+629
+00:22:44,400 --> 00:22:48,799
+The second major type of decay is called
+
+630
+00:22:46,159 --> 00:22:51,760
+beta decay. There are two forms, beta
+
+631
+00:22:48,799 --> 00:22:54,000
+minus decay and beta plus decay.
+
+632
+00:22:51,760 --> 00:22:56,240
+In beta minus decay, a neutron inside
+
+633
+00:22:54,000 --> 00:22:58,480
+the nucleus converts into a proton
+
+634
+00:22:56,240 --> 00:23:00,640
+releasing an electron which we call a
+
+635
+00:22:58,480 --> 00:23:03,200
+beta minus particle along with an
+
+636
+00:23:00,640 --> 00:23:05,520
+anti-utrino. This process changes the
+
+637
+00:23:03,200 --> 00:23:07,200
+nucleus into a different element. Beta
+
+638
+00:23:05,520 --> 00:23:08,960
+minus particles can be damaging to
+
+639
+00:23:07,200 --> 00:23:11,679
+tissue and in some cases this type of
+
+640
+00:23:08,960 --> 00:23:14,480
+decay is used for therapy.
+
+641
+00:23:11,679 --> 00:23:16,400
+In beta plus decay, a proton in the
+
+642
+00:23:14,480 --> 00:23:18,159
+nucleus converts into a neutron,
+
+643
+00:23:16,400 --> 00:23:20,480
+releasing a posetron, which is a
+
+644
+00:23:18,159 --> 00:23:22,880
+positively charged electron along with a
+
+645
+00:23:20,480 --> 00:23:25,200
+neutrino. The posetron does not remain
+
+646
+00:23:22,880 --> 00:23:27,200
+in the body for long.
+
+647
+00:23:25,200 --> 00:23:28,960
+It quickly encounters a nearby electron
+
+648
+00:23:27,200 --> 00:23:31,280
+and when the two meet, they annihilate
+
+649
+00:23:28,960 --> 00:23:33,679
+each other. This annihilation produces a
+
+650
+00:23:31,280 --> 00:23:35,440
+pair of gamma photons.
+
+651
+00:23:33,679 --> 00:23:37,679
+These gamma photons do not emit
+
+652
+00:23:35,440 --> 00:23:41,120
+randomly. They travel in opposite
+
+653
+00:23:37,679 --> 00:23:43,280
+directions almost exactly 180° apart.
+
+654
+00:23:41,120 --> 00:23:46,080
+This property is the basis for posetron
+
+655
+00:23:43,280 --> 00:23:48,080
+emission tomography or PET. By detecting
+
+656
+00:23:46,080 --> 00:23:50,480
+these pairs of photons and knowing they
+
+657
+00:23:48,080 --> 00:23:52,480
+travel in straight opposite directions,
+
+658
+00:23:50,480 --> 00:23:56,400
+we can reconstruct images of where the
+
+659
+00:23:52,480 --> 00:23:58,159
+tracer accumulated in the body.
+
+660
+00:23:56,400 --> 00:24:00,159
+Some textbooks separate posetron
+
+661
+00:23:58,159 --> 00:24:02,559
+emission from beta decay and list it as
+
+662
+00:24:00,159 --> 00:24:05,120
+a distinct process. Others group it
+
+663
+00:24:02,559 --> 00:24:06,960
+under beta plus decay.
+
+664
+00:24:05,120 --> 00:24:09,120
+Either way, the important point is this.
+
+665
+00:24:06,960 --> 00:24:11,200
+For imaging purposes, beta plus decay
+
+666
+00:24:09,120 --> 00:24:13,840
+and gamma decay are useful. While alpha
+
+667
+00:24:11,200 --> 00:24:15,919
+decay and beta minus decay are not pet
+
+668
+00:24:13,840 --> 00:24:19,720
+in particular relies on beta plus decay
+
+669
+00:24:15,919 --> 00:24:19,720
+and posetron annihilation.
+
+670
+00:24:21,600 --> 00:24:25,600
+Posetron emission is another key decay
+
+671
+00:24:23,679 --> 00:24:28,000
+mechanism and it is especially important
+
+672
+00:24:25,600 --> 00:24:29,919
+for nuclear imaging.
+
+673
+00:24:28,000 --> 00:24:31,919
+Here's what happens inside an unstable
+
+674
+00:24:29,919 --> 00:24:34,240
+nucleus. A proton transforms into a
+
+675
+00:24:31,919 --> 00:24:36,559
+neutron. In the process, the nucleus
+
+676
+00:24:34,240 --> 00:24:39,200
+emits a posetron which is a positively
+
+677
+00:24:36,559 --> 00:24:41,120
+charged electron along with a neutrino.
+
+678
+00:24:39,200 --> 00:24:42,880
+The emitted posetron travels only a
+
+679
+00:24:41,120 --> 00:24:44,559
+short distance before it encounters an
+
+680
+00:24:42,880 --> 00:24:46,400
+electron.
+
+681
+00:24:44,559 --> 00:24:48,159
+Because they carry opposite charges, the
+
+682
+00:24:46,400 --> 00:24:50,559
+positron and the electron are naturally
+
+683
+00:24:48,159 --> 00:24:52,400
+attracted to one another.
+
+684
+00:24:50,559 --> 00:24:54,720
+When they meet, they annihilate each
+
+685
+00:24:52,400 --> 00:24:56,640
+other. This annihilation produces two
+
+686
+00:24:54,720 --> 00:25:00,080
+gamma photons, each with an energy of
+
+687
+00:24:56,640 --> 00:25:01,840
+511 kilo electron volts. These photons
+
+688
+00:25:00,080 --> 00:25:05,360
+travel in opposite directions almost
+
+689
+00:25:01,840 --> 00:25:07,520
+exactly 180° apart.
+
+690
+00:25:05,360 --> 00:25:10,400
+This property is the basis for posetron
+
+691
+00:25:07,520 --> 00:25:12,480
+emission tomography or PET. By detecting
+
+692
+00:25:10,400 --> 00:25:14,400
+pairs of gamma photons and knowing they
+
+693
+00:25:12,480 --> 00:25:16,080
+must lie along the same line, we can
+
+694
+00:25:14,400 --> 00:25:18,559
+reconstruct the location where the
+
+695
+00:25:16,080 --> 00:25:20,080
+posetron annihilation occurred. That
+
+696
+00:25:18,559 --> 00:25:22,640
+gives us an image of the tracer
+
+697
+00:25:20,080 --> 00:25:24,799
+distribution inside the body.
+
+698
+00:25:22,640 --> 00:25:26,960
+So compared with alpha and beta minus
+
+699
+00:25:24,799 --> 00:25:29,039
+decay, posetron emission is extremely
+
+700
+00:25:26,960 --> 00:25:30,960
+valuable for imaging. It is the physical
+
+701
+00:25:29,039 --> 00:25:33,120
+principle behind PET, one of the most
+
+702
+00:25:30,960 --> 00:25:36,000
+important functional imaging modalities
+
+703
+00:25:33,120 --> 00:25:36,000
+in medicine.
+
+704
+00:25:37,840 --> 00:25:42,480
+Now let's look at gamma decay.
+
+705
+00:25:40,559 --> 00:25:44,400
+Gamma decay occurs when a nucleus
+
+706
+00:25:42,480 --> 00:25:45,919
+changes its internal configuration and
+
+707
+00:25:44,400 --> 00:25:48,640
+releases the excess energy in the form
+
+708
+00:25:45,919 --> 00:25:50,400
+of a gamma photon. This process does not
+
+709
+00:25:48,640 --> 00:25:52,240
+change the number of protons or
+
+710
+00:25:50,400 --> 00:25:54,240
+neutrons. So the element remains the
+
+711
+00:25:52,240 --> 00:25:56,559
+same. Only the energy state of the
+
+712
+00:25:54,240 --> 00:25:58,799
+nucleus changes.
+
+713
+00:25:56,559 --> 00:26:01,279
+There are two main categories. The first
+
+714
+00:25:58,799 --> 00:26:03,200
+is immediate gamma decay. In this case,
+
+715
+00:26:01,279 --> 00:26:04,960
+the nucleus drops from a higher energy
+
+716
+00:26:03,200 --> 00:26:08,080
+state directly to a lower state and a
+
+717
+00:26:04,960 --> 00:26:09,919
+gamma photon is released right away.
+
+718
+00:26:08,080 --> 00:26:12,000
+The second category is more common and
+
+719
+00:26:09,919 --> 00:26:13,679
+more useful in practice. Here the
+
+720
+00:26:12,000 --> 00:26:16,080
+nucleus does not release the gamma
+
+721
+00:26:13,679 --> 00:26:18,000
+photon immediately.
+
+722
+00:26:16,080 --> 00:26:20,320
+Instead, it first enters a metastable
+
+723
+00:26:18,000 --> 00:26:22,400
+state. After a short delay, the gamma
+
+724
+00:26:20,320 --> 00:26:25,919
+photon is released sometimes along with
+
+725
+00:26:22,400 --> 00:26:27,840
+other particles such as an anti-utrino.
+
+726
+00:26:25,919 --> 00:26:32,080
+A classic example of this process is
+
+727
+00:26:27,840 --> 00:26:34,320
+technium 99M often abbreviated as TC99M.
+
+728
+00:26:32,080 --> 00:26:36,320
+The M stands for metastable. This
+
+729
+00:26:34,320 --> 00:26:37,840
+isotope is widely used in nuclear
+
+730
+00:26:36,320 --> 00:26:40,240
+medicine because of its convenient
+
+731
+00:26:37,840 --> 00:26:43,120
+half-life and the gamma photons it emits
+
+732
+00:26:40,240 --> 00:26:45,200
+which are ideal for imaging.
+
+733
+00:26:43,120 --> 00:26:47,039
+So gamma decay is highly relevant to
+
+734
+00:26:45,200 --> 00:26:50,240
+nuclear imaging especially in the form
+
+735
+00:26:47,039 --> 00:26:52,240
+of isotopes like TC99M which remains one
+
+736
+00:26:50,240 --> 00:26:55,240
+of the most important traces in clinical
+
+737
+00:26:52,240 --> 00:26:55,240
+practice.
+
+738
+00:26:56,799 --> 00:27:00,320
+The textbook explains gamma decay in
+
+739
+00:26:58,720 --> 00:27:02,880
+more detail and it makes an important
+
+740
+00:27:00,320 --> 00:27:05,360
+point. No radionuclide decays solely by
+
+741
+00:27:02,880 --> 00:27:07,200
+gamma emission. Instead, gamma rays
+
+742
+00:27:05,360 --> 00:27:08,880
+appear as part of a decay scheme where
+
+743
+00:27:07,200 --> 00:27:11,679
+an intermediate state called a
+
+744
+00:27:08,880 --> 00:27:14,720
+metastable state is formed.
+
+745
+00:27:11,679 --> 00:27:16,320
+A widely used example is technium 99m or
+
+746
+00:27:14,720 --> 00:27:18,720
+TC9M.
+
+747
+00:27:16,320 --> 00:27:21,520
+It is produced from malibdinum 99 which
+
+748
+00:27:18,720 --> 00:27:24,960
+underos beta decay. The daughter nucleus
+
+749
+00:27:21,520 --> 00:27:26,720
+T99M is metastable. After a half-life of
+
+750
+00:27:24,960 --> 00:27:29,120
+about 6 hours, it transitions to the
+
+751
+00:27:26,720 --> 00:27:31,440
+stable form TC99, releasing a gamma
+
+752
+00:27:29,120 --> 00:27:34,240
+photon in the process.
+
+753
+00:27:31,440 --> 00:27:37,600
+The gamma photon from TC99M has an
+
+754
+00:27:34,240 --> 00:27:39,360
+energy of about 140 kilo electron volts.
+
+755
+00:27:37,600 --> 00:27:41,760
+This energy is ideal for nuclear
+
+756
+00:27:39,360 --> 00:27:44,480
+medicine imaging. If the photon energy
+
+757
+00:27:41,760 --> 00:27:46,480
+is too low below about 100 KV, most of
+
+758
+00:27:44,480 --> 00:27:48,960
+the photons are absorbed in tissue and
+
+759
+00:27:46,480 --> 00:27:51,120
+never reach the detector.
+
+760
+00:27:48,960 --> 00:27:53,440
+If the energy is too high above about
+
+761
+00:27:51,120 --> 00:27:56,000
+200 KV, the photons penetrate the
+
+762
+00:27:53,440 --> 00:27:57,600
+columator and reduce image quality. That
+
+763
+00:27:56,000 --> 00:28:01,360
+is why the sweet spot for imaging is
+
+764
+00:27:57,600 --> 00:28:03,919
+between 100 and 200 KV and TC99M fits
+
+765
+00:28:01,360 --> 00:28:06,799
+perfectly in this range.
+
+766
+00:28:03,919 --> 00:28:08,960
+This is why TC9M has become the most
+
+767
+00:28:06,799 --> 00:28:11,440
+widely used radionuclide in nuclear
+
+768
+00:28:08,960 --> 00:28:14,159
+medicine applied in more than 90% of
+
+769
+00:28:11,440 --> 00:28:16,159
+diagnostic imaging studies.
+
+770
+00:28:14,159 --> 00:28:19,039
+So now you've seen the three main decay
+
+771
+00:28:16,159 --> 00:28:20,880
+mechanisms alpha, beta and gamma. In the
+
+772
+00:28:19,039 --> 00:28:24,360
+next step we'll discuss the final one
+
+773
+00:28:20,880 --> 00:28:24,360
+electron capture.
+
+774
+00:28:25,840 --> 00:28:30,000
+The final type of decay we'll discuss is
+
+775
+00:28:27,919 --> 00:28:32,159
+electron capture.
+
+776
+00:28:30,000 --> 00:28:34,720
+In electron capture, a proton in the
+
+777
+00:28:32,159 --> 00:28:36,559
+nucleus is transformed into a neutron.
+
+778
+00:28:34,720 --> 00:28:38,559
+This happens when the nucleus captures
+
+779
+00:28:36,559 --> 00:28:41,039
+one of the atoms own inner electrons,
+
+780
+00:28:38,559 --> 00:28:42,960
+usually from the K shell.
+
+781
+00:28:41,039 --> 00:28:44,960
+By capturing this electron, the proton
+
+782
+00:28:42,960 --> 00:28:47,360
+combines with it to form a neutron and a
+
+783
+00:28:44,960 --> 00:28:49,440
+neutrino is released.
+
+784
+00:28:47,360 --> 00:28:51,760
+The daughter nucleus is often left in an
+
+785
+00:28:49,440 --> 00:28:54,880
+excited state. To release that excess
+
+786
+00:28:51,760 --> 00:28:56,799
+energy emits X-rays or or electrons. In
+
+787
+00:28:54,880 --> 00:28:59,039
+some cases, additional radiation is
+
+788
+00:28:56,799 --> 00:29:01,200
+produced through what we call breong, a
+
+789
+00:28:59,039 --> 00:29:02,720
+German word meaning breaking radiation.
+
+790
+00:29:01,200 --> 00:29:04,320
+This process is similar to what we
+
+791
+00:29:02,720 --> 00:29:06,080
+studied earlier in X-ray production
+
+792
+00:29:04,320 --> 00:29:08,080
+where electrons slow down and emit
+
+793
+00:29:06,080 --> 00:29:10,080
+radiation.
+
+794
+00:29:08,080 --> 00:29:11,919
+So electron capture does not directly
+
+795
+00:29:10,080 --> 00:29:14,480
+produce a particle like an alpha or a
+
+796
+00:29:11,919 --> 00:29:17,039
+beta. Instead it changes the balance
+
+797
+00:29:14,480 --> 00:29:19,600
+inside the nucleus and produces photons
+
+798
+00:29:17,039 --> 00:29:22,240
+either x-rays or gamma rays along with
+
+799
+00:29:19,600 --> 00:29:23,520
+other possible emissions.
+
+800
+00:29:22,240 --> 00:29:25,279
+This mechanism adds to the
+
+801
+00:29:23,520 --> 00:29:26,799
+classification of decay types and it
+
+802
+00:29:25,279 --> 00:29:28,720
+highlights again that photons can be
+
+803
+00:29:26,799 --> 00:29:30,799
+generated in different ways. Whether
+
+804
+00:29:28,720 --> 00:29:32,799
+they are called x-rays or gamma rays
+
+805
+00:29:30,799 --> 00:29:35,360
+depends not on the photon itself but on
+
+806
+00:29:32,799 --> 00:29:38,080
+how it was produced.
+
+807
+00:29:35,360 --> 00:29:39,279
+Here
+
+808
+00:29:38,080 --> 00:29:41,679
+is another way of classifying
+
+809
+00:29:39,279 --> 00:29:44,159
+radioactive decay. In total, you can
+
+810
+00:29:41,679 --> 00:29:46,000
+think of five types.
+
+811
+00:29:44,159 --> 00:29:48,159
+First, alpha decay, which typically
+
+812
+00:29:46,000 --> 00:29:50,159
+occurs among the heavier elements.
+
+813
+00:29:48,159 --> 00:29:52,559
+Second, beta minus decay. Third,
+
+814
+00:29:50,159 --> 00:29:54,880
+positron emission or beta plus decay.
+
+815
+00:29:52,559 --> 00:29:57,039
+Fourth, electron capture. And finally,
+
+816
+00:29:54,880 --> 00:29:58,960
+spontaneous vision.
+
+817
+00:29:57,039 --> 00:30:01,360
+For our purposes, the first four are the
+
+818
+00:29:58,960 --> 00:30:03,279
+most important. Spontaneous vision is
+
+819
+00:30:01,360 --> 00:30:05,039
+more of a nuclear physics phenomenon and
+
+820
+00:30:03,279 --> 00:30:06,720
+is not especially relevant to medical
+
+821
+00:30:05,039 --> 00:30:08,399
+imaging.
+
+822
+00:30:06,720 --> 00:30:10,240
+So depending on which textbook you
+
+823
+00:30:08,399 --> 00:30:12,320
+consult, you may see these processes
+
+824
+00:30:10,240 --> 00:30:13,840
+grouped slightly differently. But for
+
+825
+00:30:12,320 --> 00:30:16,080
+this course, just keep in mind the
+
+826
+00:30:13,840 --> 00:30:18,720
+essential ones, alpha, beta, gamma, and
+
+827
+00:30:16,080 --> 00:30:20,640
+electron capture. Within beta decay,
+
+828
+00:30:18,720 --> 00:30:22,799
+remember there are two cases, beta minus
+
+829
+00:30:20,640 --> 00:30:24,640
+and beta plus.
+
+830
+00:30:22,799 --> 00:30:26,480
+With that, you now have a solid overview
+
+831
+00:30:24,640 --> 00:30:30,440
+of the main decay mechanisms we will
+
+832
+00:30:26,480 --> 00:30:30,440
+encounter in nuclear imaging.
+
+833
+00:30:31,919 --> 00:30:35,600
+This table lists some of the most common
+
+834
+00:30:33,679 --> 00:30:37,440
+radioactive tracers used in nuclear
+
+835
+00:30:35,600 --> 00:30:39,200
+medicine. Each tracer has a
+
+836
+00:30:37,440 --> 00:30:41,520
+characteristic half-life in a specific
+
+837
+00:30:39,200 --> 00:30:44,559
+gamma ray energy.
+
+838
+00:30:41,520 --> 00:30:47,520
+For example, technium 99m has a halflife
+
+839
+00:30:44,559 --> 00:30:49,679
+of about 6 hours and emits gamma rays at
+
+840
+00:30:47,520 --> 00:30:52,320
+140 kilo electron volts which is ideal
+
+841
+00:30:49,679 --> 00:30:54,399
+for imaging. Gallium 67 has a longer
+
+842
+00:30:52,320 --> 00:30:56,559
+halflife of about 3 days and multiple
+
+843
+00:30:54,399 --> 00:31:00,960
+gamma energies.
+
+844
+00:30:56,559 --> 00:31:03,440
+Thalium 2011, xenon 133, indium 111, and
+
+845
+00:31:00,960 --> 00:31:05,200
+iodine isotopes are also widely used,
+
+846
+00:31:03,440 --> 00:31:07,279
+each with its own half- livives and
+
+847
+00:31:05,200 --> 00:31:08,960
+energy levels.
+
+848
+00:31:07,279 --> 00:31:11,279
+You don't need to memorize the details
+
+849
+00:31:08,960 --> 00:31:12,799
+of this table. Instead, just recognize
+
+850
+00:31:11,279 --> 00:31:14,000
+that different radionuclides are
+
+851
+00:31:12,799 --> 00:31:15,919
+available for different imaging
+
+852
+00:31:14,000 --> 00:31:18,000
+applications and their properties,
+
+853
+00:31:15,919 --> 00:31:20,799
+half-life and gamma energy, determine
+
+854
+00:31:18,000 --> 00:31:22,559
+how and where they are best used.
+
+855
+00:31:20,799 --> 00:31:24,480
+This is general knowledge to give you a
+
+856
+00:31:22,559 --> 00:31:28,120
+sense of the variety of traces available
+
+857
+00:31:24,480 --> 00:31:28,120
+in nuclear medicine.
+
+858
+00:31:29,679 --> 00:31:34,159
+Radioactive decay follows an exponential
+
+859
+00:31:31,760 --> 00:31:36,080
+curve. At the start, you have an initial
+
+860
+00:31:34,159 --> 00:31:39,120
+amount of radioactive material which we
+
+861
+00:31:36,080 --> 00:31:42,000
+call a underscore0. After one half-life
+
+862
+00:31:39,120 --> 00:31:43,679
+only half of that amount remains.
+
+863
+00:31:42,000 --> 00:31:45,519
+After two half- livives, the amount
+
+864
+00:31:43,679 --> 00:31:47,519
+decreases to one quarter of the original
+
+865
+00:31:45,519 --> 00:31:50,159
+and after three half- livives it becomes
+
+866
+00:31:47,519 --> 00:31:52,799
+1/8. This process continues cutting the
+
+867
+00:31:50,159 --> 00:31:55,039
+quantity in half at each step.
+
+868
+00:31:52,799 --> 00:31:56,799
+The key idea is that the decay rate is
+
+869
+00:31:55,039 --> 00:31:59,200
+proportional to the remaining amount of
+
+870
+00:31:56,799 --> 00:32:01,120
+material. That's why the curve decreases
+
+871
+00:31:59,200 --> 00:32:03,200
+smoothly and continuously rather than in
+
+872
+00:32:01,120 --> 00:32:04,960
+a straight line.
+
+873
+00:32:03,200 --> 00:32:07,039
+This behavior is very similar to what we
+
+874
+00:32:04,960 --> 00:32:09,679
+saw earlier with exponential attenuation
+
+875
+00:32:07,039 --> 00:32:11,679
+in X-rays as described by Beer's law.
+
+876
+00:32:09,679 --> 00:32:13,360
+The mathematics behind radioactive decay
+
+877
+00:32:11,679 --> 00:32:15,120
+uses the same type of exponential
+
+878
+00:32:13,360 --> 00:32:17,279
+function.
+
+879
+00:32:15,120 --> 00:32:19,519
+So visually this graph makes the concept
+
+880
+00:32:17,279 --> 00:32:22,080
+very clear. Radioactive isotopes decay
+
+881
+00:32:19,519 --> 00:32:24,000
+in a predictable exponential fashion and
+
+882
+00:32:22,080 --> 00:32:28,279
+the half-life is the central parameter
+
+883
+00:32:24,000 --> 00:32:28,279
+that characterizes this process.
+
+884
+00:32:29,840 --> 00:32:34,480
+Now let's look at the mathematical
+
+885
+00:32:31,279 --> 00:32:36,720
+details of radioactive decay.
+
+886
+00:32:34,480 --> 00:32:38,799
+The key point is that the rate of change
+
+887
+00:32:36,720 --> 00:32:41,279
+of the number of radioactive nuclei
+
+888
+00:32:38,799 --> 00:32:44,559
+which we call capital n is proportional
+
+889
+00:32:41,279 --> 00:32:47,919
+to how much material is still present.
+
+890
+00:32:44,559 --> 00:32:51,919
+In symbols, this is written as dn by dt
+
+891
+00:32:47,919 --> 00:32:53,440
+equals negative lambda * n.
+
+892
+00:32:51,919 --> 00:32:55,840
+Here lambda is called the decay
+
+893
+00:32:53,440 --> 00:32:57,440
+constant. The negative sign simply tells
+
+894
+00:32:55,840 --> 00:32:59,120
+us that the number is going down over
+
+895
+00:32:57,440 --> 00:33:00,960
+time.
+
+896
+00:32:59,120 --> 00:33:03,279
+If you solve this equation, the solution
+
+897
+00:33:00,960 --> 00:33:06,640
+is an exponential curve. It looks like
+
+898
+00:33:03,279 --> 00:33:10,559
+this. N of t= n * e to the power of
+
+899
+00:33:06,640 --> 00:33:13,200
+negative lambda* t. Here n of t is the
+
+900
+00:33:10,559 --> 00:33:16,880
+number of nuclei at time t and n is the
+
+901
+00:33:13,200 --> 00:33:19,760
+starting number at time zero.
+
+902
+00:33:16,880 --> 00:33:21,600
+Now the halflife written as t 1/2 is the
+
+903
+00:33:19,760 --> 00:33:24,000
+time it takes for the material to decay
+
+904
+00:33:21,600 --> 00:33:26,720
+to 1/2 of its original amount. To find
+
+905
+00:33:24,000 --> 00:33:30,480
+it we set n equal to 1/2 of n in the
+
+906
+00:33:26,720 --> 00:33:34,640
+formula. If you solve for time you get
+
+907
+00:33:30,480 --> 00:33:36,399
+to 1/2 equals natural log of 2 / lambda.
+
+908
+00:33:34,640 --> 00:33:38,559
+So the halflife depends only on the
+
+909
+00:33:36,399 --> 00:33:40,159
+decay constant.
+
+910
+00:33:38,559 --> 00:33:42,480
+But in medicine, we also have to think
+
+911
+00:33:40,159 --> 00:33:44,480
+about biological clearance. When we
+
+912
+00:33:42,480 --> 00:33:46,480
+inject a radioactive tracer, the body
+
+913
+00:33:44,480 --> 00:33:48,720
+tries to remove it. For example, through
+
+914
+00:33:46,480 --> 00:33:50,559
+urine, that biological process also
+
+915
+00:33:48,720 --> 00:33:52,399
+follows an exponential law with its own
+
+916
+00:33:50,559 --> 00:33:54,399
+half-life.
+
+917
+00:33:52,399 --> 00:33:55,919
+When we put both processes together, the
+
+918
+00:33:54,399 --> 00:33:57,360
+physical decay and the biological
+
+919
+00:33:55,919 --> 00:33:59,200
+clearance, we get the effective
+
+920
+00:33:57,360 --> 00:34:02,159
+half-life.
+
+921
+00:33:59,200 --> 00:34:04,320
+The formula is 1 / effective half-life
+
+922
+00:34:02,159 --> 00:34:07,360
+equals 1 over the physical halfife plus
+
+923
+00:34:04,320 --> 00:34:09,119
+1 over the biological half-life.
+
+924
+00:34:07,360 --> 00:34:11,440
+This is the equation you really need to
+
+925
+00:34:09,119 --> 00:34:13,280
+remember. It tells us how long a tracer
+
+926
+00:34:11,440 --> 00:34:15,440
+effectively stays in the body and that
+
+927
+00:34:13,280 --> 00:34:18,440
+is the number we use in nuclear medicine
+
+928
+00:34:15,440 --> 00:34:18,440
+calculations.
+
+929
+00:34:20,399 --> 00:34:25,119
+Now we move on to the third part of our
+
+930
+00:34:22,399 --> 00:34:26,720
+discussion tracer production.
+
+931
+00:34:25,119 --> 00:34:28,159
+So far we've gone through the general
+
+932
+00:34:26,720 --> 00:34:30,000
+perspective and we've talked about
+
+933
+00:34:28,159 --> 00:34:32,079
+isotopes and how they decay through
+
+934
+00:34:30,000 --> 00:34:33,919
+different mechanisms. Some of these
+
+935
+00:34:32,079 --> 00:34:35,919
+mechanisms like posetron emission or
+
+936
+00:34:33,919 --> 00:34:38,480
+gamma decay produce gamma rays that we
+
+937
+00:34:35,919 --> 00:34:40,480
+can detect for imaging purposes. We also
+
+938
+00:34:38,480 --> 00:34:42,560
+saw how radioactive decay can be modeled
+
+939
+00:34:40,480 --> 00:34:44,480
+mathematically.
+
+940
+00:34:42,560 --> 00:34:48,639
+Now let's ask the next question. How do
+
+941
+00:34:44,480 --> 00:34:50,560
+we actually produce radioactive traces?
+
+942
+00:34:48,639 --> 00:34:52,159
+One of the most practical, popular and
+
+943
+00:34:50,560 --> 00:34:53,919
+cost-effective methods is through
+
+944
+00:34:52,159 --> 00:34:56,240
+something called a radionuclide
+
+945
+00:34:53,919 --> 00:34:58,000
+generator. These generators are
+
+946
+00:34:56,240 --> 00:35:00,000
+extremely important because they are the
+
+947
+00:34:58,000 --> 00:35:02,880
+most widely used way to produce traces
+
+948
+00:35:00,000 --> 00:35:04,800
+for clinical nuclear medicine.
+
+949
+00:35:02,880 --> 00:35:06,720
+The process is often called milking.
+
+950
+00:35:04,800 --> 00:35:09,040
+You'll soon see why this analogy makes
+
+951
+00:35:06,720 --> 00:35:11,119
+sense. We can even describe this process
+
+952
+00:35:09,040 --> 00:35:12,960
+mathematically.
+
+953
+00:35:11,119 --> 00:35:15,040
+It looks a bit more complicated than
+
+954
+00:35:12,960 --> 00:35:17,040
+simple decay, but really it's just a
+
+955
+00:35:15,040 --> 00:35:18,960
+system of two equations, one for the
+
+956
+00:35:17,040 --> 00:35:21,200
+parent isotope and one for the daughter
+
+957
+00:35:18,960 --> 00:35:22,880
+isotope. When you couple them together,
+
+958
+00:35:21,200 --> 00:35:24,640
+you can model how traces are produced
+
+959
+00:35:22,880 --> 00:35:28,680
+over time.
+
+960
+00:35:24,640 --> 00:35:28,680
+That's what we'll explore next.
+
+961
+00:35:30,160 --> 00:35:34,560
+Earlier we talked about the four main
+
+962
+00:35:32,000 --> 00:35:36,640
+mechanisms of radioactive decay. Alpha
+
+963
+00:35:34,560 --> 00:35:39,119
+decay, beta decay, gamma decay and
+
+964
+00:35:36,640 --> 00:35:41,040
+electron capture. Within beta decay,
+
+965
+00:35:39,119 --> 00:35:43,680
+remember there are two types, beta minus
+
+966
+00:35:41,040 --> 00:35:47,520
+and beta plus. And for imaging purposes,
+
+967
+00:35:43,680 --> 00:35:49,839
+beta plus is the more important one.
+
+968
+00:35:47,520 --> 00:35:51,920
+Now let's switch perspective. Instead of
+
+969
+00:35:49,839 --> 00:35:53,760
+asking how isotopes decay, we ask how do
+
+970
+00:35:51,920 --> 00:35:56,000
+we produce these radioactive traces in
+
+971
+00:35:53,760 --> 00:35:58,000
+the first place. The good news is this
+
+972
+00:35:56,000 --> 00:36:00,160
+is also easy to remember. There are four
+
+973
+00:35:58,000 --> 00:36:01,839
+basic methods.
+
+974
+00:36:00,160 --> 00:36:05,040
+According to your textbook, the four
+
+975
+00:36:01,839 --> 00:36:07,839
+ways to produce radionuclides are
+
+976
+00:36:05,040 --> 00:36:10,160
+neutron capture, nuclear fishision
+
+977
+00:36:07,839 --> 00:36:14,000
+charged particle bombardment, and the
+
+978
+00:36:10,160 --> 00:36:16,240
+use of radionuclide generators.
+
+979
+00:36:14,000 --> 00:36:18,000
+So again, four mechanisms for decay and
+
+980
+00:36:16,240 --> 00:36:20,720
+four methods for production. a nice
+
+981
+00:36:18,000 --> 00:36:22,480
+symmetry that helps you remember.
+
+982
+00:36:20,720 --> 00:36:25,119
+Among these, I want to highlight the
+
+983
+00:36:22,480 --> 00:36:27,119
+fourth method, radionuclide generators,
+
+984
+00:36:25,119 --> 00:36:29,440
+because it is the one most widely used
+
+985
+00:36:27,119 --> 00:36:31,520
+in clinical practice. The first two
+
+986
+00:36:29,440 --> 00:36:32,800
+methods require a nuclear reactor, and
+
+987
+00:36:31,520 --> 00:36:34,720
+while they are very important in
+
+988
+00:36:32,800 --> 00:36:36,560
+research and industrial production, they
+
+989
+00:36:34,720 --> 00:36:38,640
+are not as accessible for everyday
+
+990
+00:36:36,560 --> 00:36:40,560
+hospital use.
+
+991
+00:36:38,640 --> 00:36:42,560
+Between those two, nuclear fishision is
+
+992
+00:36:40,560 --> 00:36:45,200
+now more popular and more cost-effective
+
+993
+00:36:42,560 --> 00:36:47,440
+compared to neutron capture.
+
+994
+00:36:45,200 --> 00:36:49,119
+But for us as medical imaging scientists
+
+995
+00:36:47,440 --> 00:36:50,880
+and engineers, the radionuclide
+
+996
+00:36:49,119 --> 00:36:55,320
+generator is the key player and that's
+
+997
+00:36:50,880 --> 00:36:55,320
+the one we'll explore in detail next.
+
+998
+00:36:56,800 --> 00:37:00,240
+Now let's take a closer look at the
+
+999
+00:36:58,320 --> 00:37:02,400
+first two methods, neutron capture and
+
+1000
+00:37:00,240 --> 00:37:04,640
+nuclear fishision. Both of these require
+
+1001
+00:37:02,400 --> 00:37:06,560
+a nuclear reactor.
+
+1002
+00:37:04,640 --> 00:37:08,480
+A nuclear reactor is essentially a
+
+1003
+00:37:06,560 --> 00:37:10,880
+device that initiates and controls a
+
+1004
+00:37:08,480 --> 00:37:12,480
+sustained chain reaction. In a typical
+
+1005
+00:37:10,880 --> 00:37:14,480
+power plant, this chain reaction
+
+1006
+00:37:12,480 --> 00:37:16,960
+produces heat which is then transferred
+
+1007
+00:37:14,480 --> 00:37:18,640
+into a working fluid like water or gas
+
+1008
+00:37:16,960 --> 00:37:20,560
+and eventually used to generate
+
+1009
+00:37:18,640 --> 00:37:22,640
+electricity.
+
+1010
+00:37:20,560 --> 00:37:24,480
+But for our purpose in nuclear medicine,
+
+1011
+00:37:22,640 --> 00:37:26,880
+reactors play a different role. They are
+
+1012
+00:37:24,480 --> 00:37:29,280
+used to produce radionuclides.
+
+1013
+00:37:26,880 --> 00:37:31,119
+In neutron capture, a nucleus absorbs an
+
+1014
+00:37:29,280 --> 00:37:34,000
+extra neutron and becomes unstable,
+
+1015
+00:37:31,119 --> 00:37:35,839
+creating a useful isotope.
+
+1016
+00:37:34,000 --> 00:37:37,920
+In nuclear fision, a heavy nucleus
+
+1017
+00:37:35,839 --> 00:37:39,599
+splits into smaller nuclei. And among
+
+1018
+00:37:37,920 --> 00:37:42,400
+the products are medically important
+
+1019
+00:37:39,599 --> 00:37:45,680
+isotopes such as malibdum 99 which is
+
+1020
+00:37:42,400 --> 00:37:47,280
+the precursor of technium 99m.
+
+1021
+00:37:45,680 --> 00:37:48,880
+Between the two nuclear fishision is
+
+1022
+00:37:47,280 --> 00:37:50,160
+more popular today because it is more
+
+1023
+00:37:48,880 --> 00:37:52,640
+efficient and cost effective than
+
+1024
+00:37:50,160 --> 00:37:54,320
+neutron capture. Still both methods
+
+1025
+00:37:52,640 --> 00:37:56,560
+remain central to the production of
+
+1026
+00:37:54,320 --> 00:37:58,800
+medical traces though they are limited
+
+1027
+00:37:56,560 --> 00:38:02,280
+by the need for specialized large-scale
+
+1028
+00:37:58,800 --> 00:38:02,280
+reactor facilities.
+
+1029
+00:38:04,000 --> 00:38:07,760
+Let's now underline the second method
+
+1030
+00:38:05,680 --> 00:38:09,760
+which is nuclear fishision. The first
+
+1031
+00:38:07,760 --> 00:38:11,599
+method neutron capture is less commonly
+
+1032
+00:38:09,760 --> 00:38:13,280
+used today. So we'll focus more on
+
+1033
+00:38:11,599 --> 00:38:16,079
+fishision.
+
+1034
+00:38:13,280 --> 00:38:18,160
+What happens in nuclear fishision?
+
+1035
+00:38:16,079 --> 00:38:20,880
+The nucleus of a heavy atom such as
+
+1036
+00:38:18,160 --> 00:38:23,440
+uranium 235 absorbs a high energy
+
+1037
+00:38:20,880 --> 00:38:26,160
+particle like a neutron. This creates an
+
+1038
+00:38:23,440 --> 00:38:28,400
+unstable excited state. As a result, the
+
+1039
+00:38:26,160 --> 00:38:30,480
+nucleus splits into two lighter nuclei
+
+1040
+00:38:28,400 --> 00:38:33,680
+along with a few free neutrons, gamma
+
+1041
+00:38:30,480 --> 00:38:35,359
+photons, and a large release of energy.
+
+1042
+00:38:33,680 --> 00:38:38,880
+On the right hand side, you can see the
+
+1043
+00:38:35,359 --> 00:38:40,880
+process illustrated. Uranium 235 absorbs
+
+1044
+00:38:38,880 --> 00:38:43,280
+a neutron and briefly becomes uranium
+
+1045
+00:38:40,880 --> 00:38:45,680
+236.
+
+1046
+00:38:43,280 --> 00:38:47,920
+That unstable nucleus then splits into
+
+1047
+00:38:45,680 --> 00:38:50,320
+two smaller fragments, krypton 92 and
+
+1048
+00:38:47,920 --> 00:38:52,960
+barerium 141, along with additional
+
+1049
+00:38:50,320 --> 00:38:54,880
+neutrons. those free neutrons can go on
+
+1050
+00:38:52,960 --> 00:38:57,119
+to trigger further reactions creating a
+
+1051
+00:38:54,880 --> 00:38:59,440
+chain process.
+
+1052
+00:38:57,119 --> 00:39:01,119
+This principle is very powerful. It's
+
+1053
+00:38:59,440 --> 00:39:03,040
+the same physics behind nuclear power
+
+1054
+00:39:01,119 --> 00:39:04,720
+plants and unfortunately also nuclear
+
+1055
+00:39:03,040 --> 00:39:06,560
+weapons.
+
+1056
+00:39:04,720 --> 00:39:08,240
+In our context though, fision is
+
+1057
+00:39:06,560 --> 00:39:09,599
+important mainly because it can be used
+
+1058
+00:39:08,240 --> 00:39:12,640
+to produce medically useful
+
+1059
+00:39:09,599 --> 00:39:15,440
+radionuclides such as malibdinum 99
+
+1060
+00:39:12,640 --> 00:39:17,119
+which later decays into technium 99m for
+
+1061
+00:39:15,440 --> 00:39:18,880
+imaging.
+
+1062
+00:39:17,119 --> 00:39:20,800
+That said, in this course, we won't
+
+1063
+00:39:18,880 --> 00:39:22,960
+emphasize the reactor-based methods too
+
+1064
+00:39:20,800 --> 00:39:25,200
+heavily. Instead, we'll focus more on
+
+1065
+00:39:22,960 --> 00:39:27,040
+the radionuclide generator since that is
+
+1066
+00:39:25,200 --> 00:39:30,839
+what you are most likely to encounter in
+
+1067
+00:39:27,040 --> 00:39:30,839
+clinical imaging practice.
+
+1068
+00:39:32,400 --> 00:39:35,839
+The third method of producing
+
+1069
+00:39:33,760 --> 00:39:37,599
+radionuclides and one that is especially
+
+1070
+00:39:35,839 --> 00:39:40,160
+important for nuclear imaging is the use
+
+1071
+00:39:37,599 --> 00:39:42,400
+of a cyclron. A cyclron is a type of
+
+1072
+00:39:40,160 --> 00:39:44,480
+particle accelerator.
+
+1073
+00:39:42,400 --> 00:39:47,200
+It works by accelerating charged
+
+1074
+00:39:44,480 --> 00:39:49,040
+particles such as protons outward in a
+
+1075
+00:39:47,200 --> 00:39:50,880
+spiral path under the influence of a
+
+1076
+00:39:49,040 --> 00:39:53,440
+strong magnetic field and a rapidly
+
+1077
+00:39:50,880 --> 00:39:55,359
+varying electric field.
+
+1078
+00:39:53,440 --> 00:39:57,520
+When these high energy particles strike
+
+1079
+00:39:55,359 --> 00:40:00,079
+a target material, nuclear reactions
+
+1080
+00:39:57,520 --> 00:40:01,760
+occur and radionuclides are produced.
+
+1081
+00:40:00,079 --> 00:40:04,960
+One of the most well-known examples is
+
+1082
+00:40:01,760 --> 00:40:09,040
+the production of flu deoxylucose or FDG
+
+1083
+00:40:04,960 --> 00:40:10,800
+which is widely used in PET imaging.
+
+1084
+00:40:09,040 --> 00:40:13,119
+Because PET imaging requires very
+
+1085
+00:40:10,800 --> 00:40:15,119
+short-lived traces like Florine 18,
+
+1086
+00:40:13,119 --> 00:40:17,760
+cyclrons must be located relatively
+
+1087
+00:40:15,119 --> 00:40:19,520
+close to hospitals and imaging centers.
+
+1088
+00:40:17,760 --> 00:40:21,599
+This is one of the reasons PET imaging
+
+1089
+00:40:19,520 --> 00:40:23,680
+is more costly. It not only requires
+
+1090
+00:40:21,599 --> 00:40:25,680
+advanced scanners but also a dedicated
+
+1091
+00:40:23,680 --> 00:40:28,079
+cyclron facility to generate the
+
+1092
+00:40:25,680 --> 00:40:30,240
+necessary traces.
+
+1093
+00:40:28,079 --> 00:40:32,960
+So while nuclear reactors play a role in
+
+1094
+00:40:30,240 --> 00:40:34,560
+producing some radionuclides, cyclrons
+
+1095
+00:40:32,960 --> 00:40:36,560
+are indispensable for producing the
+
+1096
+00:40:34,560 --> 00:40:40,160
+posetron emmitting isotopes used in
+
+1097
+00:40:36,560 --> 00:40:40,160
+modern clinical imaging.
+
+1098
+00:40:41,760 --> 00:40:46,079
+Here you see a graphical illustration of
+
+1099
+00:40:43,520 --> 00:40:47,839
+a modern cyclron system. On the right is
+
+1100
+00:40:46,079 --> 00:40:49,119
+the cyclron itself, the particle
+
+1101
+00:40:47,839 --> 00:40:51,280
+accelerator that produces the
+
+1102
+00:40:49,119 --> 00:40:53,280
+radionuclides.
+
+1103
+00:40:51,280 --> 00:40:54,880
+In the middle is the biosynthesizer
+
+1104
+00:40:53,280 --> 00:40:56,800
+which is used to process the raw
+
+1105
+00:40:54,880 --> 00:41:00,000
+radioactive material into a usable
+
+1106
+00:40:56,800 --> 00:41:01,599
+radioracer such as FDG for PET imaging.
+
+1107
+00:41:00,000 --> 00:41:03,280
+On the left is the computer terminal
+
+1108
+00:41:01,599 --> 00:41:05,280
+where the entire operation is monitored
+
+1109
+00:41:03,280 --> 00:41:07,359
+and controlled.
+
+1110
+00:41:05,280 --> 00:41:09,680
+This layout highlights the workflow. The
+
+1111
+00:41:07,359 --> 00:41:11,599
+cyclron generates the radionuclide. The
+
+1112
+00:41:09,680 --> 00:41:13,599
+biosynthesizer prepares it into an
+
+1113
+00:41:11,599 --> 00:41:15,280
+injectable tracer. And the computer
+
+1114
+00:41:13,599 --> 00:41:17,680
+terminal ensures that everything runs
+
+1115
+00:41:15,280 --> 00:41:19,680
+safely and precisely.
+
+1116
+00:41:17,680 --> 00:41:21,839
+Together, these components allow us to
+
+1117
+00:41:19,680 --> 00:41:26,119
+produce short-lived traces on demand for
+
+1118
+00:41:21,839 --> 00:41:26,119
+clinical use in nuclear imaging.
+
+1119
+00:41:27,520 --> 00:41:30,800
+The fourth method of producing
+
+1120
+00:41:28,880 --> 00:41:32,960
+radionuclides and the one most relevant
+
+1121
+00:41:30,800 --> 00:41:35,599
+to clinical imaging today is the use of
+
+1122
+00:41:32,960 --> 00:41:37,200
+radionuclide generators.
+
+1123
+00:41:35,599 --> 00:41:40,480
+A very well-known example is the
+
+1124
+00:41:37,200 --> 00:41:42,640
+technium 99m generator. This system is
+
+1125
+00:41:40,480 --> 00:41:44,560
+sometimes nicknamed the moly cow because
+
+1126
+00:41:42,640 --> 00:41:47,680
+it is based on the parent isotope
+
+1127
+00:41:44,560 --> 00:41:50,560
+malibdinum 99 which naturally decays to
+
+1128
+00:41:47,680 --> 00:41:52,880
+technium 99m.
+
+1129
+00:41:50,560 --> 00:41:55,200
+Just as a cow can be milked repeatedly,
+
+1130
+00:41:52,880 --> 00:41:58,000
+the generator can be eluted or milked
+
+1131
+00:41:55,200 --> 00:41:59,839
+each day to obtain fresh technium 99m
+
+1132
+00:41:58,000 --> 00:42:02,720
+for imaging.
+
+1133
+00:41:59,839 --> 00:42:04,720
+Technium 99M is especially important
+
+1134
+00:42:02,720 --> 00:42:07,200
+because it is the most widely used
+
+1135
+00:42:04,720 --> 00:42:10,640
+radionuclide in single photon emission
+
+1136
+00:42:07,200 --> 00:42:12,240
+computed tomography or spec.
+
+1137
+00:42:10,640 --> 00:42:14,400
+It provides the right balance of
+
+1138
+00:42:12,240 --> 00:42:17,359
+half-life about 6 hours and gammaray
+
+1139
+00:42:14,400 --> 00:42:19,359
+energy about 140 kilo electron volts
+
+1140
+00:42:17,359 --> 00:42:21,040
+making it very effective for diagnostic
+
+1141
+00:42:19,359 --> 00:42:22,800
+imaging while keeping the patient dose
+
+1142
+00:42:21,040 --> 00:42:24,400
+reasonable.
+
+1143
+00:42:22,800 --> 00:42:26,319
+This approach is extremely cost
+
+1144
+00:42:24,400 --> 00:42:28,640
+effective compared to building a nuclear
+
+1145
+00:42:26,319 --> 00:42:30,319
+reactor or cyclron. That is why
+
+1146
+00:42:28,640 --> 00:42:32,240
+radionucline generators remain a
+
+1147
+00:42:30,319 --> 00:42:35,240
+backbone of nuclear medicine practice
+
+1148
+00:42:32,240 --> 00:42:35,240
+worldwide.
+
+1149
+00:42:36,880 --> 00:42:40,960
+Let us now look more carefully at how
+
+1150
+00:42:38,400 --> 00:42:42,800
+the technium generator actually works.
+
+1151
+00:42:40,960 --> 00:42:44,480
+This system operates through a two-step
+
+1152
+00:42:42,800 --> 00:42:47,200
+process.
+
+1153
+00:42:44,480 --> 00:42:48,800
+The parent isotope is malibdinum 99
+
+1154
+00:42:47,200 --> 00:42:51,119
+which is prepared and loaded into an
+
+1155
+00:42:48,800 --> 00:42:52,800
+aluminina column inside the generator.
+
+1156
+00:42:51,119 --> 00:42:55,440
+This column is shielded with lead for
+
+1157
+00:42:52,800 --> 00:42:57,839
+safety. Over time, malibdinum 99
+
+1158
+00:42:55,440 --> 00:43:00,000
+naturally decays to technium 99M, the
+
+1159
+00:42:57,839 --> 00:43:02,880
+daughter isotope.
+
+1160
+00:43:00,000 --> 00:43:05,119
+Technium 99M, however, binds only weakly
+
+1161
+00:43:02,880 --> 00:43:06,960
+to the aluminina column. That means if
+
+1162
+00:43:05,119 --> 00:43:09,920
+we pass a saline solution through the
+
+1163
+00:43:06,960 --> 00:43:12,480
+column, it will wash the technium 99M
+
+1164
+00:43:09,920 --> 00:43:14,960
+out while leaving the malibdinum 99
+
+1165
+00:43:12,480 --> 00:43:16,800
+behind. This daily washing process is
+
+1166
+00:43:14,960 --> 00:43:19,119
+often called milking the generator, just
+
+1167
+00:43:16,800 --> 00:43:21,760
+like milking a cow. Each solution
+
+1168
+00:43:19,119 --> 00:43:23,920
+provides a fresh supply of technium 99M
+
+1169
+00:43:21,760 --> 00:43:26,400
+for clinical use.
+
+1170
+00:43:23,920 --> 00:43:28,800
+Once obtained, the technium 99M is
+
+1171
+00:43:26,400 --> 00:43:30,720
+injected into the patient's body. Inside
+
+1172
+00:43:28,800 --> 00:43:33,359
+the body, it underos further decay to
+
+1173
+00:43:30,720 --> 00:43:35,119
+technium 99, a stable isotope.
+
+1174
+00:43:33,359 --> 00:43:37,040
+Importantly, this decay is accompanied
+
+1175
+00:43:35,119 --> 00:43:39,119
+by the emission of gamma photons, which
+
+1176
+00:43:37,040 --> 00:43:41,440
+can then be detected by imaging devices
+
+1177
+00:43:39,119 --> 00:43:43,200
+such as a gamma camera.
+
+1178
+00:43:41,440 --> 00:43:45,200
+From a modeling perspective, this is a
+
+1179
+00:43:43,200 --> 00:43:47,440
+two-step decay chain. The parent
+
+1180
+00:43:45,200 --> 00:43:50,800
+malibdinum 99 decays with its own
+
+1181
+00:43:47,440 --> 00:43:53,520
+half-life to produce technium 99m. Then
+
+1182
+00:43:50,800 --> 00:43:55,920
+technium 99m decays with a shorter
+
+1183
+00:43:53,520 --> 00:43:57,520
+half-life into stable technium 99
+
+1184
+00:43:55,920 --> 00:43:59,280
+releasing gamma radiation in the
+
+1185
+00:43:57,520 --> 00:44:00,800
+process.
+
+1186
+00:43:59,280 --> 00:44:02,800
+Each of these steps follows an
+
+1187
+00:44:00,800 --> 00:44:04,720
+exponential law and when combined they
+
+1188
+00:44:02,800 --> 00:44:06,640
+produce a dynamic interplay between
+
+1189
+00:44:04,720 --> 00:44:08,400
+parent daughter and final stable
+
+1190
+00:44:06,640 --> 00:44:10,400
+product.
+
+1191
+00:44:08,400 --> 00:44:12,640
+This two-step process is what makes the
+
+1192
+00:44:10,400 --> 00:44:14,079
+technium generator so effective. It
+
+1193
+00:44:12,640 --> 00:44:16,000
+provides a steady supply of a
+
+1194
+00:44:14,079 --> 00:44:21,160
+short-lived imaging isotope without
+
+1195
+00:44:16,000 --> 00:44:21,160
+requiring a reactor or cyclron on site.
+
+1196
+00:44:22,560 --> 00:44:26,880
+Now let us connect the generator process
+
+1197
+00:44:24,640 --> 00:44:28,480
+to mathematical modeling. To properly
+
+1198
+00:44:26,880 --> 00:44:31,359
+describe the production and decay of
+
+1199
+00:44:28,480 --> 00:44:33,760
+technium 99m, we need three first order
+
+1200
+00:44:31,359 --> 00:44:36,800
+differential equations. These equations
+
+1201
+00:44:33,760 --> 00:44:39,440
+track the parent isotope malibdinum 99,
+
+1202
+00:44:36,800 --> 00:44:41,040
+the daughter isotope technium 99m and
+
+1203
+00:44:39,440 --> 00:44:43,520
+finally the stable granddaughter
+
+1204
+00:44:41,040 --> 00:44:46,000
+technium 99.
+
+1205
+00:44:43,520 --> 00:44:48,079
+The first equation describes the parent.
+
+1206
+00:44:46,000 --> 00:44:50,560
+It decays exponentially at a constant
+
+1207
+00:44:48,079 --> 00:44:52,640
+rate. As we already studied, the second
+
+1208
+00:44:50,560 --> 00:44:54,800
+equation describes the daughter technium
+
+1209
+00:44:52,640 --> 00:44:56,319
+99m.
+
+1210
+00:44:54,800 --> 00:44:58,800
+This one is more interesting because it
+
+1211
+00:44:56,319 --> 00:45:00,640
+has two contributions. One positive term
+
+1212
+00:44:58,800 --> 00:45:02,160
+which comes from the decay of the parent
+
+1213
+00:45:00,640 --> 00:45:03,920
+feeding into the daughter and one
+
+1214
+00:45:02,160 --> 00:45:06,640
+negative term which accounts for the
+
+1215
+00:45:03,920 --> 00:45:08,000
+daughter decaying further. Finally, the
+
+1216
+00:45:06,640 --> 00:45:10,079
+third equation describes the
+
+1217
+00:45:08,000 --> 00:45:12,000
+granddaughter which only has a positive
+
+1218
+00:45:10,079 --> 00:45:13,839
+contribution coming from the decay of
+
+1219
+00:45:12,000 --> 00:45:16,079
+the daughter.
+
+1220
+00:45:13,839 --> 00:45:18,000
+If you look closely, you will see that
+
+1221
+00:45:16,079 --> 00:45:20,240
+the daughter equation is not purely
+
+1222
+00:45:18,000 --> 00:45:22,800
+exponential. It is influenced by both
+
+1223
+00:45:20,240 --> 00:45:24,640
+the parent and its own decay. To solve
+
+1224
+00:45:22,800 --> 00:45:26,319
+this type of system, we use standard
+
+1225
+00:45:24,640 --> 00:45:28,400
+methods for ordinary differential
+
+1226
+00:45:26,319 --> 00:45:30,319
+equations.
+
+1227
+00:45:28,400 --> 00:45:32,160
+Specifically, the daughter solution is
+
+1228
+00:45:30,319 --> 00:45:34,319
+expressed as the sum of two parts. A
+
+1229
+00:45:32,160 --> 00:45:36,400
+homogeneous solution which describes the
+
+1230
+00:45:34,319 --> 00:45:38,079
+natural decay and a particular solution
+
+1231
+00:45:36,400 --> 00:45:40,560
+which accounts for the contribution from
+
+1232
+00:45:38,079 --> 00:45:43,359
+the parent. These two components combine
+
+1233
+00:45:40,560 --> 00:45:45,200
+to give the real physical solution.
+
+1234
+00:45:43,359 --> 00:45:47,280
+The important point here is not to get
+
+1235
+00:45:45,200 --> 00:45:49,440
+lost in the algebra but to recognize the
+
+1236
+00:45:47,280 --> 00:45:51,440
+principle. Exponential decay chains can
+
+1237
+00:45:49,440 --> 00:45:53,359
+be modeled systematically and by solving
+
+1238
+00:45:51,440 --> 00:45:56,160
+these equations we can predict the time
+
+1239
+00:45:53,359 --> 00:45:58,880
+course of technium 99er production and
+
+1240
+00:45:56,160 --> 00:46:00,720
+availability in a generator.
+
+1241
+00:45:58,880 --> 00:46:02,319
+This is crucial in practice because it
+
+1242
+00:46:00,720 --> 00:46:04,160
+tells us how much tracer will be
+
+1243
+00:46:02,319 --> 00:46:08,599
+available at a given time and when to
+
+1244
+00:46:04,160 --> 00:46:08,599
+perform illusion for maximum yield.
+
+1245
+00:46:10,000 --> 00:46:14,960
+Now let's make sense of the daily yield
+
+1246
+00:46:11,920 --> 00:46:16,960
+from a radionuclide generator.
+
+1247
+00:46:14,960 --> 00:46:19,839
+On the left graph, the dashed line shows
+
+1248
+00:46:16,960 --> 00:46:22,560
+the parent isotope malibdum 99 which
+
+1249
+00:46:19,839 --> 00:46:25,680
+slowly decays over time. The solid line
+
+1250
+00:46:22,560 --> 00:46:27,520
+shows the daughter isotope technium 99m
+
+1251
+00:46:25,680 --> 00:46:29,520
+which gradually builds up as the parent
+
+1252
+00:46:27,520 --> 00:46:31,599
+decays. At first the daughter
+
+1253
+00:46:29,520 --> 00:46:35,760
+accumulates rapidly but eventually a
+
+1254
+00:46:31,599 --> 00:46:37,520
+balance is reached. Why?
+
+1255
+00:46:35,760 --> 00:46:39,280
+Because as more daughter atoms appear,
+
+1256
+00:46:37,520 --> 00:46:41,280
+they also begin to decay at a faster
+
+1257
+00:46:39,280 --> 00:46:43,119
+rate. At some point, the rate of
+
+1258
+00:46:41,280 --> 00:46:45,280
+production from the parent equals the
+
+1259
+00:46:43,119 --> 00:46:47,280
+rate of decay of the daughter. That
+
+1260
+00:46:45,280 --> 00:46:49,119
+balance defines the maximum activity of
+
+1261
+00:46:47,280 --> 00:46:50,880
+the daughter.
+
+1262
+00:46:49,119 --> 00:46:52,800
+This is the key point emphasized in the
+
+1263
+00:46:50,880 --> 00:46:54,560
+text. The effective decay rate of the
+
+1264
+00:46:52,800 --> 00:46:56,640
+daughter is governed not by its own
+
+1265
+00:46:54,560 --> 00:46:58,960
+half-life alone, but by the half-life of
+
+1266
+00:46:56,640 --> 00:47:00,800
+the parent. The system naturally seeks
+
+1267
+00:46:58,960 --> 00:47:03,760
+equilibrium. So, the ratio between
+
+1268
+00:47:00,800 --> 00:47:05,200
+parent and daughter becomes constant.
+
+1269
+00:47:03,760 --> 00:47:07,760
+On the right hand graph you see the
+
+1270
+00:47:05,200 --> 00:47:09,680
+practical outcome. Each spike represents
+
+1271
+00:47:07,760 --> 00:47:11,280
+an illusion where the daughter isotope
+
+1272
+00:47:09,680 --> 00:47:13,440
+is washed out of the generator for
+
+1273
+00:47:11,280 --> 00:47:15,440
+clinical use.
+
+1274
+00:47:13,440 --> 00:47:18,000
+Typically this is done once every 24
+
+1275
+00:47:15,440 --> 00:47:19,760
+hours. After each illusion the daughter
+
+1276
+00:47:18,000 --> 00:47:22,160
+begins to build up again from the parent
+
+1277
+00:47:19,760 --> 00:47:24,640
+forming another peak. Over the course of
+
+1278
+00:47:22,160 --> 00:47:26,480
+days however the overall yield decreases
+
+1279
+00:47:24,640 --> 00:47:28,480
+because the parent itself is decaying
+
+1280
+00:47:26,480 --> 00:47:30,400
+exponentially.
+
+1281
+00:47:28,480 --> 00:47:32,400
+So in practice you get this repeating
+
+1282
+00:47:30,400 --> 00:47:34,560
+cycle. Each day you harvest a certain
+
+1283
+00:47:32,400 --> 00:47:36,720
+amount of technium 99m, use it for
+
+1284
+00:47:34,560 --> 00:47:38,720
+imaging and then allow the generator to
+
+1285
+00:47:36,720 --> 00:47:40,400
+recharge.
+
+1286
+00:47:38,720 --> 00:47:42,319
+After about a week, the parent has
+
+1287
+00:47:40,400 --> 00:47:44,079
+decayed so much that the yield becomes
+
+1288
+00:47:42,319 --> 00:47:45,920
+too low and the generator must be
+
+1289
+00:47:44,079 --> 00:47:47,520
+replaced.
+
+1290
+00:47:45,920 --> 00:47:50,240
+This is the essence of milking a
+
+1291
+00:47:47,520 --> 00:47:52,160
+radionuclide generator. An elegant and
+
+1292
+00:47:50,240 --> 00:47:54,319
+cost-effective way to provide a steady
+
+1293
+00:47:52,160 --> 00:47:57,319
+supply of short-lived traces for nuclear
+
+1294
+00:47:54,319 --> 00:47:57,319
+medicine.
+
+1295
+00:47:58,800 --> 00:48:03,760
+Now let's look at how technium 99m is
+
+1296
+00:48:01,520 --> 00:48:04,960
+actually used in medicine. This table
+
+1297
+00:48:03,760 --> 00:48:06,800
+lists some of the most common
+
+1298
+00:48:04,960 --> 00:48:08,560
+radioarmaceuticals and their clinical
+
+1299
+00:48:06,800 --> 00:48:10,079
+applications. What you can see
+
+1300
+00:48:08,560 --> 00:48:12,400
+immediately is how versatile this
+
+1301
+00:48:10,079 --> 00:48:14,880
+isotope is. It can target almost every
+
+1302
+00:48:12,400 --> 00:48:16,720
+major system of the body.
+
+1303
+00:48:14,880 --> 00:48:18,720
+For example, technium labeled
+
+1304
+00:48:16,720 --> 00:48:20,800
+macroaggregated albamin is used for
+
+1305
+00:48:18,720 --> 00:48:22,880
+pulmonary perfusion studies helping us
+
+1306
+00:48:20,800 --> 00:48:25,040
+assess blood flow in the lungs.
+
+1307
+00:48:22,880 --> 00:48:26,800
+Difhosphinates labeled with technium are
+
+1308
+00:48:25,040 --> 00:48:28,240
+widely applied in skeletal imaging
+
+1309
+00:48:26,800 --> 00:48:30,319
+especially for detecting bone
+
+1310
+00:48:28,240 --> 00:48:31,680
+metastases.
+
+1311
+00:48:30,319 --> 00:48:34,160
+For the brain, compounds like
+
+1312
+00:48:31,680 --> 00:48:37,040
+glucaeptinate or hmpo can be used to
+
+1313
+00:48:34,160 --> 00:48:39,200
+image tumors or measure brain perusion.
+
+1314
+00:48:37,040 --> 00:48:41,200
+Sulfur colloid labeled with technium
+
+1315
+00:48:39,200 --> 00:48:44,160
+allows us to visualize the liver, spleen
+
+1316
+00:48:41,200 --> 00:48:46,400
+and even sentininal lymph nodes.
+
+1317
+00:48:44,160 --> 00:48:48,480
+DTPA is useful for renal function and
+
+1318
+00:48:46,400 --> 00:48:50,480
+pulmonary ventilation studies and
+
+1319
+00:48:48,480 --> 00:48:52,800
+compounds like cesme are used to
+
+1320
+00:48:50,480 --> 00:48:54,960
+evaluate mioardial profusion making
+
+1321
+00:48:52,800 --> 00:48:57,040
+technium imaging an essential tool in
+
+1322
+00:48:54,960 --> 00:48:59,680
+cardiology.
+
+1323
+00:48:57,040 --> 00:49:03,280
+So what do we learn from this?
+
+1324
+00:48:59,680 --> 00:49:05,359
+With just a single isotope technium 99m
+
+1325
+00:49:03,280 --> 00:49:07,359
+we can design radioarmaceuticals to
+
+1326
+00:49:05,359 --> 00:49:09,599
+study the lungs, bones, brain, liver,
+
+1327
+00:49:07,359 --> 00:49:12,240
+kidneys, heart and more. This is one of
+
+1328
+00:49:09,599 --> 00:49:14,960
+the main reasons technium 99m became the
+
+1329
+00:49:12,240 --> 00:49:16,640
+workhorse of nuclear medicine.
+
+1330
+00:49:14,960 --> 00:49:18,720
+With that we finish our discussion of
+
+1331
+00:49:16,640 --> 00:49:20,960
+tracer production. We have seen the
+
+1332
+00:49:18,720 --> 00:49:22,319
+different ways isotopes can be generated
+
+1333
+00:49:20,960 --> 00:49:24,559
+particularly the third and fourth
+
+1334
+00:49:22,319 --> 00:49:26,240
+methods. Cyclrons for producing positron
+
+1335
+00:49:24,559 --> 00:49:28,880
+emitters used in PET imaging and
+
+1336
+00:49:26,240 --> 00:49:31,280
+generators for producing technium 99m
+
+1337
+00:49:28,880 --> 00:49:32,800
+used in spec imaging.
+
+1338
+00:49:31,280 --> 00:49:35,119
+Now we move into the last part of
+
+1339
+00:49:32,800 --> 00:49:37,599
+today's lecture data acquisition. Here
+
+1340
+00:49:35,119 --> 00:49:39,920
+we'll focus on two main approaches. The
+
+1341
+00:49:37,599 --> 00:49:42,160
+first is the gamma camera which detects
+
+1342
+00:49:39,920 --> 00:49:44,400
+single gamma ray photons and is central
+
+1343
+00:49:42,160 --> 00:49:46,880
+to spec or single photon emission
+
+1344
+00:49:44,400 --> 00:49:48,960
+computed tomography.
+
+1345
+00:49:46,880 --> 00:49:50,960
+The second is coincidence detection
+
+1346
+00:49:48,960 --> 00:49:53,200
+which captures pairs of gamma photons
+
+1347
+00:49:50,960 --> 00:49:55,440
+emitted simultaneously and this is the
+
+1348
+00:49:53,200 --> 00:49:57,280
+basis of pet or posetron emission
+
+1349
+00:49:55,440 --> 00:49:59,119
+tomography.
+
+1350
+00:49:57,280 --> 00:50:01,200
+As we go through this, keep in mind the
+
+1351
+00:49:59,119 --> 00:50:03,200
+difference. SPECT relies on detecting
+
+1352
+00:50:01,200 --> 00:50:05,119
+individual gamma photons while PET
+
+1353
+00:50:03,200 --> 00:50:07,359
+relies on detecting photon pairs from
+
+1354
+00:50:05,119 --> 00:50:09,200
+posetron annihilation. And this
+
+1355
+00:50:07,359 --> 00:50:13,400
+difference has profound implications for
+
+1356
+00:50:09,200 --> 00:50:13,400
+scanner design and image quality.
+
+1357
+00:50:14,800 --> 00:50:18,640
+So that concludes the third part where
+
+1358
+00:50:16,640 --> 00:50:20,640
+we discussed radioactivity and tracer
+
+1359
+00:50:18,640 --> 00:50:22,960
+production. We learned about the four
+
+1360
+00:50:20,640 --> 00:50:24,640
+methods of producing radionuclides with
+
+1361
+00:50:22,960 --> 00:50:27,200
+special focus on the third and fourth
+
+1362
+00:50:24,640 --> 00:50:29,359
+methods. Cyclrons for posetron emission
+
+1363
+00:50:27,200 --> 00:50:31,680
+tomography and radionuclide generators
+
+1364
+00:50:29,359 --> 00:50:33,200
+for single photon emission tomography.
+
+1365
+00:50:31,680 --> 00:50:35,920
+Together these methods provide the
+
+1366
+00:50:33,200 --> 00:50:37,760
+backbone of nuclear medicine.
+
+1367
+00:50:35,920 --> 00:50:40,319
+Now let's move on to the final part of
+
+1368
+00:50:37,760 --> 00:50:41,920
+today's lecture. Data acquisition. This
+
+1369
+00:50:40,319 --> 00:50:44,160
+is where the signals generated by
+
+1370
+00:50:41,920 --> 00:50:47,040
+radioactive decay are actually detected
+
+1371
+00:50:44,160 --> 00:50:48,800
+and transformed into images.
+
+1372
+00:50:47,040 --> 00:50:50,880
+There are two main approaches we need to
+
+1373
+00:50:48,800 --> 00:50:52,800
+understand. The first is the gamma
+
+1374
+00:50:50,880 --> 00:50:55,359
+camera which is used in single photon
+
+1375
+00:50:52,800 --> 00:50:57,119
+emission computed tomography or spec.
+
+1376
+00:50:55,359 --> 00:51:00,240
+The gamma camera captures individual
+
+1377
+00:50:57,119 --> 00:51:02,160
+gammaray photons one by one.
+
+1378
+00:51:00,240 --> 00:51:03,920
+The second approach is coincidence
+
+1379
+00:51:02,160 --> 00:51:06,640
+detection which is the principle behind
+
+1380
+00:51:03,920 --> 00:51:08,640
+posetron emission tomography or PET. In
+
+1381
+00:51:06,640 --> 00:51:10,720
+this case, we don't just detect single
+
+1382
+00:51:08,640 --> 00:51:13,119
+photons. Instead, we detect pairs of
+
+1383
+00:51:10,720 --> 00:51:16,079
+photons that are emitted simultaneously
+
+1384
+00:51:13,119 --> 00:51:18,160
+traveling in opposite directions.
+
+1385
+00:51:16,079 --> 00:51:20,079
+Why does this happen? Because when a
+
+1386
+00:51:18,160 --> 00:51:21,839
+posetron encounters an electron, the two
+
+1387
+00:51:20,079 --> 00:51:23,680
+annihilate, producing a pair of gamma
+
+1388
+00:51:21,839 --> 00:51:25,680
+photons.
+
+1389
+00:51:23,680 --> 00:51:28,160
+Detecting these pairs in coincidence
+
+1390
+00:51:25,680 --> 00:51:29,920
+allows PET to provide highly accurate
+
+1391
+00:51:28,160 --> 00:51:33,119
+information about the location of the
+
+1392
+00:51:29,920 --> 00:51:35,920
+annihilation event inside the body.
+
+1393
+00:51:33,119 --> 00:51:38,400
+So in summary, SPECT relies on detecting
+
+1394
+00:51:35,920 --> 00:51:40,640
+single photons with a gamma camera while
+
+1395
+00:51:38,400 --> 00:51:42,960
+PET relies on detecting photon pairs
+
+1396
+00:51:40,640 --> 00:51:44,880
+through coincidence detection. This
+
+1397
+00:51:42,960 --> 00:51:46,559
+distinction has a profound effect on how
+
+1398
+00:51:44,880 --> 00:51:50,520
+scanners are designed and on the quality
+
+1399
+00:51:46,559 --> 00:51:50,520
+of the images they produce.
+
+1400
+00:51:52,160 --> 00:51:55,520
+Now let's look more carefully at the
+
+1401
+00:51:53,680 --> 00:51:57,280
+principle of the gamma camera which is
+
+1402
+00:51:55,520 --> 00:51:59,680
+one of the most important devices in
+
+1403
+00:51:57,280 --> 00:52:01,680
+nuclear medicine imaging. I've placed a
+
+1404
+00:51:59,680 --> 00:52:04,079
+red diamond here to highlight that this
+
+1405
+00:52:01,680 --> 00:52:05,839
+concept is essential.
+
+1406
+00:52:04,079 --> 00:52:08,720
+The very first step in the system is the
+
+1407
+00:52:05,839 --> 00:52:10,160
+columator. Without columnation, gamma
+
+1408
+00:52:08,720 --> 00:52:11,839
+photons would be arriving at the
+
+1409
+00:52:10,160 --> 00:52:13,680
+detector from all directions and we
+
+1410
+00:52:11,839 --> 00:52:15,920
+wouldn't know where they came from. The
+
+1411
+00:52:13,680 --> 00:52:17,680
+columator, usually made of heavy metal,
+
+1412
+00:52:15,920 --> 00:52:19,359
+such as lead, only allows photons
+
+1413
+00:52:17,680 --> 00:52:21,280
+traveling along certain directions to
+
+1414
+00:52:19,359 --> 00:52:23,040
+pass through.
+
+1415
+00:52:21,280 --> 00:52:25,760
+In this way, we can establish the line
+
+1416
+00:52:23,040 --> 00:52:27,280
+of response. Only photons traveling more
+
+1417
+00:52:25,760 --> 00:52:28,559
+or less straight along the openings are
+
+1418
+00:52:27,280 --> 00:52:31,040
+detected, while those coming from
+
+1419
+00:52:28,559 --> 00:52:32,800
+oblique angles are blocked. This is very
+
+1420
+00:52:31,040 --> 00:52:34,480
+similar in spirit to X-ray imaging where
+
+1421
+00:52:32,800 --> 00:52:37,839
+each measurement corresponds to a line
+
+1422
+00:52:34,480 --> 00:52:39,520
+integral along a particular direction.
+
+1423
+00:52:37,839 --> 00:52:41,920
+The choice of columator is closely
+
+1424
+00:52:39,520 --> 00:52:43,839
+linked to photon energy. If the gamma
+
+1425
+00:52:41,920 --> 00:52:45,760
+rays have too low in energy, they will
+
+1426
+00:52:43,839 --> 00:52:48,000
+be absorbed within the body and never
+
+1427
+00:52:45,760 --> 00:52:50,319
+reach the detector.
+
+1428
+00:52:48,000 --> 00:52:52,400
+If the energy is too high, the columator
+
+1429
+00:52:50,319 --> 00:52:55,280
+cannot stop the oblique photon. So the
+
+1430
+00:52:52,400 --> 00:52:57,119
+image contrast is lost. That is why for
+
+1431
+00:52:55,280 --> 00:53:00,240
+clinical nuclear medicine we typically
+
+1432
+00:52:57,119 --> 00:53:02,319
+work in the range of about 100 to 200 KV
+
+1433
+00:53:00,240 --> 00:53:05,200
+a compromise between tissue penetration
+
+1434
+00:53:02,319 --> 00:53:07,440
+and columator effectiveness.
+
+1435
+00:53:05,200 --> 00:53:09,839
+Once a photon passes the columator it
+
+1436
+00:53:07,440 --> 00:53:12,160
+strikes the scintillation crystal. This
+
+1437
+00:53:09,839 --> 00:53:14,160
+crystal usually sodium iodide doped with
+
+1438
+00:53:12,160 --> 00:53:17,040
+thallium emits a flash of visible light
+
+1439
+00:53:14,160 --> 00:53:18,880
+when it absorbs a gamma photon.
+
+1440
+00:53:17,040 --> 00:53:21,280
+That flash is extremely faint so it is
+
+1441
+00:53:18,880 --> 00:53:23,280
+coupled to photo multiplier tubes. The
+
+1442
+00:53:21,280 --> 00:53:26,319
+photo multipliers amplify the light
+
+1443
+00:53:23,280 --> 00:53:28,079
+signal into an electrical pulse.
+
+1444
+00:53:26,319 --> 00:53:30,000
+Then through a network, sometimes called
+
+1445
+00:53:28,079 --> 00:53:31,920
+the anger logic or anger position
+
+1446
+00:53:30,000 --> 00:53:34,079
+circuit, the system calculates the
+
+1447
+00:53:31,920 --> 00:53:35,680
+location where the photon entered the
+
+1448
+00:53:34,079 --> 00:53:37,599
+crystal.
+
+1449
+00:53:35,680 --> 00:53:39,760
+A pulse height analyzer checks the
+
+1450
+00:53:37,599 --> 00:53:42,079
+photon's energy, ensuring we only accept
+
+1451
+00:53:39,760 --> 00:53:43,839
+photons in the desired energy window.
+
+1452
+00:53:42,079 --> 00:53:45,680
+Finally, the computer records the
+
+1453
+00:53:43,839 --> 00:53:47,440
+position and energy, gradually building
+
+1454
+00:53:45,680 --> 00:53:49,599
+up an image of tracer distribution
+
+1455
+00:53:47,440 --> 00:53:52,240
+inside the body.
+
+1456
+00:53:49,599 --> 00:53:53,920
+So the key sequences columator to select
+
+1457
+00:53:52,240 --> 00:53:55,440
+direction, scintillation crystal to
+
+1458
+00:53:53,920 --> 00:53:57,359
+convert gamma to light, photo
+
+1459
+00:53:55,440 --> 00:53:59,119
+multipliers to amplify the signal,
+
+1460
+00:53:57,359 --> 00:54:00,800
+electronics to analyze energy and
+
+1461
+00:53:59,119 --> 00:54:04,440
+position, and finally the computer to
+
+1462
+00:54:00,800 --> 00:54:04,440
+assemble the image.
+
+1463
+00:54:05,839 --> 00:54:09,440
+Now let's focus specifically on the
+
+1464
+00:54:07,680 --> 00:54:11,200
+columator, which is really the heart of
+
+1465
+00:54:09,440 --> 00:54:13,119
+how a gamma camera defines image
+
+1466
+00:54:11,200 --> 00:54:14,800
+geometry.
+
+1467
+00:54:13,119 --> 00:54:16,480
+What you see here on the left is the top
+
+1468
+00:54:14,800 --> 00:54:18,640
+view of a typical parallel hole
+
+1469
+00:54:16,480 --> 00:54:20,240
+columator. The structure is usually made
+
+1470
+00:54:18,640 --> 00:54:22,640
+of lead with many closely packed
+
+1471
+00:54:20,240 --> 00:54:24,640
+hexagonal holes.
+
+1472
+00:54:22,640 --> 00:54:26,640
+Each hole acts like a channel allowing
+
+1473
+00:54:24,640 --> 00:54:27,920
+only gamma photons traveling nearly
+
+1474
+00:54:26,640 --> 00:54:30,319
+straight through to reach the
+
+1475
+00:54:27,920 --> 00:54:32,000
+scintillation crystal behind it. On the
+
+1476
+00:54:30,319 --> 00:54:34,240
+right, you see a side view. The holes
+
+1477
+00:54:32,000 --> 00:54:36,720
+have length L, diameter D, and are
+
+1478
+00:54:34,240 --> 00:54:38,480
+separated by scepter of thickness T.
+
+1479
+00:54:36,720 --> 00:54:41,520
+These geometric parameters determine
+
+1480
+00:54:38,480 --> 00:54:43,839
+both resolution and sensitivity.
+
+1481
+00:54:41,520 --> 00:54:45,760
+Here's the trade-off. If the holes are
+
+1482
+00:54:43,839 --> 00:54:47,520
+made very long and narrow, then photons
+
+1483
+00:54:45,760 --> 00:54:49,760
+coming in at even a small angle will be
+
+1484
+00:54:47,520 --> 00:54:51,520
+blocked. That means you achieve high
+
+1485
+00:54:49,760 --> 00:54:55,440
+spatial resolution, you know much more
+
+1486
+00:54:51,520 --> 00:54:57,200
+precisely where the photon came from.
+
+1487
+00:54:55,440 --> 00:54:59,280
+But the price you pay is that most
+
+1488
+00:54:57,200 --> 00:55:01,200
+photons are rejected. So the overall
+
+1489
+00:54:59,280 --> 00:55:03,359
+sensitivity is low and the image is
+
+1490
+00:55:01,200 --> 00:55:05,359
+noisy. On the other hand, if the holes
+
+1491
+00:55:03,359 --> 00:55:07,280
+are short and wide, more photons get
+
+1492
+00:55:05,359 --> 00:55:10,079
+through, improving sensitivity, but at
+
+1493
+00:55:07,280 --> 00:55:12,559
+the cost of blurred resolution.
+
+1494
+00:55:10,079 --> 00:55:14,319
+Another key factor is photon energy. For
+
+1495
+00:55:12,559 --> 00:55:16,640
+nuclear medicine, we typically want
+
+1496
+00:55:14,319 --> 00:55:20,400
+gammaray energies between about 100 and
+
+1497
+00:55:16,640 --> 00:55:21,920
+200 KV. Below 100 kV, photons are
+
+1498
+00:55:20,400 --> 00:55:25,680
+strongly absorbed in the body before
+
+1499
+00:55:21,920 --> 00:55:28,160
+they even reach the detector.
+
+1500
+00:55:25,680 --> 00:55:29,839
+Above 200 KV, the photons are so
+
+1501
+00:55:28,160 --> 00:55:31,920
+energetic that they can penetrate
+
+1502
+00:55:29,839 --> 00:55:33,760
+through the column receptor, creating
+
+1503
+00:55:31,920 --> 00:55:37,040
+background counts and reducing image
+
+1504
+00:55:33,760 --> 00:55:39,920
+contrast. That's why Technium 99M with
+
+1505
+00:55:37,040 --> 00:55:42,640
+its 140 KV gamma emission is nearly
+
+1506
+00:55:39,920 --> 00:55:44,319
+ideal for routine imaging.
+
+1507
+00:55:42,640 --> 00:55:46,400
+And remember columators are not always
+
+1508
+00:55:44,319 --> 00:55:48,400
+parallel hole. There are many other
+
+1509
+00:55:46,400 --> 00:55:50,720
+designs. Pinhole columators for
+
+1510
+00:55:48,400 --> 00:55:52,720
+magnification, fan beam columators for
+
+1511
+00:55:50,720 --> 00:55:54,559
+brain and heart imaging and converging
+
+1512
+00:55:52,720 --> 00:55:56,880
+or diverging types depending on the
+
+1513
+00:55:54,559 --> 00:55:58,720
+clinical application.
+
+1514
+00:55:56,880 --> 00:56:00,880
+Each design balances resolution and
+
+1515
+00:55:58,720 --> 00:56:03,119
+sensitivity in a different way. So the
+
+1516
+00:56:00,880 --> 00:56:05,119
+columator is not just a block of lead.
+
+1517
+00:56:03,119 --> 00:56:07,359
+It is a carefully engineered component
+
+1518
+00:56:05,119 --> 00:56:10,359
+that defines image quality in nuclear
+
+1519
+00:56:07,359 --> 00:56:10,359
+medicine.
+
+1520
+00:56:11,920 --> 00:56:15,839
+Now let's take a closer look at the
+
+1521
+00:56:13,599 --> 00:56:19,040
+different columator designs and how each
+
+1522
+00:56:15,839 --> 00:56:20,480
+one affects imaging performance.
+
+1523
+00:56:19,040 --> 00:56:22,400
+Starting with the parallel hole
+
+1524
+00:56:20,480 --> 00:56:24,720
+columator shown at the top left. This is
+
+1525
+00:56:22,400 --> 00:56:26,480
+the most commonly used design. In this
+
+1526
+00:56:24,720 --> 00:56:29,119
+case, the object and the image appear at
+
+1527
+00:56:26,480 --> 00:56:30,799
+the same scale. It's simple, robust, and
+
+1528
+00:56:29,119 --> 00:56:32,880
+widely applied in routine nuclear
+
+1529
+00:56:30,799 --> 00:56:34,319
+medicine imaging.
+
+1530
+00:56:32,880 --> 00:56:37,040
+Next, on the top right, we have the
+
+1531
+00:56:34,319 --> 00:56:39,119
+diverging columator. Here, the holes fan
+
+1532
+00:56:37,040 --> 00:56:41,359
+outward. The effect is that the image is
+
+1533
+00:56:39,119 --> 00:56:42,880
+smaller than the object. This type is
+
+1534
+00:56:41,359 --> 00:56:44,720
+useful when you need to fit a large
+
+1535
+00:56:42,880 --> 00:56:47,920
+object like the entire body onto a
+
+1536
+00:56:44,720 --> 00:56:50,240
+smaller detector field of view. At the
+
+1537
+00:56:47,920 --> 00:56:52,240
+bottom left is the converging columator.
+
+1538
+00:56:50,240 --> 00:56:54,960
+As the name suggests, the holes angle
+
+1539
+00:56:52,240 --> 00:56:56,400
+inward, producing a magnified image.
+
+1540
+00:56:54,960 --> 00:56:57,920
+This is helpful when you want to examine
+
+1541
+00:56:56,400 --> 00:56:59,920
+a small organ like the heart or the
+
+1542
+00:56:57,920 --> 00:57:03,520
+thyroid in greater detail while still
+
+1543
+00:56:59,920 --> 00:57:05,119
+using the same detector.
+
+1544
+00:57:03,520 --> 00:57:07,520
+Finally, at the bottom right, we see the
+
+1545
+00:57:05,119 --> 00:57:09,359
+pinhole columator. This works like a
+
+1546
+00:57:07,520 --> 00:57:11,680
+camera obscurer, creating a highly
+
+1547
+00:57:09,359 --> 00:57:13,680
+magnified but inverted image. Because
+
+1548
+00:57:11,680 --> 00:57:15,359
+the aperture is very small, spatial
+
+1549
+00:57:13,680 --> 00:57:17,520
+resolution can be excellent. But the
+
+1550
+00:57:15,359 --> 00:57:20,079
+downside is that sensitivity is poor.
+
+1551
+00:57:17,520 --> 00:57:22,319
+Most photons are blocked.
+
+1552
+00:57:20,079 --> 00:57:24,079
+The key idea is always a trade-off. If
+
+1553
+00:57:22,319 --> 00:57:26,000
+you make the holes or aperture smaller,
+
+1554
+00:57:24,079 --> 00:57:27,680
+you gain higher spatial resolution, but
+
+1555
+00:57:26,000 --> 00:57:29,760
+you lose sensitivity and the images
+
+1556
+00:57:27,680 --> 00:57:31,440
+become noisier.
+
+1557
+00:57:29,760 --> 00:57:33,119
+If you make them larger, you collect
+
+1558
+00:57:31,440 --> 00:57:36,000
+more photons, but the resolution
+
+1559
+00:57:33,119 --> 00:57:37,440
+decreases. Designing columnators is
+
+1560
+00:57:36,000 --> 00:57:39,760
+therefore about finding the right
+
+1561
+00:57:37,440 --> 00:57:41,520
+balance between resolution, sensitivity,
+
+1562
+00:57:39,760 --> 00:57:44,680
+and the clinical question you are trying
+
+1563
+00:57:41,520 --> 00:57:44,680
+to answer.
+
+1564
+00:57:46,160 --> 00:57:50,400
+Now, let's take a look at something a
+
+1565
+00:57:47,599 --> 00:57:52,160
+bit more advanced and exploratory.
+
+1566
+00:57:50,400 --> 00:57:54,480
+We know that gamma rays are a form of
+
+1567
+00:57:52,160 --> 00:57:56,319
+high energy electromagnetic radiation
+
+1568
+00:57:54,480 --> 00:57:58,480
+very similar to X-rays, although they
+
+1569
+00:57:56,319 --> 00:57:59,920
+are produced differently. In X-ray
+
+1570
+00:57:58,480 --> 00:58:01,839
+science, researchers have developed
+
+1571
+00:57:59,920 --> 00:58:03,760
+special devices called polycapillary
+
+1572
+00:58:01,839 --> 00:58:05,839
+lenses.
+
+1573
+00:58:03,760 --> 00:58:08,240
+These lenses use bundles of tiny
+
+1574
+00:58:05,839 --> 00:58:10,240
+capillaries to guide and refocus X-rays,
+
+1575
+00:58:08,240 --> 00:58:12,720
+effectively bending them toward a focal
+
+1576
+00:58:10,240 --> 00:58:14,640
+point. The result is much higher spatial
+
+1577
+00:58:12,720 --> 00:58:16,880
+resolution since the rays that scatter
+
+1578
+00:58:14,640 --> 00:58:19,119
+off path are redirected and concentrated
+
+1579
+00:58:16,880 --> 00:58:20,720
+at the detector.
+
+1580
+00:58:19,119 --> 00:58:22,960
+You can see the schematic here. The
+
+1581
+00:58:20,720 --> 00:58:24,960
+X-rays pass through the polycapillary
+
+1582
+00:58:22,960 --> 00:58:26,799
+optics and instead of traveling in
+
+1583
+00:58:24,960 --> 00:58:29,280
+random directions, they are collected
+
+1584
+00:58:26,799 --> 00:58:31,280
+and focused. This technique has already
+
+1585
+00:58:29,280 --> 00:58:32,960
+been applied in con focal micro-ray
+
+1586
+00:58:31,280 --> 00:58:34,799
+fluoresence which allows elemental
+
+1587
+00:58:32,960 --> 00:58:36,880
+analysis within a very small probe
+
+1588
+00:58:34,799 --> 00:58:38,640
+volume even beneath the surface of a
+
+1589
+00:58:36,880 --> 00:58:40,319
+material.
+
+1590
+00:58:38,640 --> 00:58:42,319
+Now the intriguing idea is whether
+
+1591
+00:58:40,319 --> 00:58:44,960
+similar optics could be applied to gamma
+
+1592
+00:58:42,319 --> 00:58:46,960
+rays in nuclear medicine.
+
+1593
+00:58:44,960 --> 00:58:48,559
+If we could refocus gamma rays in this
+
+1594
+00:58:46,960 --> 00:58:50,720
+way we might overcome some of the
+
+1595
+00:58:48,559 --> 00:58:52,640
+limitations of mechanical columators
+
+1596
+00:58:50,720 --> 00:58:55,359
+which block most photons and reduce
+
+1597
+00:58:52,640 --> 00:58:56,880
+sensitivity. Polycapillary focusing
+
+1598
+00:58:55,359 --> 00:58:59,119
+would potentially increase both
+
+1599
+00:58:56,880 --> 00:59:01,440
+sensitivity and resolution, opening up
+
+1600
+00:58:59,119 --> 00:59:03,359
+exciting possibilities for future gamma
+
+1601
+00:59:01,440 --> 00:59:04,880
+ray imaging.
+
+1602
+00:59:03,359 --> 00:59:06,559
+That said, this is not part of the
+
+1603
+00:59:04,880 --> 00:59:09,200
+standard clinical toolbox. It's more of
+
+1604
+00:59:06,559 --> 00:59:11,040
+a research direction.
+
+1605
+00:59:09,200 --> 00:59:13,200
+I included it here to show you that
+
+1606
+00:59:11,040 --> 00:59:15,280
+beyond traditional cumation, there are
+
+1607
+00:59:13,200 --> 00:59:17,520
+innovative approaches being explored to
+
+1608
+00:59:15,280 --> 00:59:20,520
+push the boundaries of nuclear imaging
+
+1609
+00:59:17,520 --> 00:59:20,520
+technology.
+
+1610
+00:59:22,240 --> 00:59:25,680
+When I visited companies or nuclear
+
+1611
+00:59:24,079 --> 00:59:27,839
+detector vendors, they often gave me
+
+1612
+00:59:25,680 --> 00:59:30,079
+these as small souvenirs, clear blocks
+
+1613
+00:59:27,839 --> 00:59:31,920
+that look just like glass. But these
+
+1614
+00:59:30,079 --> 00:59:33,680
+aren't ordinary glass. They are
+
+1615
+00:59:31,920 --> 00:59:36,880
+specially manufactured centilation
+
+1616
+00:59:33,680 --> 00:59:38,559
+crystals, the heart of gamma cameras.
+
+1617
+00:59:36,880 --> 00:59:40,960
+What makes them remarkable is that when
+
+1618
+00:59:38,559 --> 00:59:43,040
+an invisible gammaray photon strikes the
+
+1619
+00:59:40,960 --> 00:59:45,040
+crystal, it produces a tiny flash of
+
+1620
+00:59:43,040 --> 00:59:47,119
+visible light. In other words, they
+
+1621
+00:59:45,040 --> 00:59:49,040
+convert high energy radiation which our
+
+1622
+00:59:47,119 --> 00:59:51,359
+eyes cannot see into visible photons
+
+1623
+00:59:49,040 --> 00:59:53,520
+that we can detect.
+
+1624
+00:59:51,359 --> 00:59:55,520
+If you continuously bombard the crystal
+
+1625
+00:59:53,520 --> 00:59:57,599
+with gamma rays, you'll see flashes of
+
+1626
+00:59:55,520 --> 00:59:59,119
+light, very faint to the naked eye, but
+
+1627
+00:59:57,599 --> 01:00:01,040
+easily measurable with sensitive
+
+1628
+00:59:59,119 --> 01:00:03,200
+detectors.
+
+1629
+01:00:01,040 --> 01:00:04,960
+This conversion process is the critical
+
+1630
+01:00:03,200 --> 01:00:07,280
+first step in turning radioactive
+
+1631
+01:00:04,960 --> 01:00:09,200
+emissions inside the body into signals
+
+1632
+01:00:07,280 --> 01:00:12,200
+that we can ultimately form into an
+
+1633
+01:00:09,200 --> 01:00:12,200
+image.
+
+1634
+01:00:13,599 --> 01:00:16,720
+As I mentioned earlier, the flux of
+
+1635
+01:00:15,119 --> 01:00:19,040
+gamma rays coming out of the body is
+
+1636
+01:00:16,720 --> 01:00:20,960
+very low. That means the signals are
+
+1637
+01:00:19,040 --> 01:00:23,119
+extremely weak.
+
+1638
+01:00:20,960 --> 01:00:24,720
+To make them useful, we need to amplify
+
+1639
+01:00:23,119 --> 01:00:28,160
+them. And that's where the photo
+
+1640
+01:00:24,720 --> 01:00:30,400
+multiplier tube or PMT comes in.
+
+1641
+01:00:28,160 --> 01:00:32,079
+Here's how it works. When a gamma ray
+
+1642
+01:00:30,400 --> 01:00:34,480
+enters the scintillation crystal, it
+
+1643
+01:00:32,079 --> 01:00:36,400
+produces a small flash of visible light.
+
+1644
+01:00:34,480 --> 01:00:39,200
+That light then strikes the photocathode
+
+1645
+01:00:36,400 --> 01:00:40,799
+inside the PMT. The photocathode is a
+
+1646
+01:00:39,200 --> 01:00:43,839
+special surface that converts each
+
+1647
+01:00:40,799 --> 01:00:45,599
+photon of light into an electron.
+
+1648
+01:00:43,839 --> 01:00:47,760
+Now, a single electron is still a very
+
+1649
+01:00:45,599 --> 01:00:50,319
+small signal. So, the PMT uses a series
+
+1650
+01:00:47,760 --> 01:00:52,480
+of plates called dodes. Each time an
+
+1651
+01:00:50,319 --> 01:00:55,040
+electron strikes a dode, it knocks loose
+
+1652
+01:00:52,480 --> 01:00:56,799
+multiple new electrons.
+
+1653
+01:00:55,040 --> 01:00:58,799
+By the time this process is repeated
+
+1654
+01:00:56,799 --> 01:01:02,079
+across several dodes, the signal has
+
+1655
+01:00:58,799 --> 01:01:04,319
+been multiplied millions of times.
+
+1656
+01:01:02,079 --> 01:01:06,319
+At the final stage, what started as just
+
+1657
+01:01:04,319 --> 01:01:08,240
+one or two photons of light has been
+
+1658
+01:01:06,319 --> 01:01:10,880
+amplified into a strong stream of
+
+1659
+01:01:08,240 --> 01:01:12,880
+electrons, a measurable current. This
+
+1660
+01:01:10,880 --> 01:01:14,720
+current is then sent out of the PMT as
+
+1661
+01:01:12,880 --> 01:01:17,839
+an analog signal which can later be
+
+1662
+01:01:14,720 --> 01:01:19,920
+digitized for image reconstruction.
+
+1663
+01:01:17,839 --> 01:01:21,680
+So the PMT performs two essential
+
+1664
+01:01:19,920 --> 01:01:23,760
+functions. It converts light into
+
+1665
+01:01:21,680 --> 01:01:25,920
+electrons and then it magnifies that
+
+1666
+01:01:23,760 --> 01:01:28,160
+tiny signal step by step until it's
+
+1667
+01:01:25,920 --> 01:01:30,400
+strong enough to record. Without this
+
+1668
+01:01:28,160 --> 01:01:32,319
+amplification process, the gamma camera
+
+1669
+01:01:30,400 --> 01:01:36,359
+simply wouldn't be able to detect enough
+
+1670
+01:01:32,319 --> 01:01:36,359
+information to form an image.
+
+1671
+01:01:37,760 --> 01:01:41,760
+Now that we know how to detect a signal,
+
+1672
+01:01:39,920 --> 01:01:44,160
+the next challenge is to determine where
+
+1673
+01:01:41,760 --> 01:01:45,839
+that signal came from.
+
+1674
+01:01:44,160 --> 01:01:48,079
+Detection is handled by the photo
+
+1675
+01:01:45,839 --> 01:01:49,760
+multiplier tubes, but localization,
+
+1676
+01:01:48,079 --> 01:01:51,680
+figuring out the exact position of the
+
+1677
+01:01:49,760 --> 01:01:53,359
+gamma ray interaction, is accomplished
+
+1678
+01:01:51,680 --> 01:01:55,200
+by what's called the anger network,
+
+1679
+01:01:53,359 --> 01:01:57,359
+named after Hal Anger, who invented the
+
+1680
+01:01:55,200 --> 01:01:59,680
+gamma camera.
+
+1681
+01:01:57,359 --> 01:02:01,520
+Here's the idea. The photo multiplier
+
+1682
+01:01:59,680 --> 01:02:04,079
+tubes cannot be made infinitely small,
+
+1683
+01:02:01,520 --> 01:02:06,160
+so they are spaced apart.
+
+1684
+01:02:04,079 --> 01:02:08,079
+This means a single scintillation event,
+
+1685
+01:02:06,160 --> 01:02:09,920
+a flash of light in the crystal, will
+
+1686
+01:02:08,079 --> 01:02:11,440
+usually be seen by multiple tubes at
+
+1687
+01:02:09,920 --> 01:02:13,920
+once, with some receiving stronger
+
+1688
+01:02:11,440 --> 01:02:16,000
+signals and others weaker.
+
+1689
+01:02:13,920 --> 01:02:17,760
+The anger network uses a carefully
+
+1690
+01:02:16,000 --> 01:02:19,359
+designed arrangement of resistors, as
+
+1691
+01:02:17,760 --> 01:02:21,920
+you see here, to spread out those
+
+1692
+01:02:19,359 --> 01:02:23,760
+signals. By analyzing the weighted
+
+1693
+01:02:21,920 --> 01:02:25,599
+distribution of the outputs, the system
+
+1694
+01:02:23,760 --> 01:02:27,440
+can calculate the event's most likely
+
+1695
+01:02:25,599 --> 01:02:29,280
+position.
+
+1696
+01:02:27,440 --> 01:02:31,680
+In other words, the network acts like a
+
+1697
+01:02:29,280 --> 01:02:33,599
+mathematical averaging system. If one
+
+1698
+01:02:31,680 --> 01:02:37,040
+region receives stronger signals, the
+
+1699
+01:02:33,599 --> 01:02:38,880
+center of activity is estimated there.
+
+1700
+01:02:37,040 --> 01:02:40,880
+So although an individual photo
+
+1701
+01:02:38,880 --> 01:02:42,640
+multiplier tube only gives you partial
+
+1702
+01:02:40,880 --> 01:02:44,559
+information, the combination of many
+
+1703
+01:02:42,640 --> 01:02:46,240
+tubes together processed through the
+
+1704
+01:02:44,559 --> 01:02:48,079
+angle logic gives a precise
+
+1705
+01:02:46,240 --> 01:02:49,920
+two-dimensional location of the gamma
+
+1706
+01:02:48,079 --> 01:02:52,319
+ray event.
+
+1707
+01:02:49,920 --> 01:02:54,400
+This way, every gammaray photon detected
+
+1708
+01:02:52,319 --> 01:02:55,839
+is not only counted, but also assigned a
+
+1709
+01:02:54,400 --> 01:02:57,440
+position in the image, allowing us to
+
+1710
+01:02:55,839 --> 01:03:01,799
+build up a full spatial map of
+
+1711
+01:02:57,440 --> 01:03:01,799
+radioactivity inside the body.
+
+1712
+01:03:03,200 --> 01:03:07,440
+Now that we understand how detection and
+
+1713
+01:03:05,040 --> 01:03:09,839
+localization work, let's see how they
+
+1714
+01:03:07,440 --> 01:03:13,280
+come together in a full imaging system.
+
+1715
+01:03:09,839 --> 01:03:15,359
+The result is called planer centigraphy.
+
+1716
+01:03:13,280 --> 01:03:17,280
+Essentially, this is a two-dimensional
+
+1717
+01:03:15,359 --> 01:03:19,280
+projection image much like a standard
+
+1718
+01:03:17,280 --> 01:03:21,520
+X-ray radioraph, but instead of using
+
+1719
+01:03:19,280 --> 01:03:23,440
+transmitted X-rays, we are mapping the
+
+1720
+01:03:21,520 --> 01:03:25,599
+distribution of gamma rays emitted from
+
+1721
+01:03:23,440 --> 01:03:27,920
+inside the body.
+
+1722
+01:03:25,599 --> 01:03:29,839
+Here's the sequence of events. First,
+
+1723
+01:03:27,920 --> 01:03:31,599
+the gamma rays from the patient pass
+
+1724
+01:03:29,839 --> 01:03:33,440
+through the columator which selects only
+
+1725
+01:03:31,599 --> 01:03:36,319
+those photons traveling in defined
+
+1726
+01:03:33,440 --> 01:03:38,079
+directions.
+
+1727
+01:03:36,319 --> 01:03:39,839
+Next, the gamma photons interact with
+
+1728
+01:03:38,079 --> 01:03:42,160
+the scintillation crystal producing
+
+1729
+01:03:39,839 --> 01:03:43,760
+flashes of visible light. Those light
+
+1730
+01:03:42,160 --> 01:03:45,359
+signals are then converted into
+
+1731
+01:03:43,760 --> 01:03:47,440
+electrical pulses by the photo
+
+1732
+01:03:45,359 --> 01:03:49,039
+multiplier tubes.
+
+1733
+01:03:47,440 --> 01:03:51,200
+The outputs are processed through the
+
+1734
+01:03:49,039 --> 01:03:53,280
+position logic circuit which localizes
+
+1735
+01:03:51,200 --> 01:03:55,520
+each detected event in the X and Y
+
+1736
+01:03:53,280 --> 01:03:57,520
+directions. At the same time, the pulse
+
+1737
+01:03:55,520 --> 01:03:59,599
+height analyzer examines the energy of
+
+1738
+01:03:57,520 --> 01:04:01,680
+each pulse.
+
+1739
+01:03:59,599 --> 01:04:04,079
+This step is important because scattered
+
+1740
+01:04:01,680 --> 01:04:05,520
+photons inside the body lose energy and
+
+1741
+01:04:04,079 --> 01:04:07,680
+we don't want to include them. They
+
+1742
+01:04:05,520 --> 01:04:09,440
+would blur the image. By setting an
+
+1743
+01:04:07,680 --> 01:04:13,599
+energy threshold, the system can reject
+
+1744
+01:04:09,440 --> 01:04:15,359
+those lower energy scattered signals.
+
+1745
+01:04:13,599 --> 01:04:17,039
+Finally, the gating circuit can
+
+1746
+01:04:15,359 --> 01:04:19,200
+synchronize signal acquisition with
+
+1747
+01:04:17,039 --> 01:04:21,599
+physiological motion such as the beating
+
+1748
+01:04:19,200 --> 01:04:23,119
+heart or breathing cycle. That way, the
+
+1749
+01:04:21,599 --> 01:04:26,559
+images can be captured at consistent
+
+1750
+01:04:23,119 --> 01:04:28,720
+phases, reducing motion artifacts.
+
+1751
+01:04:26,559 --> 01:04:31,039
+All of these components work together so
+
+1752
+01:04:28,720 --> 01:04:33,440
+that each detected gamma photon is
+
+1753
+01:04:31,039 --> 01:04:35,280
+accurately positioned and validated,
+
+1754
+01:04:33,440 --> 01:04:37,359
+building up a sharp two-dimensional
+
+1755
+01:04:35,280 --> 01:04:40,920
+image of radio tracer distribution
+
+1756
+01:04:37,359 --> 01:04:40,920
+inside the patient.
+
+1757
+01:04:42,319 --> 01:04:45,760
+Now, let's take a closer look at the
+
+1758
+01:04:43,920 --> 01:04:48,960
+role of the pulse height analyzer by
+
+1759
+01:04:45,760 --> 01:04:50,720
+examining the gammaray energy spectrum.
+
+1760
+01:04:48,960 --> 01:04:53,520
+On the left you see the spectrum of
+
+1761
+01:04:50,720 --> 01:04:55,680
+technium 99m when the camera is exposed
+
+1762
+01:04:53,520 --> 01:04:57,680
+without a patient in front of it. The
+
+1763
+01:04:55,680 --> 01:04:59,440
+dominant feature here is a sharp photo
+
+1764
+01:04:57,680 --> 01:05:01,520
+peak centered around the expected
+
+1765
+01:04:59,440 --> 01:05:03,359
+emission energy.
+
+1766
+01:05:01,520 --> 01:05:05,520
+There are also smaller features such as
+
+1767
+01:05:03,359 --> 01:05:08,000
+the iodine escape peak and signals from
+
+1768
+01:05:05,520 --> 01:05:09,520
+compton scatter or lead x-rays. These
+
+1769
+01:05:08,000 --> 01:05:11,680
+arise from interactions within the
+
+1770
+01:05:09,520 --> 01:05:13,440
+detector itself.
+
+1771
+01:05:11,680 --> 01:05:15,119
+But once you place a patient between the
+
+1772
+01:05:13,440 --> 01:05:17,680
+source and the detector, the spectrum
+
+1773
+01:05:15,119 --> 01:05:19,440
+changes as shown on the right. Now the
+
+1774
+01:05:17,680 --> 01:05:24,319
+clean photo peak is broadened and the
+
+1775
+01:05:19,440 --> 01:05:26,160
+lower energy region is filled in. Why?
+
+1776
+01:05:24,319 --> 01:05:28,319
+Because inside the patient photons
+
+1777
+01:05:26,160 --> 01:05:30,319
+undergo Compton scattering. Each
+
+1778
+01:05:28,319 --> 01:05:32,640
+scattering event deflects the photon and
+
+1779
+01:05:30,319 --> 01:05:34,480
+reduces its energy. The larger the
+
+1780
+01:05:32,640 --> 01:05:36,799
+scattering angle, the lower the photon's
+
+1781
+01:05:34,480 --> 01:05:38,480
+energy when it finally emerges. As a
+
+1782
+01:05:36,799 --> 01:05:40,480
+result, the detector sees not only the
+
+1783
+01:05:38,480 --> 01:05:43,760
+original full energy photons, but also a
+
+1784
+01:05:40,480 --> 01:05:45,200
+cloud of degraded lower energy ones.
+
+1785
+01:05:43,760 --> 01:05:47,200
+This is a problem because those
+
+1786
+01:05:45,200 --> 01:05:49,039
+scattered photons don't carry accurate
+
+1787
+01:05:47,200 --> 01:05:51,440
+positional information. They blur the
+
+1788
+01:05:49,039 --> 01:05:53,760
+image. The solution is to use the pulse
+
+1789
+01:05:51,440 --> 01:05:55,599
+height analyzer. Since the amplitude of
+
+1790
+01:05:53,760 --> 01:05:57,440
+the electronic signal from the photo
+
+1791
+01:05:55,599 --> 01:05:59,760
+multiplier tube is proportional to the
+
+1792
+01:05:57,440 --> 01:06:01,520
+photon's energy, we can set acceptance
+
+1793
+01:05:59,760 --> 01:06:03,599
+windows.
+
+1794
+01:06:01,520 --> 01:06:05,599
+Only signals that fall within a narrow
+
+1795
+01:06:03,599 --> 01:06:08,880
+energy range around the true photo peak,
+
+1796
+01:06:05,599 --> 01:06:11,839
+for example, around 140 keV for technium
+
+1797
+01:06:08,880 --> 01:06:13,440
+99M are accepted. Signals that are too
+
+1798
+01:06:11,839 --> 01:06:16,079
+low, likely coming from scattered
+
+1799
+01:06:13,440 --> 01:06:17,839
+photons, are rejected.
+
+1800
+01:06:16,079 --> 01:06:19,680
+This energy discrimination is what gives
+
+1801
+01:06:17,839 --> 01:06:21,920
+nuclear imaging its clarity, much like
+
+1802
+01:06:19,680 --> 01:06:23,520
+how anti-catter grids improve X-ray
+
+1803
+01:06:21,920 --> 01:06:25,520
+imaging.
+
+1804
+01:06:23,520 --> 01:06:27,119
+By gating and filtering the signals in
+
+1805
+01:06:25,520 --> 01:06:28,799
+this way, we make sure that the image is
+
+1806
+01:06:27,119 --> 01:06:30,960
+formed primarily from primary
+
+1807
+01:06:28,799 --> 01:06:34,839
+unscattered photons, preserving both
+
+1808
+01:06:30,960 --> 01:06:34,839
+resolution and contrast.
+
+1809
+01:06:36,400 --> 01:06:40,000
+The point spread function is a useful
+
+1810
+01:06:38,160 --> 01:06:42,559
+way to judge how well a gamma camera can
+
+1811
+01:06:40,000 --> 01:06:44,319
+resolve detail. The narrower the point
+
+1812
+01:06:42,559 --> 01:06:46,319
+spread function, the better the spatial
+
+1813
+01:06:44,319 --> 01:06:48,079
+resolution. Now, what actually
+
+1814
+01:06:46,319 --> 01:06:49,839
+determines resolution in nuclear
+
+1815
+01:06:48,079 --> 01:06:51,359
+imaging?
+
+1816
+01:06:49,839 --> 01:06:53,200
+It turns out there are several factors
+
+1817
+01:06:51,359 --> 01:06:55,119
+at play, each introducing its own kind
+
+1818
+01:06:53,200 --> 01:06:56,799
+of blurring.
+
+1819
+01:06:55,119 --> 01:06:58,960
+First, there's the intrinsic resolution
+
+1820
+01:06:56,799 --> 01:07:00,720
+of the gamma camera itself. This is
+
+1821
+01:06:58,960 --> 01:07:02,319
+limited by the scintillation crystal and
+
+1822
+01:07:00,720 --> 01:07:04,400
+the electronics that localize the
+
+1823
+01:07:02,319 --> 01:07:06,319
+signal. A thicker crystal spreads the
+
+1824
+01:07:04,400 --> 01:07:10,640
+light more broadly and that uncertainty
+
+1825
+01:07:06,319 --> 01:07:12,720
+shows up as blur in the final image.
+
+1826
+01:07:10,640 --> 01:07:15,119
+Second, the geometry of the columator
+
+1827
+01:07:12,720 --> 01:07:17,440
+plays a major role. Whether you use a
+
+1828
+01:07:15,119 --> 01:07:19,680
+parallel hole, converging, diverging, or
+
+1829
+01:07:17,440 --> 01:07:21,680
+pinhole design, the length and diameter
+
+1830
+01:07:19,680 --> 01:07:24,799
+of the channels directly control how
+
+1831
+01:07:21,680 --> 01:07:26,559
+sharp or blurry the image will be.
+
+1832
+01:07:24,799 --> 01:07:28,480
+Longer, narrower channels improve
+
+1833
+01:07:26,559 --> 01:07:30,480
+resolution but reduce sensitivity
+
+1834
+01:07:28,480 --> 01:07:32,079
+because many photons are blocked.
+
+1835
+01:07:30,480 --> 01:07:33,920
+Shorter, wider channels improve
+
+1836
+01:07:32,079 --> 01:07:35,599
+sensitivity, but at the cost of blurrier
+
+1837
+01:07:33,920 --> 01:07:37,280
+images.
+
+1838
+01:07:35,599 --> 01:07:38,559
+Third, Compton scattering inside the
+
+1839
+01:07:37,280 --> 01:07:41,119
+patient adds another layer of
+
+1840
+01:07:38,559 --> 01:07:42,960
+uncertainty. The deeper the radioactive
+
+1841
+01:07:41,119 --> 01:07:44,960
+source lies within the body, the more
+
+1842
+01:07:42,960 --> 01:07:47,440
+gamma photons are likely to scatter
+
+1843
+01:07:44,960 --> 01:07:49,359
+before they escape.
+
+1844
+01:07:47,440 --> 01:07:51,200
+Scattered photons are misleading. They
+
+1845
+01:07:49,359 --> 01:07:54,160
+point in the wrong direction, lowering
+
+1846
+01:07:51,200 --> 01:07:55,920
+contrast and degrading resolution.
+
+1847
+01:07:54,160 --> 01:07:57,920
+When we put all these effects together,
+
+1848
+01:07:55,920 --> 01:08:00,319
+the total system resolution can be
+
+1849
+01:07:57,920 --> 01:08:01,839
+expressed mathematically. Just as when
+
+1850
+01:08:00,319 --> 01:08:03,760
+you combine independent sources of
+
+1851
+01:08:01,839 --> 01:08:05,440
+random error, you add their variances
+
+1852
+01:08:03,760 --> 01:08:07,520
+here too. The variances of the three
+
+1853
+01:08:05,440 --> 01:08:09,280
+components intrinsic resolution,
+
+1854
+01:08:07,520 --> 01:08:11,440
+columator resolution, and compton
+
+1855
+01:08:09,280 --> 01:08:13,039
+scatter add together. The overall
+
+1856
+01:08:11,440 --> 01:08:16,000
+resolution is then the square root of
+
+1857
+01:08:13,039 --> 01:08:18,319
+that sum. In other words,
+
+1858
+01:08:16,000 --> 01:08:20,159
+system resolution equals the square root
+
+1859
+01:08:18,319 --> 01:08:22,640
+of the sum of the squares of the three
+
+1860
+01:08:20,159 --> 01:08:24,719
+main contributions.
+
+1861
+01:08:22,640 --> 01:08:26,880
+This is the fundamental idea. Every
+
+1862
+01:08:24,719 --> 01:08:28,640
+component of the imaging chain blurs the
+
+1863
+01:08:26,880 --> 01:08:30,400
+signal a little bit and together they
+
+1864
+01:08:28,640 --> 01:08:35,480
+define the ultimate sharpness or
+
+1865
+01:08:30,400 --> 01:08:35,480
+fuzziness of the nuclear medicine image.
+
+1866
+01:08:36,000 --> 01:08:40,080
+When we think about the point spread
+
+1867
+01:08:37,600 --> 01:08:42,239
+function or PSF, we are asking how does
+
+1868
+01:08:40,080 --> 01:08:45,960
+the imaging system represent a single
+
+1869
+01:08:42,239 --> 01:08:45,960
+point source of radiation.
+
+1870
+01:08:46,000 --> 01:08:49,600
+Ideally, if you had a perfect gamma
+
+1871
+01:08:47,759 --> 01:08:51,600
+camera, one point of activity in the
+
+1872
+01:08:49,600 --> 01:08:53,600
+patient would appear as one sharp point
+
+1873
+01:08:51,600 --> 01:08:55,279
+in the image.
+
+1874
+01:08:53,600 --> 01:08:57,040
+In practice, because of the intrinsic
+
+1875
+01:08:55,279 --> 01:08:58,719
+resolution of the scintillation crystal,
+
+1876
+01:08:57,040 --> 01:09:00,719
+the photo multiplier tubes and the
+
+1877
+01:08:58,719 --> 01:09:02,560
+electronics, the point source becomes
+
+1878
+01:09:00,719 --> 01:09:04,960
+blurred into a Gaussian shaped
+
+1879
+01:09:02,560 --> 01:09:06,480
+distribution. That Gaussian curve is
+
+1880
+01:09:04,960 --> 01:09:09,120
+what you would expect from the use of
+
+1881
+01:09:06,480 --> 01:09:10,799
+the camera and columator.
+
+1882
+01:09:09,120 --> 01:09:12,799
+However, once you place the patient
+
+1883
+01:09:10,799 --> 01:09:15,440
+between the tracer and the detector,
+
+1884
+01:09:12,799 --> 01:09:17,359
+Compton scattering adds a complication.
+
+1885
+01:09:15,440 --> 01:09:19,120
+Many photons scatter inside the body
+
+1886
+01:09:17,359 --> 01:09:20,640
+before reaching the detector, and those
+
+1887
+01:09:19,120 --> 01:09:22,640
+scattered photons broaden the
+
+1888
+01:09:20,640 --> 01:09:24,560
+distribution.
+
+1889
+01:09:22,640 --> 01:09:26,640
+Instead of a neat Gaussian, the PSF
+
+1890
+01:09:24,560 --> 01:09:28,480
+develops a long tail. Photons detected
+
+1891
+01:09:26,640 --> 01:09:30,239
+in places far from the true source
+
+1892
+01:09:28,480 --> 01:09:32,159
+location.
+
+1893
+01:09:30,239 --> 01:09:34,319
+This long tail is undesirable because it
+
+1894
+01:09:32,159 --> 01:09:36,400
+reduces spatial resolution and creates
+
+1895
+01:09:34,319 --> 01:09:38,400
+image blur. That is why we use
+
+1896
+01:09:36,400 --> 01:09:40,319
+techniques like pulse height analysis to
+
+1897
+01:09:38,400 --> 01:09:42,960
+reject scattered photons keeping only
+
+1898
+01:09:40,319 --> 01:09:44,560
+the primary gamma rays.
+
+1899
+01:09:42,960 --> 01:09:46,960
+So the main lesson here is the
+
+1900
+01:09:44,560 --> 01:09:49,040
+Gaussian-like PSF represents the best
+
+1901
+01:09:46,960 --> 01:09:51,279
+case resolution of the gamma camera, but
+
+1902
+01:09:49,040 --> 01:09:53,120
+Compton scattering stretches the PSF,
+
+1903
+01:09:51,279 --> 01:09:55,199
+adding tails and degrading image
+
+1904
+01:09:53,120 --> 01:09:57,120
+quality. Understanding and controlling
+
+1905
+01:09:55,199 --> 01:10:00,920
+this spread is fundamental to improving
+
+1906
+01:09:57,120 --> 01:10:00,920
+nuclear medicine imaging.
+
+1907
+01:10:02,400 --> 01:10:05,679
+Now let's look at another important
+
+1908
+01:10:03,920 --> 01:10:07,440
+issue in nuclear imaging systems, dead
+
+1909
+01:10:05,679 --> 01:10:09,280
+bedtime.
+
+1910
+01:10:07,440 --> 01:10:10,880
+When a gamma photon interacts with the
+
+1911
+01:10:09,280 --> 01:10:13,600
+scintillation crystal, it produces a
+
+1912
+01:10:10,880 --> 01:10:15,360
+pulse of light. That pulse has a finite
+
+1913
+01:10:13,600 --> 01:10:17,199
+width. It takes some recovery time
+
+1914
+01:10:15,360 --> 01:10:19,760
+before the system is ready to register
+
+1915
+01:10:17,199 --> 01:10:21,840
+the next event. If two or more photons
+
+1916
+01:10:19,760 --> 01:10:24,640
+arrive too close together in time, the
+
+1917
+01:10:21,840 --> 01:10:26,560
+system cannot distinguish them.
+
+1918
+01:10:24,640 --> 01:10:28,719
+Instead of recording two events, it may
+
+1919
+01:10:26,560 --> 01:10:30,880
+only record one or in some cases none at
+
+1920
+01:10:28,719 --> 01:10:32,960
+all. This limitation is called dead
+
+1921
+01:10:30,880 --> 01:10:34,719
+time. It reflects the fact that every
+
+1922
+01:10:32,960 --> 01:10:37,360
+detector and its electronics need a
+
+1923
+01:10:34,719 --> 01:10:39,440
+short period to reset after each event.
+
+1924
+01:10:37,360 --> 01:10:41,360
+If the incoming rate of photons is too
+
+1925
+01:10:39,440 --> 01:10:44,320
+high, the detector simply cannot keep
+
+1926
+01:10:41,360 --> 01:10:46,480
+up. Think of it like catching candies
+
+1927
+01:10:44,320 --> 01:10:48,159
+falling from the ceiling. If they fall
+
+1928
+01:10:46,480 --> 01:10:50,320
+slowly, you can catch and count them one
+
+1929
+01:10:48,159 --> 01:10:51,760
+by one. But if they start raining down
+
+1930
+01:10:50,320 --> 01:10:54,000
+too quickly, you can't separate them
+
+1931
+01:10:51,760 --> 01:10:58,000
+anymore. You miss some. That's exactly
+
+1932
+01:10:54,000 --> 01:10:59,679
+what happens here with gamma photons.
+
+1933
+01:10:58,000 --> 01:11:01,760
+Mathematically, we can describe this
+
+1934
+01:10:59,679 --> 01:11:03,920
+with the true count rate denoted by
+
+1935
+01:11:01,760 --> 01:11:06,159
+capital N, which is the number of gamma
+
+1936
+01:11:03,920 --> 01:11:07,520
+interactions that really happen. Then
+
+1937
+01:11:06,159 --> 01:11:09,280
+there's the observed count rate,
+
+1938
+01:11:07,520 --> 01:11:11,040
+lowercase N, which is what the detector
+
+1939
+01:11:09,280 --> 01:11:14,159
+actually records. Because of dead
+
+1940
+01:11:11,040 --> 01:11:16,400
+bedtime losses, N is always less than N.
+
+1941
+01:11:14,159 --> 01:11:18,480
+The system dead time, usually written as
+
+1942
+01:11:16,400 --> 01:11:20,400
+the Greek letter toao, can be expressed
+
+1943
+01:11:18,480 --> 01:11:25,760
+as the difference between the reciprocal
+
+1944
+01:11:20,400 --> 01:11:27,600
+of these two rates. TOAO= 1 / NUS 1 /n.
+
+1945
+01:11:25,760 --> 01:11:29,280
+This formula tells us how much recovery
+
+1946
+01:11:27,600 --> 01:11:31,360
+time the system effectively needs
+
+1947
+01:11:29,280 --> 01:11:33,040
+between two detected events. In
+
+1948
+01:11:31,360 --> 01:11:34,800
+practical gamma cameras, dead bedtime
+
+1949
+01:11:33,040 --> 01:11:36,640
+losses are usually not a big problem
+
+1950
+01:11:34,800 --> 01:11:38,640
+unless the injected activity is very
+
+1951
+01:11:36,640 --> 01:11:42,280
+high, but it's an important limitation
+
+1952
+01:11:38,640 --> 01:11:42,280
+to be aware of.
+
+1953
+01:11:43,679 --> 01:11:46,719
+Now, let's connect what we have learned
+
+1954
+01:11:45,360 --> 01:11:49,440
+to one of the most important
+
+1955
+01:11:46,719 --> 01:11:51,679
+applications of nuclear imaging, FDG PET
+
+1956
+01:11:49,440 --> 01:11:53,520
+for cancer imaging.
+
+1957
+01:11:51,679 --> 01:11:56,640
+PET stands for posatron emission
+
+1958
+01:11:53,520 --> 01:11:58,560
+tomography. Unlike CT or MRI which give
+
+1959
+01:11:56,640 --> 01:12:00,800
+us structural information, PET provides
+
+1960
+01:11:58,560 --> 01:12:02,960
+functional imaging. It shows us how
+
+1961
+01:12:00,800 --> 01:12:06,640
+tissues are working metabolically inside
+
+1962
+01:12:02,960 --> 01:12:08,800
+the body. The key is the tracer we use
+
+1963
+01:12:06,640 --> 01:12:12,080
+for PET. The most widely used tracer is
+
+1964
+01:12:08,800 --> 01:12:13,920
+fluoroxy glucose or FDG. This is a
+
+1965
+01:12:12,080 --> 01:12:16,400
+glucose analog that is produced in a
+
+1966
+01:12:13,920 --> 01:12:18,239
+cyclron. Because FDG behaves like
+
+1967
+01:12:16,400 --> 01:12:20,560
+glucose, it is taken up by tissues
+
+1968
+01:12:18,239 --> 01:12:22,320
+according to their metabolic activity.
+
+1969
+01:12:20,560 --> 01:12:24,400
+Cancer cells are often much more
+
+1970
+01:12:22,320 --> 01:12:27,280
+metabolically active than normal cells.
+
+1971
+01:12:24,400 --> 01:12:29,760
+So they absorb more FDG.
+
+1972
+01:12:27,280 --> 01:12:31,600
+When we image the concentration of FDG,
+
+1973
+01:12:29,760 --> 01:12:34,400
+we are essentially mapping the regions
+
+1974
+01:12:31,600 --> 01:12:36,880
+of high glucose metabolism. This makes
+
+1975
+01:12:34,400 --> 01:12:39,600
+PET a very powerful tool for detecting
+
+1976
+01:12:36,880 --> 01:12:42,159
+tumors and also for evaluating whether
+
+1977
+01:12:39,600 --> 01:12:45,120
+cancer has metastasized that is spread
+
+1978
+01:12:42,159 --> 01:12:47,280
+to other sites in the body.
+
+1979
+01:12:45,120 --> 01:12:50,320
+The physics behind PET is tied to beta
+
+1980
+01:12:47,280 --> 01:12:52,640
+plus decay. FDG emits a positron which
+
+1981
+01:12:50,320 --> 01:12:54,800
+quickly encounters a nearby electron.
+
+1982
+01:12:52,640 --> 01:12:56,640
+When the posetron and electron meet,
+
+1983
+01:12:54,800 --> 01:12:58,960
+they annihilate producing a pair of
+
+1984
+01:12:56,640 --> 01:13:01,440
+gamma photons moving in nearly opposite
+
+1985
+01:12:58,960 --> 01:13:03,199
+directions. These paired photons are
+
+1986
+01:13:01,440 --> 01:13:04,880
+detected simultaneously. That's the
+
+1987
+01:13:03,199 --> 01:13:06,640
+coincidence detection we discussed
+
+1988
+01:13:04,880 --> 01:13:08,960
+earlier.
+
+1989
+01:13:06,640 --> 01:13:10,880
+This entire principle posetron emission,
+
+1990
+01:13:08,960 --> 01:13:13,280
+annihilation, and detection of the
+
+1991
+01:13:10,880 --> 01:13:15,840
+paired photons forms the physical and
+
+1992
+01:13:13,280 --> 01:13:19,360
+chemical foundation of PET imaging.
+
+1993
+01:13:15,840 --> 01:13:22,000
+Today, FDG PET accounts for about 90% of
+
+1994
+01:13:19,360 --> 01:13:24,000
+all PET scans, highlighting just how
+
+1995
+01:13:22,000 --> 01:13:28,280
+central this method is in cancer
+
+1996
+01:13:24,000 --> 01:13:28,280
+diagnosis and treatment planning.
+
+1997
+01:13:29,840 --> 01:13:33,120
+Now, let's take a closer look at how
+
+1998
+01:13:31,440 --> 01:13:34,719
+coincidence detection works in PET
+
+1999
+01:13:33,120 --> 01:13:36,719
+imaging.
+
+2000
+01:13:34,719 --> 01:13:38,640
+When a posetron emitted from the tracer
+
+2001
+01:13:36,719 --> 01:13:41,199
+annihilates with an electron, the
+
+2002
+01:13:38,640 --> 01:13:44,400
+process produces two gamma photons, each
+
+2003
+01:13:41,199 --> 01:13:46,640
+with an energy of 51 kilo electron volts
+
+2004
+01:13:44,400 --> 01:13:48,560
+traveling in nearly opposite directions.
+
+2005
+01:13:46,640 --> 01:13:50,640
+The key is that both of these photons
+
+2006
+01:13:48,560 --> 01:13:54,000
+need to be detected at the same time to
+
+2007
+01:13:50,640 --> 01:13:55,920
+confirm a true event.
+
+2008
+01:13:54,000 --> 01:13:58,800
+Here's how the process works step by
+
+2009
+01:13:55,920 --> 01:14:01,440
+step. Each gamma photon first enters a
+
+2010
+01:13:58,800 --> 01:14:03,520
+detector crystal. Inside the crystal,
+
+2011
+01:14:01,440 --> 01:14:06,159
+the photon interacts and produces
+
+2012
+01:14:03,520 --> 01:14:08,880
+visible light which is then amplified by
+
+2013
+01:14:06,159 --> 01:14:11,280
+a photo multiplier tube, giving us an
+
+2014
+01:14:08,880 --> 01:14:13,199
+electronic pulse.
+
+2015
+01:14:11,280 --> 01:14:14,960
+But not every pulse comes from the
+
+2016
+01:14:13,199 --> 01:14:17,040
+correct kind of photon. Scattered
+
+2017
+01:14:14,960 --> 01:14:19,199
+photons, for example, may have lower
+
+2018
+01:14:17,040 --> 01:14:21,679
+energy. This is where the pulse height
+
+2019
+01:14:19,199 --> 01:14:23,920
+analyzer comes in. It checks the energy
+
+2020
+01:14:21,679 --> 01:14:25,760
+of each detected photon and only accepts
+
+2021
+01:14:23,920 --> 01:14:29,280
+those within a narrow energy window
+
+2022
+01:14:25,760 --> 01:14:31,440
+around 511 kV. This helps us reject
+
+2023
+01:14:29,280 --> 01:14:33,280
+scattered signals.
+
+2024
+01:14:31,440 --> 01:14:35,760
+Now imagine we have two detectors on
+
+2025
+01:14:33,280 --> 01:14:37,840
+opposite sides. If one detector
+
+2026
+01:14:35,760 --> 01:14:39,920
+registers a photon and the other also
+
+2027
+01:14:37,840 --> 01:14:41,920
+registers a photon of the correct energy
+
+2028
+01:14:39,920 --> 01:14:44,400
+and the two signals arrive within a very
+
+2029
+01:14:41,920 --> 01:14:46,000
+short time window just a few nanconds
+
+2030
+01:14:44,400 --> 01:14:48,320
+apart then the coincidence circuit
+
+2031
+01:14:46,000 --> 01:14:49,679
+recognizes them as a pair. This means
+
+2032
+01:14:48,320 --> 01:14:51,679
+they must have come from the same
+
+2033
+01:14:49,679 --> 01:14:55,640
+annihilation event along the line
+
+2034
+01:14:51,679 --> 01:14:55,640
+connecting the two detectors.
+
+2035
+01:14:55,840 --> 01:15:00,800
+So only when both detectors see valid
+
+2036
+01:14:58,159 --> 01:15:02,800
+511 KV photons at nearly the same
+
+2037
+01:15:00,800 --> 01:15:04,560
+instant do we count it as a true PET
+
+2038
+01:15:02,800 --> 01:15:06,800
+event.
+
+2039
+01:15:04,560 --> 01:15:08,880
+This is what allows PET imaging to trace
+
+2040
+01:15:06,800 --> 01:15:10,640
+the exact line of response inside the
+
+2041
+01:15:08,880 --> 01:15:12,400
+body leading to the powerful
+
+2042
+01:15:10,640 --> 01:15:14,320
+three-dimensional reconstructions that
+
+2043
+01:15:12,400 --> 01:15:17,719
+make PET such a valuable tool in
+
+2044
+01:15:14,320 --> 01:15:17,719
+clinical imaging.
+
+2045
+01:15:19,199 --> 01:15:23,679
+Now here's another way to visualize
+
+2046
+01:15:21,040 --> 01:15:25,520
+coincidence detection. In this diagram,
+
+2047
+01:15:23,679 --> 01:15:27,679
+we see detectors arranged around the
+
+2048
+01:15:25,520 --> 01:15:30,960
+patient with a posetron annihilation
+
+2049
+01:15:27,679 --> 01:15:32,960
+event taking place inside the body.
+
+2050
+01:15:30,960 --> 01:15:36,320
+From this event, two gamma photons are
+
+2051
+01:15:32,960 --> 01:15:38,239
+emitted in nearly opposite directions.
+
+2052
+01:15:36,320 --> 01:15:40,560
+Each detector continuously records
+
+2053
+01:15:38,239 --> 01:15:42,159
+signals as a function of time. Most of
+
+2054
+01:15:40,560 --> 01:15:44,880
+the time, what you see are background
+
+2055
+01:15:42,159 --> 01:15:47,040
+signals or small pulses. But every now
+
+2056
+01:15:44,880 --> 01:15:49,440
+and then, a true gamma photon from an
+
+2057
+01:15:47,040 --> 01:15:52,480
+annihilation event strikes the detector,
+
+2058
+01:15:49,440 --> 01:15:54,159
+and this produces a sharp pulse.
+
+2059
+01:15:52,480 --> 01:15:56,800
+The key idea is that we are not looking
+
+2060
+01:15:54,159 --> 01:15:58,400
+at a single detector alone. Instead, we
+
+2061
+01:15:56,800 --> 01:16:01,520
+compare signals across pairs of
+
+2062
+01:15:58,400 --> 01:16:03,199
+detectors. If detector Y and detector J
+
+2063
+01:16:01,520 --> 01:16:04,800
+located opposite one another both
+
+2064
+01:16:03,199 --> 01:16:06,640
+register a pulse at nearly the same
+
+2065
+01:16:04,800 --> 01:16:09,679
+instant and if both pulses have the
+
+2066
+01:16:06,640 --> 01:16:11,440
+correct energy around 511 KV, then we
+
+2067
+01:16:09,679 --> 01:16:13,360
+know with high confidence that a true
+
+2068
+01:16:11,440 --> 01:16:17,360
+annihilation event occurred along the
+
+2069
+01:16:13,360 --> 01:16:19,280
+line connecting those two detectors.
+
+2070
+01:16:17,360 --> 01:16:21,920
+So, the system continuously searches for
+
+2071
+01:16:19,280 --> 01:16:23,840
+these paired pulses. The electronics are
+
+2072
+01:16:21,920 --> 01:16:26,159
+designed to be fast and complex enough
+
+2073
+01:16:23,840 --> 01:16:28,159
+to check every possible detector pair in
+
+2074
+01:16:26,159 --> 01:16:30,480
+real time.
+
+2075
+01:16:28,159 --> 01:16:32,400
+Whenever a coincidence is confirmed, the
+
+2076
+01:16:30,480 --> 01:16:35,199
+system draws what we call a line of
+
+2077
+01:16:32,400 --> 01:16:37,199
+response between the two detectors. That
+
+2078
+01:16:35,199 --> 01:16:39,199
+line is where the annihilation must have
+
+2079
+01:16:37,199 --> 01:16:41,360
+taken place.
+
+2080
+01:16:39,199 --> 01:16:43,360
+This principle detecting paired pulses
+
+2081
+01:16:41,360 --> 01:16:45,920
+and building lines of response is the
+
+2082
+01:16:43,360 --> 01:16:48,159
+foundation of PET imaging. By collecting
+
+2083
+01:16:45,920 --> 01:16:50,400
+many such lines from annihilations
+
+2084
+01:16:48,159 --> 01:16:52,880
+throughout the body, we can reconstruct
+
+2085
+01:16:50,400 --> 01:16:57,320
+a full three-dimensional image of tracer
+
+2086
+01:16:52,880 --> 01:16:57,320
+distribution inside the patient.
+
+2087
+01:16:58,880 --> 01:17:03,360
+Up to now, we've said that coincidence
+
+2088
+01:17:01,040 --> 01:17:05,280
+detection tells us that an annihilation
+
+2089
+01:17:03,360 --> 01:17:08,640
+event must have occurred somewhere along
+
+2090
+01:17:05,280 --> 01:17:09,920
+the line connecting two detectors,
+
+2091
+01:17:08,640 --> 01:17:11,679
+but that's still quite a lot of
+
+2092
+01:17:09,920 --> 01:17:13,440
+uncertainty. It could be anywhere on
+
+2093
+01:17:11,679 --> 01:17:15,440
+that line.
+
+2094
+01:17:13,440 --> 01:17:18,080
+Now with time offlight detection we can
+
+2095
+01:17:15,440 --> 01:17:20,159
+do better. The idea is straightforward.
+
+2096
+01:17:18,080 --> 01:17:22,239
+When the two gamma photons are produced
+
+2097
+01:17:20,159 --> 01:17:24,239
+they leave the annihilation site at the
+
+2098
+01:17:22,239 --> 01:17:27,040
+same instant traveling in opposite
+
+2099
+01:17:24,239 --> 01:17:29,280
+directions at the speed of light.
+
+2100
+01:17:27,040 --> 01:17:31,120
+If the annihilation happens exactly in
+
+2101
+01:17:29,280 --> 01:17:33,520
+the middle the photons will reach both
+
+2102
+01:17:31,120 --> 01:17:35,360
+detectors at the same time. But if the
+
+2103
+01:17:33,520 --> 01:17:37,199
+event happens closer to one detector,
+
+2104
+01:17:35,360 --> 01:17:39,199
+the photon on that side will arrive
+
+2105
+01:17:37,199 --> 01:17:41,440
+slightly earlier.
+
+2106
+01:17:39,199 --> 01:17:43,120
+So by measuring this tiny arrival time
+
+2107
+01:17:41,440 --> 01:17:45,520
+difference, we can estimate where along
+
+2108
+01:17:43,120 --> 01:17:47,360
+the line the event occurred. Of course,
+
+2109
+01:17:45,520 --> 01:17:49,600
+because our timing measurements are not
+
+2110
+01:17:47,360 --> 01:17:51,520
+infinitely precise, there is still some
+
+2111
+01:17:49,600 --> 01:17:53,600
+uncertainty. That's why we don't
+
+2112
+01:17:51,520 --> 01:17:56,080
+pinpoint a single location, but instead
+
+2113
+01:17:53,600 --> 01:17:58,080
+assign a probability distribution
+
+2114
+01:17:56,080 --> 01:18:02,159
+centered closer to one detector or the
+
+2115
+01:17:58,080 --> 01:18:04,640
+other depending on the measured delay.
+
+2116
+01:18:02,159 --> 01:18:07,040
+The effect is illustrated here. Without
+
+2117
+01:18:04,640 --> 01:18:09,040
+timelight information, the whole line is
+
+2118
+01:18:07,040 --> 01:18:11,360
+equally likely. So the back projected
+
+2119
+01:18:09,040 --> 01:18:13,199
+signal is spread out. With time of
+
+2120
+01:18:11,360 --> 01:18:15,360
+flight, the probability is concentrated
+
+2121
+01:18:13,199 --> 01:18:17,040
+in a smaller region along that line.
+
+2122
+01:18:15,360 --> 01:18:18,800
+When you combine millions of such
+
+2123
+01:18:17,040 --> 01:18:21,040
+measurements, the reconstructed PET
+
+2124
+01:18:18,800 --> 01:18:24,239
+image is sharper with better contrast
+
+2125
+01:18:21,040 --> 01:18:26,239
+and less noise.
+
+2126
+01:18:24,239 --> 01:18:28,480
+So the concept is simple. Coincidence
+
+2127
+01:18:26,239 --> 01:18:30,640
+detection gives us the line and time of
+
+2128
+01:18:28,480 --> 01:18:32,320
+flight narrows it down to a region on
+
+2129
+01:18:30,640 --> 01:18:34,000
+that line where the paired emission
+
+2130
+01:18:32,320 --> 01:18:36,000
+happened.
+
+2131
+01:18:34,000 --> 01:18:37,679
+This is why modern PET scanners
+
+2132
+01:18:36,000 --> 01:18:40,400
+increasingly use time offlight
+
+2133
+01:18:37,679 --> 01:18:43,120
+technology. It significantly improves
+
+2134
+01:18:40,400 --> 01:18:46,760
+image quality without requiring extra
+
+2135
+01:18:43,120 --> 01:18:46,760
+radiation dose.
+
+2136
+01:18:48,239 --> 01:18:51,679
+So here are your exercises for this
+
+2137
+01:18:50,080 --> 01:18:53,440
+week.
+
+2138
+01:18:51,679 --> 01:18:55,280
+These questions are designed to help you
+
+2139
+01:18:53,440 --> 01:18:57,520
+practice the core ideas we learned
+
+2140
+01:18:55,280 --> 01:18:59,600
+today. Calculating radioactivity from
+
+2141
+01:18:57,520 --> 01:19:01,520
+decay counts. Relating activity to
+
+2142
+01:18:59,600 --> 01:19:03,840
+half-life and the number of nuclei.
+
+2143
+01:19:01,520 --> 01:19:06,239
+analyzing how the signal to noise ratio
+
+2144
+01:19:03,840 --> 01:19:08,320
+changes with dose and scan time and
+
+2145
+01:19:06,239 --> 01:19:11,360
+modeling the technium generator with
+
+2146
+01:19:08,320 --> 01:19:13,360
+parent daughter decay equations.
+
+2147
+01:19:11,360 --> 01:19:15,199
+You are not limited to only these four
+
+2148
+01:19:13,360 --> 01:19:17,040
+questions. If you want to challenge
+
+2149
+01:19:15,199 --> 01:19:19,199
+yourself, feel free to explore more
+
+2150
+01:19:17,040 --> 01:19:21,600
+problems in the textbook, but these are
+
+2151
+01:19:19,199 --> 01:19:23,520
+the ones that will be graded.
+
+2152
+01:19:21,600 --> 01:19:25,280
+Since this is an online course, all
+
+2153
+01:19:23,520 --> 01:19:27,600
+discussions and clarifications will
+
+2154
+01:19:25,280 --> 01:19:29,840
+happen here. If anything is unclear,
+
+2155
+01:19:27,600 --> 01:19:32,320
+simply revisit the lecture materials,
+
+2156
+01:19:29,840 --> 01:19:34,159
+the slides, or the recorded explanation.
+
+2157
+01:19:32,320 --> 01:19:36,960
+We'll keep everything accessible for you
+
+2158
+01:19:34,159 --> 01:19:38,560
+to review at your own pace.
+
+2159
+01:19:36,960 --> 01:19:40,640
+That brings us to the end of today's
+
+2160
+01:19:38,560 --> 01:19:42,159
+lecture. Thank you for studying along
+
+2161
+01:19:40,640 --> 01:19:45,159
+online and I'll see you in the next
+
+2162
+01:19:42,159 --> 01:19:45,159
+session.
+

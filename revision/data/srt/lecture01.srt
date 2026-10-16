@@ -1,0 +1,5964 @@
+1
+00:00:00,719 --> 00:00:05,279
+Hi everyone and welcome to this online
+
+2
+00:00:02,720 --> 00:00:06,879
+course on medical imaging. I'm Professor
+
+3
+00:00:05,279 --> 00:00:09,519
+Gawang and I'll be guiding you through
+
+4
+00:00:06,879 --> 00:00:11,440
+this exciting journey.
+
+5
+00:00:09,519 --> 00:00:13,759
+Medical imaging is a fascinating and
+
+6
+00:00:11,440 --> 00:00:15,679
+powerful field. It brings together
+
+7
+00:00:13,759 --> 00:00:17,520
+science, engineering, and medicine to
+
+8
+00:00:15,679 --> 00:00:20,800
+help us see what's happening inside the
+
+9
+00:00:17,520 --> 00:00:22,320
+human body without making a single cut.
+
+10
+00:00:20,800 --> 00:00:24,560
+Whether your background is in
+
+11
+00:00:22,320 --> 00:00:26,800
+engineering, physics, computer science,
+
+12
+00:00:24,560 --> 00:00:29,039
+or biology, you'll find that medical
+
+13
+00:00:26,800 --> 00:00:31,039
+imaging offers something valuable and
+
+14
+00:00:29,039 --> 00:00:32,880
+fascinating.
+
+15
+00:00:31,039 --> 00:00:34,880
+In the weeks ahead, we'll build a strong
+
+16
+00:00:32,880 --> 00:00:36,960
+foundation in the core principles of
+
+17
+00:00:34,880 --> 00:00:38,800
+imaging and describe a variety of
+
+18
+00:00:36,960 --> 00:00:41,200
+technologies that are transforming
+
+19
+00:00:38,800 --> 00:00:45,120
+modern healthcare. I'm excited to get
+
+20
+00:00:41,200 --> 00:00:46,719
+started, and I hope you are too.
+
+21
+00:00:45,120 --> 00:00:48,719
+We'll begin with the fundamentals,
+
+22
+00:00:46,719 --> 00:00:50,800
+systems, forier analysis, signal
+
+23
+00:00:48,719 --> 00:00:53,199
+processing, and hands-on mat lab
+
+24
+00:00:50,800 --> 00:00:54,640
+sessions.
+
+25
+00:00:53,199 --> 00:00:56,559
+Then we'll explore major imaging
+
+26
+00:00:54,640 --> 00:00:59,359
+techniques: X-ray and radiography,
+
+27
+00:00:56,559 --> 00:01:02,000
+kinetic, PET, spec, MRI, ultrasound,
+
+28
+00:00:59,359 --> 00:01:04,000
+optical, and deep imaging.
+
+29
+00:01:02,000 --> 00:01:05,760
+Along the way, we'll have three exams to
+
+30
+00:01:04,000 --> 00:01:08,320
+help you review and reinforce what you
+
+31
+00:01:05,760 --> 00:01:10,320
+learn.
+
+32
+00:01:08,320 --> 00:01:12,320
+Now, just a quick note. In a traditional
+
+33
+00:01:10,320 --> 00:01:14,320
+classroom, I'd mention office hours.
+
+34
+00:01:12,320 --> 00:01:16,240
+However, since this is an online course,
+
+35
+00:01:14,320 --> 00:01:18,880
+I encourage you to participate actively
+
+36
+00:01:16,240 --> 00:01:20,560
+in our discussion forums.
+
+37
+00:01:18,880 --> 00:01:22,560
+Don't hesitate to post questions or
+
+38
+00:01:20,560 --> 00:01:23,840
+thoughts as they come up. Learning is
+
+39
+00:01:22,560 --> 00:01:26,560
+always more effective when it's
+
+40
+00:01:23,840 --> 00:01:28,240
+interactive.
+
+41
+00:01:26,560 --> 00:01:30,080
+So, to kick things off, let me give you
+
+42
+00:01:28,240 --> 00:01:32,400
+a quick overview of what we'll cover
+
+43
+00:01:30,080 --> 00:01:34,720
+today. There are four main questions
+
+44
+00:01:32,400 --> 00:01:37,520
+we'll explore. First, what is medical
+
+45
+00:01:34,720 --> 00:01:40,000
+imaging? Second, why should we study it?
+
+46
+00:01:37,520 --> 00:01:41,439
+Third, who are involved in this course?
+
+47
+00:01:40,000 --> 00:01:44,159
+And finally, how are we going to
+
+48
+00:01:41,439 --> 00:01:46,240
+approach the material?
+
+49
+00:01:44,159 --> 00:01:48,320
+Now, when we talk about medical imaging,
+
+50
+00:01:46,240 --> 00:01:50,560
+sometimes we use the terms biomedical
+
+51
+00:01:48,320 --> 00:01:52,399
+imaging or bioinstrumentation.
+
+52
+00:01:50,560 --> 00:01:54,399
+We're referring to a wide range of
+
+53
+00:01:52,399 --> 00:01:56,560
+methods, technologies, and systems that
+
+54
+00:01:54,399 --> 00:01:59,040
+help us see inside the human body,
+
+55
+00:01:56,560 --> 00:02:00,880
+animals, or biological samples. These
+
+56
+00:01:59,040 --> 00:02:03,280
+methods are grounded in engineering,
+
+57
+00:02:00,880 --> 00:02:05,600
+physics, and biio medicine. And this
+
+58
+00:02:03,280 --> 00:02:07,840
+isn't just about theory. You'll also get
+
+59
+00:02:05,600 --> 00:02:09,520
+hands-on experience with tools like mat
+
+60
+00:02:07,840 --> 00:02:12,400
+lab and you'll work with selected
+
+61
+00:02:09,520 --> 00:02:13,840
+reading materials and online resources.
+
+62
+00:02:12,400 --> 00:02:15,599
+By the end of the course, you'll not
+
+63
+00:02:13,840 --> 00:02:17,920
+only understand how these imaging
+
+64
+00:02:15,599 --> 00:02:22,280
+systems work, but also be able to apply
+
+65
+00:02:17,920 --> 00:02:22,280
+that knowledge in a meaningful way.
+
+66
+00:02:23,200 --> 00:02:26,480
+Let's continue explaining our idea of
+
+67
+00:02:24,879 --> 00:02:29,200
+medical imaging as a form of inner
+
+68
+00:02:26,480 --> 00:02:31,040
+vision.
+
+69
+00:02:29,200 --> 00:02:33,599
+You know, as humans, our natural vision
+
+70
+00:02:31,040 --> 00:02:35,599
+is powerful, but it's limited. We can
+
+71
+00:02:33,599 --> 00:02:38,080
+see the world around us. We can observe
+
+72
+00:02:35,599 --> 00:02:40,640
+surfaces, recognize faces, navigate
+
+73
+00:02:38,080 --> 00:02:42,640
+through our environment.
+
+74
+00:02:40,640 --> 00:02:44,400
+But our vision is tied to visible light.
+
+75
+00:02:42,640 --> 00:02:46,800
+And that means we can't see through most
+
+76
+00:02:44,400 --> 00:02:48,720
+objects. We don't know what's behind a
+
+77
+00:02:46,800 --> 00:02:50,560
+wall, inside a box, or within our own
+
+78
+00:02:48,720 --> 00:02:52,800
+bodies.
+
+79
+00:02:50,560 --> 00:02:54,800
+That's where medical imaging comes in.
+
+80
+00:02:52,800 --> 00:02:56,879
+It gives us the ability to look beyond
+
+81
+00:02:54,800 --> 00:02:59,519
+the surface, to see inside the human
+
+82
+00:02:56,879 --> 00:03:01,440
+body without making a single incision.
+
+83
+00:02:59,519 --> 00:03:03,280
+This is what makes medical imaging so
+
+84
+00:03:01,440 --> 00:03:06,159
+extraordinary.
+
+85
+00:03:03,280 --> 00:03:08,319
+It extends our natural vision, allowing
+
+86
+00:03:06,159 --> 00:03:10,080
+us to explore what's hidden, to
+
+87
+00:03:08,319 --> 00:03:12,159
+understand both the structure and
+
+88
+00:03:10,080 --> 00:03:14,640
+function of our organs, and to help
+
+89
+00:03:12,159 --> 00:03:16,000
+guide medical care.
+
+90
+00:03:14,640 --> 00:03:17,840
+Think about it. When someone doesn't
+
+91
+00:03:16,000 --> 00:03:20,080
+feel well, when there's discomfort or
+
+92
+00:03:17,840 --> 00:03:22,560
+concern, what do we do? We turn to
+
+93
+00:03:20,080 --> 00:03:24,159
+imaging. It becomes the eyes of the
+
+94
+00:03:22,560 --> 00:03:26,319
+physician revealing what's happening
+
+95
+00:03:24,159 --> 00:03:28,319
+beneath the surface.
+
+96
+00:03:26,319 --> 00:03:31,040
+Through imaging, doctors can measure
+
+97
+00:03:28,319 --> 00:03:33,040
+physiological function, detect disease,
+
+98
+00:03:31,040 --> 00:03:36,720
+and ultimately provide treatment that
+
+99
+00:03:33,040 --> 00:03:38,720
+can ease suffering or even save lives.
+
+100
+00:03:36,720 --> 00:03:40,480
+That's the true power of medical imaging
+
+101
+00:03:38,720 --> 00:03:43,879
+and why we call it the inner vision of
+
+102
+00:03:40,480 --> 00:03:43,879
+modern medicine.
+
+103
+00:03:44,400 --> 00:03:48,080
+Let me ask you this. What if we could
+
+104
+00:03:46,159 --> 00:03:51,040
+see through the human body almost like
+
+105
+00:03:48,080 --> 00:03:53,120
+having X-ray vision? Imagine being able
+
+106
+00:03:51,040 --> 00:03:55,440
+to look at tissues, organs, even down to
+
+107
+00:03:53,120 --> 00:03:57,439
+the cellular level. Sounds like science
+
+108
+00:03:55,440 --> 00:03:58,959
+fiction, right?
+
+109
+00:03:57,439 --> 00:04:01,439
+Well, that's exactly the dream of
+
+110
+00:03:58,959 --> 00:04:03,840
+medical imaging. This field gives us a
+
+111
+00:04:01,439 --> 00:04:06,000
+kind of supervision, an inner vision
+
+112
+00:04:03,840 --> 00:04:07,599
+that lets us explore the human body from
+
+113
+00:04:06,000 --> 00:04:09,519
+the inside out completely
+
+114
+00:04:07,599 --> 00:04:11,439
+non-invasively.
+
+115
+00:04:09,519 --> 00:04:13,360
+And the truth is, what once seemed
+
+116
+00:04:11,439 --> 00:04:15,760
+futuristic is now part of everyday
+
+117
+00:04:13,360 --> 00:04:17,519
+medical practice. With the tools we'll
+
+118
+00:04:15,760 --> 00:04:19,680
+talk about in this course, clinicians
+
+119
+00:04:17,519 --> 00:04:22,000
+can detect problems earlier, treat
+
+120
+00:04:19,680 --> 00:04:24,639
+patients more precisely, and monitor
+
+121
+00:04:22,000 --> 00:04:26,880
+progress more closely. Many of the
+
+122
+00:04:24,639 --> 00:04:28,880
+advances in imaging came from the needs
+
+123
+00:04:26,880 --> 00:04:30,960
+that once seemed impossible until
+
+124
+00:04:28,880 --> 00:04:32,479
+technology caught up. You'll see how
+
+125
+00:04:30,960 --> 00:04:35,120
+these breakthroughs happened and why
+
+126
+00:04:32,479 --> 00:04:36,479
+they matter.
+
+127
+00:04:35,120 --> 00:04:39,919
+Now, let's go back to where it all
+
+128
+00:04:36,479 --> 00:04:42,560
+began. In 1895, a German physicist named
+
+129
+00:04:39,919 --> 00:04:44,560
+Wilhelm Conrad Runen was experimenting
+
+130
+00:04:42,560 --> 00:04:46,639
+with cathode rays when he discovered
+
+131
+00:04:44,560 --> 00:04:48,479
+something totally unexpected, an
+
+132
+00:04:46,639 --> 00:04:51,040
+invisible form of radiation that could
+
+133
+00:04:48,479 --> 00:04:53,040
+pass through solid objects. He called
+
+134
+00:04:51,040 --> 00:04:55,759
+them X-rays because he didn't quite know
+
+135
+00:04:53,040 --> 00:04:57,520
+what they were. To test his discovery,
+
+136
+00:04:55,759 --> 00:04:59,759
+he took the first X-ray image, a picture
+
+137
+00:04:57,520 --> 00:05:02,160
+of his wife's hand. You could clearly
+
+138
+00:04:59,759 --> 00:05:04,160
+see the bones and even her wedding ring.
+
+139
+00:05:02,160 --> 00:05:06,479
+It was the first time humans saw inside
+
+140
+00:05:04,160 --> 00:05:09,120
+the body without surgery. That moment
+
+141
+00:05:06,479 --> 00:05:11,039
+changed medicine forever.
+
+142
+00:05:09,120 --> 00:05:13,039
+X-rays could depict dense structures
+
+143
+00:05:11,039 --> 00:05:15,280
+like bones and metal with incredible
+
+144
+00:05:13,039 --> 00:05:17,440
+clarity. This breakthrough was so
+
+145
+00:05:15,280 --> 00:05:19,600
+significant that Ruin received a Nobel
+
+146
+00:05:17,440 --> 00:05:21,520
+Prize in 1901.
+
+147
+00:05:19,600 --> 00:05:23,759
+That single discovery launched the field
+
+148
+00:05:21,520 --> 00:05:27,639
+of radiology and over a century later
+
+149
+00:05:23,759 --> 00:05:27,639
+we're still building on it.
+
+150
+00:05:27,840 --> 00:05:33,840
+Fast forward to today and X-ray imaging,
+
+151
+00:05:31,039 --> 00:05:36,080
+specifically X-ray radiography, is one
+
+152
+00:05:33,840 --> 00:05:38,560
+of the most common tools used in
+
+153
+00:05:36,080 --> 00:05:40,560
+hospitals and clinics around the world.
+
+154
+00:05:38,560 --> 00:05:42,240
+It's fast, affordable, and incredibly
+
+155
+00:05:40,560 --> 00:05:43,919
+useful.
+
+156
+00:05:42,240 --> 00:05:46,320
+Let's say someone falls and hurts their
+
+157
+00:05:43,919 --> 00:05:48,800
+arm. An X-ray can quickly show whether
+
+158
+00:05:46,320 --> 00:05:50,800
+there's a fracture. or in breast cancer
+
+159
+00:05:48,800 --> 00:05:53,199
+screening. Mimography, a specialized
+
+160
+00:05:50,800 --> 00:05:55,680
+type of X-ray radiography, can reveal
+
+161
+00:05:53,199 --> 00:05:58,240
+tiny calcifications or early tumors that
+
+162
+00:05:55,680 --> 00:06:01,280
+might not be detectable by touch. Early
+
+163
+00:05:58,240 --> 00:06:03,039
+detection like this can save lives,
+
+164
+00:06:01,280 --> 00:06:05,840
+but there's a limitation with X-ray
+
+165
+00:06:03,039 --> 00:06:07,520
+radiographs. They're 2D projections, so
+
+166
+00:06:05,840 --> 00:06:10,000
+everything in the body along the X-ray
+
+167
+00:06:07,520 --> 00:06:11,840
+path gets stacked into one image. That
+
+168
+00:06:10,000 --> 00:06:13,759
+makes it hard to see soft tissues
+
+169
+00:06:11,840 --> 00:06:15,600
+clearly or to isolate specific
+
+170
+00:06:13,759 --> 00:06:18,000
+structures.
+
+171
+00:06:15,600 --> 00:06:19,440
+So the next logical step was to ask what
+
+172
+00:06:18,000 --> 00:06:21,600
+if we could look from multiple
+
+173
+00:06:19,440 --> 00:06:24,160
+directions and reconstruct a full 3D
+
+174
+00:06:21,600 --> 00:06:26,080
+view of what's inside.
+
+175
+00:06:24,160 --> 00:06:28,479
+That question led to the development of
+
+176
+00:06:26,080 --> 00:06:31,960
+computed tomography or CT which we'll
+
+177
+00:06:28,479 --> 00:06:31,960
+get into next.
+
+178
+00:06:32,560 --> 00:06:36,080
+All right. So earlier we talked about
+
+179
+00:06:34,080 --> 00:06:38,400
+how regular X-rays give us a flat
+
+180
+00:06:36,080 --> 00:06:40,319
+two-dimensional view of the body. But
+
+181
+00:06:38,400 --> 00:06:42,479
+there's a catch. Everything in that path
+
+182
+00:06:40,319 --> 00:06:44,240
+gets layered on top of each other. It's
+
+183
+00:06:42,479 --> 00:06:45,919
+like looking at shadows overlap
+
+184
+00:06:44,240 --> 00:06:47,840
+together.
+
+185
+00:06:45,919 --> 00:06:50,080
+For example, if you take a chest X-ray,
+
+186
+00:06:47,840 --> 00:06:52,560
+the ribs, heart, and lungs all appear on
+
+187
+00:06:50,080 --> 00:06:54,319
+the same flat image. Since the X-ray
+
+188
+00:06:52,560 --> 00:06:56,720
+beam passes through everything in its
+
+189
+00:06:54,319 --> 00:06:59,120
+path, the details from front and back
+
+190
+00:06:56,720 --> 00:07:01,840
+overlap, making it harder to separate
+
+191
+00:06:59,120 --> 00:07:04,080
+one structure from another.
+
+192
+00:07:01,840 --> 00:07:06,560
+Now, imagine if we could take many X-ray
+
+193
+00:07:04,080 --> 00:07:08,319
+radioraphs around the body, virtually of
+
+194
+00:07:06,560 --> 00:07:11,039
+course, and figure out what's happening
+
+195
+00:07:08,319 --> 00:07:13,599
+on transverse sections. That's exactly
+
+196
+00:07:11,039 --> 00:07:15,360
+what computed tomography or CT allows us
+
+197
+00:07:13,599 --> 00:07:17,599
+to do.
+
+198
+00:07:15,360 --> 00:07:20,160
+The word tomography comes from Greek.
+
+199
+00:07:17,599 --> 00:07:22,560
+Tomos means slice and gray means writing
+
+200
+00:07:20,160 --> 00:07:24,880
+or drawing. So, we're basically drawing
+
+201
+00:07:22,560 --> 00:07:27,120
+slices of the body.
+
+202
+00:07:24,880 --> 00:07:29,520
+With CT, we collect X-ray projections
+
+203
+00:07:27,120 --> 00:07:32,240
+from many angles, then use a computer to
+
+204
+00:07:29,520 --> 00:07:33,840
+reconstruct a cross-sectional image. The
+
+205
+00:07:32,240 --> 00:07:36,160
+result,
+
+206
+00:07:33,840 --> 00:07:39,039
+a crystal clear view of internal anatomy
+
+207
+00:07:36,160 --> 00:07:40,960
+without overlapping tissues. Today's CT
+
+208
+00:07:39,039 --> 00:07:42,960
+scanners are incredibly precise. Some
+
+209
+00:07:40,960 --> 00:07:44,800
+can even resolve features smaller than a
+
+210
+00:07:42,960 --> 00:07:46,560
+millimeter.
+
+211
+00:07:44,800 --> 00:07:48,400
+Think of it like slicing a watermelon
+
+212
+00:07:46,560 --> 00:07:50,960
+and looking inside, but doing it without
+
+213
+00:07:48,400 --> 00:07:52,639
+a knife, just scanning. It's an amazing
+
+214
+00:07:50,960 --> 00:07:56,520
+tool and one that has completely
+
+215
+00:07:52,639 --> 00:07:56,520
+transformed modern medicine.
+
+216
+00:07:57,039 --> 00:08:00,879
+Now, if you want to get a fun and visual
+
+217
+00:07:58,879 --> 00:08:03,599
+explanation of how X-rays work, there's
+
+218
+00:08:00,879 --> 00:08:05,520
+a great animated video I did for TED Ed.
+
+219
+00:08:03,599 --> 00:08:07,120
+It's called How X-rays See Through Your
+
+220
+00:08:05,520 --> 00:08:08,639
+Skin.
+
+221
+00:08:07,120 --> 00:08:10,400
+In just a few minutes, it walks you
+
+222
+00:08:08,639 --> 00:08:12,240
+through how X-rays are produced, how
+
+223
+00:08:10,400 --> 00:08:14,080
+they interact with the body, and how
+
+224
+00:08:12,240 --> 00:08:16,400
+detected signals are turned into a
+
+225
+00:08:14,080 --> 00:08:18,000
+cross-sectional image. It's a great
+
+226
+00:08:16,400 --> 00:08:19,759
+refresher, especially if you're a visual
+
+227
+00:08:18,000 --> 00:08:21,520
+learner.
+
+228
+00:08:19,759 --> 00:08:23,599
+You'll also see how this technology
+
+229
+00:08:21,520 --> 00:08:26,240
+became the foundation for other types of
+
+230
+00:08:23,599 --> 00:08:29,280
+imaging we'll cover like PET, SPECT, and
+
+231
+00:08:26,240 --> 00:08:30,720
+MRI. The video is optional, but I really
+
+232
+00:08:29,280 --> 00:08:33,960
+recommend checking it out when you have
+
+233
+00:08:30,720 --> 00:08:33,960
+a moment.
+
+234
+00:08:34,000 --> 00:08:38,719
+So far, we've focused on X-rays, but
+
+235
+00:08:36,000 --> 00:08:40,240
+medical imaging goes way beyond that. In
+
+236
+00:08:38,719 --> 00:08:42,880
+fact, it covers almost the entire
+
+237
+00:08:40,240 --> 00:08:44,640
+electromagnetic spectrum. Depending on
+
+238
+00:08:42,880 --> 00:08:46,880
+what part of the spectrum you use, you
+
+239
+00:08:44,640 --> 00:08:48,640
+get different kinds of information. For
+
+240
+00:08:46,880 --> 00:08:50,800
+example,
+
+241
+00:08:48,640 --> 00:08:53,279
+gamma rays are used in nuclear imaging
+
+242
+00:08:50,800 --> 00:08:55,760
+like PET and spec. Radio waves are
+
+243
+00:08:53,279 --> 00:08:58,320
+instrumental in MRI. Visible and
+
+244
+00:08:55,760 --> 00:09:00,240
+infrared light are for optical imaging.
+
+245
+00:08:58,320 --> 00:09:02,399
+And even ultrasound, though not part of
+
+246
+00:09:00,240 --> 00:09:04,399
+the EM spectrum, gives us mechanical
+
+247
+00:09:02,399 --> 00:09:06,800
+wave-based imaging, referred to as
+
+248
+00:09:04,399 --> 00:09:08,800
+ultrasound imaging.
+
+249
+00:09:06,800 --> 00:09:10,959
+Each imaging modality has its own
+
+250
+00:09:08,800 --> 00:09:13,440
+strengths and weaknesses. Some are great
+
+251
+00:09:10,959 --> 00:09:15,279
+for structure, others for function. Some
+
+252
+00:09:13,440 --> 00:09:17,200
+are good at seeing bones, others at
+
+253
+00:09:15,279 --> 00:09:20,399
+detecting molecular processes like
+
+254
+00:09:17,200 --> 00:09:22,080
+metabolism or gene expression.
+
+255
+00:09:20,399 --> 00:09:24,080
+In fact, no single technique gives us
+
+256
+00:09:22,080 --> 00:09:26,000
+the whole picture. That's why modern
+
+257
+00:09:24,080 --> 00:09:28,320
+medicine often combines them, what we
+
+258
+00:09:26,000 --> 00:09:30,000
+call multimodal imaging.
+
+259
+00:09:28,320 --> 00:09:31,519
+When we link them together, we get a
+
+260
+00:09:30,000 --> 00:09:34,640
+rather rich view of what's going on
+
+261
+00:09:31,519 --> 00:09:36,160
+inside the body.
+
+262
+00:09:34,640 --> 00:09:38,720
+Let's talk a bit more about what makes
+
+263
+00:09:36,160 --> 00:09:40,640
+tomography special. When you take a
+
+264
+00:09:38,720 --> 00:09:42,880
+regular photo with your phone, you get a
+
+265
+00:09:40,640 --> 00:09:45,360
+picture. That's it. It's a direct result
+
+266
+00:09:42,880 --> 00:09:47,839
+of what the camera sees. But tomographic
+
+267
+00:09:45,360 --> 00:09:50,720
+imaging is different. You don't directly
+
+268
+00:09:47,839 --> 00:09:52,720
+capture the image you want. Instead, you
+
+269
+00:09:50,720 --> 00:09:54,800
+collect data from many different angles.
+
+270
+00:09:52,720 --> 00:09:56,560
+And that data is a kind of indirect
+
+271
+00:09:54,800 --> 00:09:58,560
+measurement, a projection of what's
+
+272
+00:09:56,560 --> 00:10:01,120
+inside.
+
+273
+00:09:58,560 --> 00:10:02,800
+Now, here's the key part. To get a
+
+274
+00:10:01,120 --> 00:10:05,040
+cross-sectional image, we need to do
+
+275
+00:10:02,800 --> 00:10:06,640
+something called inversion. In other
+
+276
+00:10:05,040 --> 00:10:08,880
+words, we take the measurements and
+
+277
+00:10:06,640 --> 00:10:11,120
+reverse engineer the internal structure
+
+278
+00:10:08,880 --> 00:10:13,440
+that produced them.
+
+279
+00:10:11,120 --> 00:10:15,120
+This is an inverse problem. It's
+
+280
+00:10:13,440 --> 00:10:16,720
+different from the more familiar forward
+
+281
+00:10:15,120 --> 00:10:18,560
+problem where you know all the inputs
+
+282
+00:10:16,720 --> 00:10:20,800
+and a forward model and calculate the
+
+283
+00:10:18,560 --> 00:10:22,800
+outcome. Like in physics, you know the
+
+284
+00:10:20,800 --> 00:10:25,519
+force and the mass. So you calculate how
+
+285
+00:10:22,800 --> 00:10:27,440
+something moves. In tomography, it's the
+
+286
+00:10:25,519 --> 00:10:28,880
+opposite. You see the outcome, the
+
+287
+00:10:27,440 --> 00:10:32,640
+measurement, and you ask, "What could
+
+288
+00:10:28,880 --> 00:10:34,720
+have caused this?" That's a lot harder.
+
+289
+00:10:32,640 --> 00:10:36,640
+Here's a fun analogy. Think of boiling
+
+290
+00:10:34,720 --> 00:10:38,880
+an egg. That's a straightforward
+
+291
+00:10:36,640 --> 00:10:41,519
+process. But what if someone gave you a
+
+292
+00:10:38,880 --> 00:10:44,000
+boiled egg and said, "Unboil it." That's
+
+293
+00:10:41,519 --> 00:10:45,600
+the inverse problem. Sounds impossible,
+
+294
+00:10:44,000 --> 00:10:47,600
+but researchers have found ways to
+
+295
+00:10:45,600 --> 00:10:49,839
+reverse that process under specific
+
+296
+00:10:47,600 --> 00:10:51,760
+conditions. It's challenging but not
+
+297
+00:10:49,839 --> 00:10:53,920
+hopeless. And that's what makes
+
+298
+00:10:51,760 --> 00:10:56,480
+inversion in imaging both difficult and
+
+299
+00:10:53,920 --> 00:10:58,480
+exciting.
+
+300
+00:10:56,480 --> 00:11:01,040
+Here's another example that might feel a
+
+301
+00:10:58,480 --> 00:11:02,800
+bit more familiar. Let's say you take a
+
+302
+00:11:01,040 --> 00:11:05,360
+photo with your phone, but it turns out
+
+303
+00:11:02,800 --> 00:11:07,600
+a little blurry. Maybe the camera shook
+
+304
+00:11:05,360 --> 00:11:09,920
+or the focus was off or the camera is
+
+305
+00:11:07,600 --> 00:11:11,760
+cheap and of poor quality. What you get
+
+306
+00:11:09,920 --> 00:11:15,519
+is not the true image, but a version
+
+307
+00:11:11,760 --> 00:11:18,079
+that's been blurred in several ways.
+
+308
+00:11:15,519 --> 00:11:20,240
+Now, how do we describe that blurring?
+
+309
+00:11:18,079 --> 00:11:22,000
+In image processing, we model it using
+
+310
+00:11:20,240 --> 00:11:24,959
+something called a point spread function
+
+311
+00:11:22,000 --> 00:11:26,880
+or PSF for short. This describes how a
+
+312
+00:11:24,959 --> 00:11:28,480
+single point of light spreads out in the
+
+313
+00:11:26,880 --> 00:11:30,560
+image.
+
+314
+00:11:28,480 --> 00:11:32,560
+The process that causes blurring is
+
+315
+00:11:30,560 --> 00:11:34,320
+called convolution.
+
+316
+00:11:32,560 --> 00:11:36,079
+It's a mathematical operation that
+
+317
+00:11:34,320 --> 00:11:38,399
+combines the original image with the
+
+318
+00:11:36,079 --> 00:11:40,480
+PSF. Convolution is sort of like
+
+319
+00:11:38,399 --> 00:11:42,560
+multiplication, but in the so-called
+
+320
+00:11:40,480 --> 00:11:44,560
+forier space that we will explain later
+
+321
+00:11:42,560 --> 00:11:46,240
+in this course.
+
+322
+00:11:44,560 --> 00:11:47,600
+Indeed, in the Forier domain,
+
+323
+00:11:46,240 --> 00:11:49,600
+convolution becomes regular
+
+324
+00:11:47,600 --> 00:11:51,760
+multiplication.
+
+325
+00:11:49,600 --> 00:11:54,959
+The Forier transform is often performed
+
+326
+00:11:51,760 --> 00:11:58,399
+using a fast algorithm, FFT. In short,
+
+327
+00:11:54,959 --> 00:12:00,240
+that simplifies a lot of computations.
+
+328
+00:11:58,399 --> 00:12:02,800
+But now comes the hard part. What if all
+
+329
+00:12:00,240 --> 00:12:04,640
+you have is the blurry image? Can you
+
+330
+00:12:02,800 --> 00:12:06,720
+work backward and recover the original
+
+331
+00:12:04,640 --> 00:12:08,959
+sharp version?
+
+332
+00:12:06,720 --> 00:12:11,120
+That's another inverse problem. And just
+
+333
+00:12:08,959 --> 00:12:12,880
+like with tomography, it's tricky.
+
+334
+00:12:11,120 --> 00:12:14,959
+You're trying to undo the effect of the
+
+335
+00:12:12,880 --> 00:12:17,519
+blur based on your knowledge of the
+
+336
+00:12:14,959 --> 00:12:19,760
+system. It takes clever algorithms and
+
+337
+00:12:17,519 --> 00:12:20,959
+good models, but it can be done. And
+
+338
+00:12:19,760 --> 00:12:24,560
+that's the kind of thinking we'll
+
+339
+00:12:20,959 --> 00:12:26,320
+develop throughout this course.
+
+340
+00:12:24,560 --> 00:12:28,320
+Let's take a step back for a moment and
+
+341
+00:12:26,320 --> 00:12:30,560
+think about how mathematics builds over
+
+342
+00:12:28,320 --> 00:12:32,160
+time. When you were in school, you
+
+343
+00:12:30,560 --> 00:12:34,880
+learned the basics. Addition,
+
+344
+00:12:32,160 --> 00:12:37,040
+subtraction, multiplication, division.
+
+345
+00:12:34,880 --> 00:12:38,880
+These are the building blocks. But once
+
+346
+00:12:37,040 --> 00:12:41,519
+you reach higher levels like where we
+
+347
+00:12:38,880 --> 00:12:44,160
+are now, those simple operations take on
+
+348
+00:12:41,519 --> 00:12:46,399
+more advanced forms.
+
+349
+00:12:44,160 --> 00:12:48,079
+Take addition for example. At this
+
+350
+00:12:46,399 --> 00:12:50,240
+level, we're not just adding a few
+
+351
+00:12:48,079 --> 00:12:52,639
+numbers. We might be summing over an
+
+352
+00:12:50,240 --> 00:12:54,240
+infinite number of values. That's what
+
+353
+00:12:52,639 --> 00:12:56,240
+integration is. It's a continuous
+
+354
+00:12:54,240 --> 00:12:58,000
+version of addition used when we add up
+
+355
+00:12:56,240 --> 00:13:01,120
+contributions from every point in a
+
+356
+00:12:58,000 --> 00:13:03,680
+region. What about subtraction? In
+
+357
+00:13:01,120 --> 00:13:05,200
+calculus, that becomes differentiation.
+
+358
+00:13:03,680 --> 00:13:07,040
+Instead of just finding a difference
+
+359
+00:13:05,200 --> 00:13:09,200
+between two numbers, we're looking at
+
+360
+00:13:07,040 --> 00:13:12,079
+how fast something is changing at an
+
+361
+00:13:09,200 --> 00:13:13,760
+exact point by evaluating a very small
+
+362
+00:13:12,079 --> 00:13:16,399
+difference of a smooth function between
+
+363
+00:13:13,760 --> 00:13:18,720
+two rather close points.
+
+364
+00:13:16,399 --> 00:13:20,560
+Now, let's look at multiplication.
+
+365
+00:13:18,720 --> 00:13:22,240
+In imaging, we move from regular
+
+366
+00:13:20,560 --> 00:13:24,880
+multiplication to something called
+
+367
+00:13:22,240 --> 00:13:27,120
+convolution, a fundamental concept in
+
+368
+00:13:24,880 --> 00:13:28,959
+systems and signal processing.
+
+369
+00:13:27,120 --> 00:13:31,040
+Convolution helps us model how a
+
+370
+00:13:28,959 --> 00:13:33,760
+spatially invariant linear system
+
+371
+00:13:31,040 --> 00:13:35,279
+modifies a signal or an image. You'll
+
+372
+00:13:33,760 --> 00:13:37,600
+see this again and again in medical
+
+373
+00:13:35,279 --> 00:13:39,200
+imaging. Again, a convolution in a
+
+374
+00:13:37,600 --> 00:13:42,480
+spatial or time domain is a
+
+375
+00:13:39,200 --> 00:13:45,200
+multiplication in the forier domain.
+
+376
+00:13:42,480 --> 00:13:47,360
+And finally, what about division? Here's
+
+377
+00:13:45,200 --> 00:13:49,120
+where things get interesting. The
+
+378
+00:13:47,360 --> 00:13:51,120
+advanced version of division where
+
+379
+00:13:49,120 --> 00:13:53,920
+you're trying to reverse a process is
+
+380
+00:13:51,120 --> 00:13:56,959
+what we call an inverse solution. The
+
+381
+00:13:53,920 --> 00:13:58,959
+deluring problem is a good example.
+
+382
+00:13:56,959 --> 00:14:00,959
+You're given a blurry image and your job
+
+383
+00:13:58,959 --> 00:14:02,959
+is to figure out what is the underlying
+
+384
+00:14:00,959 --> 00:14:04,639
+ground truth image. And that's
+
+385
+00:14:02,959 --> 00:14:07,120
+essentially what we do in tomographic
+
+386
+00:14:04,639 --> 00:14:08,880
+imaging.
+
+387
+00:14:07,120 --> 00:14:11,040
+Now, here's the point. Inversion is
+
+388
+00:14:08,880 --> 00:14:13,760
+hard, much harder than the forward
+
+389
+00:14:11,040 --> 00:14:15,199
+process. In a forward problem, you start
+
+390
+00:14:13,760 --> 00:14:17,279
+with all the information and you
+
+391
+00:14:15,199 --> 00:14:19,440
+calculate the outcome. That's usually
+
+392
+00:14:17,279 --> 00:14:21,440
+pretty straightforward. But an inverse
+
+393
+00:14:19,440 --> 00:14:23,279
+problem is the opposite. You're starting
+
+394
+00:14:21,440 --> 00:14:25,360
+with the outcome and trying to infer
+
+395
+00:14:23,279 --> 00:14:27,600
+what caused it.
+
+396
+00:14:25,360 --> 00:14:29,360
+And this is where things get tricky.
+
+397
+00:14:27,600 --> 00:14:31,120
+There might be multiple possible answers
+
+398
+00:14:29,360 --> 00:14:33,680
+or the data might be noisy or
+
+399
+00:14:31,120 --> 00:14:35,600
+incomplete. You need to bring in clever
+
+400
+00:14:33,680 --> 00:14:37,440
+mathematics, algorithms, physical
+
+401
+00:14:35,600 --> 00:14:40,560
+models, and prior knowledge to make
+
+402
+00:14:37,440 --> 00:14:43,199
+sense of it all. That's why this course
+
+403
+00:14:40,560 --> 00:14:44,959
+isn't just about memorizing facts. It's
+
+404
+00:14:43,199 --> 00:14:46,880
+about developing your quantitative
+
+405
+00:14:44,959 --> 00:14:49,600
+thinking and really understanding what's
+
+406
+00:14:46,880 --> 00:14:51,199
+going on underneath the surface. It's
+
+407
+00:14:49,600 --> 00:14:55,199
+challenging, but if you put in the
+
+408
+00:14:51,199 --> 00:14:57,120
+effort, it's also incredibly rewarding.
+
+409
+00:14:55,199 --> 00:14:58,880
+Now, let's take a moment to appreciate
+
+410
+00:14:57,120 --> 00:15:01,519
+just how interdicciplinary medical
+
+411
+00:14:58,880 --> 00:15:03,279
+imaging really is. We're combining
+
+412
+00:15:01,519 --> 00:15:05,199
+mathematics, physics, chemistry,
+
+413
+00:15:03,279 --> 00:15:07,760
+biology, and engineering all in one
+
+414
+00:15:05,199 --> 00:15:09,680
+field. Think about that. Whether we're
+
+415
+00:15:07,760 --> 00:15:12,320
+modeling how X-rays interact with
+
+416
+00:15:09,680 --> 00:15:14,480
+tissue, analyzing ultrasound signals, or
+
+417
+00:15:12,320 --> 00:15:16,560
+designing contrast agents for optical
+
+418
+00:15:14,480 --> 00:15:19,360
+imaging, we're pulling from all corners
+
+419
+00:15:16,560 --> 00:15:21,360
+of science and technology.
+
+420
+00:15:19,360 --> 00:15:23,600
+This means that medical imaging isn't
+
+421
+00:15:21,360 --> 00:15:25,440
+just about one skill set. It's about
+
+422
+00:15:23,600 --> 00:15:27,600
+thinking broadly and connecting the dots
+
+423
+00:15:25,440 --> 00:15:29,760
+between different fields. And if you
+
+424
+00:15:27,600 --> 00:15:32,480
+enjoy solving complex problems, this is
+
+425
+00:15:29,760 --> 00:15:34,160
+one of the best places to be.
+
+426
+00:15:32,480 --> 00:15:36,000
+So, by now you should have a pretty good
+
+427
+00:15:34,160 --> 00:15:39,120
+sense of what this course is about and
+
+428
+00:15:36,000 --> 00:15:42,240
+what makes it so special. We'll focus on
+
+429
+00:15:39,120 --> 00:15:43,760
+modern biomed imaging technologies and
+
+430
+00:15:42,240 --> 00:15:46,160
+we'll build the knowledge and tools
+
+431
+00:15:43,760 --> 00:15:48,399
+needed to understand how they work and
+
+432
+00:15:46,160 --> 00:15:51,920
+how they're used to help people. And
+
+433
+00:15:48,399 --> 00:15:54,000
+honestly, it's really cool stuff.
+
+434
+00:15:51,920 --> 00:15:55,920
+So, by now you might be thinking, "This
+
+435
+00:15:54,000 --> 00:15:58,399
+is all very cool, but why do I really
+
+436
+00:15:55,920 --> 00:16:00,240
+need to learn medical imaging?" Well,
+
+437
+00:15:58,399 --> 00:16:02,079
+I'd say there are at least two solid
+
+438
+00:16:00,240 --> 00:16:04,399
+reasons.
+
+439
+00:16:02,079 --> 00:16:06,079
+First, and perhaps most importantly, it
+
+440
+00:16:04,399 --> 00:16:08,240
+gives you essential health related
+
+441
+00:16:06,079 --> 00:16:10,240
+knowledge. Whether you pursue a career
+
+442
+00:16:08,240 --> 00:16:12,160
+in engineering, medicine, or something
+
+443
+00:16:10,240 --> 00:16:14,320
+entirely different, understanding how
+
+444
+00:16:12,160 --> 00:16:16,320
+imaging works can help you make sense of
+
+445
+00:16:14,320 --> 00:16:18,240
+your own health and the health of those
+
+446
+00:16:16,320 --> 00:16:20,240
+around you during your hospital visits
+
+447
+00:16:18,240 --> 00:16:22,560
+and afterwards.
+
+448
+00:16:20,240 --> 00:16:24,959
+The second reason is career related.
+
+449
+00:16:22,560 --> 00:16:26,639
+We'll get to that more, but for now,
+
+450
+00:16:24,959 --> 00:16:28,720
+just keep in mind this is cool knowledge
+
+451
+00:16:26,639 --> 00:16:30,800
+for a niche group of people. It's
+
+452
+00:16:28,720 --> 00:16:32,399
+personal and extremely useful in several
+
+453
+00:16:30,800 --> 00:16:34,160
+ways.
+
+454
+00:16:32,399 --> 00:16:38,199
+To say the least, it is a required
+
+455
+00:16:34,160 --> 00:16:38,199
+course for your college education.
+
+456
+00:16:38,399 --> 00:16:42,880
+Let me share something personal with
+
+457
+00:16:40,000 --> 00:16:44,959
+you. A couple of years ago, I had a
+
+458
+00:16:42,880 --> 00:16:47,360
+kidney stone.
+
+459
+00:16:44,959 --> 00:16:50,000
+Not fun. I ended up in the hospital.
+
+460
+00:16:47,360 --> 00:16:51,759
+They injected a contrast agent, ran a CT
+
+461
+00:16:50,000 --> 00:16:55,040
+scan, and just like that, they could see
+
+462
+00:16:51,759 --> 00:16:56,639
+the size and location of the stone.
+
+463
+00:16:55,040 --> 00:16:59,199
+Now, because I understood what was going
+
+464
+00:16:56,639 --> 00:17:01,120
+on, I wasn't worried or confused. I
+
+465
+00:16:59,199 --> 00:17:03,680
+could follow the diagnosis, and I knew
+
+466
+00:17:01,120 --> 00:17:05,439
+what the doctors were looking for. And
+
+467
+00:17:03,680 --> 00:17:07,120
+honestly, sooner or later, most of us
+
+468
+00:17:05,439 --> 00:17:10,640
+will have a medical scan, whether it's
+
+469
+00:17:07,120 --> 00:17:13,520
+an X-ray, a CT, or an MRI, and perhaps
+
+470
+00:17:10,640 --> 00:17:15,679
+all of them, and multiple times.
+
+471
+00:17:13,520 --> 00:17:17,199
+It could be you or someone you love.
+
+472
+00:17:15,679 --> 00:17:19,120
+When that happens, wouldn't it be
+
+473
+00:17:17,199 --> 00:17:20,799
+helpful to understand what those images
+
+474
+00:17:19,120 --> 00:17:22,720
+mean?
+
+475
+00:17:20,799 --> 00:17:27,160
+That's why this knowledge matters not
+
+476
+00:17:22,720 --> 00:17:27,160
+just in theory, but in real life.
+
+477
+00:17:27,520 --> 00:17:31,280
+Looking ahead, many of you will have
+
+478
+00:17:29,039 --> 00:17:33,520
+families of your own. When a family
+
+479
+00:17:31,280 --> 00:17:35,280
+member gets a scan or a test result,
+
+480
+00:17:33,520 --> 00:17:37,440
+wouldn't you want to understand what's
+
+481
+00:17:35,280 --> 00:17:39,840
+happening? That's where this course
+
+482
+00:17:37,440 --> 00:17:41,360
+really empowers you.
+
+483
+00:17:39,840 --> 00:17:42,880
+Even if you don't go into imaging
+
+484
+00:17:41,360 --> 00:17:44,880
+research, even if you don't become a
+
+485
+00:17:42,880 --> 00:17:46,720
+radiologist or an imaging scientist,
+
+486
+00:17:44,880 --> 00:17:48,400
+just being able to interpret results and
+
+487
+00:17:46,720 --> 00:17:50,240
+ask the right questions can make a big
+
+488
+00:17:48,400 --> 00:17:52,080
+difference.
+
+489
+00:17:50,240 --> 00:17:54,240
+So that's the first reason, personal and
+
+490
+00:17:52,080 --> 00:17:58,160
+practical value. Now let's move on to
+
+491
+00:17:54,240 --> 00:17:59,919
+the second one, your career.
+
+492
+00:17:58,160 --> 00:18:02,960
+Let's zoom out for a moment and look at
+
+493
+00:17:59,919 --> 00:18:04,559
+biomedical engineering as a field.
+
+494
+00:18:02,960 --> 00:18:06,720
+It's one of the newest branches of
+
+495
+00:18:04,559 --> 00:18:08,480
+engineering. Engineering started with
+
+496
+00:18:06,720 --> 00:18:10,240
+disciplines like civil and mechanical,
+
+497
+00:18:08,480 --> 00:18:13,039
+then moved into electrical, chemical,
+
+498
+00:18:10,240 --> 00:18:14,880
+and aerospace. More recently, biomedical
+
+499
+00:18:13,039 --> 00:18:17,600
+engineering emerged to bridge the gap
+
+500
+00:18:14,880 --> 00:18:19,520
+between technology and medicine. And
+
+501
+00:18:17,600 --> 00:18:20,960
+it's grown fast because it's relevant.
+
+502
+00:18:19,520 --> 00:18:22,720
+It's interdicciplinary, and it's
+
+503
+00:18:20,960 --> 00:18:24,720
+impactful.
+
+504
+00:18:22,720 --> 00:18:26,720
+In many universities, biomedical
+
+505
+00:18:24,720 --> 00:18:29,440
+engineering includes at least two major
+
+506
+00:18:26,720 --> 00:18:31,760
+focus areas. One is imaging, which is
+
+507
+00:18:29,440 --> 00:18:33,600
+what we're covering here. The other is
+
+508
+00:18:31,760 --> 00:18:36,480
+tissue engineering and regenerative
+
+509
+00:18:33,600 --> 00:18:38,320
+medicine often called term.
+
+510
+00:18:36,480 --> 00:18:39,840
+Whether or not you plan to specialize in
+
+511
+00:18:38,320 --> 00:18:42,000
+imaging, this course plays a
+
+512
+00:18:39,840 --> 00:18:43,840
+foundational role. It builds your
+
+513
+00:18:42,000 --> 00:18:45,520
+technical knowledge, strengthens your
+
+514
+00:18:43,840 --> 00:18:47,120
+systems thinking, and helps you
+
+515
+00:18:45,520 --> 00:18:50,240
+understand one of the most important
+
+516
+00:18:47,120 --> 00:18:51,679
+technologies in healthcare today.
+
+517
+00:18:50,240 --> 00:18:53,840
+So, if you're here as part of your
+
+518
+00:18:51,679 --> 00:18:56,640
+degree requirements, great. But don't
+
+519
+00:18:53,840 --> 00:18:59,120
+just treat it like a checkbox. Learn it
+
+520
+00:18:56,640 --> 00:19:02,640
+well. It will pay off academically,
+
+521
+00:18:59,120 --> 00:19:04,400
+professionally, and personally.
+
+522
+00:19:02,640 --> 00:19:06,480
+Now, for those of you considering a
+
+523
+00:19:04,400 --> 00:19:08,559
+concentration in imaging or even just
+
+524
+00:19:06,480 --> 00:19:11,520
+taking this course seriously, it can
+
+525
+00:19:08,559 --> 00:19:13,360
+really pay off in your career.
+
+526
+00:19:11,520 --> 00:19:15,760
+Medical imaging is a technical field,
+
+527
+00:19:13,360 --> 00:19:17,919
+but it's also full of opportunities. If
+
+528
+00:19:15,760 --> 00:19:19,840
+you understand how imaging systems work
+
+529
+00:19:17,919 --> 00:19:21,760
+and you can apply that knowledge to real
+
+530
+00:19:19,840 --> 00:19:24,160
+world problems, you'll bring serious
+
+531
+00:19:21,760 --> 00:19:27,200
+value to any team, whether in research,
+
+532
+00:19:24,160 --> 00:19:29,200
+healthcare, or industry. And in case
+
+533
+00:19:27,200 --> 00:19:31,840
+you're still wondering, yes, biomedical
+
+534
+00:19:29,200 --> 00:19:33,440
+engineering is a great profession. It
+
+535
+00:19:31,840 --> 00:19:35,440
+sits at the intersection of life
+
+536
+00:19:33,440 --> 00:19:36,960
+sciences, medicine, and engineering, and
+
+537
+00:19:35,440 --> 00:19:39,679
+that makes it both exciting and
+
+538
+00:19:36,960 --> 00:19:41,440
+employable.
+
+539
+00:19:39,679 --> 00:19:43,120
+In fact, if you look at trends in job
+
+540
+00:19:41,440 --> 00:19:44,960
+growth, biomedical engineering
+
+541
+00:19:43,120 --> 00:19:47,360
+consistently ranks among the fastest
+
+542
+00:19:44,960 --> 00:19:49,360
+growing careers. Just take a glance at
+
+543
+00:19:47,360 --> 00:19:52,320
+some recent employment reports, you'll
+
+544
+00:19:49,360 --> 00:19:54,720
+see biomed engineers right near the top.
+
+545
+00:19:52,320 --> 00:19:56,240
+Why is that?
+
+546
+00:19:54,720 --> 00:19:58,880
+Well, part of the reason is that
+
+547
+00:19:56,240 --> 00:20:01,520
+healthcare is becoming more techdriven.
+
+548
+00:19:58,880 --> 00:20:03,200
+Devices, sensors, data analysis, machine
+
+549
+00:20:01,520 --> 00:20:05,200
+learning, it all depends on people who
+
+550
+00:20:03,200 --> 00:20:07,840
+can bridge the gap between biology and
+
+551
+00:20:05,200 --> 00:20:09,679
+engineering. So, not only is this field
+
+552
+00:20:07,840 --> 00:20:11,280
+intellectually exciting, it also comes
+
+553
+00:20:09,679 --> 00:20:14,400
+with strong job prospects and
+
+554
+00:20:11,280 --> 00:20:17,039
+competitive salaries.
+
+555
+00:20:14,400 --> 00:20:19,120
+Now, let's zoom out to the global scale.
+
+556
+00:20:17,039 --> 00:20:21,360
+Medical imaging isn't just a field. It's
+
+557
+00:20:19,120 --> 00:20:23,679
+a major global industry, and it's
+
+558
+00:20:21,360 --> 00:20:25,600
+growing fast. Countries around the world
+
+559
+00:20:23,679 --> 00:20:29,120
+are investing heavily in imaging
+
+560
+00:20:25,600 --> 00:20:31,039
+infrastructure service and innovation.
+
+561
+00:20:29,120 --> 00:20:32,960
+If you look at the data, regions like
+
+562
+00:20:31,039 --> 00:20:35,600
+Asia and Europe are rapidly expanding
+
+563
+00:20:32,960 --> 00:20:37,919
+their market share. Asia in particular
+
+564
+00:20:35,600 --> 00:20:39,600
+has seen a surge in R&D spending and
+
+565
+00:20:37,919 --> 00:20:41,200
+adoption of advanced imaging
+
+566
+00:20:39,600 --> 00:20:43,039
+technologies.
+
+567
+00:20:41,200 --> 00:20:44,960
+That means more jobs, more research
+
+568
+00:20:43,039 --> 00:20:47,280
+funding, and more innovation coming from
+
+569
+00:20:44,960 --> 00:20:49,360
+across the globe.
+
+570
+00:20:47,280 --> 00:20:51,919
+So whether you're aiming for industry,
+
+571
+00:20:49,360 --> 00:20:55,520
+academia, or entrepreneurship, this is a
+
+572
+00:20:51,919 --> 00:20:57,440
+great space to be in.
+
+573
+00:20:55,520 --> 00:20:59,600
+When it comes to imaging modalities,
+
+574
+00:20:57,440 --> 00:21:02,480
+Connecticut and MRI continue to lead in
+
+575
+00:20:59,600 --> 00:21:04,559
+market share and clinical use. That's no
+
+576
+00:21:02,480 --> 00:21:06,320
+surprise. Both are incredibly versatile
+
+577
+00:21:04,559 --> 00:21:07,840
+and widely used across medical
+
+578
+00:21:06,320 --> 00:21:10,080
+specialties.
+
+579
+00:21:07,840 --> 00:21:12,720
+CT scans are fast and great for detailed
+
+580
+00:21:10,080 --> 00:21:15,200
+anatomical views. MRI provides
+
+581
+00:21:12,720 --> 00:21:17,200
+outstanding soft tissue contrast which
+
+582
+00:21:15,200 --> 00:21:18,960
+is essential in areas like cardiology
+
+583
+00:21:17,200 --> 00:21:20,400
+and neurology.
+
+584
+00:21:18,960 --> 00:21:22,880
+You might be surprised though that
+
+585
+00:21:20,400 --> 00:21:25,120
+nuclear imaging like PET and SPECT is
+
+586
+00:21:22,880 --> 00:21:26,960
+also a major player. These techniques
+
+587
+00:21:25,120 --> 00:21:29,280
+are critical for functional imaging and
+
+588
+00:21:26,960 --> 00:21:31,360
+cancer imaging. They are becoming more
+
+589
+00:21:29,280 --> 00:21:34,080
+popular as we move toward personalized
+
+590
+00:21:31,360 --> 00:21:36,480
+and molecular medicine. Each year
+
+591
+00:21:34,080 --> 00:21:38,480
+investment in these technologies grows.
+
+592
+00:21:36,480 --> 00:21:40,400
+The message is clear. The field is fast
+
+593
+00:21:38,480 --> 00:21:42,960
+evolving and there's a strong momentum
+
+594
+00:21:40,400 --> 00:21:46,000
+behind it.
+
+595
+00:21:42,960 --> 00:21:48,799
+So now that we've seen how vital CT,
+
+596
+00:21:46,000 --> 00:21:50,960
+MRI, and other imaging technologies are
+
+597
+00:21:48,799 --> 00:21:52,799
+in practice and in the global market,
+
+598
+00:21:50,960 --> 00:21:56,000
+here's something interesting to reflect
+
+599
+00:21:52,799 --> 00:21:58,000
+on. A few years ago, a survey asked
+
+600
+00:21:56,000 --> 00:22:00,000
+physicians and scientists to name the
+
+601
+00:21:58,000 --> 00:22:03,039
+most important technological innovation
+
+602
+00:22:00,000 --> 00:22:04,799
+of the entire 20th century. Think about
+
+603
+00:22:03,039 --> 00:22:06,480
+that. This included everything. the
+
+604
+00:22:04,799 --> 00:22:10,000
+internet, smartphones, even space
+
+605
+00:22:06,480 --> 00:22:12,400
+travel. And what came out on top?
+
+606
+00:22:10,000 --> 00:22:15,760
+Magnetic resonance imaging, MRI, and
+
+607
+00:22:12,400 --> 00:22:17,679
+computer tomography, CT. Not even close.
+
+608
+00:22:15,760 --> 00:22:19,760
+These tomographic imaging technologies
+
+609
+00:22:17,679 --> 00:22:22,400
+were voted number one by a considerable
+
+610
+00:22:19,760 --> 00:22:24,320
+margin. Why?
+
+611
+00:22:22,400 --> 00:22:26,799
+Because they fundamentally change how we
+
+612
+00:22:24,320 --> 00:22:28,799
+diagnose and treat diseases. They let us
+
+613
+00:22:26,799 --> 00:22:30,880
+see inside the human body in ways that
+
+614
+00:22:28,799 --> 00:22:34,080
+were never possible before, accurately,
+
+615
+00:22:30,880 --> 00:22:35,919
+non-invasively, and in real time.
+
+616
+00:22:34,080 --> 00:22:38,480
+As you go deeper into this course,
+
+617
+00:22:35,919 --> 00:22:40,080
+you'll learn how these systems work. So,
+
+618
+00:22:38,480 --> 00:22:42,480
+not only will you understand their
+
+619
+00:22:40,080 --> 00:22:44,720
+value, you'll also be able to explain it
+
+620
+00:22:42,480 --> 00:22:46,640
+confidently in say a job interview or a
+
+621
+00:22:44,720 --> 00:22:49,760
+professional conversation. That's
+
+622
+00:22:46,640 --> 00:22:51,679
+powerful knowledge.
+
+623
+00:22:49,760 --> 00:22:53,679
+Speaking of innovation, let's talk about
+
+624
+00:22:51,679 --> 00:22:56,080
+one of the major players in the field,
+
+625
+00:22:53,679 --> 00:22:58,240
+General Electric or GE in the
+
+626
+00:22:56,080 --> 00:23:01,039
+neighborhood of Renolier Polytenic
+
+627
+00:22:58,240 --> 00:23:03,120
+Institute. This is a company with a deep
+
+628
+00:23:01,039 --> 00:23:05,120
+history of technological contributions,
+
+629
+00:23:03,120 --> 00:23:08,240
+not just in medical imaging, but across
+
+630
+00:23:05,120 --> 00:23:09,919
+many industries. And interestingly, GE
+
+631
+00:23:08,240 --> 00:23:12,240
+also happens to be my initials, but
+
+632
+00:23:09,919 --> 00:23:14,000
+theirs is with a capital E. So, no
+
+633
+00:23:12,240 --> 00:23:16,559
+confusion.
+
+634
+00:23:14,000 --> 00:23:18,480
+GE was founded back in 1892, not long
+
+635
+00:23:16,559 --> 00:23:20,480
+after X-rays were discovered, and
+
+636
+00:23:18,480 --> 00:23:23,039
+Renelier Polytechnic Institute was
+
+637
+00:23:20,480 --> 00:23:25,200
+founded even earlier. So, these two
+
+638
+00:23:23,039 --> 00:23:26,960
+organizations have grown side by side,
+
+639
+00:23:25,200 --> 00:23:29,919
+both focused on pushing the boundaries
+
+640
+00:23:26,960 --> 00:23:31,520
+of science and technology.
+
+641
+00:23:29,919 --> 00:23:33,679
+GE has been part of some most
+
+642
+00:23:31,520 --> 00:23:36,159
+transformative developments in imaging
+
+643
+00:23:33,679 --> 00:23:38,559
+from early X-ray machines to advanced MR
+
+644
+00:23:36,159 --> 00:23:41,760
+scanners. They've really helped shape
+
+645
+00:23:38,559 --> 00:23:43,840
+this field.
+
+646
+00:23:41,760 --> 00:23:45,520
+Now within GE, one of the most important
+
+647
+00:23:43,840 --> 00:23:47,840
+innovation engines is their global
+
+648
+00:23:45,520 --> 00:23:50,720
+research center. This is where long-term
+
+649
+00:23:47,840 --> 00:23:53,120
+high impact R&D happens. Their record
+
+650
+00:23:50,720 --> 00:23:55,120
+speaks for itself. two Nobel prizes,
+
+651
+00:23:53,120 --> 00:23:57,600
+major contributions to physics,
+
+652
+00:23:55,120 --> 00:24:00,320
+chemistry, materials, energy, and of
+
+653
+00:23:57,600 --> 00:24:03,039
+course, medical imaging.
+
+654
+00:24:00,320 --> 00:24:05,760
+In 1984, they played a critical role in
+
+655
+00:24:03,039 --> 00:24:08,400
+the development of MRI systems. And in
+
+656
+00:24:05,760 --> 00:24:10,880
+1999, digital X-ray systems came out of
+
+657
+00:24:08,400 --> 00:24:12,880
+their labs. They've consistently been at
+
+658
+00:24:10,880 --> 00:24:15,600
+the forefront of translating ideas into
+
+659
+00:24:12,880 --> 00:24:17,679
+real world technologies. My lab and
+
+660
+00:24:15,600 --> 00:24:19,679
+global research center has been closely
+
+661
+00:24:17,679 --> 00:24:21,440
+collaborating on medical imaging over
+
+662
+00:24:19,679 --> 00:24:23,520
+decades.
+
+663
+00:24:21,440 --> 00:24:25,279
+So when we say medical imaging sits at
+
+664
+00:24:23,520 --> 00:24:27,600
+the cutting edge of innovation, we mean
+
+665
+00:24:25,279 --> 00:24:29,679
+it.
+
+666
+00:24:27,600 --> 00:24:32,720
+And what makes GE even more impressive
+
+667
+00:24:29,679 --> 00:24:34,559
+is the global reach of their research.
+
+668
+00:24:32,720 --> 00:24:36,799
+They have major centers across the US,
+
+669
+00:24:34,559 --> 00:24:38,720
+Europe, Asia, and South America. For
+
+670
+00:24:36,799 --> 00:24:41,679
+example, the Global Research Center in
+
+671
+00:24:38,720 --> 00:24:44,400
+Niskauna, New York, right near RPI, is
+
+672
+00:24:41,679 --> 00:24:46,559
+home to over a 100 labs and nearly 2,000
+
+673
+00:24:44,400 --> 00:24:48,320
+technologists.
+
+674
+00:24:46,559 --> 00:24:50,640
+For a student interested in imaging,
+
+675
+00:24:48,320 --> 00:24:52,400
+that's a golden opportunity. You can
+
+676
+00:24:50,640 --> 00:24:55,440
+collaborate, intern, or even launch a
+
+677
+00:24:52,400 --> 00:24:56,799
+career through the GE RPI partnership.
+
+678
+00:24:55,440 --> 00:24:58,960
+Some of you may want to go into
+
+679
+00:24:56,799 --> 00:25:01,360
+academia, others into entrepreneurship
+
+680
+00:24:58,960 --> 00:25:03,760
+or industry. Wherever you go, connecting
+
+681
+00:25:01,360 --> 00:25:06,080
+with innovation hubs like GE gives you a
+
+682
+00:25:03,760 --> 00:25:09,919
+head start. Especially in imaging, they
+
+683
+00:25:06,080 --> 00:25:11,919
+are a top tier industrial partner.
+
+684
+00:25:09,919 --> 00:25:13,679
+As we continue our journey into medical
+
+685
+00:25:11,919 --> 00:25:16,559
+imaging, let me take a moment to
+
+686
+00:25:13,679 --> 00:25:18,799
+introduce myself in a little more depth.
+
+687
+00:25:16,559 --> 00:25:20,320
+I'm Professor G. Wang and in addition to
+
+688
+00:25:18,799 --> 00:25:23,279
+teaching this course, I'm deeply
+
+689
+00:25:20,320 --> 00:25:25,200
+involved in research on medical imaging.
+
+690
+00:25:23,279 --> 00:25:27,279
+My work spans both the theoretical and
+
+691
+00:25:25,200 --> 00:25:29,520
+applied sides of the field. I've
+
+692
+00:25:27,279 --> 00:25:31,520
+dedicated much of my career to advancing
+
+693
+00:25:29,520 --> 00:25:34,880
+medical imaging science so that we can
+
+694
+00:25:31,520 --> 00:25:36,720
+better diagnose and treat disease.
+
+695
+00:25:34,880 --> 00:25:38,720
+If you're interested in exploring more
+
+696
+00:25:36,720 --> 00:25:41,520
+about my work, feel free to check out my
+
+697
+00:25:38,720 --> 00:25:45,799
+homepage and labs website where we share
+
+698
+00:25:41,520 --> 00:25:45,799
+updates on our latest projects.
+
+699
+00:25:45,840 --> 00:25:50,159
+Now, let me share a bit more about the
+
+700
+00:25:47,360 --> 00:25:51,840
+imaging program at RPI. My main
+
+701
+00:25:50,159 --> 00:25:54,559
+interests are in X-ray imaging and
+
+702
+00:25:51,840 --> 00:25:56,080
+optical imaging. I direct our biomedical
+
+703
+00:25:54,559 --> 00:25:58,400
+imaging center where we work on
+
+704
+00:25:56,080 --> 00:26:00,240
+advancing these technologies. One
+
+705
+00:25:58,400 --> 00:26:02,400
+exciting direction is how artificial
+
+706
+00:26:00,240 --> 00:26:04,400
+intelligence can help improve imaging,
+
+707
+00:26:02,400 --> 00:26:06,640
+making it faster, more accurate, and
+
+708
+00:26:04,400 --> 00:26:09,679
+more insightful.
+
+709
+00:26:06,640 --> 00:26:11,279
+This work doesn't happen in isolation. I
+
+710
+00:26:09,679 --> 00:26:13,600
+collaborate with outstanding colleagues
+
+711
+00:26:11,279 --> 00:26:15,919
+like Professor Xavier Ines a leader in
+
+712
+00:26:13,600 --> 00:26:18,880
+optical molecular tomography, Professor
+
+713
+00:26:15,919 --> 00:26:20,799
+Ping Kanyan, a leader in AI based image
+
+714
+00:26:18,880 --> 00:26:23,600
+analysis and healthcare analytics and
+
+715
+00:26:20,799 --> 00:26:26,000
+many others. Together we team up with
+
+716
+00:26:23,600 --> 00:26:28,799
+worldclass researchers from GE, Yale,
+
+717
+00:26:26,000 --> 00:26:31,200
+Wake Forest, MGH, Stanford, FDA and
+
+718
+00:26:28,799 --> 00:26:33,279
+other top institutions.
+
+719
+00:26:31,200 --> 00:26:34,799
+Our shared goal is to create imaging
+
+720
+00:26:33,279 --> 00:26:36,480
+solutions that are innovative,
+
+721
+00:26:34,799 --> 00:26:40,159
+influential and that truly make
+
+722
+00:26:36,480 --> 00:26:40,159
+differences in patient care.
+
+723
+00:26:40,400 --> 00:26:44,080
+These collaborations all come together
+
+724
+00:26:42,080 --> 00:26:46,240
+in a fantastic building, the Center for
+
+725
+00:26:44,080 --> 00:26:48,960
+Biotechnology and Interdisciplinary
+
+726
+00:26:46,240 --> 00:26:51,600
+Studies, or CBIS.
+
+727
+00:26:48,960 --> 00:26:53,760
+CBIS is more than just a building. It's
+
+728
+00:26:51,600 --> 00:26:55,679
+a hub where experts from biology,
+
+729
+00:26:53,760 --> 00:26:57,760
+engineering, and computing come together
+
+730
+00:26:55,679 --> 00:27:00,080
+to tackle big problems in science and
+
+731
+00:26:57,760 --> 00:27:02,000
+healthcare. It's where our imaging
+
+732
+00:27:00,080 --> 00:27:04,799
+center is rooted and where much of the
+
+733
+00:27:02,000 --> 00:27:07,360
+work that I've been describing happens.
+
+734
+00:27:04,799 --> 00:27:09,279
+Over the past decade, CBIS has been at
+
+735
+00:27:07,360 --> 00:27:11,120
+the forefront of interdisciplinary
+
+736
+00:27:09,279 --> 00:27:14,559
+research, and it continues to grow in
+
+737
+00:27:11,120 --> 00:27:17,120
+both scope and impact.
+
+738
+00:27:14,559 --> 00:27:19,039
+Now, I often like to say, if CBIS were a
+
+739
+00:27:17,120 --> 00:27:21,279
+coordinate system, my office would be
+
+740
+00:27:19,039 --> 00:27:22,960
+right at the origin.
+
+741
+00:27:21,279 --> 00:27:24,960
+Of course, for this online course, we're
+
+742
+00:27:22,960 --> 00:27:26,640
+not meeting in person, but the idea is
+
+743
+00:27:24,960 --> 00:27:29,440
+the same. I'm here as a resource for
+
+744
+00:27:26,640 --> 00:27:31,600
+you. The lectures, materials, and any
+
+745
+00:27:29,440 --> 00:27:33,600
+additional resources I share are all
+
+746
+00:27:31,600 --> 00:27:37,520
+designed to help you succeed and make
+
+747
+00:27:33,600 --> 00:27:39,760
+the most of this learning experience.
+
+748
+00:27:37,520 --> 00:27:42,159
+For the modality specific portion of the
+
+749
+00:27:39,760 --> 00:27:44,559
+course, the dark green section, we'll be
+
+750
+00:27:42,159 --> 00:27:47,520
+using the green textbook, Introduction
+
+751
+00:27:44,559 --> 00:27:49,440
+to Biomedical Imaging by Andrew Webb.
+
+752
+00:27:47,520 --> 00:27:51,440
+It's available online or through our
+
+753
+00:27:49,440 --> 00:27:53,039
+university bookstore.
+
+754
+00:27:51,440 --> 00:27:54,320
+This book isn't very thick, but it's
+
+755
+00:27:53,039 --> 00:27:56,799
+well structured and written with
+
+756
+00:27:54,320 --> 00:27:58,799
+clarity. Even though it was published a
+
+757
+00:27:56,799 --> 00:28:01,279
+while ago, the fundamental principles it
+
+758
+00:27:58,799 --> 00:28:04,399
+covers haven't changed.
+
+759
+00:28:01,279 --> 00:28:06,240
+Physics is timeless in that way. We'll
+
+760
+00:28:04,399 --> 00:28:08,159
+supplement the book with more recent
+
+761
+00:28:06,240 --> 00:28:10,720
+findings, particularly in areas like
+
+762
+00:28:08,159 --> 00:28:13,679
+deep learning for image reconstruction,
+
+763
+00:28:10,720 --> 00:28:15,760
+lowdose imaging, and multimodal fusion,
+
+764
+00:28:13,679 --> 00:28:19,039
+advances that have significantly shaped
+
+765
+00:28:15,760 --> 00:28:20,880
+the field over past several years.
+
+766
+00:28:19,039 --> 00:28:22,399
+The textbook will guide your learning,
+
+767
+00:28:20,880 --> 00:28:24,720
+especially in the second part of the
+
+768
+00:28:22,399 --> 00:28:27,039
+course. For the foundation topics like
+
+769
+00:28:24,720 --> 00:28:29,039
+linear systems and forier theory, we'll
+
+770
+00:28:27,039 --> 00:28:30,640
+use tailored lecture notes and curated
+
+771
+00:28:29,039 --> 00:28:32,480
+readings because unfortunately there's
+
+772
+00:28:30,640 --> 00:28:34,720
+no single book that explains everything
+
+773
+00:28:32,480 --> 00:28:37,440
+in a concise and consistent manner for
+
+774
+00:28:34,720 --> 00:28:39,440
+students from all backgrounds.
+
+775
+00:28:37,440 --> 00:28:41,120
+So keep this in mind. While you may rely
+
+776
+00:28:39,440 --> 00:28:43,120
+on the textbook for the modality
+
+777
+00:28:41,120 --> 00:28:44,960
+section, the theoretical part of the
+
+778
+00:28:43,120 --> 00:28:47,760
+course will require close attention to
+
+779
+00:28:44,960 --> 00:28:49,279
+lecture materials and exercises.
+
+780
+00:28:47,760 --> 00:28:50,960
+That's where most students need the
+
+781
+00:28:49,279 --> 00:28:53,600
+extra help, and that's why we're here to
+
+782
+00:28:50,960 --> 00:28:55,600
+support you.
+
+783
+00:28:53,600 --> 00:28:57,600
+In addition to our course materials, I'd
+
+784
+00:28:55,600 --> 00:29:00,080
+like to mention a particularly helpful
+
+785
+00:28:57,600 --> 00:29:01,840
+supplementary resource that aligns well
+
+786
+00:29:00,080 --> 00:29:04,399
+with the foundation we're covering,
+
+787
+00:29:01,840 --> 00:29:07,440
+especially Forier Transforms and Linear
+
+788
+00:29:04,399 --> 00:29:10,240
+Systems. Stanford University offers an
+
+789
+00:29:07,440 --> 00:29:12,000
+excellent course titled E261,
+
+790
+00:29:10,240 --> 00:29:14,480
+the Forier Transform and its
+
+791
+00:29:12,000 --> 00:29:16,480
+Applications. It's taught by Professor
+
+792
+00:29:14,480 --> 00:29:18,480
+Brad Osgood and the best part is that it
+
+793
+00:29:16,480 --> 00:29:21,279
+is freely available online through
+
+794
+00:29:18,480 --> 00:29:22,960
+Stanford's C platform. You can access
+
+795
+00:29:21,279 --> 00:29:25,760
+the full textbook there and watch
+
+796
+00:29:22,960 --> 00:29:27,279
+highquality lecture videos.
+
+797
+00:29:25,760 --> 00:29:29,039
+Now, a quick word of caution. The
+
+798
+00:29:27,279 --> 00:29:31,679
+Stanford course spans an entire
+
+799
+00:29:29,039 --> 00:29:34,240
+semester. The book is over 400 pages
+
+800
+00:29:31,679 --> 00:29:35,760
+long. Don't feel overwhelmed. You
+
+801
+00:29:34,240 --> 00:29:38,399
+absolutely do not need to cover all of
+
+802
+00:29:35,760 --> 00:29:40,559
+it. Think of it as a reference companion
+
+803
+00:29:38,399 --> 00:29:43,360
+to our course. In fact, for our
+
+804
+00:29:40,559 --> 00:29:45,200
+purposes, reading even 8,100 pages from
+
+805
+00:29:43,360 --> 00:29:48,799
+selected sections will be more than
+
+806
+00:29:45,200 --> 00:29:51,039
+enough to reinforce your understanding.
+
+807
+00:29:48,799 --> 00:29:52,799
+What makes this resource valuable is the
+
+808
+00:29:51,039 --> 00:29:55,760
+clarity and consistency of its
+
+809
+00:29:52,799 --> 00:29:57,760
+explanations and mathematical treatment.
+
+810
+00:29:55,760 --> 00:29:59,840
+It builds the theory from the ground up
+
+811
+00:29:57,760 --> 00:30:02,240
+with elegant examples and a style that's
+
+812
+00:29:59,840 --> 00:30:04,320
+both rigorous and readable. If you ever
+
+813
+00:30:02,240 --> 00:30:06,480
+find yourself puzzled by a concept I
+
+814
+00:30:04,320 --> 00:30:09,360
+introduce, say the derivation of the
+
+815
+00:30:06,480 --> 00:30:11,600
+Furier series or the intuition behind
+
+816
+00:30:09,360 --> 00:30:13,919
+convolution, this book can offer a
+
+817
+00:30:11,600 --> 00:30:15,600
+second viewpoint. Sometimes a slightly
+
+818
+00:30:13,919 --> 00:30:17,600
+different presentation is all you need
+
+819
+00:30:15,600 --> 00:30:19,279
+for clarity.
+
+820
+00:30:17,600 --> 00:30:22,080
+However, please note that we will follow
+
+821
+00:30:19,279 --> 00:30:24,320
+our own structured path in this course.
+
+822
+00:30:22,080 --> 00:30:26,640
+For example, I introduce linear systems
+
+823
+00:30:24,320 --> 00:30:28,720
+before forier transforms because in
+
+824
+00:30:26,640 --> 00:30:30,960
+imaging systems thinking provides the
+
+825
+00:30:28,720 --> 00:30:33,279
+conceptual grounding. The Stanford
+
+826
+00:30:30,960 --> 00:30:35,200
+course takes the reverse order. Both are
+
+827
+00:30:33,279 --> 00:30:37,039
+valid but here we start with linear
+
+828
+00:30:35,200 --> 00:30:39,520
+systems to better prepare for their
+
+829
+00:30:37,039 --> 00:30:42,240
+applications in imaging modalities like
+
+830
+00:30:39,520 --> 00:30:44,320
+CT and MRI.
+
+831
+00:30:42,240 --> 00:30:46,640
+Please use this Stanford material as a
+
+832
+00:30:44,320 --> 00:30:48,640
+valuable supplement, not a replacement.
+
+833
+00:30:46,640 --> 00:30:50,799
+You'll benefit most by following our
+
+834
+00:30:48,640 --> 00:30:53,039
+course flow carefully and referring to
+
+835
+00:30:50,799 --> 00:30:56,559
+the Stanford book only when you want to
+
+836
+00:30:53,039 --> 00:30:58,320
+go deeper or review challenging topics.
+
+837
+00:30:56,559 --> 00:31:00,480
+Lastly, although I have reached out for
+
+838
+00:30:58,320 --> 00:31:02,320
+formal permission, the material seems
+
+839
+00:31:00,480 --> 00:31:04,799
+publicly accessible and openly shared
+
+840
+00:31:02,320 --> 00:31:06,480
+for educational use. So, feel free to
+
+841
+00:31:04,799 --> 00:31:10,399
+explore it from your own dorm room, your
+
+842
+00:31:06,480 --> 00:31:12,399
+library, or anywhere you study.
+
+843
+00:31:10,399 --> 00:31:14,399
+In this course, you'll have access to a
+
+844
+00:31:12,399 --> 00:31:16,880
+complete set of digital resources to
+
+845
+00:31:14,399 --> 00:31:18,720
+support your learning. We've included
+
+846
+00:31:16,880 --> 00:31:21,279
+professionally recorded video lectures
+
+847
+00:31:18,720 --> 00:31:23,200
+so you can review key concepts anytime.
+
+848
+00:31:21,279 --> 00:31:25,039
+All PowerPoint slides used in the course
+
+849
+00:31:23,200 --> 00:31:26,640
+are also available for download and
+
+850
+00:31:25,039 --> 00:31:28,880
+review.
+
+851
+00:31:26,640 --> 00:31:31,360
+For the modality sections, the textbook
+
+852
+00:31:28,880 --> 00:31:33,520
+is available as hard copy and PDF,
+
+853
+00:31:31,360 --> 00:31:36,080
+making it easy to follow along, even to
+
+854
+00:31:33,520 --> 00:31:37,600
+search specific topics digitally. The
+
+855
+00:31:36,080 --> 00:31:39,279
+course schedule follows a well
+
+856
+00:31:37,600 --> 00:31:41,600
+ststructured plan from previous
+
+857
+00:31:39,279 --> 00:31:45,279
+offerings with minor updates to reflect
+
+858
+00:31:41,600 --> 00:31:46,960
+some latest progress in imaging science.
+
+859
+00:31:45,279 --> 00:31:49,200
+These materials are here to help you
+
+860
+00:31:46,960 --> 00:31:51,360
+succeed. Use them actively as we explore
+
+861
+00:31:49,200 --> 00:31:55,000
+the foundation materials and modalities
+
+862
+00:31:51,360 --> 00:31:55,000
+of medical imaging.
+
+863
+00:31:55,120 --> 00:31:58,559
+Continuing from our previous
+
+864
+00:31:56,480 --> 00:32:00,559
+discussions, let's dive into the physics
+
+865
+00:31:58,559 --> 00:32:03,039
+of X-ray imaging and how we can collect
+
+866
+00:32:00,559 --> 00:32:05,600
+and process data to reconstruct an
+
+867
+00:32:03,039 --> 00:32:07,679
+image. In X-ray imaging, we start with
+
+868
+00:32:05,600 --> 00:32:10,240
+the concept of a line integral.
+
+869
+00:32:07,679 --> 00:32:12,159
+Essentially, the X-rays pass through the
+
+870
+00:32:10,240 --> 00:32:15,039
+object and what we measure is the energy
+
+871
+00:32:12,159 --> 00:32:16,960
+of penetrated X-ray photons and then
+
+872
+00:32:15,039 --> 00:32:19,679
+compute the line integral along the
+
+873
+00:32:16,960 --> 00:32:22,480
+X-ray path. Such line integrals together
+
+874
+00:32:19,679 --> 00:32:24,240
+form the radon transform. To make it
+
+875
+00:32:22,480 --> 00:32:25,919
+simpler, imagine you have an object and
+
+876
+00:32:24,240 --> 00:32:27,840
+you put all line integrals from a
+
+877
+00:32:25,919 --> 00:32:29,919
+specific direction to form an X-ray
+
+878
+00:32:27,840 --> 00:32:31,679
+projection. This projection is a
+
+879
+00:32:29,919 --> 00:32:33,279
+one-dimensional profile which is the
+
+880
+00:32:31,679 --> 00:32:35,360
+information you can get along all the
+
+881
+00:32:33,279 --> 00:32:38,080
+X-ray paths passing through the object
+
+882
+00:32:35,360 --> 00:32:40,000
+in that direction.
+
+883
+00:32:38,080 --> 00:32:42,880
+Now let's take this idea into the realm
+
+884
+00:32:40,000 --> 00:32:46,320
+of mathematics. We start with a 2D image
+
+885
+00:32:42,880 --> 00:32:48,240
+denoted as fxy.
+
+886
+00:32:46,320 --> 00:32:50,799
+When we have all X-ray projections or
+
+887
+00:32:48,240 --> 00:32:53,200
+the radon transform, we get a new 2D
+
+888
+00:32:50,799 --> 00:32:55,679
+function P theta T where T is the
+
+889
+00:32:53,200 --> 00:32:59,440
+coordinate along the 1D detector array
+
+890
+00:32:55,679 --> 00:33:01,600
+and theta is the projection orientation.
+
+891
+00:32:59,440 --> 00:33:03,840
+By changing the angle theta, we rotate
+
+892
+00:33:01,600 --> 00:33:06,320
+the data acquisition system to gather
+
+893
+00:33:03,840 --> 00:33:08,320
+X-ray projections.
+
+894
+00:33:06,320 --> 00:33:10,480
+Now the magic happens when we flip the
+
+895
+00:33:08,320 --> 00:33:12,159
+process around. Given this collected
+
+896
+00:33:10,480 --> 00:33:15,440
+projection data set, our goal is to
+
+897
+00:33:12,159 --> 00:33:17,200
+reconstruct the original 2D image f(xy).
+
+898
+00:33:15,440 --> 00:33:19,039
+This is the inverse process. And here's
+
+899
+00:33:17,200 --> 00:33:21,600
+where things get interesting. By perform
+
+900
+00:33:19,039 --> 00:33:23,519
+the 1D forier trans of each and every of
+
+901
+00:33:21,600 --> 00:33:25,760
+the 1D projections, we move into the
+
+902
+00:33:23,519 --> 00:33:28,000
+forier domain.
+
+903
+00:33:25,760 --> 00:33:29,840
+To put it simply, the 1D projections we
+
+904
+00:33:28,000 --> 00:33:32,720
+collect represent profiles in the
+
+905
+00:33:29,840 --> 00:33:34,240
+frequency domain. By rotating the data
+
+906
+00:33:32,720 --> 00:33:36,559
+acquisition system, we eventually
+
+907
+00:33:34,240 --> 00:33:38,559
+capture the entire forier space. And
+
+908
+00:33:36,559 --> 00:33:40,720
+once we have all the data in the forier
+
+909
+00:33:38,559 --> 00:33:43,039
+space, we can apply the inverse forier
+
+910
+00:33:40,720 --> 00:33:46,000
+transform to reconstruct the original
+
+911
+00:33:43,039 --> 00:33:48,399
+image. This process connects the data
+
+912
+00:33:46,000 --> 00:33:50,640
+from the physical object to the forier
+
+913
+00:33:48,399 --> 00:33:52,720
+spectrum of the underlying image and
+
+914
+00:33:50,640 --> 00:33:55,600
+from the forier spectrum we can
+
+915
+00:33:52,720 --> 00:33:57,440
+reconstruct the original image. While
+
+916
+00:33:55,600 --> 00:33:59,279
+this overview gives you the fundamental
+
+917
+00:33:57,440 --> 00:34:01,519
+idea, later in the course we'll dive
+
+918
+00:33:59,279 --> 00:34:03,360
+deeper into the forier transform, why
+
+919
+00:34:01,519 --> 00:34:05,600
+they can be inverted and how this
+
+920
+00:34:03,360 --> 00:34:08,399
+mathematical framework ties directly to
+
+921
+00:34:05,600 --> 00:34:10,720
+the imaging process. But for now, keep
+
+922
+00:34:08,399 --> 00:34:13,119
+in mind that the forward process, how we
+
+923
+00:34:10,720 --> 00:34:15,119
+collect data, and the inverse process,
+
+924
+00:34:13,119 --> 00:34:17,119
+how we reconstruct the image, are two
+
+925
+00:34:15,119 --> 00:34:20,639
+sides of the same coin, closely linked
+
+926
+00:34:17,119 --> 00:34:22,639
+by fur analysis.
+
+927
+00:34:20,639 --> 00:34:24,720
+Continuing with our exploration of
+
+928
+00:34:22,639 --> 00:34:27,839
+imaging modalities, let's now discuss
+
+929
+00:34:24,720 --> 00:34:29,839
+posetron emission tomography or PET.
+
+930
+00:34:27,839 --> 00:34:32,000
+While the previous imaging techniques
+
+931
+00:34:29,839 --> 00:34:34,800
+focused on capturing the anatomical
+
+932
+00:34:32,000 --> 00:34:36,960
+structure, PET offers a powerful way to
+
+933
+00:34:34,800 --> 00:34:40,320
+visualize the functional activity in the
+
+934
+00:34:36,960 --> 00:34:42,079
+human body. So, how does it work? Well,
+
+935
+00:34:40,320 --> 00:34:44,800
+the key to PET is the introduction of
+
+936
+00:34:42,079 --> 00:34:46,480
+radioactive tracers into the body. These
+
+937
+00:34:44,800 --> 00:34:48,000
+tracers are typically radioactive
+
+938
+00:34:46,480 --> 00:34:50,399
+chemicals that participate in your
+
+939
+00:34:48,000 --> 00:34:52,320
+body's metabolic processes.
+
+940
+00:34:50,399 --> 00:34:55,520
+For example, tumors tend to consume a
+
+941
+00:34:52,320 --> 00:34:58,320
+lot of glucose. If we couple glucose
+
+942
+00:34:55,520 --> 00:35:00,560
+molecules with a radioactive tracer, we
+
+943
+00:34:58,320 --> 00:35:02,480
+can track how much glucose the tumor is
+
+944
+00:35:00,560 --> 00:35:04,960
+using, which directly correlates with
+
+945
+00:35:02,480 --> 00:35:06,960
+its activity. Tumors, which are often
+
+946
+00:35:04,960 --> 00:35:09,280
+highly metabolic, will naturally absorb
+
+947
+00:35:06,960 --> 00:35:11,440
+more of this tracer.
+
+948
+00:35:09,280 --> 00:35:13,520
+Once the PET tracer is in the body, it
+
+949
+00:35:11,440 --> 00:35:16,079
+begins to emit gammaray photons in
+
+950
+00:35:13,520 --> 00:35:18,480
+pairs. And two photons in a pair will
+
+951
+00:35:16,079 --> 00:35:20,640
+travel in opposite directions. Gamma
+
+952
+00:35:18,480 --> 00:35:22,160
+rays, much like X-rays, can penetrate
+
+953
+00:35:20,640 --> 00:35:23,680
+through tissues and be detected
+
+954
+00:35:22,160 --> 00:35:25,839
+externally.
+
+955
+00:35:23,680 --> 00:35:27,839
+When we receive gamma ray photons from
+
+956
+00:35:25,839 --> 00:35:29,920
+two different detector locations, we
+
+957
+00:35:27,839 --> 00:35:31,920
+know they originated from the same event
+
+958
+00:35:29,920 --> 00:35:33,920
+somewhere on the line connecting the two
+
+959
+00:35:31,920 --> 00:35:35,520
+detectors.
+
+960
+00:35:33,920 --> 00:35:37,599
+This process is similar to the
+
+961
+00:35:35,520 --> 00:35:40,800
+measurement of line integrals used for
+
+962
+00:35:37,599 --> 00:35:43,520
+CT. Then we can apply Furier analysis to
+
+963
+00:35:40,800 --> 00:35:45,280
+reconstruct the images in PET. Furier
+
+964
+00:35:43,520 --> 00:35:46,880
+transforms help us create detailed
+
+965
+00:35:45,280 --> 00:35:49,359
+functional images of the body's
+
+966
+00:35:46,880 --> 00:35:51,040
+processes. The goal here is to
+
+967
+00:35:49,359 --> 00:35:53,520
+understand how much activities are
+
+968
+00:35:51,040 --> 00:35:55,520
+happening at specific locations. So
+
+969
+00:35:53,520 --> 00:35:58,240
+while we've seen how CT gives us
+
+970
+00:35:55,520 --> 00:36:00,560
+anatomical details, PET allows us to
+
+971
+00:35:58,240 --> 00:36:03,760
+observe the biological functions like
+
+972
+00:36:00,560 --> 00:36:06,079
+metabolism within those structures.
+
+973
+00:36:03,760 --> 00:36:08,560
+This modality is especially useful for
+
+974
+00:36:06,079 --> 00:36:10,480
+identifying cancerous tissues, studying
+
+975
+00:36:08,560 --> 00:36:12,880
+brain function, and even monitoring
+
+976
+00:36:10,480 --> 00:36:15,119
+heart conditions. Later, we'll explain
+
+977
+00:36:12,880 --> 00:36:17,200
+how the gammaray photons are detected
+
+978
+00:36:15,119 --> 00:36:20,079
+and processed to reconstruct these
+
+979
+00:36:17,200 --> 00:36:22,480
+functional images. But for now, remember
+
+980
+00:36:20,079 --> 00:36:24,480
+that PET imaging provides us with a way
+
+981
+00:36:22,480 --> 00:36:26,480
+to look inside the body, not just for
+
+982
+00:36:24,480 --> 00:36:30,560
+its structure, but also for how
+
+983
+00:36:26,480 --> 00:36:32,400
+physiology is actively working.
+
+984
+00:36:30,560 --> 00:36:34,240
+Now, let's explore a closely related
+
+985
+00:36:32,400 --> 00:36:36,480
+imaging technique in nuclear medicine
+
+986
+00:36:34,240 --> 00:36:39,839
+called single photon emission computed
+
+987
+00:36:36,480 --> 00:36:42,480
+tomography or spec. While posatron
+
+988
+00:36:39,839 --> 00:36:44,560
+emission tomography PET relies on the
+
+989
+00:36:42,480 --> 00:36:46,880
+detection of paired gammaray photons
+
+990
+00:36:44,560 --> 00:36:49,599
+emitted from the tracer, spec works
+
+991
+00:36:46,880 --> 00:36:51,680
+differently. In spec, the radio tracer
+
+992
+00:36:49,599 --> 00:36:53,839
+emits gammaray photons randomly and
+
+993
+00:36:51,680 --> 00:36:55,680
+individually without being paired.
+
+994
+00:36:53,839 --> 00:36:57,599
+Essentially, instead of detecting two
+
+995
+00:36:55,680 --> 00:36:59,920
+photons coming from opposite directions,
+
+996
+00:36:57,599 --> 00:37:01,920
+as we do in PET, we measure single
+
+997
+00:36:59,920 --> 00:37:04,880
+gammaray photons emitted from a
+
+998
+00:37:01,920 --> 00:37:06,560
+radioactive tracer within the body. When
+
+999
+00:37:04,880 --> 00:37:08,480
+a photon is detected through a
+
+1000
+00:37:06,560 --> 00:37:10,240
+columator, we know it came from a
+
+1001
+00:37:08,480 --> 00:37:12,320
+particular path through the patient
+
+1002
+00:37:10,240 --> 00:37:14,240
+body. But since the photons are not
+
+1003
+00:37:12,320 --> 00:37:16,400
+paired, we need to use different data
+
+1004
+00:37:14,240 --> 00:37:19,200
+pre-processing and image reconstruction
+
+1005
+00:37:16,400 --> 00:37:20,640
+methods. Spec provides valuable
+
+1006
+00:37:19,200 --> 00:37:23,520
+information, but it's a bit different
+
+1007
+00:37:20,640 --> 00:37:25,359
+from PET. In spec, we capture these
+
+1008
+00:37:23,520 --> 00:37:27,359
+single photons from various angles
+
+1009
+00:37:25,359 --> 00:37:29,599
+around the body and use dedicated
+
+1010
+00:37:27,359 --> 00:37:32,160
+tomographic reconstruction techniques to
+
+1011
+00:37:29,599 --> 00:37:34,240
+create an image. We'll discuss the
+
+1012
+00:37:32,160 --> 00:37:36,160
+details of spec imaging later in the
+
+1013
+00:37:34,240 --> 00:37:38,560
+course, but for now, keep in mind that
+
+1014
+00:37:36,160 --> 00:37:40,240
+while PET relies on paired photons to
+
+1015
+00:37:38,560 --> 00:37:43,119
+provide highly precise spatial
+
+1016
+00:37:40,240 --> 00:37:45,040
+information, SPEC uses single photons to
+
+1017
+00:37:43,119 --> 00:37:47,839
+gather functional information in a
+
+1018
+00:37:45,040 --> 00:37:49,920
+different way. Both PET and SPEC produce
+
+1019
+00:37:47,839 --> 00:37:52,640
+tomographic images of radioracer
+
+1020
+00:37:49,920 --> 00:37:54,240
+activities.
+
+1021
+00:37:52,640 --> 00:37:56,640
+Now, let's turn our attention to the
+
+1022
+00:37:54,240 --> 00:37:59,440
+third major imaging modality, magnetic
+
+1023
+00:37:56,640 --> 00:38:01,680
+resonance imaging or MRI.
+
+1024
+00:37:59,440 --> 00:38:03,839
+MRI uses a completely different approach
+
+1025
+00:38:01,680 --> 00:38:06,480
+compared to X-ray and nuclear imaging
+
+1026
+00:38:03,839 --> 00:38:09,040
+techniques, including PET and SPECT. In
+
+1027
+00:38:06,480 --> 00:38:11,839
+MRI, we utilize radio frequency signals
+
+1028
+00:38:09,040 --> 00:38:13,920
+to gather detailed images of the body.
+
+1029
+00:38:11,839 --> 00:38:15,920
+Here's how it works. First, we subject
+
+1030
+00:38:13,920 --> 00:38:18,320
+the patient to a very strong magnetic
+
+1031
+00:38:15,920 --> 00:38:20,640
+field. This magnetic field aligns the
+
+1032
+00:38:18,320 --> 00:38:23,280
+hydrogen nuclei, which are abundant in
+
+1033
+00:38:20,640 --> 00:38:24,960
+water molecules in your body. You can
+
+1034
+00:38:23,280 --> 00:38:27,839
+think of it like tiny compass needles
+
+1035
+00:38:24,960 --> 00:38:29,359
+scattered randomly. Without a magnetic
+
+1036
+00:38:27,839 --> 00:38:32,160
+field, they all point in different
+
+1037
+00:38:29,359 --> 00:38:34,240
+directions. But once the strong magnetic
+
+1038
+00:38:32,160 --> 00:38:36,400
+field is applied, most of them line up
+
+1039
+00:38:34,240 --> 00:38:38,079
+neatly, just like compasses pointing
+
+1040
+00:38:36,400 --> 00:38:40,480
+north.
+
+1041
+00:38:38,079 --> 00:38:42,240
+Then we introduce a radio frequency RF
+
+1042
+00:38:40,480 --> 00:38:44,480
+signal that briefly disrupts this
+
+1043
+00:38:42,240 --> 00:38:46,240
+alignment, causing the hydrogen nuclei
+
+1044
+00:38:44,480 --> 00:38:48,320
+to emit their own radio frequency
+
+1045
+00:38:46,240 --> 00:38:51,359
+signals as they return to their original
+
+1046
+00:38:48,320 --> 00:38:53,280
+stable state. The key advantage of MRI
+
+1047
+00:38:51,359 --> 00:38:54,800
+is that it is sensitive to the water
+
+1048
+00:38:53,280 --> 00:38:56,960
+content in different tissues and
+
+1049
+00:38:54,800 --> 00:38:59,280
+interactions of hydrogen nuclei with
+
+1050
+00:38:56,960 --> 00:39:01,040
+their micro environments which makes MRI
+
+1051
+00:38:59,280 --> 00:39:02,800
+extremely useful for imaging soft
+
+1052
+00:39:01,040 --> 00:39:05,680
+tissues like the brain, muscles and
+
+1053
+00:39:02,800 --> 00:39:07,920
+organs. The signal we collect can give
+
+1054
+00:39:05,680 --> 00:39:10,320
+us a lot of valuable information such as
+
+1055
+00:39:07,920 --> 00:39:12,079
+chemical shifts in tissues which help us
+
+1056
+00:39:10,320 --> 00:39:14,320
+distinguish between different types of
+
+1057
+00:39:12,079 --> 00:39:16,800
+tissues and even detect abnormalities
+
+1058
+00:39:14,320 --> 00:39:18,880
+like tumors or inflammation.
+
+1059
+00:39:16,800 --> 00:39:20,880
+MRI is also great for studying brain
+
+1060
+00:39:18,880 --> 00:39:23,520
+activity as the technique can be used to
+
+1061
+00:39:20,880 --> 00:39:25,440
+observe changes in blood flow over time.
+
+1062
+00:39:23,520 --> 00:39:27,200
+This makes MRI not only a structural
+
+1063
+00:39:25,440 --> 00:39:28,480
+imaging tool but also a functional one
+
+1064
+00:39:27,200 --> 00:39:30,960
+adding a layer of depth to our
+
+1065
+00:39:28,480 --> 00:39:33,680
+understanding of the body. Together with
+
+1066
+00:39:30,960 --> 00:39:36,160
+CT and nuclear imaging techniques, MRI
+
+1067
+00:39:33,680 --> 00:39:37,680
+forms the trio of most important imaging
+
+1068
+00:39:36,160 --> 00:39:40,240
+modalities.
+
+1069
+00:39:37,680 --> 00:39:42,640
+While CT focuses on capturing detailed
+
+1070
+00:39:40,240 --> 00:39:44,800
+anatomical structures using X-rays and
+
+1071
+00:39:42,640 --> 00:39:47,520
+nuclear imaging provides insight into
+
+1072
+00:39:44,800 --> 00:39:50,079
+physiological functions, MRI offers
+
+1073
+00:39:47,520 --> 00:39:52,400
+unmatched soft tissue contrast and the
+
+1074
+00:39:50,079 --> 00:39:55,040
+ability to examine both structure and
+
+1075
+00:39:52,400 --> 00:39:58,960
+function in a non-invasive way, even
+
+1076
+00:39:55,040 --> 00:40:01,119
+into our thinking processes.
+
+1077
+00:39:58,960 --> 00:40:02,560
+Now, let's look at ultrasound imaging.
+
+1078
+00:40:01,119 --> 00:40:04,320
+While it might not be as widely
+
+1079
+00:40:02,560 --> 00:40:07,359
+discussed or as advanced as the big
+
+1080
+00:40:04,320 --> 00:40:08,960
+three, CT, nuclear imaging, and MRI,
+
+1081
+00:40:07,359 --> 00:40:11,119
+ultrasound remains a powerful,
+
+1082
+00:40:08,960 --> 00:40:13,200
+affordable, and safe imaging tool in
+
+1083
+00:40:11,119 --> 00:40:15,359
+medical practice and seems playing an
+
+1084
+00:40:13,200 --> 00:40:18,000
+increasingly important role for point of
+
+1085
+00:40:15,359 --> 00:40:19,599
+care imaging. So, how does ultrasound
+
+1086
+00:40:18,000 --> 00:40:21,359
+work?
+
+1087
+00:40:19,599 --> 00:40:23,839
+It operates based on the principle of
+
+1088
+00:40:21,359 --> 00:40:25,520
+mechanical vibrations. In ultrasound
+
+1089
+00:40:23,839 --> 00:40:27,760
+imaging, we use a device called a
+
+1090
+00:40:25,520 --> 00:40:30,880
+transducer, which contains PZO electric
+
+1091
+00:40:27,760 --> 00:40:33,040
+materials. These materials can generate
+
+1092
+00:40:30,880 --> 00:40:35,200
+highfrequency sound waves when subjected
+
+1093
+00:40:33,040 --> 00:40:37,839
+to an electric current. These sound
+
+1094
+00:40:35,200 --> 00:40:39,599
+waves are then sent into the body. As
+
+1095
+00:40:37,839 --> 00:40:41,280
+the sound waves travel through tissues,
+
+1096
+00:40:39,599 --> 00:40:43,599
+they interact with various structures
+
+1097
+00:40:41,280 --> 00:40:45,280
+inside the body. Some waves are
+
+1098
+00:40:43,599 --> 00:40:48,000
+reflected and others continue through
+
+1099
+00:40:45,280 --> 00:40:50,320
+the tissues. The reflected waves are
+
+1100
+00:40:48,000 --> 00:40:52,640
+detected by the transducer. And from
+
+1101
+00:40:50,320 --> 00:40:55,040
+this data, we can reconstruct an image
+
+1102
+00:40:52,640 --> 00:40:56,880
+of the internal structures. Essentially,
+
+1103
+00:40:55,040 --> 00:40:59,839
+we're mapping the body's anatomy based
+
+1104
+00:40:56,880 --> 00:41:01,280
+on how sound waves bounce off tissues.
+
+1105
+00:40:59,839 --> 00:41:03,520
+One of the greatest benefits of
+
+1106
+00:41:01,280 --> 00:41:06,319
+ultrasound is that it's non-invasive and
+
+1107
+00:41:03,520 --> 00:41:08,400
+completely safe. Unlike X-rays or CT
+
+1108
+00:41:06,319 --> 00:41:10,400
+scans, ultrasound doesn't involve
+
+1109
+00:41:08,400 --> 00:41:12,560
+ionizing radiation.
+
+1110
+00:41:10,400 --> 00:41:14,720
+It's also incredibly cost effective and
+
+1111
+00:41:12,560 --> 00:41:18,079
+high speed, which makes it a go-to tool
+
+1112
+00:41:14,720 --> 00:41:20,079
+for many real-time imaging tasks. You'll
+
+1113
+00:41:18,079 --> 00:41:22,240
+often see it used during fetal imaging
+
+1114
+00:41:20,079 --> 00:41:25,520
+in pregnancy as well as in blood flow
+
+1115
+00:41:22,240 --> 00:41:27,280
+monitoring and guiding biopsies.
+
+1116
+00:41:25,520 --> 00:41:30,240
+While it may not provide the same level
+
+1117
+00:41:27,280 --> 00:41:32,480
+of detail as MRI or CT, ultrasound's
+
+1118
+00:41:30,240 --> 00:41:34,319
+affordability, speed, and safety make it
+
+1119
+00:41:32,480 --> 00:41:36,960
+a valuable tool for many clinical
+
+1120
+00:41:34,319 --> 00:41:38,640
+applications. Coupled with AI methods,
+
+1121
+00:41:36,960 --> 00:41:41,640
+ultrasound imaging has yet more to
+
+1122
+00:41:38,640 --> 00:41:41,640
+offer.
+
+1123
+00:41:42,160 --> 00:41:46,319
+Now, let's talk about optical imaging.
+
+1124
+00:41:44,160 --> 00:41:48,800
+Another fascinating imaging modality
+
+1125
+00:41:46,319 --> 00:41:50,560
+that uses visible and infrared light.
+
+1126
+00:41:48,800 --> 00:41:53,040
+Unlike the other imaging techniques
+
+1127
+00:41:50,560 --> 00:41:55,280
+we've discussed, optical imaging focuses
+
+1128
+00:41:53,040 --> 00:41:57,280
+on how light interacts with cells,
+
+1129
+00:41:55,280 --> 00:42:00,240
+allowing us to reveal molecular and
+
+1130
+00:41:57,280 --> 00:42:02,720
+cellular interactions in the body. One
+
+1131
+00:42:00,240 --> 00:42:04,800
+unique aspect of optical imaging is its
+
+1132
+00:42:02,720 --> 00:42:06,880
+ability to extract signatures from these
+
+1133
+00:42:04,800 --> 00:42:08,480
+biological interactions, providing
+
+1134
+00:42:06,880 --> 00:42:10,800
+valuable information about what's
+
+1135
+00:42:08,480 --> 00:42:13,119
+happening at a microscopic level. This
+
+1136
+00:42:10,800 --> 00:42:15,119
+is where things get exciting. For
+
+1137
+00:42:13,119 --> 00:42:17,119
+example, we can use luminescence probes
+
+1138
+00:42:15,119 --> 00:42:19,440
+to tag specific proteins or gene
+
+1139
+00:42:17,119 --> 00:42:21,599
+expression. Once tagged, these proteins
+
+1140
+00:42:19,440 --> 00:42:24,240
+will emit a luminescent light and make
+
+1141
+00:42:21,599 --> 00:42:26,079
+them visible to our imaging system.
+
+1142
+00:42:24,240 --> 00:42:28,560
+Think of it like the glow of a firefly
+
+1143
+00:42:26,079 --> 00:42:30,160
+in a summer night. When certain proteins
+
+1144
+00:42:28,560 --> 00:42:31,920
+or cells are tagged, they emit
+
+1145
+00:42:30,160 --> 00:42:34,160
+bioluminescent light which we can
+
+1146
+00:42:31,920 --> 00:42:36,000
+detect. This is a form of passive
+
+1147
+00:42:34,160 --> 00:42:38,000
+imaging, meaning the light we need to
+
+1148
+00:42:36,000 --> 00:42:40,160
+detect is emitted by the body itself
+
+1149
+00:42:38,000 --> 00:42:42,400
+rather than steered by any external
+
+1150
+00:42:40,160 --> 00:42:45,119
+light source.
+
+1151
+00:42:42,400 --> 00:42:47,359
+For example, in a typical experiment, an
+
+1152
+00:42:45,119 --> 00:42:49,359
+animal might be placed in a dark room
+
+1153
+00:42:47,359 --> 00:42:52,319
+and we would observe the light emissions
+
+1154
+00:42:49,359 --> 00:42:54,079
+coming from specific areas on its body.
+
+1155
+00:42:52,319 --> 00:42:56,000
+We want to perform tomographic
+
+1156
+00:42:54,079 --> 00:42:58,000
+reconstruction to find the internal
+
+1157
+00:42:56,000 --> 00:43:01,040
+distribution of the bioluminescent
+
+1158
+00:42:58,000 --> 00:43:02,720
+sources. For that purpose, we combine an
+
+1159
+00:43:01,040 --> 00:43:05,280
+optical imager with a separate
+
+1160
+00:43:02,720 --> 00:43:07,119
+tomographic scanner, which helps us get
+
+1161
+00:43:05,280 --> 00:43:08,960
+both the anatomy and the optical
+
+1162
+00:43:07,119 --> 00:43:11,200
+properties of organs and structures to
+
+1163
+00:43:08,960 --> 00:43:13,119
+build a forward imaging model. After
+
+1164
+00:43:11,200 --> 00:43:15,599
+that, we can invert this forward model
+
+1165
+00:43:13,119 --> 00:43:18,560
+for reconstruction of a 3D distribution
+
+1166
+00:43:15,599 --> 00:43:20,640
+of bioluminescent sources.
+
+1167
+00:43:18,560 --> 00:43:22,880
+The real challenge in optical imaging
+
+1168
+00:43:20,640 --> 00:43:24,800
+isn't in the forward process where we
+
+1169
+00:43:22,880 --> 00:43:26,800
+predict the external signal based on the
+
+1170
+00:43:24,800 --> 00:43:28,800
+known internal structures. The
+
+1171
+00:43:26,800 --> 00:43:30,960
+difficulty is in the inverse process
+
+1172
+00:43:28,800 --> 00:43:33,040
+where we have this inverse problem.
+
+1173
+00:43:30,960 --> 00:43:34,960
+Given the external light signals we
+
+1174
+00:43:33,040 --> 00:43:37,359
+measure, how do we reconstruct the
+
+1175
+00:43:34,960 --> 00:43:40,319
+distribution of bioluminescent sources
+
+1176
+00:43:37,359 --> 00:43:42,400
+inside the body?
+
+1177
+00:43:40,319 --> 00:43:44,160
+To do this, we use multiple mirrors to
+
+1178
+00:43:42,400 --> 00:43:47,520
+collect all the emitted light, creating
+
+1179
+00:43:44,160 --> 00:43:49,599
+a complete set of external views.
+
+1180
+00:43:47,520 --> 00:43:52,079
+We then use this data to reconstruct the
+
+1181
+00:43:49,599 --> 00:43:54,480
+internal light source distribution. This
+
+1182
+00:43:52,079 --> 00:43:56,480
+method has been known as bioluminescence
+
+1183
+00:43:54,480 --> 00:43:59,599
+tomography that we pioneered and has
+
+1184
+00:43:56,480 --> 00:44:01,680
+become quite popular in the literature.
+
+1185
+00:43:59,599 --> 00:44:03,359
+Note that optical imaging includes a
+
+1186
+00:44:01,680 --> 00:44:05,680
+good number of techniques.
+
+1187
+00:44:03,359 --> 00:44:08,000
+Bioluminescence tomography is only one
+
+1188
+00:44:05,680 --> 00:44:09,760
+of them. We have fluorescent tomography
+
+1189
+00:44:08,000 --> 00:44:12,640
+as well with fluoresence probes
+
+1190
+00:44:09,760 --> 00:44:14,400
+excitable by an external laser source.
+
+1191
+00:44:12,640 --> 00:44:17,040
+More clinically important is optical
+
+1192
+00:44:14,400 --> 00:44:20,079
+coherence tomography or OCT which is
+
+1193
+00:44:17,040 --> 00:44:22,240
+used to check your retina in eye clinic.
+
+1194
+00:44:20,079 --> 00:44:24,400
+In summary, optical imaging like other
+
+1195
+00:44:22,240 --> 00:44:26,720
+modalities allows us to visualize and
+
+1196
+00:44:24,400 --> 00:44:29,040
+understand structures, probes or tracers
+
+1197
+00:44:26,720 --> 00:44:30,960
+inside the body. It's a unique and
+
+1198
+00:44:29,040 --> 00:44:33,839
+powerful way to study biology from the
+
+1199
+00:44:30,960 --> 00:44:35,440
+inside out.
+
+1200
+00:44:33,839 --> 00:44:37,440
+Now that we've explored the different
+
+1201
+00:44:35,440 --> 00:44:39,680
+imaging modalities and how they allow us
+
+1202
+00:44:37,440 --> 00:44:41,920
+to visualize features inside the body,
+
+1203
+00:44:39,680 --> 00:44:43,520
+the next logical step is to talk about
+
+1204
+00:44:41,920 --> 00:44:45,760
+what we can do with the images we've
+
+1205
+00:44:43,520 --> 00:44:47,839
+acquired. Once you have an image, you
+
+1206
+00:44:45,760 --> 00:44:50,720
+don't just look at it, you analyze it to
+
+1207
+00:44:47,839 --> 00:44:52,560
+gain task specific information. This is
+
+1208
+00:44:50,720 --> 00:44:54,240
+where the domain of image processing
+
+1209
+00:44:52,560 --> 00:44:56,400
+grows.
+
+1210
+00:44:54,240 --> 00:44:59,200
+In medicine, image analysis is crucial
+
+1211
+00:44:56,400 --> 00:45:01,119
+for extracting actionable insights.
+
+1212
+00:44:59,200 --> 00:45:04,000
+There are various techniques we use such
+
+1213
+00:45:01,119 --> 00:45:06,079
+as image segmentation where we identify
+
+1214
+00:45:04,000 --> 00:45:08,720
+specific regions or structures within
+
+1215
+00:45:06,079 --> 00:45:11,200
+the image like tumors, organs or blood
+
+1216
+00:45:08,720 --> 00:45:13,280
+vessels. By doing this, we can focus on
+
+1217
+00:45:11,200 --> 00:45:15,119
+areas of interest making it easier to
+
+1218
+00:45:13,280 --> 00:45:16,800
+understand what's happening inside the
+
+1219
+00:45:15,119 --> 00:45:18,720
+body.
+
+1220
+00:45:16,800 --> 00:45:20,640
+Another important tool is image
+
+1221
+00:45:18,720 --> 00:45:22,480
+classification, which allows us to
+
+1222
+00:45:20,640 --> 00:45:25,119
+categorize different structures or
+
+1223
+00:45:22,480 --> 00:45:27,599
+tissues based on their visual features.
+
+1224
+00:45:25,119 --> 00:45:29,440
+This helps doctors make diagnosis, track
+
+1225
+00:45:27,599 --> 00:45:32,079
+changes over time, or even guide
+
+1226
+00:45:29,440 --> 00:45:33,839
+interventional procedures.
+
+1227
+00:45:32,079 --> 00:45:35,599
+We also use techniques like image
+
+1228
+00:45:33,839 --> 00:45:37,520
+enhancement, which improves the quality
+
+1229
+00:45:35,599 --> 00:45:39,839
+of the image by making certain features
+
+1230
+00:45:37,520 --> 00:45:41,680
+more visible, such as image de blurring,
+
+1231
+00:45:39,839 --> 00:45:43,760
+which sharpens images that might have
+
+1232
+00:45:41,680 --> 00:45:45,599
+been blurry due to motion or technical
+
+1233
+00:45:43,760 --> 00:45:47,680
+issues.
+
+1234
+00:45:45,599 --> 00:45:50,160
+Some textbooks on medical imaging even
+
+1235
+00:45:47,680 --> 00:45:52,160
+include image visualization. This is
+
+1236
+00:45:50,160 --> 00:45:55,119
+where new technologies like augmented
+
+1237
+00:45:52,160 --> 00:45:57,200
+reality AR become relevant. I recently
+
+1238
+00:45:55,119 --> 00:45:59,119
+read an article where the use of AR is
+
+1239
+00:45:57,200 --> 00:46:02,079
+discussed for medical imaging guided
+
+1240
+00:45:59,119 --> 00:46:04,400
+surgery. With this innovative method,
+
+1241
+00:46:02,079 --> 00:46:06,720
+surgeons wear specialized glasses that
+
+1242
+00:46:04,400 --> 00:46:09,040
+overlay imaging data directly onto the
+
+1243
+00:46:06,720 --> 00:46:11,280
+patient's body during surgery, guiding
+
+1244
+00:46:09,040 --> 00:46:13,119
+their actions in real time. While this
+
+1245
+00:46:11,280 --> 00:46:14,800
+is an exciting application of medical
+
+1246
+00:46:13,119 --> 00:46:17,200
+imaging, for the scope of this course,
+
+1247
+00:46:14,800 --> 00:46:19,200
+we'll focus more on bioiming and bio
+
+1248
+00:46:17,200 --> 00:46:22,319
+instrumentation with an emphasis on
+
+1249
+00:46:19,200 --> 00:46:24,079
+tomographic imaging.
+
+1250
+00:46:22,319 --> 00:46:26,160
+In this course, we'll briefly cover some
+
+1251
+00:46:24,079 --> 00:46:28,160
+key aspects of image analysis, but we
+
+1252
+00:46:26,160 --> 00:46:30,960
+won't delve too deeply into every aspect
+
+1253
+00:46:28,160 --> 00:46:32,640
+of processing. By the end, you'll have a
+
+1254
+00:46:30,960 --> 00:46:34,800
+solid understanding of how image
+
+1255
+00:46:32,640 --> 00:46:38,119
+analysis ties into the broader field of
+
+1256
+00:46:34,800 --> 00:46:38,119
+medical imaging.
+
+1257
+00:46:38,240 --> 00:46:41,760
+To put everything in perspective, let's
+
+1258
+00:46:40,160 --> 00:46:43,839
+take a step back and look at the big
+
+1259
+00:46:41,760 --> 00:46:45,839
+picture. In understanding the human
+
+1260
+00:46:43,839 --> 00:46:49,119
+body, we often talk about two key
+
+1261
+00:46:45,839 --> 00:46:51,119
+concepts, phenotype and genotype.
+
+1262
+00:46:49,119 --> 00:46:53,839
+Genotype refers to your genetic makeup,
+
+1263
+00:46:51,119 --> 00:46:56,079
+the DNA that gives rise to your traits.
+
+1264
+00:46:53,839 --> 00:46:58,079
+Meanwhile, phenotype refers to the
+
+1265
+00:46:56,079 --> 00:47:00,160
+observable characteristics of an
+
+1266
+00:46:58,079 --> 00:47:02,160
+individual such as physical traits,
+
+1267
+00:47:00,160 --> 00:47:05,200
+biological functions, and disease
+
+1268
+00:47:02,160 --> 00:47:07,599
+states. Biomedical imaging plays a
+
+1269
+00:47:05,200 --> 00:47:09,520
+crucial role in studying the phenotype.
+
+1270
+00:47:07,599 --> 00:47:11,280
+Through imaging, we can visualize and
+
+1271
+00:47:09,520 --> 00:47:13,119
+analyze the biological structures and
+
+1272
+00:47:11,280 --> 00:47:15,119
+functions that define an individual's
+
+1273
+00:47:13,119 --> 00:47:17,119
+phenotype.
+
+1274
+00:47:15,119 --> 00:47:19,040
+Now, biioinformatics and genetic
+
+1275
+00:47:17,119 --> 00:47:21,040
+profiling give us a lot of information
+
+1276
+00:47:19,040 --> 00:47:24,560
+about the genotype. Things like your
+
+1277
+00:47:21,040 --> 00:47:26,720
+genetic predispositions and variations.
+
+1278
+00:47:24,560 --> 00:47:28,000
+However, these genetic insights need to
+
+1279
+00:47:26,720 --> 00:47:29,680
+be connected to the physical
+
+1280
+00:47:28,000 --> 00:47:32,640
+manifestation of the genes, the
+
+1281
+00:47:29,680 --> 00:47:34,640
+phenotype. We can use biomedical imaging
+
+1282
+00:47:32,640 --> 00:47:37,520
+to observe and understand the effects of
+
+1283
+00:47:34,640 --> 00:47:38,800
+genetic factors on the body.
+
+1284
+00:47:37,520 --> 00:47:40,560
+While we're entering the world of
+
+1285
+00:47:38,800 --> 00:47:42,319
+imaging in this course, it's important
+
+1286
+00:47:40,560 --> 00:47:44,960
+to recognize that we're focusing
+
+1287
+00:47:42,319 --> 00:47:47,359
+primarily on phenotype. How imaging
+
+1288
+00:47:44,960 --> 00:47:49,839
+allows us to visualize and analyze the
+
+1289
+00:47:47,359 --> 00:47:52,160
+body's structures and functions.
+
+1290
+00:47:49,839 --> 00:47:53,760
+However, linking genotype, your genetic
+
+1291
+00:47:52,160 --> 00:47:56,079
+information, with phenotype, the
+
+1292
+00:47:53,760 --> 00:47:57,760
+observable traits and conditions, is an
+
+1293
+00:47:56,079 --> 00:48:00,240
+essential goal for personalized
+
+1294
+00:47:57,760 --> 00:48:01,920
+medicine. This connection between the
+
+1295
+00:48:00,240 --> 00:48:04,079
+two will allow for more accurate
+
+1296
+00:48:01,920 --> 00:48:08,319
+diagnosis, more effective treatment and
+
+1297
+00:48:04,079 --> 00:48:10,160
+unprecedented prediction in the future.
+
+1298
+00:48:08,319 --> 00:48:12,319
+Looking ahead, the next lecture will
+
+1299
+00:48:10,160 --> 00:48:14,640
+focus on building a solid foundation in
+
+1300
+00:48:12,319 --> 00:48:17,200
+mat lab which will be essential as we
+
+1301
+00:48:14,640 --> 00:48:20,000
+move into topics like fora transforms
+
+1302
+00:48:17,200 --> 00:48:22,079
+and linear systems. Rather than just
+
+1303
+00:48:20,000 --> 00:48:24,319
+listening my lecture passively, you will
+
+1304
+00:48:22,079 --> 00:48:25,920
+be using mat lab directly as this
+
+1305
+00:48:24,319 --> 00:48:28,400
+hands-on approach will help you
+
+1306
+00:48:25,920 --> 00:48:31,040
+understand key concepts like convolution
+
+1307
+00:48:28,400 --> 00:48:34,160
+and the forier transform in a deeper
+
+1308
+00:48:31,040 --> 00:48:36,000
+more practical way. Mat lab is an
+
+1309
+00:48:34,160 --> 00:48:38,000
+invaluable tool used across many
+
+1310
+00:48:36,000 --> 00:48:40,559
+disciplines for example medical imaging
+
+1311
+00:48:38,000 --> 00:48:42,160
+and biomedical engineering in general.
+
+1312
+00:48:40,559 --> 00:48:44,640
+It will be an important part of your
+
+1313
+00:48:42,160 --> 00:48:46,640
+learning journey. If you don't have it
+
+1314
+00:48:44,640 --> 00:48:48,800
+installed yet you can easily download it
+
+1315
+00:48:46,640 --> 00:48:51,119
+from the official mat lab website. This
+
+1316
+00:48:48,800 --> 00:48:53,359
+is freely available to you. If you run
+
+1317
+00:48:51,119 --> 00:48:54,559
+into any installation issues, support is
+
+1318
+00:48:53,359 --> 00:48:56,640
+readily available through your
+
+1319
+00:48:54,559 --> 00:48:58,720
+university's resources, such as the IT
+
+1320
+00:48:56,640 --> 00:49:00,640
+support team.
+
+1321
+00:48:58,720 --> 00:49:03,359
+To get started, I recommend completing
+
+1322
+00:49:00,640 --> 00:49:05,440
+the mat lab on-ramp tutorial, which is a
+
+1323
+00:49:03,359 --> 00:49:08,000
+2-hour interactive course that will walk
+
+1324
+00:49:05,440 --> 00:49:10,000
+you through the basics. I've personally
+
+1325
+00:49:08,000 --> 00:49:11,920
+found this tutorial very effective in
+
+1326
+00:49:10,000 --> 00:49:14,240
+building mat lab skills, and it's
+
+1327
+00:49:11,920 --> 00:49:16,000
+designed for learners of all levels.
+
+1328
+00:49:14,240 --> 00:49:18,240
+Rather than only spending time in the
+
+1329
+00:49:16,000 --> 00:49:20,319
+next lecture on mat lab, I encourage you
+
+1330
+00:49:18,240 --> 00:49:22,800
+to complete this on your own time before
+
+1331
+00:49:20,319 --> 00:49:24,480
+the next lecture. This will give you the
+
+1332
+00:49:22,800 --> 00:49:26,480
+background you need and prepare you for
+
+1333
+00:49:24,480 --> 00:49:29,040
+the upcoming lessons where we'll apply
+
+1334
+00:49:26,480 --> 00:49:30,880
+these concepts together.
+
+1335
+00:49:29,040 --> 00:49:32,640
+By the end of that session, you should
+
+1336
+00:49:30,880 --> 00:49:35,040
+be comfortable with mat lab's interface
+
+1337
+00:49:32,640 --> 00:49:38,559
+and basic functions. Then you'll be
+
+1338
+00:49:35,040 --> 00:49:40,400
+ready to learn more.
+
+1339
+00:49:38,559 --> 00:49:42,400
+You'll notice that this course is not
+
+1340
+00:49:40,400 --> 00:49:45,040
+just about the theory. It's also about
+
+1341
+00:49:42,400 --> 00:49:46,800
+putting those theories into practice.
+
+1342
+00:49:45,040 --> 00:49:48,480
+For example, you can use mat lab to
+
+1343
+00:49:46,800 --> 00:49:50,480
+simulate various types of data
+
+1344
+00:49:48,480 --> 00:49:52,559
+processing. It's not about learning
+
+1345
+00:49:50,480 --> 00:49:55,680
+complicated tricks. It's about using
+
+1346
+00:49:52,559 --> 00:49:57,760
+basic mat lab functions to analyze data,
+
+1347
+00:49:55,680 --> 00:50:00,720
+visualize results, and perform tasks
+
+1348
+00:49:57,760 --> 00:50:02,480
+that will help with your assignments.
+
+1349
+00:50:00,720 --> 00:50:05,680
+Remember, the goal here is not to get
+
+1350
+00:50:02,480 --> 00:50:07,440
+bogged down in fancy techniques. Rather
+
+1351
+00:50:05,680 --> 00:50:09,440
+we want to ensure that you have a solid
+
+1352
+00:50:07,440 --> 00:50:11,119
+foundation in mat lab so that when it's
+
+1353
+00:50:09,440 --> 00:50:13,280
+time to do your homework or apply
+
+1354
+00:50:11,119 --> 00:50:15,200
+concepts like the forier transform or
+
+1355
+00:50:13,280 --> 00:50:17,760
+linear systems you'll have the tool you
+
+1356
+00:50:15,200 --> 00:50:19,760
+need to execute them effectively. Now
+
+1357
+00:50:17,760 --> 00:50:22,640
+chatgpt is a great tool to help you
+
+1358
+00:50:19,760 --> 00:50:24,720
+develop mat lab codes with hands-on
+
+1359
+00:50:22,640 --> 00:50:26,800
+practice. You'll get familiar with the
+
+1360
+00:50:24,720 --> 00:50:29,040
+interface and the functionality making
+
+1361
+00:50:26,800 --> 00:50:31,280
+your learning process or workflow more
+
+1362
+00:50:29,040 --> 00:50:32,960
+effective and more efficient. It's all
+
+1363
+00:50:31,280 --> 00:50:35,599
+about building that confidence through
+
+1364
+00:50:32,960 --> 00:50:38,240
+practical experience.
+
+1365
+00:50:35,599 --> 00:50:39,839
+So let's keep learning with mat lab. By
+
+1366
+00:50:38,240 --> 00:50:44,280
+engaging with it now, you'll set
+
+1367
+00:50:39,839 --> 00:50:44,280
+yourself up for success in the course.
+
+1368
+00:50:44,800 --> 00:50:47,839
+Now I want to say something that's
+
+1369
+00:50:46,160 --> 00:50:50,160
+transforming the world of medical
+
+1370
+00:50:47,839 --> 00:50:52,800
+imaging, the huge wave of machine
+
+1371
+00:50:50,160 --> 00:50:55,520
+learning, artificial intelligence, AI,
+
+1372
+00:50:52,800 --> 00:50:57,040
+and robotics. These technologies hold
+
+1373
+00:50:55,520 --> 00:50:58,960
+huge potential and they are
+
+1374
+00:50:57,040 --> 00:51:00,720
+revolutionizing how we analyze and
+
+1375
+00:50:58,960 --> 00:51:03,720
+interpret medical images to say the
+
+1376
+00:51:00,720 --> 00:51:03,720
+least.
+
+1377
+00:51:04,160 --> 00:51:08,480
+As we continue to explore the exciting
+
+1378
+00:51:06,319 --> 00:51:11,040
+advancements in medical imaging, it's
+
+1379
+00:51:08,480 --> 00:51:13,200
+clear that this field is still young.
+
+1380
+00:51:11,040 --> 00:51:15,280
+Through a recent survey, I found that
+
+1381
+00:51:13,200 --> 00:51:17,599
+medical imaging is one of the hottest
+
+1382
+00:51:15,280 --> 00:51:19,280
+areas in research today with a
+
+1383
+00:51:17,599 --> 00:51:22,000
+significant increase in the number of
+
+1384
+00:51:19,280 --> 00:51:23,680
+published papers every year. However,
+
+1385
+00:51:22,000 --> 00:51:25,359
+what's really catching attention is
+
+1386
+00:51:23,680 --> 00:51:27,119
+machine learning. It's quickly becoming
+
+1387
+00:51:25,359 --> 00:51:30,800
+an even hotter topic than medical
+
+1388
+00:51:27,119 --> 00:51:32,880
+imaging itself. What does this mean?
+
+1389
+00:51:30,800 --> 00:51:34,640
+The combination of medical imaging with
+
+1390
+00:51:32,880 --> 00:51:36,640
+machine learning, especially deep
+
+1391
+00:51:34,640 --> 00:51:38,640
+learning, holds enormous potential for
+
+1392
+00:51:36,640 --> 00:51:41,040
+the future of diagnostics, treatment
+
+1393
+00:51:38,640 --> 00:51:42,880
+planning, and personalized medicine.
+
+1394
+00:51:41,040 --> 00:51:45,359
+This intersection is where we can expect
+
+1395
+00:51:42,880 --> 00:51:48,319
+to see transformative changes in how we
+
+1396
+00:51:45,359 --> 00:51:50,240
+approach medical imaging. The ability to
+
+1397
+00:51:48,319 --> 00:51:52,160
+reconstruct, analyze, and interpret
+
+1398
+00:51:50,240 --> 00:51:54,079
+medical images with AI empowered
+
+1399
+00:51:52,160 --> 00:51:56,160
+algorithms opens doors to endless
+
+1400
+00:51:54,079 --> 00:51:58,400
+possibilities.
+
+1401
+00:51:56,160 --> 00:52:00,400
+In 2016, I wrote the first perspective
+
+1402
+00:51:58,400 --> 00:52:02,240
+article titled Perspective on Deep
+
+1403
+00:52:00,400 --> 00:52:04,800
+Imaging, where I share my thoughts on
+
+1404
+00:52:02,240 --> 00:52:06,720
+how deep learning and AI are poised to
+
+1405
+00:52:04,800 --> 00:52:08,880
+revolutionize medical imaging in the
+
+1406
+00:52:06,720 --> 00:52:10,640
+coming years. If you're curious about my
+
+1407
+00:52:08,880 --> 00:52:12,559
+views on this, feel free to search for
+
+1408
+00:52:10,640 --> 00:52:14,800
+it and dive deeper into the future of
+
+1409
+00:52:12,559 --> 00:52:16,319
+medical imaging.
+
+1410
+00:52:14,800 --> 00:52:17,920
+However, in this course, we're going to
+
+1411
+00:52:16,319 --> 00:52:19,760
+stick with the traditional classroom
+
+1412
+00:52:17,920 --> 00:52:22,000
+teaching. But for those of you who are
+
+1413
+00:52:19,760 --> 00:52:24,079
+highly motivated and eager to push
+
+1414
+00:52:22,000 --> 00:52:26,559
+beyond the syllabus, there's an exciting
+
+1415
+00:52:24,079 --> 00:52:28,319
+option. You can choose to work on a
+
+1416
+00:52:26,559 --> 00:52:30,720
+project that integrates machine learning
+
+1417
+00:52:28,319 --> 00:52:32,800
+with medical imaging. This would involve
+
+1418
+00:52:30,720 --> 00:52:34,559
+hands-on research where your work could
+
+1419
+00:52:32,800 --> 00:52:37,280
+contribute directly to a meaningful
+
+1420
+00:52:34,559 --> 00:52:39,200
+outcome in the field. While it's not a
+
+1421
+00:52:37,280 --> 00:52:40,880
+requirement, this is an opportunity for
+
+1422
+00:52:39,200 --> 00:52:43,280
+those of you who want to challenge
+
+1423
+00:52:40,880 --> 00:52:46,079
+yourselves and explore advanced concepts
+
+1424
+00:52:43,280 --> 00:52:47,839
+further. So if you feel like the course
+
+1425
+00:52:46,079 --> 00:52:49,680
+is a bit easy and you're ready to go
+
+1426
+00:52:47,839 --> 00:52:52,400
+beyond, this option could be a perfect
+
+1427
+00:52:49,680 --> 00:52:54,480
+fit. The office door is always open and
+
+1428
+00:52:52,400 --> 00:52:56,160
+if you choose this path, you'll get real
+
+1429
+00:52:54,480 --> 00:53:00,079
+world experience and potentially
+
+1430
+00:52:56,160 --> 00:53:01,839
+contribute to cutting edge research.
+
+1431
+00:53:00,079 --> 00:53:03,760
+Building on what we have discussed so
+
+1432
+00:53:01,839 --> 00:53:05,920
+far about the intersection of medical
+
+1433
+00:53:03,760 --> 00:53:08,800
+imaging and machine learning, let's take
+
+1434
+00:53:05,920 --> 00:53:11,040
+a moment to look further ahead.
+
+1435
+00:53:08,800 --> 00:53:13,200
+I truly believe the future of medical
+
+1436
+00:53:11,040 --> 00:53:15,599
+imaging and medicine in general is full
+
+1437
+00:53:13,200 --> 00:53:17,760
+of incredible possibilities.
+
+1438
+00:53:15,599 --> 00:53:19,920
+As artificial intelligence continues to
+
+1439
+00:53:17,760 --> 00:53:22,160
+advance, we're already seeing systems
+
+1440
+00:53:19,920 --> 00:53:24,000
+that can match or even surpass human
+
+1441
+00:53:22,160 --> 00:53:26,559
+performance in interpreting medical
+
+1442
+00:53:24,000 --> 00:53:29,200
+images. It's very possible that in the
+
+1443
+00:53:26,559 --> 00:53:31,200
+notsodistant future, many of the tasks
+
+1444
+00:53:29,200 --> 00:53:34,160
+traditionally done by radiologists will
+
+1445
+00:53:31,200 --> 00:53:37,040
+be basically handled by AI. And it goes
+
+1446
+00:53:34,160 --> 00:53:39,440
+beyond that. Imagine robotic surgeons
+
+1447
+00:53:37,040 --> 00:53:41,200
+guided by multimodal imaging and machine
+
+1448
+00:53:39,440 --> 00:53:43,119
+learning performing procedures with
+
+1449
+00:53:41,200 --> 00:53:46,240
+precision that's hard for even the best
+
+1450
+00:53:43,119 --> 00:53:48,559
+human surgeon to match. Over time, we
+
+1451
+00:53:46,240 --> 00:53:50,880
+might see AI and robotics take on more
+
+1452
+00:53:48,559 --> 00:53:52,880
+and more roles in healthcare. Not to
+
+1453
+00:53:50,880 --> 00:53:54,559
+replace professionals, but to enhance
+
+1454
+00:53:52,880 --> 00:53:56,319
+what we can achieve and to make
+
+1455
+00:53:54,559 --> 00:53:58,079
+healthcare safer, faster, and more
+
+1456
+00:53:56,319 --> 00:53:59,760
+accessible.
+
+1457
+00:53:58,079 --> 00:54:01,520
+This is the direction the field is
+
+1458
+00:53:59,760 --> 00:54:03,680
+moving in and it's one of the reasons
+
+1459
+00:54:01,520 --> 00:54:06,880
+why understanding imaging technologies
+
+1460
+00:54:03,680 --> 00:54:08,960
+today is so valuable and timely. You're
+
+1461
+00:54:06,880 --> 00:54:12,800
+not just learning how things work now,
+
+1462
+00:54:08,960 --> 00:54:14,559
+you're preparing to shape the future.
+
+1463
+00:54:12,800 --> 00:54:16,400
+As we think about how artificial
+
+1464
+00:54:14,559 --> 00:54:18,240
+intelligence and robotics might
+
+1465
+00:54:16,400 --> 00:54:20,559
+transform medical imaging and
+
+1466
+00:54:18,240 --> 00:54:22,640
+healthcare, it's hard not to be reminded
+
+1467
+00:54:20,559 --> 00:54:24,880
+of how often science fiction points the
+
+1468
+00:54:22,640 --> 00:54:26,319
+way to future innovations.
+
+1469
+00:54:24,880 --> 00:54:28,480
+For example, have you seen the movie
+
+1470
+00:54:26,319 --> 00:54:30,800
+Allesium? In that film, there's this
+
+1471
+00:54:28,480 --> 00:54:33,040
+futuristic machine, a kind of all-in-one
+
+1472
+00:54:30,800 --> 00:54:35,200
+medical scanner.
+
+1473
+00:54:33,040 --> 00:54:37,359
+It can detect and treat any disease,
+
+1474
+00:54:35,200 --> 00:54:40,079
+regenerate or even replace organs, and
+
+1475
+00:54:37,359 --> 00:54:41,920
+remarkably reverse the aging process.
+
+1476
+00:54:40,079 --> 00:54:43,839
+It's the ultimate vision of technology
+
+1477
+00:54:41,920 --> 00:54:47,040
+and medicine coming together to provide
+
+1478
+00:54:43,839 --> 00:54:49,359
+perfect health care. Of course, today we
+
+1479
+00:54:47,040 --> 00:54:51,280
+aren't there yet, but the ideas behind
+
+1480
+00:54:49,359 --> 00:54:53,200
+that machine, integrated imaging,
+
+1481
+00:54:51,280 --> 00:54:55,359
+precise diagnostics, personalized
+
+1482
+00:54:53,200 --> 00:54:57,119
+treatment are exactly what we're working
+
+1483
+00:54:55,359 --> 00:54:59,440
+toward with advanced medical imaging,
+
+1484
+00:54:57,119 --> 00:55:01,040
+machine learning, and robotics. It's a
+
+1485
+00:54:59,440 --> 00:55:03,920
+powerful reminder of what could be
+
+1486
+00:55:01,040 --> 00:55:06,079
+possible. I hope this inspires you as we
+
+1487
+00:55:03,920 --> 00:55:07,920
+move forward in the course. By learning
+
+1488
+00:55:06,079 --> 00:55:09,359
+the foundations of medical imaging
+
+1489
+00:55:07,920 --> 00:55:11,200
+today, you're taking the first step
+
+1490
+00:55:09,359 --> 00:55:14,440
+toward contributing to the invention of
+
+1491
+00:55:11,200 --> 00:55:14,440
+our future.
+

@@ -1,0 +1,16 @@
+{
+ "train": 3465,
+ "val": 501,
+ "test": 1241,
+ "test_lectures": [
+  5,
+  13,
+  14,
+  16,
+  20
+ ],
+ "test_slides": 162,
+ "slide_overlap_train_test": 0,
+ "test_maxcos_ge_0.90": 40,
+ "test_maxcos_ge_0.95": 15
+}

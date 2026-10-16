@@ -1,0 +1,7668 @@
+1
+00:00:01,680 --> 00:00:06,160
+Welcome to lecture 17 on spect and PET.
+
+2
+00:00:04,640 --> 00:00:08,320
+Today we're finishing the nuclear
+
+3
+00:00:06,160 --> 00:00:10,080
+imaging section.
+
+4
+00:00:08,320 --> 00:00:12,160
+Before I explain the content of this
+
+5
+00:00:10,080 --> 00:00:14,000
+lecture, let's get started by recalling
+
+6
+00:00:12,160 --> 00:00:16,640
+why these modalities matter in
+
+7
+00:00:14,000 --> 00:00:18,480
+biomedical imaging. SPEC stands for
+
+8
+00:00:16,640 --> 00:00:20,400
+single photon emission computed
+
+9
+00:00:18,480 --> 00:00:22,720
+tomography and PET means posetron
+
+10
+00:00:20,400 --> 00:00:24,880
+emission tomography.
+
+11
+00:00:22,720 --> 00:00:26,800
+Both enable molecular imaging and are
+
+12
+00:00:24,880 --> 00:00:29,599
+vital for diagnostics functional
+
+13
+00:00:26,800 --> 00:00:31,519
+evaluation. They use specific tracers
+
+14
+00:00:29,599 --> 00:00:35,000
+and detectors which we'll explore in
+
+15
+00:00:31,519 --> 00:00:35,000
+detail today.
+
+16
+00:00:36,480 --> 00:00:40,719
+As you can see from the course schedule,
+
+17
+00:00:38,320 --> 00:00:43,280
+we are right on track. Today's lecture
+
+18
+00:00:40,719 --> 00:00:45,440
+focuses on spect and PET. After this, we
+
+19
+00:00:43,280 --> 00:00:47,600
+will proceed to MRI, ultrasound, and
+
+20
+00:00:45,440 --> 00:00:49,280
+optical imaging.
+
+21
+00:00:47,600 --> 00:00:53,399
+So far so good, and everything is
+
+22
+00:00:49,280 --> 00:00:53,399
+proceeding according to plan.
+
+23
+00:00:54,879 --> 00:00:58,480
+Let's review a little bit and address
+
+24
+00:00:56,640 --> 00:01:00,640
+some points that were confusing in the
+
+25
+00:00:58,480 --> 00:01:02,879
+last lecture. Have you reviewed the
+
+26
+00:01:00,640 --> 00:01:04,960
+slides in the book chapter? Have you
+
+27
+00:01:02,879 --> 00:01:08,640
+reconsidered why the dynamic curve was
+
+28
+00:01:04,960 --> 00:01:10,880
+shown on the previous slide?
+
+29
+00:01:08,640 --> 00:01:15,520
+We utilize a generator system to produce
+
+30
+00:01:10,880 --> 00:01:18,000
+technium 99m TC99M and malibdinum 99 MO
+
+31
+00:01:15,520 --> 00:01:19,680
+99. And we observe the dynamic range
+
+32
+00:01:18,000 --> 00:01:21,280
+illustrated.
+
+33
+00:01:19,680 --> 00:01:23,439
+I want to underline that the
+
+34
+00:01:21,280 --> 00:01:26,080
+relationship between parent and daughter
+
+35
+00:01:23,439 --> 00:01:27,520
+nucleides is constant. The decay rate of
+
+36
+00:01:26,080 --> 00:01:30,240
+the daughter is governed by the
+
+37
+00:01:27,520 --> 00:01:32,479
+half-life of the parent. This is a core
+
+38
+00:01:30,240 --> 00:01:35,360
+principle in nuclear medicine generators
+
+39
+00:01:32,479 --> 00:01:37,119
+particularly in spec imaging.
+
+40
+00:01:35,360 --> 00:01:39,439
+There are three equations we looked at
+
+41
+00:01:37,119 --> 00:01:41,119
+previously. By solving these equations
+
+42
+00:01:39,439 --> 00:01:43,040
+and plotting with mat lab, you can
+
+43
+00:01:41,119 --> 00:01:45,520
+reproduce the curves and understand the
+
+44
+00:01:43,040 --> 00:01:47,119
+dynamics involved.
+
+45
+00:01:45,520 --> 00:01:49,920
+Normally we conduct what's called a
+
+46
+00:01:47,119 --> 00:01:52,240
+milking operation at peak activity. This
+
+47
+00:01:49,920 --> 00:01:54,479
+produces the types of curves shown here.
+
+48
+00:01:52,240 --> 00:01:57,360
+So when starting from the MO 999 source,
+
+49
+00:01:54,479 --> 00:01:59,040
+you continually elute TC99M for spec
+
+50
+00:01:57,360 --> 00:02:01,439
+imaging.
+
+51
+00:01:59,040 --> 00:02:04,159
+Can anyone tell me why the decay rate of
+
+52
+00:02:01,439 --> 00:02:06,240
+the daughter which is T99M is governed
+
+53
+00:02:04,159 --> 00:02:08,479
+by the decay constant or rate of the
+
+54
+00:02:06,240 --> 00:02:10,319
+parent? Do you see this in the equations
+
+55
+00:02:08,479 --> 00:02:11,840
+or is there something confusing about
+
+56
+00:02:10,319 --> 00:02:15,040
+it?
+
+57
+00:02:11,840 --> 00:02:16,959
+Why do we have this rate relationship?
+
+58
+00:02:15,040 --> 00:02:18,959
+Here's a way to think about it. When
+
+59
+00:02:16,959 --> 00:02:21,120
+learning medical imaging, always try to
+
+60
+00:02:18,959 --> 00:02:22,720
+simplify complicated concepts into
+
+61
+00:02:21,120 --> 00:02:24,720
+simple analogies for better
+
+62
+00:02:22,720 --> 00:02:26,640
+understanding.
+
+63
+00:02:24,720 --> 00:02:28,720
+For example, imagine parents regularly
+
+64
+00:02:26,640 --> 00:02:30,080
+giving money to a daughter. The parents
+
+65
+00:02:28,720 --> 00:02:32,239
+have a certain amount of fortune and
+
+66
+00:02:30,080 --> 00:02:34,160
+give it at a certain rate. The daughter
+
+67
+00:02:32,239 --> 00:02:35,920
+is very active and immediately spends
+
+68
+00:02:34,160 --> 00:02:40,319
+anything she gets, whether it's on an
+
+69
+00:02:35,920 --> 00:02:42,480
+iPhone or movies or travel.
+
+70
+00:02:40,319 --> 00:02:44,800
+So the parents money declines slowly
+
+71
+00:02:42,480 --> 00:02:47,599
+over time but the daughter always spends
+
+72
+00:02:44,800 --> 00:02:49,440
+fast as soon as she receives it. In this
+
+73
+00:02:47,599 --> 00:02:50,959
+analogy the spending rate is governed by
+
+74
+00:02:49,440 --> 00:02:53,440
+the rate at which the parents give
+
+75
+00:02:50,959 --> 00:02:55,519
+money. This heristic gives us a simple
+
+76
+00:02:53,440 --> 00:02:57,840
+mental picture. The rate at which the
+
+77
+00:02:55,519 --> 00:03:00,800
+daughter decays or spends is determined
+
+78
+00:02:57,840 --> 00:03:02,800
+by the parents supply rate.
+
+79
+00:03:00,800 --> 00:03:05,120
+Returning to the technical aspect, if
+
+80
+00:03:02,800 --> 00:03:06,959
+you look at equation 2.17 from the
+
+81
+00:03:05,120 --> 00:03:08,560
+textbook, it may not be immediately
+
+82
+00:03:06,959 --> 00:03:10,480
+clear,
+
+83
+00:03:08,560 --> 00:03:12,319
+but if you break it down and consider
+
+84
+00:03:10,480 --> 00:03:14,560
+the relationship between parent and
+
+85
+00:03:12,319 --> 00:03:17,200
+daughter, it becomes much easier to
+
+86
+00:03:14,560 --> 00:03:19,840
+understand why TC99M's
+
+87
+00:03:17,200 --> 00:03:22,840
+activity is governed by MO9's decay
+
+88
+00:03:19,840 --> 00:03:22,840
+rate.
+
+89
+00:03:24,159 --> 00:03:28,000
+Now, let's talk about dead time in
+
+90
+00:03:25,680 --> 00:03:30,080
+nuclear imaging systems. If the
+
+91
+00:03:28,000 --> 00:03:31,519
+efficiency of our system is high and we
+
+92
+00:03:30,080 --> 00:03:33,040
+inject a large dose of
+
+93
+00:03:31,519 --> 00:03:34,720
+radioarmaceutical,
+
+94
+00:03:33,040 --> 00:03:36,640
+the number of gamma rays hitting the
+
+95
+00:03:34,720 --> 00:03:38,959
+scintillation crystal can actually be
+
+96
+00:03:36,640 --> 00:03:40,720
+more than the system can handle. This
+
+97
+00:03:38,959 --> 00:03:43,519
+happens because the gamma camera needs
+
+98
+00:03:40,720 --> 00:03:45,360
+some time to recover between events. If
+
+99
+00:03:43,519 --> 00:03:46,959
+two scintillation events happen too
+
+100
+00:03:45,360 --> 00:03:48,799
+close together, they can't both get
+
+101
+00:03:46,959 --> 00:03:51,360
+recorded.
+
+102
+00:03:48,799 --> 00:03:53,599
+The total dead time, which we call toao,
+
+103
+00:03:51,360 --> 00:03:56,799
+is given by this equation. Tao equals
+
+104
+00:03:53,599 --> 00:03:59,519
+capital n minus small n / small n *
+
+105
+00:03:56,799 --> 00:04:02,560
+capital n. So let me say it again. Tao
+
+106
+00:03:59,519 --> 00:04:04,959
+equals capital n minus small n / small n
+
+107
+00:04:02,560 --> 00:04:07,439
+* capital n.
+
+108
+00:04:04,959 --> 00:04:09,280
+Here capital n is the true count rate
+
+109
+00:04:07,439 --> 00:04:12,000
+which means how many centilations
+
+110
+00:04:09,280 --> 00:04:13,760
+actually happen every second. Small n is
+
+111
+00:04:12,000 --> 00:04:16,239
+the observed count rate. So that's how
+
+112
+00:04:13,760 --> 00:04:18,160
+many the system actually records. If you
+
+113
+00:04:16,239 --> 00:04:20,160
+take one divided by a small n, you get
+
+114
+00:04:18,160 --> 00:04:21,840
+the average time spent on each counted
+
+115
+00:04:20,160 --> 00:04:24,160
+event.
+
+116
+00:04:21,840 --> 00:04:25,759
+If you take one divided by capital n,
+
+117
+00:04:24,160 --> 00:04:28,000
+that's what you'd have in an ideal
+
+118
+00:04:25,759 --> 00:04:29,520
+system without any dead time. The
+
+119
+00:04:28,000 --> 00:04:31,360
+difference between these two tells us
+
+120
+00:04:29,520 --> 00:04:33,280
+how much measurement is lost because of
+
+121
+00:04:31,360 --> 00:04:35,360
+dead time.
+
+122
+00:04:33,280 --> 00:04:37,840
+Of course, what we want is for dead time
+
+123
+00:04:35,360 --> 00:04:40,320
+again tow to be zero. So every real
+
+124
+00:04:37,840 --> 00:04:42,080
+event is counted. But in reality, as
+
+125
+00:04:40,320 --> 00:04:44,560
+count rates go up, the number of missed
+
+126
+00:04:42,080 --> 00:04:46,479
+events goes up too.
+
+127
+00:04:44,560 --> 00:04:48,240
+Always try to use simple ideas to help
+
+128
+00:04:46,479 --> 00:04:50,800
+you understand and don't get lost in
+
+129
+00:04:48,240 --> 00:04:52,720
+complicated formulas.
+
+130
+00:04:50,800 --> 00:04:54,560
+For example, if a student brings me a
+
+131
+00:04:52,720 --> 00:04:56,560
+huge program and says the results are
+
+132
+00:04:54,560 --> 00:04:58,720
+wrong, I tell them break it into small
+
+133
+00:04:56,560 --> 00:05:01,840
+pieces. Each piece with clear inputs and
+
+134
+00:04:58,720 --> 00:05:03,280
+outputs, debug those parts one by one.
+
+135
+00:05:01,840 --> 00:05:05,199
+This makes understanding the whole
+
+136
+00:05:03,280 --> 00:05:08,759
+problem much easier and helps you find
+
+137
+00:05:05,199 --> 00:05:08,759
+mistakes faster.
+
+138
+00:05:10,400 --> 00:05:14,639
+Let's try to keep a simple heruristic
+
+139
+00:05:12,320 --> 00:05:16,880
+picture in your mind. Having a clear
+
+140
+00:05:14,639 --> 00:05:19,120
+mental image is key to understanding any
+
+141
+00:05:16,880 --> 00:05:22,000
+concept well. Now let's talk about our
+
+142
+00:05:19,120 --> 00:05:24,000
+outline and what we'll cover today.
+
+143
+00:05:22,000 --> 00:05:25,840
+We'll go through single photon imaging
+
+144
+00:05:24,000 --> 00:05:28,160
+computed tomography and posetron
+
+145
+00:05:25,840 --> 00:05:29,759
+emission imaging. These are the two main
+
+146
+00:05:28,160 --> 00:05:32,800
+nuclear imaging modalities for
+
+147
+00:05:29,759 --> 00:05:35,199
+tomographic reconstruction.
+
+148
+00:05:32,800 --> 00:05:37,440
+So with single photon imaging we deal
+
+149
+00:05:35,199 --> 00:05:39,520
+with gamma rays coming from the patient.
+
+150
+00:05:37,440 --> 00:05:42,479
+And with posetron emission we're focused
+
+151
+00:05:39,520 --> 00:05:44,240
+on posetrons. The posetron doesn't stay
+
+152
+00:05:42,479 --> 00:05:46,479
+around for long. It quickly finds a
+
+153
+00:05:44,240 --> 00:05:48,720
+nearby electron.
+
+154
+00:05:46,479 --> 00:05:50,800
+When a posetron meets an electron, we
+
+155
+00:05:48,720 --> 00:05:52,800
+use a big word called annihilation. And
+
+156
+00:05:50,800 --> 00:05:54,639
+together they create a pair of gammaray
+
+157
+00:05:52,800 --> 00:05:57,280
+photons that shoot out in opposite
+
+158
+00:05:54,639 --> 00:05:59,680
+directions at the speed of light.
+
+159
+00:05:57,280 --> 00:06:01,440
+So you have two kinds of imaging. With
+
+160
+00:05:59,680 --> 00:06:03,680
+single photon emission computed
+
+161
+00:06:01,440 --> 00:06:06,800
+tomography or spec, we use single
+
+162
+00:06:03,680 --> 00:06:09,120
+photons. Pretty obvious from the name.
+
+163
+00:06:06,800 --> 00:06:11,360
+And with posetron emission tomography or
+
+164
+00:06:09,120 --> 00:06:14,240
+PET, it's actually two photons created
+
+165
+00:06:11,360 --> 00:06:16,160
+from one posetron and one electron. Both
+
+166
+00:06:14,240 --> 00:06:18,160
+types of imaging are deeply governed by
+
+167
+00:06:16,160 --> 00:06:19,840
+statistics.
+
+168
+00:06:18,160 --> 00:06:22,479
+As background, I really want us to
+
+169
+00:06:19,840 --> 00:06:23,919
+review statistical distributions. This
+
+170
+00:06:22,479 --> 00:06:25,759
+part will be brief, just a rapid
+
+171
+00:06:23,919 --> 00:06:28,000
+overview. If you want to dig into
+
+172
+00:06:25,759 --> 00:06:29,520
+details, you can do that later. After
+
+173
+00:06:28,000 --> 00:06:31,520
+the statistics part, we'll talk about
+
+174
+00:06:29,520 --> 00:06:33,520
+data models.
+
+175
+00:06:31,520 --> 00:06:35,280
+For either single photon or posetron
+
+176
+00:06:33,520 --> 00:06:37,840
+imaging, you need a mathematical model
+
+177
+00:06:35,280 --> 00:06:39,600
+for how you collect data. Last time I
+
+178
+00:06:37,840 --> 00:06:41,840
+explained the physical concepts and
+
+179
+00:06:39,600 --> 00:06:44,400
+chemical mechanisms and we talked about
+
+180
+00:06:41,840 --> 00:06:46,400
+columnation but with formulas you can
+
+181
+00:06:44,400 --> 00:06:48,160
+actually write computer programs to do
+
+182
+00:06:46,400 --> 00:06:50,000
+image reconstruction based on these
+
+183
+00:06:48,160 --> 00:06:51,680
+models.
+
+184
+00:06:50,000 --> 00:06:54,080
+So the data modeling part is about
+
+185
+00:06:51,680 --> 00:06:55,680
+writing down the equations. Given a
+
+186
+00:06:54,080 --> 00:06:58,000
+distribution what measurements do you
+
+187
+00:06:55,680 --> 00:07:01,199
+expect to see? Once you have a forward
+
+188
+00:06:58,000 --> 00:07:03,039
+model you want to invert the process
+
+189
+00:07:01,199 --> 00:07:04,800
+that lets you recover the underlying
+
+190
+00:07:03,039 --> 00:07:06,960
+distribution the actual tomographic
+
+191
+00:07:04,800 --> 00:07:09,440
+images. Now these images aren't
+
+192
+00:07:06,960 --> 00:07:11,199
+anatomical details or structures but
+
+193
+00:07:09,440 --> 00:07:13,520
+they show the distribution of
+
+194
+00:07:11,199 --> 00:07:15,840
+radioactive features that you introduced
+
+195
+00:07:13,520 --> 00:07:18,000
+into the patient.
+
+196
+00:07:15,840 --> 00:07:20,000
+To do this we need to compensate for
+
+197
+00:07:18,000 --> 00:07:21,919
+attenuation and we have two options
+
+198
+00:07:20,000 --> 00:07:24,160
+deterministic and statistical
+
+199
+00:07:21,919 --> 00:07:26,400
+reconstruction. We'll talk about those
+
+200
+00:07:24,160 --> 00:07:28,880
+later. Then finally I'll discuss the
+
+201
+00:07:26,400 --> 00:07:30,800
+scanner architecture.
+
+202
+00:07:28,880 --> 00:07:32,800
+You know, in a CT scanner, you have
+
+203
+00:07:30,800 --> 00:07:34,639
+X-ray tubes, X-ray detectors, high
+
+204
+00:07:32,800 --> 00:07:36,639
+voltage, a transformer, a cooling
+
+205
+00:07:34,639 --> 00:07:39,120
+system, a slip ring, and so on, all
+
+206
+00:07:36,639 --> 00:07:40,639
+packed inside the gantry. A nuclear
+
+207
+00:07:39,120 --> 00:07:42,319
+scanner might look similar on the
+
+208
+00:07:40,639 --> 00:07:45,039
+outside, but inside it's quite
+
+209
+00:07:42,319 --> 00:07:46,880
+different, and I'll explain how.
+
+210
+00:07:45,039 --> 00:07:48,639
+I'll also mention correction methods,
+
+211
+00:07:46,880 --> 00:07:50,400
+especially scatter correction, and how
+
+212
+00:07:48,639 --> 00:07:52,400
+we deal with random counts, how we
+
+213
+00:07:50,400 --> 00:07:54,080
+detect them and remove them. These
+
+214
+00:07:52,400 --> 00:07:56,080
+corrections are much different from how
+
+215
+00:07:54,080 --> 00:07:57,919
+CT works.
+
+216
+00:07:56,080 --> 00:08:00,720
+Finally, I'll mention a bit about the
+
+217
+00:07:57,919 --> 00:08:02,720
+fully 3D conference which focuses on
+
+218
+00:08:00,720 --> 00:08:05,199
+advanced topics in medical imaging
+
+219
+00:08:02,720 --> 00:08:08,160
+reconstruction with an emphasis on X-ray
+
+220
+00:08:05,199 --> 00:08:10,080
+CT and related techniques.
+
+221
+00:08:08,160 --> 00:08:12,160
+We're organizing that meeting and it's a
+
+222
+00:08:10,080 --> 00:08:14,160
+good chance to learn more. If time
+
+223
+00:08:12,160 --> 00:08:16,400
+permits, I'll show you today's homework
+
+224
+00:08:14,160 --> 00:08:18,000
+questions and give comments. That's
+
+225
+00:08:16,400 --> 00:08:19,599
+pretty much the plan just to give you
+
+226
+00:08:18,000 --> 00:08:23,319
+the big picture so you can see where
+
+227
+00:08:19,599 --> 00:08:23,319
+each part fits in.
+
+228
+00:08:24,720 --> 00:08:28,319
+Statistical distributions are very
+
+229
+00:08:26,560 --> 00:08:30,240
+important especially for understanding
+
+230
+00:08:28,319 --> 00:08:32,399
+noise and random variables over
+
+231
+00:08:30,240 --> 00:08:35,200
+different intervals. The simplest case
+
+232
+00:08:32,399 --> 00:08:37,360
+is the uniform distribution.
+
+233
+00:08:35,200 --> 00:08:40,000
+With a uniform distribution, every point
+
+234
+00:08:37,360 --> 00:08:42,159
+in the interval like 0 to 1 or 0 to 5
+
+235
+00:08:40,000 --> 00:08:43,919
+has the same chance of being picked.
+
+236
+00:08:42,159 --> 00:08:45,920
+Every number in that range is equally
+
+237
+00:08:43,919 --> 00:08:47,920
+likely. That's one simple kind of
+
+238
+00:08:45,920 --> 00:08:50,000
+distribution.
+
+239
+00:08:47,920 --> 00:08:52,560
+Next, we have the Gaussian distribution
+
+240
+00:08:50,000 --> 00:08:54,399
+and after that the pluson distribution.
+
+241
+00:08:52,560 --> 00:08:56,399
+The Gaussian distribution, also called
+
+242
+00:08:54,399 --> 00:08:58,720
+the normal distribution, is your classic
+
+243
+00:08:56,399 --> 00:09:00,800
+bell-shaped curve. You usually describe
+
+244
+00:08:58,720 --> 00:09:03,600
+it with a mean called mu and a standard
+
+245
+00:09:00,800 --> 00:09:05,360
+deviation sigma. If mu is zero and sigma
+
+246
+00:09:03,600 --> 00:09:07,279
+is one, that's the standard normal
+
+247
+00:09:05,360 --> 00:09:09,440
+distribution.
+
+248
+00:09:07,279 --> 00:09:11,519
+Mathematically, you see a scaling factor
+
+249
+00:09:09,440 --> 00:09:14,000
+and an exponential factor involving mu
+
+250
+00:09:11,519 --> 00:09:15,920
+and sigma. This type of distribution is
+
+251
+00:09:14,000 --> 00:09:18,959
+used everywhere in engineering, noise
+
+252
+00:09:15,920 --> 00:09:21,040
+measurement, estimation, and more.
+
+253
+00:09:18,959 --> 00:09:23,120
+If you have lots of independent random
+
+254
+00:09:21,040 --> 00:09:25,200
+variables, each contributing a bit,
+
+255
+00:09:23,120 --> 00:09:27,360
+maybe some are uniform, maybe some are
+
+256
+00:09:25,200 --> 00:09:28,560
+not, when you put them all together, the
+
+257
+00:09:27,360 --> 00:09:30,800
+outcome will tend to look like a
+
+258
+00:09:28,560 --> 00:09:32,480
+Gaussian curve.
+
+259
+00:09:30,800 --> 00:09:34,720
+This is a fundamental result from
+
+260
+00:09:32,480 --> 00:09:36,959
+statistics, and it's why you see the
+
+261
+00:09:34,720 --> 00:09:39,680
+bell-shaped curve over and over in
+
+262
+00:09:36,959 --> 00:09:41,120
+reality. Lots of independent factors add
+
+263
+00:09:39,680 --> 00:09:42,880
+up to give something that looks
+
+264
+00:09:41,120 --> 00:09:45,040
+Gaussian.
+
+265
+00:09:42,880 --> 00:09:46,959
+The pson distribution is related to the
+
+266
+00:09:45,040 --> 00:09:49,600
+Gaussian but looks very different
+
+267
+00:09:46,959 --> 00:09:51,680
+especially with small means. The pan
+
+268
+00:09:49,600 --> 00:09:54,720
+describes random variables that give you
+
+269
+00:09:51,680 --> 00:09:57,120
+counts like 1 2 3 and so on with
+
+270
+00:09:54,720 --> 00:09:58,720
+different probabilities for each count.
+
+271
+00:09:57,120 --> 00:10:00,720
+It's controlled by the mean which we
+
+272
+00:09:58,720 --> 00:10:02,399
+call lambda.
+
+273
+00:10:00,720 --> 00:10:05,120
+If that mean is small, you get a very
+
+274
+00:10:02,399 --> 00:10:07,440
+asymmetric distribution. But as lambda
+
+275
+00:10:05,120 --> 00:10:09,279
+grows larger, the curve starts to look
+
+276
+00:10:07,440 --> 00:10:11,519
+more and more like a Gaussian.
+
+277
+00:10:09,279 --> 00:10:13,680
+Eventually, if lambda is really big, the
+
+278
+00:10:11,519 --> 00:10:16,880
+pson distribution and the Gaussian
+
+279
+00:10:13,680 --> 00:10:18,959
+distribution look nearly the same. For
+
+280
+00:10:16,880 --> 00:10:21,600
+the Gaussian, you have mean and variance
+
+281
+00:10:18,959 --> 00:10:23,920
+with variance noted as sigma squared.
+
+282
+00:10:21,600 --> 00:10:25,680
+For pon, both mean and variance are just
+
+283
+00:10:23,920 --> 00:10:27,680
+lambda.
+
+284
+00:10:25,680 --> 00:10:29,760
+You can actually derive the Gaussian by
+
+285
+00:10:27,680 --> 00:10:32,079
+combining lots of individual random
+
+286
+00:10:29,760 --> 00:10:35,200
+distributions through convolution and
+
+287
+00:10:32,079 --> 00:10:37,040
+prove it's a bell-shaped curve.
+
+288
+00:10:35,200 --> 00:10:39,839
+So in summary, we're going to see both
+
+289
+00:10:37,040 --> 00:10:42,160
+Gaussian and Pson noise often in imaging
+
+290
+00:10:39,839 --> 00:10:43,839
+and understanding how they behave is key
+
+291
+00:10:42,160 --> 00:10:47,720
+to handling measurement and image
+
+292
+00:10:43,839 --> 00:10:47,720
+reconstruction accurately.
+
+293
+00:10:49,440 --> 00:10:53,760
+And pan noise, pan distribution, you
+
+294
+00:10:52,160 --> 00:10:57,200
+would need some high school statistics.
+
+295
+00:10:53,760 --> 00:10:59,200
+You learn permutations and combinations
+
+296
+00:10:57,200 --> 00:11:01,120
+and this permutation you just see the
+
+297
+00:10:59,200 --> 00:11:02,880
+different arrangement roughly speaking a
+
+298
+00:11:01,120 --> 00:11:04,880
+combination you need to just remove
+
+299
+00:11:02,880 --> 00:11:08,480
+those those essentially the same
+
+300
+00:11:04,880 --> 00:11:10,560
+arrangement like ABC and ACB
+
+301
+00:11:08,480 --> 00:11:12,079
+in terms of combination you think it's
+
+302
+00:11:10,560 --> 00:11:13,839
+the same thing because this is same
+
+303
+00:11:12,079 --> 00:11:15,839
+three individuals are involved in this
+
+304
+00:11:13,839 --> 00:11:17,680
+activity so you need just the
+
+305
+00:11:15,839 --> 00:11:20,160
+distinction between permutation and
+
+306
+00:11:17,680 --> 00:11:24,360
+combination so you can review this slide
+
+307
+00:11:20,160 --> 00:11:24,360
+you will recall what you learned earned.
+
+308
+00:11:25,600 --> 00:11:30,079
+And by nominal formula, basically you
+
+309
+00:11:27,519 --> 00:11:32,800
+have a series of events. And for an easy
+
+310
+00:11:30,079 --> 00:11:34,720
+event, it's a probability stake.
+
+311
+00:11:32,800 --> 00:11:36,640
+And say you're a toaster coin and it's a
+
+312
+00:11:34,720 --> 00:11:38,640
+certain probability P and you see one
+
+313
+00:11:36,640 --> 00:11:42,480
+result. And the other possibility will
+
+314
+00:11:38,640 --> 00:11:44,640
+be Q. Q equals 1 minus P.
+
+315
+00:11:42,480 --> 00:11:46,160
+So you keep doing multiple experiments
+
+316
+00:11:44,640 --> 00:11:48,000
+and you know how many times you see
+
+317
+00:11:46,160 --> 00:11:50,240
+high, how many times you see tails. This
+
+318
+00:11:48,000 --> 00:11:52,560
+is a good model. And like the example
+
+319
+00:11:50,240 --> 00:11:54,000
+shown here, if you purchase 10 computers
+
+320
+00:11:52,560 --> 00:11:56,959
+and individually, you know, the
+
+321
+00:11:54,000 --> 00:11:59,360
+defective rate is 2%.
+
+322
+00:11:56,959 --> 00:12:01,200
+If you buy 10 computers in a row, what's
+
+323
+00:11:59,360 --> 00:12:04,399
+the chance you get to buy the computer
+
+324
+00:12:01,200 --> 00:12:06,720
+than you can use by nominal formula?
+
+325
+00:12:04,399 --> 00:12:08,560
+Basically, something like a toast coin.
+
+326
+00:12:06,720 --> 00:12:11,120
+And the probability for you to see one
+
+327
+00:12:08,560 --> 00:12:12,880
+side may not be exactly half. And in
+
+328
+00:12:11,120 --> 00:12:15,440
+general, you can call it P and Q. Q
+
+329
+00:12:12,880 --> 00:12:16,880
+equal to 1 minus P. And the personal
+
+330
+00:12:15,440 --> 00:12:19,680
+distribution is derived from this
+
+331
+00:12:16,880 --> 00:12:23,079
+binomial distribution. one, the number n
+
+332
+00:12:19,680 --> 00:12:23,079
+is very big.
+
+333
+00:12:24,480 --> 00:12:28,399
+Let's go through the math a bit. I put a
+
+334
+00:12:26,880 --> 00:12:30,720
+green button on this slide to help you
+
+335
+00:12:28,399 --> 00:12:32,720
+remember the key idea. To understand pon
+
+336
+00:12:30,720 --> 00:12:35,040
+and gaussian noise, you need a good grip
+
+337
+00:12:32,720 --> 00:12:38,000
+on the binomial formula, but also on
+
+338
+00:12:35,040 --> 00:12:39,680
+permutations and combinations.
+
+339
+00:12:38,000 --> 00:12:41,680
+When you have a large number of events,
+
+340
+00:12:39,680 --> 00:12:43,440
+you can use some analytic steps to show
+
+341
+00:12:41,680 --> 00:12:45,600
+that the distribution will approach the
+
+342
+00:12:43,440 --> 00:12:47,440
+pluson form.
+
+343
+00:12:45,600 --> 00:12:49,279
+For example, in gamma ray emission,
+
+344
+00:12:47,440 --> 00:12:51,760
+whether it's single gammaray emission or
+
+345
+00:12:49,279 --> 00:12:54,160
+paired photons, the process follows the
+
+346
+00:12:51,760 --> 00:12:56,399
+pluson distribution model which uses the
+
+347
+00:12:54,160 --> 00:12:59,360
+parameter lambda. So what does this mean
+
+348
+00:12:56,399 --> 00:13:01,120
+in practice?
+
+349
+00:12:59,360 --> 00:13:03,519
+Let's say you're counting gamma ray
+
+350
+00:13:01,120 --> 00:13:05,200
+photons during a scan. The whole time
+
+351
+00:13:03,519 --> 00:13:07,120
+period gets cut into many small
+
+352
+00:13:05,200 --> 00:13:09,440
+intervals.
+
+353
+00:13:07,120 --> 00:13:11,519
+In each tiny interval, the probability
+
+354
+00:13:09,440 --> 00:13:13,600
+that you get a photon is small. Call
+
+355
+00:13:11,519 --> 00:13:16,880
+that P. And the probability that you
+
+356
+00:13:13,600 --> 00:13:18,959
+don't is Q, which is just 1 minus P.
+
+357
+00:13:16,880 --> 00:13:20,880
+Whether you get a photon or not in any
+
+358
+00:13:18,959 --> 00:13:23,360
+interval is random. There's no way to
+
+359
+00:13:20,880 --> 00:13:24,880
+predict it exactly.
+
+360
+00:13:23,360 --> 00:13:27,040
+This randomness is at the heart of
+
+361
+00:13:24,880 --> 00:13:28,720
+nuclear physics. The emission is not
+
+362
+00:13:27,040 --> 00:13:31,279
+deterministic. It just follows
+
+363
+00:13:28,720 --> 00:13:33,440
+probabilities. Einstein famously said,
+
+364
+00:13:31,279 --> 00:13:35,519
+"God does not play dice." But some would
+
+365
+00:13:33,440 --> 00:13:38,320
+argue that God indeed lets randomness
+
+366
+00:13:35,519 --> 00:13:40,560
+play a role in the universe.
+
+367
+00:13:38,320 --> 00:13:42,639
+In our context, the emission of gammaray
+
+368
+00:13:40,560 --> 00:13:45,120
+photons is governed by pure chance
+
+369
+00:13:42,639 --> 00:13:47,040
+following the pson distribution. When
+
+370
+00:13:45,120 --> 00:13:48,560
+you zoom into those tiny intervals,
+
+371
+00:13:47,040 --> 00:13:51,200
+you're really dealing with just the
+
+372
+00:13:48,560 --> 00:13:53,279
+possibility P or Q of a gamma ray being
+
+373
+00:13:51,200 --> 00:13:56,279
+emitted. And it's entirely a game of
+
+374
+00:13:53,279 --> 00:13:56,279
+probability.
+
+375
+00:13:58,079 --> 00:14:02,800
+Let me just sum up. This is a
+
+376
+00:14:00,000 --> 00:14:04,240
+statistical model called the Paso model
+
+377
+00:14:02,800 --> 00:14:06,800
+and you should know a little bit about
+
+378
+00:14:04,240 --> 00:14:08,639
+it because it also applies to X-ray
+
+379
+00:14:06,800 --> 00:14:10,720
+emission.
+
+380
+00:14:08,639 --> 00:14:12,720
+When you hit tungsten with an electron
+
+381
+00:14:10,720 --> 00:14:14,959
+beam, you get a certain number of X-ray
+
+382
+00:14:12,720 --> 00:14:17,360
+photons coming out and that X-ray
+
+383
+00:14:14,959 --> 00:14:19,440
+emission also follows the pluson
+
+384
+00:14:17,360 --> 00:14:21,760
+distribution.
+
+385
+00:14:19,440 --> 00:14:23,920
+When you detect X-ray photons, sometimes
+
+386
+00:14:21,760 --> 00:14:26,240
+you use photon counting detectors which
+
+387
+00:14:23,920 --> 00:14:27,839
+are the latest technology. But most
+
+388
+00:14:26,240 --> 00:14:29,760
+common X-ray detectors are still
+
+389
+00:14:27,839 --> 00:14:31,360
+currentbased or energy integrating
+
+390
+00:14:29,760 --> 00:14:34,079
+types.
+
+391
+00:14:31,360 --> 00:14:35,760
+In traditional X-ray detection, besides
+
+392
+00:14:34,079 --> 00:14:38,240
+noise, you also get electronic noise
+
+393
+00:14:35,760 --> 00:14:40,160
+from the semiconductor detector design.
+
+394
+00:14:38,240 --> 00:14:42,720
+That electronic noise is modeled by the
+
+395
+00:14:40,160 --> 00:14:45,120
+Gaussian distribution.
+
+396
+00:14:42,720 --> 00:14:47,040
+So for X-ray CT data acquisition, the
+
+397
+00:14:45,120 --> 00:14:49,519
+full statistical model is actually a
+
+398
+00:14:47,040 --> 00:14:51,839
+combination pan noise plus Gaussian
+
+399
+00:14:49,519 --> 00:14:53,839
+noise. This is just a side note to help
+
+400
+00:14:51,839 --> 00:14:55,519
+you see the big picture. Now let's look
+
+401
+00:14:53,839 --> 00:14:57,360
+at data models for single photon
+
+402
+00:14:55,519 --> 00:15:02,120
+emission and paired photon emission and
+
+403
+00:14:57,360 --> 00:15:02,120
+how these statistical concepts fit in.
+
+404
+00:15:03,440 --> 00:15:07,519
+Let's look at this slide. You see a
+
+405
+00:15:05,120 --> 00:15:09,680
+diamond symbol, so pay attention. For
+
+406
+00:15:07,519 --> 00:15:11,760
+nuclear emission, the energy of gammaray
+
+407
+00:15:09,680 --> 00:15:15,040
+photons is usually in the range of about
+
+408
+00:15:11,760 --> 00:15:17,199
+60 to 600 keV. And most importantly,
+
+409
+00:15:15,040 --> 00:15:22,560
+about 90% of applications use the
+
+410
+00:15:17,199 --> 00:15:27,040
+isotope technium 99M. This isotope TC99M
+
+411
+00:15:22,560 --> 00:15:28,800
+has an energy of 140 KV.
+
+412
+00:15:27,040 --> 00:15:31,680
+Now, keep that number in mind. Sometimes
+
+413
+00:15:28,800 --> 00:15:34,079
+I forget, but it's 140 KV, just a little
+
+414
+00:15:31,680 --> 00:15:36,639
+higher than the energy used for X-rays.
+
+415
+00:15:34,079 --> 00:15:39,279
+X-ray energy is usually between 80 KV
+
+416
+00:15:36,639 --> 00:15:41,279
+and up to around 130 KV. So, this
+
+417
+00:15:39,279 --> 00:15:43,440
+radiocer energy is actually quite
+
+418
+00:15:41,279 --> 00:15:45,040
+comparable to the X-ray photon energy
+
+419
+00:15:43,440 --> 00:15:47,120
+range.
+
+420
+00:15:45,040 --> 00:15:48,720
+Now for posetron emission, you'll notice
+
+421
+00:15:47,120 --> 00:15:50,560
+in the homework there's a question about
+
+422
+00:15:48,720 --> 00:15:54,160
+the gamma ray energy produced by
+
+423
+00:15:50,560 --> 00:15:56,240
+posetron emission. The answer is 511 keV
+
+424
+00:15:54,160 --> 00:15:58,160
+which is much higher
+
+425
+00:15:56,240 --> 00:16:00,560
+for single photon emission. Here's how
+
+426
+00:15:58,160 --> 00:16:03,360
+we model it. Let's say the source is at
+
+427
+00:16:00,560 --> 00:16:05,440
+position A. At location A in the body,
+
+428
+00:16:03,360 --> 00:16:07,600
+you have a certain amount of radio trace
+
+429
+00:16:05,440 --> 00:16:11,680
+or a concentration or count of
+
+430
+00:16:07,600 --> 00:16:13,839
+radioactive atoms denoted as NA.
+
+431
+00:16:11,680 --> 00:16:15,920
+You columnate the gamma ray flux at this
+
+432
+00:16:13,839 --> 00:16:17,600
+spot and you look down that line to see
+
+433
+00:16:15,920 --> 00:16:19,279
+how much signal flows toward the
+
+434
+00:16:17,600 --> 00:16:21,360
+detector.
+
+435
+00:16:19,279 --> 00:16:23,199
+Now the gamma ray can be emitted in any
+
+436
+00:16:21,360 --> 00:16:24,959
+direction. So a scaling factor is
+
+437
+00:16:23,199 --> 00:16:27,279
+applied proportional to the size of that
+
+438
+00:16:24,959 --> 00:16:29,040
+mechanical columator. At the detector
+
+439
+00:16:27,279 --> 00:16:31,120
+you measure how many gamma ray photons
+
+440
+00:16:29,040 --> 00:16:33,519
+you can receive.
+
+441
+00:16:31,120 --> 00:16:34,880
+If the gamma ray source were in a vacuum
+
+442
+00:16:33,519 --> 00:16:37,040
+you'd get just your initial
+
+443
+00:16:34,880 --> 00:16:39,199
+concentration scaled by the geometric
+
+444
+00:16:37,040 --> 00:16:41,839
+factor that's determined by how big the
+
+445
+00:16:39,199 --> 00:16:44,079
+columator opening is.
+
+446
+00:16:41,839 --> 00:16:46,240
+In reality, the radio tracer is inside
+
+447
+00:16:44,079 --> 00:16:48,560
+the human body. So, the photons move
+
+448
+00:16:46,240 --> 00:16:50,800
+from A toward the gamma camera detector
+
+449
+00:16:48,560 --> 00:16:52,959
+at position D. Along the way, the
+
+450
+00:16:50,800 --> 00:16:56,320
+photons encounter tissue and undergo
+
+451
+00:16:52,959 --> 00:16:59,040
+attenuation. For gamma ray photons at
+
+452
+00:16:56,320 --> 00:17:01,360
+140 keV, their energy is just above the
+
+453
+00:16:59,040 --> 00:17:04,880
+highend used for CTX rays, but the
+
+454
+00:17:01,360 --> 00:17:07,280
+physics is similar. They're tiny waves.
+
+455
+00:17:04,880 --> 00:17:09,760
+The formula you see uses an exponential
+
+456
+00:17:07,280 --> 00:17:13,360
+factor e to the negative integral from a
+
+457
+00:17:09,760 --> 00:17:15,600
+to d of mu s ds. Here mu is the
+
+458
+00:17:13,360 --> 00:17:18,079
+attenuation coefficient which depends on
+
+459
+00:17:15,600 --> 00:17:20,079
+position in the body.
+
+460
+00:17:18,079 --> 00:17:21,839
+This exponential term describes how the
+
+461
+00:17:20,079 --> 00:17:24,240
+signal from the source gets weighted by
+
+462
+00:17:21,839 --> 00:17:26,880
+attenuation. It's a line integral but
+
+463
+00:17:24,240 --> 00:17:29,039
+not a full line like in CT, more of a
+
+464
+00:17:26,880 --> 00:17:30,880
+partial line integral. This is what
+
+465
+00:17:29,039 --> 00:17:33,440
+makes spec reconstruction different from
+
+466
+00:17:30,880 --> 00:17:35,039
+X-ray CT reconstruction. So this data
+
+467
+00:17:33,440 --> 00:17:37,840
+model is straightforward but very
+
+468
+00:17:35,039 --> 00:17:39,520
+important.
+
+469
+00:17:37,840 --> 00:17:41,760
+Now let's look at paired photon
+
+470
+00:17:39,520 --> 00:17:43,760
+emission. Here an event occurs. A
+
+471
+00:17:41,760 --> 00:17:46,320
+posetron is emitted, finds a nearby
+
+472
+00:17:43,760 --> 00:17:48,480
+electron and annihilates. That results
+
+473
+00:17:46,320 --> 00:17:50,720
+in two gammaray photons flying off in
+
+474
+00:17:48,480 --> 00:17:52,640
+opposite directions.
+
+475
+00:17:50,720 --> 00:17:55,280
+One gammaray photon travels from
+
+476
+00:17:52,640 --> 00:17:58,480
+position A to detector D1. The other
+
+477
+00:17:55,280 --> 00:18:00,880
+goes from A to detector D2. Both photons
+
+478
+00:17:58,480 --> 00:18:03,039
+are attenuated along their paths. The
+
+479
+00:18:00,880 --> 00:18:04,960
+attenuation factor for each path acts
+
+480
+00:18:03,039 --> 00:18:08,080
+like a probability, the chance that the
+
+481
+00:18:04,960 --> 00:18:10,000
+photon actually reaches the detector.
+
+482
+00:18:08,080 --> 00:18:12,000
+For a paired event to be registered,
+
+483
+00:18:10,000 --> 00:18:13,919
+both photons have to hit their detectors
+
+484
+00:18:12,000 --> 00:18:15,919
+at the same time. So the total
+
+485
+00:18:13,919 --> 00:18:18,799
+probability is the product of two
+
+486
+00:18:15,919 --> 00:18:21,200
+individual probabilities.
+
+487
+00:18:18,799 --> 00:18:23,200
+Both exponential attenuation factors
+
+488
+00:18:21,200 --> 00:18:25,120
+multiply together. So in the exponent,
+
+489
+00:18:23,200 --> 00:18:28,480
+you just add up the two integrals from
+
+490
+00:18:25,120 --> 00:18:30,480
+d1 to a and from a to d2.
+
+491
+00:18:28,480 --> 00:18:32,960
+Together these cover the entire path
+
+492
+00:18:30,480 --> 00:18:35,520
+from D1 to D2 resulting in a traditional
+
+493
+00:18:32,960 --> 00:18:37,840
+line integral. And the nice thing is
+
+494
+00:18:35,520 --> 00:18:40,080
+this line integral does not depend on
+
+495
+00:18:37,840 --> 00:18:44,880
+the original source position A. It's
+
+496
+00:18:40,080 --> 00:18:47,200
+only about the line between D1 and D2.
+
+497
+00:18:44,880 --> 00:18:48,880
+So you have two models here. One where
+
+498
+00:18:47,200 --> 00:18:51,200
+the waiting depends on the source
+
+499
+00:18:48,880 --> 00:18:53,520
+location and one where the waiting the
+
+500
+00:18:51,200 --> 00:18:56,640
+response along the line remains constant
+
+501
+00:18:53,520 --> 00:18:58,799
+regardless of where the gamma source is.
+
+502
+00:18:56,640 --> 00:19:01,520
+For paired photon events, the formula
+
+503
+00:18:58,799 --> 00:19:03,280
+has constant weight. For single photon
+
+504
+00:19:01,520 --> 00:19:05,840
+events, the weight changes based on
+
+505
+00:19:03,280 --> 00:19:07,760
+where the radio tracer is located. And
+
+506
+00:19:05,840 --> 00:19:12,760
+if the radio tracer moves, the waiting
+
+507
+00:19:07,760 --> 00:19:12,760
+factor changes with it. Any questions?
+
+508
+00:19:14,400 --> 00:19:18,480
+Let's keep going and look further into
+
+509
+00:19:16,080 --> 00:19:20,400
+this constant weight idea. You'll notice
+
+510
+00:19:18,480 --> 00:19:21,919
+I put a green button here. And what I
+
+511
+00:19:20,400 --> 00:19:24,240
+want to show is how you can eliminate
+
+512
+00:19:21,919 --> 00:19:26,320
+the location dependence. Meaning the
+
+513
+00:19:24,240 --> 00:19:28,799
+waiting factor no longer depends on the
+
+514
+00:19:26,320 --> 00:19:30,559
+source position A.
+
+515
+00:19:28,799 --> 00:19:32,640
+When you have two factors, each one
+
+516
+00:19:30,559 --> 00:19:35,039
+representing a probability, you multiply
+
+517
+00:19:32,640 --> 00:19:37,039
+them together. The source position
+
+518
+00:19:35,039 --> 00:19:39,440
+cancels out in the exponent. When you do
+
+519
+00:19:37,039 --> 00:19:41,280
+this multiplication,
+
+520
+00:19:39,440 --> 00:19:44,320
+you can actually apply the same concept
+
+521
+00:19:41,280 --> 00:19:46,320
+to spec imaging. Inspect, which uses
+
+522
+00:19:44,320 --> 00:19:48,320
+single photon emission. If you put
+
+523
+00:19:46,320 --> 00:19:50,400
+detectors on both sides and take two
+
+524
+00:19:48,320 --> 00:19:53,440
+measurements, one on each side, you can
+
+525
+00:19:50,400 --> 00:19:55,520
+multiply those measurements together.
+
+526
+00:19:53,440 --> 00:19:57,360
+When you multiply the measured signals,
+
+527
+00:19:55,520 --> 00:19:59,520
+you end up with the concentration of the
+
+528
+00:19:57,360 --> 00:20:01,280
+radio tracer squared. It appears as a
+
+529
+00:19:59,520 --> 00:20:03,440
+square here because you measured along
+
+530
+00:20:01,280 --> 00:20:05,039
+both paths.
+
+531
+00:20:03,440 --> 00:20:08,000
+Technically, you're combining two
+
+532
+00:20:05,039 --> 00:20:10,640
+partial attenuation factors. One from A
+
+533
+00:20:08,000 --> 00:20:13,440
+to detector D1 and one from A to
+
+534
+00:20:10,640 --> 00:20:15,200
+detector D2. when you multiply them, the
+
+535
+00:20:13,440 --> 00:20:17,360
+exponentials add up and the waiting
+
+536
+00:20:15,200 --> 00:20:19,679
+factor becomes constant with respect to
+
+537
+00:20:17,360 --> 00:20:21,600
+the source location.
+
+538
+00:20:19,679 --> 00:20:23,679
+So it seems at first glance like spec
+
+539
+00:20:21,600 --> 00:20:25,600
+imaging can have a constant waiting
+
+540
+00:20:23,679 --> 00:20:27,679
+factor for these combined measurements
+
+541
+00:20:25,600 --> 00:20:30,000
+just like paired photon emission in PET
+
+542
+00:20:27,679 --> 00:20:31,919
+which already has constant waiting. But
+
+543
+00:20:30,000 --> 00:20:33,520
+be careful, real life is not always this
+
+544
+00:20:31,919 --> 00:20:35,360
+simple.
+
+545
+00:20:33,520 --> 00:20:38,000
+There are practical limitations and
+
+546
+00:20:35,360 --> 00:20:39,600
+differences in how signals behave. So
+
+547
+00:20:38,000 --> 00:20:42,080
+always question whether these
+
+548
+00:20:39,600 --> 00:20:45,080
+theoretical simplifications hold up in
+
+549
+00:20:42,080 --> 00:20:45,080
+practice.
+
+550
+00:20:46,720 --> 00:20:50,559
+Let's look closer. If you have only one
+
+551
+00:20:48,559 --> 00:20:52,720
+radio tracer concentration at a single
+
+552
+00:20:50,559 --> 00:20:54,640
+source, it's pretty simple. But when you
+
+553
+00:20:52,720 --> 00:20:56,480
+have two sources, or more specifically
+
+554
+00:20:54,640 --> 00:20:58,880
+two gamma resources, things get
+
+555
+00:20:56,480 --> 00:21:00,240
+complicated. If you try to multiply the
+
+556
+00:20:58,880 --> 00:21:02,240
+measurements like I showed on the
+
+557
+00:21:00,240 --> 00:21:04,400
+previous slide, you end up expanding two
+
+558
+00:21:02,240 --> 00:21:07,039
+terms from each measurement. That gives
+
+559
+00:21:04,400 --> 00:21:09,200
+you four terms in total.
+
+560
+00:21:07,039 --> 00:21:11,200
+The first two terms are nice. They give
+
+561
+00:21:09,200 --> 00:21:13,200
+you a constant waiting factor and the
+
+562
+00:21:11,200 --> 00:21:15,440
+line integral of the concentration
+
+563
+00:21:13,200 --> 00:21:17,600
+squared. That part would make things
+
+564
+00:21:15,440 --> 00:21:19,919
+look easy as long as the waiting factor
+
+565
+00:21:17,600 --> 00:21:21,520
+stays constant. But the problem is you
+
+566
+00:21:19,919 --> 00:21:23,520
+also get cross productduct terms when
+
+567
+00:21:21,520 --> 00:21:25,520
+expanding.
+
+568
+00:21:23,520 --> 00:21:27,280
+These cross terms involve measurements
+
+569
+00:21:25,520 --> 00:21:28,960
+from one source to the detector
+
+570
+00:21:27,280 --> 00:21:30,799
+multiplied by measurements from the
+
+571
+00:21:28,960 --> 00:21:33,280
+second source to the other detector. So
+
+572
+00:21:30,799 --> 00:21:35,520
+you get combinations like from D1 to A
+
+573
+00:21:33,280 --> 00:21:38,000
+and from D2 to B where A and B are
+
+574
+00:21:35,520 --> 00:21:39,679
+different source positions.
+
+575
+00:21:38,000 --> 00:21:42,159
+These cross terms are messy and make
+
+576
+00:21:39,679 --> 00:21:44,159
+modeling in spec much more complicated.
+
+577
+00:21:42,159 --> 00:21:46,480
+The cross terms mean the data model for
+
+578
+00:21:44,159 --> 00:21:48,880
+spec includes waiting factors that still
+
+579
+00:21:46,480 --> 00:21:52,240
+depend on the source positions even when
+
+580
+00:21:48,880 --> 00:21:54,559
+you know the attenuation background.
+
+581
+00:21:52,240 --> 00:21:56,720
+This partial attenuation messes up the
+
+582
+00:21:54,559 --> 00:21:58,640
+tidy modeling you get with paired photon
+
+583
+00:21:56,720 --> 00:21:59,919
+events in PET. For PET or paired
+
+584
+00:21:58,640 --> 00:22:01,840
+emission, the modeling is
+
+585
+00:21:59,919 --> 00:22:03,600
+straightforward and you get constant
+
+586
+00:22:01,840 --> 00:22:05,760
+waiting.
+
+587
+00:22:03,600 --> 00:22:07,760
+That's why for spec, you can't just
+
+588
+00:22:05,760 --> 00:22:09,919
+ignore these source position dependent
+
+589
+00:22:07,760 --> 00:22:11,840
+factors. They're built into the math and
+
+590
+00:22:09,919 --> 00:22:14,840
+must be dealt with when reconstructing
+
+591
+00:22:11,840 --> 00:22:14,840
+images.
+
+592
+00:22:16,400 --> 00:22:21,760
+When we use a ring detector in PET, the
+
+593
+00:22:18,400 --> 00:22:23,200
+key is to perform coincidence detection.
+
+594
+00:22:21,760 --> 00:22:25,600
+This means we're looking for events
+
+595
+00:22:23,200 --> 00:22:28,240
+where two detectors on opposite sides
+
+596
+00:22:25,600 --> 00:22:30,480
+register gamma photons at the same time.
+
+597
+00:22:28,240 --> 00:22:33,200
+Those photons come from an annihilation
+
+598
+00:22:30,480 --> 00:22:35,360
+happening somewhere inside the ring. You
+
+599
+00:22:33,200 --> 00:22:37,679
+can determine a line integral along the
+
+600
+00:22:35,360 --> 00:22:40,400
+green line shown here or along the blue
+
+601
+00:22:37,679 --> 00:22:42,559
+line for different angles.
+
+602
+00:22:40,400 --> 00:22:44,159
+By rotating the ring or changing the
+
+603
+00:22:42,559 --> 00:22:47,440
+projection angle, you can collect
+
+604
+00:22:44,159 --> 00:22:49,280
+projections from multiple directions.
+
+605
+00:22:47,440 --> 00:22:51,840
+When you arrange all these projections
+
+606
+00:22:49,280 --> 00:22:55,280
+by angle, you get what's called a syog,
+
+607
+00:22:51,840 --> 00:22:57,280
+very similar to what you see in CT.
+
+608
+00:22:55,280 --> 00:22:59,520
+As long as you know the attenuation and
+
+609
+00:22:57,280 --> 00:23:01,360
+apply the correct compensation factors,
+
+610
+00:22:59,520 --> 00:23:03,840
+you can accumulate your data into these
+
+611
+00:23:01,360 --> 00:23:06,000
+line integrals. That's the essential
+
+612
+00:23:03,840 --> 00:23:08,159
+idea behind PET and spec data
+
+613
+00:23:06,000 --> 00:23:10,240
+acquisition, grouping your measurements
+
+614
+00:23:08,159 --> 00:23:14,280
+along lines of response and sorting them
+
+615
+00:23:10,240 --> 00:23:14,280
+by angle into a synogram.
+
+616
+00:23:16,000 --> 00:23:20,000
+Earlier PET scanners used planer imaging
+
+617
+00:23:18,320 --> 00:23:22,799
+mode which meant you had mechanical
+
+618
+00:23:20,000 --> 00:23:24,640
+columators defining the imaging planes.
+
+619
+00:23:22,799 --> 00:23:26,559
+These columators would shape the
+
+620
+00:23:24,640 --> 00:23:28,960
+radioactivity that could reach the
+
+621
+00:23:26,559 --> 00:23:31,919
+detectors. So the ring only collected
+
+622
+00:23:28,960 --> 00:23:33,840
+signals from a thin slice or plane of
+
+623
+00:23:31,919 --> 00:23:35,679
+the patient.
+
+624
+00:23:33,840 --> 00:23:37,039
+The detectors were arranged in rings
+
+625
+00:23:35,679 --> 00:23:38,720
+around the patient and you'd have
+
+626
+00:23:37,039 --> 00:23:42,000
+different parts of the ring recording
+
+627
+00:23:38,720 --> 00:23:43,919
+data for the left and right sides.
+
+628
+00:23:42,000 --> 00:23:46,480
+Modern PET scanners though have removed
+
+629
+00:23:43,919 --> 00:23:48,559
+these mechanical columators. Instead,
+
+630
+00:23:46,480 --> 00:23:50,559
+you use coincidence detection in three
+
+631
+00:23:48,559 --> 00:23:53,200
+dimensions.
+
+632
+00:23:50,559 --> 00:23:55,440
+This 3D orientation means you can detect
+
+633
+00:23:53,200 --> 00:23:57,120
+gamma photons from many directions and
+
+634
+00:23:55,440 --> 00:23:59,039
+you're not limited by a physical
+
+635
+00:23:57,120 --> 00:24:01,039
+columator. Anywhere in the field of
+
+636
+00:23:59,039 --> 00:24:04,039
+view, you can pick up valid annihilation
+
+637
+00:24:01,039 --> 00:24:04,039
+events.
+
+638
+00:24:05,600 --> 00:24:09,840
+Visually, you see that 3D PET systems
+
+639
+00:24:08,080 --> 00:24:12,400
+have a clear benefit because they don't
+
+640
+00:24:09,840 --> 00:24:14,559
+use mechanical columators. With no
+
+641
+00:24:12,400 --> 00:24:16,240
+columators blocking the gamma rays, you
+
+642
+00:24:14,559 --> 00:24:18,159
+can capture a much greater number of
+
+643
+00:24:16,240 --> 00:24:21,600
+photons, which raises the systems
+
+644
+00:24:18,159 --> 00:24:23,760
+sensitivity and improves image quality.
+
+645
+00:24:21,600 --> 00:24:25,679
+The drawback is that because the system
+
+646
+00:24:23,760 --> 00:24:28,080
+has a wide opening, it can also pick up
+
+647
+00:24:25,679 --> 00:24:30,240
+more scattered and random events. These
+
+648
+00:24:28,080 --> 00:24:32,000
+unwanted signals can interfere with the
+
+649
+00:24:30,240 --> 00:24:33,840
+data and reduce the quality of your
+
+650
+00:24:32,000 --> 00:24:35,760
+images.
+
+651
+00:24:33,840 --> 00:24:38,000
+Later, we'll cover what scattered and
+
+652
+00:24:35,760 --> 00:24:40,480
+random events actually are and how we
+
+653
+00:24:38,000 --> 00:24:42,640
+try to remove them in post-processing.
+
+654
+00:24:40,480 --> 00:24:45,440
+For 2D PET imaging, where you have
+
+655
+00:24:42,640 --> 00:24:47,600
+strict columnation, only photons from a
+
+656
+00:24:45,440 --> 00:24:49,360
+certain plane are detected and scattered
+
+657
+00:24:47,600 --> 00:24:50,960
+photons from other directions are
+
+658
+00:24:49,360 --> 00:24:53,760
+blocked.
+
+659
+00:24:50,960 --> 00:24:56,080
+But in 3D PET, you let in more data. And
+
+660
+00:24:53,760 --> 00:24:58,080
+while that's a benefit for sensitivity,
+
+661
+00:24:56,080 --> 00:25:02,200
+it can also make noise and unwanted
+
+662
+00:24:58,080 --> 00:25:02,200
+signals more of a problem.
+
+663
+00:25:03,679 --> 00:25:07,840
+When we talk about PET or paired photon
+
+664
+00:25:05,840 --> 00:25:09,919
+emission models, the waiting factor for
+
+665
+00:25:07,840 --> 00:25:12,240
+attenuation is constant along a given
+
+666
+00:25:09,919 --> 00:25:14,640
+line of response.
+
+667
+00:25:12,240 --> 00:25:16,559
+That means when you do an integral over
+
+668
+00:25:14,640 --> 00:25:18,799
+all source distributions, you can pull
+
+669
+00:25:16,559 --> 00:25:20,640
+this constant waiting factor outside the
+
+670
+00:25:18,799 --> 00:25:22,799
+integral. It doesn't depend on the
+
+671
+00:25:20,640 --> 00:25:24,400
+source position.
+
+672
+00:25:22,799 --> 00:25:26,720
+You'll see how this works more clearly
+
+673
+00:25:24,400 --> 00:25:28,480
+in the next slide. So let's shift our
+
+674
+00:25:26,720 --> 00:25:32,320
+focus to image reconstruction where
+
+675
+00:25:28,480 --> 00:25:32,320
+these ideas become important.
+
+676
+00:25:34,080 --> 00:25:38,240
+Now we're talking about the mathematical
+
+677
+00:25:36,000 --> 00:25:40,720
+model for image reconstruction. The core
+
+678
+00:25:38,240 --> 00:25:42,480
+idea is how to represent our data. For
+
+679
+00:25:40,720 --> 00:25:44,640
+PET reconstruction, we usually assume
+
+680
+00:25:42,480 --> 00:25:46,799
+that the number of detected photons is
+
+681
+00:25:44,640 --> 00:25:48,720
+large. So the probability averages out
+
+682
+00:25:46,799 --> 00:25:50,799
+and the measurements closely reflect the
+
+683
+00:25:48,720 --> 00:25:52,880
+mean values
+
+684
+00:25:50,799 --> 00:25:55,440
+that lets us use a deterministic model
+
+685
+00:25:52,880 --> 00:25:57,600
+for reconstruction. For a given line
+
+686
+00:25:55,440 --> 00:25:59,840
+path or line of response, the measured
+
+687
+00:25:57,600 --> 00:26:02,320
+data will primarily reflect the radio
+
+688
+00:25:59,840 --> 00:26:04,000
+tracer concentration along that line. So
+
+689
+00:26:02,320 --> 00:26:06,000
+we can treat the whole reconstruction
+
+690
+00:26:04,000 --> 00:26:09,720
+process as solving for concentrations
+
+691
+00:26:06,000 --> 00:26:09,720
+along known paths.
+
+692
+00:26:11,279 --> 00:26:15,039
+There's a lot of research going on in
+
+693
+00:26:12,880 --> 00:26:17,279
+this area. I should put another green
+
+694
+00:26:15,039 --> 00:26:19,039
+button here for curiosity's sake because
+
+695
+00:26:17,279 --> 00:26:20,799
+some of these ideas can be solved
+
+696
+00:26:19,039 --> 00:26:24,640
+analytically when you assume the
+
+697
+00:26:20,799 --> 00:26:26,960
+attenuation coefficient moo is constant.
+
+698
+00:26:24,640 --> 00:26:29,279
+You can use forier analysis, closed form
+
+699
+00:26:26,960 --> 00:26:32,720
+solutions or algebraic approaches like
+
+700
+00:26:29,279 --> 00:26:34,320
+solving systems of linear equations.
+
+701
+00:26:32,720 --> 00:26:36,080
+Just to point out for those who are
+
+702
+00:26:34,320 --> 00:26:38,240
+curious, there's a paper shown here
+
+703
+00:26:36,080 --> 00:26:41,039
+about using analytic techniques and the
+
+704
+00:26:38,240 --> 00:26:43,360
+forier slice theorem for spec. These
+
+705
+00:26:41,039 --> 00:26:45,279
+methods are more complicated than CT,
+
+706
+00:26:43,360 --> 00:26:47,440
+but they show that there are options for
+
+707
+00:26:45,279 --> 00:26:49,600
+solving the reconstruction problem with
+
+708
+00:26:47,440 --> 00:26:51,840
+closed form solutions or advanced
+
+709
+00:26:49,600 --> 00:26:53,760
+mathematics.
+
+710
+00:26:51,840 --> 00:26:56,760
+Next, let's look at deterministic PET
+
+711
+00:26:53,760 --> 00:26:56,760
+reconstruction.
+
+712
+00:26:58,559 --> 00:27:02,960
+In PET, you see that the data model has
+
+713
+00:27:00,720 --> 00:27:05,679
+a uniform waiting factor multiplied by
+
+714
+00:27:02,960 --> 00:27:07,520
+the concentration at each location. In
+
+715
+00:27:05,679 --> 00:27:09,360
+previous slides, I mentioned how when
+
+716
+00:27:07,520 --> 00:27:11,200
+you measure along a longer line, you
+
+717
+00:27:09,360 --> 00:27:13,360
+need to take account of the location.
+
+718
+00:27:11,200 --> 00:27:15,440
+But for PET, you measure all coincident
+
+719
+00:27:13,360 --> 00:27:17,200
+detections.
+
+720
+00:27:15,440 --> 00:27:18,880
+Effectively, you sum or integrate all
+
+721
+00:27:17,200 --> 00:27:21,279
+the individual concentrations called
+
+722
+00:27:18,880 --> 00:27:23,760
+lambda. The important point is that the
+
+723
+00:27:21,279 --> 00:27:25,600
+attenuation factor remains constant. It
+
+724
+00:27:23,760 --> 00:27:28,320
+doesn't depend on the source position.
+
+725
+00:27:25,600 --> 00:27:30,640
+So it can be factored out.
+
+726
+00:27:28,320 --> 00:27:32,320
+If the attenuation coefficient mu is
+
+727
+00:27:30,640 --> 00:27:34,480
+known, then it becomes an unknown factor
+
+728
+00:27:32,320 --> 00:27:36,240
+in your measurements. But once you know
+
+729
+00:27:34,480 --> 00:27:38,480
+moo, like if you assume the patient's
+
+730
+00:27:36,240 --> 00:27:40,240
+body is mostly water, making mu equal to
+
+731
+00:27:38,480 --> 00:27:42,640
+the value for water, or if you measure
+
+732
+00:27:40,240 --> 00:27:44,240
+mu with a dedicated transmission scan,
+
+733
+00:27:42,640 --> 00:27:47,440
+you can normalize your measurements and
+
+734
+00:27:44,240 --> 00:27:49,120
+you end up with a clean line integral
+
+735
+00:27:47,440 --> 00:27:50,880
+with lots of gamma photons. the
+
+736
+00:27:49,120 --> 00:27:52,640
+measurements really do reflect the mean
+
+737
+00:27:50,880 --> 00:27:54,559
+and you can use deterministic
+
+738
+00:27:52,640 --> 00:27:56,480
+reconstruction like filtered back
+
+739
+00:27:54,559 --> 00:27:58,000
+projection.
+
+740
+00:27:56,480 --> 00:28:00,000
+If you know MW from a special
+
+741
+00:27:58,000 --> 00:28:01,440
+transmission scan or by assuming it's
+
+742
+00:28:00,000 --> 00:28:04,320
+the value for water then your
+
+743
+00:28:01,440 --> 00:28:05,919
+reconstruction is straightforward.
+
+744
+00:28:04,320 --> 00:28:07,840
+An interesting twist is the time
+
+745
+00:28:05,919 --> 00:28:09,760
+offlight approach which uses the
+
+746
+00:28:07,840 --> 00:28:12,000
+difference in arrival times of photons
+
+747
+00:28:09,760 --> 00:28:14,399
+at the detectors to estimate where the
+
+748
+00:28:12,000 --> 00:28:16,399
+annihilation occurred.
+
+749
+00:28:14,399 --> 00:28:18,159
+By measuring these time differences, you
+
+750
+00:28:16,399 --> 00:28:20,159
+can gain additional information about
+
+751
+00:28:18,159 --> 00:28:22,399
+where the event happened close to one
+
+752
+00:28:20,159 --> 00:28:24,080
+detector or the other. This time
+
+753
+00:28:22,399 --> 00:28:25,760
+offlight technique is advanced, and
+
+754
+00:28:24,080 --> 00:28:27,919
+although we don't have time to fully
+
+755
+00:28:25,760 --> 00:28:29,679
+cover it here, just know it's one way to
+
+756
+00:28:27,919 --> 00:28:32,679
+estimate MW and improve PET
+
+757
+00:28:29,679 --> 00:28:32,679
+reconstructions.
+
+758
+00:28:34,640 --> 00:28:38,480
+Let me explain attenuation correction
+
+759
+00:28:36,480 --> 00:28:40,399
+and why it's so important for PET CT
+
+760
+00:28:38,480 --> 00:28:43,440
+imaging. When you want to measure the
+
+761
+00:28:40,399 --> 00:28:45,840
+attenuation coefficient or MU for PET,
+
+762
+00:28:43,440 --> 00:28:48,000
+you often use an individual CT scan to
+
+763
+00:28:45,840 --> 00:28:49,919
+map out the MW distribution inside the
+
+764
+00:28:48,000 --> 00:28:51,679
+patient's body.
+
+765
+00:28:49,919 --> 00:28:54,559
+But here's a key point. The photon
+
+766
+00:28:51,679 --> 00:28:58,480
+energy in PET is much different from CT.
+
+767
+00:28:54,559 --> 00:29:01,279
+PET uses gamma photons at 511 KV, while
+
+768
+00:28:58,480 --> 00:29:04,880
+X-ray CT scans use tube voltages that go
+
+769
+00:29:01,279 --> 00:29:06,960
+up to about 140 KVP.
+
+770
+00:29:04,880 --> 00:29:10,480
+The actual X-ray beam covers a spectrum
+
+771
+00:29:06,960 --> 00:29:12,399
+from around 30 keV to 140 KV. But all
+
+772
+00:29:10,480 --> 00:29:14,240
+these energies can be summed up as a
+
+773
+00:29:12,399 --> 00:29:16,399
+single effective energy usually around
+
+774
+00:29:14,240 --> 00:29:18,559
+70 KV.
+
+775
+00:29:16,399 --> 00:29:20,399
+So when you measure attenuation with CT
+
+776
+00:29:18,559 --> 00:29:23,919
+the coefficient you get is really for
+
+777
+00:29:20,399 --> 00:29:25,919
+that effective energy about 70 KV.
+
+778
+00:29:23,919 --> 00:29:29,600
+For PET attenuation correction you need
+
+779
+00:29:25,919 --> 00:29:32,000
+the mu value at 511 KV because those
+
+780
+00:29:29,600 --> 00:29:34,080
+more energetic gamma photons interact
+
+781
+00:29:32,000 --> 00:29:37,679
+differently with tissue. To bridge this
+
+782
+00:29:34,080 --> 00:29:39,200
+gap, you use a peiewise linear mapping.
+
+783
+00:29:37,679 --> 00:29:42,240
+That means for any CT measured
+
+784
+00:29:39,200 --> 00:29:44,159
+attenuation coefficient at 70 keV, you
+
+785
+00:29:42,240 --> 00:29:48,080
+estimate the corresponding coefficient
+
+786
+00:29:44,159 --> 00:29:50,080
+for PET at 5 and 11 KV. This mapping
+
+787
+00:29:48,080 --> 00:29:52,159
+follows a pretty reliable peace-wise
+
+788
+00:29:50,080 --> 00:29:55,120
+linear relationship. Tissues that have
+
+789
+00:29:52,159 --> 00:29:57,919
+low attenuation at CT energies also have
+
+790
+00:29:55,120 --> 00:29:59,600
+low attenuation at PET energies and vice
+
+791
+00:29:57,919 --> 00:30:02,240
+versa.
+
+792
+00:29:59,600 --> 00:30:04,399
+Why do we combine PET and CT? The CT
+
+793
+00:30:02,240 --> 00:30:06,080
+scan provides anatomical structure while
+
+794
+00:30:04,399 --> 00:30:08,559
+the PET scan gives functional
+
+795
+00:30:06,080 --> 00:30:10,880
+information. Having both types of data
+
+796
+00:30:08,559 --> 00:30:12,480
+in a single framework is powerful. You
+
+797
+00:30:10,880 --> 00:30:14,320
+get two kinds of complimentary
+
+798
+00:30:12,480 --> 00:30:16,000
+information.
+
+799
+00:30:14,320 --> 00:30:17,919
+But beyond that, Connecticut also
+
+800
+00:30:16,000 --> 00:30:20,559
+provides the key information needed for
+
+801
+00:30:17,919 --> 00:30:23,360
+attenuation correction in Pete. With the
+
+802
+00:30:20,559 --> 00:30:25,679
+MW values from CT, you can calculate the
+
+803
+00:30:23,360 --> 00:30:27,840
+scaling factor making it possible to
+
+804
+00:30:25,679 --> 00:30:29,600
+convert PET data into proper line
+
+805
+00:30:27,840 --> 00:30:32,600
+integrals for accurate image
+
+806
+00:30:29,600 --> 00:30:32,600
+reconstruction.
+
+807
+00:30:34,640 --> 00:30:38,399
+Once you convert PET data into line
+
+808
+00:30:36,720 --> 00:30:40,240
+integrals, you can remove the
+
+809
+00:30:38,399 --> 00:30:42,720
+attenuation factor and that will make
+
+810
+00:30:40,240 --> 00:30:45,679
+PET imaging more accurate. Quantitative
+
+811
+00:30:42,720 --> 00:30:47,520
+information can be extracted this way.
+
+812
+00:30:45,679 --> 00:30:49,679
+Like I said here, the PET result without
+
+813
+00:30:47,520 --> 00:30:51,760
+attenuation correction shows a very dark
+
+814
+00:30:49,679 --> 00:30:54,000
+side. But when you apply the correct
+
+815
+00:30:51,760 --> 00:30:56,480
+attenuation coefficient, you see a much
+
+816
+00:30:54,000 --> 00:30:58,399
+more uniform appearance. the result is
+
+817
+00:30:56,480 --> 00:31:00,080
+more accurate for concentrations for
+
+818
+00:30:58,399 --> 00:31:03,279
+example in the liver making the
+
+819
+00:31:00,080 --> 00:31:04,559
+measurement statistically meaningful
+
+820
+00:31:03,279 --> 00:31:06,480
+that's one reason I covered the
+
+821
+00:31:04,559 --> 00:31:08,960
+deterministic reconstruction process
+
+822
+00:31:06,480 --> 00:31:12,000
+first now I'm giving you a highle idea
+
+823
+00:31:08,960 --> 00:31:14,720
+about statistical reconstruction
+
+824
+00:31:12,000 --> 00:31:16,799
+so if you have lambda capital lambda as
+
+825
+00:31:14,720 --> 00:31:19,520
+the image to be estimated here's how the
+
+826
+00:31:16,799 --> 00:31:21,200
+statistical approach works we are given
+
+827
+00:31:19,520 --> 00:31:22,559
+noisy measurements and we want to
+
+828
+00:31:21,200 --> 00:31:24,480
+estimate the image from those
+
+829
+00:31:22,559 --> 00:31:26,640
+measurements
+
+830
+00:31:24,480 --> 00:31:28,240
+the measured quantity called Q is what
+
+831
+00:31:26,640 --> 00:31:30,000
+actually comes from the system. Whether
+
+832
+00:31:28,240 --> 00:31:32,320
+you use mechanical columators or
+
+833
+00:31:30,000 --> 00:31:34,240
+coincidence detection, the measurement
+
+834
+00:31:32,320 --> 00:31:36,640
+is very noisy because the gamma ray
+
+835
+00:31:34,240 --> 00:31:38,799
+tracer concentration isn't perfect and
+
+836
+00:31:36,640 --> 00:31:41,679
+the decay rate is reasonable, but the
+
+837
+00:31:38,799 --> 00:31:43,840
+noise is not normal anymore.
+
+838
+00:31:41,679 --> 00:31:46,159
+It's not the normal noise you see in CT
+
+839
+00:31:43,840 --> 00:31:47,679
+reconstruction. The underlying source
+
+840
+00:31:46,159 --> 00:31:49,919
+distribution can be modeled
+
+841
+00:31:47,679 --> 00:31:51,919
+statistically. The image represents the
+
+842
+00:31:49,919 --> 00:31:54,559
+source distribution broken down into
+
+843
+00:31:51,919 --> 00:31:56,799
+small pixels where each pixel acts like
+
+844
+00:31:54,559 --> 00:31:58,240
+a small light bulb.
+
+845
+00:31:56,799 --> 00:32:00,880
+So far we've talked about image
+
+846
+00:31:58,240 --> 00:32:02,799
+reconstruction for both spec and PET.
+
+847
+00:32:00,880 --> 00:32:04,480
+This assumes your data model is good
+
+848
+00:32:02,799 --> 00:32:07,440
+enough, meaning you have a large number
+
+849
+00:32:04,480 --> 00:32:09,279
+of gamma photons captured.
+
+850
+00:32:07,440 --> 00:32:11,519
+In that situation, the measurements
+
+851
+00:32:09,279 --> 00:32:14,720
+reflect the actual statistical mean. So
+
+852
+00:32:11,519 --> 00:32:16,720
+you get a formula, the data model.
+
+853
+00:32:14,720 --> 00:32:18,960
+The data model is tricky for single
+
+854
+00:32:16,720 --> 00:32:20,720
+photon emission and different for paired
+
+855
+00:32:18,960 --> 00:32:22,960
+photon emission because the waiting
+
+856
+00:32:20,720 --> 00:32:25,120
+factor changes.
+
+857
+00:32:22,960 --> 00:32:27,039
+For single photon emission, the waiting
+
+858
+00:32:25,120 --> 00:32:29,440
+factor fundamentally depends on the
+
+859
+00:32:27,039 --> 00:32:31,279
+location of the active source element.
+
+860
+00:32:29,440 --> 00:32:33,200
+The waiting factor always depends on
+
+861
+00:32:31,279 --> 00:32:34,880
+location.
+
+862
+00:32:33,200 --> 00:32:37,360
+I explained that this location
+
+863
+00:32:34,880 --> 00:32:39,039
+dependence cannot be easily removed.
+
+864
+00:32:37,360 --> 00:32:40,799
+When you try to multiply paired
+
+865
+00:32:39,039 --> 00:32:42,480
+measurements together, cross terms
+
+866
+00:32:40,799 --> 00:32:44,960
+appear and you can't easily get rid of
+
+867
+00:32:42,480 --> 00:32:46,720
+the spatial dependence.
+
+868
+00:32:44,960 --> 00:32:48,480
+But for PET photon emission, you're
+
+869
+00:32:46,720 --> 00:32:50,559
+actually able to account for the single
+
+870
+00:32:48,480 --> 00:32:52,960
+source distribution with a probability
+
+871
+00:32:50,559 --> 00:32:55,200
+factor in the formula.
+
+872
+00:32:52,960 --> 00:32:56,799
+If you have multiple radioactive source
+
+873
+00:32:55,200 --> 00:32:58,720
+points along the same line, you just
+
+874
+00:32:56,799 --> 00:33:01,200
+form the line integral by adding them
+
+875
+00:32:58,720 --> 00:33:03,200
+up. The attenuation factor for any
+
+876
+00:33:01,200 --> 00:33:04,960
+radioactive element along that line is
+
+877
+00:33:03,200 --> 00:33:07,200
+the same.
+
+878
+00:33:04,960 --> 00:33:08,799
+If you know the attenuation coefficient
+
+879
+00:33:07,200 --> 00:33:10,960
+called mu, you can determine the
+
+880
+00:33:08,799 --> 00:33:13,519
+attenuation factor and obtain a line
+
+881
+00:33:10,960 --> 00:33:16,240
+integral. This makes it possible to use
+
+882
+00:33:13,519 --> 00:33:18,080
+filtered back projection just as in CT
+
+883
+00:33:16,240 --> 00:33:20,240
+which is an important feature for image
+
+884
+00:33:18,080 --> 00:33:22,159
+reconstruction.
+
+885
+00:33:20,240 --> 00:33:24,000
+It is important to review the slides
+
+886
+00:33:22,159 --> 00:33:26,000
+carefully to follow the argument and
+
+887
+00:33:24,000 --> 00:33:28,399
+understand the data model for spec and
+
+888
+00:33:26,000 --> 00:33:30,320
+PET. Once that model is clear, filtered
+
+889
+00:33:28,399 --> 00:33:32,640
+back projection can also be applied
+
+890
+00:33:30,320 --> 00:33:35,440
+particularly in PET.
+
+891
+00:33:32,640 --> 00:33:37,760
+Nuclear tomography follows CT because CT
+
+892
+00:33:35,440 --> 00:33:40,000
+provides the necessary foundation.
+
+893
+00:33:37,760 --> 00:33:41,919
+Inspect the attenuation factor depends
+
+894
+00:33:40,000 --> 00:33:44,159
+on position. But if mu is known, for
+
+895
+00:33:41,919 --> 00:33:45,600
+example, from a transmission scan, it
+
+896
+00:33:44,159 --> 00:33:48,559
+can still be converted into the
+
+897
+00:33:45,600 --> 00:33:50,159
+attenuation rate for the data.
+
+898
+00:33:48,559 --> 00:33:52,240
+You can turn each measurement into
+
+899
+00:33:50,159 --> 00:33:54,720
+something that forms a line integral, a
+
+900
+00:33:52,240 --> 00:33:56,960
+sum. Then you'll have a system of linear
+
+901
+00:33:54,720 --> 00:34:00,320
+equations, which is just like CT, a
+
+902
+00:33:56,960 --> 00:34:02,080
+system of linear equations to solve.
+
+903
+00:34:00,320 --> 00:34:04,880
+You can use a real high performance
+
+904
+00:34:02,080 --> 00:34:07,039
+computer for this. Linear algebra gives
+
+905
+00:34:04,880 --> 00:34:08,960
+you the tools to measure and solve these
+
+906
+00:34:07,039 --> 00:34:12,320
+equations. And we know how to do that
+
+907
+00:34:08,960 --> 00:34:13,679
+both numerically and analytically.
+
+908
+00:34:12,320 --> 00:34:15,679
+But what happens if you don't have
+
+909
+00:34:13,679 --> 00:34:18,079
+enough flux?
+
+910
+00:34:15,679 --> 00:34:20,159
+That's a big problem. I mentioned it the
+
+911
+00:34:18,079 --> 00:34:22,480
+other day. X-ray flux is high, but for
+
+912
+00:34:20,159 --> 00:34:23,520
+nuclear imaging, it's much lower. That's
+
+913
+00:34:22,480 --> 00:34:25,919
+because you're introducing
+
+914
+00:34:23,520 --> 00:34:28,000
+radioisotopes.
+
+915
+00:34:25,919 --> 00:34:29,760
+The number of emitted gammaray photons
+
+916
+00:34:28,000 --> 00:34:31,839
+isn't ideal because you don't want to
+
+917
+00:34:29,760 --> 00:34:34,079
+introduce too much radioactive material
+
+918
+00:34:31,839 --> 00:34:36,480
+into the human body. You need to use the
+
+919
+00:34:34,079 --> 00:34:38,480
+minimum amount for safety. On the other
+
+920
+00:34:36,480 --> 00:34:40,960
+hand, radioisotopes are incredibly
+
+921
+00:34:38,480 --> 00:34:42,879
+sensitive. Any signal you detect comes
+
+922
+00:34:40,960 --> 00:34:46,119
+from the radioisotopes. So you get very
+
+923
+00:34:42,879 --> 00:34:46,119
+high sensitivity.
+
+924
+00:34:47,839 --> 00:34:51,359
+We begin with the idea that each gamma
+
+925
+00:34:50,000 --> 00:34:53,679
+ray measurement is modeled
+
+926
+00:34:51,359 --> 00:34:56,079
+independently. The underlying framework
+
+927
+00:34:53,679 --> 00:34:58,880
+is a plasma model. Consider an image
+
+928
+00:34:56,079 --> 00:35:00,960
+made up of pixels. Each pixel along with
+
+929
+00:34:58,880 --> 00:35:02,880
+its neighbors contributes independently.
+
+930
+00:35:00,960 --> 00:35:06,160
+Meaning the measurement at one pixel
+
+931
+00:35:02,880 --> 00:35:08,000
+does not directly depend on another.
+
+932
+00:35:06,160 --> 00:35:10,240
+To capture this mathematically, we
+
+933
+00:35:08,000 --> 00:35:12,720
+partition time into small intervals. For
+
+934
+00:35:10,240 --> 00:35:14,400
+example, 10 milliseconds each. One
+
+935
+00:35:12,720 --> 00:35:17,599
+interval, the next interval, and another
+
+936
+00:35:14,400 --> 00:35:19,680
+further away all behave independently.
+
+937
+00:35:17,599 --> 00:35:22,079
+This independence is crucial because it
+
+938
+00:35:19,680 --> 00:35:24,640
+allows us to express the probability of
+
+939
+00:35:22,079 --> 00:35:27,599
+the entire measurement as the product of
+
+940
+00:35:24,640 --> 00:35:29,280
+many small probabilities. Each detector,
+
+941
+00:35:27,599 --> 00:35:30,960
+each pixel, each time interval
+
+942
+00:35:29,280 --> 00:35:32,640
+contributes its own probability and
+
+943
+00:35:30,960 --> 00:35:34,960
+multiplying them together gives the
+
+944
+00:35:32,640 --> 00:35:36,400
+overall likelihood.
+
+945
+00:35:34,960 --> 00:35:39,119
+This setup naturally leads to
+
+946
+00:35:36,400 --> 00:35:40,960
+probabilistic modeling. Baze rule, which
+
+947
+00:35:39,119 --> 00:35:43,520
+many of us first learned in high school,
+
+948
+00:35:40,960 --> 00:35:45,280
+becomes central here. Imagine a patient
+
+949
+00:35:43,520 --> 00:35:47,920
+comes in and we perform data acquisition
+
+950
+00:35:45,280 --> 00:35:49,440
+using a camera or a PET scanner. The raw
+
+951
+00:35:47,920 --> 00:35:52,320
+measurements are then organized into
+
+952
+00:35:49,440 --> 00:35:54,240
+centagrams in 2D or 3D.
+
+953
+00:35:52,320 --> 00:35:55,920
+To understand error and uncertainty, we
+
+954
+00:35:54,240 --> 00:35:57,760
+rely on the power of mathematical
+
+955
+00:35:55,920 --> 00:35:59,599
+notation which is both compact and
+
+956
+00:35:57,760 --> 00:36:01,280
+expressive.
+
+957
+00:35:59,599 --> 00:36:03,280
+In fact, the measured counts can be
+
+958
+00:36:01,280 --> 00:36:06,000
+modeled as random variables following a
+
+959
+00:36:03,280 --> 00:36:08,320
+pson distribution. The problem can then
+
+960
+00:36:06,000 --> 00:36:10,240
+be phrased as given the measured data,
+
+961
+00:36:08,320 --> 00:36:13,200
+what is the most likely underlying image
+
+962
+00:36:10,240 --> 00:36:14,960
+denoted by capital lambda.
+
+963
+00:36:13,200 --> 00:36:17,520
+This probability depends on several
+
+964
+00:36:14,960 --> 00:36:19,280
+factors. First, assume the true image is
+
+965
+00:36:17,520 --> 00:36:21,920
+known along with the source distribution
+
+966
+00:36:19,280 --> 00:36:23,680
+and any background activity. If we also
+
+967
+00:36:21,920 --> 00:36:25,119
+know the imaging geometry, then we can
+
+968
+00:36:23,680 --> 00:36:26,880
+predict what each detector should
+
+969
+00:36:25,119 --> 00:36:28,960
+record.
+
+970
+00:36:26,880 --> 00:36:31,440
+For example, a detector may be expected
+
+971
+00:36:28,960 --> 00:36:34,320
+to receive around 3,000 gamma photons
+
+972
+00:36:31,440 --> 00:36:36,320
+during a 5-minut scan. The difficulty is
+
+973
+00:36:34,320 --> 00:36:39,200
+that in reality the image is not known.
+
+974
+00:36:36,320 --> 00:36:41,200
+We only have the measured data.
+
+975
+00:36:39,200 --> 00:36:43,599
+That's why we must also consider prior
+
+976
+00:36:41,200 --> 00:36:45,520
+knowledge about the image distribution.
+
+977
+00:36:43,599 --> 00:36:47,440
+For younger patients without cancer, we
+
+978
+00:36:45,520 --> 00:36:49,760
+may expect little to no radioactive
+
+979
+00:36:47,440 --> 00:36:51,280
+uptake in major organs. For older
+
+980
+00:36:49,760 --> 00:36:53,280
+patients, there may be a higher
+
+981
+00:36:51,280 --> 00:36:55,599
+probability of uptake, for instance, in
+
+982
+00:36:53,280 --> 00:36:57,520
+the colon if there is a tumor. These
+
+983
+00:36:55,599 --> 00:36:59,440
+expectations form a prior distribution
+
+984
+00:36:57,520 --> 00:37:01,359
+on the image.
+
+985
+00:36:59,440 --> 00:37:03,440
+However, in many cases, especially when
+
+986
+00:37:01,359 --> 00:37:06,400
+data is scarce, we may not want to
+
+987
+00:37:03,440 --> 00:37:07,920
+assume anything specific.
+
+988
+00:37:06,400 --> 00:37:09,760
+In that case, we take the prior
+
+989
+00:37:07,920 --> 00:37:12,160
+distribution to be uniform, meaning
+
+990
+00:37:09,760 --> 00:37:14,320
+every image is equally likely. This
+
+991
+00:37:12,160 --> 00:37:16,480
+constant prior does not affect the
+
+992
+00:37:14,320 --> 00:37:18,960
+statistical estimation since it cancels
+
+993
+00:37:16,480 --> 00:37:21,280
+out in maximization.
+
+994
+00:37:18,960 --> 00:37:24,560
+From here, two key concepts arise.
+
+995
+00:37:21,280 --> 00:37:27,839
+Maximum a posteriori map estimation and
+
+996
+00:37:24,560 --> 00:37:29,920
+maximum likelihood ML estimation. Map
+
+997
+00:37:27,839 --> 00:37:32,480
+seeks the image that maximizes the
+
+998
+00:37:29,920 --> 00:37:34,240
+posterior probability combining both the
+
+999
+00:37:32,480 --> 00:37:36,160
+likelihood of the measured data given
+
+1000
+00:37:34,240 --> 00:37:38,480
+the image and the prior probability of
+
+1001
+00:37:36,160 --> 00:37:40,720
+the image itself.
+
+1002
+00:37:38,480 --> 00:37:42,640
+If we assume the prior is uniform, map
+
+1003
+00:37:40,720 --> 00:37:45,359
+reduces to maximum likelihood
+
+1004
+00:37:42,640 --> 00:37:47,200
+estimation. In ML, we search for the
+
+1005
+00:37:45,359 --> 00:37:48,960
+image that makes the measured data most
+
+1006
+00:37:47,200 --> 00:37:50,880
+probable.
+
+1007
+00:37:48,960 --> 00:37:52,400
+The process is iterative. We try
+
+1008
+00:37:50,880 --> 00:37:53,680
+candidate images, compute the
+
+1009
+00:37:52,400 --> 00:37:55,760
+probability that they would have
+
+1010
+00:37:53,680 --> 00:37:57,520
+produced the measured data and adjust
+
+1011
+00:37:55,760 --> 00:37:59,520
+until we find one with the highest
+
+1012
+00:37:57,520 --> 00:38:01,520
+probability.
+
+1013
+00:37:59,520 --> 00:38:04,079
+That image is then reported as our
+
+1014
+00:38:01,520 --> 00:38:06,079
+reconstruction. In summary, if the prior
+
+1015
+00:38:04,079 --> 00:38:08,800
+distribution is non-informative, map and
+
+1016
+00:38:06,079 --> 00:38:10,560
+ML give the same result. Otherwise, map
+
+1017
+00:38:08,800 --> 00:38:13,800
+incorporates prior knowledge to guide
+
+1018
+00:38:10,560 --> 00:38:13,800
+the estimation.
+
+1019
+00:38:15,359 --> 00:38:19,119
+The IMIL approach is often used because
+
+1020
+00:38:17,359 --> 00:38:21,520
+it naturally incorporates statistical
+
+1021
+00:38:19,119 --> 00:38:23,280
+knowledge. To explain this more simply,
+
+1022
+00:38:21,520 --> 00:38:25,520
+let us recall the idea of CT
+
+1023
+00:38:23,280 --> 00:38:27,359
+reconstruction.
+
+1024
+00:38:25,520 --> 00:38:29,520
+Imagine you have multiple views of an
+
+1025
+00:38:27,359 --> 00:38:31,760
+object. One view looks like this.
+
+1026
+00:38:29,520 --> 00:38:35,119
+Another view looks different. Now you
+
+1027
+00:38:31,760 --> 00:38:37,599
+try to reconstruct the underlying image.
+
+1028
+00:38:35,119 --> 00:38:39,440
+Suppose the underlying image is a star.
+
+1029
+00:38:37,599 --> 00:38:41,680
+When you trace the star vertically, the
+
+1030
+00:38:39,440 --> 00:38:43,599
+profile does not look right. When you
+
+1031
+00:38:41,680 --> 00:38:45,760
+trace it horizontally, again, it does
+
+1032
+00:38:43,599 --> 00:38:48,720
+not match. Then you try using a
+
+1033
+00:38:45,760 --> 00:38:50,880
+different model, say an ellipse.
+
+1034
+00:38:48,720 --> 00:38:52,800
+If you trace the ellipse horizontally,
+
+1035
+00:38:50,880 --> 00:38:54,960
+you obtain a profile that matches the
+
+1036
+00:38:52,800 --> 00:38:56,800
+measured data more closely. This
+
+1037
+00:38:54,960 --> 00:38:59,359
+suggests that the elliptical model fits
+
+1038
+00:38:56,800 --> 00:39:02,400
+best. In this case, you would report the
+
+1039
+00:38:59,359 --> 00:39:04,160
+ellipse as the reconstructed image.
+
+1040
+00:39:02,400 --> 00:39:06,560
+This is essentially what maximum
+
+1041
+00:39:04,160 --> 00:39:08,480
+likelihood estimation does. You keep
+
+1042
+00:39:06,560 --> 00:39:10,560
+trying different underlying images,
+
+1043
+00:39:08,480 --> 00:39:13,520
+generate simulated measurements, and
+
+1044
+00:39:10,560 --> 00:39:15,839
+compare them to the actual data.
+
+1045
+00:39:13,520 --> 00:39:17,680
+When the simulated measurements maximize
+
+1046
+00:39:15,839 --> 00:39:19,760
+the probability of matching the real
+
+1047
+00:39:17,680 --> 00:39:21,760
+ones, that candidate is taken as the
+
+1048
+00:39:19,760 --> 00:39:23,520
+true image.
+
+1049
+00:39:21,760 --> 00:39:25,760
+This approach is fundamentally different
+
+1050
+00:39:23,520 --> 00:39:28,240
+from deterministic CT reconstruction
+
+1051
+00:39:25,760 --> 00:39:30,400
+methods. Instead of assuming the data is
+
+1052
+00:39:28,240 --> 00:39:32,240
+exact, it operates within a statistical
+
+1053
+00:39:30,400 --> 00:39:33,760
+framework.
+
+1054
+00:39:32,240 --> 00:39:36,160
+In this framework, measurements are
+
+1055
+00:39:33,760 --> 00:39:37,440
+modeled with a pluson distribution.
+
+1056
+00:39:36,160 --> 00:39:39,599
+Because of the independence of
+
+1057
+00:39:37,440 --> 00:39:41,440
+measurements, the overall likelihood can
+
+1058
+00:39:39,599 --> 00:39:43,599
+be expressed as a product of individual
+
+1059
+00:39:41,440 --> 00:39:46,000
+probabilities.
+
+1060
+00:39:43,599 --> 00:39:48,400
+By taking the natural logarithm, this
+
+1061
+00:39:46,000 --> 00:39:50,400
+product is converted into a summation
+
+1062
+00:39:48,400 --> 00:39:53,040
+making the formulation simpler and more
+
+1063
+00:39:50,400 --> 00:39:54,960
+practical to compute. The key point is
+
+1064
+00:39:53,040 --> 00:39:57,280
+that the statistical model accounts for
+
+1065
+00:39:54,960 --> 00:40:00,800
+the pluson noise inherent in the data
+
+1066
+00:39:57,280 --> 00:40:03,040
+which deterministic methods ignore.
+
+1067
+00:40:00,800 --> 00:40:05,680
+To see the advantage, consider a phantom
+
+1068
+00:40:03,040 --> 00:40:07,760
+experiment. If you introduce radioactive
+
+1069
+00:40:05,680 --> 00:40:09,920
+tracers into the phantom and reconstruct
+
+1070
+00:40:07,760 --> 00:40:12,320
+with filtered back projection, you are
+
+1071
+00:40:09,920 --> 00:40:15,440
+assuming no noise that every measurement
+
+1072
+00:40:12,320 --> 00:40:17,440
+is an exact line integral.
+
+1073
+00:40:15,440 --> 00:40:20,000
+But in reality, measurements always have
+
+1074
+00:40:17,440 --> 00:40:22,160
+statistical fluctuations. This mismatch
+
+1075
+00:40:20,000 --> 00:40:25,280
+leads to streaking artifacts and random
+
+1076
+00:40:22,160 --> 00:40:27,280
+noise in the reconstructed images.
+
+1077
+00:40:25,280 --> 00:40:29,520
+By contrast, maximum likelihood
+
+1078
+00:40:27,280 --> 00:40:31,520
+reconstruction explains the fluctuations
+
+1079
+00:40:29,520 --> 00:40:34,000
+more accurately within the statistical
+
+1080
+00:40:31,520 --> 00:40:36,240
+model. As a result, the reconstructed
+
+1081
+00:40:34,000 --> 00:40:38,320
+images show fewer artifacts and improve
+
+1082
+00:40:36,240 --> 00:40:41,320
+quality as demonstrated in the phantom
+
+1083
+00:40:38,320 --> 00:40:41,320
+example.
+
+1084
+00:40:42,960 --> 00:40:46,560
+This example shows patient
+
+1085
+00:40:44,320 --> 00:40:48,400
+reconstruction results. When using
+
+1086
+00:40:46,560 --> 00:40:50,480
+filtered back projection, the images
+
+1087
+00:40:48,400 --> 00:40:52,960
+clearly display streak artifacts and
+
+1088
+00:40:50,480 --> 00:40:55,440
+significant noise. These issues appear
+
+1089
+00:40:52,960 --> 00:40:57,839
+across all views, coronal, transaxial,
+
+1090
+00:40:55,440 --> 00:40:59,920
+and sagittal. Overall, the images
+
+1091
+00:40:57,839 --> 00:41:02,160
+produced by filtered back projection are
+
+1092
+00:40:59,920 --> 00:41:05,839
+noisy and contain strong artifacts that
+
+1093
+00:41:02,160 --> 00:41:07,680
+reduce clarity and diagnostic value.
+
+1094
+00:41:05,839 --> 00:41:09,280
+In contrast, maximum likelihood
+
+1095
+00:41:07,680 --> 00:41:11,119
+iterative reconstruction directly
+
+1096
+00:41:09,280 --> 00:41:13,280
+incorporates statistical knowledge into
+
+1097
+00:41:11,119 --> 00:41:15,200
+the reconstruction process. This
+
+1098
+00:41:13,280 --> 00:41:18,720
+approach produces images that are both
+
+1099
+00:41:15,200 --> 00:41:20,800
+visually and quantitatively improved.
+
+1100
+00:41:18,720 --> 00:41:22,720
+Noise is greatly reduced, artifacts are
+
+1101
+00:41:20,800 --> 00:41:24,720
+minimized, and the resulting images are
+
+1102
+00:41:22,720 --> 00:41:26,400
+more accurate and reliable for clinical
+
+1103
+00:41:24,720 --> 00:41:28,400
+use.
+
+1104
+00:41:26,400 --> 00:41:30,400
+The side-by-side comparison highlights
+
+1105
+00:41:28,400 --> 00:41:32,160
+the advantage of maximum likelihood
+
+1106
+00:41:30,400 --> 00:41:34,880
+iterative reconstruction over
+
+1107
+00:41:32,160 --> 00:41:36,640
+traditional filtered back projection. In
+
+1108
+00:41:34,880 --> 00:41:39,040
+real patient data, the iterative
+
+1109
+00:41:36,640 --> 00:41:40,880
+approach delivers superior image quality
+
+1110
+00:41:39,040 --> 00:41:43,880
+both in appearance and in diagnostic
+
+1111
+00:41:40,880 --> 00:41:43,880
+accuracy.
+
+1112
+00:41:45,599 --> 00:41:49,599
+Let's talk again about PET CT, which
+
+1113
+00:41:47,440 --> 00:41:51,760
+we've mentioned several times. First,
+
+1114
+00:41:49,599 --> 00:41:53,920
+the CT image provides structural and
+
+1115
+00:41:51,760 --> 00:41:56,480
+anatomical information at a high spatial
+
+1116
+00:41:53,920 --> 00:41:58,560
+resolution. It shows the fine details
+
+1117
+00:41:56,480 --> 00:42:00,240
+and allows us to see different tissues
+
+1118
+00:41:58,560 --> 00:42:01,839
+clearly.
+
+1119
+00:42:00,240 --> 00:42:03,839
+On the PET image, you see the
+
+1120
+00:42:01,839 --> 00:42:05,839
+distribution of the radio tracer and in
+
+1121
+00:42:03,839 --> 00:42:08,560
+this case there is a lot of accumulation
+
+1122
+00:42:05,839 --> 00:42:10,560
+in one organ. This means the vascule
+
+1123
+00:42:08,560 --> 00:42:12,720
+there is rich actively taking in
+
+1124
+00:42:10,560 --> 00:42:14,960
+nutrients and glucose which is a sign of
+
+1125
+00:42:12,720 --> 00:42:17,520
+rapid tumor growth.
+
+1126
+00:42:14,960 --> 00:42:19,599
+The radioracer often a form of glucose
+
+1127
+00:42:17,520 --> 00:42:22,400
+is picked up as the tumor cells consume
+
+1128
+00:42:19,599 --> 00:42:24,880
+more nutrients than normal tissues. All
+
+1129
+00:42:22,400 --> 00:42:26,960
+these radioracer molecules gather in
+
+1130
+00:42:24,880 --> 00:42:29,920
+regions of heightened metabolism,
+
+1131
+00:42:26,960 --> 00:42:31,760
+typically where tumors are present.
+
+1132
+00:42:29,920 --> 00:42:33,520
+When you superimpose the PET image over
+
+1133
+00:42:31,760 --> 00:42:36,400
+the CT image, you get excellent
+
+1134
+00:42:33,520 --> 00:42:38,079
+anatomical context. CT provides what's
+
+1135
+00:42:36,400 --> 00:42:40,079
+called the linear attenuation
+
+1136
+00:42:38,079 --> 00:42:42,960
+coefficient. And this is used to correct
+
+1137
+00:42:40,079 --> 00:42:45,200
+for tissue attenuation in PET.
+
+1138
+00:42:42,960 --> 00:42:46,880
+If you use only a uniform attenuation
+
+1139
+00:42:45,200 --> 00:42:48,960
+correction, the lungs, which actually
+
+1140
+00:42:46,880 --> 00:42:51,440
+have very low tissue density, can be
+
+1141
+00:42:48,960 --> 00:42:53,040
+misrepresented. Uniform correction
+
+1142
+00:42:51,440 --> 00:42:55,359
+assumes the same background for all
+
+1143
+00:42:53,040 --> 00:42:57,680
+regions. So in the lung, this leads to
+
+1144
+00:42:55,359 --> 00:42:59,760
+overestimation.
+
+1145
+00:42:57,680 --> 00:43:02,319
+In reality, the lungs attenuate the PET
+
+1146
+00:42:59,760 --> 00:43:04,240
+signal much less. If you apply uniform
+
+1147
+00:43:02,319 --> 00:43:06,160
+correction, you falsely report higher
+
+1148
+00:43:04,240 --> 00:43:09,440
+activity in the lungs than is accurate
+
+1149
+00:43:06,160 --> 00:43:11,119
+simply because the tissue is less dense.
+
+1150
+00:43:09,440 --> 00:43:13,359
+CT solves this by providing
+
+1151
+00:43:11,119 --> 00:43:15,200
+individualized tomographic detail for
+
+1152
+00:43:13,359 --> 00:43:17,359
+each region.
+
+1153
+00:43:15,200 --> 00:43:20,400
+The CT number for the lung is low and
+
+1154
+00:43:17,359 --> 00:43:22,960
+when mapped to attenuation at 511 keV
+
+1155
+00:43:20,400 --> 00:43:25,280
+the PET photon energy you get a precise
+
+1156
+00:43:22,960 --> 00:43:26,720
+much lower correction for lung tissue.
+
+1157
+00:43:25,280 --> 00:43:29,599
+This ensures the activity measurements
+
+1158
+00:43:26,720 --> 00:43:31,440
+from PET CT are more accurate.
+
+1159
+00:43:29,599 --> 00:43:33,359
+Looking at the slide you see areas where
+
+1160
+00:43:31,440 --> 00:43:35,440
+the tumor is intensely bright due to
+
+1161
+00:43:33,359 --> 00:43:37,119
+high tracer uptake. These signals are
+
+1162
+00:43:35,440 --> 00:43:40,000
+not good news because they reflect
+
+1163
+00:43:37,119 --> 00:43:42,800
+significant tumor activity.
+
+1164
+00:43:40,000 --> 00:43:44,960
+But after treatment, a follow-up PET CT
+
+1165
+00:43:42,800 --> 00:43:47,280
+scan can show decreased brightness,
+
+1166
+00:43:44,960 --> 00:43:49,040
+meaning reduced metabolic activity and
+
+1167
+00:43:47,280 --> 00:43:50,880
+therefore an effective response to
+
+1168
+00:43:49,040 --> 00:43:52,800
+treatment.
+
+1169
+00:43:50,880 --> 00:43:55,119
+Finally, while CT is very good for
+
+1170
+00:43:52,800 --> 00:43:57,280
+showing anatomical detail such as bone
+
+1171
+00:43:55,119 --> 00:44:00,640
+and tissue interfaces, it is not
+
+1172
+00:43:57,280 --> 00:44:02,960
+sensitive to soft tissue contrast.
+
+1173
+00:44:00,640 --> 00:44:05,200
+CT excels at showing dense structures
+
+1174
+00:44:02,960 --> 00:44:07,200
+like bone, but metabolic changes and
+
+1175
+00:44:05,200 --> 00:44:09,680
+soft tissue differences are much better
+
+1176
+00:44:07,200 --> 00:44:12,240
+visualized by PET. The combination of
+
+1177
+00:44:09,680 --> 00:44:14,240
+piet and CT gives you both anatomical
+
+1178
+00:44:12,240 --> 00:44:18,760
+layout and functional information making
+
+1179
+00:44:14,240 --> 00:44:18,760
+it a powerful tool in medical imaging.
+
+1180
+00:44:20,240 --> 00:44:25,520
+Now let's look at PET MRI. MRI provides
+
+1181
+00:44:23,440 --> 00:44:27,599
+excellent soft tissue contrast which is
+
+1182
+00:44:25,520 --> 00:44:29,920
+clear here. Structures within the organs
+
+1183
+00:44:27,599 --> 00:44:31,920
+are visible in great detail. However,
+
+1184
+00:44:29,920 --> 00:44:33,760
+MRI is not ideal for imaging bone
+
+1185
+00:44:31,920 --> 00:44:35,680
+structures and some areas like those in
+
+1186
+00:44:33,760 --> 00:44:37,520
+the lungs can be less distinct compared
+
+1187
+00:44:35,680 --> 00:44:39,760
+to CT.
+
+1188
+00:44:37,520 --> 00:44:41,680
+We'll be diving deeper into MRI starting
+
+1189
+00:44:39,760 --> 00:44:43,440
+from the next lecture and I've already
+
+1190
+00:44:41,680 --> 00:44:45,760
+prepared a recorded session because
+
+1191
+00:44:43,440 --> 00:44:47,680
+there may be time constraints. I
+
+1192
+00:44:45,760 --> 00:44:49,359
+encourage you all to preview the MRI
+
+1193
+00:44:47,680 --> 00:44:51,280
+material. It's a different modality
+
+1194
+00:44:49,359 --> 00:44:53,920
+altogether.
+
+1195
+00:44:51,280 --> 00:44:55,680
+MRI takes longer to acquire data and its
+
+1196
+00:44:53,920 --> 00:44:57,599
+spatial resolution depends on the
+
+1197
+00:44:55,680 --> 00:44:59,599
+specific imaging agent and scan
+
+1198
+00:44:57,599 --> 00:45:03,040
+parameters especially for maximum
+
+1199
+00:44:59,599 --> 00:45:05,359
+coverage of larger anatomical areas.
+
+1200
+00:45:03,040 --> 00:45:07,359
+By combining PET with MRI, as shown
+
+1201
+00:45:05,359 --> 00:45:10,160
+here, you get unique diagnostic
+
+1202
+00:45:07,359 --> 00:45:12,880
+information. PET provides molecular and
+
+1203
+00:45:10,160 --> 00:45:15,040
+metabolic data while MRI supplies
+
+1204
+00:45:12,880 --> 00:45:18,400
+detailed anatomical views, especially
+
+1205
+00:45:15,040 --> 00:45:20,240
+for the brain and soft tissue tumors.
+
+1206
+00:45:18,400 --> 00:45:22,400
+This fusion enables more precise
+
+1207
+00:45:20,240 --> 00:45:25,280
+diagnosis and assessment of diseases
+
+1208
+00:45:22,400 --> 00:45:27,200
+like cancer and neurological disorders.
+
+1209
+00:45:25,280 --> 00:45:30,000
+For brain imaging and soft tissue
+
+1210
+00:45:27,200 --> 00:45:32,400
+tumors, Pete MRI truly offers
+
+1211
+00:45:30,000 --> 00:45:34,480
+cuttingedge capability making it a
+
+1212
+00:45:32,400 --> 00:45:37,880
+highly valuable technology in modern
+
+1213
+00:45:34,480 --> 00:45:37,880
+medical imaging.
+
+1214
+00:45:39,440 --> 00:45:43,440
+Let's move into the fourth part where we
+
+1215
+00:45:41,359 --> 00:45:46,800
+discuss system architecture and scatter
+
+1216
+00:45:43,440 --> 00:45:49,359
+correction in spec and PET imaging.
+
+1217
+00:45:46,800 --> 00:45:51,440
+This topic is pretty straightforward. We
+
+1218
+00:45:49,359 --> 00:45:53,359
+focus on how these imaging systems are
+
+1219
+00:45:51,440 --> 00:45:55,520
+built and the basic principles behind
+
+1220
+00:45:53,359 --> 00:45:57,520
+scatter correction which is a major
+
+1221
+00:45:55,520 --> 00:46:00,839
+technical consideration for accurate
+
+1222
+00:45:57,520 --> 00:46:00,839
+image reconstruction.
+
+1223
+00:46:02,880 --> 00:46:07,599
+On this slide you see a great picture of
+
+1224
+00:46:04,880 --> 00:46:10,000
+a spec scanner. The spec camera system
+
+1225
+00:46:07,599 --> 00:46:12,000
+is held together by a sturdy structure
+
+1226
+00:46:10,000 --> 00:46:14,160
+and it's designed to rotate around the
+
+1227
+00:46:12,000 --> 00:46:16,079
+patient. This rotation allows the
+
+1228
+00:46:14,160 --> 00:46:18,000
+scanner to collect data from multiple
+
+1229
+00:46:16,079 --> 00:46:21,280
+orientations, which is conceptually
+
+1230
+00:46:18,000 --> 00:46:23,520
+similar to how CT scanners work.
+
+1231
+00:46:21,280 --> 00:46:25,920
+By rotating the detector and columators
+
+1232
+00:46:23,520 --> 00:46:27,680
+around the patient, we get signals from
+
+1233
+00:46:25,920 --> 00:46:30,000
+different angles, enabling a full
+
+1234
+00:46:27,680 --> 00:46:31,839
+three-dimensional reconstruction. The
+
+1235
+00:46:30,000 --> 00:46:34,000
+system also allows for standard
+
+1236
+00:46:31,839 --> 00:46:39,000
+longitudinal scanning, which is what you
+
+1237
+00:46:34,000 --> 00:46:39,000
+typically see in practical clinical use.
+
+1238
+00:46:40,480 --> 00:46:45,760
+Now building on the idea used in PET CT,
+
+1239
+00:46:42,880 --> 00:46:47,760
+we can talk about spec systems. In this
+
+1240
+00:46:45,760 --> 00:46:49,839
+setup, there can be two or even three
+
+1241
+00:46:47,760 --> 00:46:52,160
+spec cameras working at the same time to
+
+1242
+00:46:49,839 --> 00:46:54,319
+gather more data.
+
+1243
+00:46:52,160 --> 00:46:56,720
+If you use only one planer gamma
+
+1244
+00:46:54,319 --> 00:46:58,960
+detector, a lot of photons, especially
+
+1245
+00:46:56,720 --> 00:47:00,880
+those coming horizontally and downward,
+
+1246
+00:46:58,960 --> 00:47:02,960
+will be wasted and their information
+
+1247
+00:47:00,880 --> 00:47:04,720
+won't be captured.
+
+1248
+00:47:02,960 --> 00:47:07,359
+But with triple detectors, you can use
+
+1249
+00:47:04,720 --> 00:47:09,599
+gamma photons much more efficiently. The
+
+1250
+00:47:07,359 --> 00:47:11,839
+CT part of the system gives you precise
+
+1251
+00:47:09,599 --> 00:47:13,920
+anatomical information and helps provide
+
+1252
+00:47:11,839 --> 00:47:16,000
+accurate attenuation correction for the
+
+1253
+00:47:13,920 --> 00:47:18,000
+spec data.
+
+1254
+00:47:16,000 --> 00:47:19,920
+This means better quantification,
+
+1255
+00:47:18,000 --> 00:47:22,319
+improved image quality, and superior
+
+1256
+00:47:19,920 --> 00:47:26,839
+diagnostic capability through combined
+
+1257
+00:47:22,319 --> 00:47:26,839
+anatomical and functional information.
+
+1258
+00:47:28,480 --> 00:47:32,319
+In pilot imaging, you work with a
+
+1259
+00:47:30,079 --> 00:47:34,480
+detector ring. This setup can be used
+
+1260
+00:47:32,319 --> 00:47:36,960
+for both human studies and small animal
+
+1261
+00:47:34,480 --> 00:47:38,880
+imaging. Small animals are especially
+
+1262
+00:47:36,960 --> 00:47:40,800
+important in pharmaceutical research
+
+1263
+00:47:38,880 --> 00:47:43,520
+since drug companies rely on them to
+
+1264
+00:47:40,800 --> 00:47:45,200
+test potential new drugs.
+
+1265
+00:47:43,520 --> 00:47:47,040
+The development of a drug typically
+
+1266
+00:47:45,200 --> 00:47:48,960
+passes through several phases starting
+
+1267
+00:47:47,040 --> 00:47:51,119
+with cell cultures, then moving to small
+
+1268
+00:47:48,960 --> 00:47:53,280
+animal studies, followed by pre-clinical
+
+1269
+00:47:51,119 --> 00:47:55,760
+trials, clinical trials, and eventually
+
+1270
+00:47:53,280 --> 00:47:57,839
+market approval. Out of hundreds of drug
+
+1271
+00:47:55,760 --> 00:47:59,920
+candidates tested, only a very small
+
+1272
+00:47:57,839 --> 00:48:02,160
+fraction ever reach the market. This
+
+1273
+00:47:59,920 --> 00:48:05,200
+long, costly process is one reason why
+
+1274
+00:48:02,160 --> 00:48:07,359
+drug development is so expensive.
+
+1275
+00:48:05,200 --> 00:48:09,599
+The pilot imaging ring itself consists
+
+1276
+00:48:07,359 --> 00:48:12,079
+of gamma detectors and the associated
+
+1277
+00:48:09,599 --> 00:48:14,240
+electronic circuitry. These detectors
+
+1278
+00:48:12,079 --> 00:48:16,640
+not only capture signals but also record
+
+1279
+00:48:14,240 --> 00:48:18,880
+timing information.
+
+1280
+00:48:16,640 --> 00:48:21,359
+When multiple gamma photons are detected
+
+1281
+00:48:18,880 --> 00:48:23,119
+within the same time window, the system
+
+1282
+00:48:21,359 --> 00:48:25,520
+identifies them as coming from the same
+
+1283
+00:48:23,119 --> 00:48:28,000
+event and reports a coincidence along a
+
+1284
+00:48:25,520 --> 00:48:29,680
+line of response.
+
+1285
+00:48:28,000 --> 00:48:31,440
+In this way, the line of response
+
+1286
+00:48:29,680 --> 00:48:33,440
+corresponds to the radio tracer
+
+1287
+00:48:31,440 --> 00:48:35,520
+distribution along that line, which is
+
+1288
+00:48:33,440 --> 00:48:37,359
+essentially a line integral. The
+
+1289
+00:48:35,520 --> 00:48:39,280
+attenuation coefficient in this
+
+1290
+00:48:37,359 --> 00:48:43,319
+formulation is treated as independent
+
+1291
+00:48:39,280 --> 00:48:43,319
+and can be factored out.
+
+1292
+00:48:44,720 --> 00:48:48,880
+This is a big picture overview. If you
+
+1293
+00:48:47,040 --> 00:48:50,880
+look at the components in detail,
+
+1294
+00:48:48,880 --> 00:48:53,200
+multiple figures highlight the power and
+
+1295
+00:48:50,880 --> 00:48:54,800
+structure of each unit. You start with a
+
+1296
+00:48:53,200 --> 00:48:56,720
+scintillation crystal at the front of
+
+1297
+00:48:54,800 --> 00:48:58,640
+each module.
+
+1298
+00:48:56,720 --> 00:49:00,640
+The cintilation crystal's job is to
+
+1299
+00:48:58,640 --> 00:49:02,640
+convert incoming gamma photons into
+
+1300
+00:49:00,640 --> 00:49:04,640
+visible light.
+
+1301
+00:49:02,640 --> 00:49:07,359
+This visible light is then captured by a
+
+1302
+00:49:04,640 --> 00:49:09,680
+photo multiplier tube or PMT. The
+
+1303
+00:49:07,359 --> 00:49:11,680
+crystal and PMT work together. When the
+
+1304
+00:49:09,680 --> 00:49:13,599
+scintillation crystal creates visible
+
+1305
+00:49:11,680 --> 00:49:15,599
+light, the photo multiplier tube
+
+1306
+00:49:13,599 --> 00:49:17,839
+multiplies and amplifies that light
+
+1307
+00:49:15,599 --> 00:49:19,599
+signal, converting it into an electrical
+
+1308
+00:49:17,839 --> 00:49:21,359
+current.
+
+1309
+00:49:19,599 --> 00:49:23,520
+After the signal passes through the
+
+1310
+00:49:21,359 --> 00:49:26,880
+tube, it goes on to electronic circuits
+
+1311
+00:49:23,520 --> 00:49:28,480
+that process the electrical impulse.
+
+1312
+00:49:26,880 --> 00:49:30,640
+Depending on the amplitude of that
+
+1313
+00:49:28,480 --> 00:49:33,680
+impulse, you can determine the energy of
+
+1314
+00:49:30,640 --> 00:49:35,680
+the interacting gamma photon.
+
+1315
+00:49:33,680 --> 00:49:38,000
+One unit like this consisting of an
+
+1316
+00:49:35,680 --> 00:49:40,240
+array of crystals and a set of PMTs is
+
+1317
+00:49:38,000 --> 00:49:42,559
+called a block. Several blocks combined
+
+1318
+00:49:40,240 --> 00:49:44,720
+form a bucket which can include hundreds
+
+1319
+00:49:42,559 --> 00:49:46,640
+of crystals.
+
+1320
+00:49:44,720 --> 00:49:49,040
+Multiple buckets are arranged together
+
+1321
+00:49:46,640 --> 00:49:51,680
+to create the full detector ring which
+
+1322
+00:49:49,040 --> 00:49:53,280
+collects all the imaging data at once.
+
+1323
+00:49:51,680 --> 00:49:54,960
+There are additional engineering details
+
+1324
+00:49:53,280 --> 00:49:56,720
+in how these elements are assembled and
+
+1325
+00:49:54,960 --> 00:49:58,559
+how the signals are managed. But at its
+
+1326
+00:49:56,720 --> 00:50:00,480
+core, this system is designed to
+
+1327
+00:49:58,559 --> 00:50:01,839
+efficiently detect and process gamma
+
+1328
+00:50:00,480 --> 00:50:04,839
+events for reliable image
+
+1329
+00:50:01,839 --> 00:50:04,839
+reconstruction.
+
+1330
+00:50:06,720 --> 00:50:10,160
+Now, let's talk about the desirable
+
+1331
+00:50:08,319 --> 00:50:12,240
+properties of crystal materials used in
+
+1332
+00:50:10,160 --> 00:50:14,319
+PET scanners. I'll go through these
+
+1333
+00:50:12,240 --> 00:50:16,720
+quickly. First, the crystal should have
+
+1334
+00:50:14,319 --> 00:50:18,640
+a high density, which gives it a large
+
+1335
+00:50:16,720 --> 00:50:20,960
+effective cross-section for interacting
+
+1336
+00:50:18,640 --> 00:50:23,280
+with gamma rays.
+
+1337
+00:50:20,960 --> 00:50:25,200
+Next, you want a large effective atomic
+
+1338
+00:50:23,280 --> 00:50:27,119
+number. This increases gammaray
+
+1339
+00:50:25,200 --> 00:50:29,920
+detection efficiency by boosting
+
+1340
+00:50:27,119 --> 00:50:31,520
+photoelectric absorption. The decay time
+
+1341
+00:50:29,920 --> 00:50:33,920
+should be short. You need the crystal to
+
+1342
+00:50:31,520 --> 00:50:36,079
+release its light energy very quickly.
+
+1343
+00:50:33,920 --> 00:50:38,319
+If the decay time is too long, then each
+
+1344
+00:50:36,079 --> 00:50:40,640
+photon event can overlap in time,
+
+1345
+00:50:38,319 --> 00:50:43,119
+causing loss in timing resolution and
+
+1346
+00:50:40,640 --> 00:50:45,680
+poor image quality.
+
+1347
+00:50:43,119 --> 00:50:47,760
+A highlight yield is also important. The
+
+1348
+00:50:45,680 --> 00:50:50,319
+crystal must convert as much gamma
+
+1349
+00:50:47,760 --> 00:50:52,400
+energy as possible into visible light,
+
+1350
+00:50:50,319 --> 00:50:54,480
+maximizing signal for efficient
+
+1351
+00:50:52,400 --> 00:50:56,480
+detection.
+
+1352
+00:50:54,480 --> 00:50:59,200
+Ideally, the wavelength of the emitted
+
+1353
+00:50:56,480 --> 00:51:00,880
+light should be near 400 nanome since
+
+1354
+00:50:59,200 --> 00:51:02,880
+photo multiplier tubes are most
+
+1355
+00:51:00,880 --> 00:51:05,359
+sensitive in this range, making the
+
+1356
+00:51:02,880 --> 00:51:07,280
+system more efficient.
+
+1357
+00:51:05,359 --> 00:51:10,400
+Additionally, the refractive index
+
+1358
+00:51:07,280 --> 00:51:12,960
+should be close to 1.5 to ensure optimal
+
+1359
+00:51:10,400 --> 00:51:15,839
+optical coupling between the crystal and
+
+1360
+00:51:12,960 --> 00:51:18,319
+the photo multiplier tube.
+
+1361
+00:51:15,839 --> 00:51:20,000
+The crystal must also be non-hyroscopic,
+
+1362
+00:51:18,319 --> 00:51:22,000
+meaning it should not absorb moisture
+
+1363
+00:51:20,000 --> 00:51:24,160
+from the air.
+
+1364
+00:51:22,000 --> 00:51:26,240
+If it does, it can degrade and turn into
+
+1365
+00:51:24,160 --> 00:51:28,720
+powder, which would make it unusable for
+
+1366
+00:51:26,240 --> 00:51:30,720
+detector fabrication. All these
+
+1367
+00:51:28,720 --> 00:51:32,880
+properties are critical for reliable
+
+1368
+00:51:30,720 --> 00:51:35,880
+higherformance medical imaging with PET
+
+1369
+00:51:32,880 --> 00:51:35,880
+scanners.
+
+1370
+00:51:37,520 --> 00:51:41,680
+All of these are considered desirable
+
+1371
+00:51:39,280 --> 00:51:43,440
+properties for PET detector crystals.
+
+1372
+00:51:41,680 --> 00:51:46,400
+The table lists the main candidate
+
+1373
+00:51:43,440 --> 00:51:48,000
+materials used in PET scanners.
+
+1374
+00:51:46,400 --> 00:51:50,800
+You don't need to memorize all the
+
+1375
+00:51:48,000 --> 00:51:52,559
+details or specific values here. In
+
+1376
+00:51:50,800 --> 00:51:54,559
+clinical practice, it's more important
+
+1377
+00:51:52,559 --> 00:51:56,640
+to understand the general differences
+
+1378
+00:51:54,559 --> 00:51:59,280
+and why a particular material might be
+
+1379
+00:51:56,640 --> 00:52:00,960
+chosen for a given system.
+
+1380
+00:51:59,280 --> 00:52:03,359
+What matters is knowing that these
+
+1381
+00:52:00,960 --> 00:52:05,920
+materials differ in their density, decay
+
+1382
+00:52:03,359 --> 00:52:08,240
+time, emission intensity, atomic number,
+
+1383
+00:52:05,920 --> 00:52:11,040
+refractive index, and whether they are
+
+1384
+00:52:08,240 --> 00:52:12,720
+hyroscopic. Each property affects how
+
+1385
+00:52:11,040 --> 00:52:15,119
+well the crystal works for detecting
+
+1386
+00:52:12,720 --> 00:52:18,119
+gamma rays and producing highquality PET
+
+1387
+00:52:15,119 --> 00:52:18,119
+images.
+
+1388
+00:52:19,680 --> 00:52:23,359
+There aren't many engineering details
+
+1389
+00:52:21,520 --> 00:52:25,920
+here, but this is mainly for those
+
+1390
+00:52:23,359 --> 00:52:27,839
+working in detector development. The key
+
+1391
+00:52:25,920 --> 00:52:29,440
+components for PET detectors start with
+
+1392
+00:52:27,839 --> 00:52:32,000
+the cintilation crystals, which are
+
+1393
+00:52:29,440 --> 00:52:33,920
+organized into blocks.
+
+1394
+00:52:32,000 --> 00:52:35,599
+Each block is coupled with multiple
+
+1395
+00:52:33,920 --> 00:52:38,000
+photo multiplier tubes in the
+
+1396
+00:52:35,599 --> 00:52:40,160
+background, typically four per block.
+
+1397
+00:52:38,000 --> 00:52:41,920
+These blocks are then assembled into a
+
+1398
+00:52:40,160 --> 00:52:43,839
+complete detector ring that surrounds
+
+1399
+00:52:41,920 --> 00:52:46,079
+the patient.
+
+1400
+00:52:43,839 --> 00:52:48,640
+As the PET system operates, the crystals
+
+1401
+00:52:46,079 --> 00:52:50,960
+detect incoming gamma photons and the
+
+1402
+00:52:48,640 --> 00:52:52,800
+photo multiplier tubes convert the light
+
+1403
+00:52:50,960 --> 00:52:55,119
+produced by these interactions into
+
+1404
+00:52:52,800 --> 00:52:57,520
+electrical signals.
+
+1405
+00:52:55,119 --> 00:52:59,520
+The systems processing unit precisely
+
+1406
+00:52:57,520 --> 00:53:01,760
+monitors the electrical signals to
+
+1407
+00:52:59,520 --> 00:53:04,800
+determine exactly when and where events
+
+1408
+00:53:01,760 --> 00:53:06,880
+have occurred and at what energy. The
+
+1409
+00:53:04,800 --> 00:53:10,800
+main gamma photon from a PET scan
+
+1410
+00:53:06,880 --> 00:53:12,880
+carries 511 keV energy.
+
+1411
+00:53:10,800 --> 00:53:15,359
+But if there is multiple scattering such
+
+1412
+00:53:12,880 --> 00:53:17,520
+as Compton scattering inside the body,
+
+1413
+00:53:15,359 --> 00:53:19,119
+energy is lost and can complicate the
+
+1414
+00:53:17,520 --> 00:53:21,040
+signal.
+
+1415
+00:53:19,119 --> 00:53:23,440
+The electronics and coincidence
+
+1416
+00:53:21,040 --> 00:53:26,079
+processing unit integrate all detected
+
+1417
+00:53:23,440 --> 00:53:28,400
+events and finally this data is sent to
+
+1418
+00:53:26,079 --> 00:53:30,319
+the computer system.
+
+1419
+00:53:28,400 --> 00:53:32,319
+After data acquisition, image
+
+1420
+00:53:30,319 --> 00:53:34,640
+reconstruction begins, often with
+
+1421
+00:53:32,319 --> 00:53:38,160
+methods such as filtered back projection
+
+1422
+00:53:34,640 --> 00:53:40,079
+to produce cross-sectional images.
+
+1423
+00:53:38,160 --> 00:53:42,400
+All of these steps come together to make
+
+1424
+00:53:40,079 --> 00:53:44,800
+PET imaging possible. From crystal
+
+1425
+00:53:42,400 --> 00:53:47,040
+blocks and photo multiplier tubes to
+
+1426
+00:53:44,800 --> 00:53:50,040
+data integration and final image
+
+1427
+00:53:47,040 --> 00:53:50,040
+creation,
+
+1428
+00:53:51,760 --> 00:53:56,240
+the technical advancement in PAT imaging
+
+1429
+00:53:54,160 --> 00:53:59,119
+has been driven largely by improvements
+
+1430
+00:53:56,240 --> 00:54:01,119
+in detector technology.
+
+1431
+00:53:59,119 --> 00:54:04,319
+Over the years, we've seen a progression
+
+1432
+00:54:01,119 --> 00:54:06,880
+from NAI detectors to BGO and now to
+
+1433
+00:54:04,319 --> 00:54:10,160
+LSO. With each milestone year bringing
+
+1434
+00:54:06,880 --> 00:54:12,240
+significant gains in image quality,
+
+1435
+00:54:10,160 --> 00:54:13,920
+these different generations of detectors
+
+1436
+00:54:12,240 --> 00:54:16,880
+reflect long-term innovation in
+
+1437
+00:54:13,920 --> 00:54:18,640
+materials engineering and system design.
+
+1438
+00:54:16,880 --> 00:54:20,559
+As you can see, each new detector
+
+1439
+00:54:18,640 --> 00:54:23,280
+technology has resulted in clearer,
+
+1440
+00:54:20,559 --> 00:54:25,359
+higher resolution images.
+
+1441
+00:54:23,280 --> 00:54:27,040
+This slide is just for your information.
+
+1442
+00:54:25,359 --> 00:54:28,720
+And I won't spend too much time on it,
+
+1443
+00:54:27,040 --> 00:54:30,800
+but it's important to recognize how
+
+1444
+00:54:28,720 --> 00:54:32,800
+advancements in detector design have
+
+1445
+00:54:30,800 --> 00:54:34,400
+directly impacted the quality of PET
+
+1446
+00:54:32,800 --> 00:54:37,400
+images throughout the history of the
+
+1447
+00:54:34,400 --> 00:54:37,400
+field.
+
+1448
+00:54:38,640 --> 00:54:42,800
+For a system to work at its best, noise,
+
+1449
+00:54:40,960 --> 00:54:45,359
+scatter, and random events must be
+
+1450
+00:54:42,800 --> 00:54:47,520
+estimated and removed. This slide is a
+
+1451
+00:54:45,359 --> 00:54:49,200
+nice summary. A true event means you
+
+1452
+00:54:47,520 --> 00:54:51,040
+have a single annihilation. Then two
+
+1453
+00:54:49,200 --> 00:54:53,359
+photons are emitted and detected by
+
+1454
+00:54:51,040 --> 00:54:55,119
+opposite detectors and captured by the
+
+1455
+00:54:53,359 --> 00:54:57,119
+circuit.
+
+1456
+00:54:55,119 --> 00:54:59,040
+That's what you really want. These true
+
+1457
+00:54:57,119 --> 00:55:00,720
+coincidences are the signals that
+
+1458
+00:54:59,040 --> 00:55:02,960
+contribute to accurate image
+
+1459
+00:55:00,720 --> 00:55:04,240
+reconstruction.
+
+1460
+00:55:02,960 --> 00:55:07,040
+Scatter events have different
+
+1461
+00:55:04,240 --> 00:55:08,880
+mechanisms. Here's an example. A photon
+
+1462
+00:55:07,040 --> 00:55:10,720
+is emitted from an event, but gets
+
+1463
+00:55:08,880 --> 00:55:13,040
+scattered away before it reaches the
+
+1464
+00:55:10,720 --> 00:55:14,960
+detector. The system may report a
+
+1465
+00:55:13,040 --> 00:55:18,319
+coincidence along this scattered path,
+
+1466
+00:55:14,960 --> 00:55:20,079
+but it's not the true line of response.
+
+1467
+00:55:18,319 --> 00:55:21,760
+This isn't the real signal we need. So,
+
+1468
+00:55:20,079 --> 00:55:23,520
+the scattered photon event should be
+
+1469
+00:55:21,760 --> 00:55:26,160
+removed. Just like in CT where
+
+1470
+00:55:23,520 --> 00:55:28,319
+scattering also occurs,
+
+1471
+00:55:26,160 --> 00:55:30,400
+random events are different. In this
+
+1472
+00:55:28,319 --> 00:55:32,240
+case, two gamma photons are generated
+
+1473
+00:55:30,400 --> 00:55:34,400
+from different events in the body and
+
+1474
+00:55:32,240 --> 00:55:36,640
+one photon is detected in the same time
+
+1475
+00:55:34,400 --> 00:55:38,240
+window as another photon from a separate
+
+1476
+00:55:36,640 --> 00:55:40,240
+event.
+
+1477
+00:55:38,240 --> 00:55:42,160
+The system reports a coincidence, but
+
+1478
+00:55:40,240 --> 00:55:44,480
+along a line that doesn't correspond to
+
+1479
+00:55:42,160 --> 00:55:47,520
+either true event. This is not accurate
+
+1480
+00:55:44,480 --> 00:55:49,920
+and should be avoided if possible.
+
+1481
+00:55:47,520 --> 00:55:52,079
+In 3D PET imaging, you can see that
+
+1482
+00:55:49,920 --> 00:55:53,920
+scattered and random events become more
+
+1483
+00:55:52,079 --> 00:55:56,240
+frequent, mainly because sensitivity
+
+1484
+00:55:53,920 --> 00:55:58,240
+increases due to the wider aperture and
+
+1485
+00:55:56,240 --> 00:56:00,240
+more possibilities for 3D data
+
+1486
+00:55:58,240 --> 00:56:02,000
+acquisition.
+
+1487
+00:56:00,240 --> 00:56:04,400
+So, it's important to maximize
+
+1488
+00:56:02,000 --> 00:56:09,240
+sensitivity while minimizing scatter and
+
+1489
+00:56:04,400 --> 00:56:09,240
+random events to maintain image quality.
+
+1490
+00:56:10,720 --> 00:56:14,960
+How can you estimate the scattered
+
+1491
+00:56:12,400 --> 00:56:16,559
+background? This is actually simple. You
+
+1492
+00:56:14,960 --> 00:56:18,880
+set the energy window around the main
+
+1493
+00:56:16,559 --> 00:56:20,559
+photo peak. That's the main window right
+
+1494
+00:56:18,880 --> 00:56:22,079
+at the peak and you collect counts
+
+1495
+00:56:20,559 --> 00:56:23,920
+there.
+
+1496
+00:56:22,079 --> 00:56:25,680
+Then you also set windows on the left
+
+1497
+00:56:23,920 --> 00:56:28,319
+and right. These are the low and high
+
+1498
+00:56:25,680 --> 00:56:30,480
+energy side windows. The idea is that
+
+1499
+00:56:28,319 --> 00:56:33,760
+you know the primary gamma photon should
+
+1500
+00:56:30,480 --> 00:56:35,760
+be at 511 keV. So its energy falls in
+
+1501
+00:56:33,760 --> 00:56:37,680
+the main window.
+
+1502
+00:56:35,760 --> 00:56:40,960
+If there are scattered photons, their
+
+1503
+00:56:37,680 --> 00:56:42,559
+energy will be lower than 511 keV. So
+
+1504
+00:56:40,960 --> 00:56:44,160
+you'll see them in the lower energy
+
+1505
+00:56:42,559 --> 00:56:46,079
+window.
+
+1506
+00:56:44,160 --> 00:56:47,760
+If there are random events or noise,
+
+1507
+00:56:46,079 --> 00:56:50,319
+these could appear in the higher energy
+
+1508
+00:56:47,760 --> 00:56:52,480
+window by collecting data in both the
+
+1509
+00:56:50,319 --> 00:56:54,079
+lower and higher side windows. You have
+
+1510
+00:56:52,480 --> 00:56:55,920
+a way to estimate the background
+
+1511
+00:56:54,079 --> 00:56:58,079
+scattering.
+
+1512
+00:56:55,920 --> 00:57:00,240
+You then assign weights to the counts in
+
+1513
+00:56:58,079 --> 00:57:01,920
+the lower and higher windows. This
+
+1514
+00:57:00,240 --> 00:57:03,760
+weighted combination gives you an
+
+1515
+00:57:01,920 --> 00:57:05,760
+estimate of the scattered background in
+
+1516
+00:57:03,760 --> 00:57:07,680
+the main window.
+
+1517
+00:57:05,760 --> 00:57:09,440
+With that estimate, you subtract the
+
+1518
+00:57:07,680 --> 00:57:12,079
+scattered contribution from the main
+
+1519
+00:57:09,440 --> 00:57:14,160
+window, giving you the corrected signal.
+
+1520
+00:57:12,079 --> 00:57:16,160
+This process lets you measure and remove
+
+1521
+00:57:14,160 --> 00:57:20,760
+the scatter components. So your final
+
+1522
+00:57:16,160 --> 00:57:20,760
+image is much cleaner and more accurate.
+
+1523
+00:57:22,319 --> 00:57:26,480
+So this shows you the result. This is
+
+1524
+00:57:24,640 --> 00:57:28,160
+the real measurement and you can see the
+
+1525
+00:57:26,480 --> 00:57:30,720
+scattered background as it appears in
+
+1526
+00:57:28,160 --> 00:57:32,319
+the data. When you remove the scattered
+
+1527
+00:57:30,720 --> 00:57:33,520
+background, you get these corrected
+
+1528
+00:57:32,319 --> 00:57:35,920
+measurements or corrected
+
+1529
+00:57:33,520 --> 00:57:37,839
+reconstructions.
+
+1530
+00:57:35,920 --> 00:57:40,079
+This demonstrates how the result changes
+
+1531
+00:57:37,839 --> 00:57:42,000
+by addressing the scattering problem.
+
+1532
+00:57:40,079 --> 00:57:44,240
+Scatter correction is a key point in
+
+1533
+00:57:42,000 --> 00:57:47,240
+improving measurement accuracy and image
+
+1534
+00:57:44,240 --> 00:57:47,240
+quality.
+
+1535
+00:57:48,880 --> 00:57:52,880
+And for random correction, this is a
+
+1536
+00:57:50,640 --> 00:57:54,799
+very clever idea. If you have random
+
+1537
+00:57:52,880 --> 00:57:57,440
+events being recorded, they introduce
+
+1538
+00:57:54,799 --> 00:57:59,520
+noise into your data. For usual data
+
+1539
+00:57:57,440 --> 00:58:01,760
+processing, these random events really
+
+1540
+00:57:59,520 --> 00:58:03,520
+complicate things.
+
+1541
+00:58:01,760 --> 00:58:05,280
+But we can address this purposely. For
+
+1542
+00:58:03,520 --> 00:58:07,200
+each part of the detector, we introduce
+
+1543
+00:58:05,280 --> 00:58:09,200
+a delay.
+
+1544
+00:58:07,200 --> 00:58:10,960
+If it's a random coincidence, then the
+
+1545
+00:58:09,200 --> 00:58:12,960
+probability of the random event with
+
+1546
+00:58:10,960 --> 00:58:15,520
+this result delay is the same as without
+
+1547
+00:58:12,960 --> 00:58:18,240
+the delay. This is the key statement.
+
+1548
+00:58:15,520 --> 00:58:20,079
+This is the important idea.
+
+1549
+00:58:18,240 --> 00:58:22,480
+By introducing a delay in the
+
+1550
+00:58:20,079 --> 00:58:24,799
+coincidence detection, the probability
+
+1551
+00:58:22,480 --> 00:58:27,119
+line for incident and delayed results is
+
+1552
+00:58:24,799 --> 00:58:29,599
+the same because the random coincidences
+
+1553
+00:58:27,119 --> 00:58:31,440
+depend on the average gamma ray activity
+
+1554
+00:58:29,599 --> 00:58:34,079
+which is assumed to be more or less
+
+1555
+00:58:31,440 --> 00:58:36,559
+constant over time. The delay itself
+
+1556
+00:58:34,079 --> 00:58:38,480
+doesn't change that rate.
+
+1557
+00:58:36,559 --> 00:58:40,319
+You can then use the measured random
+
+1558
+00:58:38,480 --> 00:58:42,480
+events from the delayed window to
+
+1559
+00:58:40,319 --> 00:58:44,720
+directly estimate and subtract out the
+
+1560
+00:58:42,480 --> 00:58:46,400
+random event contribution from your true
+
+1561
+00:58:44,720 --> 00:58:48,000
+data.
+
+1562
+00:58:46,400 --> 00:58:50,240
+This approach gives you higher quality,
+
+1563
+00:58:48,000 --> 00:58:54,520
+more quantitative results. That's the
+
+1564
+00:58:50,240 --> 00:58:54,520
+whole idea behind random correction.
+
+1565
+00:58:56,079 --> 00:58:59,839
+There are multiple high order effects in
+
+1566
+00:58:58,240 --> 00:59:02,319
+PET imaging and this is what I'm showing
+
+1567
+00:58:59,839 --> 00:59:04,160
+here with these figures. Ideally, you
+
+1568
+00:59:02,319 --> 00:59:06,240
+want to detect coincidences. By
+
+1569
+00:59:04,160 --> 00:59:08,319
+definition, in a given time window, you
+
+1570
+00:59:06,240 --> 00:59:10,160
+should only have two gamma ray photons
+
+1571
+00:59:08,319 --> 00:59:12,319
+captured.
+
+1572
+00:59:10,160 --> 00:59:14,000
+If your time window is short enough, you
+
+1573
+00:59:12,319 --> 00:59:16,160
+get a well-controlled count rate,
+
+1574
+00:59:14,000 --> 00:59:17,359
+typically up to 100,000 per second,
+
+1575
+00:59:16,160 --> 00:59:19,599
+which is the principle behind
+
+1576
+00:59:17,359 --> 00:59:21,760
+coincidence detection. However,
+
+1577
+00:59:19,599 --> 00:59:23,920
+sometimes within a short time interval,
+
+1578
+00:59:21,760 --> 00:59:25,920
+you might have three gammaray photons
+
+1579
+00:59:23,920 --> 00:59:29,119
+reported simultaneously.
+
+1580
+00:59:25,920 --> 00:59:30,960
+How does this happen?
+
+1581
+00:59:29,119 --> 00:59:33,200
+For example, the first annihilation
+
+1582
+00:59:30,960 --> 00:59:35,280
+event is detected near detector 2. So,
+
+1583
+00:59:33,200 --> 00:59:37,599
+its gamma photon reaches that detector
+
+1584
+00:59:35,280 --> 00:59:39,760
+and is recorded.
+
+1585
+00:59:37,599 --> 00:59:42,319
+Within that same time window, another
+
+1586
+00:59:39,760 --> 00:59:45,200
+event occurs closer to detector 13 and
+
+1587
+00:59:42,319 --> 00:59:47,119
+its sister photon travels a longer path.
+
+1588
+00:59:45,200 --> 00:59:49,200
+Before the photon from the second event
+
+1589
+00:59:47,119 --> 00:59:50,720
+reaches detector 5, the third photon
+
+1590
+00:59:49,200 --> 00:59:52,880
+from the first event might reach
+
+1591
+00:59:50,720 --> 00:59:54,640
+detector 10.
+
+1592
+00:59:52,880 --> 00:59:58,319
+So, within the same interval, three
+
+1593
+00:59:54,640 --> 01:00:00,480
+photons can be detected as coincidences.
+
+1594
+00:59:58,319 --> 01:00:02,400
+Whenever you get triple coincidences,
+
+1595
+01:00:00,480 --> 01:00:04,240
+three detected photons in the same
+
+1596
+01:00:02,400 --> 01:00:06,319
+resolving window, they introduce
+
+1597
+01:00:04,240 --> 01:00:08,000
+confusion and you simply discard that
+
+1598
+01:00:06,319 --> 01:00:09,839
+data.
+
+1599
+01:00:08,000 --> 01:00:12,480
+The system is designed to expect only
+
+1600
+01:00:09,839 --> 01:00:14,160
+pairs of coincident photons. If you see
+
+1601
+01:00:12,480 --> 01:00:17,760
+this higher order event, you just throw
+
+1602
+01:00:14,160 --> 01:00:20,160
+it away, focusing only on true doubles.
+
+1603
+01:00:17,760 --> 01:00:21,760
+But confusing situations remain. It's
+
+1604
+01:00:20,160 --> 01:00:24,319
+hard to know which event should be
+
+1605
+01:00:21,760 --> 01:00:25,760
+assigned to which lines of response.
+
+1606
+01:00:24,319 --> 01:00:28,720
+That's where the correction factor
+
+1607
+01:00:25,760 --> 01:00:30,400
+formula comes in. For every true
+
+1608
+01:00:28,720 --> 01:00:32,079
+coincidence measurement, you also need
+
+1609
+01:00:30,400 --> 01:00:34,799
+to account for the data loss due to
+
+1610
+01:00:32,079 --> 01:00:36,559
+triple or higher order coincidences. The
+
+1611
+01:00:34,799 --> 01:00:38,799
+formula shown here calculates the
+
+1612
+01:00:36,559 --> 01:00:40,960
+correction factor, combining both the
+
+1613
+01:00:38,799 --> 01:00:43,200
+estimated loss from discarded high order
+
+1614
+01:00:40,960 --> 01:00:45,280
+events and the true measurement to help
+
+1615
+01:00:43,200 --> 01:00:46,880
+restore your measured data to the real
+
+1616
+01:00:45,280 --> 01:00:48,880
+level.
+
+1617
+01:00:46,880 --> 01:00:50,880
+Sometimes higher order events may be
+
+1618
+01:00:48,880 --> 01:00:52,640
+very rare, but if your time window is
+
+1619
+01:00:50,880 --> 01:00:54,880
+wide enough, you might encounter even
+
+1620
+01:00:52,640 --> 01:00:57,440
+more photons simultaneously, which
+
+1621
+01:00:54,880 --> 01:00:59,440
+complicates things further.
+
+1622
+01:00:57,440 --> 01:01:01,520
+In practice, these cases are always
+
+1623
+01:00:59,440 --> 01:01:04,079
+discarded, and the formula allows you to
+
+1624
+01:01:01,520 --> 01:01:06,240
+estimate the amount of lost data. You
+
+1625
+01:01:04,079 --> 01:01:08,079
+then use this correction factor to scale
+
+1626
+01:01:06,240 --> 01:01:10,559
+your results back to the true count,
+
+1627
+01:01:08,079 --> 01:01:13,559
+improving accuracy in quantitative PET
+
+1628
+01:01:10,559 --> 01:01:13,559
+measurements.
+
+1629
+01:01:15,280 --> 01:01:20,000
+So graphically you can see this process
+
+1630
+01:01:17,440 --> 01:01:21,920
+clearly. The total counts the overall
+
+1631
+01:01:20,000 --> 01:01:24,559
+measured signal or image actually
+
+1632
+01:01:21,920 --> 01:01:26,559
+contain two main components. These two
+
+1633
+01:01:24,559 --> 01:01:28,559
+components are scatter background and
+
+1634
+01:01:26,559 --> 01:01:31,200
+random counts along with a variety of
+
+1635
+01:01:28,559 --> 01:01:33,200
+other effects and oddities.
+
+1636
+01:01:31,200 --> 01:01:34,960
+You can estimate the random count by
+
+1637
+01:01:33,200 --> 01:01:37,520
+using a delayed window and triple
+
+1638
+01:01:34,960 --> 01:01:39,440
+coincidences can be corrected as well.
+
+1639
+01:01:37,520 --> 01:01:41,119
+There are many correction methods, but
+
+1640
+01:01:39,440 --> 01:01:42,880
+the most important thing to understand
+
+1641
+01:01:41,119 --> 01:01:46,160
+from this lecture is to have a rough
+
+1642
+01:01:42,880 --> 01:01:47,680
+idea of how these corrections work.
+
+1643
+01:01:46,160 --> 01:01:49,599
+All these corrections, including
+
+1644
+01:01:47,680 --> 01:01:51,440
+attenuation correction, scatter
+
+1645
+01:01:49,599 --> 01:01:53,920
+correction, random correction, and
+
+1646
+01:01:51,440 --> 01:01:56,079
+corrections for dead time are essential
+
+1647
+01:01:53,920 --> 01:01:57,760
+to refine the measured signal and make
+
+1648
+01:01:56,079 --> 01:02:02,440
+sure your results reflect the true
+
+1649
+01:01:57,760 --> 01:02:02,440
+activity as accurately as possible.
+
+1650
+01:02:03,920 --> 01:02:08,079
+The goal is to make your line integral
+
+1651
+01:02:06,000 --> 01:02:10,559
+data accurately reflect the true line
+
+1652
+01:02:08,079 --> 01:02:12,559
+integrals through the body. This allows
+
+1653
+01:02:10,559 --> 01:02:14,559
+you to reconstruct images that truly
+
+1654
+01:02:12,559 --> 01:02:17,440
+represent the concentration of radio
+
+1655
+01:02:14,559 --> 01:02:19,200
+tracer in the organ of interest.
+
+1656
+01:02:17,440 --> 01:02:20,960
+You can do this for each organ and at
+
+1657
+01:02:19,200 --> 01:02:23,280
+each time point during the PET imaging
+
+1658
+01:02:20,960 --> 01:02:24,960
+session. By plotting these time curves,
+
+1659
+01:02:23,280 --> 01:02:26,960
+you can assess profusion in different
+
+1660
+01:02:24,960 --> 01:02:29,359
+regions and extract physiologically
+
+1661
+01:02:26,960 --> 01:02:31,520
+relevant parameters.
+
+1662
+01:02:29,359 --> 01:02:33,280
+This process gives you more diagnostic
+
+1663
+01:02:31,520 --> 01:02:35,359
+information and helps to interpret the
+
+1664
+01:02:33,280 --> 01:02:37,359
+results accurately. These steps,
+
+1665
+01:02:35,359 --> 01:02:38,960
+attenuation correction, scatter and
+
+1666
+01:02:37,359 --> 01:02:40,640
+random correction, and dead time
+
+1667
+01:02:38,960 --> 01:02:43,520
+correction are all essential for
+
+1668
+01:02:40,640 --> 01:02:45,520
+quantitative PET imaging.
+
+1669
+01:02:43,520 --> 01:02:47,760
+They work together to ensure that your
+
+1670
+01:02:45,520 --> 01:02:49,440
+final images and time activity curves
+
+1671
+01:02:47,760 --> 01:02:51,200
+are both accurate and clinically
+
+1672
+01:02:49,440 --> 01:02:53,200
+meaningful, which is the central
+
+1673
+01:02:51,200 --> 01:02:56,200
+principle behind quantitative PET
+
+1674
+01:02:53,200 --> 01:02:56,200
+analysis.
+
+1675
+01:02:57,920 --> 01:03:02,319
+I want to summarize PET inspect imaging
+
+1676
+01:03:00,000 --> 01:03:04,000
+with this slide. The key point is that
+
+1677
+01:03:02,319 --> 01:03:06,160
+the data models are different and the
+
+1678
+01:03:04,000 --> 01:03:08,640
+underlying technology relies on gamma
+
+1679
+01:03:06,160 --> 01:03:10,720
+rays but at very different energies.
+
+1680
+01:03:08,640 --> 01:03:14,400
+Spect uses lower energy gamma rays
+
+1681
+01:03:10,720 --> 01:03:16,559
+typically around 140 KV.
+
+1682
+01:03:14,400 --> 01:03:18,799
+Because of this lower energy you can use
+
+1683
+01:03:16,559 --> 01:03:20,799
+a mechanical columator. Highdensity
+
+1684
+01:03:18,799 --> 01:03:23,680
+metals effectively block unwanted
+
+1685
+01:03:20,799 --> 01:03:25,599
+photons shaping the beam.
+
+1686
+01:03:23,680 --> 01:03:29,359
+But in PET, the gammaray energy is much
+
+1687
+01:03:25,599 --> 01:03:30,960
+higher at 511 keV. Mechanical columation
+
+1688
+01:03:29,359 --> 01:03:33,280
+simply doesn't work because the energy
+
+1689
+01:03:30,960 --> 01:03:37,119
+is too great for physical columators. So
+
+1690
+01:03:33,280 --> 01:03:39,359
+PET uses electronic columnation instead.
+
+1691
+01:03:37,119 --> 01:03:41,599
+With mechanical columnation, a large
+
+1692
+01:03:39,359 --> 01:03:44,880
+portion of useful gammaray photons is
+
+1693
+01:03:41,599 --> 01:03:47,039
+rejected, reducing sensitivity.
+
+1694
+01:03:44,880 --> 01:03:49,119
+By contrast, electronic columnation in
+
+1695
+01:03:47,039 --> 01:03:51,680
+PET does not block any useful gamma
+
+1696
+01:03:49,119 --> 01:03:52,960
+photons. This means PET sensitivity is
+
+1697
+01:03:51,680 --> 01:03:54,960
+fundamentally higher than spec
+
+1698
+01:03:52,960 --> 01:03:57,520
+sensitivity.
+
+1699
+01:03:54,960 --> 01:04:00,079
+Another key feature is time information.
+
+1700
+01:03:57,520 --> 01:04:03,119
+In PT, two photons resulting from an
+
+1701
+01:04:00,079 --> 01:04:05,200
+annihilation are emitted simultaneously.
+
+1702
+01:04:03,119 --> 01:04:07,200
+The system records the precise timing,
+
+1703
+01:04:05,200 --> 01:04:10,079
+making time resolved imaging possible
+
+1704
+01:04:07,200 --> 01:04:12,400
+and increasing sensitivity.
+
+1705
+01:04:10,079 --> 01:04:14,880
+In spec, we don't know precisely when
+
+1706
+01:04:12,400 --> 01:04:17,200
+the radio tracer emits its gamma photons
+
+1707
+01:04:14,880 --> 01:04:19,359
+inside the body. So there's no available
+
+1708
+01:04:17,200 --> 01:04:21,039
+time scale just as in standard X-ray
+
+1709
+01:04:19,359 --> 01:04:24,079
+imaging where we can't control the
+
+1710
+01:04:21,039 --> 01:04:26,079
+emission timing for each photon.
+
+1711
+01:04:24,079 --> 01:04:28,319
+Even if you try to time the arrival of
+
+1712
+01:04:26,079 --> 01:04:31,039
+X-ray photons at a detector, you don't
+
+1713
+01:04:28,319 --> 01:04:32,720
+have a proper time reference. With Piet,
+
+1714
+01:04:31,039 --> 01:04:34,799
+the emission process gives you this
+
+1715
+01:04:32,720 --> 01:04:37,680
+timing, allowing sensitive and advanced
+
+1716
+01:04:34,799 --> 01:04:42,359
+timeresolved imaging. This is a crucial
+
+1717
+01:04:37,680 --> 01:04:42,359
+elegant concept behind PET technology.
+
+1718
+01:04:44,079 --> 01:04:48,160
+The leading researchers in this field
+
+1719
+01:04:45,920 --> 01:04:50,960
+have developed a very large PET detector
+
+1720
+01:04:48,160 --> 01:04:52,880
+known as a whole body PET.
+
+1721
+01:04:50,960 --> 01:04:54,880
+By making the detector long enough to
+
+1722
+01:04:52,880 --> 01:04:57,039
+cover the entire body, the sensitivity
+
+1723
+01:04:54,880 --> 01:04:58,640
+is dramatically increased, allowing for
+
+1724
+01:04:57,039 --> 01:05:01,440
+even greater sensitivity than
+
+1725
+01:04:58,640 --> 01:05:03,200
+conventional PET systems.
+
+1726
+01:05:01,440 --> 01:05:04,880
+With this approach, you can obtain a
+
+1727
+01:05:03,200 --> 01:05:06,799
+much more sensitive and comprehensive
+
+1728
+01:05:04,880 --> 01:05:09,200
+view of the entire body in a single
+
+1729
+01:05:06,799 --> 01:05:11,520
+scan. This technology offers the
+
+1730
+01:05:09,200 --> 01:05:13,520
+opportunity to capture detailed global
+
+1731
+01:05:11,520 --> 01:05:15,280
+images of tracer distribution,
+
+1732
+01:05:13,520 --> 01:05:17,680
+potentially improving diagnostic
+
+1733
+01:05:15,280 --> 01:05:19,280
+capabilities and expanding what can be
+
+1734
+01:05:17,680 --> 01:05:20,960
+studied.
+
+1735
+01:05:19,280 --> 01:05:22,480
+It's a very interesting and innovative
+
+1736
+01:05:20,960 --> 01:05:25,960
+idea that's advancing the field of
+
+1737
+01:05:22,480 --> 01:05:25,960
+molecular imaging.
+
+1738
+01:05:27,520 --> 01:05:31,839
+When you perform whole body PET and also
+
+1739
+01:05:29,760 --> 01:05:34,160
+whole body CT, you need to consider the
+
+1740
+01:05:31,839 --> 01:05:36,160
+practical challenges and differences.
+
+1741
+01:05:34,160 --> 01:05:38,079
+Whole body CT uses a significant amount
+
+1742
+01:05:36,160 --> 01:05:40,480
+of radiation since it scans the entire
+
+1743
+01:05:38,079 --> 01:05:42,559
+patient with X-rays.
+
+1744
+01:05:40,480 --> 01:05:44,319
+In contrast with whole body PET, as
+
+1745
+01:05:42,559 --> 01:05:46,720
+shown in the figure, there is no space
+
+1746
+01:05:44,319 --> 01:05:48,960
+to easily position the X-ray components
+
+1747
+01:05:46,720 --> 01:05:52,000
+completely around the patient in the
+
+1748
+01:05:48,960 --> 01:05:53,839
+same way as traditional CT.
+
+1749
+01:05:52,000 --> 01:05:55,839
+However, researchers are actively
+
+1750
+01:05:53,839 --> 01:05:57,520
+thinking about creative solutions, and
+
+1751
+01:05:55,839 --> 01:05:59,280
+we actually encourage students to work
+
+1752
+01:05:57,520 --> 01:06:01,680
+on the possibility of achieving full
+
+1753
+01:05:59,280 --> 01:06:03,520
+body CT simultaneously with PET, even
+
+1754
+01:06:01,680 --> 01:06:06,240
+when scanners are large enough to scan
+
+1755
+01:06:03,520 --> 01:06:08,000
+the whole body at once.
+
+1756
+01:06:06,240 --> 01:06:10,400
+This might require using new out
+
+1757
+01:06:08,000 --> 01:06:12,960
+ofthe-box ideas, possibly even involving
+
+1758
+01:06:10,400 --> 01:06:15,200
+MRI technology instead of conventional
+
+1759
+01:06:12,960 --> 01:06:16,880
+techniques. These are exciting areas for
+
+1760
+01:06:15,200 --> 01:06:18,480
+innovation and research, and we can
+
+1761
+01:06:16,880 --> 01:06:22,640
+discuss some of those cuttingedge
+
+1762
+01:06:18,480 --> 01:06:22,640
+possibilities later on in the course.
+
+1763
+01:06:24,480 --> 01:06:28,160
+Another point I want to highlight, as
+
+1764
+01:06:26,400 --> 01:06:30,400
+indicated by the green button here,
+
+1765
+01:06:28,160 --> 01:06:32,799
+involves using multiple pin holes with a
+
+1766
+01:06:30,400 --> 01:06:34,720
+cintilation camera. Traditionally, you
+
+1767
+01:06:32,799 --> 01:06:37,280
+would use a single pinhole to capture
+
+1768
+01:06:34,720 --> 01:06:39,359
+one image at a time.
+
+1769
+01:06:37,280 --> 01:06:40,960
+But in this pioneering work, as shown in
+
+1770
+01:06:39,359 --> 01:06:43,359
+the paper, they introduced the concept
+
+1771
+01:06:40,960 --> 01:06:46,079
+of using several pinholes, seven in this
+
+1772
+01:06:43,359 --> 01:06:48,079
+case. Each pinhole forms a distinct
+
+1773
+01:06:46,079 --> 01:06:50,559
+image, producing multiple views of the
+
+1774
+01:06:48,079 --> 01:06:52,160
+target simultaneously. For example, you
+
+1775
+01:06:50,559 --> 01:06:54,160
+get a double cone image from one
+
+1776
+01:06:52,160 --> 01:06:57,599
+pinhole's geometry. And with seven
+
+1777
+01:06:54,160 --> 01:06:59,440
+pinholes, you get seven images at once.
+
+1778
+01:06:57,599 --> 01:07:01,599
+This approach was used to image the
+
+1779
+01:06:59,440 --> 01:07:03,680
+heart, allowing for seven simultaneous
+
+1780
+01:07:01,599 --> 01:07:05,599
+views, which improved accuracy by
+
+1781
+01:07:03,680 --> 01:07:07,760
+acquiring several perspectives at a
+
+1782
+01:07:05,599 --> 01:07:09,599
+single time point.
+
+1783
+01:07:07,760 --> 01:07:11,359
+Although the reconstructions from those
+
+1784
+01:07:09,599 --> 01:07:13,760
+seven views weren't fully impressive
+
+1785
+01:07:11,359 --> 01:07:16,640
+with the technology available back then,
+
+1786
+01:07:13,760 --> 01:07:18,960
+the idea remains promising.
+
+1787
+01:07:16,640 --> 01:07:20,799
+There is real potential. If you collect
+
+1788
+01:07:18,960 --> 01:07:22,640
+seven views from one direction and
+
+1789
+01:07:20,799 --> 01:07:24,559
+another seven from an orthogonal
+
+1790
+01:07:22,640 --> 01:07:26,559
+direction, then with modern signal
+
+1791
+01:07:24,559 --> 01:07:28,400
+processing, you may achieve image
+
+1792
+01:07:26,559 --> 01:07:31,039
+reconstructions far superior to those
+
+1793
+01:07:28,400 --> 01:07:33,200
+early results. This opens up interesting
+
+1794
+01:07:31,039 --> 01:07:34,799
+possibilities for future multiv- view
+
+1795
+01:07:33,200 --> 01:07:38,520
+tomography and advanced image
+
+1796
+01:07:34,799 --> 01:07:38,520
+reconstruction techniques.
+
+1797
+01:07:40,240 --> 01:07:44,559
+Anyway, so this is just for your
+
+1798
+01:07:41,839 --> 01:07:47,039
+information. The slide summarizes key
+
+1799
+01:07:44,559 --> 01:07:49,359
+concepts for spec and PET imaging.
+
+1800
+01:07:47,039 --> 01:07:51,680
+Statistical distributions, how data is
+
+1801
+01:07:49,359 --> 01:07:53,839
+modeled with single impaired emissions,
+
+1802
+01:07:51,680 --> 01:07:56,240
+various reconstruction methods including
+
+1803
+01:07:53,839 --> 01:07:58,559
+attenuation compensation, deterministic
+
+1804
+01:07:56,240 --> 01:08:00,559
+and statistical reconstruction, as well
+
+1805
+01:07:58,559 --> 01:08:03,599
+as the architecture of spec and PET
+
+1806
+01:08:00,559 --> 01:08:05,680
+scanners and scatter correction.
+
+1807
+01:08:03,599 --> 01:08:07,359
+Finally, it mentions the fully 3D
+
+1808
+01:08:05,680 --> 01:08:09,039
+approaches and highlights the importance
+
+1809
+01:08:07,359 --> 01:08:12,760
+of the conference and community in
+
+1810
+01:08:09,039 --> 01:08:12,760
+advancing this field.
+
+1811
+01:08:14,160 --> 01:08:18,880
+and we had a fully 3D meeting in China.
+
+1812
+01:08:16,960 --> 01:08:20,560
+This conference is dedicated to advances
+
+1813
+01:08:18,880 --> 01:08:22,799
+in fully three-dimensional image
+
+1814
+01:08:20,560 --> 01:08:24,799
+reconstruction in radiology and nuclear
+
+1815
+01:08:22,799 --> 01:08:26,480
+medicine, bringing together experts,
+
+1816
+01:08:24,799 --> 01:08:27,920
+researchers, and students from around
+
+1817
+01:08:26,480 --> 01:08:30,640
+the world to share the latest
+
+1818
+01:08:27,920 --> 01:08:32,719
+developments and ideas.
+
+1819
+01:08:30,640 --> 01:08:34,480
+It's a valuable opportunity to connect
+
+1820
+01:08:32,719 --> 01:08:38,679
+with the community and stay current in
+
+1821
+01:08:34,480 --> 01:08:38,679
+this rapidly evolving field.
+
+1822
+01:08:40,080 --> 01:08:45,120
+So this is the website for the fully 3D
+
+1823
+01:08:42,640 --> 01:08:49,759
+2017 meeting which was held in Xian,
+
+1824
+01:08:45,120 --> 01:08:51,440
+China from June 18th to 23, 2017. If you
+
+1825
+01:08:49,759 --> 01:08:53,199
+are interested, you can take a look for
+
+1826
+01:08:51,440 --> 01:08:55,440
+more information about the conference,
+
+1827
+01:08:53,199 --> 01:08:57,920
+its location, and the history of Xiang
+
+1828
+01:08:55,440 --> 01:09:00,080
+as China's oldest ancient capital and
+
+1829
+01:08:57,920 --> 01:09:02,080
+the starting point of the Silk Road.
+
+1830
+01:09:00,080 --> 01:09:04,159
+It's also home to the famous Terracotta
+
+1831
+01:09:02,080 --> 01:09:07,159
+Army known as the eighth wonder of the
+
+1832
+01:09:04,159 --> 01:09:07,159
+world.
+
+1833
+01:09:08,560 --> 01:09:12,880
+And in the center of the city there is
+
+1834
+01:09:10,239 --> 01:09:14,400
+this bell tower. Every morning the bell
+
+1835
+01:09:12,880 --> 01:09:16,560
+would be rung so life would be
+
+1836
+01:09:14,400 --> 01:09:18,799
+synchronized. This is the heart of the
+
+1837
+01:09:16,560 --> 01:09:22,199
+city. We enjoyed very much the tour
+
+1838
+01:09:18,799 --> 01:09:22,199
+during the conference.
+
+1839
+01:09:23,679 --> 01:09:27,040
+So the interesting thing is that I
+
+1840
+01:09:25,279 --> 01:09:29,839
+designed a logo specifically for the
+
+1841
+01:09:27,040 --> 01:09:32,400
+fully 3D meeting. The logo is modeled
+
+1842
+01:09:29,839 --> 01:09:34,239
+after the iconic bell tower in the city,
+
+1843
+01:09:32,400 --> 01:09:36,080
+making it a distinctive symbol that
+
+1844
+01:09:34,239 --> 01:09:39,239
+connects the event to the cultural heart
+
+1845
+01:09:36,080 --> 01:09:39,239
+of Xian.
+
+1846
+01:09:40,799 --> 01:09:45,520
+Why does a logo look like this?
+
+1847
+01:09:43,600 --> 01:09:48,239
+The reason is clear. The meeting covers
+
+1848
+01:09:45,520 --> 01:09:50,480
+the full spectrum of CT spec and PET
+
+1849
+01:09:48,239 --> 01:09:52,560
+reconstructions. The logo visually
+
+1850
+01:09:50,480 --> 01:09:54,560
+represents these modalities together.
+
+1851
+01:09:52,560 --> 01:09:56,400
+For CT, you see the cone beam geometry
+
+1852
+01:09:54,560 --> 01:09:58,480
+at the top, which is standard in modern
+
+1853
+01:09:56,400 --> 01:10:00,239
+CT scanning.
+
+1854
+01:09:58,480 --> 01:10:02,480
+For spec, there's a model with a
+
+1855
+01:10:00,239 --> 01:10:05,040
+columator, a layer of crystals, and
+
+1856
+01:10:02,480 --> 01:10:08,719
+photo multiplier tubes. These components
+
+1857
+01:10:05,040 --> 01:10:10,560
+are essential for forming spec images.
+
+1858
+01:10:08,719 --> 01:10:12,719
+At the base is the PET detector ring,
+
+1859
+01:10:10,560 --> 01:10:14,560
+which is fundamental for PET. By
+
+1860
+01:10:12,719 --> 01:10:16,880
+including these technical elements, the
+
+1861
+01:10:14,560 --> 01:10:19,360
+logo symbolizes the integration of all
+
+1862
+01:10:16,880 --> 01:10:21,440
+three imaging modalities, reflecting the
+
+1863
+01:10:19,360 --> 01:10:24,440
+focus and breadth of the fully 3D
+
+1864
+01:10:21,440 --> 01:10:24,440
+meeting.
+
+1865
+01:10:25,840 --> 01:10:30,080
+Also, you have this movie of the 3D logo
+
+1866
+01:10:28,320 --> 01:10:33,360
+that brings together all the elements
+
+1867
+01:10:30,080 --> 01:10:36,679
+for fully 3D17 and represents the spirit
+
+1868
+01:10:33,360 --> 01:10:36,679
+of the meeting.
+
+1869
+01:10:38,080 --> 01:10:42,400
+For today's homework, I have listed five
+
+1870
+01:10:40,159 --> 01:10:44,080
+problems. You are welcome to do more if
+
+1871
+01:10:42,400 --> 01:10:46,080
+you wish.
+
+1872
+01:10:44,080 --> 01:10:47,760
+The first problem is about isosensitive
+
+1873
+01:10:46,080 --> 01:10:50,080
+imaging, which I briefly introduced
+
+1874
+01:10:47,760 --> 01:10:53,120
+earlier. It involves taking two views
+
+1875
+01:10:50,080 --> 01:10:55,360
+and compensating in a specific way.
+
+1876
+01:10:53,120 --> 01:10:57,760
+The key idea is that if you assume a
+
+1877
+01:10:55,360 --> 01:11:00,000
+simple binary case with only one source
+
+1878
+01:10:57,760 --> 01:11:02,320
+distribution, you can multiply the views
+
+1879
+01:11:00,000 --> 01:11:04,320
+to achieve compensation. However,
+
+1880
+01:11:02,320 --> 01:11:06,560
+remember that this is not a universal
+
+1881
+01:11:04,320 --> 01:11:08,400
+solution. It applies only under limited
+
+1882
+01:11:06,560 --> 01:11:10,560
+assumptions.
+
+1883
+01:11:08,400 --> 01:11:12,719
+The second question asks how many total
+
+1884
+01:11:10,560 --> 01:11:16,800
+counts are necessary to achieve 1%
+
+1885
+01:11:12,719 --> 01:11:19,840
+uniformity in a spec image given a 128x
+
+1886
+01:11:16,800 --> 01:11:21,760
+128 data matrix. This problem is fairly
+
+1887
+01:11:19,840 --> 01:11:23,520
+straightforward.
+
+1888
+01:11:21,760 --> 01:11:24,960
+You can solve it using the pluson
+
+1889
+01:11:23,520 --> 01:11:27,440
+distribution along with basic
+
+1890
+01:11:24,960 --> 01:11:30,560
+sensitivity concepts. The answer should
+
+1891
+01:11:27,440 --> 01:11:32,880
+follow directly from these principles.
+
+1892
+01:11:30,560 --> 01:11:35,360
+The third exercise focuses on reducing
+
+1893
+01:11:32,880 --> 01:11:37,040
+statistical noise in an image. Consider
+
+1894
+01:11:35,360 --> 01:11:39,040
+what happens if you double the total
+
+1895
+01:11:37,040 --> 01:11:40,800
+imaging time and separately what happens
+
+1896
+01:11:39,040 --> 01:11:42,560
+if you double the mass of tracer
+
+1897
+01:11:40,800 --> 01:11:44,640
+injected.
+
+1898
+01:11:42,560 --> 01:11:47,840
+In each case, determine by what factor
+
+1899
+01:11:44,640 --> 01:11:49,600
+the noise in the image would be reduced.
+
+1900
+01:11:47,840 --> 01:11:51,520
+The fourth problem asks you to compute
+
+1901
+01:11:49,600 --> 01:11:54,080
+the energy of gamma photons produced
+
+1902
+01:11:51,520 --> 01:11:57,440
+from posetron emission.
+
+1903
+01:11:54,080 --> 01:11:59,840
+The correct result should be 511 ke. To
+
+1904
+01:11:57,440 --> 01:12:02,880
+calculate this, apply the formula E equ=
+
+1905
+01:11:59,840 --> 01:12:05,520
+MC². If needed, look up the rest mass of
+
+1906
+01:12:02,880 --> 01:12:07,440
+the electron and posetron.
+
+1907
+01:12:05,520 --> 01:12:08,880
+Finally, the fifth question addresses
+
+1908
+01:12:07,440 --> 01:12:11,120
+artificially high levels of
+
+1909
+01:12:08,880 --> 01:12:13,840
+radioactivity observed in PET lung
+
+1910
+01:12:11,120 --> 01:12:15,920
+images. You are asked to suggest one
+
+1911
+01:12:13,840 --> 01:12:17,840
+possible mechanism by which this effect
+
+1912
+01:12:15,920 --> 01:12:20,000
+could occur.
+
+1913
+01:12:17,840 --> 01:12:21,679
+These exercises are designed to help you
+
+1914
+01:12:20,000 --> 01:12:24,159
+practice applying statistical
+
+1915
+01:12:21,679 --> 01:12:26,080
+principles, imaging physics, and basic
+
+1916
+01:12:24,159 --> 01:12:29,560
+quantitative reasoning to nuclear
+
+1917
+01:12:26,080 --> 01:12:29,560
+medicine problems.
+

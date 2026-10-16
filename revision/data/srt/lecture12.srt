@@ -1,0 +1,7840 @@
+1
+00:00:01,680 --> 00:00:06,480
+Last time we talked about image quality
+
+2
+00:00:03,919 --> 00:00:08,400
+assessment. Today we begin a new part of
+
+3
+00:00:06,480 --> 00:00:11,040
+the course focusing on imaging
+
+4
+00:00:08,400 --> 00:00:14,320
+modalities. And the very first modality
+
+5
+00:00:11,040 --> 00:00:16,080
+we will discuss is X-ray imaging.
+
+6
+00:00:14,320 --> 00:00:17,760
+Before we dive in, let me share a quick
+
+7
+00:00:16,080 --> 00:00:20,160
+study tip. When you are learning a
+
+8
+00:00:17,760 --> 00:00:21,760
+subject as complex as medical imaging,
+
+9
+00:00:20,160 --> 00:00:23,760
+it is really important to build good
+
+10
+00:00:21,760 --> 00:00:26,160
+habits. Preview the material before
+
+11
+00:00:23,760 --> 00:00:28,560
+class, review it after class, and pay
+
+12
+00:00:26,160 --> 00:00:30,480
+special attention to the key ideas. I
+
+13
+00:00:28,560 --> 00:00:33,200
+will repeat important concepts as needed
+
+14
+00:00:30,480 --> 00:00:34,719
+to reinforce your understanding.
+
+15
+00:00:33,200 --> 00:00:36,480
+Earlier in the course, I showed you a
+
+16
+00:00:34,719 --> 00:00:38,399
+poster that summarized a foundation of
+
+17
+00:00:36,480 --> 00:00:40,160
+medical imaging. I also created a
+
+18
+00:00:38,399 --> 00:00:42,800
+similar poster for my graduate level
+
+19
+00:00:40,160 --> 00:00:44,719
+class, and students really liked it.
+
+20
+00:00:42,800 --> 00:00:47,360
+These visual maps help connect the big
+
+21
+00:00:44,719 --> 00:00:49,120
+picture with the details. Tools like
+
+22
+00:00:47,360 --> 00:00:52,320
+this can make complicated subjects
+
+23
+00:00:49,120 --> 00:00:54,399
+easier to follow. So, with that in mind,
+
+24
+00:00:52,320 --> 00:00:58,280
+let's move forward and begin our journey
+
+25
+00:00:54,399 --> 00:00:58,280
+into X-ray radiography.
+
+26
+00:00:59,680 --> 00:01:03,440
+We are right on schedule and today marks
+
+27
+00:01:01,760 --> 00:01:06,920
+the beginning of our detailed study of
+
+28
+00:01:03,440 --> 00:01:06,920
+imaging modalities.
+
+29
+00:01:08,720 --> 00:01:12,880
+At the end of the course, you can create
+
+30
+00:01:10,479 --> 00:01:15,200
+a summary poster for X-ray. It would be
+
+31
+00:01:12,880 --> 00:01:17,040
+a nice exercise to build your own poster
+
+32
+00:01:15,200 --> 00:01:18,560
+that highlights the main points of each
+
+33
+00:01:17,040 --> 00:01:20,320
+modality.
+
+34
+00:01:18,560 --> 00:01:22,320
+Of course, the poster I made for my
+
+35
+00:01:20,320 --> 00:01:24,799
+graduate class goes much deeper with
+
+36
+00:01:22,320 --> 00:01:26,799
+governing equations, but here for the
+
+37
+00:01:24,799 --> 00:01:28,400
+undergraduate level, our goal is to
+
+38
+00:01:26,799 --> 00:01:31,040
+provide a clear and introductory
+
+39
+00:01:28,400 --> 00:01:33,200
+exposure.
+
+40
+00:01:31,040 --> 00:01:34,560
+So today, let me give you an outline. I
+
+41
+00:01:33,200 --> 00:01:36,159
+think it's always good to start with a
+
+42
+00:01:34,560 --> 00:01:38,479
+road map so you know where we are
+
+43
+00:01:36,159 --> 00:01:40,320
+heading. For X-ray imaging, I'll use
+
+44
+00:01:38,479 --> 00:01:43,040
+this outline format to guide our
+
+45
+00:01:40,320 --> 00:01:45,680
+discussion. We will cover three
+
+46
+00:01:43,040 --> 00:01:48,399
+fundamental aspects. The source, the
+
+47
+00:01:45,680 --> 00:01:50,560
+attenuation, and the detector. This
+
+48
+00:01:48,399 --> 00:01:53,280
+sequence is very logical. First, you
+
+49
+00:01:50,560 --> 00:01:55,200
+need an X-ray source. Without a source,
+
+50
+00:01:53,280 --> 00:01:58,079
+nothing begins. It's like trying to cook
+
+51
+00:01:55,200 --> 00:02:00,880
+without rice. Next, those X-rays must
+
+52
+00:01:58,079 --> 00:02:03,520
+interact with the human body. If there
+
+53
+00:02:00,880 --> 00:02:05,520
+is no interaction, the photons just pass
+
+54
+00:02:03,520 --> 00:02:08,560
+through like air and we gain no
+
+55
+00:02:05,520 --> 00:02:11,200
+information. If the body absorbs all the
+
+56
+00:02:08,560 --> 00:02:13,520
+X-rays completely, again, no information
+
+57
+00:02:11,200 --> 00:02:15,680
+escapes. The useful case is partial
+
+58
+00:02:13,520 --> 00:02:17,920
+absorption. Different tissues absorb
+
+59
+00:02:15,680 --> 00:02:20,000
+X-rays to different degrees. That
+
+60
+00:02:17,920 --> 00:02:21,520
+difference creates contrast and contrast
+
+61
+00:02:20,000 --> 00:02:23,440
+is what carries the diagnostic
+
+62
+00:02:21,520 --> 00:02:25,360
+information.
+
+63
+00:02:23,440 --> 00:02:27,200
+Finally, we need a detector to capture
+
+64
+00:02:25,360 --> 00:02:29,760
+that information.
+
+65
+00:02:27,200 --> 00:02:31,440
+The X-ray photons that escape the body
+
+66
+00:02:29,760 --> 00:02:34,239
+must be recorded so that we can
+
+67
+00:02:31,440 --> 00:02:36,560
+reconstruct an image. So, in summary,
+
+68
+00:02:34,239 --> 00:02:38,400
+the imaging chain has three main parts.
+
+69
+00:02:36,560 --> 00:02:41,120
+The source, the interaction with the
+
+70
+00:02:38,400 --> 00:02:42,800
+body, and the detector. Together, they
+
+71
+00:02:41,120 --> 00:02:45,800
+form the foundation of X-ray
+
+72
+00:02:42,800 --> 00:02:45,800
+radiography.
+
+73
+00:02:47,360 --> 00:02:51,120
+The story of X-ray discovery is actually
+
+74
+00:02:49,120 --> 00:02:54,160
+a wonderful example of serendipity in
+
+75
+00:02:51,120 --> 00:02:56,480
+science. In 1,895,
+
+76
+00:02:54,160 --> 00:02:59,040
+Wilhelm Conrad Ronkin was experimenting
+
+77
+00:02:56,480 --> 00:03:01,040
+with a cathode ray tube, essentially an
+
+78
+00:02:59,040 --> 00:03:03,360
+early electron gun, when he noticed
+
+79
+00:03:01,040 --> 00:03:05,599
+something unexpected.
+
+80
+00:03:03,360 --> 00:03:07,680
+A nearby fluorescent screen began to
+
+81
+00:03:05,599 --> 00:03:10,400
+glow, even though the tube was enclosed
+
+82
+00:03:07,680 --> 00:03:12,560
+in a box. By accident, he had discovered
+
+83
+00:03:10,400 --> 00:03:14,720
+a new kind of invisible ray that could
+
+84
+00:03:12,560 --> 00:03:17,360
+pass through many opaque materials. He
+
+85
+00:03:14,720 --> 00:03:20,239
+called it the X-ray, where the letter X
+
+86
+00:03:17,360 --> 00:03:22,159
+simply meant unknown. One of the first
+
+87
+00:03:20,239 --> 00:03:24,400
+images he captured was of his wife's
+
+88
+00:03:22,159 --> 00:03:26,319
+hand showing her bones and even her
+
+89
+00:03:24,400 --> 00:03:28,000
+wedding ring. That single picture
+
+90
+00:03:26,319 --> 00:03:29,440
+immediately revealed the enormous
+
+91
+00:03:28,000 --> 00:03:30,959
+potential of this discovery for
+
+92
+00:03:29,440 --> 00:03:33,360
+medicine.
+
+93
+00:03:30,959 --> 00:03:35,360
+Ronin's work was recognized worldwide
+
+94
+00:03:33,360 --> 00:03:37,280
+and in 1,91
+
+95
+00:03:35,360 --> 00:03:39,680
+he was awarded the very first Nobel
+
+96
+00:03:37,280 --> 00:03:41,440
+Prize in physics.
+
+97
+00:03:39,680 --> 00:03:42,879
+So from a chance observation in the
+
+98
+00:03:41,440 --> 00:03:44,959
+laboratory came one of the most
+
+99
+00:03:42,879 --> 00:03:48,200
+important tools in medical diagnosis,
+
+100
+00:03:44,959 --> 00:03:48,200
+the X-ray.
+
+101
+00:03:49,519 --> 00:03:54,000
+Ronin made his discovery while
+
+102
+00:03:51,200 --> 00:03:55,599
+experimenting with a cathode tube. At
+
+103
+00:03:54,000 --> 00:03:57,760
+that time he didn't know what was
+
+104
+00:03:55,599 --> 00:04:00,560
+happening. Nobody did. He placed the
+
+105
+00:03:57,760 --> 00:04:02,959
+tube inside a box and unexpectedly a
+
+106
+00:04:00,560 --> 00:04:05,040
+nearby fluorescent screen lit up. When
+
+107
+00:04:02,959 --> 00:04:06,959
+he looked closer he noticed that objects
+
+108
+00:04:05,040 --> 00:04:08,720
+could block or shape this invisible
+
+109
+00:04:06,959 --> 00:04:11,040
+radiation.
+
+110
+00:04:08,720 --> 00:04:13,120
+For example, a metallic cross placed in
+
+111
+00:04:11,040 --> 00:04:14,560
+front of the tube cast a clear shadow on
+
+112
+00:04:13,120 --> 00:04:16,880
+the screen. This was something
+
+113
+00:04:14,560 --> 00:04:18,160
+completely new. It couldn't be explained
+
+114
+00:04:16,880 --> 00:04:19,919
+without assuming that some kind of
+
+115
+00:04:18,160 --> 00:04:21,440
+invisible physical rays were being
+
+116
+00:04:19,919 --> 00:04:22,960
+produced.
+
+117
+00:04:21,440 --> 00:04:25,520
+Because the nature of these rays was
+
+118
+00:04:22,960 --> 00:04:27,919
+unknown, he called them X-rays. Later,
+
+119
+00:04:25,520 --> 00:04:30,320
+they became known as Ronin rays in honor
+
+120
+00:04:27,919 --> 00:04:32,240
+of his discovery.
+
+121
+00:04:30,320 --> 00:04:34,720
+This breakthrough was so important that
+
+122
+00:04:32,240 --> 00:04:36,880
+Ronkin was awarded the very first Nobel
+
+123
+00:04:34,720 --> 00:04:38,479
+Prize in physics. Today, of course, we
+
+124
+00:04:36,880 --> 00:04:40,320
+understand X-rays in much greater
+
+125
+00:04:38,479 --> 00:04:44,520
+detail, but the original observation was
+
+126
+00:04:40,320 --> 00:04:44,520
+truly remarkable for its time.
+
+127
+00:04:45,600 --> 00:04:50,080
+X-rays are a special type of
+
+128
+00:04:47,360 --> 00:04:52,160
+electromagnetic radiation. They occupy a
+
+129
+00:04:50,080 --> 00:04:53,919
+specific portion of the electromagnetic
+
+130
+00:04:52,160 --> 00:04:55,520
+spectrum.
+
+131
+00:04:53,919 --> 00:04:57,840
+The part of the spectrum we are most
+
+132
+00:04:55,520 --> 00:04:59,919
+familiar with is visible light because
+
+133
+00:04:57,840 --> 00:05:01,919
+we can see it with our eyes. But just
+
+134
+00:04:59,919 --> 00:05:04,080
+because we cannot see other forms of
+
+135
+00:05:01,919 --> 00:05:06,240
+electromagnetic radiation does not mean
+
+136
+00:05:04,080 --> 00:05:08,320
+they don't exist. Think about your
+
+137
+00:05:06,240 --> 00:05:10,080
+smartphone. You don't see the
+
+138
+00:05:08,320 --> 00:05:12,400
+electromagnetic waves, but you
+
+139
+00:05:10,080 --> 00:05:14,639
+constantly receive emails, messages, and
+
+140
+00:05:12,400 --> 00:05:16,479
+photos from anywhere in the world. These
+
+141
+00:05:14,639 --> 00:05:18,240
+are all carried by electromagnetic
+
+142
+00:05:16,479 --> 00:05:19,919
+radiation.
+
+143
+00:05:18,240 --> 00:05:22,639
+Electromagnetic waves are beautifully
+
+144
+00:05:19,919 --> 00:05:24,960
+described by Maxwell's equations. They
+
+145
+00:05:22,639 --> 00:05:27,120
+are sinosoidal waves traveling through
+
+146
+00:05:24,960 --> 00:05:28,800
+space with an electric field and a
+
+147
+00:05:27,120 --> 00:05:30,960
+magnetic field that are perpendicular to
+
+148
+00:05:28,800 --> 00:05:32,720
+each other. Together they form the
+
+149
+00:05:30,960 --> 00:05:36,960
+foundation for how light and all
+
+150
+00:05:32,720 --> 00:05:39,199
+electromagnetic radiation behave.
+
+151
+00:05:36,960 --> 00:05:40,639
+Now across this wide spectrum different
+
+152
+00:05:39,199 --> 00:05:42,240
+portions can be used for different
+
+153
+00:05:40,639 --> 00:05:44,000
+purposes.
+
+154
+00:05:42,240 --> 00:05:46,800
+For example, X-rays are used for
+
+155
+00:05:44,000 --> 00:05:48,800
+radiography and CT imaging. Gamma rays
+
+156
+00:05:46,800 --> 00:05:51,280
+are used in nuclear imaging like PET
+
+157
+00:05:48,800 --> 00:05:53,600
+inspect. Infrared and visible light are
+
+158
+00:05:51,280 --> 00:05:55,759
+used for optical imaging and pathology.
+
+159
+00:05:53,600 --> 00:05:58,479
+Radio waves and microwaves are used in
+
+160
+00:05:55,759 --> 00:06:00,479
+magnetic resonance imaging. So depending
+
+161
+00:05:58,479 --> 00:06:02,000
+on the wavelength and frequency each
+
+162
+00:06:00,479 --> 00:06:04,400
+portion of the spectrum serves a
+
+163
+00:06:02,000 --> 00:06:05,840
+different role in medicine.
+
+164
+00:06:04,400 --> 00:06:08,400
+To describe the energy of
+
+165
+00:06:05,840 --> 00:06:12,080
+electromagnetic radiation we use a
+
+166
+00:06:08,400 --> 00:06:15,440
+fundamental relationship. E= H * F which
+
+167
+00:06:12,080 --> 00:06:18,240
+is also equal to HC over lambda.
+
+168
+00:06:15,440 --> 00:06:20,720
+Here h is plank's constant. F is
+
+169
+00:06:18,240 --> 00:06:22,960
+frequency. C is the speed of light and
+
+170
+00:06:20,720 --> 00:06:24,960
+lambda is the wavelength. From this
+
+171
+00:06:22,960 --> 00:06:27,199
+equation, you can see that energy is
+
+172
+00:06:24,960 --> 00:06:30,240
+directly proportional to frequency and
+
+173
+00:06:27,199 --> 00:06:32,160
+inversely proportional to wavelength.
+
+174
+00:06:30,240 --> 00:06:33,840
+In medical imaging, we work with very
+
+175
+00:06:32,160 --> 00:06:36,240
+small wavelengths, usually measured in
+
+176
+00:06:33,840 --> 00:06:39,680
+nanometers and angstroms. One nanometer
+
+177
+00:06:36,240 --> 00:06:41,280
+is 10 the^ of - 9 m. One angstrom
+
+178
+00:06:39,680 --> 00:06:43,759
+written as a small circle above the
+
+179
+00:06:41,280 --> 00:06:47,199
+letter A is even smaller, 10 the power
+
+180
+00:06:43,759 --> 00:06:49,280
+of - 10 m.
+
+181
+00:06:47,199 --> 00:06:50,960
+So this slide shows you clearly where
+
+182
+00:06:49,280 --> 00:06:52,720
+X-rays fit in the electromagnetic
+
+183
+00:06:50,960 --> 00:06:57,160
+spectrum and why their energy levels
+
+184
+00:06:52,720 --> 00:06:57,160
+make them so useful for medical imaging.
+
+185
+00:06:58,479 --> 00:07:02,000
+If we narrow down within the
+
+186
+00:06:59,919 --> 00:07:03,919
+electromagnetic spectrum, we can clearly
+
+187
+00:07:02,000 --> 00:07:05,840
+see where X-rays sit. Their wavelengths
+
+188
+00:07:03,919 --> 00:07:08,800
+are extremely small, ranging roughly
+
+189
+00:07:05,840 --> 00:07:11,120
+from 1/10enth of a nimeter up to 10 nm.
+
+190
+00:07:08,800 --> 00:07:13,680
+Within this narrow window, we classify
+
+191
+00:07:11,120 --> 00:07:15,599
+radiation as X-rays.
+
+192
+00:07:13,680 --> 00:07:17,759
+But not all X-rays are the same. When
+
+193
+00:07:15,599 --> 00:07:20,400
+the frequency is higher and remember
+
+194
+00:07:17,759 --> 00:07:22,720
+higher frequency means higher energy we
+
+195
+00:07:20,400 --> 00:07:24,560
+call them hard X-rays. When the
+
+196
+00:07:22,720 --> 00:07:27,039
+frequency is lower corresponding to
+
+197
+00:07:24,560 --> 00:07:30,160
+longer wavelengths the energy is weaker
+
+198
+00:07:27,039 --> 00:07:32,080
+and we call them soft X-rays.
+
+199
+00:07:30,160 --> 00:07:34,080
+Different kinds of X-rays are useful for
+
+200
+00:07:32,080 --> 00:07:36,000
+different applications.
+
+201
+00:07:34,080 --> 00:07:38,000
+For example, in mimography we use
+
+202
+00:07:36,000 --> 00:07:40,240
+relatively soft X-rays because we want
+
+203
+00:07:38,000 --> 00:07:41,919
+sensitivity to soft tissue structures.
+
+204
+00:07:40,240 --> 00:07:44,240
+But if we want to penetrate thicker
+
+205
+00:07:41,919 --> 00:07:47,120
+parts of the body or denser tissues like
+
+206
+00:07:44,240 --> 00:07:49,440
+bone, we need hard X-rays with energies
+
+207
+00:07:47,120 --> 00:07:50,960
+that can go above 100 kilo electron
+
+208
+00:07:49,440 --> 00:07:52,960
+volts.
+
+209
+00:07:50,960 --> 00:07:55,680
+In non-medical settings, even higher
+
+210
+00:07:52,960 --> 00:07:57,599
+energy X-rays are used.
+
+211
+00:07:55,680 --> 00:08:00,000
+For example, in airport security
+
+212
+00:07:57,599 --> 00:08:02,960
+screening, luggage may be very thick or
+
+213
+00:08:00,000 --> 00:08:05,520
+contain dense objects. In those cases,
+
+214
+00:08:02,960 --> 00:08:07,680
+stronger X-rays are required. Otherwise,
+
+215
+00:08:05,520 --> 00:08:10,720
+all the radiation would be absorbed and
+
+216
+00:08:07,680 --> 00:08:12,560
+no useful information would come out.
+
+217
+00:08:10,720 --> 00:08:14,800
+So depending on the wavelength and
+
+218
+00:08:12,560 --> 00:08:16,879
+energy, X-rays can be tuned for very
+
+219
+00:08:14,800 --> 00:08:18,960
+different purposes from delicate imaging
+
+220
+00:08:16,879 --> 00:08:21,960
+in medicine to powerful scanning and
+
+221
+00:08:18,960 --> 00:08:21,960
+security.
+
+222
+00:08:23,360 --> 00:08:26,960
+We saw this briefly back in the first
+
+223
+00:08:25,039 --> 00:08:29,199
+lecture, but let's look again. This is a
+
+224
+00:08:26,960 --> 00:08:31,120
+standard X-ray radiograph, in this case,
+
+225
+00:08:29,199 --> 00:08:33,039
+a chest X-ray. It's a single
+
+226
+00:08:31,120 --> 00:08:36,159
+two-dimensional projection of the body
+
+227
+00:08:33,039 --> 00:08:37,919
+captured on film or in digital form.
+
+228
+00:08:36,159 --> 00:08:40,880
+What you see here is everything
+
+229
+00:08:37,919 --> 00:08:43,039
+superimposed. the heart, the lungs, the
+
+230
+00:08:40,880 --> 00:08:45,040
+ribs, all layered on top of each other
+
+231
+00:08:43,039 --> 00:08:47,519
+in the same image. Because of that
+
+232
+00:08:45,040 --> 00:08:49,760
+overlap, radiography is not always the
+
+233
+00:08:47,519 --> 00:08:53,760
+clearest view. Still, it provides
+
+234
+00:08:49,760 --> 00:08:55,600
+valuable insight into the human body.
+
+235
+00:08:53,760 --> 00:08:57,279
+For example, if a patient has a broken
+
+236
+00:08:55,600 --> 00:08:59,360
+bone or if there is a foreign object
+
+237
+00:08:57,279 --> 00:09:01,120
+like a bullet, it shows up immediately.
+
+238
+00:08:59,360 --> 00:09:03,839
+That's why radiography is so important
+
+239
+00:09:01,120 --> 00:09:06,000
+in emergency rooms. It's fast, widely
+
+240
+00:09:03,839 --> 00:09:07,839
+available, and gives doctors a quick
+
+241
+00:09:06,000 --> 00:09:09,839
+look inside.
+
+242
+00:09:07,839 --> 00:09:11,920
+But keep in mind this is only a
+
+243
+00:09:09,839 --> 00:09:14,000
+projected view. Moving from projection
+
+244
+00:09:11,920 --> 00:09:16,640
+imaging like radiography to
+
+245
+00:09:14,000 --> 00:09:18,240
+cross-sectional imaging like CT was a
+
+246
+00:09:16,640 --> 00:09:21,640
+huge leap forward in the field of
+
+247
+00:09:18,240 --> 00:09:21,640
+medical imaging.
+
+248
+00:09:23,360 --> 00:09:29,839
+Here we have X-ray computed tomography
+
+249
+00:09:25,920 --> 00:09:31,920
+or CT. Unlike a simple radioraph, CT
+
+250
+00:09:29,839 --> 00:09:34,000
+allows us to see a clear cross-sectional
+
+251
+00:09:31,920 --> 00:09:36,320
+view of the body. With CT, the
+
+252
+00:09:34,000 --> 00:09:38,800
+resolution can be extremely fine down to
+
+253
+00:09:36,320 --> 00:09:40,720
+about 300 microns, which is 3/10en of a
+
+254
+00:09:38,800 --> 00:09:42,800
+millimeter. That means we can visualize
+
+255
+00:09:40,720 --> 00:09:45,440
+very small structures and details inside
+
+256
+00:09:42,800 --> 00:09:47,839
+the body. How do we actually make a
+
+257
+00:09:45,440 --> 00:09:50,080
+cross-sectional image from X-rays? That
+
+258
+00:09:47,839 --> 00:09:52,000
+is the central question of CT and it
+
+259
+00:09:50,080 --> 00:09:53,600
+will be the focus of our next lecture.
+
+260
+00:09:52,000 --> 00:09:56,880
+For now, I just want to give you a sense
+
+261
+00:09:53,600 --> 00:09:58,480
+of how powerful this technology is. When
+
+262
+00:09:56,880 --> 00:10:00,480
+you see images like this, you realize
+
+263
+00:09:58,480 --> 00:10:02,000
+how useful X-ray imaging can be.
+
+264
+00:10:00,480 --> 00:10:03,760
+Hopefully, this motivates you to dig
+
+265
+00:10:02,000 --> 00:10:05,440
+deeper to understand how the X-ray
+
+266
+00:10:03,760 --> 00:10:07,519
+source, the detectors, and the
+
+267
+00:10:05,440 --> 00:10:09,279
+reconstruction process all work together
+
+268
+00:10:07,519 --> 00:10:13,320
+to extract as much information as
+
+269
+00:10:09,279 --> 00:10:13,320
+possible from the human body.
+
+270
+00:10:14,560 --> 00:10:18,880
+Looking into the future, X-ray imaging
+
+271
+00:10:16,959 --> 00:10:21,360
+may become far more portable and
+
+272
+00:10:18,880 --> 00:10:24,160
+accessible. Imagine carrying a powerful
+
+273
+00:10:21,360 --> 00:10:26,320
+but compact X-ray device, perhaps even
+
+274
+00:10:24,160 --> 00:10:28,640
+something integrated into a smartphone.
+
+275
+00:10:26,320 --> 00:10:30,240
+It may sound futuristic, but nothing is
+
+276
+00:10:28,640 --> 00:10:31,839
+stopping us from thinking outside the
+
+277
+00:10:30,240 --> 00:10:33,920
+box.
+
+278
+00:10:31,839 --> 00:10:35,839
+One open question is how to make X-ray
+
+279
+00:10:33,920 --> 00:10:37,839
+imaging as cheap and convenient as
+
+280
+00:10:35,839 --> 00:10:40,160
+possible. Believe it or not, there are
+
+281
+00:10:37,839 --> 00:10:42,160
+papers suggesting that even something as
+
+282
+00:10:40,160 --> 00:10:43,600
+simple as peeling scotch tape can
+
+283
+00:10:42,160 --> 00:10:45,839
+generate X-rays under certain
+
+284
+00:10:43,600 --> 00:10:49,680
+conditions. If you're curious, you can
+
+285
+00:10:45,839 --> 00:10:51,839
+look up this fascinating idea.
+
+286
+00:10:49,680 --> 00:10:53,519
+So while today we use large expensive
+
+287
+00:10:51,839 --> 00:10:55,440
+machines, the future may bring
+
+288
+00:10:53,519 --> 00:10:57,680
+surprising and creative ways to generate
+
+289
+00:10:55,440 --> 00:10:59,440
+and use X-rays. New ideas like these
+
+290
+00:10:57,680 --> 00:11:03,480
+could turn out to be very important for
+
+291
+00:10:59,440 --> 00:11:03,480
+both medicine and technology.
+
+292
+00:11:05,120 --> 00:11:08,800
+You may remember this TED video, how
+
+293
+00:11:07,120 --> 00:11:11,519
+X-rays see through your skin, which I
+
+294
+00:11:08,800 --> 00:11:13,279
+showed you earlier. When I first shared
+
+295
+00:11:11,519 --> 00:11:15,760
+it, it already had a large number of
+
+296
+00:11:13,279 --> 00:11:17,600
+views and since then the count has only
+
+297
+00:11:15,760 --> 00:11:19,519
+grown. That tells you how many people
+
+298
+00:11:17,600 --> 00:11:22,720
+around the world are curious about the
+
+299
+00:11:19,519 --> 00:11:25,040
+history and the science of X-rays.
+
+300
+00:11:22,720 --> 00:11:26,959
+It's a short, engaging explanation of
+
+301
+00:11:25,040 --> 00:11:28,959
+how X-rays work, and I encourage you to
+
+302
+00:11:26,959 --> 00:11:30,880
+watch it again after today's lecture.
+
+303
+00:11:28,959 --> 00:11:32,560
+With the background you now have, you
+
+304
+00:11:30,880 --> 00:11:35,120
+may notice details you didn't fully
+
+305
+00:11:32,560 --> 00:11:37,519
+appreciate before. Revisiting resources
+
+306
+00:11:35,120 --> 00:11:38,800
+like this once you have more context is
+
+307
+00:11:37,519 --> 00:11:41,800
+a great way to deepen your
+
+308
+00:11:38,800 --> 00:11:41,800
+understanding.
+
+309
+00:11:43,360 --> 00:11:48,560
+Medical X-rays are essential.
+
+310
+00:11:46,399 --> 00:11:50,800
+Techniques such as plain radioraphs and
+
+311
+00:11:48,560 --> 00:11:52,959
+CT scans are the backbone of modern
+
+312
+00:11:50,800 --> 00:11:55,279
+radiology. In fact, some of my
+
+313
+00:11:52,959 --> 00:11:57,040
+colleagues and mentors often say, "If
+
+314
+00:11:55,279 --> 00:11:59,360
+you had to pick just one imaging
+
+315
+00:11:57,040 --> 00:12:01,839
+modality as the cornerstone of modern
+
+316
+00:11:59,360 --> 00:12:03,920
+medicine, it would be X-rays." If you
+
+317
+00:12:01,839 --> 00:12:05,920
+take away X-ray imaging, hospitals
+
+318
+00:12:03,920 --> 00:12:07,839
+simply cannot function effectively. If
+
+319
+00:12:05,920 --> 00:12:09,760
+you take away any other modality, they
+
+320
+00:12:07,839 --> 00:12:11,600
+can still manage as long as X-rays
+
+321
+00:12:09,760 --> 00:12:13,680
+remain available.
+
+322
+00:12:11,600 --> 00:12:16,079
+There are many reasons for this. X-ray
+
+323
+00:12:13,680 --> 00:12:18,320
+imaging is relatively cheap and widely
+
+324
+00:12:16,079 --> 00:12:20,240
+available. It provides high resolution
+
+325
+00:12:18,320 --> 00:12:22,560
+and fast speed which are crucial in
+
+326
+00:12:20,240 --> 00:12:24,800
+clinical practice. Another advantage and
+
+327
+00:12:22,560 --> 00:12:27,200
+one I want to emphasize is its high
+
+328
+00:12:24,800 --> 00:12:30,399
+geometric accuracy.
+
+329
+00:12:27,200 --> 00:12:32,639
+What does that mean? Think about MRI. It
+
+330
+00:12:30,399 --> 00:12:34,320
+produces beautiful images, but sometimes
+
+331
+00:12:32,639 --> 00:12:36,240
+those images are geometrically
+
+332
+00:12:34,320 --> 00:12:38,399
+distorted.
+
+333
+00:12:36,240 --> 00:12:40,079
+A tumor might appear shifted, much like
+
+334
+00:12:38,399 --> 00:12:42,720
+how a pencil looks bent when you place
+
+335
+00:12:40,079 --> 00:12:44,560
+it in a glass of water.
+
+336
+00:12:42,720 --> 00:12:47,120
+If a surgeon were to rely on that
+
+337
+00:12:44,560 --> 00:12:49,600
+distorted MRI image without correction,
+
+338
+00:12:47,120 --> 00:12:51,760
+they might target the wrong spot. CT and
+
+339
+00:12:49,600 --> 00:12:54,079
+X-ray imaging, by contrast, give you
+
+340
+00:12:51,760 --> 00:12:56,240
+precise geometric accuracy. This
+
+341
+00:12:54,079 --> 00:12:58,399
+accuracy allows us to deliver radiation
+
+342
+00:12:56,240 --> 00:13:00,800
+beams for therapy or guide surgical
+
+343
+00:12:58,399 --> 00:13:03,440
+procedures with confidence.
+
+344
+00:13:00,800 --> 00:13:05,360
+X-ray imaging is also both sensitive and
+
+345
+00:13:03,440 --> 00:13:07,519
+specific.
+
+346
+00:13:05,360 --> 00:13:09,920
+Sensitivity means that if the disease is
+
+347
+00:13:07,519 --> 00:13:12,079
+present, the imaging will detect it.
+
+348
+00:13:09,920 --> 00:13:13,839
+Specificity means that if the disease is
+
+349
+00:13:12,079 --> 00:13:16,240
+not present, the imaging will not
+
+350
+00:13:13,839 --> 00:13:18,079
+falsely indicate it. So in many cases,
+
+351
+00:13:16,240 --> 00:13:19,920
+X-rays provide a very reliable
+
+352
+00:13:18,079 --> 00:13:21,760
+diagnostic tool. And even when they
+
+353
+00:13:19,920 --> 00:13:23,440
+cannot fully answer the question, they
+
+354
+00:13:21,760 --> 00:13:26,160
+guide us toward which additional imaging
+
+355
+00:13:23,440 --> 00:13:28,399
+modality to use next.
+
+356
+00:13:26,160 --> 00:13:30,240
+Of course, there are downsides.
+
+357
+00:13:28,399 --> 00:13:32,560
+The most important is that X-rays are a
+
+358
+00:13:30,240 --> 00:13:34,720
+form of ionizing radiation, which means
+
+359
+00:13:32,560 --> 00:13:36,560
+there is some risk. But if the radiation
+
+360
+00:13:34,720 --> 00:13:39,680
+dose is controlled, the risk is
+
+361
+00:13:36,560 --> 00:13:42,079
+manageable. To put it in perspective, a
+
+362
+00:13:39,680 --> 00:13:43,760
+typical CT scan delivers a dose roughly
+
+363
+00:13:42,079 --> 00:13:45,519
+comparable to what you would receive on
+
+364
+00:13:43,760 --> 00:13:48,639
+an international flight, for example,
+
+365
+00:13:45,519 --> 00:13:50,320
+from the United States to China. If you
+
+366
+00:13:48,639 --> 00:13:52,160
+are comfortable taking that trip, then
+
+367
+00:13:50,320 --> 00:13:54,800
+you should not worry too much about a
+
+368
+00:13:52,160 --> 00:13:56,880
+single CT scan. Still, we always work
+
+369
+00:13:54,800 --> 00:13:59,120
+hard to minimize the dose, and over the
+
+370
+00:13:56,880 --> 00:14:00,720
+past decade, remarkable progress has
+
+371
+00:13:59,120 --> 00:14:04,240
+been made in reducing it while
+
+372
+00:14:00,720 --> 00:14:06,399
+maintaining high diagnostic quality.
+
+373
+00:14:04,240 --> 00:14:08,639
+Another limitation is that X-rays have
+
+374
+00:14:06,399 --> 00:14:10,560
+poor contrast for soft tissue.
+
+375
+00:14:08,639 --> 00:14:12,639
+Structures like the brain, liver, or
+
+376
+00:14:10,560 --> 00:14:15,199
+tumors are not as clearly distinguished
+
+377
+00:14:12,639 --> 00:14:17,120
+as they are with MRI. In many cases, we
+
+378
+00:14:15,199 --> 00:14:19,199
+need to inject contrast agents to
+
+379
+00:14:17,120 --> 00:14:21,360
+improve visibility.
+
+380
+00:14:19,199 --> 00:14:23,600
+Finally, from a global perspective, the
+
+381
+00:14:21,360 --> 00:14:25,600
+medical X-ray market is huge and
+
+382
+00:14:23,600 --> 00:14:27,920
+continues to grow, billions of dollars
+
+383
+00:14:25,600 --> 00:14:29,600
+worldwide, with steady expansion each
+
+384
+00:14:27,920 --> 00:14:31,920
+year. This reflects not only how
+
+385
+00:14:29,600 --> 00:14:36,519
+important X-rays are today, but also how
+
+386
+00:14:31,920 --> 00:14:36,519
+much innovation continues in this field.
+
+387
+00:14:37,920 --> 00:14:42,560
+Medical X-ray imaging generally comes in
+
+388
+00:14:40,320 --> 00:14:44,639
+two main forms.
+
+389
+00:14:42,560 --> 00:14:46,880
+On the left, you see the simpler and
+
+390
+00:14:44,639 --> 00:14:49,680
+more cost-effective version, a single
+
+391
+00:14:46,880 --> 00:14:51,680
+projection image like a chest X-ray. It
+
+392
+00:14:49,680 --> 00:14:53,040
+captures one view at a time and
+
+393
+00:14:51,680 --> 00:14:56,000
+everything inside the body is
+
+394
+00:14:53,040 --> 00:14:58,399
+superimposed together in that picture.
+
+395
+00:14:56,000 --> 00:15:00,480
+On the right, the principle is extended.
+
+396
+00:14:58,399 --> 00:15:02,399
+At any single instant, you still record
+
+397
+00:15:00,480 --> 00:15:04,240
+just one projection, but instead of
+
+398
+00:15:02,399 --> 00:15:07,120
+stopping there, the X-ray source and
+
+399
+00:15:04,240 --> 00:15:08,800
+detector rotate around the patient. At
+
+400
+00:15:07,120 --> 00:15:10,880
+the same time, the patient table can
+
+401
+00:15:08,800 --> 00:15:12,480
+also move forward or backward. By
+
+402
+00:15:10,880 --> 00:15:14,560
+acquiring projections from many
+
+403
+00:15:12,480 --> 00:15:16,480
+different angles, we collect enough
+
+404
+00:15:14,560 --> 00:15:18,480
+information to reconstruct detailed
+
+405
+00:15:16,480 --> 00:15:20,560
+cross-sectional slices. When these
+
+406
+00:15:18,480 --> 00:15:24,160
+slices are stacked together, they form a
+
+407
+00:15:20,560 --> 00:15:26,320
+volutric image of the entire body.
+
+408
+00:15:24,160 --> 00:15:29,120
+So while projection radiography gives us
+
+409
+00:15:26,320 --> 00:15:31,440
+a fast overview, computed tomography
+
+410
+00:15:29,120 --> 00:15:33,760
+transforms those multiple views into a
+
+411
+00:15:31,440 --> 00:15:37,639
+three-dimensional representation, a much
+
+412
+00:15:33,760 --> 00:15:37,639
+richer source of information.
+
+413
+00:15:39,199 --> 00:15:43,519
+Here is another common application of
+
+414
+00:15:41,120 --> 00:15:46,000
+X-ray imaging. In addition to medicine,
+
+415
+00:15:43,519 --> 00:15:48,000
+you encounter X-rays almost every time
+
+416
+00:15:46,000 --> 00:15:49,920
+you go through an airport. Large
+
+417
+00:15:48,000 --> 00:15:51,759
+machines like this are used routinely to
+
+418
+00:15:49,920 --> 00:15:53,839
+screen luggage.
+
+419
+00:15:51,759 --> 00:15:55,680
+X-ray imaging in this context is
+
+420
+00:15:53,839 --> 00:15:58,240
+designed to detect dangerous items such
+
+421
+00:15:55,680 --> 00:16:00,240
+as explosives or weapons.
+
+422
+00:15:58,240 --> 00:16:02,399
+It has become a standard part of modern
+
+423
+00:16:00,240 --> 00:16:03,839
+security systems and most of us are so
+
+424
+00:16:02,399 --> 00:16:06,800
+accustomed to it that we hardly think
+
+425
+00:16:03,839 --> 00:16:08,639
+about the technology at work.
+
+426
+00:16:06,800 --> 00:16:10,800
+So this concludes our general
+
+427
+00:16:08,639 --> 00:16:13,120
+introduction. At this point you should
+
+428
+00:16:10,800 --> 00:16:14,959
+have a clear idea of what X-rays are,
+
+429
+00:16:13,120 --> 00:16:16,800
+where they fall in the electromagnetic
+
+430
+00:16:14,959 --> 00:16:19,440
+spectrum and some of their major
+
+431
+00:16:16,800 --> 00:16:21,199
+practical uses in both healthcare and
+
+432
+00:16:19,440 --> 00:16:22,959
+security.
+
+433
+00:16:21,199 --> 00:16:24,880
+Now we move on to the more detailed and
+
+434
+00:16:22,959 --> 00:16:27,199
+important part of today's lecture, the
+
+435
+00:16:24,880 --> 00:16:31,240
+X-ray imaging chain. The source, the
+
+436
+00:16:27,199 --> 00:16:31,240
+interactions, and the detector.
+
+437
+00:16:32,560 --> 00:16:36,240
+Now, once you have both the X-ray source
+
+438
+00:16:34,399 --> 00:16:38,240
+and the detector, you can build an
+
+439
+00:16:36,240 --> 00:16:40,160
+imaging system.
+
+440
+00:16:38,240 --> 00:16:42,000
+Simply put, if you hold them together in
+
+441
+00:16:40,160 --> 00:16:45,199
+the right configuration, you can start
+
+442
+00:16:42,000 --> 00:16:47,360
+performing medical X-ray imaging.
+
+443
+00:16:45,199 --> 00:16:49,199
+At the heart of the system is the X-ray
+
+444
+00:16:47,360 --> 00:16:50,959
+tube. This is the device that actually
+
+445
+00:16:49,199 --> 00:16:52,959
+generates the X-rays. We will look at
+
+446
+00:16:50,959 --> 00:16:56,000
+its working principle in more detail,
+
+447
+00:16:52,959 --> 00:16:57,600
+but for now just remember the X-ray tube
+
+448
+00:16:56,000 --> 00:17:00,560
+is the source that makes the entire
+
+449
+00:16:57,600 --> 00:17:02,959
+imaging chain possible.
+
+450
+00:17:00,560 --> 00:17:04,640
+So the first step in understanding X-ray
+
+451
+00:17:02,959 --> 00:17:07,640
+imaging is to understand the X-ray
+
+452
+00:17:04,640 --> 00:17:07,640
+source.
+
+453
+00:17:08,799 --> 00:17:12,959
+Now let's take a closer look at how an
+
+454
+00:17:10,480 --> 00:17:15,439
+X-ray tube works because this is the
+
+455
+00:17:12,959 --> 00:17:17,439
+heart of the X-ray source. The figure
+
+456
+00:17:15,439 --> 00:17:19,280
+you see here illustrates the essential
+
+457
+00:17:17,439 --> 00:17:21,439
+components.
+
+458
+00:17:19,280 --> 00:17:23,199
+At one end, we have a filament which is
+
+459
+00:17:21,439 --> 00:17:25,039
+usually made of tungsten wire. The
+
+460
+00:17:23,199 --> 00:17:27,280
+filament is coiled so that it has more
+
+461
+00:17:25,039 --> 00:17:28,880
+surface area and when we pass a strong
+
+462
+00:17:27,280 --> 00:17:31,360
+current through it, the wire becomes
+
+463
+00:17:28,880 --> 00:17:33,600
+extremely hot. This heating process
+
+464
+00:17:31,360 --> 00:17:37,280
+frees up electrons. They become boiled
+
+465
+00:17:33,600 --> 00:17:39,200
+off from the surface of the filament.
+
+466
+00:17:37,280 --> 00:17:41,039
+Next, we apply a very high voltage
+
+467
+00:17:39,200 --> 00:17:43,360
+potential between the filament, which
+
+468
+00:17:41,039 --> 00:17:46,160
+serves as the cathode and the target,
+
+469
+00:17:43,360 --> 00:17:48,640
+which is called the anode.
+
+470
+00:17:46,160 --> 00:17:50,480
+The anode is also made of tungsten. The
+
+471
+00:17:48,640 --> 00:17:52,799
+electric field between the cathode and
+
+472
+00:17:50,480 --> 00:17:54,559
+the anode accelerates the electrons at
+
+473
+00:17:52,799 --> 00:17:57,679
+very high speeds toward the tungsten
+
+474
+00:17:54,559 --> 00:17:59,600
+target. When these high energy electrons
+
+475
+00:17:57,679 --> 00:18:02,240
+strike the anode, their interactions
+
+476
+00:17:59,600 --> 00:18:04,640
+with the tungsten atoms produce X-rays.
+
+477
+00:18:02,240 --> 00:18:07,919
+This process also generates an enormous
+
+478
+00:18:04,640 --> 00:18:10,320
+amount of heat. In fact, more than 99%
+
+479
+00:18:07,919 --> 00:18:14,480
+of the energy is converted into heat and
+
+480
+00:18:10,320 --> 00:18:16,160
+less than 1% actually becomes X-rays.
+
+481
+00:18:14,480 --> 00:18:18,240
+Managing this heat is a major
+
+482
+00:18:16,160 --> 00:18:20,080
+engineering challenge.
+
+483
+00:18:18,240 --> 00:18:22,080
+The inside of the tube is kept under a
+
+484
+00:18:20,080 --> 00:18:23,679
+high vacuum so that electrons can move
+
+485
+00:18:22,080 --> 00:18:26,559
+freely without colliding with air
+
+486
+00:18:23,679 --> 00:18:28,559
+molecules. But even in a vacuum, the
+
+487
+00:18:26,559 --> 00:18:31,360
+tungsten target would quickly overheat
+
+488
+00:18:28,559 --> 00:18:34,000
+if it were not carefully designed.
+
+489
+00:18:31,360 --> 00:18:36,160
+The solution is to use a rotating anode.
+
+490
+00:18:34,000 --> 00:18:38,160
+By spinning the target rapidly, the
+
+491
+00:18:36,160 --> 00:18:40,400
+electron beam does not strike the same
+
+492
+00:18:38,160 --> 00:18:42,400
+spot continuously. Instead, the heat is
+
+493
+00:18:40,400 --> 00:18:45,520
+spread over a larger area, preventing
+
+494
+00:18:42,400 --> 00:18:47,679
+the tungsten from melting. Modern X-ray
+
+495
+00:18:45,520 --> 00:18:49,760
+tubes are sealed inside durable glass or
+
+496
+00:18:47,679 --> 00:18:52,480
+ceramic housings and are manufactured
+
+497
+00:18:49,760 --> 00:18:54,400
+with extremely high precision.
+
+498
+00:18:52,480 --> 00:18:56,400
+My colleagues at J Global Research, for
+
+499
+00:18:54,400 --> 00:18:58,960
+example, have worked on these tubes for
+
+500
+00:18:56,400 --> 00:19:00,559
+many years, refining the design step by
+
+501
+00:18:58,960 --> 00:19:02,240
+step.
+
+502
+00:19:00,559 --> 00:19:04,000
+While the basic principle has remained
+
+503
+00:19:02,240 --> 00:19:05,360
+the same since Ronchin's time,
+
+504
+00:19:04,000 --> 00:19:07,520
+continuous improvements have made the
+
+505
+00:19:05,360 --> 00:19:09,039
+tubes more efficient, more powerful, and
+
+506
+00:19:07,520 --> 00:19:10,720
+capable of delivering the high flux of
+
+507
+00:19:09,039 --> 00:19:12,240
+X-rays needed in today's imaging
+
+508
+00:19:10,720 --> 00:19:14,000
+systems.
+
+509
+00:19:12,240 --> 00:19:15,760
+So, in summary, heat the filament,
+
+510
+00:19:14,000 --> 00:19:17,760
+release electrons, accelerate them with
+
+511
+00:19:15,760 --> 00:19:19,679
+high voltage toward a tungsten anode,
+
+512
+00:19:17,760 --> 00:19:22,679
+and X-rays are generated at the point of
+
+513
+00:19:19,679 --> 00:19:22,679
+impact.
+
+514
+00:19:24,160 --> 00:19:29,120
+Now let's ask the question why is it
+
+515
+00:19:26,640 --> 00:19:30,640
+that an X-ray tube can actually generate
+
+516
+00:19:29,120 --> 00:19:32,880
+X-rays?
+
+517
+00:19:30,640 --> 00:19:35,200
+The answer lies in two main physical
+
+518
+00:19:32,880 --> 00:19:38,880
+mechanisms. This is what I call our
+
+519
+00:19:35,200 --> 00:19:40,240
+first red diamond or key concept.
+
+520
+00:19:38,880 --> 00:19:42,720
+The first mechanism is called
+
+521
+00:19:40,240 --> 00:19:45,360
+brestralung radiation. A German word
+
+522
+00:19:42,720 --> 00:19:47,760
+meaning breaking radiation.
+
+523
+00:19:45,360 --> 00:19:50,080
+Here's what happens. A primary electron
+
+524
+00:19:47,760 --> 00:19:51,679
+beam accelerated toward the target
+
+525
+00:19:50,080 --> 00:19:54,000
+passes close to the nucleus of a
+
+526
+00:19:51,679 --> 00:19:56,240
+tungsten atom. Because the nucleus is
+
+527
+00:19:54,000 --> 00:19:57,840
+positively charged and the electron is
+
+528
+00:19:56,240 --> 00:20:00,240
+negatively charged, there is an
+
+529
+00:19:57,840 --> 00:20:02,480
+attractive force. This force bends the
+
+530
+00:20:00,240 --> 00:20:04,080
+trajectory of the electron.
+
+531
+00:20:02,480 --> 00:20:06,720
+Whenever a charged particle is
+
+532
+00:20:04,080 --> 00:20:08,960
+accelerated or decelerated, it gives off
+
+533
+00:20:06,720 --> 00:20:11,200
+radiation. In this case, that radiation
+
+534
+00:20:08,960 --> 00:20:13,679
+is X-rays. Since the amount of bending
+
+535
+00:20:11,200 --> 00:20:15,919
+can vary, the emitted X-rays span a
+
+536
+00:20:13,679 --> 00:20:18,240
+continuous range of energies. That's why
+
+537
+00:20:15,919 --> 00:20:19,840
+bremstral lung is also called continuous
+
+538
+00:20:18,240 --> 00:20:21,360
+radiation.
+
+539
+00:20:19,840 --> 00:20:23,440
+The second mechanism is called
+
+540
+00:20:21,360 --> 00:20:25,360
+characteristic radiation. Sometimes
+
+541
+00:20:23,440 --> 00:20:27,760
+explained in terms of the photoelectric
+
+542
+00:20:25,360 --> 00:20:30,000
+effect. In this case, a high energy
+
+543
+00:20:27,760 --> 00:20:32,240
+primary electron collides with an inner
+
+544
+00:20:30,000 --> 00:20:34,400
+shell electron of the tungsten atom and
+
+545
+00:20:32,240 --> 00:20:36,320
+kicks it out of its orbit. That leaves a
+
+546
+00:20:34,400 --> 00:20:38,240
+vacancy in the inner shell. An outer
+
+547
+00:20:36,320 --> 00:20:39,919
+shell electron then drops down to fill
+
+548
+00:20:38,240 --> 00:20:41,600
+the gap.
+
+549
+00:20:39,919 --> 00:20:43,520
+The energy difference between the two
+
+550
+00:20:41,600 --> 00:20:46,159
+shells is released in the form of an
+
+551
+00:20:43,520 --> 00:20:48,080
+X-ray photon. Because the energy levels
+
+552
+00:20:46,159 --> 00:20:50,400
+of atomic shells are discreet, the
+
+553
+00:20:48,080 --> 00:20:52,799
+emitted X-ray has a very specific
+
+554
+00:20:50,400 --> 00:20:55,440
+energy, a characteristic value that
+
+555
+00:20:52,799 --> 00:20:58,720
+depends on the target material.
+
+556
+00:20:55,440 --> 00:21:01,360
+So to summarize, brester lung gives us a
+
+557
+00:20:58,720 --> 00:21:03,600
+broad continuous X-ray spectrum while
+
+558
+00:21:01,360 --> 00:21:06,240
+characteristic radiation adds sharp
+
+559
+00:21:03,600 --> 00:21:08,720
+peaks at specific energies. Together,
+
+560
+00:21:06,240 --> 00:21:10,640
+these two processes explain how an X-ray
+
+561
+00:21:08,720 --> 00:21:14,520
+tube produces the mixture of radiation
+
+562
+00:21:10,640 --> 00:21:14,520
+that we use for imaging.
+
+563
+00:21:15,760 --> 00:21:19,280
+Now that we've discussed how X-rays are
+
+564
+00:21:17,520 --> 00:21:21,039
+generated, let's look at the spectrum
+
+565
+00:21:19,280 --> 00:21:23,120
+they produce.
+
+566
+00:21:21,039 --> 00:21:25,039
+First, notice the broad continuous
+
+567
+00:21:23,120 --> 00:21:27,440
+curve. This comes from Bremstro
+
+568
+00:21:25,039 --> 00:21:29,440
+radiation. You can see that at lower
+
+569
+00:21:27,440 --> 00:21:31,440
+photon energies, the intensity is
+
+570
+00:21:29,440 --> 00:21:33,919
+relatively high and as the energy
+
+571
+00:21:31,440 --> 00:21:36,080
+increases, the intensity decreases.
+
+572
+00:21:33,919 --> 00:21:37,760
+However, the very lowest energy X-rays
+
+573
+00:21:36,080 --> 00:21:39,280
+don't actually appear in the output
+
+574
+00:21:37,760 --> 00:21:41,919
+because they are absorbed inside the
+
+575
+00:21:39,280 --> 00:21:43,360
+tungsten target itself. Since the
+
+576
+00:21:41,919 --> 00:21:45,440
+radiation is produced beneath the
+
+577
+00:21:43,360 --> 00:21:47,440
+surface, the tungsten material acts as a
+
+578
+00:21:45,440 --> 00:21:50,960
+natural filter, removing the very soft
+
+579
+00:21:47,440 --> 00:21:53,679
+X-rays before they can escape.
+
+580
+00:21:50,960 --> 00:21:55,679
+Next, at higher energies around 70 kiler
+
+581
+00:21:53,679 --> 00:21:57,679
+volts and above for tungsten, you start
+
+582
+00:21:55,679 --> 00:22:00,000
+to see sharp peaks. These are the
+
+583
+00:21:57,679 --> 00:22:02,480
+characteristic X-rays labeled here as K
+
+584
+00:22:00,000 --> 00:22:04,559
+alpha and K beta.
+
+585
+00:22:02,480 --> 00:22:06,799
+They occur only when the incoming
+
+586
+00:22:04,559 --> 00:22:09,039
+electron energy is high enough to knock
+
+587
+00:22:06,799 --> 00:22:10,720
+out inner shell electrons, allowing
+
+588
+00:22:09,039 --> 00:22:12,960
+outer electrons to fall into those
+
+589
+00:22:10,720 --> 00:22:15,039
+vacancies and release very specific
+
+590
+00:22:12,960 --> 00:22:17,280
+amounts of energy.
+
+591
+00:22:15,039 --> 00:22:19,520
+The maximum X-ray energy you can obtain
+
+592
+00:22:17,280 --> 00:22:22,240
+is determined by the tube voltage. For
+
+593
+00:22:19,520 --> 00:22:24,799
+example, if the tube is operated at 120
+
+594
+00:22:22,240 --> 00:22:28,080
+kovts, then the maximum possible photon
+
+595
+00:22:24,799 --> 00:22:30,799
+energy is 120 kilo electron volts.
+
+596
+00:22:28,080 --> 00:22:32,640
+However, those very high energy photons
+
+597
+00:22:30,799 --> 00:22:35,280
+are less common compared to the middle
+
+598
+00:22:32,640 --> 00:22:37,679
+range.
+
+599
+00:22:35,280 --> 00:22:39,440
+Finally, the intensity of the spectrum,
+
+600
+00:22:37,679 --> 00:22:41,600
+meaning the number of X-ray photons
+
+601
+00:22:39,440 --> 00:22:43,440
+produced, depends strongly on the tube
+
+602
+00:22:41,600 --> 00:22:45,280
+current. A higher current means more
+
+603
+00:22:43,440 --> 00:22:47,520
+electrons striking the target, which
+
+604
+00:22:45,280 --> 00:22:49,039
+produces more X-ray photons across the
+
+605
+00:22:47,520 --> 00:22:50,880
+spectrum.
+
+606
+00:22:49,039 --> 00:22:53,200
+So, the shape of the X-ray spectrum is
+
+607
+00:22:50,880 --> 00:22:54,960
+governed by three key factors. the
+
+608
+00:22:53,200 --> 00:22:56,960
+filtering effect of the target, the
+
+609
+00:22:54,960 --> 00:22:58,640
+discrete characteristic peaks, and the
+
+610
+00:22:56,960 --> 00:23:00,159
+limits set by the tube voltage and
+
+611
+00:22:58,640 --> 00:23:01,919
+current.
+
+612
+00:23:00,159 --> 00:23:03,200
+And keep in mind, this will also connect
+
+613
+00:23:01,919 --> 00:23:05,039
+directly to one of your homework
+
+614
+00:23:03,200 --> 00:23:08,039
+problems, so be sure to review it
+
+615
+00:23:05,039 --> 00:23:08,039
+carefully.
+
+616
+00:23:09,760 --> 00:23:13,520
+This slide taken from your textbook
+
+617
+00:23:11,840 --> 00:23:16,000
+shows some important parameters of the
+
+618
+00:23:13,520 --> 00:23:17,679
+X-ray tube. Let's start with the
+
+619
+00:23:16,000 --> 00:23:20,080
+cathode.
+
+620
+00:23:17,679 --> 00:23:22,480
+In practice, the cathode is often shaped
+
+621
+00:23:20,080 --> 00:23:24,480
+in a particular way and charged so that
+
+622
+00:23:22,480 --> 00:23:26,720
+it helps to focus the electron beam.
+
+623
+00:23:24,480 --> 00:23:28,960
+Sometimes additional focusing coils are
+
+624
+00:23:26,720 --> 00:23:31,200
+also placed in the middle region. The
+
+625
+00:23:28,960 --> 00:23:33,200
+purpose is always the same to narrow the
+
+626
+00:23:31,200 --> 00:23:35,440
+electron beam and concentrate it onto a
+
+627
+00:23:33,200 --> 00:23:38,799
+small area of the anode. That small
+
+628
+00:23:35,440 --> 00:23:42,960
+region becomes the X-ray focal spot. Why
+
+629
+00:23:38,799 --> 00:23:44,960
+is the focal spot size important?
+
+630
+00:23:42,960 --> 00:23:46,799
+If the spot is too large, X-rays are
+
+631
+00:23:44,960 --> 00:23:48,960
+emitted from a broad area and the
+
+632
+00:23:46,799 --> 00:23:51,440
+resulting image becomes blurry, similar
+
+633
+00:23:48,960 --> 00:23:53,520
+to motion blur in photography. A smaller
+
+634
+00:23:51,440 --> 00:23:56,000
+focal spot, on the other hand, produces
+
+635
+00:23:53,520 --> 00:23:58,000
+much sharper images.
+
+636
+00:23:56,000 --> 00:24:00,240
+There's also a clever design trick here
+
+637
+00:23:58,000 --> 00:24:02,640
+called the line focus principle. The
+
+638
+00:24:00,240 --> 00:24:04,799
+anode surface is angled at some angle
+
+639
+00:24:02,640 --> 00:24:07,360
+theta. The electrons strike the slope
+
+640
+00:24:04,799 --> 00:24:09,280
+surface and X-rays are emitted. Because
+
+641
+00:24:07,360 --> 00:24:11,520
+of the geometry, the apparent or
+
+642
+00:24:09,280 --> 00:24:15,039
+effective focal spot size is equal to
+
+643
+00:24:11,520 --> 00:24:16,880
+the actual size times the sign of theta.
+
+644
+00:24:15,039 --> 00:24:18,559
+This way, you can achieve a smaller
+
+645
+00:24:16,880 --> 00:24:20,000
+effective focal spot while still
+
+646
+00:24:18,559 --> 00:24:22,240
+spreading the heat over a larger
+
+647
+00:24:20,000 --> 00:24:24,159
+physical area. It's a neat compromise
+
+648
+00:24:22,240 --> 00:24:25,919
+between sharp imaging and thermal
+
+649
+00:24:24,159 --> 00:24:28,480
+management.
+
+650
+00:24:25,919 --> 00:24:30,080
+Finally, the field of view or coverage
+
+651
+00:24:28,480 --> 00:24:32,240
+depends on the distance from the focal
+
+652
+00:24:30,080 --> 00:24:34,880
+spot to the patient. As the patient
+
+653
+00:24:32,240 --> 00:24:36,960
+moves farther away, the coverage widens.
+
+654
+00:24:34,880 --> 00:24:39,120
+The maximum coverage is limited by the
+
+655
+00:24:36,960 --> 00:24:41,760
+anode angle.
+
+656
+00:24:39,120 --> 00:24:44,080
+So to summarize, focusing gives us a
+
+657
+00:24:41,760 --> 00:24:46,080
+sharp spot. The angled anode helps
+
+658
+00:24:44,080 --> 00:24:48,080
+reduce blur while managing heat. And the
+
+659
+00:24:46,080 --> 00:24:52,200
+geometry of the tube determines how wide
+
+660
+00:24:48,080 --> 00:24:52,200
+a field of view we can capture.
+
+661
+00:24:53,520 --> 00:24:57,520
+We've now reviewed the conventional
+
+662
+00:24:55,200 --> 00:24:59,919
+X-ray tube, its parameters, and how it
+
+663
+00:24:57,520 --> 00:25:02,240
+works. Let me briefly mention a new type
+
+664
+00:24:59,919 --> 00:25:05,520
+of X-ray tube, which represents a more
+
+665
+00:25:02,240 --> 00:25:08,000
+advanced and expensive technology.
+
+666
+00:25:05,520 --> 00:25:10,480
+Instead of using a solid tungsten anode,
+
+667
+00:25:08,000 --> 00:25:12,240
+this design uses a liquid metal anode. A
+
+668
+00:25:10,480 --> 00:25:15,039
+thin jet of liquid metal flows
+
+669
+00:25:12,240 --> 00:25:16,799
+continuously downward. An electron beam
+
+670
+00:25:15,039 --> 00:25:18,640
+generated in a way similar to what we
+
+671
+00:25:16,799 --> 00:25:20,559
+discussed before strikes the liquid
+
+672
+00:25:18,640 --> 00:25:22,559
+metal stream. The interaction between
+
+673
+00:25:20,559 --> 00:25:24,799
+the electrons and the liquid target
+
+674
+00:25:22,559 --> 00:25:26,799
+produces X-rays.
+
+675
+00:25:24,799 --> 00:25:28,799
+The advantage of this design is that the
+
+676
+00:25:26,799 --> 00:25:30,960
+liquid metal can absorb and dissipate
+
+677
+00:25:28,799 --> 00:25:32,960
+heat much more effectively than a solid
+
+678
+00:25:30,960 --> 00:25:35,039
+target. As a result, the system can
+
+679
+00:25:32,960 --> 00:25:37,520
+generate a much brighter X-ray beam,
+
+680
+00:25:35,039 --> 00:25:39,919
+higher intensity and higher flux without
+
+681
+00:25:37,520 --> 00:25:42,320
+destroying the anode.
+
+682
+00:25:39,919 --> 00:25:43,840
+These tubes are very costly, often
+
+683
+00:25:42,320 --> 00:25:45,840
+priced in the range of hundreds of
+
+684
+00:25:43,840 --> 00:25:47,520
+thousands of dollars. We won't test you
+
+685
+00:25:45,840 --> 00:25:49,600
+on the details of this system, but it's
+
+686
+00:25:47,520 --> 00:25:51,600
+good to be aware of such innovations.
+
+687
+00:25:49,600 --> 00:25:54,240
+They illustrate how researchers continue
+
+688
+00:25:51,600 --> 00:25:56,159
+to push the limits of X-ray technology,
+
+689
+00:25:54,240 --> 00:25:57,919
+refining designs to achieve better
+
+690
+00:25:56,159 --> 00:25:59,760
+performance.
+
+691
+00:25:57,919 --> 00:26:02,080
+I should also add a deeper point for you
+
+692
+00:25:59,760 --> 00:26:04,400
+to think about. When we describe BMRong
+
+693
+00:26:02,080 --> 00:26:06,480
+radiation, it may sound puzzling.
+
+694
+00:26:04,400 --> 00:26:08,720
+Electrons are attracted to the nucleus.
+
+695
+00:26:06,480 --> 00:26:11,120
+So at one stage they seem to gain energy
+
+696
+00:26:08,720 --> 00:26:13,279
+while at another stage they lose energy.
+
+697
+00:26:11,120 --> 00:26:17,039
+How can net radiation be produced if
+
+698
+00:26:13,279 --> 00:26:18,960
+these processes are symmetric?
+
+699
+00:26:17,039 --> 00:26:21,679
+The key is that the trajectory of the
+
+700
+00:26:18,960 --> 00:26:23,440
+electron is bent. That bending means the
+
+701
+00:26:21,679 --> 00:26:25,440
+electron is accelerated in a new
+
+702
+00:26:23,440 --> 00:26:27,919
+direction. An acceleration of charge
+
+703
+00:26:25,440 --> 00:26:29,840
+always produces radiation. This is the
+
+704
+00:26:27,919 --> 00:26:31,760
+fundamental physical basis conservation
+
+705
+00:26:29,840 --> 00:26:34,640
+laws and electromagnetic theory together
+
+706
+00:26:31,760 --> 00:26:36,640
+explain why X-rays are emitted.
+
+707
+00:26:34,640 --> 00:26:38,240
+So while the equations provide a clear
+
+708
+00:26:36,640 --> 00:26:41,279
+description, it's important to connect
+
+709
+00:26:38,240 --> 00:26:42,960
+them with the underlying physics.
+
+710
+00:26:41,279 --> 00:26:45,039
+That's what allows us to understand not
+
+711
+00:26:42,960 --> 00:26:47,200
+just how X-rays are generated, but also
+
+712
+00:26:45,039 --> 00:26:49,200
+how new designs like this liquid metal
+
+713
+00:26:47,200 --> 00:26:53,240
+tube can open the door to brighter and
+
+714
+00:26:49,200 --> 00:26:53,240
+more efficient X-ray sources.
+
+715
+00:26:54,640 --> 00:26:58,799
+By now you understand how X-rays are
+
+716
+00:26:56,799 --> 00:27:00,960
+generated. That knowledge positions you
+
+717
+00:26:58,799 --> 00:27:02,720
+well not only for deeper research in
+
+718
+00:27:00,960 --> 00:27:05,919
+this field but also for practical
+
+719
+00:27:02,720 --> 00:27:07,760
+discussions even in job interviews.
+
+720
+00:27:05,919 --> 00:27:10,159
+Now we move to the next important part
+
+721
+00:27:07,760 --> 00:27:12,559
+of the imaging chain. X-ray attenuation.
+
+722
+00:27:10,159 --> 00:27:14,720
+Once X-rays are produced by the tube or
+
+723
+00:27:12,559 --> 00:27:17,039
+in some cases by a synretron radiation
+
+724
+00:27:14,720 --> 00:27:20,240
+source, we use them to probe an object
+
+725
+00:27:17,039 --> 00:27:21,679
+or a patient. As the X-rays travel
+
+726
+00:27:20,240 --> 00:27:23,760
+through matter, some of them are
+
+727
+00:27:21,679 --> 00:27:26,480
+absorbed, some are scattered, and some
+
+728
+00:27:23,760 --> 00:27:28,559
+pass through with little interaction.
+
+729
+00:27:26,480 --> 00:27:30,240
+It's in this process, the way X-rays are
+
+730
+00:27:28,559 --> 00:27:32,400
+attenuated by different tissues or
+
+731
+00:27:30,240 --> 00:27:34,720
+materials that valuable diagnostic
+
+732
+00:27:32,400 --> 00:27:36,960
+information is encoded. Understanding
+
+733
+00:27:34,720 --> 00:27:38,799
+attenuation is crucial because it
+
+734
+00:27:36,960 --> 00:27:43,240
+directly determines the contrast and
+
+735
+00:27:38,799 --> 00:27:43,240
+quality of the images we can produce.
+
+736
+00:27:44,799 --> 00:27:49,880
+So how exactly do X-rays get attenuated?
+
+737
+00:27:50,159 --> 00:27:54,320
+Think about it this way. When an X-ray
+
+738
+00:27:52,320 --> 00:27:56,640
+beam passes through the body, several
+
+739
+00:27:54,320 --> 00:27:58,880
+outcomes are possible. If there is no
+
+740
+00:27:56,640 --> 00:28:00,480
+interaction at all, the X-rays travel
+
+741
+00:27:58,880 --> 00:28:02,320
+straight through as if the body were
+
+742
+00:28:00,480 --> 00:28:04,320
+completely transparent. That doesn't
+
+743
+00:28:02,320 --> 00:28:05,840
+help us because no useful information is
+
+744
+00:28:04,320 --> 00:28:08,080
+recorded.
+
+745
+00:28:05,840 --> 00:28:10,159
+At the other extreme, if there is total
+
+746
+00:28:08,080 --> 00:28:13,120
+absorption, none of the X-rays make it
+
+747
+00:28:10,159 --> 00:28:15,039
+out. That also gives us no signal. The
+
+748
+00:28:13,120 --> 00:28:16,640
+most useful case is partial absorption,
+
+749
+00:28:15,039 --> 00:28:18,480
+and that occurs through two main
+
+750
+00:28:16,640 --> 00:28:20,480
+processes, scattering and the
+
+751
+00:28:18,480 --> 00:28:25,039
+photoelectric effect. We'll talk about
+
+752
+00:28:20,480 --> 00:28:27,520
+these in more detail on the next slides.
+
+753
+00:28:25,039 --> 00:28:30,000
+Now, at the atomic level, here's what is
+
+754
+00:28:27,520 --> 00:28:32,080
+happening. X-rays are photons, tiny
+
+755
+00:28:30,000 --> 00:28:34,720
+packets of energy. When they strike the
+
+756
+00:28:32,080 --> 00:28:37,919
+body, they may interact with molecules,
+
+757
+00:28:34,720 --> 00:28:40,080
+atoms, or even inner electrons.
+
+758
+00:28:37,919 --> 00:28:42,240
+Some photons pass through unchanged,
+
+759
+00:28:40,080 --> 00:28:44,240
+forming the primary beam. Others are
+
+760
+00:28:42,240 --> 00:28:46,320
+absorbed completely, transferring all
+
+761
+00:28:44,240 --> 00:28:48,480
+their energy to the material, and still
+
+762
+00:28:46,320 --> 00:28:50,720
+others are scattered, deflected in new
+
+763
+00:28:48,480 --> 00:28:53,360
+directions, sometimes losing energy in
+
+764
+00:28:50,720 --> 00:28:55,039
+the process. It's the balance of these
+
+765
+00:28:53,360 --> 00:28:57,279
+interactions that produces image
+
+766
+00:28:55,039 --> 00:29:01,360
+contrast. Different tissues in the body,
+
+767
+00:28:57,279 --> 00:29:03,279
+bone, muscle, fat, lung attenuate X-rays
+
+768
+00:29:01,360 --> 00:29:07,720
+to different degrees, which is why we
+
+769
+00:29:03,279 --> 00:29:07,720
+can see structures in an X-ray image.
+
+770
+00:29:09,039 --> 00:29:12,880
+Here we see the overall picture of how
+
+771
+00:29:10,720 --> 00:29:14,640
+X-ray photons interact with matter. At
+
+772
+00:29:12,880 --> 00:29:17,679
+the atomic level, these interactions can
+
+773
+00:29:14,640 --> 00:29:20,240
+be grouped into four main categories.
+
+774
+00:29:17,679 --> 00:29:22,000
+The first case is no interaction. The
+
+775
+00:29:20,240 --> 00:29:24,000
+photon simply passes through the
+
+776
+00:29:22,000 --> 00:29:26,080
+material unchanged. You could say the
+
+777
+00:29:24,000 --> 00:29:28,640
+photon gets lucky. It doesn't collide
+
+778
+00:29:26,080 --> 00:29:30,640
+with anything. That photon contributes
+
+779
+00:29:28,640 --> 00:29:33,440
+to the primary beam that reaches the
+
+780
+00:29:30,640 --> 00:29:35,120
+detector. The second case is total
+
+781
+00:29:33,440 --> 00:29:37,919
+absorption also known as the
+
+782
+00:29:35,120 --> 00:29:39,760
+photoelectric effect. Here the photon is
+
+783
+00:29:37,919 --> 00:29:41,760
+completely absorbed by an atom. It
+
+784
+00:29:39,760 --> 00:29:43,600
+transfers all its energy to an inner
+
+785
+00:29:41,760 --> 00:29:45,679
+electron which is ejected as a
+
+786
+00:29:43,600 --> 00:29:47,760
+photoeleron. The atom is left with a
+
+787
+00:29:45,679 --> 00:29:49,440
+vacancy and when electrons from higher
+
+788
+00:29:47,760 --> 00:29:52,480
+shells fall into that vacancy
+
+789
+00:29:49,440 --> 00:29:54,640
+characteristic x-rays can be emitted.
+
+790
+00:29:52,480 --> 00:29:57,039
+The other two cases involve scattering.
+
+791
+00:29:54,640 --> 00:29:58,799
+Incoherent or really scattering, the
+
+792
+00:29:57,039 --> 00:30:01,120
+photon is deflected at a very small
+
+793
+00:29:58,799 --> 00:30:03,200
+angle but its energy remains the same
+
+794
+00:30:01,120 --> 00:30:05,600
+because the frequency and phase of the
+
+795
+00:30:03,200 --> 00:30:08,159
+photon do not change. We call this
+
+796
+00:30:05,600 --> 00:30:10,720
+coherent scattering.
+
+797
+00:30:08,159 --> 00:30:12,640
+In contrast, incoherent scattering, also
+
+798
+00:30:10,720 --> 00:30:14,640
+called Compton scattering, happens when
+
+799
+00:30:12,640 --> 00:30:16,399
+the photon collides with an outer shell
+
+800
+00:30:14,640 --> 00:30:18,399
+electron and transfers part of its
+
+801
+00:30:16,399 --> 00:30:20,399
+energy to it. The electron is ejected
+
+802
+00:30:18,399 --> 00:30:23,039
+and the photon is scattered at a larger
+
+803
+00:30:20,399 --> 00:30:24,960
+angle with reduced energy. The energy
+
+804
+00:30:23,039 --> 00:30:26,799
+lost by the photon is taken up by the
+
+805
+00:30:24,960 --> 00:30:30,159
+electron and eventually dissipates as
+
+806
+00:30:26,799 --> 00:30:31,520
+heat. For medical imaging, the two most
+
+807
+00:30:30,159 --> 00:30:33,520
+important interactions are the
+
+808
+00:30:31,520 --> 00:30:35,440
+photoelectric effect and Compton
+
+809
+00:30:33,520 --> 00:30:37,840
+scattering. The photoelectric effect
+
+810
+00:30:35,440 --> 00:30:39,760
+gives rise to absorption contrast while
+
+811
+00:30:37,840 --> 00:30:41,919
+Compton scattering dominates at higher
+
+812
+00:30:39,760 --> 00:30:44,720
+energies and contributes to image noise
+
+813
+00:30:41,919 --> 00:30:47,919
+and radiation dose.
+
+814
+00:30:44,720 --> 00:30:49,919
+So to summarize, no interaction, total
+
+815
+00:30:47,919 --> 00:30:51,760
+absorption, coherent scattering, and
+
+816
+00:30:49,919 --> 00:30:53,600
+Compton scattering. These four
+
+817
+00:30:51,760 --> 00:30:57,640
+categories describe the essential ways
+
+818
+00:30:53,600 --> 00:30:57,640
+X-rays interact with tissue.
+
+819
+00:30:59,120 --> 00:31:03,200
+Here is a summary of the different types
+
+820
+00:31:00,960 --> 00:31:04,960
+of X-ray interactions with matter. For
+
+821
+00:31:03,200 --> 00:31:07,440
+medical X-rays, the two dominant
+
+822
+00:31:04,960 --> 00:31:09,840
+processes are the photoelectric effect
+
+823
+00:31:07,440 --> 00:31:11,760
+and Compton scattering.
+
+824
+00:31:09,840 --> 00:31:14,320
+Scattering can be divided into Compton
+
+825
+00:31:11,760 --> 00:31:15,919
+and coherent or RA scattering. But in
+
+826
+00:31:14,320 --> 00:31:17,919
+practice, coherent scattering
+
+827
+00:31:15,919 --> 00:31:19,679
+contributes only a very small portion
+
+828
+00:31:17,919 --> 00:31:22,720
+and is usually not considered important
+
+829
+00:31:19,679 --> 00:31:25,039
+for medical imaging.
+
+830
+00:31:22,720 --> 00:31:26,960
+Now in clinical X-ray systems, we
+
+831
+00:31:25,039 --> 00:31:31,200
+typically operate with tube voltages up
+
+832
+00:31:26,960 --> 00:31:33,840
+to about 140 kovts peak or KVP.
+
+833
+00:31:31,200 --> 00:31:36,159
+When the energy is below about 80 kVP,
+
+834
+00:31:33,840 --> 00:31:39,600
+the photoelectric effect is the dominant
+
+835
+00:31:36,159 --> 00:31:41,519
+interaction. Above 80 kVp, Compton
+
+836
+00:31:39,600 --> 00:31:43,919
+scattering becomes more significant.
+
+837
+00:31:41,519 --> 00:31:45,360
+This is why in diagnostic imaging, we
+
+838
+00:31:43,919 --> 00:31:48,240
+see a transition in the relative
+
+839
+00:31:45,360 --> 00:31:50,000
+contributions of these two effects.
+
+840
+00:31:48,240 --> 00:31:51,840
+Traditionally, scattering was treated
+
+841
+00:31:50,000 --> 00:31:54,159
+mainly as a nuisance because it reduces
+
+842
+00:31:51,840 --> 00:31:55,840
+image contrast. But modern research
+
+843
+00:31:54,159 --> 00:31:57,919
+shows that small angle Compton
+
+844
+00:31:55,840 --> 00:31:59,600
+scattering actually carries valuable
+
+845
+00:31:57,919 --> 00:32:01,360
+information.
+
+846
+00:31:59,600 --> 00:32:03,200
+In fact, subtle differences in
+
+847
+00:32:01,360 --> 00:32:05,679
+scattering patterns may help distinguish
+
+848
+00:32:03,200 --> 00:32:07,760
+benign from malignant tumors. However,
+
+849
+00:32:05,679 --> 00:32:10,000
+detecting and analyzing this information
+
+850
+00:32:07,760 --> 00:32:12,720
+requires specialized techniques which go
+
+851
+00:32:10,000 --> 00:32:14,480
+beyond the scope of our class. In
+
+852
+00:32:12,720 --> 00:32:16,799
+addition to these, there are two higher
+
+853
+00:32:14,480 --> 00:32:19,200
+energy interactions, pair production and
+
+854
+00:32:16,799 --> 00:32:21,120
+photo disintegration. These processes
+
+855
+00:32:19,200 --> 00:32:23,200
+become relevant only when the photon
+
+856
+00:32:21,120 --> 00:32:25,600
+energy is very high, well above the
+
+857
+00:32:23,200 --> 00:32:27,679
+diagnostic range.
+
+858
+00:32:25,600 --> 00:32:29,840
+For example, in radiation therapy where
+
+859
+00:32:27,679 --> 00:32:31,919
+high energy X-rays or proton beams are
+
+860
+00:32:29,840 --> 00:32:33,600
+directed at tumors, pair production and
+
+861
+00:32:31,919 --> 00:32:36,080
+photo disintegration play important
+
+862
+00:32:33,600 --> 00:32:38,559
+roles. In that context, the goal is not
+
+863
+00:32:36,080 --> 00:32:42,000
+diagnosis but treatment. Essentially
+
+864
+00:32:38,559 --> 00:32:45,120
+using radiation to destroy tumor tissue.
+
+865
+00:32:42,000 --> 00:32:47,279
+So to summarize in diagnostic radiology
+
+866
+00:32:45,120 --> 00:32:49,600
+photoelectric absorption and compant
+
+867
+00:32:47,279 --> 00:32:51,360
+scattering are the key effects for
+
+868
+00:32:49,600 --> 00:32:53,600
+therapeutic applications at higher
+
+869
+00:32:51,360 --> 00:32:58,120
+energies pair production and photodice
+
+870
+00:32:53,600 --> 00:32:58,120
+integration also come into play.
+
+871
+00:32:59,679 --> 00:33:04,080
+Compton scattering has major
+
+872
+00:33:01,120 --> 00:33:06,399
+implications for radiation protection.
+
+873
+00:33:04,080 --> 00:33:08,240
+When we use X-rays on a patient most of
+
+874
+00:33:06,399 --> 00:33:10,320
+the useful photons travel through the
+
+875
+00:33:08,240 --> 00:33:12,480
+body and reach the detector to form the
+
+876
+00:33:10,320 --> 00:33:14,720
+image. But many photons do not follow
+
+877
+00:33:12,480 --> 00:33:17,120
+this direct path. Instead, they are
+
+878
+00:33:14,720 --> 00:33:18,960
+scattered in different directions. These
+
+879
+00:33:17,120 --> 00:33:20,960
+scattered photons, especially those from
+
+880
+00:33:18,960 --> 00:33:22,640
+Compton scattering, can expose people
+
+881
+00:33:20,960 --> 00:33:24,559
+nearby.
+
+882
+00:33:22,640 --> 00:33:26,640
+That is why radiation protection is so
+
+883
+00:33:24,559 --> 00:33:29,120
+critical. For patients, the exposure is
+
+884
+00:33:26,640 --> 00:33:30,640
+usually occasional, maybe once a year or
+
+885
+00:33:29,120 --> 00:33:32,640
+only when necessary. But for
+
+886
+00:33:30,640 --> 00:33:34,960
+radiologists and technicians working in
+
+887
+00:33:32,640 --> 00:33:36,720
+X-ray rooms every day, the exposure
+
+888
+00:33:34,960 --> 00:33:39,519
+could accumulate over time if they are
+
+889
+00:33:36,720 --> 00:33:41,679
+not protected.
+
+890
+00:33:39,519 --> 00:33:43,760
+To minimize this risk, we use lead
+
+891
+00:33:41,679 --> 00:33:46,240
+shielding such as lead glass windows and
+
+892
+00:33:43,760 --> 00:33:48,320
+lead aprons. These barriers absorb
+
+893
+00:33:46,240 --> 00:33:50,960
+scattered radiation and protect staff
+
+894
+00:33:48,320 --> 00:33:52,880
+from unnecessary dose. Without them,
+
+895
+00:33:50,960 --> 00:33:54,640
+repeated daily exposure could become
+
+896
+00:33:52,880 --> 00:33:56,640
+dangerous.
+
+897
+00:33:54,640 --> 00:33:58,640
+So, one of the key lessons is that while
+
+898
+00:33:56,640 --> 00:34:01,200
+X-rays are extremely valuable for
+
+899
+00:33:58,640 --> 00:34:03,120
+diagnosis, we must always use proper
+
+900
+00:34:01,200 --> 00:34:06,519
+shielding and safety measures to protect
+
+901
+00:34:03,120 --> 00:34:06,519
+healthcare workers.
+
+902
+00:34:07,840 --> 00:34:11,440
+As X-rays pass through biological
+
+903
+00:34:09,839 --> 00:34:13,599
+tissue, they are progressively
+
+904
+00:34:11,440 --> 00:34:16,159
+attenuated. This is a cumulative
+
+905
+00:34:13,599 --> 00:34:19,679
+process. The number of photons decreases
+
+906
+00:34:16,159 --> 00:34:21,119
+rapidly as the beam penetrates deeper.
+
+907
+00:34:19,679 --> 00:34:23,359
+You can think of the tissue as being
+
+908
+00:34:21,119 --> 00:34:24,800
+made up of thin layers. Each layer
+
+909
+00:34:23,359 --> 00:34:26,879
+absorbs a certain fraction of the
+
+910
+00:34:24,800 --> 00:34:28,800
+incoming photons. A useful way to
+
+911
+00:34:26,879 --> 00:34:31,679
+describe this is the half value layer
+
+912
+00:34:28,800 --> 00:34:33,839
+concept. Suppose you start with 1,000
+
+913
+00:34:31,679 --> 00:34:35,280
+X-ray photons.
+
+914
+00:34:33,839 --> 00:34:37,679
+After passing through the first half
+
+915
+00:34:35,280 --> 00:34:40,480
+value layer, about half remain, 500
+
+916
+00:34:37,679 --> 00:34:42,480
+photons. After a second half value layer
+
+917
+00:34:40,480 --> 00:34:45,839
+of the same thickness, the number drops
+
+918
+00:34:42,480 --> 00:34:47,679
+to about 250. After a few layers, only a
+
+919
+00:34:45,839 --> 00:34:50,639
+small fraction of the original photon
+
+920
+00:34:47,679 --> 00:34:52,720
+survive.
+
+921
+00:34:50,639 --> 00:34:54,720
+So attenuation is really a matter of
+
+922
+00:34:52,720 --> 00:34:56,800
+probability. Each layer has the same
+
+923
+00:34:54,720 --> 00:34:58,640
+chance of absorbing a photon and the
+
+924
+00:34:56,800 --> 00:35:00,079
+result is an exponential reduction in
+
+925
+00:34:58,640 --> 00:35:01,680
+the beam.
+
+926
+00:35:00,079 --> 00:35:04,079
+It's also worth noting that X-ray
+
+927
+00:35:01,680 --> 00:35:06,480
+imaging is not very efficient overall.
+
+928
+00:35:04,079 --> 00:35:08,800
+In the tube, only about 1% of the
+
+929
+00:35:06,480 --> 00:35:12,800
+electron energy is converted into usable
+
+930
+00:35:08,800 --> 00:35:15,200
+X-ray photons. The rest is lost as heat.
+
+931
+00:35:12,800 --> 00:35:17,359
+Then after filtration and attenuation
+
+932
+00:35:15,200 --> 00:35:19,280
+inside the patient, only a small
+
+933
+00:35:17,359 --> 00:35:21,760
+percentage of the original photons
+
+934
+00:35:19,280 --> 00:35:23,760
+actually reach the detector.
+
+935
+00:35:21,760 --> 00:35:25,440
+That's why we need two things. smart
+
+936
+00:35:23,760 --> 00:35:27,119
+algorithms to make the most of the
+
+937
+00:35:25,440 --> 00:35:29,200
+limited data and highly sensitive
+
+938
+00:35:27,119 --> 00:35:32,079
+detectors to record even the relatively
+
+939
+00:35:29,200 --> 00:35:34,480
+small number of photons that emerge.
+
+940
+00:35:32,079 --> 00:35:36,480
+So now you have the physical intuition.
+
+941
+00:35:34,480 --> 00:35:38,960
+Next we will introduce the mathematical
+
+942
+00:35:36,480 --> 00:35:40,960
+description of attenuation Beer's law
+
+943
+00:35:38,960 --> 00:35:44,599
+which provides a precise model for this
+
+944
+00:35:40,960 --> 00:35:44,599
+exponential process.
+
+945
+00:35:46,240 --> 00:35:52,320
+Now let's describe X-ray attenuation in
+
+946
+00:35:48,720 --> 00:35:54,800
+a more quantitative way. Imagine a beam
+
+947
+00:35:52,320 --> 00:35:57,040
+of X-ray photons entering a small region
+
+948
+00:35:54,800 --> 00:35:59,839
+of tissue. You can think of this region
+
+949
+00:35:57,040 --> 00:36:02,000
+as a pixel, a tiny picture element made
+
+950
+00:35:59,839 --> 00:36:04,320
+of uniform material. The number of
+
+951
+00:36:02,000 --> 00:36:06,480
+photons that enter is what we call the
+
+952
+00:36:04,320 --> 00:36:08,160
+input intensity. The number that comes
+
+953
+00:36:06,480 --> 00:36:09,760
+out on the other side is the output
+
+954
+00:36:08,160 --> 00:36:11,599
+intensity.
+
+955
+00:36:09,760 --> 00:36:14,079
+The relationship between the input and
+
+956
+00:36:11,599 --> 00:36:16,079
+output depends on two key factors.
+
+957
+00:36:14,079 --> 00:36:17,760
+First, the property of the material
+
+958
+00:36:16,079 --> 00:36:20,000
+which we describe using the linear
+
+959
+00:36:17,760 --> 00:36:22,560
+attenuation coefficient written as the
+
+960
+00:36:20,000 --> 00:36:25,760
+Greek letter mu. Second, the thickness
+
+961
+00:36:22,560 --> 00:36:27,440
+of the material which we call delta x.
+
+962
+00:36:25,760 --> 00:36:29,839
+Putting this together, the output
+
+963
+00:36:27,440 --> 00:36:32,240
+intensity equals the input intensity
+
+964
+00:36:29,839 --> 00:36:34,480
+multiplied by an exponential decay term.
+
+965
+00:36:32,240 --> 00:36:36,079
+In plain language, this means that as
+
+966
+00:36:34,480 --> 00:36:38,560
+the x-ray beam passes through the
+
+967
+00:36:36,079 --> 00:36:42,079
+tissue, the number of photons drops off
+
+968
+00:36:38,560 --> 00:36:44,240
+exponentially with thickness.
+
+969
+00:36:42,079 --> 00:36:46,000
+This exponential law comes directly from
+
+970
+00:36:44,240 --> 00:36:48,320
+solving a first order differential
+
+971
+00:36:46,000 --> 00:36:50,800
+equation. The idea is simple. If you
+
+972
+00:36:48,320 --> 00:36:53,040
+look at a very thin layer, only a small
+
+973
+00:36:50,800 --> 00:36:55,280
+fraction of the photons are absorbed
+
+974
+00:36:53,040 --> 00:36:56,960
+proportional to the thickness. Stack up
+
+975
+00:36:55,280 --> 00:36:59,760
+many thin layers and the result
+
+976
+00:36:56,960 --> 00:37:02,160
+naturally becomes exponential.
+
+977
+00:36:59,760 --> 00:37:04,800
+In fact, this same mathematical behavior
+
+978
+00:37:02,160 --> 00:37:08,079
+appears in many other fields. Chemical
+
+979
+00:37:04,800 --> 00:37:10,720
+reactions, radioactive decay, and even
+
+980
+00:37:08,079 --> 00:37:12,800
+population growth or decline.
+
+981
+00:37:10,720 --> 00:37:14,960
+Now in the human body the situation is
+
+982
+00:37:12,800 --> 00:37:16,800
+more complex because the X-ray beam
+
+983
+00:37:14,960 --> 00:37:18,960
+usually passes through several tissues
+
+984
+00:37:16,800 --> 00:37:20,800
+with different properties. In that case
+
+985
+00:37:18,960 --> 00:37:22,800
+the output is determined by the combined
+
+986
+00:37:20,800 --> 00:37:26,160
+attenuation from all of them along the
+
+987
+00:37:22,800 --> 00:37:28,720
+path. This exponential attenuation law
+
+988
+00:37:26,160 --> 00:37:30,960
+is fundamental to X-ray imaging. It is
+
+989
+00:37:28,720 --> 00:37:33,839
+the mathematical backbone of both
+
+990
+00:37:30,960 --> 00:37:36,160
+radiography and CT because it precisely
+
+991
+00:37:33,839 --> 00:37:40,200
+tells us how X-ray photons are reduced
+
+992
+00:37:36,160 --> 00:37:40,200
+as they traverse the body.
+
+993
+00:37:41,359 --> 00:37:45,040
+Now let's extend the exponential
+
+994
+00:37:43,040 --> 00:37:46,880
+attenuation model to the case where the
+
+995
+00:37:45,040 --> 00:37:49,520
+X-ray beam passes through multiple
+
+996
+00:37:46,880 --> 00:37:51,599
+elements along its path.
+
+997
+00:37:49,520 --> 00:37:53,760
+Suppose the beam is divided into many
+
+998
+00:37:51,599 --> 00:37:55,680
+small steps. For each step, there is a
+
+999
+00:37:53,760 --> 00:37:58,000
+local attenuation coefficient and a
+
+1000
+00:37:55,680 --> 00:38:00,720
+thickness. When we add up all of these
+
+1001
+00:37:58,000 --> 00:38:02,640
+contributions, we arrive at a cumulative
+
+1002
+00:38:00,720 --> 00:38:04,800
+relationship.
+
+1003
+00:38:02,640 --> 00:38:07,119
+This summation has a special name. We
+
+1004
+00:38:04,800 --> 00:38:09,280
+call it array sum. The term simply means
+
+1005
+00:38:07,119 --> 00:38:11,359
+we are summing up contributions along a
+
+1006
+00:38:09,280 --> 00:38:13,440
+single ray of X-rays as it travels
+
+1007
+00:38:11,359 --> 00:38:15,599
+through the object.
+
+1008
+00:38:13,440 --> 00:38:17,599
+Now notice what is known and what is
+
+1009
+00:38:15,599 --> 00:38:19,520
+unknown. The thickness of each element
+
+1010
+00:38:17,599 --> 00:38:21,200
+is something we set in the model. What
+
+1011
+00:38:19,520 --> 00:38:23,520
+we don't know are the attenuation
+
+1012
+00:38:21,200 --> 00:38:26,400
+coefficients themselves. Those are the
+
+1013
+00:38:23,520 --> 00:38:28,560
+values we are trying to determine.
+
+1014
+00:38:26,400 --> 00:38:31,040
+So what we really have is a linear
+
+1015
+00:38:28,560 --> 00:38:34,160
+combination of unknowns. That's why this
+
+1016
+00:38:31,040 --> 00:38:35,839
+is described as a linear system. On the
+
+1017
+00:38:34,160 --> 00:38:38,240
+other side of the equation, you see a
+
+1018
+00:38:35,839 --> 00:38:40,240
+logarithm. Taking the natural logarithm
+
+1019
+00:38:38,240 --> 00:38:42,880
+is just a mathematical way of undoing
+
+1020
+00:38:40,240 --> 00:38:44,880
+the exponential law we started with.
+
+1021
+00:38:42,880 --> 00:38:47,280
+This step allows us to link the unknown
+
+1022
+00:38:44,880 --> 00:38:50,640
+attenuation values inside the body with
+
+1023
+00:38:47,280 --> 00:38:52,640
+quantities we can actually measure.
+
+1024
+00:38:50,640 --> 00:38:54,720
+Think about it. The input intensity is
+
+1025
+00:38:52,640 --> 00:38:57,280
+known because we generate and calibrate
+
+1026
+00:38:54,720 --> 00:38:59,599
+the X-ray beam. The output intensity is
+
+1027
+00:38:57,280 --> 00:39:01,440
+measured directly by the detector. The
+
+1028
+00:38:59,599 --> 00:39:03,680
+ratio of the two gives us a measurable
+
+1029
+00:39:01,440 --> 00:39:05,520
+value. and taking the logarithm turns it
+
+1030
+00:39:03,680 --> 00:39:08,560
+into the sum of attenuation along the
+
+1031
+00:39:05,520 --> 00:39:11,040
+path. If we make the elements smaller
+
+1032
+00:39:08,560 --> 00:39:13,280
+and smaller, the discrete sum becomes a
+
+1033
+00:39:11,040 --> 00:39:15,359
+continuous integral. In other words, in
+
+1034
+00:39:13,280 --> 00:39:17,599
+the limit, what we measure is a line
+
+1035
+00:39:15,359 --> 00:39:20,160
+integral of the attenuation coefficient
+
+1036
+00:39:17,599 --> 00:39:22,720
+along the path of the X-ray.
+
+1037
+00:39:20,160 --> 00:39:24,320
+This is the key principle with X-rays.
+
+1038
+00:39:22,720 --> 00:39:26,160
+We do not directly measure the
+
+1039
+00:39:24,320 --> 00:39:28,880
+attenuation at each point inside the
+
+1040
+00:39:26,160 --> 00:39:30,800
+body. Instead, we measure ray sums,
+
+1041
+00:39:28,880 --> 00:39:32,800
+overlapping signals that represent line
+
+1042
+00:39:30,800 --> 00:39:34,560
+integrals. By collecting many such
+
+1043
+00:39:32,800 --> 00:39:36,240
+measurements from different angles, we
+
+1044
+00:39:34,560 --> 00:39:37,839
+can mathematically reconstruct the
+
+1045
+00:39:36,240 --> 00:39:39,839
+image.
+
+1046
+00:39:37,839 --> 00:39:42,000
+So, this linear equation forms the
+
+1047
+00:39:39,839 --> 00:39:44,240
+bridge between the unknown interior of
+
+1048
+00:39:42,000 --> 00:39:47,240
+the body and the measurable data at the
+
+1049
+00:39:44,240 --> 00:39:47,240
+detector.
+
+1050
+00:39:48,640 --> 00:39:53,680
+So far, we've discussed how X-rays are
+
+1051
+00:39:50,800 --> 00:39:55,359
+attenuated as they pass through tissue.
+
+1052
+00:39:53,680 --> 00:39:57,839
+Now let's see how this attenuation
+
+1053
+00:39:55,359 --> 00:39:59,760
+creates contrast in an image. Imagine a
+
+1054
+00:39:57,839 --> 00:40:01,680
+piece of tissue that is mostly uniform
+
+1055
+00:39:59,760 --> 00:40:03,839
+but with a small bump or nodule inside
+
+1056
+00:40:01,680 --> 00:40:07,440
+it. The X-ray beam passing through the
+
+1057
+00:40:03,839 --> 00:40:09,520
+normal tissue travels a distance x. Its
+
+1058
+00:40:07,440 --> 00:40:14,960
+signal is attenuated according to the
+
+1059
+00:40:09,520 --> 00:40:16,720
+exponential law. A= n e ^ of minus mx.
+
+1060
+00:40:14,960 --> 00:40:18,880
+Now consider the ray that passes through
+
+1061
+00:40:16,720 --> 00:40:21,520
+the nodule. This ray travels an
+
+1062
+00:40:18,880 --> 00:40:25,440
+additional thickness z. Its output is
+
+1063
+00:40:21,520 --> 00:40:29,119
+therefore b= n e to the power of minus m
+
+1064
+00:40:25,440 --> 00:40:30,800
+x + z dot. The contrast is defined as
+
+1065
+00:40:29,119 --> 00:40:32,400
+the difference between the normal signal
+
+1066
+00:40:30,800 --> 00:40:34,320
+and the signal through the nodule
+
+1067
+00:40:32,400 --> 00:40:38,160
+divided by the normal signal. Doing the
+
+1068
+00:40:34,320 --> 00:40:40,240
+math we find contrast equals 1 - e ^ of
+
+1069
+00:40:38,160 --> 00:40:42,560
+minus mz.
+
+1070
+00:40:40,240 --> 00:40:45,839
+Notice that the contrast depends only on
+
+1071
+00:40:42,560 --> 00:40:49,520
+m the attenuation coefficient and z the
+
+1072
+00:40:45,839 --> 00:40:52,640
+extra thickness of the nodule.
+
+1073
+00:40:49,520 --> 00:40:55,280
+For example, if the nodule is 1 cm thick
+
+1074
+00:40:52,640 --> 00:40:58,319
+and m equals 1 per cime, then the
+
+1075
+00:40:55,280 --> 00:41:01,359
+contrast comes out to about 63%. But in
+
+1076
+00:40:58,319 --> 00:41:04,720
+real soft tissue, M is much smaller,
+
+1077
+00:41:01,359 --> 00:41:07,119
+closer to 0.2 per cm. In that case, the
+
+1078
+00:41:04,720 --> 00:41:09,200
+contrast becomes significantly lower,
+
+1079
+00:41:07,119 --> 00:41:10,960
+making small nodules much harder to
+
+1080
+00:41:09,200 --> 00:41:12,720
+detect.
+
+1081
+00:41:10,960 --> 00:41:14,880
+This simple example shows the mechanism
+
+1082
+00:41:12,720 --> 00:41:17,040
+of attenuation contrast. The difference
+
+1083
+00:41:14,880 --> 00:41:19,119
+in signal arises because one path is
+
+1084
+00:41:17,040 --> 00:41:22,400
+slightly longer or passes through tissue
+
+1085
+00:41:19,119 --> 00:41:24,800
+with different attenuation properties.
+
+1086
+00:41:22,400 --> 00:41:26,880
+But in soft tissues where M values are
+
+1087
+00:41:24,800 --> 00:41:28,880
+close together, contrast can be very
+
+1088
+00:41:26,880 --> 00:41:31,040
+limited. And that is why techniques like
+
+1089
+00:41:28,880 --> 00:41:34,920
+contrast agents or advanced imaging
+
+1090
+00:41:31,040 --> 00:41:34,920
+methods are often necessary.
+
+1091
+00:41:36,560 --> 00:41:39,760
+Now we can summarize the X-ray
+
+1092
+00:41:38,079 --> 00:41:41,760
+measurement model, which is one of the
+
+1093
+00:41:39,760 --> 00:41:43,359
+most important concepts. That's why I've
+
+1094
+00:41:41,760 --> 00:41:45,119
+marked this slide with the largest red
+
+1095
+00:41:43,359 --> 00:41:46,720
+diamond.
+
+1096
+00:41:45,119 --> 00:41:49,359
+Let's begin with the monochromatic
+
+1097
+00:41:46,720 --> 00:41:51,359
+model. Here we assume the X-ray beam
+
+1098
+00:41:49,359 --> 00:41:53,520
+consists of photons all having the same
+
+1099
+00:41:51,359 --> 00:41:56,240
+energy. That's an idealization, but it
+
+1100
+00:41:53,520 --> 00:41:58,960
+helps us understand the basics.
+
+1101
+00:41:56,240 --> 00:42:01,920
+In this case, the incoming intensity I
+
+1102
+00:41:58,960 --> 00:42:05,359
+knenuated according to Beer's law. The
+
+1103
+00:42:01,920 --> 00:42:07,440
+output, which we call IG, is simply I *
+
+1104
+00:42:05,359 --> 00:42:09,599
+E the power of minus the line integral
+
+1105
+00:42:07,440 --> 00:42:11,359
+of M along the path. This means the
+
+1106
+00:42:09,599 --> 00:42:13,359
+measured signal is directly linked to
+
+1107
+00:42:11,359 --> 00:42:16,240
+the cumulative attenuation along the
+
+1108
+00:42:13,359 --> 00:42:18,319
+ray. If you know the input I knot and
+
+1109
+00:42:16,240 --> 00:42:20,000
+measure the output IG, then by taking
+
+1110
+00:42:18,319 --> 00:42:22,480
+the logarithm, you recover the line
+
+1111
+00:42:20,000 --> 00:42:24,319
+integral of the attenuation coefficient.
+
+1112
+00:42:22,480 --> 00:42:28,000
+That's the foundation of reconstruction
+
+1113
+00:42:24,319 --> 00:42:30,160
+in X-ray imaging and CT. But in reality,
+
+1114
+00:42:28,000 --> 00:42:32,319
+things are more complicated. An actual
+
+1115
+00:42:30,160 --> 00:42:34,640
+X-ray tube does not produce a single
+
+1116
+00:42:32,319 --> 00:42:37,119
+energy. It generates a spectrum of
+
+1117
+00:42:34,640 --> 00:42:39,599
+energies. The detector in most systems
+
+1118
+00:42:37,119 --> 00:42:41,920
+today does not separate them. Instead,
+
+1119
+00:42:39,599 --> 00:42:45,520
+it integrates the total energy deposited
+
+1120
+00:42:41,920 --> 00:42:47,280
+whether from soft X-rays or hard X-rays.
+
+1121
+00:42:45,520 --> 00:42:49,359
+That leads us to the poly chromatic
+
+1122
+00:42:47,280 --> 00:42:52,240
+model. In this case, we must integrate
+
+1123
+00:42:49,359 --> 00:42:54,480
+over the entire energy spectrum.
+
+1124
+00:42:52,240 --> 00:42:56,880
+For each energy, attenuation follows the
+
+1125
+00:42:54,480 --> 00:42:59,200
+exponential law, but the detector sums
+
+1126
+00:42:56,880 --> 00:43:01,200
+over all energies together. The result
+
+1127
+00:42:59,200 --> 00:43:03,280
+is still a single number, a grayscale
+
+1128
+00:43:01,200 --> 00:43:06,079
+intensity, but it is a weighted sum
+
+1129
+00:43:03,280 --> 00:43:08,400
+across the energy distribution.
+
+1130
+00:43:06,079 --> 00:43:10,560
+So the monochromatic model is simple and
+
+1131
+00:43:08,400 --> 00:43:12,400
+idealized, while the poly chromatic
+
+1132
+00:43:10,560 --> 00:43:15,119
+model describes the true measurement
+
+1133
+00:43:12,400 --> 00:43:17,119
+process in clinical CT scanners. And
+
+1134
+00:43:15,119 --> 00:43:19,119
+this distinction is very important. It
+
+1135
+00:43:17,119 --> 00:43:23,240
+explains why certain artifacts like beam
+
+1136
+00:43:19,119 --> 00:43:23,240
+hardening occur in practice.
+
+1137
+00:43:24,560 --> 00:43:28,800
+A very important concept in X-ray
+
+1138
+00:43:26,560 --> 00:43:31,200
+imaging is the K edge of the linear
+
+1139
+00:43:28,800 --> 00:43:33,119
+attenuation coefficient.
+
+1140
+00:43:31,200 --> 00:43:35,200
+Now remember msir attenuation
+
+1141
+00:43:33,119 --> 00:43:37,280
+coefficient is not a single fixed
+
+1142
+00:43:35,200 --> 00:43:39,839
+number. It depends strongly on the
+
+1143
+00:43:37,280 --> 00:43:42,319
+energy of the x-rays. In general as
+
+1144
+00:43:39,839 --> 00:43:44,560
+energy increases x-rays penetrate more
+
+1145
+00:43:42,319 --> 00:43:47,839
+easily. So the attenuation coefficient
+
+1146
+00:43:44,560 --> 00:43:49,520
+gradually decreases.
+
+1147
+00:43:47,839 --> 00:43:51,520
+But at certain energies something
+
+1148
+00:43:49,520 --> 00:43:53,200
+special happens. When the X-ray energy
+
+1149
+00:43:51,520 --> 00:43:55,680
+becomes high enough to knock out inner
+
+1150
+00:43:53,200 --> 00:43:57,599
+shell electrons, specifically Kshell
+
+1151
+00:43:55,680 --> 00:44:00,000
+electrons, the attenuation suddenly
+
+1152
+00:43:57,599 --> 00:44:02,000
+increases. This produces a sharp jump in
+
+1153
+00:44:00,000 --> 00:44:05,680
+the attenuation curve known as the K
+
+1154
+00:44:02,000 --> 00:44:07,839
+edge. This feature is element specific.
+
+1155
+00:44:05,680 --> 00:44:10,079
+Each element has its own characteristic
+
+1156
+00:44:07,839 --> 00:44:13,040
+K edge energy. For example, in gold, the
+
+1157
+00:44:10,079 --> 00:44:15,119
+K edge occurs at about 80.7 KV. That
+
+1158
+00:44:13,040 --> 00:44:17,520
+means if the X-ray photon energy just
+
+1159
+00:44:15,119 --> 00:44:19,119
+crosses this threshold, gold absorbs
+
+1160
+00:44:17,520 --> 00:44:21,680
+much more strongly due to the
+
+1161
+00:44:19,119 --> 00:44:23,440
+photoelectric effect.
+
+1162
+00:44:21,680 --> 00:44:25,680
+This is very powerful because it allows
+
+1163
+00:44:23,440 --> 00:44:27,839
+us to do chemically specific imaging. If
+
+1164
+00:44:25,680 --> 00:44:30,240
+we use detectors that can resolve X-ray
+
+1165
+00:44:27,839 --> 00:44:32,240
+energy, we can identify where particular
+
+1166
+00:44:30,240 --> 00:44:34,800
+elements are present based on their K
+
+1167
+00:44:32,240 --> 00:44:36,560
+edge signatures. This opens the door to
+
+1168
+00:44:34,800 --> 00:44:39,359
+material decomposition and even
+
+1169
+00:44:36,560 --> 00:44:42,000
+molecular level imaging. In current
+
+1170
+00:44:39,359 --> 00:44:44,480
+hospital CT systems, detectors typically
+
+1171
+00:44:42,000 --> 00:44:46,400
+integrate over all energies. That's like
+
+1172
+00:44:44,480 --> 00:44:48,800
+measuring the total area under the
+
+1173
+00:44:46,400 --> 00:44:50,880
+attenuation curve. You get a grayscale
+
+1174
+00:44:48,800 --> 00:44:52,720
+value, but not the details of the energy
+
+1175
+00:44:50,880 --> 00:44:54,960
+dependence.
+
+1176
+00:44:52,720 --> 00:44:56,880
+However, with modern energy sensitive
+
+1177
+00:44:54,960 --> 00:44:58,880
+detectors, we can directly measure the
+
+1178
+00:44:56,880 --> 00:45:00,160
+shape of the curve. That means we can
+
+1179
+00:44:58,880 --> 00:45:02,319
+distinguish materials that would
+
+1180
+00:45:00,160 --> 00:45:04,480
+otherwise look similar in a conventional
+
+1181
+00:45:02,319 --> 00:45:06,560
+CT scan.
+
+1182
+00:45:04,480 --> 00:45:09,520
+This concept is especially important for
+
+1183
+00:45:06,560 --> 00:45:12,000
+contrast agents. Elements like iodine,
+
+1184
+00:45:09,520 --> 00:45:15,200
+gatalinium, and gold nanop particles all
+
+1185
+00:45:12,000 --> 00:45:17,280
+have distinct K edges. With energy
+
+1186
+00:45:15,200 --> 00:45:19,760
+resolved imaging, we can separate their
+
+1187
+00:45:17,280 --> 00:45:21,280
+signals, perform quantitative mapping,
+
+1188
+00:45:19,760 --> 00:45:23,520
+and even design targeted
+
+1189
+00:45:21,280 --> 00:45:26,240
+nanoparticlebased contrast agents for
+
+1190
+00:45:23,520 --> 00:45:28,079
+advanced molecular imaging.
+
+1191
+00:45:26,240 --> 00:45:30,160
+So the K edge is not just a physics
+
+1192
+00:45:28,079 --> 00:45:32,480
+detail, it's the foundation for the
+
+1193
+00:45:30,160 --> 00:45:35,960
+future of spectral CT and molecular
+
+1194
+00:45:32,480 --> 00:45:35,960
+X-ray imaging.
+
+1195
+00:45:37,280 --> 00:45:41,440
+Now let's look at how contrast agents
+
+1196
+00:45:39,280 --> 00:45:43,359
+take advantage of the K edge effect we
+
+1197
+00:45:41,440 --> 00:45:45,839
+just discussed.
+
+1198
+00:45:43,359 --> 00:45:48,400
+On this plot we see the mass attenuation
+
+1199
+00:45:45,839 --> 00:45:51,440
+curves for different substances. Lipid,
+
+1200
+00:45:48,400 --> 00:45:54,400
+water, bone, iodine, gatalinium, and
+
+1201
+00:45:51,440 --> 00:45:56,160
+gold. Notice that lipid, water, and bone
+
+1202
+00:45:54,400 --> 00:45:58,480
+have smooth curves that gradually
+
+1203
+00:45:56,160 --> 00:46:00,400
+decrease as energy increases. Without
+
+1204
+00:45:58,480 --> 00:46:02,640
+extra information, their signals can
+
+1205
+00:46:00,400 --> 00:46:06,079
+overlap, and it's very difficult to tell
+
+1206
+00:46:02,640 --> 00:46:08,640
+them apart. But look closely at iodine,
+
+1207
+00:46:06,079 --> 00:46:10,400
+gatalinium, and gold. Each has a sharp
+
+1208
+00:46:08,640 --> 00:46:13,040
+jump in attenuation at its
+
+1209
+00:46:10,400 --> 00:46:15,680
+characteristic kage energy. Iodine has
+
+1210
+00:46:13,040 --> 00:46:18,400
+its edge at about 33 kev, gatalinium
+
+1211
+00:46:15,680 --> 00:46:20,640
+around 50 kev, and gold at about 80 kev.
+
+1212
+00:46:18,400 --> 00:46:23,200
+These discontinuities are like chemical
+
+1213
+00:46:20,640 --> 00:46:25,440
+fingerprints.
+
+1214
+00:46:23,200 --> 00:46:27,280
+If your detector simply integrates all
+
+1215
+00:46:25,440 --> 00:46:28,960
+energies, you cannot distinguish whether
+
+1216
+00:46:27,280 --> 00:46:31,760
+the bright signal you see comes from
+
+1217
+00:46:28,960 --> 00:46:33,920
+iodine or from gold or even a mixture of
+
+1218
+00:46:31,760 --> 00:46:35,680
+bone and water.
+
+1219
+00:46:33,920 --> 00:46:38,079
+But if you can measure the attenuation
+
+1220
+00:46:35,680 --> 00:46:40,079
+as a function of energy, in other words,
+
+1221
+00:46:38,079 --> 00:46:42,079
+if you can see the shape of this curve,
+
+1222
+00:46:40,079 --> 00:46:44,079
+then you can identify which element is
+
+1223
+00:46:42,079 --> 00:46:46,720
+responsible.
+
+1224
+00:46:44,079 --> 00:46:49,040
+This is the basis of KGE imaging. By
+
+1225
+00:46:46,720 --> 00:46:50,640
+designing energy sensitive detectors, we
+
+1226
+00:46:49,040 --> 00:46:52,800
+can separate the signals of different
+
+1227
+00:46:50,640 --> 00:46:55,119
+contrast agents.
+
+1228
+00:46:52,800 --> 00:46:58,160
+Clinically, iodine is already the most
+
+1229
+00:46:55,119 --> 00:47:00,880
+common CT contrast agent. Gatalinium
+
+1230
+00:46:58,160 --> 00:47:03,920
+which is widely used in MRI can also be
+
+1231
+00:47:00,880 --> 00:47:05,440
+detected in spectral CT and gold nano
+
+1232
+00:47:03,920 --> 00:47:07,040
+particles are being investigated for
+
+1233
+00:47:05,440 --> 00:47:09,119
+advanced applications including
+
+1234
+00:47:07,040 --> 00:47:11,200
+molecular imaging and drug delivery
+
+1235
+00:47:09,119 --> 00:47:13,359
+because of their strong K edge at higher
+
+1236
+00:47:11,200 --> 00:47:15,760
+energies.
+
+1237
+00:47:13,359 --> 00:47:18,720
+So the key message here is traditional
+
+1238
+00:47:15,760 --> 00:47:21,200
+CT shows only grayscale intensity, but
+
+1239
+00:47:18,720 --> 00:47:23,599
+spectral CT can unlock these curves and
+
+1240
+00:47:21,200 --> 00:47:25,680
+make imaging chemically specific. That
+
+1241
+00:47:23,599 --> 00:47:27,760
+allows us not only to see anatomy, but
+
+1242
+00:47:25,680 --> 00:47:32,520
+also to distinguish materials and track
+
+1243
+00:47:27,760 --> 00:47:32,520
+contrast agents at the molecular level.
+
+1244
+00:47:33,839 --> 00:47:38,480
+Now we come to the final part of today's
+
+1245
+00:47:35,680 --> 00:47:40,319
+lecture, the X-ray detector.
+
+1246
+00:47:38,480 --> 00:47:42,160
+In your textbook, you will see quite a
+
+1247
+00:47:40,319 --> 00:47:44,079
+bit of discussion about traditional film
+
+1248
+00:47:42,160 --> 00:47:45,839
+and early detection methods. Those are
+
+1249
+00:47:44,079 --> 00:47:47,119
+historically important and I encourage
+
+1250
+00:47:45,839 --> 00:47:48,720
+you to read them so you have general
+
+1251
+00:47:47,119 --> 00:47:51,280
+knowledge. But in practice, those
+
+1252
+00:47:48,720 --> 00:47:52,960
+methods are now outdated. What really
+
+1253
+00:47:51,280 --> 00:47:55,200
+matters for us is how X-rays are
+
+1254
+00:47:52,960 --> 00:47:56,720
+detected in modern CT scanners and what
+
+1255
+00:47:55,200 --> 00:47:59,599
+technologies are shaping the future of
+
+1256
+00:47:56,720 --> 00:48:01,760
+X-ray imaging. Modern detectors are
+
+1257
+00:47:59,599 --> 00:48:03,839
+digital. They convert incoming X-ray
+
+1258
+00:48:01,760 --> 00:48:06,160
+photons into electrical signals that can
+
+1259
+00:48:03,839 --> 00:48:08,000
+be processed by the computer. And today
+
+1260
+00:48:06,160 --> 00:48:10,960
+there are two main classes of detector
+
+1261
+00:48:08,000 --> 00:48:13,280
+technologies that you should understand.
+
+1262
+00:48:10,960 --> 00:48:15,280
+Energy integrating detectors. This is
+
+1263
+00:48:13,280 --> 00:48:17,920
+the technology used in nearly all
+
+1264
+00:48:15,280 --> 00:48:20,079
+current CT scanners. They simply collect
+
+1265
+00:48:17,920 --> 00:48:23,200
+all the incoming photons and integrate
+
+1266
+00:48:20,079 --> 00:48:25,520
+their total energy. Whether a photon has
+
+1267
+00:48:23,200 --> 00:48:27,280
+high energy or low energy, the detector
+
+1268
+00:48:25,520 --> 00:48:29,040
+just sums them up. That gives us
+
+1269
+00:48:27,280 --> 00:48:31,760
+grayscale images, the kind you are
+
+1270
+00:48:29,040 --> 00:48:33,760
+familiar with in clinical CT.
+
+1271
+00:48:31,760 --> 00:48:35,520
+A variation of this is dual energy
+
+1272
+00:48:33,760 --> 00:48:37,440
+imaging where two different energy
+
+1273
+00:48:35,520 --> 00:48:40,559
+spectra are used to give some limited
+
+1274
+00:48:37,440 --> 00:48:42,480
+energy discrimination. Dual energy CT is
+
+1275
+00:48:40,559 --> 00:48:44,160
+already widely applied. For example, to
+
+1276
+00:48:42,480 --> 00:48:45,920
+distinguish iodine contrast from
+
+1277
+00:48:44,160 --> 00:48:48,480
+calcium.
+
+1278
+00:48:45,920 --> 00:48:50,960
+Photon counting detectors. This is the
+
+1279
+00:48:48,480 --> 00:48:52,559
+emerging next generation technology.
+
+1280
+00:48:50,960 --> 00:48:54,640
+Instead of summing all energies
+
+1281
+00:48:52,559 --> 00:48:56,240
+together, photon counting detectors
+
+1282
+00:48:54,640 --> 00:48:59,440
+measure each incoming photon
+
+1283
+00:48:56,240 --> 00:49:01,200
+individually and record its energy.
+
+1284
+00:48:59,440 --> 00:49:03,119
+That means they can separate photons
+
+1285
+00:49:01,200 --> 00:49:04,800
+into different energy bins giving us
+
+1286
+00:49:03,119 --> 00:49:06,240
+spectral information. With this
+
+1287
+00:49:04,800 --> 00:49:08,559
+approach, we can do material
+
+1288
+00:49:06,240 --> 00:49:10,800
+decomposition, kage imaging and
+
+1289
+00:49:08,559 --> 00:49:13,839
+molecular level x-ray imaging which we
+
+1290
+00:49:10,800 --> 00:49:16,559
+just discussed with gold and gatalinium.
+
+1291
+00:49:13,839 --> 00:49:18,640
+So to summarize, energy integrating
+
+1292
+00:49:16,559 --> 00:49:20,559
+detectors are the current standard while
+
+1293
+00:49:18,640 --> 00:49:22,960
+photon counting detectors represent the
+
+1294
+00:49:20,559 --> 00:49:25,119
+future. They promise higher resolution,
+
+1295
+00:49:22,960 --> 00:49:26,880
+lower dose and much richer information
+
+1296
+00:49:25,119 --> 00:49:28,880
+content.
+
+1297
+00:49:26,880 --> 00:49:30,960
+This transition from energy integration
+
+1298
+00:49:28,880 --> 00:49:32,960
+to photon counting is one of the most
+
+1299
+00:49:30,960 --> 00:49:36,920
+exciting directions in X-ray imaging
+
+1300
+00:49:32,960 --> 00:49:36,920
+research and clinical translation.
+
+1301
+00:49:38,400 --> 00:49:42,240
+Energy integrating detectors are the
+
+1302
+00:49:40,240 --> 00:49:45,839
+most common, practical, and mature
+
+1303
+00:49:42,240 --> 00:49:48,000
+technology used in modern CT scanners.
+
+1304
+00:49:45,839 --> 00:49:49,920
+Their principle is very simple. They
+
+1305
+00:49:48,000 --> 00:49:51,920
+collect the total energy deposited by
+
+1306
+00:49:49,920 --> 00:49:53,680
+all X-ray photons that arrive at the
+
+1307
+00:49:51,920 --> 00:49:55,680
+detector element. It doesn't matter
+
+1308
+00:49:53,680 --> 00:49:58,079
+whether the incoming photons are high
+
+1309
+00:49:55,680 --> 00:50:00,720
+energy or low energy. In the end, they
+
+1310
+00:49:58,079 --> 00:50:04,079
+are all added together.
+
+1311
+00:50:00,720 --> 00:50:07,359
+Now, this technology works in two modes.
+
+1312
+00:50:04,079 --> 00:50:09,599
+Indirect mode. In indirect mode, the
+
+1313
+00:50:07,359 --> 00:50:11,760
+X-ray photons first pass through a layer
+
+1314
+00:50:09,599 --> 00:50:14,319
+of material called a phosphor such as
+
+1315
+00:50:11,760 --> 00:50:16,240
+cesium iodide. The phosphor absorbs the
+
+1316
+00:50:14,319 --> 00:50:18,240
+x-ray energy and converts it into
+
+1317
+00:50:16,240 --> 00:50:21,359
+visible light. Each x-ray photon
+
+1318
+00:50:18,240 --> 00:50:23,440
+produces many visible light photons.
+
+1319
+00:50:21,359 --> 00:50:25,280
+These visible photons then strike a
+
+1320
+00:50:23,440 --> 00:50:27,119
+photo diode layer which converts the
+
+1321
+00:50:25,280 --> 00:50:29,119
+light into an electrical current. The
+
+1322
+00:50:27,119 --> 00:50:31,359
+current is then read out by the circuit.
+
+1323
+00:50:29,119 --> 00:50:33,599
+In this process, higher energy X-ray
+
+1324
+00:50:31,359 --> 00:50:35,680
+photons produce more visible light. But
+
+1325
+00:50:33,599 --> 00:50:37,520
+once converted to charge, all signals
+
+1326
+00:50:35,680 --> 00:50:39,599
+are summed together. That's why this
+
+1327
+00:50:37,520 --> 00:50:42,480
+method is called energy integrating or
+
+1328
+00:50:39,599 --> 00:50:45,920
+sometimes current integrating.
+
+1329
+00:50:42,480 --> 00:50:48,240
+Direct mode. In direct mode, there is no
+
+1330
+00:50:45,920 --> 00:50:50,079
+intermediate light conversion. Instead,
+
+1331
+00:50:48,240 --> 00:50:52,400
+the X-rays interact directly with a
+
+1332
+00:50:50,079 --> 00:50:54,720
+semiconductor material such as amorphous
+
+1333
+00:50:52,400 --> 00:50:56,720
+selenium. The X-ray photons generate
+
+1334
+00:50:54,720 --> 00:50:58,800
+electron whole pairs in the material.
+
+1335
+00:50:56,720 --> 00:51:00,559
+Under a high voltage bias, these charges
+
+1336
+00:50:58,800 --> 00:51:02,480
+are separated and collected as an
+
+1337
+00:51:00,559 --> 00:51:04,160
+electrical current.
+
+1338
+00:51:02,480 --> 00:51:06,160
+Again, the detector integrates all
+
+1339
+00:51:04,160 --> 00:51:08,160
+charges into one signal, which
+
+1340
+00:51:06,160 --> 00:51:10,720
+represents the total X-ray energy
+
+1341
+00:51:08,160 --> 00:51:12,800
+deposited.
+
+1342
+00:51:10,720 --> 00:51:14,319
+So, in both indirect and direct modes,
+
+1343
+00:51:12,800 --> 00:51:17,040
+the detector does not distinguish
+
+1344
+00:51:14,319 --> 00:51:18,800
+between high and low energy photons. It
+
+1345
+00:51:17,040 --> 00:51:21,040
+simply reports a single number
+
+1346
+00:51:18,800 --> 00:51:23,359
+proportional to the total energy of all
+
+1347
+00:51:21,040 --> 00:51:25,359
+photons that pass through the patient.
+
+1348
+00:51:23,359 --> 00:51:28,400
+This gives us the grayscale images we
+
+1349
+00:51:25,359 --> 00:51:30,480
+are familiar with in clinical CT. This
+
+1350
+00:51:28,400 --> 00:51:32,240
+approach is robust, efficient, and
+
+1351
+00:51:30,480 --> 00:51:36,680
+reliable. And it has been the backbone
+
+1352
+00:51:32,240 --> 00:51:36,680
+of medical CT imaging for decades.
+
+1353
+00:51:38,240 --> 00:51:41,680
+Now, let's talk about an important
+
+1354
+00:51:39,839 --> 00:51:44,720
+concept in X-ray imaging, the
+
+1355
+00:51:41,680 --> 00:51:46,800
+anti-catter grid. As we discussed
+
+1356
+00:51:44,720 --> 00:51:49,119
+earlier, when X-rays interact with the
+
+1357
+00:51:46,800 --> 00:51:51,680
+body, two main processes occur.
+
+1358
+00:51:49,119 --> 00:51:54,000
+Photoelectric absorption and scattering.
+
+1359
+00:51:51,680 --> 00:51:56,079
+In medical X-rays, scattering is very
+
+1360
+00:51:54,000 --> 00:51:58,079
+common. That means many photons change
+
+1361
+00:51:56,079 --> 00:51:59,599
+direction inside the body and then try
+
+1362
+00:51:58,079 --> 00:52:01,119
+to reach the detector from different
+
+1363
+00:51:59,599 --> 00:52:03,119
+angles.
+
+1364
+00:52:01,119 --> 00:52:05,520
+But here's the problem. What we really
+
+1365
+00:52:03,119 --> 00:52:07,599
+want to measure is the primary beam. The
+
+1366
+00:52:05,520 --> 00:52:09,520
+photons that travel straight along the
+
+1367
+00:52:07,599 --> 00:52:11,280
+original X-ray path. These are the
+
+1368
+00:52:09,520 --> 00:52:13,200
+photons that contain the true line
+
+1369
+00:52:11,280 --> 00:52:15,760
+integral information we need for
+
+1370
+00:52:13,200 --> 00:52:18,000
+accurate imaging. If scattered photons
+
+1371
+00:52:15,760 --> 00:52:20,400
+are also recorded, they blur the image
+
+1372
+00:52:18,000 --> 00:52:22,559
+and reduce contrast.
+
+1373
+00:52:20,400 --> 00:52:24,480
+To solve this, we use an anti-catter
+
+1374
+00:52:22,559 --> 00:52:26,960
+grid. You can think of it as a sheet
+
+1375
+00:52:24,480 --> 00:52:29,200
+with many tiny channels, almost like
+
+1376
+00:52:26,960 --> 00:52:30,800
+thousands of pin holes. Only photons
+
+1377
+00:52:29,200 --> 00:52:32,880
+traveling in the correct direction
+
+1378
+00:52:30,800 --> 00:52:34,319
+aligned with the primary X-ray beam can
+
+1379
+00:52:32,880 --> 00:52:36,240
+pass through these channels and reach
+
+1380
+00:52:34,319 --> 00:52:38,640
+the detector.
+
+1381
+00:52:36,240 --> 00:52:40,559
+Scattered photons coming in at an angle
+
+1382
+00:52:38,640 --> 00:52:43,359
+are blocked by the grid walls which are
+
+1383
+00:52:40,559 --> 00:52:45,520
+made of dense materials such as lead.
+
+1384
+00:52:43,359 --> 00:52:47,680
+This dramatically improves image quality
+
+1385
+00:52:45,520 --> 00:52:49,520
+by reducing the effect of scatter. Of
+
+1386
+00:52:47,680 --> 00:52:51,680
+course, there are trade-offs. If the
+
+1387
+00:52:49,520 --> 00:52:53,440
+grid is very tall or tightly spaced, it
+
+1388
+00:52:51,680 --> 00:52:55,119
+rejects more scatter, but it can also
+
+1389
+00:52:53,440 --> 00:52:57,280
+block some of the primary beam, which
+
+1390
+00:52:55,119 --> 00:52:59,200
+reduces efficiency.
+
+1391
+00:52:57,280 --> 00:53:01,839
+Engineers must carefully design the
+
+1392
+00:52:59,200 --> 00:53:03,359
+grid's height, spacing, and material to
+
+1393
+00:53:01,839 --> 00:53:05,200
+strike a balance between scatter
+
+1394
+00:53:03,359 --> 00:53:06,960
+rejection and preserving the useful
+
+1395
+00:53:05,200 --> 00:53:09,599
+signal.
+
+1396
+00:53:06,960 --> 00:53:11,599
+So, in summary, the anti-catter grid is
+
+1397
+00:53:09,599 --> 00:53:13,440
+a simple but powerful device that
+
+1398
+00:53:11,599 --> 00:53:15,760
+ensures we measure mostly the primary
+
+1399
+00:53:13,440 --> 00:53:19,240
+beam, giving us much clearer and more
+
+1400
+00:53:15,760 --> 00:53:19,240
+reliable images.
+
+1401
+00:53:20,720 --> 00:53:24,559
+Here you can clearly see the difference
+
+1402
+00:53:22,319 --> 00:53:27,440
+between using an anti-catter grid and
+
+1403
+00:53:24,559 --> 00:53:30,000
+not using one. On the left with the
+
+1404
+00:53:27,440 --> 00:53:32,319
+grid, the anatomical structures are much
+
+1405
+00:53:30,000 --> 00:53:34,400
+sharper. The boundaries of the ribs, the
+
+1406
+00:53:32,319 --> 00:53:36,880
+lung fields, and even the soft tissues
+
+1407
+00:53:34,400 --> 00:53:38,720
+are more clearly defined.
+
+1408
+00:53:36,880 --> 00:53:40,960
+On the right, without the grid, the
+
+1409
+00:53:38,720 --> 00:53:42,559
+image looks more foggy. That haziness
+
+1410
+00:53:40,960 --> 00:53:44,079
+comes from scattered photons that are
+
+1411
+00:53:42,559 --> 00:53:46,160
+superimposed on top of the fine
+
+1412
+00:53:44,079 --> 00:53:48,400
+structures. Essentially, the scatter
+
+1413
+00:53:46,160 --> 00:53:50,079
+washes out important details and reduces
+
+1414
+00:53:48,400 --> 00:53:51,440
+contrast.
+
+1415
+00:53:50,079 --> 00:53:53,920
+Think of it like looking out of an
+
+1416
+00:53:51,440 --> 00:53:56,559
+airplane. On a clear day, you can see
+
+1417
+00:53:53,920 --> 00:53:59,040
+the ground with sharp detail. But on a
+
+1418
+00:53:56,559 --> 00:54:01,760
+cloudy day, the clouds blur your view.
+
+1419
+00:53:59,040 --> 00:54:04,000
+In the same way, scattered X-ray photons
+
+1420
+00:54:01,760 --> 00:54:06,880
+act like a layer of clouds, blurring the
+
+1421
+00:54:04,000 --> 00:54:08,640
+image and hiding subtle differences.
+
+1422
+00:54:06,880 --> 00:54:11,040
+This becomes especially important when
+
+1423
+00:54:08,640 --> 00:54:12,800
+detecting low contrast tumors. Without a
+
+1424
+00:54:11,040 --> 00:54:14,800
+grid, these tumors might be completely
+
+1425
+00:54:12,800 --> 00:54:16,800
+hidden in the fog of scatter. With a
+
+1426
+00:54:14,800 --> 00:54:18,640
+grid, however, you remove much of that
+
+1427
+00:54:16,800 --> 00:54:21,200
+scatter, revealing the underlying
+
+1428
+00:54:18,640 --> 00:54:23,520
+details more accurately.
+
+1429
+00:54:21,200 --> 00:54:25,040
+So using an anti-catter grid can make
+
+1430
+00:54:23,520 --> 00:54:29,640
+the difference between detecting a
+
+1431
+00:54:25,040 --> 00:54:29,640
+disease early and missing it entirely.
+
+1432
+00:54:31,440 --> 00:54:35,119
+Now let's dive into dual energy imaging
+
+1433
+00:54:33,760 --> 00:54:37,839
+which is one of the most important
+
+1434
+00:54:35,119 --> 00:54:41,040
+developments in modern CT.
+
+1435
+00:54:37,839 --> 00:54:44,240
+All the major CT manufacturers Seammens,
+
+1436
+00:54:41,040 --> 00:54:46,160
+J, Philips, and Toshiba have worked on
+
+1437
+00:54:44,240 --> 00:54:48,000
+energy sensitive imaging. While true
+
+1438
+00:54:46,160 --> 00:54:49,839
+multi-energy imaging is still a
+
+1439
+00:54:48,000 --> 00:54:51,680
+challenge, they have all developed
+
+1440
+00:54:49,839 --> 00:54:54,079
+practical approaches to perform dual
+
+1441
+00:54:51,680 --> 00:54:56,960
+energy CT, which means collecting data
+
+1442
+00:54:54,079 --> 00:54:59,280
+using two different X-ray spectra.
+
+1443
+00:54:56,960 --> 00:55:02,160
+Let me explain the main strategies.
+
+1444
+00:54:59,280 --> 00:55:04,400
+Seammens uses dual source CT. Here the
+
+1445
+00:55:02,160 --> 00:55:06,640
+scanner has two X-ray tubes and two
+
+1446
+00:55:04,400 --> 00:55:08,559
+detectors mounted at an angle, each
+
+1447
+00:55:06,640 --> 00:55:11,680
+operating at a different voltage. For
+
+1448
+00:55:08,559 --> 00:55:15,520
+example, one tube might run at 80 kts
+
+1449
+00:55:11,680 --> 00:55:16,880
+while the other runs at 140 kts.
+
+1450
+00:55:15,520 --> 00:55:18,960
+This gives you two spectra
+
+1451
+00:55:16,880 --> 00:55:21,119
+simultaneously which means excellent
+
+1452
+00:55:18,960 --> 00:55:22,720
+temporal resolution and minimal motion
+
+1453
+00:55:21,119 --> 00:55:25,520
+artifact.
+
+1454
+00:55:22,720 --> 00:55:27,760
+Ghe uses KVP switching. In this method,
+
+1455
+00:55:25,520 --> 00:55:29,680
+there is only one X-ray tube, but the
+
+1456
+00:55:27,760 --> 00:55:33,119
+tube rapidly alternates its voltage
+
+1457
+00:55:29,680 --> 00:55:36,880
+between high and low values, say 140 and
+
+1458
+00:55:33,119 --> 00:55:38,960
+80 ks from one projection to the next.
+
+1459
+00:55:36,880 --> 00:55:41,040
+As a result, you still get two distinct
+
+1460
+00:55:38,960 --> 00:55:43,119
+spectra, but collected sequentially.
+
+1461
+00:55:41,040 --> 00:55:45,040
+Philips uses dual layer detectors.
+
+1462
+00:55:43,119 --> 00:55:47,359
+Instead of modifying the tube, they
+
+1463
+00:55:45,040 --> 00:55:49,520
+modify the detector.
+
+1464
+00:55:47,359 --> 00:55:51,680
+The top layer absorbs most of the low
+
+1465
+00:55:49,520 --> 00:55:53,599
+energy X-rays while the second layer
+
+1466
+00:55:51,680 --> 00:55:55,839
+captures the higher energy photons that
+
+1467
+00:55:53,599 --> 00:55:57,839
+pass through. This way, low and high
+
+1468
+00:55:55,839 --> 00:56:00,319
+energy data are naturally separated at
+
+1469
+00:55:57,839 --> 00:56:02,799
+the detector level.
+
+1470
+00:56:00,319 --> 00:56:04,799
+Toshiba uses dual scan mode. In this
+
+1471
+00:56:02,799 --> 00:56:06,799
+case, the scanner acquires two full
+
+1472
+00:56:04,799 --> 00:56:09,760
+scans of the same patient, one at high
+
+1473
+00:56:06,799 --> 00:56:12,000
+voltage and one at low voltage. While
+
+1474
+00:56:09,760 --> 00:56:14,319
+this is simpler in concept, it has
+
+1475
+00:56:12,000 --> 00:56:17,119
+drawbacks. It takes longer and the
+
+1476
+00:56:14,319 --> 00:56:19,200
+patient may move between scans. Also, if
+
+1477
+00:56:17,119 --> 00:56:20,880
+contrast material is injected, its
+
+1478
+00:56:19,200 --> 00:56:24,000
+distribution may change between the two
+
+1479
+00:56:20,880 --> 00:56:25,599
+acquisitions leading to misregistration.
+
+1480
+00:56:24,000 --> 00:56:27,920
+So, in practice, the first three
+
+1481
+00:56:25,599 --> 00:56:29,920
+technologies, dual source, KVP
+
+1482
+00:56:27,920 --> 00:56:32,079
+switching, and dual layer detectors are
+
+1483
+00:56:29,920 --> 00:56:33,839
+more effective. They provide two sets of
+
+1484
+00:56:32,079 --> 00:56:36,160
+spectral information within the same
+
+1485
+00:56:33,839 --> 00:56:38,559
+exam, which can then be used to separate
+
+1486
+00:56:36,160 --> 00:56:40,240
+materials, improve contrast, and reduce
+
+1487
+00:56:38,559 --> 00:56:42,319
+artifacts.
+
+1488
+00:56:40,240 --> 00:56:44,960
+This is why dual energy imaging is now
+
+1489
+00:56:42,319 --> 00:56:46,799
+widely used in clinical practice. It
+
+1490
+00:56:44,960 --> 00:56:49,119
+gives radiologists much more information
+
+1491
+00:56:46,799 --> 00:56:50,720
+than standard CT and opens the door to
+
+1492
+00:56:49,119 --> 00:56:52,720
+advanced applications like material
+
+1493
+00:56:50,720 --> 00:56:55,119
+decomposition and virtual contrast
+
+1494
+00:56:52,720 --> 00:56:57,520
+imaging.
+
+1495
+00:56:55,119 --> 00:56:59,520
+Before
+
+1496
+00:56:57,520 --> 00:57:01,599
+we go further into dual energy imaging,
+
+1497
+00:56:59,520 --> 00:57:03,920
+let's pause for a quick review of some
+
+1498
+00:57:01,599 --> 00:57:06,240
+basic chemistry concepts, specifically
+
+1499
+00:57:03,920 --> 00:57:07,920
+the atomic number and the mass number.
+
+1500
+00:57:06,240 --> 00:57:11,280
+Because these concepts form the physical
+
+1501
+00:57:07,920 --> 00:57:13,760
+foundation of dual energy CT, the atomic
+
+1502
+00:57:11,280 --> 00:57:15,520
+number, usually denoted by Z, is simply
+
+1503
+00:57:13,760 --> 00:57:18,160
+the number of protons in the nucleus of
+
+1504
+00:57:15,520 --> 00:57:21,520
+an atom. It defines the identity of the
+
+1505
+00:57:18,160 --> 00:57:25,280
+element. For example, hydrogen has Z= 1.
+
+1506
+00:57:21,520 --> 00:57:28,559
+Helium has Z= 2. Carbon has Z= 6 and so
+
+1507
+00:57:25,280 --> 00:57:30,559
+on. If you change Z, you change the
+
+1508
+00:57:28,559 --> 00:57:32,960
+element itself.
+
+1509
+00:57:30,559 --> 00:57:34,640
+The mass number often written as a is
+
+1510
+00:57:32,960 --> 00:57:37,280
+approximately the total number of
+
+1511
+00:57:34,640 --> 00:57:39,280
+protons plus neutrons in the nucleus.
+
+1512
+00:57:37,280 --> 00:57:42,000
+Since neutrons contribute to the mass
+
+1513
+00:57:39,280 --> 00:57:45,040
+but not the charge, A is usually larger
+
+1514
+00:57:42,000 --> 00:57:47,920
+than Z. Take helium as an example.
+
+1515
+00:57:45,040 --> 00:57:50,400
+Helium has Z equals 2, meaning two
+
+1516
+00:57:47,920 --> 00:57:52,640
+protons. Most stable helium atoms also
+
+1517
+00:57:50,400 --> 00:57:55,599
+have two neutrons, giving a mass number
+
+1518
+00:57:52,640 --> 00:57:57,040
+of A= 4. That's why you see the helium
+
+1519
+00:57:55,599 --> 00:57:59,920
+symbol here written with a two at the
+
+1520
+00:57:57,040 --> 00:58:03,119
+bottom and a four at the top. So why is
+
+1521
+00:57:59,920 --> 00:58:04,799
+this important for us?
+
+1522
+00:58:03,119 --> 00:58:06,799
+Because the way X-rays interact with
+
+1523
+00:58:04,799 --> 00:58:08,799
+matter, whether through photoelectric
+
+1524
+00:58:06,799 --> 00:58:10,559
+absorption or Compton scattering,
+
+1525
+00:58:08,799 --> 00:58:13,280
+depends strongly on both the atomic
+
+1526
+00:58:10,559 --> 00:58:15,920
+number and the mass of the element. High
+
+1527
+00:58:13,280 --> 00:58:18,960
+atomic number elements like iodine,
+
+1528
+00:58:15,920 --> 00:58:20,960
+gatalinium or gold interact with x-rays
+
+1529
+00:58:18,960 --> 00:58:24,480
+very differently from soft tissue which
+
+1530
+00:58:20,960 --> 00:58:26,400
+is mostly carbon, oxygen and hydrogen.
+
+1531
+00:58:24,480 --> 00:58:28,640
+And this difference is exactly what dual
+
+1532
+00:58:26,400 --> 00:58:30,799
+energy imaging exploits. By probing
+
+1533
+00:58:28,640 --> 00:58:32,640
+tissues at two different energy levels,
+
+1534
+00:58:30,799 --> 00:58:34,480
+we can begin to separate and even
+
+1535
+00:58:32,640 --> 00:58:37,480
+identify different materials inside the
+
+1536
+00:58:34,480 --> 00:58:37,480
+body.
+
+1537
+00:58:38,960 --> 00:58:44,079
+So here is a classic expression for the
+
+1538
+00:58:41,119 --> 00:58:46,079
+X-ray attenuation coefficient.
+
+1539
+00:58:44,079 --> 00:58:48,240
+The main idea is that attenuation comes
+
+1540
+00:58:46,079 --> 00:58:50,079
+from two parts. One part is the
+
+1541
+00:58:48,240 --> 00:58:52,720
+photoelectric effect and the other part
+
+1542
+00:58:50,079 --> 00:58:54,640
+is compant scattering.
+
+1543
+00:58:52,720 --> 00:58:57,520
+The photoelectric effect is very
+
+1544
+00:58:54,640 --> 00:58:59,520
+strongly dependent on energy. In fact as
+
+1545
+00:58:57,520 --> 00:59:01,280
+the X-ray energy increases the
+
+1546
+00:58:59,520 --> 00:59:03,440
+contribution from the photoelectric
+
+1547
+00:59:01,280 --> 00:59:05,680
+effect drops very quickly. That's why
+
+1548
+00:59:03,440 --> 00:59:07,440
+low energy X-rays are absorbed much
+
+1549
+00:59:05,680 --> 00:59:09,440
+more.
+
+1550
+00:59:07,440 --> 00:59:11,520
+The Compton scattering term on the other
+
+1551
+00:59:09,440 --> 00:59:13,760
+hand has a more gradual dependence on
+
+1552
+00:59:11,520 --> 00:59:16,240
+energy. It comes from what is called the
+
+1553
+00:59:13,760 --> 00:59:18,720
+Klein Nisha function which describes how
+
+1554
+00:59:16,240 --> 00:59:20,559
+photons scatter off electrons. So if you
+
+1555
+00:59:18,720 --> 00:59:22,880
+put these two terms together, you can
+
+1556
+00:59:20,559 --> 00:59:25,119
+describe the full attenuation as a
+
+1557
+00:59:22,880 --> 00:59:28,000
+combination of photoelectric absorption
+
+1558
+00:59:25,119 --> 00:59:30,240
+and Compton scattering. Now here's the
+
+1559
+00:59:28,000 --> 00:59:32,400
+powerful part. If we measure attenuation
+
+1560
+00:59:30,240 --> 00:59:34,799
+at two different X-ray energy spectra,
+
+1561
+00:59:32,400 --> 00:59:36,880
+we can separate these two contributions.
+
+1562
+00:59:34,799 --> 00:59:38,880
+Once that's done, we can predict how the
+
+1563
+00:59:36,880 --> 00:59:40,559
+material would behave at any other
+
+1564
+00:59:38,880 --> 00:59:42,880
+energy.
+
+1565
+00:59:40,559 --> 00:59:44,319
+You can think about this in two ways.
+
+1566
+00:59:42,880 --> 00:59:46,160
+Physically, we are separating
+
+1567
+00:59:44,319 --> 00:59:50,079
+attenuation into its two main
+
+1568
+00:59:46,160 --> 00:59:51,920
+mechanisms, photoelectric and compton.
+
+1569
+00:59:50,079 --> 00:59:53,520
+Material-wise, we are saying that the
+
+1570
+00:59:51,920 --> 00:59:56,319
+body can be thought of as a mixture of
+
+1571
+00:59:53,520 --> 00:59:58,880
+two basic materials. For example, water
+
+1572
+00:59:56,319 --> 01:00:00,960
+and bone. Any other tissue can be
+
+1573
+00:59:58,880 --> 01:00:02,400
+represented as a combination of those
+
+1574
+01:00:00,960 --> 01:00:04,960
+two.
+
+1575
+01:00:02,400 --> 01:00:07,200
+That's the foundation of dual energy CT.
+
+1576
+01:00:04,960 --> 01:00:09,280
+By using two X-ray spectra, we can get
+
+1577
+01:00:07,200 --> 01:00:12,839
+material specific information, not just
+
+1578
+01:00:09,280 --> 01:00:12,839
+grayscale attenuation.
+
+1579
+01:00:14,559 --> 01:00:19,440
+So, how do we actually perform a dual
+
+1580
+01:00:16,559 --> 01:00:21,200
+energy measurement?
+
+1581
+01:00:19,440 --> 01:00:23,440
+The key is that we collect data using
+
+1582
+01:00:21,200 --> 01:00:26,400
+two different X-ray spectra. Let's call
+
+1583
+01:00:23,440 --> 01:00:28,319
+them spectrum one and spectrum 2. Now,
+
+1584
+01:00:26,400 --> 01:00:30,079
+recall that the attenuation coefficient
+
+1585
+01:00:28,319 --> 01:00:31,920
+has two main components. the
+
+1586
+01:00:30,079 --> 01:00:33,680
+photoelectric part and the Compton
+
+1587
+01:00:31,920 --> 01:00:36,000
+scattering part. When we take the line
+
+1588
+01:00:33,680 --> 01:00:37,839
+integral along an X-ray path, we can
+
+1589
+01:00:36,000 --> 01:00:40,079
+separate these contributions into two
+
+1590
+01:00:37,839 --> 01:00:41,599
+quantities. We usually call them A1 and
+
+1591
+01:00:40,079 --> 01:00:44,000
+A2.
+
+1592
+01:00:41,599 --> 01:00:45,599
+So what happens is this. If we measure
+
+1593
+01:00:44,000 --> 01:00:48,160
+the transmitted X-ray signal with
+
+1594
+01:00:45,599 --> 01:00:50,480
+spectrum 1, we get one equation that
+
+1595
+01:00:48,160 --> 01:00:52,559
+depends on A1 and A2. If we measure
+
+1596
+01:00:50,480 --> 01:00:54,079
+again with spectrum 2, we get a second
+
+1597
+01:00:52,559 --> 01:00:56,000
+equation.
+
+1598
+01:00:54,079 --> 01:00:58,319
+Now we have two equations and two
+
+1599
+01:00:56,000 --> 01:01:01,599
+unknowns. That means we can solve for A1
+
+1600
+01:00:58,319 --> 01:01:03,119
+and A2. And once we know A1 and A2, we
+
+1601
+01:01:01,599 --> 01:01:06,240
+can reconstruct the attenuation
+
+1602
+01:01:03,119 --> 01:01:08,559
+coefficient at any X-ray energy.
+
+1603
+01:01:06,240 --> 01:01:10,400
+That's the whole idea of dual energy CT.
+
+1604
+01:01:08,559 --> 01:01:12,079
+By using two spectra, we get enough
+
+1605
+01:01:10,400 --> 01:01:14,559
+independent information to separate the
+
+1606
+01:01:12,079 --> 01:01:16,000
+photoelectric and Compton contributions.
+
+1607
+01:01:14,559 --> 01:01:18,079
+And from there, we can start to do
+
+1608
+01:01:16,000 --> 01:01:20,079
+material decomposition, distinguishing
+
+1609
+01:01:18,079 --> 01:01:23,200
+water from bone, or even identifying
+
+1610
+01:01:20,079 --> 01:01:25,200
+contrast agents like iodine or gold. So
+
+1611
+01:01:23,200 --> 01:01:27,359
+dual energy imaging is not just a trick
+
+1612
+01:01:25,200 --> 01:01:31,640
+with hardware. It has a very solid
+
+1613
+01:01:27,359 --> 01:01:31,640
+physical and mathematical foundation.
+
+1614
+01:01:33,280 --> 01:01:38,960
+Now, let's move to the last topic in
+
+1615
+01:01:35,280 --> 01:01:40,799
+this section, photon counting CT.
+
+1616
+01:01:38,960 --> 01:01:43,040
+Up to this point, we've mostly been
+
+1617
+01:01:40,799 --> 01:01:44,319
+talking about conventional detectors.
+
+1618
+01:01:43,040 --> 01:01:46,400
+Those are what we call current
+
+1619
+01:01:44,319 --> 01:01:48,559
+integrating detectors. What they really
+
+1620
+01:01:46,400 --> 01:01:50,480
+do is add up all the incoming X-ray
+
+1621
+01:01:48,559 --> 01:01:54,160
+photons across the entire energy
+
+1622
+01:01:50,480 --> 01:01:56,160
+spectrum and then report one number. In
+
+1623
+01:01:54,160 --> 01:01:58,240
+other words, they just give us the area
+
+1624
+01:01:56,160 --> 01:02:00,720
+under the curve. That means we only get
+
+1625
+01:01:58,240 --> 01:02:03,040
+a grayscale image, essentially black and
+
+1626
+01:02:00,720 --> 01:02:04,799
+white, where each pixel represents total
+
+1627
+01:02:03,040 --> 01:02:07,040
+intensity.
+
+1628
+01:02:04,799 --> 01:02:09,359
+But imagine if instead of throwing all
+
+1629
+01:02:07,040 --> 01:02:11,040
+the energy information into one basket,
+
+1630
+01:02:09,359 --> 01:02:13,760
+we could measure the energy of each
+
+1631
+01:02:11,040 --> 01:02:15,520
+photon. That's the principle of photon
+
+1632
+01:02:13,760 --> 01:02:17,760
+counting detectors. Instead of giving
+
+1633
+01:02:15,520 --> 01:02:20,400
+you one number, they break the spectrum
+
+1634
+01:02:17,760 --> 01:02:22,640
+into many energy bins.
+
+1635
+01:02:20,400 --> 01:02:24,960
+So now instead of saying this voxil
+
+1636
+01:02:22,640 --> 01:02:27,119
+attenuates X-rays by this much in total,
+
+1637
+01:02:24,960 --> 01:02:29,680
+we can say here is how it attenuates
+
+1638
+01:02:27,119 --> 01:02:32,400
+soft X-rays, medium energy X-rays, and
+
+1639
+01:02:29,680 --> 01:02:34,559
+high energy X-rays. That gives us a rich
+
+1640
+01:02:32,400 --> 01:02:36,400
+spectrum of information.
+
+1641
+01:02:34,559 --> 01:02:38,640
+And here's the exciting part. With that
+
+1642
+01:02:36,400 --> 01:02:41,040
+energy resolve data, we can make not
+
+1643
+01:02:38,640 --> 01:02:43,760
+just one grayscale image, but multiple
+
+1644
+01:02:41,040 --> 01:02:45,520
+images across energy ranges.
+
+1645
+01:02:43,760 --> 01:02:47,680
+We can even assign colors to those
+
+1646
+01:02:45,520 --> 01:02:50,880
+ranges. The result is what we sometimes
+
+1647
+01:02:47,680 --> 01:02:52,720
+call spectral CT or molecular CT imaging
+
+1648
+01:02:50,880 --> 01:02:56,000
+where each material can be distinguished
+
+1649
+01:02:52,720 --> 01:02:58,160
+by its unique spectral fingerprint.
+
+1650
+01:02:56,000 --> 01:03:00,160
+So while conventional CT gives us one
+
+1651
+01:02:58,160 --> 01:03:02,160
+picture in shades of gray, photon
+
+1652
+01:03:00,160 --> 01:03:04,319
+counting CT has the potential to give us
+
+1653
+01:03:02,160 --> 01:03:06,640
+multiple pictures at once, even in
+
+1654
+01:03:04,319 --> 01:03:09,640
+color. That's the future direction of CT
+
+1655
+01:03:06,640 --> 01:03:09,640
+technology.
+
+1656
+01:03:10,960 --> 01:03:15,839
+Now let's look a little closer at how a
+
+1657
+01:03:12,640 --> 01:03:17,760
+photon counting detector actually works.
+
+1658
+01:03:15,839 --> 01:03:20,079
+In many ways, the design is similar to
+
+1659
+01:03:17,760 --> 01:03:22,319
+direct detection. An incoming X-ray
+
+1660
+01:03:20,079 --> 01:03:25,359
+photon interacts with a semiconductor
+
+1661
+01:03:22,319 --> 01:03:27,920
+material, typically cadmium teluride or
+
+1662
+01:03:25,359 --> 01:03:29,839
+cadmium zinc teluride.
+
+1663
+01:03:27,920 --> 01:03:32,000
+This interaction generates an electron
+
+1664
+01:03:29,839 --> 01:03:33,760
+hole pair. Under an applied bias
+
+1665
+01:03:32,000 --> 01:03:35,760
+voltage, those charges are quickly
+
+1666
+01:03:33,760 --> 01:03:37,440
+separated creating a tiny current
+
+1667
+01:03:35,760 --> 01:03:39,839
+impulse.
+
+1668
+01:03:37,440 --> 01:03:41,440
+Now, here is the critical part. In a
+
+1669
+01:03:39,839 --> 01:03:43,440
+photon counting detector, the
+
+1670
+01:03:41,440 --> 01:03:46,000
+electronics are extremely fast and
+
+1671
+01:03:43,440 --> 01:03:48,480
+sensitive. Each X-ray photon produces
+
+1672
+01:03:46,000 --> 01:03:50,480
+its own electrical pulse. That pulse is
+
+1673
+01:03:48,480 --> 01:03:52,000
+then compared against a series of preset
+
+1674
+01:03:50,480 --> 01:03:54,319
+thresholds.
+
+1675
+01:03:52,000 --> 01:03:56,720
+If the pulse amplitude falls between two
+
+1676
+01:03:54,319 --> 01:03:59,440
+thresholds, say between the fifth and
+
+1677
+01:03:56,720 --> 01:04:02,160
+the sixth, we know immediately that the
+
+1678
+01:03:59,440 --> 01:04:04,480
+energy of that X-ray photon lies within
+
+1679
+01:04:02,160 --> 01:04:07,200
+that range. In other words, the detector
+
+1680
+01:04:04,480 --> 01:04:09,520
+doesn't just say, "I saw a photon." It
+
+1681
+01:04:07,200 --> 01:04:12,720
+also says, "I saw a photon in this
+
+1682
+01:04:09,520 --> 01:04:12,720
+specific energy band."
+
+1683
+01:04:13,200 --> 01:04:16,960
+What you see in this diagram is the
+
+1684
+01:04:14,960 --> 01:04:18,799
+circuit pathway. The signal is
+
+1685
+01:04:16,960 --> 01:04:20,799
+amplified, shaped, compared against
+
+1686
+01:04:18,799 --> 01:04:23,359
+thresholds, and then counted in real
+
+1687
+01:04:20,799 --> 01:04:24,799
+time. This entire process happens at the
+
+1688
+01:04:23,359 --> 01:04:26,160
+pixel level. And today's
+
+1689
+01:04:24,799 --> 01:04:28,880
+state-of-the-art photon counting
+
+1690
+01:04:26,160 --> 01:04:30,640
+detectors can have pixels as small as 55
+
+1691
+01:04:28,880 --> 01:04:33,359
+microns.
+
+1692
+01:04:30,640 --> 01:04:35,839
+Each pixel has its own miniature readout
+
+1693
+01:04:33,359 --> 01:04:38,160
+circuit, often called an ASIC, an
+
+1694
+01:04:35,839 --> 01:04:40,240
+application specific integrated circuit.
+
+1695
+01:04:38,160 --> 01:04:42,079
+Inside each ASIC are hundreds or
+
+1696
+01:04:40,240 --> 01:04:44,960
+thousands of transistors all designed
+
+1697
+01:04:42,079 --> 01:04:47,119
+for high-speed low-noise performance.
+
+1698
+01:04:44,960 --> 01:04:48,799
+This is truly high-tech engineering. And
+
+1699
+01:04:47,119 --> 01:04:50,960
+the result is not just a count of how
+
+1700
+01:04:48,799 --> 01:04:52,880
+many photons arrive, but a spectrum of
+
+1701
+01:04:50,960 --> 01:04:55,200
+how those photons are distributed across
+
+1702
+01:04:52,880 --> 01:04:57,839
+energy ranges. That is what enables
+
+1703
+01:04:55,200 --> 01:05:01,400
+spectral CT, the next generation beyond
+
+1704
+01:04:57,839 --> 01:05:01,400
+conventional CT.
+
+1705
+01:05:02,559 --> 01:05:07,039
+Now we come to one of the most exciting
+
+1706
+01:05:04,400 --> 01:05:09,280
+applications of photon counting CT which
+
+1707
+01:05:07,039 --> 01:05:11,039
+is K edge imaging.
+
+1708
+01:05:09,280 --> 01:05:13,839
+If we are dealing only with the human
+
+1709
+01:05:11,039 --> 01:05:16,559
+body tissues like bone, soft tissue and
+
+1710
+01:05:13,839 --> 01:05:19,119
+water, then dual energy CT is usually
+
+1711
+01:05:16,559 --> 01:05:20,880
+sufficient. With two basis materials,
+
+1712
+01:05:19,119 --> 01:05:22,880
+two measurements are enough to solve the
+
+1713
+01:05:20,880 --> 01:05:25,359
+equations and you can predict the X-ray
+
+1714
+01:05:22,880 --> 01:05:27,760
+response at any energy level. That is
+
+1715
+01:05:25,359 --> 01:05:30,640
+why dual energy imaging has been so
+
+1716
+01:05:27,760 --> 01:05:33,599
+successful in the clinic. But the moment
+
+1717
+01:05:30,640 --> 01:05:36,240
+we introduce contrast agents, iodine,
+
+1718
+01:05:33,599 --> 01:05:38,640
+gatalinium or gold nano particles, the
+
+1719
+01:05:36,240 --> 01:05:41,839
+situation changes. These materials have
+
+1720
+01:05:38,640 --> 01:05:44,240
+sharp kg at very specific energies. To
+
+1721
+01:05:41,839 --> 01:05:47,760
+detect and separate them reliably, we
+
+1722
+01:05:44,240 --> 01:05:49,920
+need true energy resolved imaging.
+
+1723
+01:05:47,760 --> 01:05:52,240
+That is exactly what a photon counting
+
+1724
+01:05:49,920 --> 01:05:54,559
+detector provides. Instead of just two
+
+1725
+01:05:52,240 --> 01:05:57,200
+broad spectra, it measures photons
+
+1726
+01:05:54,559 --> 01:05:59,280
+across multiple energy bins. This allows
+
+1727
+01:05:57,200 --> 01:06:02,160
+us to do material decomposition and
+
+1728
+01:05:59,280 --> 01:06:03,839
+create chemically specific maps.
+
+1729
+01:06:02,160 --> 01:06:06,559
+In other words, we can actually tell
+
+1730
+01:06:03,839 --> 01:06:08,559
+apart iodine from calcium or gold nanop
+
+1731
+01:06:06,559 --> 01:06:10,720
+particles from bone based on their
+
+1732
+01:06:08,559 --> 01:06:12,559
+spectral signatures.
+
+1733
+01:06:10,720 --> 01:06:15,039
+And this opens the door to something
+
+1734
+01:06:12,559 --> 01:06:18,000
+much more powerful. Molecular and
+
+1735
+01:06:15,039 --> 01:06:20,400
+cellular imaging with CT.
+
+1736
+01:06:18,000 --> 01:06:23,119
+If you attach nano particles to specific
+
+1737
+01:06:20,400 --> 01:06:25,280
+molecular targets, photon counting CT
+
+1738
+01:06:23,119 --> 01:06:28,400
+can visualize not just anatomy but
+
+1739
+01:06:25,280 --> 01:06:29,599
+biology at the molecular level.
+
+1740
+01:06:28,400 --> 01:06:32,000
+Of course, there are additional
+
+1741
+01:06:29,599 --> 01:06:34,559
+benefits. Photon counting improves dose
+
+1742
+01:06:32,000 --> 01:06:36,799
+efficiency, reduces beam hardening, and
+
+1743
+01:06:34,559 --> 01:06:39,119
+increases spatial resolution. But in my
+
+1744
+01:06:36,799 --> 01:06:41,280
+mind, the major breakthrough is Kedge
+
+1745
+01:06:39,119 --> 01:06:43,119
+imaging, the ability to map contrast
+
+1746
+01:06:41,280 --> 01:06:45,359
+agents and even nano particles with
+
+1747
+01:06:43,119 --> 01:06:47,119
+chemical specificity.
+
+1748
+01:06:45,359 --> 01:06:49,839
+This is why the field is so excited
+
+1749
+01:06:47,119 --> 01:06:54,920
+about photon counting. It takes X-ray
+
+1750
+01:06:49,839 --> 01:06:54,920
+imaging beyond anatomy and into biology.
+
+1751
+01:06:56,400 --> 01:06:59,920
+And let me close with this very exciting
+
+1752
+01:06:58,400 --> 01:07:01,839
+development.
+
+1753
+01:06:59,920 --> 01:07:04,079
+Just last year, a major paper was
+
+1754
+01:07:01,839 --> 01:07:05,839
+published in the journal radiology. This
+
+1755
+01:07:04,079 --> 01:07:07,839
+study conducted by a team of physicians
+
+1756
+01:07:05,839 --> 01:07:09,680
+in collaboration with Seammens reported
+
+1757
+01:07:07,839 --> 01:07:12,640
+the first human experience with contrast
+
+1758
+01:07:09,680 --> 01:07:14,960
+enhanced photon counting CT. What does
+
+1759
+01:07:12,640 --> 01:07:17,200
+this mean? For the very first time, we
+
+1760
+01:07:14,960 --> 01:07:19,440
+are seeing photon counting CT applied in
+
+1761
+01:07:17,200 --> 01:07:22,480
+real clinical imaging of patients, not
+
+1762
+01:07:19,440 --> 01:07:24,400
+just phantoms or animal models. The
+
+1763
+01:07:22,480 --> 01:07:25,920
+results demonstrated the feasibility and
+
+1764
+01:07:24,400 --> 01:07:28,559
+advantages of this new detector
+
+1765
+01:07:25,920 --> 01:07:30,240
+technology, including improved contrast,
+
+1766
+01:07:28,559 --> 01:07:32,160
+better noise performance, and the
+
+1767
+01:07:30,240 --> 01:07:34,240
+ability to separate materials with high
+
+1768
+01:07:32,160 --> 01:07:36,319
+precision.
+
+1769
+01:07:34,240 --> 01:07:38,480
+So, this is a milestone. What we have
+
+1770
+01:07:36,319 --> 01:07:41,039
+been discussing from X-ray physics to
+
+1771
+01:07:38,480 --> 01:07:43,599
+attenuation to detector evolution to
+
+1772
+01:07:41,039 --> 01:07:45,680
+dual energy imaging and finally photon
+
+1773
+01:07:43,599 --> 01:07:48,160
+counting is not just a research vision
+
+1774
+01:07:45,680 --> 01:07:49,760
+anymore. It is becoming a clinical
+
+1775
+01:07:48,160 --> 01:07:51,839
+reality.
+
+1776
+01:07:49,760 --> 01:07:53,920
+This is where the field is going. And as
+
+1777
+01:07:51,839 --> 01:07:55,599
+engineers and scientists, your
+
+1778
+01:07:53,920 --> 01:07:57,440
+understanding of these fundamental
+
+1779
+01:07:55,599 --> 01:07:59,119
+principles will position you to
+
+1780
+01:07:57,440 --> 01:08:01,920
+contribute to the next generation of
+
+1781
+01:07:59,119 --> 01:08:04,160
+medical imaging.
+
+1782
+01:08:01,920 --> 01:08:07,039
+Here
+
+1783
+01:08:04,160 --> 01:08:09,599
+we see the landmark result. These are
+
+1784
+01:08:07,039 --> 01:08:12,160
+the very first human CT images acquired
+
+1785
+01:08:09,599 --> 01:08:14,400
+with a photon counting detector. In the
+
+1786
+01:08:12,160 --> 01:08:16,880
+top row, you can compare conventional
+
+1787
+01:08:14,400 --> 01:08:19,920
+energy integrating CT with photon
+
+1788
+01:08:16,880 --> 01:08:22,239
+counting CT. At this stage, the overall
+
+1789
+01:08:19,920 --> 01:08:24,239
+image quality and diagnostic value are
+
+1790
+01:08:22,239 --> 01:08:27,199
+already comparable to the best systems
+
+1791
+01:08:24,239 --> 01:08:29,679
+currently in use. But what's truly
+
+1792
+01:08:27,199 --> 01:08:31,920
+remarkable lies in the bottom row. With
+
+1793
+01:08:29,679 --> 01:08:34,480
+photon counting CT, we can separate
+
+1794
+01:08:31,920 --> 01:08:36,880
+energy information and create maps, for
+
+1795
+01:08:34,480 --> 01:08:39,199
+example, iodine concentration maps
+
+1796
+01:08:36,880 --> 01:08:41,440
+directly from the same scan. This means
+
+1797
+01:08:39,199 --> 01:08:43,600
+we are no longer limited to grayscale
+
+1798
+01:08:41,440 --> 01:08:45,759
+attenuation images.
+
+1799
+01:08:43,600 --> 01:08:48,159
+Instead, we can extract quantitative
+
+1800
+01:08:45,759 --> 01:08:50,560
+spectral information, detect contrast
+
+1801
+01:08:48,159 --> 01:08:52,640
+agents with high specificity, and even
+
+1802
+01:08:50,560 --> 01:08:54,799
+generate functional or molecular level
+
+1803
+01:08:52,640 --> 01:08:56,480
+insights.
+
+1804
+01:08:54,799 --> 01:08:58,719
+So, this is not just an incremental
+
+1805
+01:08:56,480 --> 01:09:00,719
+improvement. This represents a paradigm
+
+1806
+01:08:58,719 --> 01:09:03,279
+shift. We are moving from conventional
+
+1807
+01:09:00,719 --> 01:09:05,600
+black and white CT into a new era of
+
+1808
+01:09:03,279 --> 01:09:08,960
+spectral and molecular CT imaging
+
+1809
+01:09:05,600 --> 01:09:11,440
+powered by photon counting technology.
+
+1810
+01:09:08,960 --> 01:09:13,520
+The field is advancing rapidly and these
+
+1811
+01:09:11,440 --> 01:09:15,520
+first results are just the beginning.
+
+1812
+01:09:13,520 --> 01:09:18,000
+With further improvements, photon
+
+1813
+01:09:15,520 --> 01:09:20,400
+counting CT promises to fundamentally
+
+1814
+01:09:18,000 --> 01:09:23,120
+transform the way we diagnose and study
+
+1815
+01:09:20,400 --> 01:09:25,440
+human disease.
+
+1816
+01:09:23,120 --> 01:09:27,920
+Here
+
+1817
+01:09:25,440 --> 01:09:29,759
+is an inspiring analogy from biology.
+
+1818
+01:09:27,920 --> 01:09:32,080
+This is a microscopic view of the
+
+1819
+01:09:29,759 --> 01:09:34,400
+vertebrate retina. Truly an amazing
+
+1820
+01:09:32,080 --> 01:09:37,199
+design. You can see the two main types
+
+1821
+01:09:34,400 --> 01:09:38,960
+of photo receptors, the rods and the
+
+1822
+01:09:37,199 --> 01:09:40,719
+cones.
+
+1823
+01:09:38,960 --> 01:09:42,719
+Rods are highly sensitive to light
+
+1824
+01:09:40,719 --> 01:09:44,400
+intensity. They help us see in dim
+
+1825
+01:09:42,719 --> 01:09:46,960
+light, but they do not provide color
+
+1826
+01:09:44,400 --> 01:09:48,480
+information. In a way, they are like the
+
+1827
+01:09:46,960 --> 01:09:50,560
+energy integrating detectors we
+
+1828
+01:09:48,480 --> 01:09:52,880
+discussed earlier. They sum up all
+
+1829
+01:09:50,560 --> 01:09:54,640
+incoming light or in our case x-ray
+
+1830
+01:09:52,880 --> 01:09:56,560
+energy.
+
+1831
+01:09:54,640 --> 01:09:58,400
+Cones on the other hand are responsible
+
+1832
+01:09:56,560 --> 01:10:00,080
+for color vision. They are less
+
+1833
+01:09:58,400 --> 01:10:02,560
+sensitive to intensity but can
+
+1834
+01:10:00,080 --> 01:10:04,320
+distinguish between red, green and blue.
+
+1835
+01:10:02,560 --> 01:10:06,560
+In other words, they are like photon
+
+1836
+01:10:04,320 --> 01:10:09,280
+counting detectors. Slower but capable
+
+1837
+01:10:06,560 --> 01:10:10,880
+of providing spectral or energy specific
+
+1838
+01:10:09,280 --> 01:10:13,120
+information.
+
+1839
+01:10:10,880 --> 01:10:15,120
+So why does the human retina use both?
+
+1840
+01:10:13,120 --> 01:10:17,360
+Because together they give us a complete
+
+1841
+01:10:15,120 --> 01:10:19,520
+picture. Rods allow us to detect faint
+
+1842
+01:10:17,360 --> 01:10:22,320
+light with high sensitivity, while cones
+
+1843
+01:10:19,520 --> 01:10:24,880
+let us see rich color details.
+
+1844
+01:10:22,320 --> 01:10:27,679
+This hybrid approach is exactly the idea
+
+1845
+01:10:24,880 --> 01:10:29,760
+being explored in modern CT technology.
+
+1846
+01:10:27,679 --> 01:10:32,239
+Combining energy integrating detectors
+
+1847
+01:10:29,760 --> 01:10:34,080
+for strong highlux signals with photon
+
+1848
+01:10:32,239 --> 01:10:36,719
+counting detectors for detailed spectral
+
+1849
+01:10:34,080 --> 01:10:38,960
+information. Nature shows us that using
+
+1850
+01:10:36,719 --> 01:10:42,920
+both types of detectors in parallel can
+
+1851
+01:10:38,960 --> 01:10:42,920
+be the most efficient design.
+
+1852
+01:10:44,080 --> 01:10:49,840
+So here is the idea. We are pursuing a
+
+1853
+01:10:46,800 --> 01:10:51,600
+hybrid detector array. Instead of using
+
+1854
+01:10:49,840 --> 01:10:53,600
+only one type of detector, why not
+
+1855
+01:10:51,600 --> 01:10:55,120
+combine them? In this design, most
+
+1856
+01:10:53,600 --> 01:10:57,120
+pixels are traditional energy
+
+1857
+01:10:55,120 --> 01:10:59,040
+integrating detectors which provide
+
+1858
+01:10:57,120 --> 01:11:01,679
+strong grayscale signals with high
+
+1859
+01:10:59,040 --> 01:11:03,600
+efficiency. But we strategically insert
+
+1860
+01:11:01,679 --> 01:11:05,120
+photon counting detectors at certain
+
+1861
+01:11:03,600 --> 01:11:06,800
+positions.
+
+1862
+01:11:05,120 --> 01:11:08,719
+These pixels give us the spectral
+
+1863
+01:11:06,800 --> 01:11:10,239
+information, the energy resolve
+
+1864
+01:11:08,719 --> 01:11:12,560
+measurements that allow for material
+
+1865
+01:11:10,239 --> 01:11:15,840
+decomposition, K edge imaging and
+
+1866
+01:11:12,560 --> 01:11:18,000
+molecular contrast. By mixing the two,
+
+1867
+01:11:15,840 --> 01:11:19,600
+we get the best of both worlds. The
+
+1868
+01:11:18,000 --> 01:11:21,600
+robustness and speed of energy
+
+1869
+01:11:19,600 --> 01:11:23,600
+integrating detectors and the precision
+
+1870
+01:11:21,600 --> 01:11:25,600
+and specificity of photon counting
+
+1871
+01:11:23,600 --> 01:11:27,520
+detectors.
+
+1872
+01:11:25,600 --> 01:11:29,520
+This concept is similar to the retina
+
+1873
+01:11:27,520 --> 01:11:32,239
+analogy I mentioned earlier. Rods and
+
+1874
+01:11:29,520 --> 01:11:35,040
+cones working together. The rods give
+
+1875
+01:11:32,239 --> 01:11:37,040
+high sensitivity. The cones give color.
+
+1876
+01:11:35,040 --> 01:11:38,800
+Likewise, here the integrating detectors
+
+1877
+01:11:37,040 --> 01:11:40,800
+give us the structural information while
+
+1878
+01:11:38,800 --> 01:11:42,880
+the photon counting detectors add rich
+
+1879
+01:11:40,800 --> 01:11:44,640
+spectral detail.
+
+1880
+01:11:42,880 --> 01:11:46,880
+We have already published several papers
+
+1881
+01:11:44,640 --> 01:11:48,480
+on this hybrid design and it represents
+
+1882
+01:11:46,880 --> 01:11:52,600
+an exciting direction for the next
+
+1883
+01:11:48,480 --> 01:11:52,600
+generation of CT technology.
+
+1884
+01:11:54,400 --> 01:11:58,000
+Here I want to highlight the work of one
+
+1885
+01:11:56,000 --> 01:12:01,040
+of my former PhD students, James
+
+1886
+01:11:58,000 --> 01:12:03,280
+Bennett. James focused on the problem of
+
+1887
+01:12:01,040 --> 01:12:05,280
+cost and practicality. As you know,
+
+1888
+01:12:03,280 --> 01:12:06,960
+photon counting detectors are still very
+
+1889
+01:12:05,280 --> 01:12:09,040
+expensive. If we want to move this
+
+1890
+01:12:06,960 --> 01:12:11,199
+technology from the lab to widespread
+
+1891
+01:12:09,040 --> 01:12:12,719
+clinical use, we need solutions that
+
+1892
+01:12:11,199 --> 01:12:14,640
+balance performance with cost
+
+1893
+01:12:12,719 --> 01:12:17,280
+effectiveness.
+
+1894
+01:12:14,640 --> 01:12:19,600
+His dissertation, later published in IE
+
+1895
+01:12:17,280 --> 01:12:21,440
+transactions on biomedical engineering,
+
+1896
+01:12:19,600 --> 01:12:24,400
+presented a clever system design for
+
+1897
+01:12:21,440 --> 01:12:26,239
+hybrid spectral micro-Ct.
+
+1898
+01:12:24,400 --> 01:12:27,679
+He demonstrated how combining energy
+
+1899
+01:12:26,239 --> 01:12:29,280
+integrating detectors with photon
+
+1900
+01:12:27,679 --> 01:12:30,960
+counting detectors can achieve many of
+
+1901
+01:12:29,280 --> 01:12:34,640
+the benefits of full spectral imaging,
+
+1902
+01:12:30,960 --> 01:12:36,880
+but at a fraction of the cost.
+
+1903
+01:12:34,640 --> 01:12:38,960
+The results were promising. Improved
+
+1904
+01:12:36,880 --> 01:12:41,679
+contrast resolution, better spatial
+
+1905
+01:12:38,960 --> 01:12:43,280
+resolution, and lower radiation dose.
+
+1906
+01:12:41,679 --> 01:12:45,280
+This work was an important step toward
+
+1907
+01:12:43,280 --> 01:12:47,120
+making spectral CT more practical and
+
+1908
+01:12:45,280 --> 01:12:49,120
+accessible for real biomedical
+
+1909
+01:12:47,120 --> 01:12:50,880
+applications.
+
+1910
+01:12:49,120 --> 01:12:52,960
+So this is a good example of how
+
+1911
+01:12:50,880 --> 01:12:55,120
+doctoral research can contribute to both
+
+1912
+01:12:52,960 --> 01:12:59,400
+advancing the science and solving real
+
+1913
+01:12:55,120 --> 01:12:59,400
+world challenges in medical imaging.
+
+1914
+01:13:00,960 --> 01:13:05,520
+Here is another example of our research
+
+1915
+01:13:03,280 --> 01:13:07,600
+direction. This work also involving
+
+1916
+01:13:05,520 --> 01:13:09,760
+James and several collaborators focused
+
+1917
+01:13:07,600 --> 01:13:12,080
+on image reconstruction for hybrid true
+
+1918
+01:13:09,760 --> 01:13:13,520
+color microCT.
+
+1919
+01:13:12,080 --> 01:13:15,520
+The goal was to demonstrate that when
+
+1920
+01:13:13,520 --> 01:13:17,520
+you combine hybrid detectors with proper
+
+1921
+01:13:15,520 --> 01:13:20,480
+reconstruction algorithms, you can
+
+1922
+01:13:17,520 --> 01:13:23,040
+actually generate colorct images instead
+
+1923
+01:13:20,480 --> 01:13:25,199
+of the usual grayscale representation.
+
+1924
+01:13:23,040 --> 01:13:28,560
+Here you see different contrast agents
+
+1925
+01:13:25,199 --> 01:13:30,400
+represented in distinct colors.
+
+1926
+01:13:28,560 --> 01:13:32,400
+The figure on the left shows a phantom
+
+1927
+01:13:30,400 --> 01:13:34,239
+study, different inserts with iodine,
+
+1928
+01:13:32,400 --> 01:13:37,280
+gold, and other materials clearly
+
+1929
+01:13:34,239 --> 01:13:38,320
+separated into unique color channels.
+
+1930
+01:13:37,280 --> 01:13:40,400
+On the right, you can see
+
+1931
+01:13:38,320 --> 01:13:41,679
+reconstructions from biological samples
+
+1932
+01:13:40,400 --> 01:13:43,520
+where regions of interest are
+
+1933
+01:13:41,679 --> 01:13:45,280
+highlighted. Again, providing more
+
+1934
+01:13:43,520 --> 01:13:47,120
+specific information than traditional
+
+1935
+01:13:45,280 --> 01:13:50,000
+CT.
+
+1936
+01:13:47,120 --> 01:13:52,480
+So, this is really a proof of concept.
+
+1937
+01:13:50,000 --> 01:13:54,480
+With hybrid spectral CT, we can move
+
+1938
+01:13:52,480 --> 01:13:56,159
+beyond just structure and begin to
+
+1939
+01:13:54,480 --> 01:13:58,480
+recover molecular or functional
+
+1940
+01:13:56,159 --> 01:14:03,400
+information. This was an important step
+
+1941
+01:13:58,480 --> 01:14:03,400
+toward what we now call true color CT.
+
+1942
+01:14:04,880 --> 01:14:07,600
+All right, before we wrap up today's
+
+1943
+01:14:06,400 --> 01:14:09,760
+lecture, let me leave you with the
+
+1944
+01:14:07,600 --> 01:14:11,360
+homework assignment.
+
+1945
+01:14:09,760 --> 01:14:13,600
+From now on, we'll be following the
+
+1946
+01:14:11,360 --> 01:14:15,679
+green textbook as our main reference.
+
+1947
+01:14:13,600 --> 01:14:17,280
+Each week, I'll select a few problems
+
+1948
+01:14:15,679 --> 01:14:18,960
+that are especially useful for
+
+1949
+01:14:17,280 --> 01:14:20,480
+reinforcing the key concepts we've
+
+1950
+01:14:18,960 --> 01:14:22,159
+covered.
+
+1951
+01:14:20,480 --> 01:14:25,040
+For this week, please work on the
+
+1952
+01:14:22,159 --> 01:14:29,520
+following three problems. Page 50,
+
+1953
+01:14:25,040 --> 01:14:32,640
+problem 1.1. Page 51, problem 1.3. Page
+
+1954
+01:14:29,520 --> 01:14:34,239
+51, problem 1.6.
+
+1955
+01:14:32,640 --> 01:14:35,760
+These are not particularly difficult,
+
+1956
+01:14:34,239 --> 01:14:37,440
+but they will give you a chance to apply
+
+1957
+01:14:35,760 --> 01:14:40,480
+what we've discussed in class and make
+
+1958
+01:14:37,440 --> 01:14:42,320
+sure the ideas really sink in.
+
+1959
+01:14:40,480 --> 01:14:46,600
+So much for today's lecture. Thank you
+
+1960
+01:14:42,320 --> 01:14:46,600
+and I'll see you in the next class.
+

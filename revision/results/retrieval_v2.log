@@ -1,0 +1,23 @@
+Loading weights:   0%|          | 0/199 [00:00<?, ?it/s]Loading weights: 100%|██████████| 199/199 [00:00<00:00, 2615.19it/s]
+[1mMPNetModel LOAD REPORT[0m from: sentence-transformers/all-mpnet-base-v2
+Key                     | Status     |  | 
+------------------------+------------+--+-
+embeddings.position_ids | UNEXPECTED |  | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+original protocol: {'semantic': {'ndcg1': 0.3, 'ndcg3': 0.4092, 'ndcg5': 0.4613, 'hit1': 0.3, 'hit5': 0.62}, 'timestamp': {'ndcg1': 0.62, 'ndcg3': 0.6657, 'ndcg5': 0.6706, 'hit1': 0.62, 'hit5': 0.74}}
+semantic                     during:0.300  lag1:0.300  lag3:0.300  lag5:0.300
+timestamp_only               during:0.960  lag1:0.552  lag3:0.220  lag5:0.132
+hybrid_deployed_gridtimes    during:0.020  lag1:0.000  lag3:0.012  lag5:0.008
+hybrid_deployed_realtimes    during:0.636  lag1:0.588  lag3:0.340  lag5:0.196
+hybrid_local_cv              during:0.932  lag1:0.844  lag3:0.564  lag5:0.412
+cv lambdas [0.05, 0.05, 0.05, 0.05, 0.05]
+during:hybrid_local_cv_vs_semantic {'delta': 0.632, 'p': 6.451057139335519e-08, 'p_holm': 0.0}
+during:hybrid_local_cv_vs_timestamp_only {'delta': -0.028, 'p': 0.5697521021140692, 'p_holm': 0.56975}
+lag1:hybrid_local_cv_vs_semantic {'delta': 0.544, 'p': 7.176442389925559e-07, 'p_holm': 1e-05}
+lag1:hybrid_local_cv_vs_timestamp_only {'delta': 0.292, 'p': 9.057414254949424e-05, 'p_holm': 0.00045}
+lag3:hybrid_local_cv_vs_semantic {'delta': 0.264, 'p': 0.0032895257627624606, 'p_holm': 0.00987}
+lag3:hybrid_local_cv_vs_timestamp_only {'delta': 0.344, 'p': 6.025295272873974e-05, 'p_holm': 0.00036}
+lag5:hybrid_local_cv_vs_semantic {'delta': 0.112, 'p': 0.20358298142205766, 'p_holm': 0.40717}
+lag5:hybrid_local_cv_vs_timestamp_only {'delta': 0.28, 'p': 0.00020255961990801261, 'p_holm': 0.00081}

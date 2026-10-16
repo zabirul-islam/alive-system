@@ -1,0 +1,18 @@
+\begin{table}[!htbp]
+\centering
+\caption{Slide timings from raw ASR versus subtitles}
+\label{tab:sup_e6}
+\small
+\begin{tabular}{lcccccc}
+\toprule
+\textbf{Lecture} & \textbf{ASR seg.} & \textbf{Slides} & \textbf{Overlap} & \textbf{Mean $|\Delta|$ (s)} & \textbf{Median $|\Delta|$ (s)} & \textbf{$\leq$10\,s} \\
+\midrule
+Lecture 2 & 481 & 50 & 0.95 & 0.9 & 0.2 & 100\% \\
+Lecture 13 & 1196 & 50 & 0.98 & 1.9 & 0.4 & 100\% \\
+Lecture 19 & 2734 & 55 & 0.78 & 3.9 & 3.5 & 94\% \\
+\bottomrule
+\end{tabular}
+\tabnotes{Whisper large-v3 segments aligned to the slide scripts with the same aligner as the subtitles. Overlap = mean
+fraction of segment tokens found in the assigned slide; $|\Delta|$ = absolute difference between the ASR-based and
+subtitle-based slide start times; $\leq$10\,s = share of slides whose start times differ by at most 10\,s.}
+\end{table}

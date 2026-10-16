@@ -1,0 +1,5952 @@
+1
+00:00:01,760 --> 00:00:06,640
+Welcome back. We can see today's topic
+
+2
+00:00:04,000 --> 00:00:08,320
+is CT reconstruction.
+
+3
+00:00:06,640 --> 00:00:10,160
+In this session, we'll build on that
+
+4
+00:00:08,320 --> 00:00:11,759
+foundation and map raw X-ray
+
+5
+00:00:10,160 --> 00:00:14,080
+measurements into cross-sectional
+
+6
+00:00:11,759 --> 00:00:16,160
+images. By the end, you'll have a clear
+
+7
+00:00:14,080 --> 00:00:17,920
+road map of the reconstruction pipeline
+
+8
+00:00:16,160 --> 00:00:20,240
+and where classic methods such as
+
+9
+00:00:17,920 --> 00:00:22,880
+filtered back projection and modern
+
+10
+00:00:20,240 --> 00:00:26,840
+iterative ideas fit into an online
+
+11
+00:00:22,880 --> 00:00:26,840
+realorld CT workflow.
+
+12
+00:00:28,480 --> 00:00:33,760
+Let's take a look at the road map. We're
+
+13
+00:00:30,240 --> 00:00:35,680
+at the CT reconstruction milestone.
+
+14
+00:00:33,760 --> 00:00:37,440
+Keep one core idea in mind from the
+
+15
+00:00:35,680 --> 00:00:39,760
+physics background. The roles of the
+
+16
+00:00:37,440 --> 00:00:42,000
+X-ray source, the detector, and how a
+
+17
+00:00:39,760 --> 00:00:44,160
+measurement is formed. Each reading can
+
+18
+00:00:42,000 --> 00:00:46,239
+be interpreted as a line integral of the
+
+19
+00:00:44,160 --> 00:00:47,760
+attenuation coefficient along a straight
+
+20
+00:00:46,239 --> 00:00:49,920
+ray.
+
+21
+00:00:47,760 --> 00:00:52,079
+With that model in place, we now focus
+
+22
+00:00:49,920 --> 00:00:54,320
+on algorithms that invert those line
+
+23
+00:00:52,079 --> 00:00:56,800
+integrals to recover cross-sectional
+
+24
+00:00:54,320 --> 00:00:58,879
+images. If you'd like more depth on the
+
+25
+00:00:56,800 --> 00:01:03,480
+geometry or notation, the companion
+
+26
+00:00:58,879 --> 00:01:03,480
+reading for this module provides it.
+
+27
+00:01:04,799 --> 00:01:09,040
+Let's take a look at a few habits that
+
+28
+00:01:06,560 --> 00:01:11,280
+make this module easier.
+
+29
+00:01:09,040 --> 00:01:12,960
+First, recommended reading G's book and
+
+30
+00:01:11,280 --> 00:01:15,119
+the widely used green book. Together,
+
+31
+00:01:12,960 --> 00:01:17,119
+they give both intuition and practical
+
+32
+00:01:15,119 --> 00:01:19,119
+formulas.
+
+33
+00:01:17,119 --> 00:01:21,439
+Next, focus on the logic flow in the
+
+34
+00:01:19,119 --> 00:01:24,080
+video lessons and slides, how each idea
+
+35
+00:01:21,439 --> 00:01:25,920
+leads to the next. Aim to capture the
+
+36
+00:01:24,080 --> 00:01:28,320
+key concepts rather than memorize
+
+37
+00:01:25,920 --> 00:01:30,400
+isolated facts.
+
+38
+00:01:28,320 --> 00:01:32,640
+Build skills by working on problems from
+
+39
+00:01:30,400 --> 00:01:34,400
+homework and textbook questions. Problem
+
+40
+00:01:32,640 --> 00:01:36,240
+solving is where concepts become
+
+41
+00:01:34,400 --> 00:01:38,240
+durable.
+
+42
+00:01:36,240 --> 00:01:40,560
+Adopt a simple routine. Preview, learn,
+
+43
+00:01:38,240 --> 00:01:42,479
+review, repeat. Preview the slide
+
+44
+00:01:40,560 --> 00:01:44,320
+headlines, watch the lesson, then review
+
+45
+00:01:42,479 --> 00:01:47,119
+by summarizing in your own words and
+
+46
+00:01:44,320 --> 00:01:49,200
+redoing one or two problems.
+
+47
+00:01:47,119 --> 00:01:51,119
+For foundations, give extra attention to
+
+48
+00:01:49,200 --> 00:01:53,200
+Forier analysis and the sampling
+
+49
+00:01:51,119 --> 00:01:54,960
+theorem. These are the grammar of modern
+
+50
+00:01:53,200 --> 00:01:56,960
+imaging.
+
+51
+00:01:54,960 --> 00:01:59,360
+They will pay off when we study CT
+
+52
+00:01:56,960 --> 00:02:02,399
+filtered back projection and later MRI
+
+53
+00:01:59,360 --> 00:02:03,759
+pulse sequences and other modalities. If
+
+54
+00:02:02,399 --> 00:02:08,759
+questions come up, post them in the
+
+55
+00:02:03,759 --> 00:02:08,759
+course quand so others can benefit too.
+
+56
+00:02:10,000 --> 00:02:13,840
+Here we observe the plan for CT
+
+57
+00:02:11,920 --> 00:02:15,920
+reconstruction.
+
+58
+00:02:13,840 --> 00:02:18,160
+We will connect data space, the set of
+
+59
+00:02:15,920 --> 00:02:20,160
+X-ray line integrals to image space, the
+
+60
+00:02:18,160 --> 00:02:23,280
+distribution of attenuation, usually
+
+61
+00:02:20,160 --> 00:02:25,599
+written as mu of XY. Think of this as a
+
+62
+00:02:23,280 --> 00:02:27,680
+duality of information. Each view in the
+
+63
+00:02:25,599 --> 00:02:30,879
+synog encodes a different slice of
+
+64
+00:02:27,680 --> 00:02:33,519
+information about the same object.
+
+65
+00:02:30,879 --> 00:02:35,840
+We'll compare two families of methods.
+
+66
+00:02:33,519 --> 00:02:37,599
+Algebraic approach.
+
+67
+00:02:35,840 --> 00:02:41,040
+We model the scanner with linear
+
+68
+00:02:37,599 --> 00:02:42,959
+equations. A * x= b.
+
+69
+00:02:41,040 --> 00:02:45,280
+This viewpoint helps us reason about
+
+70
+00:02:42,959 --> 00:02:47,200
+solution uniqueness. For example, when A
+
+71
+00:02:45,280 --> 00:02:49,440
+has full column rank and about data
+
+72
+00:02:47,200 --> 00:02:51,519
+independence and sufficiency, meaning we
+
+73
+00:02:49,440 --> 00:02:54,480
+need enough non-redundant views and
+
+74
+00:02:51,519 --> 00:02:56,560
+detector samples to determine X stably,
+
+75
+00:02:54,480 --> 00:02:59,200
+regularization can be added to handle
+
+76
+00:02:56,560 --> 00:03:02,080
+noise or limited angles.
+
+77
+00:02:59,200 --> 00:03:04,959
+Analytic approach. This relies on for
+
+78
+00:03:02,080 --> 00:03:07,120
+analysis by the Forier slice theorem.
+
+79
+00:03:04,959 --> 00:03:09,360
+The one-dimensional forier transform of
+
+80
+00:03:07,120 --> 00:03:11,360
+a projection at angle theta equals a
+
+81
+00:03:09,360 --> 00:03:13,519
+radial slice through the two-dimensional
+
+82
+00:03:11,360 --> 00:03:15,280
+forier transform of the object at the
+
+83
+00:03:13,519 --> 00:03:17,360
+same angle.
+
+84
+00:03:15,280 --> 00:03:20,319
+From this principle, we derive filtered
+
+85
+00:03:17,360 --> 00:03:22,560
+back projection FBP. First apply a
+
+86
+00:03:20,319 --> 00:03:24,959
+frequency domain ramp filter magnitude
+
+87
+00:03:22,560 --> 00:03:27,040
+of omega to each projection. Then smear
+
+88
+00:03:24,959 --> 00:03:29,920
+or back project the filtered data across
+
+89
+00:03:27,040 --> 00:03:31,360
+the image grid. FBP is fast and remains
+
+90
+00:03:29,920 --> 00:03:34,360
+the standard for many clinical
+
+91
+00:03:31,360 --> 00:03:34,360
+workflows.
+
+92
+00:03:35,920 --> 00:03:39,599
+Let's take a moment to underline the
+
+93
+00:03:37,680 --> 00:03:41,280
+information.
+
+94
+00:03:39,599 --> 00:03:43,519
+Like in physics, we have a particle
+
+95
+00:03:41,280 --> 00:03:45,680
+property and a wave property. For image
+
+96
+00:03:43,519 --> 00:03:47,680
+reconstruction, we can make an analogy.
+
+97
+00:03:45,680 --> 00:03:49,360
+We can view the underlying image in two
+
+98
+00:03:47,680 --> 00:03:51,280
+ways.
+
+99
+00:03:49,360 --> 00:03:52,640
+First, we view the image as a collection
+
+100
+00:03:51,280 --> 00:03:54,560
+of pixels if the image is
+
+101
+00:03:52,640 --> 00:03:56,640
+two-dimensional or as pixels for
+
+102
+00:03:54,560 --> 00:03:58,720
+three-dimensional images. A collection
+
+103
+00:03:56,640 --> 00:04:01,439
+of particles here meaning picture
+
+104
+00:03:58,720 --> 00:04:04,159
+elements. The pixels, the pixels for 3D.
+
+105
+00:04:01,439 --> 00:04:06,239
+These are often called voxels.
+
+106
+00:04:04,159 --> 00:04:09,680
+The other way is complimentary. We view
+
+107
+00:04:06,239 --> 00:04:11,280
+the image as a superposition of waves.
+
+108
+00:04:09,680 --> 00:04:12,959
+For a two-dimensional image, for
+
+109
+00:04:11,280 --> 00:04:15,120
+example, think of the image as a
+
+110
+00:04:12,959 --> 00:04:17,440
+summation of many waves propagating
+
+111
+00:04:15,120 --> 00:04:19,199
+along different orientations. For a
+
+112
+00:04:17,440 --> 00:04:20,639
+given orientation, the wave can be at
+
+113
+00:04:19,199 --> 00:04:24,160
+different frequencies and you have
+
+114
+00:04:20,639 --> 00:04:25,759
+amplitude, frequency, and phase.
+
+115
+00:04:24,160 --> 00:04:27,280
+If all these parameters are set
+
+116
+00:04:25,759 --> 00:04:30,000
+correctly and you add all these waves
+
+117
+00:04:27,280 --> 00:04:32,479
+together, you obtain the image. This is
+
+118
+00:04:30,000 --> 00:04:34,320
+the basic high-level idea. The particle
+
+119
+00:04:32,479 --> 00:04:37,880
+and wave perspectives of the image and
+
+120
+00:04:34,320 --> 00:04:37,880
+of image reconstruction.
+
+121
+00:04:39,680 --> 00:04:44,000
+Let me explain a little further.
+
+122
+00:04:42,320 --> 00:04:46,240
+Take an arbitrary picture, say a
+
+123
+00:04:44,000 --> 00:04:47,840
+portrait of our former president. You
+
+124
+00:04:46,240 --> 00:04:50,320
+can decompose the picture into many,
+
+125
+00:04:47,840 --> 00:04:52,320
+many small elements. For each element,
+
+126
+00:04:50,320 --> 00:04:54,720
+it's very simple. Just a homogeneous
+
+127
+00:04:52,320 --> 00:04:56,320
+pixel, a small square. Add these
+
+128
+00:04:54,720 --> 00:04:58,320
+together.
+
+129
+00:04:56,320 --> 00:04:59,759
+The trick is really the amplitude. You
+
+130
+00:04:58,320 --> 00:05:02,320
+need to make sure all these amplitudes
+
+131
+00:04:59,759 --> 00:05:03,600
+are modulated nicely. Then when you put
+
+132
+00:05:02,320 --> 00:05:05,440
+them together, you have the perception
+
+133
+00:05:03,600 --> 00:05:07,759
+of a picture or a natural scene
+
+134
+00:05:05,440 --> 00:05:10,759
+whatever. This is one way to represent a
+
+135
+00:05:07,759 --> 00:05:10,759
+picture.
+
+136
+00:05:12,240 --> 00:05:16,720
+Another way as mentioned is forier
+
+137
+00:05:14,080 --> 00:05:18,880
+analysis. In a two-dimensional picture,
+
+138
+00:05:16,720 --> 00:05:21,280
+you perform a forier analysis and obtain
+
+139
+00:05:18,880 --> 00:05:23,199
+a forier spectrum.
+
+140
+00:05:21,280 --> 00:05:24,960
+Pick any point. The frequency is
+
+141
+00:05:23,199 --> 00:05:26,800
+proportional to the distance from the
+
+142
+00:05:24,960 --> 00:05:28,560
+origin to that point in the forier
+
+143
+00:05:26,800 --> 00:05:30,720
+domain.
+
+144
+00:05:28,560 --> 00:05:32,400
+In this example, you see the frequency
+
+145
+00:05:30,720 --> 00:05:34,400
+and you also have an amplitude
+
+146
+00:05:32,400 --> 00:05:36,720
+proportional to the value at this
+
+147
+00:05:34,400 --> 00:05:40,000
+particular point that gives a particular
+
+148
+00:05:36,720 --> 00:05:42,720
+wave propagating along that direction.
+
+149
+00:05:40,000 --> 00:05:44,960
+Forier analysis uses all kinds of wave
+
+150
+00:05:42,720 --> 00:05:47,199
+components. The DC component, horizontal
+
+151
+00:05:44,960 --> 00:05:49,680
+waves, vertical waves, low frequency,
+
+152
+00:05:47,199 --> 00:05:51,919
+high frequency, and waves that propagate
+
+153
+00:05:49,680 --> 00:05:54,160
+in arbitrary directions. All these kinds
+
+154
+00:05:51,919 --> 00:05:56,240
+of waves. The trick is the setting of
+
+155
+00:05:54,160 --> 00:05:58,000
+the parameters.
+
+156
+00:05:56,240 --> 00:06:00,160
+Once you find the coefficients, you add
+
+157
+00:05:58,000 --> 00:06:02,320
+the forier components together and then
+
+158
+00:06:00,160 --> 00:06:05,680
+you can recover the image. In this case,
+
+159
+00:06:02,320 --> 00:06:07,520
+Albert Einstein.
+
+160
+00:06:05,680 --> 00:06:09,199
+So there are two ways and based on these
+
+161
+00:06:07,520 --> 00:06:12,199
+two perspectives we can have two
+
+162
+00:06:09,199 --> 00:06:12,199
+approaches.
+
+163
+00:06:13,919 --> 00:06:18,560
+We introduce two families of methods,
+
+164
+00:06:15,919 --> 00:06:20,319
+algebraic and analytic. Let's begin with
+
+165
+00:06:18,560 --> 00:06:24,520
+the algebraic approach and set up the
+
+166
+00:06:20,319 --> 00:06:24,520
+measurement model it relies on.
+
+167
+00:06:25,759 --> 00:06:30,400
+The measurement can be written in line
+
+168
+00:06:27,520 --> 00:06:32,080
+integral form or in ray sum form. Let me
+
+169
+00:06:30,400 --> 00:06:34,319
+explain.
+
+170
+00:06:32,080 --> 00:06:36,960
+First, we have an incoming intensity ni
+
+171
+00:06:34,319 --> 00:06:38,800
+and an output intensity n o. The output
+
+172
+00:06:36,960 --> 00:06:41,280
+is related to the input through linear
+
+173
+00:06:38,800 --> 00:06:44,160
+attenuation. For a single element along
+
+174
+00:06:41,280 --> 00:06:48,560
+the ray, the attenuation is mu* delta x
+
+175
+00:06:44,160 --> 00:06:50,639
+where delta x is the pixel size.
+
+176
+00:06:48,560 --> 00:06:52,720
+With multiple material components along
+
+177
+00:06:50,639 --> 00:06:54,880
+the path, the incoming intensity is
+
+178
+00:06:52,720 --> 00:06:56,720
+attenuated by the first pixel. The
+
+179
+00:06:54,880 --> 00:06:59,039
+output of the first pixel becomes the
+
+180
+00:06:56,720 --> 00:07:00,880
+input to the second pixel and so on.
+
+181
+00:06:59,039 --> 00:07:03,199
+Adding these effects together gives the
+
+182
+00:07:00,880 --> 00:07:07,039
+standard relationship. This is a quick
+
+183
+00:07:03,199 --> 00:07:09,520
+review of the earlier module.
+
+184
+00:07:07,039 --> 00:07:11,680
+The attenuated output equals the input
+
+185
+00:07:09,520 --> 00:07:13,919
+multiplied by an exponential factor
+
+186
+00:07:11,680 --> 00:07:16,639
+whose exponent is the negative sum of
+
+187
+00:07:13,919 --> 00:07:19,360
+the little muk values each weighted by
+
+188
+00:07:16,639 --> 00:07:21,599
+delta x. This is our imaging model or
+
+189
+00:07:19,360 --> 00:07:23,440
+data model. What is known and what is
+
+190
+00:07:21,599 --> 00:07:26,160
+unknown?
+
+191
+00:07:23,440 --> 00:07:29,039
+Known n i n o and the step size delta x
+
+192
+00:07:26,160 --> 00:07:32,880
+that we choose. Unknown. The set mu k
+
+193
+00:07:29,039 --> 00:07:34,960
+for k= 1 2 3 e n
+
+194
+00:07:32,880 --> 00:07:38,639
+normalize by taking a ratio and then a
+
+195
+00:07:34,960 --> 00:07:42,880
+natural logarithm. Natural log of ni / n
+
+196
+00:07:38,639 --> 00:07:44,479
+equals the sum over k of mu k * delta x.
+
+197
+00:07:42,880 --> 00:07:47,039
+This is a linear equation in the
+
+198
+00:07:44,479 --> 00:07:49,599
+unknowns mu k with delta x acting as a
+
+199
+00:07:47,039 --> 00:07:51,520
+weight. Because ni and n o are measured,
+
+200
+00:07:49,599 --> 00:07:54,479
+the right hand side is known after the
+
+201
+00:07:51,520 --> 00:07:56,960
+log. For each x-ray path, we obtain one
+
+202
+00:07:54,479 --> 00:07:58,720
+linear equation. With many paths, we
+
+203
+00:07:56,960 --> 00:08:02,400
+obtain a system of linear equations
+
+204
+00:07:58,720 --> 00:08:04,319
+often written compactly as a * x= b. In
+
+205
+00:08:02,400 --> 00:08:06,319
+this algebraic view, the image is
+
+206
+00:08:04,319 --> 00:08:08,319
+treated as pixels and each measurement
+
+207
+00:08:06,319 --> 00:08:10,560
+provides a linear constraint on those
+
+208
+00:08:08,319 --> 00:08:12,800
+pixel values.
+
+209
+00:08:10,560 --> 00:08:15,599
+If we take the limit as delta x becomes
+
+210
+00:08:12,800 --> 00:08:18,160
+very small, the sum becomes an integral.
+
+211
+00:08:15,599 --> 00:08:23,120
+The integral along the ray of mu of x dx
+
+212
+00:08:18,160 --> 00:08:25,120
+equals the natural log of ni / n o.
+
+213
+00:08:23,120 --> 00:08:27,599
+So in the discrete domain, we speak of a
+
+214
+00:08:25,120 --> 00:08:29,520
+ray sum, a summation. And in the
+
+215
+00:08:27,599 --> 00:08:31,919
+continuous domain, we speak of a line
+
+216
+00:08:29,520 --> 00:08:34,320
+integral, an integral along the x-ray
+
+217
+00:08:31,919 --> 00:08:36,399
+path. Either way, x-ray measurements
+
+218
+00:08:34,320 --> 00:08:38,880
+provide ray sums or line integrals of
+
+219
+00:08:36,399 --> 00:08:40,800
+the attenuation field. With this model
+
+220
+00:08:38,880 --> 00:08:42,800
+in mind, we can now discuss why the
+
+221
+00:08:40,800 --> 00:08:47,159
+resulting linear system can have a
+
+222
+00:08:42,800 --> 00:08:47,159
+unique solution, at least heristically.
+
+223
+00:08:48,959 --> 00:08:52,320
+This is what I call the onion peeling
+
+224
+00:08:50,720 --> 00:08:54,240
+idea.
+
+225
+00:08:52,320 --> 00:08:56,720
+Think of a picture and decompose it into
+
+226
+00:08:54,240 --> 00:08:58,160
+a collection of pixels.
+
+227
+00:08:56,720 --> 00:09:00,080
+The pixel does not have to be
+
+228
+00:08:58,160 --> 00:09:03,040
+rectangular. Here I use triangular
+
+229
+00:09:00,080 --> 00:09:05,519
+pixels. I perform the decomposition into
+
+230
+00:09:03,040 --> 00:09:08,000
+many many triangular pixels and then
+
+231
+00:09:05,519 --> 00:09:09,680
+resolve the unknowns layer by layer.
+
+232
+00:09:08,000 --> 00:09:12,000
+Start with the outermost unknowns
+
+233
+00:09:09,680 --> 00:09:15,279
+represented as a right triangle. This is
+
+234
+00:09:12,000 --> 00:09:17,279
+a huristic idea. So follow the logic.
+
+235
+00:09:15,279 --> 00:09:19,120
+In the limiting case, imagine the object
+
+236
+00:09:17,279 --> 00:09:21,600
+support where an X-ray touches one
+
+237
+00:09:19,120 --> 00:09:24,160
+molecule, an extremely small element.
+
+238
+00:09:21,600 --> 00:09:26,320
+Take this as an example.
+
+239
+00:09:24,160 --> 00:09:28,000
+You have a small material element. You
+
+240
+00:09:26,320 --> 00:09:30,640
+know the incoming intensity, you know
+
+241
+00:09:28,000 --> 00:09:32,399
+the attenuated intensity. And because
+
+242
+00:09:30,640 --> 00:09:34,560
+the data are partitioned, you know the
+
+243
+00:09:32,399 --> 00:09:36,240
+total path length. From these three
+
+244
+00:09:34,560 --> 00:09:38,399
+knowns, you can resolve the only
+
+245
+00:09:36,240 --> 00:09:42,320
+unknown, the attenuation coefficient
+
+246
+00:09:38,399 --> 00:09:43,760
+moo, call it mu0 or mu1 for that pixel.
+
+247
+00:09:42,320 --> 00:09:45,839
+By assumption, this pixel is
+
+248
+00:09:43,760 --> 00:09:47,680
+homogeneous.
+
+249
+00:09:45,839 --> 00:09:50,160
+With this simple argument, you now know
+
+250
+00:09:47,680 --> 00:09:52,080
+moo for this right triangle. By the same
+
+251
+00:09:50,160 --> 00:09:53,839
+argument, all the right layer pixels can
+
+252
+00:09:52,080 --> 00:09:55,839
+be directly measured with a prior flow
+
+253
+00:09:53,839 --> 00:09:57,519
+of x-rays.
+
+254
+00:09:55,839 --> 00:10:00,240
+Once that is done, move to the next
+
+255
+00:09:57,519 --> 00:10:01,839
+layer colored green. use a green X-ray.
+
+256
+00:10:00,240 --> 00:10:04,320
+You know the incoming intensity and the
+
+257
+00:10:01,839 --> 00:10:06,080
+attenuated intensity. You already know
+
+258
+00:10:04,320 --> 00:10:08,000
+mu for the right element and you also
+
+259
+00:10:06,080 --> 00:10:09,839
+know mu for the current neighbor.
+
+260
+00:10:08,000 --> 00:10:11,680
+Because you know these mu values, you
+
+261
+00:10:09,839 --> 00:10:13,680
+can compute how the incoming intensity
+
+262
+00:10:11,680 --> 00:10:16,240
+is attenuated and thus determine the
+
+263
+00:10:13,680 --> 00:10:18,079
+incoming flux into the green pixel. You
+
+264
+00:10:16,240 --> 00:10:20,640
+also know the attenuated intensity
+
+265
+00:10:18,079 --> 00:10:22,720
+leaving this location. That attenuated
+
+266
+00:10:20,640 --> 00:10:24,880
+intensity is the quantity just out of
+
+267
+00:10:22,720 --> 00:10:27,360
+the green pixel but further attenuated
+
+268
+00:10:24,880 --> 00:10:28,959
+by the right pixel. Using Beer's law in
+
+269
+00:10:27,360 --> 00:10:31,839
+reverse, you back out the intensity
+
+270
+00:10:28,959 --> 00:10:33,440
+before that extra attenuation.
+
+271
+00:10:31,839 --> 00:10:35,120
+Now you know the value here, you know
+
+272
+00:10:33,440 --> 00:10:37,279
+the value there, and you know the total
+
+273
+00:10:35,120 --> 00:10:39,600
+length. So you can resolve mu for this
+
+274
+00:10:37,279 --> 00:10:41,279
+particular green triangular pixel.
+
+275
+00:10:39,600 --> 00:10:44,160
+Likewise, each of the green elements is
+
+276
+00:10:41,279 --> 00:10:46,720
+resolved.
+
+277
+00:10:44,160 --> 00:10:48,240
+Next move to the light blue ray. At this
+
+278
+00:10:46,720 --> 00:10:50,160
+point, the green and the right layers
+
+279
+00:10:48,240 --> 00:10:52,959
+are known. Only this one remaining
+
+280
+00:10:50,160 --> 00:10:54,720
+element is unknown. The same heristic
+
+281
+00:10:52,959 --> 00:10:56,720
+applies.
+
+282
+00:10:54,720 --> 00:10:59,360
+This argument ties the relations without
+
+283
+00:10:56,720 --> 00:11:01,200
+complicated mathematics.
+
+284
+00:10:59,360 --> 00:11:02,640
+Huristically, you can peel the image
+
+285
+00:11:01,200 --> 00:11:05,040
+layer by layer and resolve the
+
+286
+00:11:02,640 --> 00:11:06,640
+underlying image algebraically. When you
+
+287
+00:11:05,040 --> 00:11:08,560
+solve the linear system equation
+
+288
+00:11:06,640 --> 00:11:11,760
+pixel-wise, you are essentially doing
+
+289
+00:11:08,560 --> 00:11:14,000
+exactly this layer by layer. In parallel
+
+290
+00:11:11,760 --> 00:11:15,600
+beam geometry, you can send all possible
+
+291
+00:11:14,000 --> 00:11:17,120
+rays and reorder them. So, you
+
+292
+00:11:15,600 --> 00:11:19,279
+effectively view the object from the
+
+293
+00:11:17,120 --> 00:11:21,760
+outermost layer inward, resolving all
+
+294
+00:11:19,279 --> 00:11:24,760
+unknowns layer by layer. This is the key
+
+295
+00:11:21,760 --> 00:11:24,760
+argument.
+
+296
+00:11:26,320 --> 00:11:29,839
+So mathematically we can state a data
+
+297
+00:11:28,480 --> 00:11:32,240
+sufficiency condition for
+
+298
+00:11:29,839 --> 00:11:33,760
+two-dimensional image reconstruction.
+
+299
+00:11:32,240 --> 00:11:35,680
+You have a cross-section and you
+
+300
+00:11:33,760 --> 00:11:38,320
+arbitrarily draw lines. These are the
+
+301
+00:11:35,680 --> 00:11:39,839
+X-ray paths. For any such line we say
+
+302
+00:11:38,320 --> 00:11:41,600
+you can find at least one source
+
+303
+00:11:39,839 --> 00:11:43,839
+position.
+
+304
+00:11:41,600 --> 00:11:45,920
+What does that mean?
+
+305
+00:11:43,839 --> 00:11:48,160
+It means that along this line an X-ray
+
+306
+00:11:45,920 --> 00:11:50,079
+source sends rays in this direction. So
+
+307
+00:11:48,160 --> 00:11:52,160
+the line integral or ray sum is
+
+308
+00:11:50,079 --> 00:11:54,640
+measured. It doesn't mean you have every
+
+309
+00:11:52,160 --> 00:11:56,320
+piece of information you might want. It
+
+310
+00:11:54,640 --> 00:11:58,160
+means if a line intersects the
+
+311
+00:11:56,320 --> 00:12:00,640
+cross-section, then we have data on that
+
+312
+00:11:58,160 --> 00:12:02,399
+line. That is the maximum amount of data
+
+313
+00:12:00,640 --> 00:12:03,920
+you could have. And under this simple
+
+314
+00:12:02,399 --> 00:12:05,760
+understanding, that amount is
+
+315
+00:12:03,920 --> 00:12:07,519
+sufficient.
+
+316
+00:12:05,760 --> 00:12:10,079
+This is the way I understand the subject
+
+317
+00:12:07,519 --> 00:12:11,680
+and how I try to explain it to students.
+
+318
+00:12:10,079 --> 00:12:14,399
+I like to give you a picture and some
+
+319
+00:12:11,680 --> 00:12:17,440
+visual geometrical ideas. If you feel
+
+320
+00:12:14,399 --> 00:12:19,120
+confused, you can watch my lesson.
+
+321
+00:12:17,440 --> 00:12:21,440
+Right now, I think there are about half
+
+322
+00:12:19,120 --> 00:12:23,120
+a million viewers. a lot of likes. So, I
+
+323
+00:12:21,440 --> 00:12:24,959
+really hope your watch gives me a like.
+
+324
+00:12:23,120 --> 00:12:26,720
+That's good.
+
+325
+00:12:24,959 --> 00:12:28,959
+Some other heristics are very important,
+
+326
+00:12:26,720 --> 00:12:30,480
+but not easy.
+
+327
+00:12:28,959 --> 00:12:32,560
+For example, when you compute the
+
+328
+00:12:30,480 --> 00:12:34,560
+coefficient, think of it as an inner
+
+329
+00:12:32,560 --> 00:12:37,200
+product, a highdimensional vector
+
+330
+00:12:34,560 --> 00:12:39,279
+projected onto a basis function. That is
+
+331
+00:12:37,200 --> 00:12:41,440
+a very important heristic, but I doubt
+
+332
+00:12:39,279 --> 00:12:43,760
+all of you fully understand it. If you
+
+333
+00:12:41,440 --> 00:12:45,519
+don't, please review.
+
+334
+00:12:43,760 --> 00:12:49,160
+Anyway, this is the idea of the data
+
+335
+00:12:45,519 --> 00:12:49,160
+sufficiency condition.
+
+336
+00:12:50,800 --> 00:12:55,519
+Okay, with X-rays, we can measure
+
+337
+00:12:53,040 --> 00:12:57,519
+parallel beam projections as shown here.
+
+338
+00:12:55,519 --> 00:13:00,000
+Along each X-ray, each datim gives you
+
+339
+00:12:57,519 --> 00:13:02,320
+one linear system equation. If you have
+
+340
+00:13:00,000 --> 00:13:05,680
+a parallel beam at projection angle
+
+341
+00:13:02,320 --> 00:13:08,800
+theta and you have say 100 rays or 500
+
+342
+00:13:05,680 --> 00:13:11,279
+rays, then you have 100 or 500 linear
+
+343
+00:13:08,800 --> 00:13:13,120
+system equations.
+
+344
+00:13:11,279 --> 00:13:15,600
+One view is not enough because you
+
+345
+00:13:13,120 --> 00:13:17,440
+cannot resolve superimposed structures.
+
+346
+00:13:15,600 --> 00:13:19,440
+You see two things on top of each other
+
+347
+00:13:17,440 --> 00:13:21,839
+and you do not know which one is on top
+
+348
+00:13:19,440 --> 00:13:24,079
+and which one is beneath. So you need to
+
+349
+00:13:21,839 --> 00:13:26,240
+keep changing theta.
+
+350
+00:13:24,079 --> 00:13:27,920
+The original function f ofxy is
+
+351
+00:13:26,240 --> 00:13:30,959
+converted to a new two-dimensional
+
+352
+00:13:27,920 --> 00:13:33,839
+function p of theta t. Theta is the
+
+353
+00:13:30,959 --> 00:13:35,839
+angle. T is the coordinate. Using x-ray
+
+354
+00:13:33,839 --> 00:13:38,959
+measurements, you perform a physical or
+
+355
+00:13:35,839 --> 00:13:42,160
+mathematical transform from f ofxy to p
+
+356
+00:13:38,959 --> 00:13:43,839
+of theta t.
+
+357
+00:13:42,160 --> 00:13:46,639
+For example, if you have a bright small
+
+358
+00:13:43,839 --> 00:13:48,160
+disc, it will trace a sinosoidal curve.
+
+359
+00:13:46,639 --> 00:13:50,399
+That is why we call the data domain
+
+360
+00:13:48,160 --> 00:13:52,480
+representation a synogram. We also call
+
+361
+00:13:50,399 --> 00:13:54,880
+it a radon transform. Radon was a
+
+362
+00:13:52,480 --> 00:13:56,720
+mathematician many years ago. So this is
+
+363
+00:13:54,880 --> 00:14:00,519
+a projection, one view. The synogram
+
+364
+00:13:56,720 --> 00:14:00,519
+puts all the views together.
+
+365
+00:14:02,079 --> 00:14:06,480
+Computed tomography was previously
+
+366
+00:14:03,760 --> 00:14:09,040
+called computer aided tomography cat. So
+
+367
+00:14:06,480 --> 00:14:11,360
+we usually put a cute cat here. CT is
+
+368
+00:14:09,040 --> 00:14:13,760
+nothing but the inverse process. Once
+
+369
+00:14:11,360 --> 00:14:15,760
+you have synoggram data P of theta T,
+
+370
+00:14:13,760 --> 00:14:19,680
+the question is given the measurements,
+
+371
+00:14:15,760 --> 00:14:21,360
+how do you invert the process?
+
+372
+00:14:19,680 --> 00:14:23,839
+What is the underlying image that
+
+373
+00:14:21,360 --> 00:14:25,600
+explains this data?
+
+374
+00:14:23,839 --> 00:14:28,079
+Once you have the data, you reconstruct
+
+375
+00:14:25,600 --> 00:14:30,720
+the image. The inverse process goes from
+
+376
+00:14:28,079 --> 00:14:33,279
+data to image. X-ray measurement goes
+
+377
+00:14:30,720 --> 00:14:35,120
+from image to data. The tomographic
+
+378
+00:14:33,279 --> 00:14:37,760
+algorithm goes the other way, from data
+
+379
+00:14:35,120 --> 00:14:40,560
+to image, the underlying image. And how
+
+380
+00:14:37,760 --> 00:14:42,240
+do you do it?
+
+381
+00:14:40,560 --> 00:14:43,920
+The picture I gave you shows you can use
+
+382
+00:14:42,240 --> 00:14:47,480
+an impending method so you have a
+
+383
+00:14:43,920 --> 00:14:47,480
+heristic feeling.
+
+384
+00:14:49,040 --> 00:14:55,519
+Now let me give you a numerical example.
+
+385
+00:14:52,399 --> 00:14:57,839
+In practice the image can be 512 x 512
+
+386
+00:14:55,519 --> 00:15:00,240
+but for teaching purposes I'll use a 2x2
+
+387
+00:14:57,839 --> 00:15:02,880
+image. This is a simple case but the
+
+388
+00:15:00,240 --> 00:15:05,440
+essential idea is already there.
+
+389
+00:15:02,880 --> 00:15:07,279
+You have pixel values 1 2 3 4. Very
+
+390
+00:15:05,440 --> 00:15:09,360
+simple but you don't know these. This is
+
+391
+00:15:07,279 --> 00:15:11,760
+just something I set up. What you are
+
+392
+00:15:09,360 --> 00:15:13,839
+allowed to probe is with X-rays. I told
+
+393
+00:15:11,760 --> 00:15:16,399
+you X-rays cannot pinpoint a single
+
+394
+00:15:13,839 --> 00:15:19,040
+pixel. If you had a magic pen that could
+
+395
+00:15:16,399 --> 00:15:20,639
+read out a 0.1 pixel like a photograph,
+
+396
+00:15:19,040 --> 00:15:22,240
+you would not need tomographic
+
+397
+00:15:20,639 --> 00:15:24,800
+reconstruction. That would be too
+
+398
+00:15:22,240 --> 00:15:26,800
+simple.
+
+399
+00:15:24,800 --> 00:15:28,560
+With X-ray measurements, we can get some
+
+400
+00:15:26,800 --> 00:15:31,120
+information.
+
+401
+00:15:28,560 --> 00:15:32,560
+Suppose you shoot X-rays this way. As I
+
+402
+00:15:31,120 --> 00:15:35,040
+explained, an X-ray measurement gives
+
+403
+00:15:32,560 --> 00:15:36,959
+you a ray sum. from the earlier slide.
+
+404
+00:15:35,040 --> 00:15:38,959
+If you do not send X-rays through these
+
+405
+00:15:36,959 --> 00:15:41,600
+two pixels, you will not be able to say
+
+406
+00:15:38,959 --> 00:15:43,760
+what moo 1 and moo 2 are. But you do
+
+407
+00:15:41,600 --> 00:15:46,560
+know the sum of these two pixels. Mu1
+
+408
+00:15:43,760 --> 00:15:48,720
+plus mu2 equals 7. From this, you still
+
+409
+00:15:46,560 --> 00:15:51,360
+do not know mu1 and moo 2, but you know
+
+410
+00:15:48,720 --> 00:15:56,000
+the sum is 7. Likewise, take a vertical
+
+411
+00:15:51,360 --> 00:15:58,000
+ray, you get mu2 + mu4 equals 4.
+
+412
+00:15:56,000 --> 00:16:00,480
+With x-ray measurements, you can write a
+
+413
+00:15:58,000 --> 00:16:02,079
+number of equations. Solve the equations
+
+414
+00:16:00,480 --> 00:16:04,800
+and you get the unknowns. That's the
+
+415
+00:16:02,079 --> 00:16:08,079
+idea. Normally for an n byn image you
+
+416
+00:16:04,800 --> 00:16:10,000
+have n byn unknowns. Here for 2x two you
+
+417
+00:16:08,079 --> 00:16:12,000
+have four unknowns. So you need to shoot
+
+418
+00:16:10,000 --> 00:16:15,040
+four rays and get four measurements,
+
+419
+00:16:12,000 --> 00:16:18,639
+four linear equations, four unknowns. It
+
+420
+00:16:15,040 --> 00:16:20,800
+looks perfect, right? Not that simple.
+
+421
+00:16:18,639 --> 00:16:23,120
+Look at this. If you shoot these two
+
+422
+00:16:20,800 --> 00:16:25,519
+rays, the first two equations added
+
+423
+00:16:23,120 --> 00:16:27,360
+together give a right hand side of 10.
+
+424
+00:16:25,519 --> 00:16:30,079
+And the last two equations added
+
+425
+00:16:27,360 --> 00:16:32,000
+together are also 10.
+
+426
+00:16:30,079 --> 00:16:34,240
+So if you subtract one equation from the
+
+427
+00:16:32,000 --> 00:16:35,680
+sum, you get the remaining one. It's a
+
+428
+00:16:34,240 --> 00:16:37,680
+little tricky, but the point is that
+
+429
+00:16:35,680 --> 00:16:39,920
+these four equations are not totally
+
+430
+00:16:37,680 --> 00:16:42,320
+independent. From three of them, you can
+
+431
+00:16:39,920 --> 00:16:44,399
+derive the last one.
+
+432
+00:16:42,320 --> 00:16:46,800
+The trick is that number of equations
+
+433
+00:16:44,399 --> 00:16:48,720
+equals number of unknowns only works
+
+434
+00:16:46,800 --> 00:16:51,040
+under the condition that each equation
+
+435
+00:16:48,720 --> 00:16:53,040
+provides new information. They must be
+
+436
+00:16:51,040 --> 00:16:54,720
+independent. If they are not
+
+437
+00:16:53,040 --> 00:16:57,759
+independent, you do not have enough
+
+438
+00:16:54,720 --> 00:16:59,519
+equations to solve the problem.
+
+439
+00:16:57,759 --> 00:17:01,839
+So you should shoot array along the
+
+440
+00:16:59,519 --> 00:17:03,759
+diagonal direction. Then you may get
+
+441
+00:17:01,839 --> 00:17:05,760
+this one plus this one plus this one
+
+442
+00:17:03,759 --> 00:17:08,559
+plus this one and you will have enough
+
+443
+00:17:05,760 --> 00:17:10,640
+independent equations to solve uniquely.
+
+444
+00:17:08,559 --> 00:17:12,880
+Anyway, remember number of equations
+
+445
+00:17:10,640 --> 00:17:14,480
+equals number of unknowns is under the
+
+446
+00:17:12,880 --> 00:17:16,959
+assumption that all equations are
+
+447
+00:17:14,480 --> 00:17:20,280
+independent. Otherwise you do not have
+
+448
+00:17:16,959 --> 00:17:20,280
+enough equations.
+
+449
+00:17:20,880 --> 00:17:24,959
+Here I'll still use two horizontal rays
+
+450
+00:17:23,039 --> 00:17:27,120
+and two vertical rays to show how we
+
+451
+00:17:24,959 --> 00:17:29,200
+solve linear system equations using
+
+452
+00:17:27,120 --> 00:17:30,720
+iterative algorithms through trial and
+
+453
+00:17:29,200 --> 00:17:33,360
+error.
+
+454
+00:17:30,720 --> 00:17:35,200
+Why explain an iterative algorithm? For
+
+455
+00:17:33,360 --> 00:17:37,760
+a simple case like this, you can solve
+
+456
+00:17:35,200 --> 00:17:39,760
+it directly using an analytic method.
+
+457
+00:17:37,760 --> 00:17:42,160
+But when the number of unknowns is huge,
+
+458
+00:17:39,760 --> 00:17:43,760
+like millions or billions of equations,
+
+459
+00:17:42,160 --> 00:17:45,840
+the direct method will not work
+
+460
+00:17:43,760 --> 00:17:47,600
+efficiently. You may not have enough
+
+461
+00:17:45,840 --> 00:17:49,520
+computer memory and other issues may
+
+462
+00:17:47,600 --> 00:17:51,760
+arise.
+
+463
+00:17:49,520 --> 00:17:54,240
+So you use an iterative algorithm to
+
+464
+00:17:51,760 --> 00:17:56,320
+solve the situation. Also, the iterative
+
+465
+00:17:54,240 --> 00:17:58,160
+algorithm I'm about to explain lets you
+
+466
+00:17:56,320 --> 00:18:00,720
+impose prior knowledge like non-
+
+467
+00:17:58,160 --> 00:18:03,600
+negativity or smoothness. These topics
+
+468
+00:18:00,720 --> 00:18:05,760
+are beyond the scope of this lecture.
+
+469
+00:18:03,600 --> 00:18:07,919
+Let me give you the basic idea how you
+
+470
+00:18:05,760 --> 00:18:10,480
+can do trial and error to solve a system
+
+471
+00:18:07,919 --> 00:18:12,160
+of linear equations.
+
+472
+00:18:10,480 --> 00:18:14,400
+As I told you, this is your underlying
+
+473
+00:18:12,160 --> 00:18:16,480
+image. You have four measurements, two
+
+474
+00:18:14,400 --> 00:18:18,559
+horizontal and two vertical, and you try
+
+475
+00:18:16,480 --> 00:18:20,320
+to solve this system. The starting
+
+476
+00:18:18,559 --> 00:18:22,400
+point. Whenever you use an iterative
+
+477
+00:18:20,320 --> 00:18:24,080
+algorithm, you need a starting point.
+
+478
+00:18:22,400 --> 00:18:26,000
+Here, because I know nothing about the
+
+479
+00:18:24,080 --> 00:18:27,919
+image, I choose a neutral guess and
+
+480
+00:18:26,000 --> 00:18:30,640
+assume nothing in the field of view. So,
+
+481
+00:18:27,919 --> 00:18:33,200
+every pixel is zero. This is my starting
+
+482
+00:18:30,640 --> 00:18:36,720
+point or guess zero. It is a natural and
+
+483
+00:18:33,200 --> 00:18:38,480
+unbiased starting point.
+
+484
+00:18:36,720 --> 00:18:41,440
+First, if this guess were correct, then
+
+485
+00:18:38,480 --> 00:18:43,120
+the vertical integrals must be 0 and 0.
+
+486
+00:18:41,440 --> 00:18:46,160
+Based on the assumption, I get these two
+
+487
+00:18:43,120 --> 00:18:48,559
+estimated values 0 0. We call this a
+
+488
+00:18:46,160 --> 00:18:50,799
+predicted or synthetic projection. It's
+
+489
+00:18:48,559 --> 00:18:53,919
+not that you must accept zero zero just
+
+490
+00:18:50,799 --> 00:18:55,919
+because I say so. You can challenge it.
+
+491
+00:18:53,919 --> 00:18:58,480
+You can say if everything is zero, the
+
+492
+00:18:55,919 --> 00:19:01,120
+vertical integrals must be 0 0. But the
+
+493
+00:18:58,480 --> 00:19:03,520
+physical measurement says 6 and 4. It is
+
+494
+00:19:01,120 --> 00:19:06,400
+not 0 0. How do we explain the
+
+495
+00:19:03,520 --> 00:19:07,919
+contradiction?
+
+496
+00:19:06,400 --> 00:19:10,640
+We compare the measurement with the
+
+497
+00:19:07,919 --> 00:19:12,720
+prediction. We see errors six and four.
+
+498
+00:19:10,640 --> 00:19:15,039
+Here you measured six but predicted
+
+499
+00:19:12,720 --> 00:19:17,360
+zero. So the error is six. There you
+
+500
+00:19:15,039 --> 00:19:19,760
+measured four but predicted zero. So the
+
+501
+00:19:17,360 --> 00:19:21,200
+error is four. This positive error
+
+502
+00:19:19,760 --> 00:19:24,320
+indicates my initial guess
+
+503
+00:19:21,200 --> 00:19:26,160
+underestimates the pixel values
+
+504
+00:19:24,320 --> 00:19:28,880
+along this ray. The real measurement is
+
+505
+00:19:26,160 --> 00:19:30,720
+four but I predicted zero.
+
+506
+00:19:28,880 --> 00:19:33,280
+Clearly there must be something in these
+
+507
+00:19:30,720 --> 00:19:35,760
+two pixels. Their values should add to
+
+508
+00:19:33,280 --> 00:19:37,200
+six along the first vertical ray. I do
+
+509
+00:19:35,760 --> 00:19:39,200
+not know whether to give more to the
+
+510
+00:19:37,200 --> 00:19:41,600
+first pixel or the second pixel. So to
+
+511
+00:19:39,200 --> 00:19:43,919
+be fair I evenly divide the error. Six
+
+512
+00:19:41,600 --> 00:19:46,480
+becomes three and three. I put the error
+
+513
+00:19:43,919 --> 00:19:48,559
+back. After this redistribution, the two
+
+514
+00:19:46,480 --> 00:19:50,960
+values add to six. So that vertical
+
+515
+00:19:48,559 --> 00:19:52,799
+error is removed. Likewise for the
+
+516
+00:19:50,960 --> 00:19:54,640
+second vertical array, four becomes 2
+
+517
+00:19:52,799 --> 00:19:56,960
+and 2.
+
+518
+00:19:54,640 --> 00:20:00,400
+After this, I am vertically consistent.
+
+519
+00:19:56,960 --> 00:20:03,679
+Along the first column, 3 + 3 = 6. And
+
+520
+00:20:00,400 --> 00:20:06,240
+along the second column, 2 + 2 = 4.
+
+521
+00:20:03,679 --> 00:20:08,320
+Matching the measurements.
+
+522
+00:20:06,240 --> 00:20:10,160
+Next, let's double check the horizontal
+
+523
+00:20:08,320 --> 00:20:12,640
+integrals.
+
+524
+00:20:10,160 --> 00:20:14,640
+Now, the row sums are five and five. The
+
+525
+00:20:12,640 --> 00:20:16,720
+measured horizontal sums are seven and
+
+526
+00:20:14,640 --> 00:20:19,520
+three. Comparing again, the errors are
+
+527
+00:20:16,720 --> 00:20:21,919
+plus two and minus2. A positive error
+
+528
+00:20:19,520 --> 00:20:23,679
+means I still underestimate that row. A
+
+529
+00:20:21,919 --> 00:20:26,240
+negative error means the true sum is
+
+530
+00:20:23,679 --> 00:20:28,320
+less than my current estimate.
+
+531
+00:20:26,240 --> 00:20:30,320
+I redistribute the errors. The plus2 is
+
+532
+00:20:28,320 --> 00:20:32,480
+decomposed into one and one and added
+
+533
+00:20:30,320 --> 00:20:34,880
+back to the two pixels in the first row.
+
+534
+00:20:32,480 --> 00:20:36,640
+The minus2 is decomposed into minus1 and
+
+535
+00:20:34,880 --> 00:20:39,840
+minus1 and subtracted from the two
+
+536
+00:20:36,640 --> 00:20:41,520
+pixels in the second row. In this case,
+
+537
+00:20:39,840 --> 00:20:44,320
+we are lucky. After this second
+
+538
+00:20:41,520 --> 00:20:46,000
+iteration, we obtain the correct result.
+
+539
+00:20:44,320 --> 00:20:48,159
+Once we reach this state, the vertical
+
+540
+00:20:46,000 --> 00:20:50,480
+and horizontal data are both perfectly
+
+541
+00:20:48,159 --> 00:20:52,320
+explained. We are done. This illustrates
+
+542
+00:20:50,480 --> 00:20:54,240
+the idea.
+
+543
+00:20:52,320 --> 00:20:56,480
+In real situations, it is never this
+
+544
+00:20:54,240 --> 00:20:58,799
+simple. You need many iterations and
+
+545
+00:20:56,480 --> 00:21:00,799
+many unknowns go back and forth. And a
+
+546
+00:20:58,799 --> 00:21:02,880
+well-designed iterative algorithm will
+
+547
+00:21:00,799 --> 00:21:05,200
+ensure that after many iterations, the
+
+548
+00:21:02,880 --> 00:21:07,200
+solution converges. Sometimes the
+
+549
+00:21:05,200 --> 00:21:09,600
+iterative process gives an oscillating
+
+550
+00:21:07,200 --> 00:21:11,440
+solution and you need regularization.
+
+551
+00:21:09,600 --> 00:21:15,640
+But again for this undergraduate level
+
+552
+00:21:11,440 --> 00:21:15,640
+course notice the basic idea.
+
+553
+00:21:17,120 --> 00:21:21,679
+So in summary the algebraic approach
+
+554
+00:21:19,039 --> 00:21:23,600
+goes in the following steps.
+
+555
+00:21:21,679 --> 00:21:25,679
+First convert the data into line
+
+556
+00:21:23,600 --> 00:21:29,200
+integrals to form a system of linear
+
+557
+00:21:25,679 --> 00:21:31,200
+equations. This is the first step.
+
+558
+00:21:29,200 --> 00:21:33,200
+Second solve the system of linear
+
+559
+00:21:31,200 --> 00:21:35,120
+equations to reconstruct the underlying
+
+560
+00:21:33,200 --> 00:21:38,320
+image like the iterative process I
+
+561
+00:21:35,120 --> 00:21:40,559
+showed you. If needed, although I didn't
+
+562
+00:21:38,320 --> 00:21:43,840
+explain the details, you regularize the
+
+563
+00:21:40,559 --> 00:21:45,840
+reconstruction with prior knowledge.
+
+564
+00:21:43,840 --> 00:21:48,320
+For example, you know the CT attenuation
+
+565
+00:21:45,840 --> 00:21:51,840
+coefficient mu determines attenuated
+
+566
+00:21:48,320 --> 00:21:54,559
+X-ray intensity and cannot be negative.
+
+567
+00:21:51,840 --> 00:21:57,039
+So during the iterative process, if the
+
+568
+00:21:54,559 --> 00:21:58,960
+current solution gives a negative value,
+
+569
+00:21:57,039 --> 00:22:01,520
+you know it cannot be negative. You
+
+570
+00:21:58,960 --> 00:22:03,600
+force the negative to zero. That is how
+
+571
+00:22:01,520 --> 00:22:05,600
+prior knowledge regularizes the image
+
+572
+00:22:03,600 --> 00:22:07,360
+reconstruction.
+
+573
+00:22:05,600 --> 00:22:09,440
+Then you iteratively refine the
+
+574
+00:22:07,360 --> 00:22:11,360
+intermediate image or current guess one
+
+575
+00:22:09,440 --> 00:22:13,360
+cycle at a time until the outcome is
+
+576
+00:22:11,360 --> 00:22:14,559
+satisfactory.
+
+577
+00:22:13,360 --> 00:22:17,520
+How do you know the outcome is
+
+578
+00:22:14,559 --> 00:22:19,440
+satisfactory?
+
+579
+00:22:17,520 --> 00:22:22,000
+One way is visual. The image makes sense
+
+580
+00:22:19,440 --> 00:22:24,240
+given your prior knowledge.
+
+581
+00:22:22,000 --> 00:22:25,840
+Another way is data consistency. Based
+
+582
+00:22:24,240 --> 00:22:27,679
+on your current image, you predict the
+
+583
+00:22:25,840 --> 00:22:29,440
+projection data. If your prediction
+
+584
+00:22:27,679 --> 00:22:31,280
+compares well with the measurement very
+
+585
+00:22:29,440 --> 00:22:33,360
+close, you say, "Okay, it is good
+
+586
+00:22:31,280 --> 00:22:36,080
+enough." As far as data fitness is
+
+587
+00:22:33,360 --> 00:22:37,600
+concerned, we are doing a good job.
+
+588
+00:22:36,080 --> 00:22:40,000
+So that is the idea of the first
+
+589
+00:22:37,600 --> 00:22:41,440
+algebraic approach. The first one is not
+
+590
+00:22:40,000 --> 00:22:45,159
+very hard, but at least you are sure
+
+591
+00:22:41,440 --> 00:22:45,159
+that we can do it.
+
+592
+00:22:46,559 --> 00:22:50,880
+Next, the analytic approach involves the
+
+593
+00:22:48,799 --> 00:22:54,400
+Forier slice theorem. That's the key
+
+594
+00:22:50,880 --> 00:22:56,000
+point. So we need Forier analysis.
+
+595
+00:22:54,400 --> 00:22:57,760
+If you already understand Forier
+
+596
+00:22:56,000 --> 00:22:59,840
+analysis very well, you will have a good
+
+597
+00:22:57,760 --> 00:23:02,240
+time here. If you are still confused
+
+598
+00:22:59,840 --> 00:23:04,559
+about Fier analysis, you may struggle a
+
+599
+00:23:02,240 --> 00:23:06,960
+little and I recommend a review. This is
+
+600
+00:23:04,559 --> 00:23:09,600
+not an easy topic but it is very cool.
+
+601
+00:23:06,960 --> 00:23:13,799
+For the Fieris analytic approach, let me
+
+602
+00:23:09,600 --> 00:23:13,799
+give you a huristic explanation.
+
+603
+00:23:15,600 --> 00:23:19,120
+From this point of view, you shoot
+
+604
+00:23:17,120 --> 00:23:21,280
+X-rays and you are not trying to get a
+
+605
+00:23:19,120 --> 00:23:23,440
+result directly. This is a different
+
+606
+00:23:21,280 --> 00:23:25,280
+perspective. You shoot parallel beam
+
+607
+00:23:23,440 --> 00:23:27,679
+X-rays going this way and that way and
+
+608
+00:23:25,280 --> 00:23:29,919
+then you get line integral measurements.
+
+609
+00:23:27,679 --> 00:23:32,400
+What do such measurements do? They act
+
+610
+00:23:29,919 --> 00:23:34,159
+like a probing wave.
+
+611
+00:23:32,400 --> 00:23:36,159
+In this case, think of the underlying
+
+612
+00:23:34,159 --> 00:23:38,320
+image not as Albert Einstein or a
+
+613
+00:23:36,159 --> 00:23:40,799
+cross-section of your chest. Think of
+
+614
+00:23:38,320 --> 00:23:42,880
+the image as a summation of many waves.
+
+615
+00:23:40,799 --> 00:23:44,559
+Because of Fier analysis, you can always
+
+616
+00:23:42,880 --> 00:23:47,280
+do this. You reconstruct a bunch of
+
+617
+00:23:44,559 --> 00:23:49,360
+waves.
+
+618
+00:23:47,280 --> 00:23:52,320
+For example, consider waves propagating
+
+619
+00:23:49,360 --> 00:23:54,480
+horizontally like the green wave.
+
+620
+00:23:52,320 --> 00:23:56,240
+for any horizontal wave. Let me make
+
+621
+00:23:54,480 --> 00:23:59,440
+some comments so you understand why
+
+622
+00:23:56,240 --> 00:24:01,760
+furier analysis works nicely
+
+623
+00:23:59,440 --> 00:24:03,600
+for such a horizontal wave. For all
+
+624
+00:24:01,760 --> 00:24:05,679
+x-ray projections along oblique
+
+625
+00:24:03,600 --> 00:24:07,919
+directions, that is any orientation that
+
+626
+00:24:05,679 --> 00:24:09,760
+is not vertical. We can say one thing.
+
+627
+00:24:07,919 --> 00:24:11,840
+If you do the vertical line integral,
+
+628
+00:24:09,760 --> 00:24:14,559
+the wave has a positive cycle and a
+
+629
+00:24:11,840 --> 00:24:16,559
+negative cycle that cancel out. The wave
+
+630
+00:24:14,559 --> 00:24:18,720
+just keeps oscillating. So if the
+
+631
+00:24:16,559 --> 00:24:21,120
+projection orientation is horizontal or
+
+632
+00:24:18,720 --> 00:24:23,520
+makes an oblique angle any degree except
+
+633
+00:24:21,120 --> 00:24:25,200
+vertical, all these ray sums give you
+
+634
+00:24:23,520 --> 00:24:26,960
+zero.
+
+635
+00:24:25,200 --> 00:24:28,559
+Getting zero means you get no
+
+636
+00:24:26,960 --> 00:24:30,799
+information about the underlying
+
+637
+00:24:28,559 --> 00:24:33,200
+horizontal wave except in one direction,
+
+638
+00:24:30,799 --> 00:24:35,120
+the vertical direction. Along the
+
+639
+00:24:33,200 --> 00:24:37,520
+vertical projection, the positive and
+
+640
+00:24:35,120 --> 00:24:39,120
+negative cycles do not cancel. So only
+
+641
+00:24:37,520 --> 00:24:41,200
+the vertical projection gives you
+
+642
+00:24:39,120 --> 00:24:45,760
+critical information about a horizontal
+
+643
+00:24:41,200 --> 00:24:47,760
+wave. Other directions cancel out.
+
+644
+00:24:45,760 --> 00:24:49,600
+From the vertical projection you obtain
+
+645
+00:24:47,760 --> 00:24:52,240
+information about waves propagating
+
+646
+00:24:49,600 --> 00:24:54,240
+horizontally and furier analysis says
+
+647
+00:24:52,240 --> 00:24:57,039
+the image decomposes into many waves
+
+648
+00:24:54,240 --> 00:24:58,960
+along different orientations.
+
+649
+00:24:57,039 --> 00:25:01,440
+So to get horizontal waves you use
+
+650
+00:24:58,960 --> 00:25:03,360
+vertical projections. For waves at one
+
+651
+00:25:01,440 --> 00:25:08,159
+degree orientation you need projections
+
+652
+00:25:03,360 --> 00:25:10,000
+at 90° + 1°ree the orthogonal direction.
+
+653
+00:25:08,159 --> 00:25:12,720
+If you want to resolve all the waves you
+
+654
+00:25:10,000 --> 00:25:15,840
+need projection angles spanning 0 to
+
+655
+00:25:12,720 --> 00:25:19,200
+180°. This is the heristic. You need
+
+656
+00:25:15,840 --> 00:25:21,200
+orientations that probe each wave family
+
+657
+00:25:19,200 --> 00:25:22,799
+with the horizontal wave superimposed
+
+658
+00:25:21,200 --> 00:25:25,039
+this way. You take the vertical
+
+659
+00:25:22,799 --> 00:25:27,600
+projection. Then if you do forier
+
+660
+00:25:25,039 --> 00:25:29,360
+analysis along the horizontal direction,
+
+661
+00:25:27,600 --> 00:25:31,200
+you should recover all the wave
+
+662
+00:25:29,360 --> 00:25:33,279
+information along that horizontal
+
+663
+00:25:31,200 --> 00:25:36,279
+direction. Let me explain this a little
+
+664
+00:25:33,279 --> 00:25:36,279
+better.
+
+665
+00:25:37,679 --> 00:25:42,080
+In the so-called forier slice theorem,
+
+666
+00:25:40,000 --> 00:25:45,039
+it basically says this. You have the
+
+667
+00:25:42,080 --> 00:25:47,279
+parallel beam projection. So P of theta
+
+668
+00:25:45,039 --> 00:25:49,200
+this angle is theta. You get all these
+
+669
+00:25:47,279 --> 00:25:51,200
+projections and each projection carries
+
+670
+00:25:49,200 --> 00:25:53,679
+wave information along its direction.
+
+671
+00:25:51,200 --> 00:25:55,120
+The X-ray direction.
+
+672
+00:25:53,679 --> 00:25:57,120
+The information carried by this
+
+673
+00:25:55,120 --> 00:26:00,640
+projection profile is waves along the
+
+674
+00:25:57,120 --> 00:26:02,720
+Paxis. This Paxis makes an angle theta.
+
+675
+00:26:00,640 --> 00:26:04,559
+It's the same idea as before. A vertical
+
+676
+00:26:02,720 --> 00:26:07,120
+projection carries wave information
+
+677
+00:26:04,559 --> 00:26:09,120
+along the horizontal direction. So a
+
+678
+00:26:07,120 --> 00:26:11,520
+projection at angle theta carries wave
+
+679
+00:26:09,120 --> 00:26:14,080
+information along the p ais making angle
+
+680
+00:26:11,520 --> 00:26:16,080
+theta.
+
+681
+00:26:14,080 --> 00:26:18,720
+If you perform a one-dimensional forier
+
+682
+00:26:16,080 --> 00:26:20,559
+analysis you get the forier spectrum.
+
+683
+00:26:18,720 --> 00:26:22,880
+This green profile is the forier
+
+684
+00:26:20,559 --> 00:26:25,440
+spectrum of the projection profile. The
+
+685
+00:26:22,880 --> 00:26:28,159
+forier spectrum lies along the row axis
+
+686
+00:26:25,440 --> 00:26:30,080
+making the same angle theta. A point on
+
+687
+00:26:28,159 --> 00:26:31,919
+this row axis gives a wave whose
+
+688
+00:26:30,080 --> 00:26:33,840
+frequency is proportional to the
+
+689
+00:26:31,919 --> 00:26:36,559
+distance from that point to the system
+
+690
+00:26:33,840 --> 00:26:38,480
+origin. It is a wave propagating along
+
+691
+00:26:36,559 --> 00:26:41,360
+the theta direction orthogonal to the
+
+692
+00:26:38,480 --> 00:26:44,159
+x-ray beam direction. Along this row
+
+693
+00:26:41,360 --> 00:26:46,400
+axis, you have many points. These points
+
+694
+00:26:44,159 --> 00:26:48,880
+represent unique two-dimensional waves
+
+695
+00:26:46,400 --> 00:26:53,039
+propagating along this direction making
+
+696
+00:26:48,880 --> 00:26:55,039
+an angle theta. This is huristic.
+
+697
+00:26:53,039 --> 00:26:57,039
+You need a one-dimensional forier
+
+698
+00:26:55,039 --> 00:27:00,159
+transform to recover a radial line
+
+699
+00:26:57,039 --> 00:27:03,279
+profile in forier space. To reconstruct
+
+700
+00:27:00,159 --> 00:27:05,600
+a two-dimensional image f ofxy, you need
+
+701
+00:27:03,279 --> 00:27:10,400
+all the furier information. So the angle
+
+702
+00:27:05,600 --> 00:27:12,640
+theta needs to go from 0 to 180 degrees.
+
+703
+00:27:10,400 --> 00:27:16,080
+When the row axis orientation changes
+
+704
+00:27:12,640 --> 00:27:19,120
+from theta equals 0, then 1 2 3 up to
+
+705
+00:27:16,080 --> 00:27:21,360
+180°. The whole forier space is swept by
+
+706
+00:27:19,120 --> 00:27:23,200
+the row axis.
+
+707
+00:27:21,360 --> 00:27:25,679
+That means with one projection, you only
+
+708
+00:27:23,200 --> 00:27:30,000
+measure information along one line. But
+
+709
+00:27:25,679 --> 00:27:32,320
+if you change theta from 0 to 180°, all
+
+710
+00:27:30,000 --> 00:27:34,000
+the data points in the forier space have
+
+711
+00:27:32,320 --> 00:27:36,080
+been measured. You have all the
+
+712
+00:27:34,000 --> 00:27:37,840
+information. Then you can perform a
+
+713
+00:27:36,080 --> 00:27:39,679
+two-dimensional inverse forier
+
+714
+00:27:37,840 --> 00:27:41,840
+transform.
+
+715
+00:27:39,679 --> 00:27:43,919
+This is a geometrical perspective on how
+
+716
+00:27:41,840 --> 00:27:46,000
+to reconstruct the image using forier
+
+717
+00:27:43,919 --> 00:27:48,559
+analysis or from a wave analysis
+
+718
+00:27:46,000 --> 00:27:50,799
+perspective. Just these few things, two
+
+719
+00:27:48,559 --> 00:27:52,960
+slides. I hope you understand these two
+
+720
+00:27:50,799 --> 00:27:56,720
+slides. Then we will take a minute's
+
+721
+00:27:52,960 --> 00:27:58,480
+rest. I will show you my mathematics
+
+722
+00:27:56,720 --> 00:28:00,320
+step by step. You will understand this
+
+723
+00:27:58,480 --> 00:28:03,200
+geometrical wave argument a little
+
+724
+00:28:00,320 --> 00:28:05,440
+better. Okay, I think the algebraic
+
+725
+00:28:03,200 --> 00:28:07,440
+perspective may be easier for you. The
+
+726
+00:28:05,440 --> 00:28:10,000
+wave analysis, if you feel confused,
+
+727
+00:28:07,440 --> 00:28:12,000
+feel free to ask me. Think about it.
+
+728
+00:28:10,000 --> 00:28:14,799
+This is a very elegant way to solve the
+
+729
+00:28:12,000 --> 00:28:16,480
+problem. The Fier slice theorem is an
+
+730
+00:28:14,799 --> 00:28:19,480
+important theorem for tomographic
+
+731
+00:28:16,480 --> 00:28:19,480
+reconstruction.
+
+732
+00:28:21,200 --> 00:28:27,039
+I uploaded a chapter by Clark in a CT
+
+733
+00:28:23,440 --> 00:28:28,960
+book. It's a very good one. When I was a
+
+734
+00:28:27,039 --> 00:28:31,200
+fourth year graduate student, I did a
+
+735
+00:28:28,960 --> 00:28:32,559
+summer job with my supervisor. That
+
+736
+00:28:31,200 --> 00:28:34,480
+summer, I read through his book and
+
+737
+00:28:32,559 --> 00:28:36,960
+implemented the cone beam reconstruction
+
+738
+00:28:34,480 --> 00:28:39,039
+algorithm. In my view, this is still the
+
+739
+00:28:36,960 --> 00:28:41,600
+best engineering book to explain CT
+
+740
+00:28:39,039 --> 00:28:43,760
+principles. The green textbook explains
+
+741
+00:28:41,600 --> 00:28:46,159
+back projection, but not as clearly as
+
+742
+00:28:43,760 --> 00:28:48,240
+Clark's book. To give a better, deeper
+
+743
+00:28:46,159 --> 00:28:50,640
+explanation, we will use Clark's chapter
+
+744
+00:28:48,240 --> 00:28:50,640
+3.
+
+745
+00:28:50,720 --> 00:28:55,760
+Now the coordinate system is xy. Draw a
+
+746
+00:28:53,760 --> 00:28:58,000
+line making an angle theta. Call this
+
+747
+00:28:55,760 --> 00:28:59,919
+line the t ais. The projection is
+
+748
+00:28:58,000 --> 00:29:02,559
+defined by the perpendicular distance
+
+749
+00:28:59,919 --> 00:29:04,559
+from a point to the t ais. The line
+
+750
+00:29:02,559 --> 00:29:08,000
+through the origin at that distance is
+
+751
+00:29:04,559 --> 00:29:11,760
+t. It can be expressed as x cosine theta
+
+752
+00:29:08,000 --> 00:29:13,600
++ y sin theta= t. The unit directional
+
+753
+00:29:11,760 --> 00:29:16,240
+vector along the t ais has components
+
+754
+00:29:13,600 --> 00:29:18,159
+cosine theta sin theta. They didn't draw
+
+755
+00:29:16,240 --> 00:29:20,159
+it, but you can think of cosine theta
+
+756
+00:29:18,159 --> 00:29:23,440
+and sin theta as the two components of
+
+757
+00:29:20,159 --> 00:29:26,080
+the unit vector along the t direction.
+
+758
+00:29:23,440 --> 00:29:28,240
+Take an arbitrary point xy regarding the
+
+759
+00:29:26,080 --> 00:29:30,960
+point as a vector from the origin.
+
+760
+00:29:28,240 --> 00:29:33,279
+Project this vector onto the t ais. The
+
+761
+00:29:30,960 --> 00:29:34,880
+resulting distance is t. This is really
+
+762
+00:29:33,279 --> 00:29:37,200
+an inner product. One vector with
+
+763
+00:29:34,880 --> 00:29:39,760
+components x y and the unit vector with
+
+764
+00:29:37,200 --> 00:29:42,640
+components cosine theta sin theta. The
+
+765
+00:29:39,760 --> 00:29:44,799
+inner product equals t. As long as t is
+
+766
+00:29:42,640 --> 00:29:46,480
+the same, all points that satisfy this
+
+767
+00:29:44,799 --> 00:29:49,120
+equation lie along the same straight
+
+768
+00:29:46,480 --> 00:29:50,960
+line at a distance t.
+
+769
+00:29:49,120 --> 00:29:53,360
+You then do a line integral along that
+
+770
+00:29:50,960 --> 00:29:55,520
+line at an angle theta and distance t.
+
+771
+00:29:53,360 --> 00:29:57,440
+The projection p of theta t has two
+
+772
+00:29:55,520 --> 00:30:00,480
+variables, but for a given theta, it is
+
+773
+00:29:57,440 --> 00:30:02,320
+a one-dimensional function of t. This
+
+774
+00:30:00,480 --> 00:30:04,240
+line integral can also be written as a
+
+775
+00:30:02,320 --> 00:30:06,159
+double integral.
+
+776
+00:30:04,240 --> 00:30:08,240
+You integrate the underlying image over
+
+777
+00:30:06,159 --> 00:30:10,480
+the whole plane and you place a delta
+
+778
+00:30:08,240 --> 00:30:13,120
+function along that line so that only
+
+779
+00:30:10,480 --> 00:30:14,799
+the values on the line contribute. In
+
+780
+00:30:13,120 --> 00:30:16,640
+other words, the double integral with
+
+781
+00:30:14,799 --> 00:30:19,360
+the delta function is nothing but the
+
+782
+00:30:16,640 --> 00:30:21,039
+line integral along that direction. This
+
+783
+00:30:19,360 --> 00:30:25,000
+gives a convenient two-dimensional
+
+784
+00:30:21,039 --> 00:30:25,000
+notation for the projection.
+
+785
+00:30:26,559 --> 00:30:30,399
+Then we can write the standard forier
+
+786
+00:30:28,320 --> 00:30:32,799
+transform for the underlying function f
+
+787
+00:30:30,399 --> 00:30:34,799
+ofxy. Equation seven is the
+
+788
+00:30:32,799 --> 00:30:36,640
+two-dimensional forier transform
+
+789
+00:30:34,799 --> 00:30:39,039
+straightforward. Let me write the
+
+790
+00:30:36,640 --> 00:30:41,600
+one-dimensional fora transform just the
+
+791
+00:30:39,039 --> 00:30:43,360
+definition equation 8.
+
+792
+00:30:41,600 --> 00:30:45,360
+I have the one-dimensional function
+
+793
+00:30:43,360 --> 00:30:48,640
+which is the projection profile p of
+
+794
+00:30:45,360 --> 00:30:50,559
+theta t. It has one variable. Then you
+
+795
+00:30:48,640 --> 00:30:52,480
+perform the forier transform and you get
+
+796
+00:30:50,559 --> 00:30:55,039
+the one-dimensional forier transform
+
+797
+00:30:52,480 --> 00:30:57,200
+with frequency variable w. Here the
+
+798
+00:30:55,039 --> 00:30:59,679
+two-dimensional frequency variables are
+
+799
+00:30:57,200 --> 00:31:01,120
+u and v. These two are just definitions
+
+800
+00:30:59,679 --> 00:31:05,480
+of the two-dimensional and
+
+801
+00:31:01,120 --> 00:31:05,480
+one-dimensional forier transforms.
+
+802
+00:31:05,520 --> 00:31:09,919
+Now let's go a little further.
+
+803
+00:31:08,159 --> 00:31:11,919
+Consider the simplest example, the
+
+804
+00:31:09,919 --> 00:31:14,799
+simplest case and we try to compute the
+
+805
+00:31:11,919 --> 00:31:16,799
+forier analysis. Forier analysis is a
+
+806
+00:31:14,799 --> 00:31:19,279
+two-dimensional function of UV, but we
+
+807
+00:31:16,799 --> 00:31:21,440
+set V equal to zero. That means we only
+
+808
+00:31:19,279 --> 00:31:23,840
+consider forier coefficients along the
+
+809
+00:31:21,440 --> 00:31:26,640
+UIS. That's just one line through the
+
+810
+00:31:23,840 --> 00:31:28,880
+two-dimensional forier spectrum. Given v
+
+811
+00:31:26,640 --> 00:31:30,640
+equals 0, this becomes a one-dimensional
+
+812
+00:31:28,880 --> 00:31:33,440
+function.
+
+813
+00:31:30,640 --> 00:31:36,320
+So equation 7 becomes equation 9. With v
+
+814
+00:31:33,440 --> 00:31:38,080
+equal to 0, you get this part.
+
+815
+00:31:36,320 --> 00:31:40,080
+Rearrange this a little bit because now
+
+816
+00:31:38,080 --> 00:31:42,720
+the kernel, the exponential function
+
+817
+00:31:40,080 --> 00:31:44,880
+does not depend on y.
+
+818
+00:31:42,720 --> 00:31:47,120
+So the integral with respect to y can be
+
+819
+00:31:44,880 --> 00:31:49,120
+grouped into the inner integral. You get
+
+820
+00:31:47,120 --> 00:31:50,880
+this part. And you see that the
+
+821
+00:31:49,120 --> 00:31:53,519
+expression in the bracket is nothing but
+
+822
+00:31:50,880 --> 00:31:55,120
+a vertical integral. Because you have a
+
+823
+00:31:53,519 --> 00:31:58,320
+two-dimensional function, you just do
+
+824
+00:31:55,120 --> 00:31:59,919
+the line integral along the y- ais. So
+
+825
+00:31:58,320 --> 00:32:03,559
+this part in the bracket is nothing but
+
+826
+00:31:59,919 --> 00:32:03,559
+a vertical integral.
+
+827
+00:32:05,120 --> 00:32:09,360
+So this is nothing but a vertical
+
+828
+00:32:06,799 --> 00:32:12,080
+integral. A vertical integral is the
+
+829
+00:32:09,360 --> 00:32:14,240
+projection profile when theta equals 0.
+
+830
+00:32:12,080 --> 00:32:15,760
+So that is a vertical integral. You get
+
+831
+00:32:14,240 --> 00:32:18,159
+this.
+
+832
+00:32:15,760 --> 00:32:21,279
+Now in two-dimensional forier analysis f
+
+833
+00:32:18,159 --> 00:32:24,159
+of u0 f of u0 the vertical integral is p
+
+834
+00:32:21,279 --> 00:32:25,840
+at theta equals 0 of x put this part
+
+835
+00:32:24,159 --> 00:32:28,720
+into the bracket and then you have this
+
+836
+00:32:25,840 --> 00:32:30,720
+expression.
+
+837
+00:32:28,720 --> 00:32:33,279
+So this is two-dimensional furier
+
+838
+00:32:30,720 --> 00:32:36,000
+analysis along the u ais when v equals
+
+839
+00:32:33,279 --> 00:32:38,399
+0. This is the u axis and here is the
+
+840
+00:32:36,000 --> 00:32:41,120
+vertical integral. The vertical integral
+
+841
+00:32:38,399 --> 00:32:42,960
+is a function of x in the xy plane. And
+
+842
+00:32:41,120 --> 00:32:45,679
+this part is one-dimensional forier
+
+843
+00:32:42,960 --> 00:32:47,600
+analysis with respect to the variable x.
+
+844
+00:32:45,679 --> 00:32:49,600
+So this is the one-dimensional forier
+
+845
+00:32:47,600 --> 00:32:51,600
+transform. You can write it as the
+
+846
+00:32:49,600 --> 00:32:55,440
+one-dimensional forier transform when
+
+847
+00:32:51,600 --> 00:32:57,200
+theta equals 0 and the variable is u.
+
+848
+00:32:55,440 --> 00:32:58,880
+This is the one-dimensional forier
+
+849
+00:32:57,200 --> 00:33:01,600
+transform in the general case for an
+
+850
+00:32:58,880 --> 00:33:03,200
+arbitrary angle theta.
+
+851
+00:33:01,600 --> 00:33:05,519
+So this is a special case of what I
+
+852
+00:33:03,200 --> 00:33:07,519
+called the fier slice theorem. If you
+
+853
+00:33:05,519 --> 00:33:09,440
+have a vertical projection profile and
+
+854
+00:33:07,519 --> 00:33:11,519
+you perform one-dimensional forier
+
+855
+00:33:09,440 --> 00:33:12,960
+analysis, you get a one-dimensional
+
+856
+00:33:11,519 --> 00:33:15,440
+forier spectrum. You got a
+
+857
+00:33:12,960 --> 00:33:17,440
+one-dimensional forier spectrum. It is
+
+858
+00:33:15,440 --> 00:33:19,679
+nothing but the projection profile in
+
+859
+00:33:17,440 --> 00:33:22,399
+the two-dimensional forier transform
+
+860
+00:33:19,679 --> 00:33:24,080
+space along the u axis. So this is a
+
+861
+00:33:22,399 --> 00:33:27,080
+special case of the forier slice
+
+862
+00:33:24,080 --> 00:33:27,080
+theorem.
+
+863
+00:33:28,480 --> 00:33:32,720
+When theta equals zero, you get the
+
+864
+00:33:30,320 --> 00:33:35,200
+two-dimensional forier spectrum profile
+
+865
+00:33:32,720 --> 00:33:37,679
+as a one-dimensional profile along the u
+
+866
+00:33:35,200 --> 00:33:41,840
+axis. How do you get this special case
+
+867
+00:33:37,679 --> 00:33:44,320
+profile along the single line u?
+
+868
+00:33:41,840 --> 00:33:46,799
+Set theta to zero. You obtain vertical
+
+869
+00:33:44,320 --> 00:33:49,279
+integrals. Vertical integrals give you a
+
+870
+00:33:46,799 --> 00:33:51,440
+one-dimensional signal. You perform a
+
+871
+00:33:49,279 --> 00:33:53,600
+one-dimensional fora transform and you
+
+872
+00:33:51,440 --> 00:33:55,519
+get the spectrum.
+
+873
+00:33:53,600 --> 00:33:57,200
+So you do the physical measurement to
+
+874
+00:33:55,519 --> 00:33:59,519
+get this profile. you perform the
+
+875
+00:33:57,200 --> 00:34:01,519
+one-dimensional forier transform. You
+
+876
+00:33:59,519 --> 00:34:03,600
+get the projection profile along this
+
+877
+00:34:01,519 --> 00:34:06,000
+line. In the case I just showed, this
+
+878
+00:34:03,600 --> 00:34:08,159
+line corresponds to theta equals 0 along
+
+879
+00:34:06,000 --> 00:34:10,079
+the u axis.
+
+880
+00:34:08,159 --> 00:34:12,480
+In this way, you recover for space
+
+881
+00:34:10,079 --> 00:34:14,560
+information along only one line. With an
+
+882
+00:34:12,480 --> 00:34:16,879
+X-ray measurement, you recover for
+
+883
+00:34:14,560 --> 00:34:18,720
+domain information.
+
+884
+00:34:16,879 --> 00:34:20,879
+Ideally, you want all the forier
+
+885
+00:34:18,720 --> 00:34:23,359
+information recovered. Then you perform
+
+886
+00:34:20,879 --> 00:34:25,520
+the two-dimensional inverse forier
+
+887
+00:34:23,359 --> 00:34:28,639
+transform and reconstruct the underlying
+
+888
+00:34:25,520 --> 00:34:32,000
+image f ofxy. The forier slice theorem
+
+889
+00:34:28,639 --> 00:34:33,919
+is not limited to theta equals zero.
+
+890
+00:34:32,000 --> 00:34:36,560
+The theorem claims that for arbitrary
+
+891
+00:34:33,919 --> 00:34:38,159
+theta this holds true. For an arbitrary
+
+892
+00:34:36,560 --> 00:34:40,720
+theta you have an arbitrary
+
+893
+00:34:38,159 --> 00:34:42,800
+one-dimensional projection profile. You
+
+894
+00:34:40,720 --> 00:34:44,879
+perform the one-dimensional forier
+
+895
+00:34:42,800 --> 00:34:47,200
+transform and recover the profile along
+
+896
+00:34:44,879 --> 00:34:49,200
+the corresponding line. As explained
+
+897
+00:34:47,200 --> 00:34:52,560
+earlier, if you keep theta changing from
+
+898
+00:34:49,200 --> 00:34:54,720
+zero to 180 degrees, the line sweeps the
+
+899
+00:34:52,560 --> 00:34:58,160
+whole forier space and you recover all
+
+900
+00:34:54,720 --> 00:35:00,160
+the information. That is the idea.
+
+901
+00:34:58,160 --> 00:35:02,320
+Now the heruristic if you have the
+
+902
+00:35:00,160 --> 00:35:04,560
+vertical projection property proved as
+
+903
+00:35:02,320 --> 00:35:08,480
+such you can immediately understand that
+
+904
+00:35:04,560 --> 00:35:10,240
+the general case must be true. Why?
+
+905
+00:35:08,480 --> 00:35:12,800
+Because the two-dimensional forier
+
+906
+00:35:10,240 --> 00:35:15,119
+transform has a rotation property. If
+
+907
+00:35:12,800 --> 00:35:17,359
+you rotate the object by 30°, the
+
+908
+00:35:15,119 --> 00:35:20,240
+two-dimensional furier spectrum is also
+
+909
+00:35:17,359 --> 00:35:22,640
+rotated by 30°.
+
+910
+00:35:20,240 --> 00:35:24,800
+Since the angle theta is arbitrary due
+
+911
+00:35:22,640 --> 00:35:27,359
+to the rotation property, you can select
+
+912
+00:35:24,800 --> 00:35:29,200
+the angle as you set up the system. So
+
+913
+00:35:27,359 --> 00:35:31,280
+if you ask, I have this projection
+
+914
+00:35:29,200 --> 00:35:33,760
+profile, I perform a one-dimensional
+
+915
+00:35:31,280 --> 00:35:37,280
+fier transform. Will I get the same type
+
+916
+00:35:33,760 --> 00:35:39,599
+of profile along the corresponding line?
+
+917
+00:35:37,280 --> 00:35:41,760
+The answer is yes.
+
+918
+00:35:39,599 --> 00:35:43,920
+I can select my x-axis along that
+
+919
+00:35:41,760 --> 00:35:46,640
+direction and my y-axis perpendicular to
+
+920
+00:35:43,920 --> 00:35:48,800
+it. In this rotated xycoordinate, I can
+
+921
+00:35:46,640 --> 00:35:51,359
+use exactly what I explained. Therefore,
+
+922
+00:35:48,800 --> 00:35:53,119
+the forier slice theorem must be true.
+
+923
+00:35:51,359 --> 00:35:54,640
+You can understand this immediately from
+
+924
+00:35:53,119 --> 00:35:57,839
+the rotation property of the
+
+925
+00:35:54,640 --> 00:36:00,320
+two-dimensional forier transform.
+
+926
+00:35:57,839 --> 00:36:02,320
+We can also do it mathematically. We
+
+927
+00:36:00,320 --> 00:36:06,160
+introduce a rotated coordinate system
+
+928
+00:36:02,320 --> 00:36:08,400
+ts. For uv we introduce ts. And actually
+
+929
+00:36:06,160 --> 00:36:13,720
+this ts is better placed in the xy
+
+930
+00:36:08,400 --> 00:36:13,720
+space. So we move this to the xy plane.
+
+931
+00:36:14,160 --> 00:36:18,240
+You can link the ts coordinates to xy
+
+932
+00:36:16,640 --> 00:36:20,240
+through a straightforward coordinate
+
+933
+00:36:18,240 --> 00:36:22,480
+transformation. Then you can go through
+
+934
+00:36:20,240 --> 00:36:24,400
+the mathematical derivations to show the
+
+935
+00:36:22,480 --> 00:36:26,880
+forier slice theorem. In the general
+
+936
+00:36:24,400 --> 00:36:31,200
+case, the theta angle is the same in the
+
+937
+00:36:26,880 --> 00:36:33,520
+UV domain and in the XY domain
+
+938
+00:36:31,200 --> 00:36:35,920
+with this coordinate transform P of
+
+939
+00:36:33,520 --> 00:36:38,160
+theta T for angle theta as a function of
+
+940
+00:36:35,920 --> 00:36:41,280
+T can be expressed as a vertical
+
+941
+00:36:38,160 --> 00:36:43,440
+projection in the T S coordinate system.
+
+942
+00:36:41,280 --> 00:36:46,640
+Here S is the vertical direction in the
+
+943
+00:36:43,440 --> 00:36:48,800
+TS system.
+
+944
+00:36:46,640 --> 00:36:51,280
+Next perform the one-dimensional forier
+
+945
+00:36:48,800 --> 00:36:54,160
+transform. The exponential factor is e
+
+946
+00:36:51,280 --> 00:36:56,079
+to the power minus j 2 pi wt. Then do
+
+947
+00:36:54,160 --> 00:36:58,079
+the same trick as before. Insert the
+
+948
+00:36:56,079 --> 00:37:00,320
+definition of the projection profile for
+
+949
+00:36:58,079 --> 00:37:02,079
+angle theta into the bracket. You get
+
+950
+00:37:00,320 --> 00:37:06,599
+the resulting expression pretty much
+
+951
+00:37:02,079 --> 00:37:06,599
+like the simplest case we did.
+
+952
+00:37:07,839 --> 00:37:11,839
+Then you change the transform back from
+
+953
+00:37:09,520 --> 00:37:13,520
+the ts system to the xycoordinate
+
+954
+00:37:11,839 --> 00:37:16,079
+system.
+
+955
+00:37:13,520 --> 00:37:17,599
+You can express it this way. Rearranging
+
+956
+00:37:16,079 --> 00:37:19,760
+a little. It can be expressed as a
+
+957
+00:37:17,599 --> 00:37:22,800
+two-dimensional fora transform capital
+
+958
+00:37:19,760 --> 00:37:25,520
+f. The u component is w cosine theta and
+
+959
+00:37:22,800 --> 00:37:27,839
+the v component is w sin theta because
+
+960
+00:37:25,520 --> 00:37:30,640
+in the two-dimensional fier transform
+
+961
+00:37:27,839 --> 00:37:32,320
+you have xu + y v the factor w is
+
+962
+00:37:30,640 --> 00:37:34,079
+redistributed back giving this
+
+963
+00:37:32,320 --> 00:37:37,359
+relationship
+
+964
+00:37:34,079 --> 00:37:39,760
+as theta of w= f of open parenthesis w
+
+965
+00:37:37,359 --> 00:37:41,760
+cosine theta w sin theta close
+
+966
+00:37:39,760 --> 00:37:43,280
+parenthesis.
+
+967
+00:37:41,760 --> 00:37:45,760
+This is nothing but the general form of
+
+968
+00:37:43,280 --> 00:37:48,240
+the forier slice theorem. This is the
+
+969
+00:37:45,760 --> 00:37:50,000
+mathematical derivation. You can review
+
+970
+00:37:48,240 --> 00:37:53,000
+it yourself and check chapter 3 if
+
+971
+00:37:50,000 --> 00:37:53,000
+needed.
+
+972
+00:37:54,320 --> 00:37:59,280
+Let me visualize what we mentioned.
+
+973
+00:37:57,040 --> 00:38:01,440
+You have the underlying image f of x and
+
+974
+00:37:59,280 --> 00:38:05,839
+y. And using x-ray measurements, you get
+
+975
+00:38:01,440 --> 00:38:07,760
+the projection profile p of theta and t.
+
+976
+00:38:05,839 --> 00:38:09,680
+For a given theta, you perform a
+
+977
+00:38:07,760 --> 00:38:12,560
+one-dimensional forier transform with
+
+978
+00:38:09,680 --> 00:38:14,240
+respect to t. You get a line profile
+
+979
+00:38:12,560 --> 00:38:17,200
+making the angle theta in the
+
+980
+00:38:14,240 --> 00:38:18,800
+two-dimensional forier space.
+
+981
+00:38:17,200 --> 00:38:23,599
+But theta can be changed as you wish
+
+982
+00:38:18,800 --> 00:38:26,240
+from 0 to pi that is 0 to 180°.
+
+983
+00:38:23,599 --> 00:38:29,839
+So you get a line for theta= 0, a line
+
+984
+00:38:26,240 --> 00:38:33,760
+for theta= 15°, a line for theta= 80°
+
+985
+00:38:29,839 --> 00:38:36,960
+and a line for theta= 170°. For example,
+
+986
+00:38:33,760 --> 00:38:38,960
+when theta changes from 0 to 180°, all
+
+987
+00:38:36,960 --> 00:38:41,839
+these radial lines will fully cover the
+
+988
+00:38:38,960 --> 00:38:44,000
+forier space uv. All the values are
+
+989
+00:38:41,839 --> 00:38:46,160
+measured this way.
+
+990
+00:38:44,000 --> 00:38:48,240
+When you know f of uv completely, you
+
+991
+00:38:46,160 --> 00:38:50,880
+perform the inverse forier transform and
+
+992
+00:38:48,240 --> 00:38:52,560
+recover f ofxy.
+
+993
+00:38:50,880 --> 00:38:54,480
+So the analytic process here is
+
+994
+00:38:52,560 --> 00:38:56,000
+completed using the forier transform
+
+995
+00:38:54,480 --> 00:38:58,640
+particularly in the form of the forier
+
+996
+00:38:56,000 --> 00:39:00,720
+slice theorem. This is a forier imaging
+
+997
+00:38:58,640 --> 00:39:03,599
+example. We explain measured data in the
+
+998
+00:39:00,720 --> 00:39:05,440
+forier space. We try to fill the forier
+
+999
+00:39:03,599 --> 00:39:08,000
+space completely and then we can perform
+
+1000
+00:39:05,440 --> 00:39:10,079
+image reconstruction.
+
+1001
+00:39:08,000 --> 00:39:12,480
+This is just a little more specialized
+
+1002
+00:39:10,079 --> 00:39:14,880
+idea of how you use the forier transform
+
+1003
+00:39:12,480 --> 00:39:16,480
+to do CT reconstruction.
+
+1004
+00:39:14,880 --> 00:39:18,720
+Okay.
+
+1005
+00:39:16,480 --> 00:39:21,119
+So let me go a step deeper. This is the
+
+1006
+00:39:18,720 --> 00:39:23,119
+general idea. First I explained the
+
+1007
+00:39:21,119 --> 00:39:25,280
+general idea. Then I explained the
+
+1008
+00:39:23,119 --> 00:39:28,280
+forier slice theorem a little more
+
+1009
+00:39:25,280 --> 00:39:28,280
+specifically.
+
+1010
+00:39:30,000 --> 00:39:33,920
+Now let's go even deeper and give a
+
+1011
+00:39:31,839 --> 00:39:35,920
+specific algorithm called filtered back
+
+1012
+00:39:33,920 --> 00:39:38,240
+projection.
+
+1013
+00:39:35,920 --> 00:39:40,560
+This is nothing but the inverse forier
+
+1014
+00:39:38,240 --> 00:39:42,800
+transform not in the rectangular
+
+1015
+00:39:40,560 --> 00:39:44,880
+coordinate system but in the polar
+
+1016
+00:39:42,800 --> 00:39:47,359
+coordinate system because we keep
+
+1017
+00:39:44,880 --> 00:39:49,839
+changing theta. So we should represent
+
+1018
+00:39:47,359 --> 00:39:51,839
+the inverse forier transform in polar
+
+1019
+00:39:49,839 --> 00:39:54,400
+coordinates so that what you measure in
+
+1020
+00:39:51,839 --> 00:39:56,160
+polar coordinates fits directly into the
+
+1021
+00:39:54,400 --> 00:39:57,680
+formula.
+
+1022
+00:39:56,160 --> 00:39:59,599
+Let me go through the mathematical
+
+1023
+00:39:57,680 --> 00:40:02,320
+steps. This is the inverse
+
+1024
+00:39:59,599 --> 00:40:04,560
+two-dimensional forier transform. If you
+
+1025
+00:40:02,320 --> 00:40:07,040
+know the two-dimensional forier spectrum
+
+1026
+00:40:04,560 --> 00:40:10,320
+capital f of uv, you perform the inverse
+
+1027
+00:40:07,040 --> 00:40:12,000
+transform and you get f ofxy.
+
+1028
+00:40:10,320 --> 00:40:14,240
+My motivation is to use polar
+
+1029
+00:40:12,000 --> 00:40:16,640
+coordinates. In polar coordinates, you
+
+1030
+00:40:14,240 --> 00:40:18,320
+have radial lines in the forier space.
+
+1031
+00:40:16,640 --> 00:40:19,760
+That radial variable is w. This is
+
+1032
+00:40:18,320 --> 00:40:22,480
+really the row I showed you before. And
+
+1033
+00:40:19,760 --> 00:40:26,960
+the polar angle is theta.
+
+1034
+00:40:22,480 --> 00:40:29,440
+So u = w * cosine theta and v= w * sin
+
+1035
+00:40:26,960 --> 00:40:31,920
+theta that is the polar to rectangular
+
+1036
+00:40:29,440 --> 00:40:34,480
+coordinate transformation.
+
+1037
+00:40:31,920 --> 00:40:36,880
+For du dv the small differential area
+
+1038
+00:40:34,480 --> 00:40:40,560
+element in polar coordinates you need w
+
+1039
+00:40:36,880 --> 00:40:43,760
+dw theta. The small area element dudv
+
+1040
+00:40:40,560 --> 00:40:46,640
+becomes w dw d theta in polar form. Here
+
+1041
+00:40:43,760 --> 00:40:49,280
+w is the radius. A small angle to theta
+
+1042
+00:40:46,640 --> 00:40:52,079
+gives an arc length w theta. A small
+
+1043
+00:40:49,280 --> 00:40:53,680
+radial increment dwives the thickness.
+
+1044
+00:40:52,079 --> 00:40:55,920
+Multiply them together and you get the
+
+1045
+00:40:53,680 --> 00:41:00,520
+small area element. This is just your
+
+1046
+00:40:55,920 --> 00:41:00,520
+calculus wdw theta.
+
+1047
+00:41:01,839 --> 00:41:06,160
+So you put the inverse forier transform
+
+1048
+00:41:03,839 --> 00:41:08,240
+in terms of the polar coordinate system.
+
+1049
+00:41:06,160 --> 00:41:10,640
+In polar coordinates the angle theta
+
+1050
+00:41:08,240 --> 00:41:12,960
+goes a full circle and the radius w goes
+
+1051
+00:41:10,640 --> 00:41:17,760
+from zero at the origin all the way to
+
+1052
+00:41:12,960 --> 00:41:20,160
+infinity. That covers the full space.
+
+1053
+00:41:17,760 --> 00:41:22,160
+Then we do a little trick. We decompose
+
+1054
+00:41:20,160 --> 00:41:25,200
+the full circle into two half scans from
+
+1055
+00:41:22,160 --> 00:41:26,800
+0 to pi and from pi to 2 pi. For the
+
+1056
+00:41:25,200 --> 00:41:28,960
+second part, I write theta plus pi
+
+1057
+00:41:26,800 --> 00:41:31,920
+instead of just theta. That is why the
+
+1058
+00:41:28,960 --> 00:41:34,240
+interval from pi to 2 pi becomes 0 to pi
+
+1059
+00:41:31,920 --> 00:41:36,240
+after the change of variables. So you
+
+1060
+00:41:34,240 --> 00:41:38,480
+get this form.
+
+1061
+00:41:36,240 --> 00:41:42,079
+For parallel beam geometry, the angular
+
+1062
+00:41:38,480 --> 00:41:45,119
+range of 0 to 180° is enough. If you
+
+1063
+00:41:42,079 --> 00:41:47,200
+scan from 0 to 360°, you simply double
+
+1064
+00:41:45,119 --> 00:41:49,119
+the information. you really need only
+
+1065
+00:41:47,200 --> 00:41:50,960
+half of it.
+
+1066
+00:41:49,119 --> 00:41:55,040
+Mathematically, we handle this by
+
+1067
+00:41:50,960 --> 00:41:57,520
+changing the capital f of w theta + 180°
+
+1068
+00:41:55,040 --> 00:42:00,480
+back to a function of theta. Use the
+
+1069
+00:41:57,520 --> 00:42:07,560
+identities cosine of thet +<unk> = -
+
+1070
+00:42:00,480 --> 00:42:07,560
+cosine theta and s of theta + sin theta.
+
+1071
+00:42:09,040 --> 00:42:13,359
+Taking all these trivial transformations
+
+1072
+00:42:11,440 --> 00:42:16,160
+here is the property we use and can
+
+1073
+00:42:13,359 --> 00:42:19,280
+easily verify in forier analysis. When
+
+1074
+00:42:16,160 --> 00:42:21,920
+the angle shifts by 180° you keep the
+
+1075
+00:42:19,280 --> 00:42:23,599
+same angle but reverse the sign of w.
+
+1076
+00:42:21,920 --> 00:42:27,440
+With this you only need the angular
+
+1077
+00:42:23,599 --> 00:42:30,400
+range from 0 to pi.
+
+1078
+00:42:27,440 --> 00:42:32,800
+Next change w to minus w. Then the
+
+1079
+00:42:30,400 --> 00:42:35,839
+radial limit from 0 to infinity becomes
+
+1080
+00:42:32,800 --> 00:42:37,599
+0 to minus infinity. Swap the limits and
+
+1081
+00:42:35,839 --> 00:42:40,560
+the inner integral runs from minus
+
+1082
+00:42:37,599 --> 00:42:42,880
+infinity to plus infinity.
+
+1083
+00:42:40,560 --> 00:42:45,359
+Put everything together and you have f
+
+1084
+00:42:42,880 --> 00:42:48,000
+at x. Y equals the integral from theta =
+
+1085
+00:42:45,359 --> 00:42:51,040
+0 to p<unk> integral from w = minus
+
+1086
+00:42:48,000 --> 00:42:54,560
+infinity to infinity s thet of w *
+
+1087
+00:42:51,040 --> 00:42:58,720
+absolute value of w * e to the j 2 pi wt
+
+1088
+00:42:54,560 --> 00:43:00,240
+dw theta with t= x cosine theta + y sin
+
+1089
+00:42:58,720 --> 00:43:04,800
+theta
+
+1090
+00:43:00,240 --> 00:43:06,800
+where t = x cosine theta + y theta
+
+1091
+00:43:04,800 --> 00:43:08,720
+all these are just mathematical details
+
+1092
+00:43:06,800 --> 00:43:10,960
+if you get lost review and you will be
+
+1093
+00:43:08,720 --> 00:43:13,520
+able to follow the key point is that we
+
+1094
+00:43:10,960 --> 00:43:15,680
+end up with this formula this formula is
+
+1095
+00:43:13,520 --> 00:43:17,440
+what we call filtered back projection.
+
+1096
+00:43:15,680 --> 00:43:19,760
+If you got lost somewhere, it is not
+
+1097
+00:43:17,440 --> 00:43:21,440
+critical. You can review but trust me
+
+1098
+00:43:19,760 --> 00:43:23,520
+for now. Through these steps, you get
+
+1099
+00:43:21,440 --> 00:43:28,000
+this result. This is filtered back
+
+1100
+00:43:23,520 --> 00:43:30,240
+projection. Why filtered?
+
+1101
+00:43:28,000 --> 00:43:32,160
+Because here you see S of W the
+
+1102
+00:43:30,240 --> 00:43:34,640
+one-dimensional forier spectrum along
+
+1103
+00:43:32,160 --> 00:43:37,359
+the radial line and it is multiplied by
+
+1104
+00:43:34,640 --> 00:43:39,760
+the absolute value of W. If you
+
+1105
+00:43:37,359 --> 00:43:42,160
+performed the inverse furier transform
+
+1106
+00:43:39,760 --> 00:43:44,160
+without the absolute value of W, you
+
+1107
+00:43:42,160 --> 00:43:46,640
+would go back to the original projection
+
+1108
+00:43:44,160 --> 00:43:48,880
+profile, the one-dimensional signal you
+
+1109
+00:43:46,640 --> 00:43:51,359
+measured. But with the additional factor
+
+1110
+00:43:48,880 --> 00:43:53,839
+absolute value of W, the original forier
+
+1111
+00:43:51,359 --> 00:43:56,560
+spectrum is modified.
+
+1112
+00:43:53,839 --> 00:43:59,119
+When W is small near the origin, low
+
+1113
+00:43:56,560 --> 00:44:01,440
+frequency components are weighted small.
+
+1114
+00:43:59,119 --> 00:44:03,760
+When W is large at high frequency, the
+
+1115
+00:44:01,440 --> 00:44:06,880
+waiting is large.
+
+1116
+00:44:03,760 --> 00:44:09,119
+So s of w * absolute value of w is a
+
+1117
+00:44:06,880 --> 00:44:11,200
+highpass filtering. The high frequency
+
+1118
+00:44:09,119 --> 00:44:14,079
+components are elevated in proportion to
+
+1119
+00:44:11,200 --> 00:44:16,079
+absolute value of w. After this spectral
+
+1120
+00:44:14,079 --> 00:44:18,079
+modification, you perform the inverse
+
+1121
+00:44:16,079 --> 00:44:20,480
+furier transform and go back to the
+
+1122
+00:44:18,079 --> 00:44:21,839
+projection domain.
+
+1123
+00:44:20,480 --> 00:44:24,079
+Because of the high frequency
+
+1124
+00:44:21,839 --> 00:44:26,160
+enhancement, this inverse transform is
+
+1125
+00:44:24,079 --> 00:44:28,800
+no longer the original projection
+
+1126
+00:44:26,160 --> 00:44:31,599
+profile. Instead, it is a modified
+
+1127
+00:44:28,800 --> 00:44:33,839
+highpass filtered projection profile. It
+
+1128
+00:44:31,599 --> 00:44:35,520
+is not p theta of t anymore. or it is q
+
+1129
+00:44:33,839 --> 00:44:39,520
+theta of t the filtered projection
+
+1130
+00:44:35,520 --> 00:44:43,520
+profile that is why we call it filtered
+
+1131
+00:44:39,520 --> 00:44:45,920
+what do I mean by back projection
+
+1132
+00:44:43,520 --> 00:44:48,160
+you filter first this one-dimensional
+
+1133
+00:44:45,920 --> 00:44:51,280
+filtration and then you put the filtered
+
+1134
+00:44:48,160 --> 00:44:53,920
+values back into the field of view
+
+1135
+00:44:51,280 --> 00:44:57,280
+according to the argument t= x cosine
+
+1136
+00:44:53,920 --> 00:44:59,440
+theta + y sin theta for any xy you
+
+1137
+00:44:57,280 --> 00:45:01,119
+retrieve the value q theta of t from
+
+1138
+00:44:59,440 --> 00:45:03,200
+your filtered projection profile and
+
+1139
+00:45:01,119 --> 00:45:04,800
+accumulate it back over angles
+
+1140
+00:45:03,200 --> 00:45:07,440
+That step is the back projection
+
+1141
+00:45:04,800 --> 00:45:09,359
+process. Filtration may be clear. Back
+
+1142
+00:45:07,440 --> 00:45:10,960
+projection can feel a little confusing,
+
+1143
+00:45:09,359 --> 00:45:12,960
+but it simply means smearing the
+
+1144
+00:45:10,960 --> 00:45:17,000
+filtered profile back across the image
+
+1145
+00:45:12,960 --> 00:45:17,000
+along the corresponding rays.
+
+1146
+00:45:18,560 --> 00:45:22,800
+So here we have this picture. The back
+
+1147
+00:45:20,640 --> 00:45:25,040
+projection is visualized. This is the
+
+1148
+00:45:22,800 --> 00:45:28,319
+projection profile after filtration. So
+
+1149
+00:45:25,040 --> 00:45:30,800
+it is a filtered projection profile.
+
+1150
+00:45:28,319 --> 00:45:33,200
+This filtered projection profile Q theta
+
+1151
+00:45:30,800 --> 00:45:35,359
+I oft is really smeared back over the
+
+1152
+00:45:33,200 --> 00:45:37,440
+field of view. Think of this projection
+
+1153
+00:45:35,359 --> 00:45:39,359
+profile as being smeared back from this
+
+1154
+00:45:37,440 --> 00:45:41,599
+particular direction. You have many
+
+1155
+00:45:39,359 --> 00:45:43,440
+filtered projection profiles. You sweep
+
+1156
+00:45:41,599 --> 00:45:45,760
+all of them and smear them back over the
+
+1157
+00:45:43,440 --> 00:45:47,520
+field of view. Add them together to get
+
+1158
+00:45:45,760 --> 00:45:49,520
+the result.
+
+1159
+00:45:47,520 --> 00:45:52,079
+For a given XY, what is the contribution
+
+1160
+00:45:49,520 --> 00:45:54,240
+from a given Q theta?
+
+1161
+00:45:52,079 --> 00:45:57,440
+That is the question I want to explain.
+
+1162
+00:45:54,240 --> 00:45:59,119
+Suppose XY is here. For this X Y the
+
+1163
+00:45:57,440 --> 00:46:00,960
+point in image space how much
+
+1164
+00:45:59,119 --> 00:46:03,359
+contribution do we get from a particular
+
+1165
+00:46:00,960 --> 00:46:07,119
+filtered projection profile here Q theta
+
+1166
+00:46:03,359 --> 00:46:09,680
+I you do this inner product you get T
+
+1167
+00:46:07,119 --> 00:46:12,160
+spoken clearly T equals X cosine theta I
+
+1168
+00:46:09,680 --> 00:46:14,000
+plus V sin theta I that T is the
+
+1169
+00:46:12,160 --> 00:46:16,240
+distance between this line and the
+
+1170
+00:46:14,000 --> 00:46:19,040
+central line both perpendicular to this
+
+1171
+00:46:16,240 --> 00:46:20,880
+direction making an angle theta I for
+
+1172
+00:46:19,040 --> 00:46:23,680
+any point along this line the inner
+
+1173
+00:46:20,880 --> 00:46:26,160
+product gives the same T.
+
+1174
+00:46:23,680 --> 00:46:28,640
+So as long as the pixel is on this line
+
+1175
+00:46:26,160 --> 00:46:31,200
+at distance t, you retrieve this value
+
+1176
+00:46:28,640 --> 00:46:33,599
+from the filtered projection profile for
+
+1177
+00:46:31,200 --> 00:46:35,440
+all points on this line, t is the same.
+
+1178
+00:46:33,599 --> 00:46:37,599
+You compute t, you get the value, and
+
+1179
+00:46:35,440 --> 00:46:40,000
+you put that value back for any xy on
+
+1180
+00:46:37,599 --> 00:46:42,319
+this line. That value is the same here,
+
+1181
+00:46:40,000 --> 00:46:44,400
+here, and here all along the line. If
+
+1182
+00:46:42,319 --> 00:46:46,480
+that value is one, then along that line,
+
+1183
+00:46:44,400 --> 00:46:49,839
+every point gets one. This is what I
+
+1184
+00:46:46,480 --> 00:46:52,880
+call smearing back.
+
+1185
+00:46:49,839 --> 00:46:55,040
+That was for this theta theta i.
+
+1186
+00:46:52,880 --> 00:46:57,200
+For another angle you smear back in a
+
+1187
+00:46:55,040 --> 00:46:59,520
+different way. The process is linear.
+
+1188
+00:46:57,200 --> 00:47:01,520
+The integral means summation. For each
+
+1189
+00:46:59,520 --> 00:47:03,680
+theta you retrieve the value from Q
+
+1190
+00:47:01,520 --> 00:47:06,000
+theta then add it back to the particular
+
+1191
+00:47:03,680 --> 00:47:08,400
+point XY.
+
+1192
+00:47:06,000 --> 00:47:10,160
+For another angle you do the same. You
+
+1193
+00:47:08,400 --> 00:47:12,160
+can view it like this. From this
+
+1194
+00:47:10,160 --> 00:47:14,560
+filtered projection profile you get the
+
+1195
+00:47:12,160 --> 00:47:16,240
+value here along a different direction.
+
+1196
+00:47:14,560 --> 00:47:18,160
+Another projection profile gives you
+
+1197
+00:47:16,240 --> 00:47:20,160
+another value through that same point
+
+1198
+00:47:18,160 --> 00:47:22,079
+XY.
+
+1199
+00:47:20,160 --> 00:47:24,800
+So heristically from the filtered
+
+1200
+00:47:22,079 --> 00:47:27,119
+projection domain any profile is smeared
+
+1201
+00:47:24,800 --> 00:47:29,680
+back uniformly its value covering all
+
+1202
+00:47:27,119 --> 00:47:31,440
+points along its line. All projection
+
+1203
+00:47:29,680 --> 00:47:34,000
+angles are added in the same way and
+
+1204
+00:47:31,440 --> 00:47:35,760
+then you have the image value recovered.
+
+1205
+00:47:34,000 --> 00:47:37,839
+Think about that. I will show
+
+1206
+00:47:35,760 --> 00:47:42,160
+reconstructing examples in a few minutes
+
+1207
+00:47:37,839 --> 00:47:44,000
+so you can get a better idea. Okay.
+
+1208
+00:47:42,160 --> 00:47:46,000
+Now several slides with green buttons
+
+1209
+00:47:44,000 --> 00:47:47,920
+are about the reconstruction filter.
+
+1210
+00:47:46,000 --> 00:47:50,560
+Here the reconstruction filter a
+
+1211
+00:47:47,920 --> 00:47:53,200
+highpass filter is the absolute value of
+
+1212
+00:47:50,560 --> 00:47:55,280
+w. This filter does not have an inverse
+
+1213
+00:47:53,200 --> 00:47:59,200
+fier transform by itself because the
+
+1214
+00:47:55,280 --> 00:48:01,280
+absolute value of w is not integraable.
+
+1215
+00:47:59,200 --> 00:48:03,040
+However, we can introduce a band limited
+
+1216
+00:48:01,280 --> 00:48:05,280
+assumption for a given projection
+
+1217
+00:48:03,040 --> 00:48:08,000
+profile. You have a maximum frequency a
+
+1218
+00:48:05,280 --> 00:48:09,760
+maximum bandwidth w.
+
+1219
+00:48:08,000 --> 00:48:12,560
+So the filtration really needs to be
+
+1220
+00:48:09,760 --> 00:48:14,800
+done with this truncated filter.
+
+1221
+00:48:12,560 --> 00:48:17,119
+In the original forier space, the ideal
+
+1222
+00:48:14,800 --> 00:48:19,599
+is the absolute value of omega extending
+
+1223
+00:48:17,119 --> 00:48:21,839
+to infinity. We assume a maximum
+
+1224
+00:48:19,599 --> 00:48:24,720
+bandwidth capital W. Outside that,
+
+1225
+00:48:21,839 --> 00:48:26,640
+nothing is meaningful for the data.
+
+1226
+00:48:24,720 --> 00:48:29,280
+With this window, the spectrum becomes
+
+1227
+00:48:26,640 --> 00:48:31,920
+integraable. You truncate the otherwise
+
+1228
+00:48:29,280 --> 00:48:33,760
+divergent highpass filter. Then perform
+
+1229
+00:48:31,920 --> 00:48:36,800
+the inverse transform with respect to
+
+1230
+00:48:33,760 --> 00:48:39,280
+this truncated version H of omega. You
+
+1231
+00:48:36,800 --> 00:48:41,200
+compute the inverse forier transform as
+
+1232
+00:48:39,280 --> 00:48:43,680
+the spatial domain counterpart of the
+
+1233
+00:48:41,200 --> 00:48:47,400
+highpass filter. You do the computation
+
+1234
+00:48:43,680 --> 00:48:47,400
+and you get this part.
+
+1235
+00:48:48,800 --> 00:48:53,119
+Now we assume capital W is the maximum
+
+1236
+00:48:50,960 --> 00:48:55,440
+bandwidth. Because of that we can use
+
+1237
+00:48:53,119 --> 00:48:57,359
+the sampling theorem. The projection
+
+1238
+00:48:55,440 --> 00:48:59,359
+profile can be expressed through the
+
+1239
+00:48:57,359 --> 00:49:02,960
+sampling kernel in terms of discrete
+
+1240
+00:48:59,359 --> 00:49:05,359
+sampling points P theta at K to where to
+
+1241
+00:49:02,960 --> 00:49:07,440
+the sampling step.
+
+1242
+00:49:05,359 --> 00:49:09,440
+Likewise, the filtering kernel under the
+
+1243
+00:49:07,440 --> 00:49:12,000
+assumption of limited bandwidth capital
+
+1244
+00:49:09,440 --> 00:49:16,920
+W can be expressed in terms of sampled
+
+1245
+00:49:12,000 --> 00:49:16,920
+values. So you get these two equations.
+
+1246
+00:49:18,640 --> 00:49:22,240
+So the continuous domain expression can
+
+1247
+00:49:20,480 --> 00:49:24,480
+be expressed in terms of discrete data
+
+1248
+00:49:22,240 --> 00:49:27,280
+points. You get the filtered projection
+
+1249
+00:49:24,480 --> 00:49:29,040
+profile in terms of sample data points.
+
+1250
+00:49:27,280 --> 00:49:30,800
+This is the band limited highpass
+
+1251
+00:49:29,040 --> 00:49:32,559
+filtering.
+
+1252
+00:49:30,800 --> 00:49:34,319
+You can read more if you are interested.
+
+1253
+00:49:32,559 --> 00:49:36,880
+But anyway, these are practical
+
+1254
+00:49:34,319 --> 00:49:39,359
+implementation details about highpass
+
+1255
+00:49:36,880 --> 00:49:41,200
+filtering for filtered back projection.
+
+1256
+00:49:39,359 --> 00:49:44,920
+What I have explained here is only the
+
+1257
+00:49:41,200 --> 00:49:44,920
+two-dimensional case.
+
+1258
+00:49:46,400 --> 00:49:50,319
+And in the three-dimensional case, you
+
+1259
+00:49:48,240 --> 00:49:53,200
+have an extended higher dimensional
+
+1260
+00:49:50,319 --> 00:49:54,400
+version of the forier slice theorem. The
+
+1261
+00:49:53,200 --> 00:49:56,240
+mathematics is a little more
+
+1262
+00:49:54,400 --> 00:49:58,160
+complicated, but the essential idea is
+
+1263
+00:49:56,240 --> 00:50:00,960
+still the same.
+
+1264
+00:49:58,160 --> 00:50:03,599
+You have a 3D object. You view it as a
+
+1265
+00:50:00,960 --> 00:50:05,680
+superp position of 3D waves, not 2D
+
+1266
+00:50:03,599 --> 00:50:07,920
+waves, with all kinds of orientations
+
+1267
+00:50:05,680 --> 00:50:09,680
+and frequencies.
+
+1268
+00:50:07,920 --> 00:50:11,760
+When you form a projection from one
+
+1269
+00:50:09,680 --> 00:50:13,760
+direction and superimpose contributions
+
+1270
+00:50:11,760 --> 00:50:15,520
+along that direction, you only get
+
+1271
+00:50:13,760 --> 00:50:17,680
+information for the wave components
+
+1272
+00:50:15,520 --> 00:50:19,760
+whose directional vector and frequency
+
+1273
+00:50:17,680 --> 00:50:22,480
+components lie in the plane orthogonal
+
+1274
+00:50:19,760 --> 00:50:24,960
+to the projection direction.
+
+1275
+00:50:22,480 --> 00:50:27,520
+In other words, the 2D forier transform
+
+1276
+00:50:24,960 --> 00:50:30,000
+of a 2D projection gives you a central
+
+1277
+00:50:27,520 --> 00:50:32,559
+plane through the 3D forier transform of
+
+1278
+00:50:30,000 --> 00:50:35,040
+the object oriented perpendicular to the
+
+1279
+00:50:32,559 --> 00:50:37,040
+projection rays. This is really just the
+
+1280
+00:50:35,040 --> 00:50:38,640
+extension of the 2D forier slice
+
+1281
+00:50:37,040 --> 00:50:40,240
+theorem.
+
+1282
+00:50:38,640 --> 00:50:44,680
+I don't want to confuse you too much.
+
+1283
+00:50:40,240 --> 00:50:44,680
+Again, you see this nice green button.
+
+1284
+00:50:46,240 --> 00:50:51,599
+So, analytic approach, we convert X-ray
+
+1285
+00:50:48,880 --> 00:50:53,599
+data into Forier space. Equivalently we
+
+1286
+00:50:51,599 --> 00:50:56,960
+could work in radon space but here I
+
+1287
+00:50:53,599 --> 00:50:59,280
+explain the forier space processing.
+
+1288
+00:50:56,960 --> 00:51:01,280
+We invert the forier space transform
+
+1289
+00:50:59,280 --> 00:51:03,359
+according to a closed form formula like
+
+1290
+00:51:01,280 --> 00:51:05,200
+the one I derived. Filtered back
+
+1291
+00:51:03,359 --> 00:51:08,240
+projection is an analytic formula. You
+
+1292
+00:51:05,200 --> 00:51:10,079
+do not need iterative reconstruction
+
+1293
+00:51:08,240 --> 00:51:12,160
+in the reconstruction process. Some
+
+1294
+00:51:10,079 --> 00:51:14,800
+filtering or prior processing steps may
+
+1295
+00:51:12,160 --> 00:51:16,800
+be used. An iterative algorithm is very
+
+1296
+00:51:14,800 --> 00:51:18,960
+useful when the data are not complete.
+
+1297
+00:51:16,800 --> 00:51:21,040
+Say some views are missing, projections
+
+1298
+00:51:18,960 --> 00:51:24,319
+are blocked by metal or there are other
+
+1299
+00:51:21,040 --> 00:51:26,160
+imperfections in data acquisition.
+
+1300
+00:51:24,319 --> 00:51:28,400
+Analytic pros, you don't need an
+
+1301
+00:51:26,160 --> 00:51:30,880
+iterative process. You have a formula.
+
+1302
+00:51:28,400 --> 00:51:34,000
+That's nice, but it assumes low noise
+
+1303
+00:51:30,880 --> 00:51:36,000
+and complete data.
+
+1304
+00:51:34,000 --> 00:51:37,520
+So the two approaches, iterative and
+
+1305
+00:51:36,000 --> 00:51:39,680
+analytic have their strengths and
+
+1306
+00:51:37,520 --> 00:51:41,440
+weaknesses.
+
+1307
+00:51:39,680 --> 00:51:43,440
+Nowadays, iterative methods are often
+
+1308
+00:51:41,440 --> 00:51:45,119
+more popular when we need lowd dose
+
+1309
+00:51:43,440 --> 00:51:47,440
+reconstruction or a very short
+
+1310
+00:51:45,119 --> 00:51:49,119
+acquisition time. And filtered back
+
+1311
+00:51:47,440 --> 00:51:50,960
+projection, as I explained here, is just
+
+1312
+00:51:49,119 --> 00:51:55,319
+the mathematical formulas plus the
+
+1313
+00:51:50,960 --> 00:51:55,319
+geometrical pictures I mentioned.
+
+1314
+00:51:56,720 --> 00:51:59,920
+Now, I'm going to show you some
+
+1315
+00:51:57,839 --> 00:52:02,480
+numerical examples at the end so you
+
+1316
+00:51:59,920 --> 00:52:04,559
+have a better understanding.
+
+1317
+00:52:02,480 --> 00:52:07,119
+These examples let you see how what we
+
+1318
+00:52:04,559 --> 00:52:08,480
+learned works on real cases. After that,
+
+1319
+00:52:07,119 --> 00:52:11,880
+we'll take a quick look at a few
+
+1320
+00:52:08,480 --> 00:52:11,880
+clinical images.
+
+1321
+00:52:13,440 --> 00:52:18,000
+So, the real example is a simple
+
+1322
+00:52:14,960 --> 00:52:20,000
+cross-section with a small bright disc.
+
+1323
+00:52:18,000 --> 00:52:22,880
+You do one-dimensional projection data
+
+1324
+00:52:20,000 --> 00:52:24,640
+acquisition at an angle theta.
+
+1325
+00:52:22,880 --> 00:52:26,880
+You get this profile and you see a peak
+
+1326
+00:52:24,640 --> 00:52:29,119
+due to the bright disc. This is at an
+
+1327
+00:52:26,880 --> 00:52:32,480
+angle theta. Theta can be changed from
+
+1328
+00:52:29,119 --> 00:52:34,480
+0° to pi. As theta changes, the peak
+
+1329
+00:52:32,480 --> 00:52:36,720
+traces half of a sinosoidal curve in the
+
+1330
+00:52:34,480 --> 00:52:39,440
+sinog. For this given view, the
+
+1331
+00:52:36,720 --> 00:52:41,280
+projection profile is here.
+
+1332
+00:52:39,440 --> 00:52:43,200
+We have this example, but at different
+
+1333
+00:52:41,280 --> 00:52:46,240
+elevations, that is at different theta
+
+1334
+00:52:43,200 --> 00:52:48,000
+angles, you have different data.
+
+1335
+00:52:46,240 --> 00:52:50,160
+So if you do back projection, what will
+
+1336
+00:52:48,000 --> 00:52:51,760
+happen? I explained a lot about back
+
+1337
+00:52:50,160 --> 00:52:54,000
+projection. Back projection is the
+
+1338
+00:52:51,760 --> 00:52:56,240
+filtered projection profile smeared back
+
+1339
+00:52:54,000 --> 00:52:58,319
+over the field of view. Let me show you
+
+1340
+00:52:56,240 --> 00:53:00,319
+what happens. First, let's not bother
+
+1341
+00:52:58,319 --> 00:53:02,079
+with any filtration. This is the
+
+1342
+00:53:00,319 --> 00:53:05,079
+projection profile, and I back project
+
+1343
+00:53:02,079 --> 00:53:05,079
+it.
+
+1344
+00:53:06,240 --> 00:53:10,160
+So this is the projection profile.
+
+1345
+00:53:08,079 --> 00:53:12,160
+Something like this.
+
+1346
+00:53:10,160 --> 00:53:14,400
+You do back projection. You smear the
+
+1347
+00:53:12,160 --> 00:53:16,559
+profile back along the original X-ray
+
+1348
+00:53:14,400 --> 00:53:18,480
+path over the field of view. The higher
+
+1349
+00:53:16,559 --> 00:53:20,480
+value here is put back. So along this
+
+1350
+00:53:18,480 --> 00:53:23,040
+line, the value is placed at every pixel
+
+1351
+00:53:20,480 --> 00:53:25,119
+on the line. Here the value is a little
+
+1352
+00:53:23,040 --> 00:53:27,359
+low. So along this line, every point is
+
+1353
+00:53:25,119 --> 00:53:29,119
+a little dark. You find the pixels on
+
+1354
+00:53:27,359 --> 00:53:30,720
+that line. Take the value and smear it
+
+1355
+00:53:29,119 --> 00:53:33,280
+back.
+
+1356
+00:53:30,720 --> 00:53:35,520
+This is from one direction.
+
+1357
+00:53:33,280 --> 00:53:37,200
+You do the same from every direction.
+
+1358
+00:53:35,520 --> 00:53:38,720
+The smear back results are added
+
+1359
+00:53:37,200 --> 00:53:41,280
+together because the integral with
+
+1360
+00:53:38,720 --> 00:53:43,359
+respect to d theta is just a summation.
+
+1361
+00:53:41,280 --> 00:53:45,359
+You smear back one projection, you get a
+
+1362
+00:53:43,359 --> 00:53:47,040
+picture like this. You take another
+
+1363
+00:53:45,359 --> 00:53:49,760
+projection, you smear back the other
+
+1364
+00:53:47,040 --> 00:53:51,520
+way. You add the two together. Many
+
+1365
+00:53:49,760 --> 00:53:54,520
+projections add many contributions
+
+1366
+00:53:51,520 --> 00:53:54,520
+together.
+
+1367
+00:53:56,079 --> 00:54:00,800
+from 180 degrees. You add everything
+
+1368
+00:53:58,319 --> 00:54:02,480
+together, you get something not too much
+
+1369
+00:54:00,800 --> 00:54:04,400
+different from the truth, but it looks
+
+1370
+00:54:02,480 --> 00:54:06,240
+very blurred,
+
+1371
+00:54:04,400 --> 00:54:07,920
+you still see a region that is a little
+
+1372
+00:54:06,240 --> 00:54:10,319
+high because this part of the projection
+
+1373
+00:54:07,920 --> 00:54:12,480
+is high. When you back project along the
+
+1374
+00:54:10,319 --> 00:54:15,040
+original X-ray paths, that high value is
+
+1375
+00:54:12,480 --> 00:54:17,119
+placed along those lines. However, there
+
+1376
+00:54:15,040 --> 00:54:19,280
+are artifacts
+
+1377
+00:54:17,119 --> 00:54:21,119
+in the smearing back process. A high
+
+1378
+00:54:19,280 --> 00:54:23,440
+value here gets spread to places that
+
+1379
+00:54:21,119 --> 00:54:25,359
+are not actually high in the object.
+
+1380
+00:54:23,440 --> 00:54:27,760
+Back projection alone smears the high
+
+1381
+00:54:25,359 --> 00:54:29,680
+values around. So simply collecting
+
+1382
+00:54:27,760 --> 00:54:32,240
+projections and doing back projection is
+
+1383
+00:54:29,680 --> 00:54:34,000
+not enough to recover an accurate image.
+
+1384
+00:54:32,240 --> 00:54:37,000
+That is why we really need to filter the
+
+1385
+00:54:34,000 --> 00:54:37,000
+projections.
+
+1386
+00:54:38,720 --> 00:54:43,359
+So you have a projection profile. You
+
+1387
+00:54:41,040 --> 00:54:45,839
+don't just smear it back. First apply a
+
+1388
+00:54:43,359 --> 00:54:47,680
+highpass filter with kernel H. After
+
+1389
+00:54:45,839 --> 00:54:50,000
+filtering you get a highpass filtered
+
+1390
+00:54:47,680 --> 00:54:51,920
+projection profile called P prime of
+
+1391
+00:54:50,000 --> 00:54:54,400
+theta T.
+
+1392
+00:54:51,920 --> 00:54:56,640
+Then you perform back projection. That's
+
+1393
+00:54:54,400 --> 00:54:59,280
+filtered back projection. Filter each
+
+1394
+00:54:56,640 --> 00:55:03,319
+projection with H and back project every
+
+1395
+00:54:59,280 --> 00:55:03,319
+filtered projection profile.
+
+1396
+00:55:05,040 --> 00:55:09,440
+This is the synog. The filtering is
+
+1397
+00:55:07,440 --> 00:55:11,520
+one-dimensional along the horizontal
+
+1398
+00:55:09,440 --> 00:55:14,160
+direction. So a highpass filter
+
+1399
+00:55:11,520 --> 00:55:16,000
+emphasizes edges.
+
+1400
+00:55:14,160 --> 00:55:18,240
+Here is the original synogram. Here's
+
+1401
+00:55:16,000 --> 00:55:20,160
+the filtered centagram. Once it is
+
+1402
+00:55:18,240 --> 00:55:23,040
+filtered, we use these data for back
+
+1403
+00:55:20,160 --> 00:55:23,040
+projection.
+
+1404
+00:55:24,720 --> 00:55:29,280
+then you can recover the original image.
+
+1405
+00:55:27,200 --> 00:55:31,440
+This looks very close to the original.
+
+1406
+00:55:29,280 --> 00:55:33,359
+If you have many angles with very small
+
+1407
+00:55:31,440 --> 00:55:35,440
+angular increments and the detector
+
+1408
+00:55:33,359 --> 00:55:37,599
+spacing is very small, the result
+
+1409
+00:55:35,440 --> 00:55:39,359
+becomes closer and closer to the true
+
+1410
+00:55:37,599 --> 00:55:41,760
+image.
+
+1411
+00:55:39,359 --> 00:55:43,760
+This is just a numerical example. The
+
+1412
+00:55:41,760 --> 00:55:46,240
+next few slides show a mat lab
+
+1413
+00:55:43,760 --> 00:55:47,680
+implementation, also your homework, so
+
+1414
+00:55:46,240 --> 00:55:50,680
+you can read through and try it
+
+1415
+00:55:47,680 --> 00:55:50,680
+yourself.
+
+1416
+00:55:52,240 --> 00:55:55,760
+Mat Lab has toolbox commands that
+
+1417
+00:55:54,160 --> 00:55:58,240
+implement projection, filtering and
+
+1418
+00:55:55,760 --> 00:56:00,720
+filtered back projection.
+
+1419
+00:55:58,240 --> 00:56:02,960
+The keyword is rayon. You supply an
+
+1420
+00:56:00,720 --> 00:56:04,960
+image in theta. Theta can be a single
+
+1421
+00:56:02,960 --> 00:56:09,160
+value which gives one projection or an
+
+1422
+00:56:04,960 --> 00:56:09,160
+array which gives many projections.
+
+1423
+00:56:10,880 --> 00:56:15,200
+The inverse transformation is done with
+
+1424
+00:56:12,799 --> 00:56:17,440
+Iridon. The projection beams are laid
+
+1425
+00:56:15,200 --> 00:56:22,440
+out line by line and the default line
+
+1426
+00:56:17,440 --> 00:56:22,440
+spacing is one pixel. one unit apart.
+
+1427
+00:56:24,000 --> 00:56:28,720
+The setup looks like this. Parallel beam
+
+1428
+00:56:26,480 --> 00:56:30,319
+geometry with sensors on one side, a
+
+1429
+00:56:28,720 --> 00:56:32,559
+source on the other, and the system
+
+1430
+00:56:30,319 --> 00:56:35,559
+rotating by the angle theta to collect
+
+1431
+00:56:32,559 --> 00:56:35,559
+projections.
+
+1432
+00:56:37,280 --> 00:56:41,920
+When you do projection, they basically
+
+1433
+00:56:39,280 --> 00:56:44,000
+decompose a single pixel into a 2x2
+
+1434
+00:56:41,920 --> 00:56:46,240
+matrix, then shoot rays through all
+
+1435
+00:56:44,000 --> 00:56:48,079
+these centers into the projection
+
+1436
+00:56:46,240 --> 00:56:50,000
+domain.
+
+1437
+00:56:48,079 --> 00:56:52,480
+If a ray hits the center of a detector
+
+1438
+00:56:50,000 --> 00:56:54,240
+bin, that detector takes the full value.
+
+1439
+00:56:52,480 --> 00:56:56,079
+If it hits the boundary between two
+
+1440
+00:56:54,240 --> 00:56:58,559
+detector bins, the value is divided
+
+1441
+00:56:56,079 --> 00:57:03,720
+equally. If it hits at an arbitrary
+
+1442
+00:56:58,559 --> 00:57:03,720
+location, linear interpolation is used.
+
+1443
+00:57:05,200 --> 00:57:09,599
+Here's a sample radon code you can run
+
+1444
+00:57:07,280 --> 00:57:11,119
+yourself. It generates an image with a
+
+1445
+00:57:09,599 --> 00:57:13,440
+white block, then produces the
+
+1446
+00:57:11,119 --> 00:57:15,680
+projection data.
+
+1447
+00:57:13,440 --> 00:57:17,760
+After that, you apply the filtration.
+
+1448
+00:57:15,680 --> 00:57:21,880
+The red arrows simply point to figures
+
+1449
+00:57:17,760 --> 00:57:21,880
+that appear on the next slide.
+
+1450
+00:57:23,359 --> 00:57:28,119
+You get this projection profile, the
+
+1451
+00:57:25,119 --> 00:57:28,119
+synog.
+
+1452
+00:57:29,760 --> 00:57:33,680
+Next, use the inverse radon code which
+
+1453
+00:57:32,079 --> 00:57:36,000
+essentially performs filtered back
+
+1454
+00:57:33,680 --> 00:57:37,680
+projection. You can also choose linear
+
+1455
+00:57:36,000 --> 00:57:39,760
+interpolation. And if you set the filter
+
+1456
+00:57:37,680 --> 00:57:43,400
+to none, that means no filtering, just
+
+1457
+00:57:39,760 --> 00:57:43,400
+simple back projection.
+
+1458
+00:57:45,040 --> 00:57:48,559
+On the top row images, you can see the
+
+1459
+00:57:46,960 --> 00:57:50,640
+difference. The unfiltered back
+
+1460
+00:57:48,559 --> 00:57:52,799
+projection is blurry, while the filtered
+
+1461
+00:57:50,640 --> 00:57:54,960
+back projection looks much closer to the
+
+1462
+00:57:52,799 --> 00:57:57,760
+original image. This is the key to
+
+1463
+00:57:54,960 --> 00:57:59,359
+reconstructing CT images.
+
+1464
+00:57:57,760 --> 00:58:02,160
+The bottom row shows some clinical
+
+1465
+00:57:59,359 --> 00:58:03,599
+examples. It feels like magic. Review
+
+1466
+00:58:02,160 --> 00:58:04,960
+the material. If you didn't do the
+
+1467
+00:58:03,599 --> 00:58:07,200
+preview and you don't review, you won't
+
+1468
+00:58:04,960 --> 00:58:09,440
+catch all the tricks. But if you read
+
+1469
+00:58:07,200 --> 00:58:12,240
+carefully, you'll understand the secret.
+
+1470
+00:58:09,440 --> 00:58:14,559
+The X-ray machine sends beams you never
+
+1471
+00:58:12,240 --> 00:58:16,880
+see. Yet your internal structure is
+
+1472
+00:58:14,559 --> 00:58:18,880
+clearly revealed.
+
+1473
+00:58:16,880 --> 00:58:20,799
+You can resolve features down to about
+
+1474
+00:58:18,880 --> 00:58:23,040
+onethird of a millimeter with every
+
+1475
+00:58:20,799 --> 00:58:25,280
+detail laid out by the algorithms I just
+
+1476
+00:58:23,040 --> 00:58:29,079
+explained. It's an amazing achievement.
+
+1477
+00:58:25,280 --> 00:58:29,079
+Inner vision with X-rays.
+
+1478
+00:58:30,720 --> 00:58:34,880
+For homework, review what we did with
+
+1479
+00:58:32,480 --> 00:58:36,640
+the block and do the same steps using an
+
+1480
+00:58:34,880 --> 00:58:38,960
+ellipse.
+
+1481
+00:58:36,640 --> 00:58:40,880
+Work through the mat lab code. Some
+
+1482
+00:58:38,960 --> 00:58:43,040
+variable names may not be obvious from
+
+1483
+00:58:40,880 --> 00:58:44,640
+the slides, but if you open mat lab help
+
+1484
+00:58:43,040 --> 00:58:46,880
+or search online, everything is
+
+1485
+00:58:44,640 --> 00:58:48,799
+straightforward. Spend some time, get
+
+1486
+00:58:46,880 --> 00:58:51,839
+familiar, and see how filtered back
+
+1487
+00:58:48,799 --> 00:58:55,400
+projection works for you. That's all for
+
+1488
+00:58:51,839 --> 00:58:55,400
+today. Thank you.
+

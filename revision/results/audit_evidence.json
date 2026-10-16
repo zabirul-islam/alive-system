@@ -1,0 +1,38 @@
+{
+  "A_judge_gpt-4o": {
+    "rows": 508,
+    "reasons_flagging_missing_context": 19,
+    "md5": "3eac294862e34f5548b8a3e7e235b396"
+  },
+  "A_judge_claude-sonnet-4-5": {
+    "rows": 508,
+    "reasons_flagging_missing_context": 50,
+    "md5": "a287eca71b74d40a4165cf17f1b6b56c"
+  },
+  "B_retrieval": {
+    "n_questions": 50,
+    "pause_eq_first_gold_mid": 50,
+    "multi_lecture_gold": 20,
+    "chunks": 1117,
+    "chunks_on_30s_grid": 1117
+  },
+  "C_gold_context": {
+    "n": 508,
+    "nn_provenance": 508,
+    "nn_score_lt_0.4": 30,
+    "nn_score_lt_0.5": 87,
+    "empty_slide_text_in_test_full": 508
+  },
+  "D_training_input": {
+    "n_train": 4191,
+    "distinct_inputs": 23,
+    "example_input": "LECTURE: Lecture 2\nCONTEXT:\nLecture 2"
+  },
+  "E_leakage": {
+    "n_test": 508,
+    "cos_ge_0.90": 95,
+    "cos_ge_0.95": 29,
+    "exact_question": 0,
+    "exact_answer_overlap": 12
+  }
+}

@@ -1,0 +1,3320 @@
+1
+00:00:00,719 --> 00:00:04,799
+Welcome to this session where we'll
+
+2
+00:00:02,320 --> 00:00:07,279
+begin exploring Mat Lab, one of the most
+
+3
+00:00:04,799 --> 00:00:09,519
+widely used computational platforms in
+
+4
+00:00:07,279 --> 00:00:12,559
+science and engineering, especially in
+
+5
+00:00:09,519 --> 00:00:14,880
+biomedical imaging. This will serve as
+
+6
+00:00:12,559 --> 00:00:16,880
+your gateway to mat lab. How it works,
+
+7
+00:00:14,880 --> 00:00:19,199
+why we use it, and how it helps us
+
+8
+00:00:16,880 --> 00:00:21,119
+handle real world data. You don't need
+
+9
+00:00:19,199 --> 00:00:24,480
+any prior experience. We'll start with
+
+10
+00:00:21,119 --> 00:00:26,480
+the basics and build up step by step. As
+
+11
+00:00:24,480 --> 00:00:28,560
+we move forward, you'll use mat lab to
+
+12
+00:00:26,480 --> 00:00:31,519
+generate signals, reconstruct images,
+
+13
+00:00:28,560 --> 00:00:34,239
+and analyze data sets. All key tasks in
+
+14
+00:00:31,519 --> 00:00:36,399
+medical imaging. The goal is not just to
+
+15
+00:00:34,239 --> 00:00:37,920
+learn syntax, but to develop intuition
+
+16
+00:00:36,399 --> 00:00:40,160
+and confidence in working with
+
+17
+00:00:37,920 --> 00:00:42,719
+computational tools that are directly
+
+18
+00:00:40,160 --> 00:00:45,200
+relevant to biomed research and clinical
+
+19
+00:00:42,719 --> 00:00:46,879
+practice.
+
+20
+00:00:45,200 --> 00:00:49,120
+We are right on schedule in our journey
+
+21
+00:00:46,879 --> 00:00:50,719
+through this material.
+
+22
+00:00:49,120 --> 00:00:52,480
+If you've already previewed the reading
+
+23
+00:00:50,719 --> 00:00:54,559
+materials related to today's lecture,
+
+24
+00:00:52,480 --> 00:00:57,360
+excellent. That head start will help you
+
+25
+00:00:54,559 --> 00:00:59,840
+connect concepts more easily.
+
+26
+00:00:57,360 --> 00:01:01,600
+If not, no worries. I do encourage you
+
+27
+00:00:59,840 --> 00:01:03,680
+to follow along closely and review key
+
+28
+00:01:01,600 --> 00:01:05,439
+ideas afterward. This habit of
+
+29
+00:01:03,680 --> 00:01:06,960
+reinforcing concepts as you progress
+
+30
+00:01:05,439 --> 00:01:09,040
+will help you build a stronger, more
+
+31
+00:01:06,960 --> 00:01:10,720
+intuitive understanding, especially as
+
+32
+00:01:09,040 --> 00:01:13,360
+the ideas become more mathematically
+
+33
+00:01:10,720 --> 00:01:15,040
+involved.
+
+34
+00:01:13,360 --> 00:01:16,960
+Now, let me address a common issue
+
+35
+00:01:15,040 --> 00:01:19,759
+students often encounter early on.
+
+36
+00:01:16,960 --> 00:01:21,600
+Installation problems with mat lab.
+
+37
+00:01:19,759 --> 00:01:24,240
+Here's a message I received from a
+
+38
+00:01:21,600 --> 00:01:25,840
+student. He was unable to install mat
+
+39
+00:01:24,240 --> 00:01:28,159
+lab on his computer because of
+
+40
+00:01:25,840 --> 00:01:30,000
+authentication issues with casts,
+
+41
+00:01:28,159 --> 00:01:31,439
+something that happens occasionally,
+
+42
+00:01:30,000 --> 00:01:33,759
+especially at the beginning of the
+
+43
+00:01:31,439 --> 00:01:36,560
+semester. The good news is that this is
+
+44
+00:01:33,759 --> 00:01:38,000
+fixable and you're not alone. If you
+
+45
+00:01:36,560 --> 00:01:40,000
+experience something similar, please
+
+46
+00:01:38,000 --> 00:01:41,920
+reach out early. And of course, please
+
+47
+00:01:40,000 --> 00:01:44,159
+feel free to contact me. We're here to
+
+48
+00:01:41,920 --> 00:01:46,399
+help.
+
+49
+00:01:44,159 --> 00:01:48,320
+If you're unable to install Mat Lab on
+
+50
+00:01:46,399 --> 00:01:50,479
+your own machine, don't worry. You still
+
+51
+00:01:48,320 --> 00:01:52,560
+have options.
+
+52
+00:01:50,479 --> 00:01:54,560
+One solution is mat lab online, a
+
+53
+00:01:52,560 --> 00:01:56,880
+browserbased version provided by math
+
+54
+00:01:54,560 --> 00:01:58,719
+works. You can access it from any modern
+
+55
+00:01:56,880 --> 00:02:01,200
+browser without installing anything on
+
+56
+00:01:58,719 --> 00:02:02,640
+your device. Just search run mat lab
+
+57
+00:02:01,200 --> 00:02:06,159
+online and you'll find the link right
+
+58
+00:02:02,640 --> 00:02:08,399
+away. Another option is octave online.
+
+59
+00:02:06,159 --> 00:02:11,360
+It's a free open-source alternative that
+
+60
+00:02:08,399 --> 00:02:12,560
+supports many mat lab commands. While it
+
+61
+00:02:11,360 --> 00:02:14,319
+doesn't include all the advanced
+
+62
+00:02:12,560 --> 00:02:15,920
+toolboxes, it's good enough for our
+
+63
+00:02:14,319 --> 00:02:17,520
+assignments.
+
+64
+00:02:15,920 --> 00:02:19,040
+So remember, lack of installation
+
+65
+00:02:17,520 --> 00:02:21,200
+shouldn't be a blocker preventing you
+
+66
+00:02:19,040 --> 00:02:23,280
+from moving forward. There are various
+
+67
+00:02:21,200 --> 00:02:25,840
+ways to stay engaged and complete your
+
+68
+00:02:23,280 --> 00:02:28,560
+tasks. All you need is a browser and a
+
+69
+00:02:25,840 --> 00:02:31,120
+willingness.
+
+70
+00:02:28,560 --> 00:02:33,120
+Let's take a closer look at Octave.
+
+71
+00:02:31,120 --> 00:02:35,519
+Octave is a scientific programming
+
+72
+00:02:33,120 --> 00:02:38,160
+language that mirrors Mat Lab syntax and
+
+73
+00:02:35,519 --> 00:02:40,319
+functionality. It's free, open source,
+
+74
+00:02:38,160 --> 00:02:42,400
+and available for Windows, Mac OS, and
+
+75
+00:02:40,319 --> 00:02:44,560
+Linux. You can run it in the browser
+
+76
+00:02:42,400 --> 00:02:46,400
+using Octave online.
+
+77
+00:02:44,560 --> 00:02:48,319
+The interface looks different, but under
+
+78
+00:02:46,400 --> 00:02:50,480
+the hood, many of the same commands will
+
+79
+00:02:48,319 --> 00:02:52,800
+work, especially those used for basic
+
+80
+00:02:50,480 --> 00:02:55,280
+matrix operations, plotting, and simple
+
+81
+00:02:52,800 --> 00:02:57,680
+scripts. This makes Octiva a reliable
+
+82
+00:02:55,280 --> 00:03:00,560
+backup if mat lab access is delayed or
+
+83
+00:02:57,680 --> 00:03:02,560
+limited. While it might not support all
+
+84
+00:03:00,560 --> 00:03:04,720
+specialized toolboxes or image
+
+85
+00:03:02,560 --> 00:03:06,720
+processing features, it's more than
+
+86
+00:03:04,720 --> 00:03:08,800
+enough for getting started and building
+
+87
+00:03:06,720 --> 00:03:11,360
+foundational skills, at least for this
+
+88
+00:03:08,800 --> 00:03:12,959
+course.
+
+89
+00:03:11,360 --> 00:03:15,760
+Let me walk you through what we'll cover
+
+90
+00:03:12,959 --> 00:03:17,280
+in this lab module. We'll start by
+
+91
+00:03:15,760 --> 00:03:19,200
+getting mat lab installed on your
+
+92
+00:03:17,280 --> 00:03:21,360
+machine. Once it's up and running,
+
+93
+00:03:19,200 --> 00:03:23,599
+you'll go through the module mat lab on
+
+94
+00:03:21,360 --> 00:03:25,440
+ramp, an interactive tutorial that
+
+95
+00:03:23,599 --> 00:03:28,640
+introduces the core features of the
+
+96
+00:03:25,440 --> 00:03:30,319
+platform in a hands-on way.
+
+97
+00:03:28,640 --> 00:03:32,799
+Next, we'll work through two examples
+
+98
+00:03:30,319 --> 00:03:34,480
+that show mat lab in action. First,
+
+99
+00:03:32,799 --> 00:03:36,879
+we'll look at spectral shifts of
+
+100
+00:03:34,480 --> 00:03:39,680
+starlight, a great illustration of how
+
+101
+00:03:36,879 --> 00:03:42,080
+mat lab can be used in astrophysics.
+
+102
+00:03:39,680 --> 00:03:44,720
+Then we'll switch gears to generate a 3D
+
+103
+00:03:42,080 --> 00:03:47,440
+cone surface which introduces Mat Lab's
+
+104
+00:03:44,720 --> 00:03:49,920
+powerful graphics. And once you've the
+
+105
+00:03:47,440 --> 00:03:51,920
+basics, we can take steps further. As
+
+106
+00:03:49,920 --> 00:03:54,560
+good examples, we can explore several
+
+107
+00:03:51,920 --> 00:03:56,400
+advanced mat lab toolboxes like image
+
+108
+00:03:54,560 --> 00:03:58,640
+processing, instrument control,
+
+109
+00:03:56,400 --> 00:04:01,680
+optimization, statistics and machine
+
+110
+00:03:58,640 --> 00:04:04,239
+learning and symbolic computation. These
+
+111
+00:04:01,680 --> 00:04:06,480
+toolboxes allow mat lab to go far beyond
+
+112
+00:04:04,239 --> 00:04:10,480
+basic math and become a most powerful
+
+113
+00:04:06,480 --> 00:04:12,400
+scientific computing platform.
+
+114
+00:04:10,480 --> 00:04:14,400
+The very first step is to install and
+
+115
+00:04:12,400 --> 00:04:16,079
+activate MATLAB.
+
+116
+00:04:14,400 --> 00:04:17,680
+Make sure to follow the installation
+
+117
+00:04:16,079 --> 00:04:19,519
+instructions that match your operating
+
+118
+00:04:17,680 --> 00:04:22,240
+system. Whether you're on Windows,
+
+119
+00:04:19,519 --> 00:04:24,160
+Matios, or Linux. During the
+
+120
+00:04:22,240 --> 00:04:26,720
+installation, you'll be asked to enter a
+
+121
+00:04:24,160 --> 00:04:28,800
+product key to activate the software.
+
+122
+00:04:26,720 --> 00:04:31,919
+This key is provided by the institution
+
+123
+00:04:28,800 --> 00:04:33,680
+and it unlocks your licensed access.
+
+124
+00:04:31,919 --> 00:04:35,520
+If you run into any issues during the
+
+125
+00:04:33,680 --> 00:04:37,360
+setup, like installation errors or
+
+126
+00:04:35,520 --> 00:04:39,360
+activation trouble, don't hesitate to
+
+127
+00:04:37,360 --> 00:04:41,759
+reach out. You can consult the help
+
+128
+00:04:39,360 --> 00:04:44,720
+center or message me directly. We're
+
+129
+00:04:41,759 --> 00:04:46,880
+here to help you get started smoothly.
+
+130
+00:04:44,720 --> 00:04:48,800
+Having mat lab set up and ready prepares
+
+131
+00:04:46,880 --> 00:04:51,520
+us well before diving into hands-on
+
+132
+00:04:48,800 --> 00:04:53,120
+examples.
+
+133
+00:04:51,520 --> 00:04:56,080
+Now that you have mat lab installed,
+
+134
+00:04:53,120 --> 00:04:57,840
+let's talk about how to launch it. If
+
+135
+00:04:56,080 --> 00:04:59,840
+you're using Windows, just go to your
+
+136
+00:04:57,840 --> 00:05:02,479
+start menu or applications folder and
+
+137
+00:04:59,840 --> 00:05:04,080
+open mat lab like any other program. On
+
+138
+00:05:02,479 --> 00:05:07,199
+Linux, you'll typically launch it from
+
+139
+00:05:04,080 --> 00:05:08,880
+the terminal by typing mat lab. Once Mat
+
+140
+00:05:07,199 --> 00:05:10,880
+Lab starts, you'll see what's called the
+
+141
+00:05:08,880 --> 00:05:13,199
+Mat Lab desktop. This is the main
+
+142
+00:05:10,880 --> 00:05:14,960
+environment where everything happens.
+
+143
+00:05:13,199 --> 00:05:17,360
+You'll notice a command window for
+
+144
+00:05:14,960 --> 00:05:20,000
+typing code, a workspace that keeps
+
+145
+00:05:17,360 --> 00:05:22,000
+track of your variables, a file browser,
+
+146
+00:05:20,000 --> 00:05:23,919
+and an editor where you can write and
+
+147
+00:05:22,000 --> 00:05:25,600
+save scripts.
+
+148
+00:05:23,919 --> 00:05:27,840
+Take a few minutes to get familiar with
+
+149
+00:05:25,600 --> 00:05:29,759
+this layout. Learning your way around
+
+150
+00:05:27,840 --> 00:05:33,520
+now will help you feel more confident
+
+151
+00:05:29,759 --> 00:05:35,360
+and efficient as we go forward.
+
+152
+00:05:33,520 --> 00:05:37,199
+As you begin using mat lab, you might
+
+153
+00:05:35,360 --> 00:05:39,520
+occasionally wonder what does this
+
+154
+00:05:37,199 --> 00:05:42,479
+function do. That's where the built-in
+
+155
+00:05:39,520 --> 00:05:44,720
+help system comes in. Let's say you want
+
+156
+00:05:42,479 --> 00:05:46,800
+to understand how to create a plot. Just
+
+157
+00:05:44,720 --> 00:05:48,720
+type help plot in the command window and
+
+158
+00:05:46,800 --> 00:05:50,240
+mat lab will show you the syntax
+
+159
+00:05:48,720 --> 00:05:52,880
+arguments and examples for that
+
+160
+00:05:50,240 --> 00:05:54,720
+function. If you don't know the name of
+
+161
+00:05:52,880 --> 00:05:57,440
+the function you need, use the look for
+
+162
+00:05:54,720 --> 00:05:59,440
+command. For example, typing look for
+
+163
+00:05:57,440 --> 00:06:01,919
+matrix will return a list of functions
+
+164
+00:05:59,440 --> 00:06:03,840
+that relate to matrices.
+
+165
+00:06:01,919 --> 00:06:06,479
+These built-in tools are powerful and
+
+166
+00:06:03,840 --> 00:06:08,560
+often overlooked. Knowing how to access
+
+167
+00:06:06,479 --> 00:06:10,240
+documentation and search for functions
+
+168
+00:06:08,560 --> 00:06:13,520
+will make you more independent and
+
+169
+00:06:10,240 --> 00:06:15,919
+effective as you learn.
+
+170
+00:06:13,520 --> 00:06:17,600
+Once you start writing code in mat lab,
+
+171
+00:06:15,919 --> 00:06:19,840
+you'll be creating and manipulating
+
+172
+00:06:17,600 --> 00:06:22,400
+variables and the workspace is used to
+
+173
+00:06:19,840 --> 00:06:24,000
+hold them. The who and whose commands
+
+174
+00:06:22,400 --> 00:06:26,160
+show you what variables are currently
+
+175
+00:06:24,000 --> 00:06:28,479
+stored. Who gives you a simple list
+
+176
+00:06:26,160 --> 00:06:31,680
+while whose gives more detail like size,
+
+177
+00:06:28,479 --> 00:06:33,600
+type, and memory usage. You can save all
+
+178
+00:06:31,680 --> 00:06:35,360
+your current variables to a file using
+
+179
+00:06:33,600 --> 00:06:37,600
+the save command and later bring them
+
+180
+00:06:35,360 --> 00:06:39,600
+back with load. If you want to start
+
+181
+00:06:37,600 --> 00:06:41,919
+fresh, clear all wipes out everything in
+
+182
+00:06:39,600 --> 00:06:44,240
+the workspace. CLC clears the command
+
+183
+00:06:41,919 --> 00:06:46,000
+window and close all shuts any open
+
+184
+00:06:44,240 --> 00:06:48,479
+figures.
+
+185
+00:06:46,000 --> 00:06:49,919
+These are simple but essential tools.
+
+186
+00:06:48,479 --> 00:06:52,160
+Once you know how to manage your
+
+187
+00:06:49,919 --> 00:06:55,919
+workspace, you'll find mat lab easier
+
+188
+00:06:52,160 --> 00:06:57,520
+and more enjoyable to use.
+
+189
+00:06:55,919 --> 00:06:59,599
+Let's take a moment to look at some
+
+190
+00:06:57,520 --> 00:07:02,720
+fundamental syntax in mat lab that
+
+191
+00:06:59,599 --> 00:07:05,120
+you'll see all the time. The percent
+
+192
+00:07:02,720 --> 00:07:07,039
+symbol is used for writing comments.
+
+193
+00:07:05,120 --> 00:07:09,120
+Anything after that symbol is ignored by
+
+194
+00:07:07,039 --> 00:07:12,720
+mat lab. So it's a great way to document
+
+195
+00:07:09,120 --> 00:07:14,560
+your code. A semicolon tells mat lab not
+
+196
+00:07:12,720 --> 00:07:17,039
+to display the output of a command which
+
+197
+00:07:14,560 --> 00:07:18,960
+keeps your console cleaner.
+
+198
+00:07:17,039 --> 00:07:20,960
+If a command is getting too long, you
+
+199
+00:07:18,960 --> 00:07:23,360
+can break it across multiple lines using
+
+200
+00:07:20,960 --> 00:07:25,199
+three dots. This helps keep your code
+
+201
+00:07:23,360 --> 00:07:27,199
+readable.
+
+202
+00:07:25,199 --> 00:07:29,280
+Mat Lab also includes a few important
+
+203
+00:07:27,199 --> 00:07:32,080
+constants. EPS stands for machine
+
+204
+00:07:29,280 --> 00:07:34,400
+precision. INF is infinity and nan which
+
+205
+00:07:32,080 --> 00:07:36,319
+stands for not a number.
+
+206
+00:07:34,400 --> 00:07:38,479
+It appears when a calculation isn't
+
+207
+00:07:36,319 --> 00:07:40,960
+mathematically defined like dividing
+
+208
+00:07:38,479 --> 00:07:42,880
+some number by zero.
+
+209
+00:07:40,960 --> 00:07:45,440
+To control how numbers appear on your
+
+210
+00:07:42,880 --> 00:07:47,520
+screen, use formatting commands. For
+
+211
+00:07:45,440 --> 00:07:50,560
+example, format long shows more decimal
+
+212
+00:07:47,520 --> 00:07:52,479
+places and format short shows fewer. You
+
+213
+00:07:50,560 --> 00:07:55,520
+also have access to a large library of
+
+214
+00:07:52,479 --> 00:07:58,080
+built-in functions like sqrt for square
+
+215
+00:07:55,520 --> 00:08:00,240
+roots, exponential for exponentials and
+
+216
+00:07:58,080 --> 00:08:03,680
+trigonometric functions such as sin and
+
+217
+00:08:00,240 --> 00:08:06,080
+cos. Basic arithmetic is intuitive.
+
+218
+00:08:03,680 --> 00:08:08,639
+You'll use plus minus times and divide
+
+219
+00:08:06,080 --> 00:08:10,879
+symbols just as you'd expect. And for
+
+220
+00:08:08,639 --> 00:08:13,039
+constants, mat lab gives you pi and
+
+221
+00:08:10,879 --> 00:08:16,319
+eer's number which you can access with
+
+222
+00:08:13,039 --> 00:08:18,479
+exponential one. Together these form the
+
+223
+00:08:16,319 --> 00:08:20,800
+foundation of all numerical work in mat
+
+224
+00:08:18,479 --> 00:08:23,680
+lab.
+
+225
+00:08:20,800 --> 00:08:28,879
+Suppose we define V as a row vector
+
+226
+00:08:23,680 --> 00:08:31,360
+equals -2 3 0 4.5 and -1.5.
+
+227
+00:08:28,879 --> 00:08:34,479
+To make it a column, we write V equals V
+
+228
+00:08:31,360 --> 00:08:38,159
+prime using the transpose. To access
+
+229
+00:08:34,479 --> 00:08:40,479
+elements, V of 1 gives the first, V of 2
+
+230
+00:08:38,159 --> 00:08:43,519
+to four gives the second to fourth, and
+
+231
+00:08:40,479 --> 00:08:46,000
+V of three and 5 gives just those two.
+
+232
+00:08:43,519 --> 00:08:49,040
+You can also create sequences. For
+
+233
+00:08:46,000 --> 00:08:51,120
+example, V= 4:2, stepping by negative 1
+
+234
+00:08:49,040 --> 00:08:54,800
+gives 432.
+
+235
+00:08:51,120 --> 00:09:02,000
+And combining vectors is easy. If A= 1:3
+
+236
+00:08:54,800 --> 00:09:03,519
+and B= 2 3, then C= A B gives 1 2 3 2 3.
+
+237
+00:09:02,000 --> 00:09:06,720
+Let's see how to create and work with
+
+238
+00:09:03,519 --> 00:09:09,279
+matrices in mat lab. To get evenly
+
+239
+00:09:06,720 --> 00:09:12,000
+spaced numbers, use lindspace. For
+
+240
+00:09:09,279 --> 00:09:14,720
+example, x equals lin space from minus
+
+241
+00:09:12,000 --> 00:09:17,279
+pi to pi with 10 points gives 10 values
+
+242
+00:09:14,720 --> 00:09:19,839
+across that range. For logarithmic
+
+243
+00:09:17,279 --> 00:09:22,720
+spacing, use log space.
+
+244
+00:09:19,839 --> 00:09:25,760
+To define a matrix, write a equals
+
+245
+00:09:22,720 --> 00:09:30,640
+square bracket 1 2 3 4 5 6. That gives a
+
+246
+00:09:25,760 --> 00:09:32,640
+2x3 matrix. To access elements, a of 1 2
+
+247
+00:09:30,640 --> 00:09:35,440
+gives the value in the first row, second
+
+248
+00:09:32,640 --> 00:09:37,920
+column. A colon two returns the second
+
+249
+00:09:35,440 --> 00:09:39,279
+column. A two colon gives the second
+
+250
+00:09:37,920 --> 00:09:41,839
+row.
+
+251
+00:09:39,279 --> 00:09:44,720
+transpose with a prime and get the
+
+252
+00:09:41,839 --> 00:09:47,760
+determinant using determinant of a. You
+
+253
+00:09:44,720 --> 00:09:51,360
+can add, subtract or scale matrices like
+
+254
+00:09:47,760 --> 00:09:54,240
+a plus b or 2 * a. Use a star b for
+
+255
+00:09:51,360 --> 00:09:57,519
+matrix multiplication and a dot star b
+
+256
+00:09:54,240 --> 00:09:59,680
+for element by element.
+
+257
+00:09:57,519 --> 00:10:01,760
+Mat lab also makes it easy to generate
+
+258
+00:09:59,680 --> 00:10:03,440
+special purpose matrices which are often
+
+259
+00:10:01,760 --> 00:10:04,959
+useful for setting up or testing
+
+260
+00:10:03,440 --> 00:10:06,880
+algorithms.
+
+261
+00:10:04,959 --> 00:10:09,360
+For example, diagonal of V creates a
+
+262
+00:10:06,880 --> 00:10:11,600
+diagonal matrix from a vector. You can
+
+263
+00:10:09,360 --> 00:10:14,720
+also reverse it. Diagonal of A pulls the
+
+264
+00:10:11,600 --> 00:10:16,800
+diagonal elements from a matrix.
+
+265
+00:10:14,720 --> 00:10:18,640
+If you need an identity matrix, that's a
+
+266
+00:10:16,800 --> 00:10:22,560
+square matrix with ones on the diagonal
+
+267
+00:10:18,640 --> 00:10:24,480
+and zeros elsewhere, just write I of N.
+
+268
+00:10:22,560 --> 00:10:27,040
+To create a matrix full of zeros, use
+
+269
+00:10:24,480 --> 00:10:29,839
+zeros of M and N. If you need one filled
+
+270
+00:10:27,040 --> 00:10:31,760
+with ones, use ones of M and N.
+
+271
+00:10:29,839 --> 00:10:33,920
+These kinds of matrices are especially
+
+272
+00:10:31,760 --> 00:10:37,839
+useful when initializing arrays before
+
+273
+00:10:33,920 --> 00:10:39,760
+filling them with computed values.
+
+274
+00:10:37,839 --> 00:10:42,560
+Now let's look at logical operations in
+
+275
+00:10:39,760 --> 00:10:45,040
+mat lab. You can compare values using
+
+276
+00:10:42,560 --> 00:10:46,800
+operators like double equals less than
+
+277
+00:10:45,040 --> 00:10:49,279
+greater than or not equals which is
+
+278
+00:10:46,800 --> 00:10:51,440
+written as tilda equals.
+
+279
+00:10:49,279 --> 00:10:53,440
+The tilda symbol means not. For
+
+280
+00:10:51,440 --> 00:10:57,040
+combining conditions use amperand for
+
+281
+00:10:53,440 --> 00:10:58,720
+and and vertical bar for o r. To find
+
+282
+00:10:57,040 --> 00:11:01,040
+specific values in an array, use the
+
+283
+00:10:58,720 --> 00:11:03,519
+find function. For example, find a
+
+284
+00:11:01,040 --> 00:11:05,839
+equals 3 gives you the positions where a
+
+285
+00:11:03,519 --> 00:11:07,600
+is exactly three.
+
+286
+00:11:05,839 --> 00:11:09,600
+These logical tools are great for
+
+287
+00:11:07,600 --> 00:11:12,079
+filtering data and writing conditional
+
+288
+00:11:09,600 --> 00:11:13,839
+code.
+
+289
+00:11:12,079 --> 00:11:15,680
+All right, let's shift gears and talk
+
+290
+00:11:13,839 --> 00:11:17,680
+about solving systems of linear
+
+291
+00:11:15,680 --> 00:11:19,680
+equations. Something that comes up all
+
+292
+00:11:17,680 --> 00:11:22,320
+the time in engineering, physics, and
+
+293
+00:11:19,680 --> 00:11:24,079
+yes, even in medical imaging.
+
+294
+00:11:22,320 --> 00:11:27,360
+Suppose we're working with a system like
+
+295
+00:11:24,079 --> 00:11:28,959
+a * xals b. Now you might think, okay,
+
+296
+00:11:27,360 --> 00:11:33,680
+just take the inverse of a and multiply
+
+297
+00:11:28,959 --> 00:11:35,760
+it by b. So x= inv * b.
+
+298
+00:11:33,680 --> 00:11:38,320
+And sure, that's mathematically valid.
+
+299
+00:11:35,760 --> 00:11:40,560
+But in practice, it's a bad idea. It's
+
+300
+00:11:38,320 --> 00:11:42,079
+slow, it's unstable, and it can lead to
+
+301
+00:11:40,560 --> 00:11:44,000
+all kinds of numerical issues,
+
+302
+00:11:42,079 --> 00:11:45,920
+especially with large or illitioned
+
+303
+00:11:44,000 --> 00:11:47,760
+matrices.
+
+304
+00:11:45,920 --> 00:11:50,160
+Instead, mat lab gives us a much better
+
+305
+00:11:47,760 --> 00:11:53,839
+tool, the backslash operator. So we
+
+306
+00:11:50,160 --> 00:11:55,680
+write x= a back slashb. This tells mat
+
+307
+00:11:53,839 --> 00:11:57,920
+lab to choose the most efficient way to
+
+308
+00:11:55,680 --> 00:12:00,959
+solve the system behind the scenes. No
+
+309
+00:11:57,920 --> 00:12:02,959
+explicit inverse needed. Later on we'll
+
+310
+00:12:00,959 --> 00:12:04,959
+learn how to implement our own solvers.
+
+311
+00:12:02,959 --> 00:12:07,519
+But for now this built-in method is what
+
+312
+00:12:04,959 --> 00:12:11,120
+you should use. It's clean, fast, and
+
+313
+00:12:07,519 --> 00:12:12,959
+accurate. Everything we want.
+
+314
+00:12:11,120 --> 00:12:14,720
+Now that we've seen how to work with
+
+315
+00:12:12,959 --> 00:12:17,040
+equations, let's take a moment to
+
+316
+00:12:14,720 --> 00:12:19,600
+explore how we can inspect the structure
+
+317
+00:12:17,040 --> 00:12:21,440
+of the data. We're working with vectors
+
+318
+00:12:19,600 --> 00:12:23,440
+and matrices.
+
+319
+00:12:21,440 --> 00:12:25,600
+To find out how long a vector is, just
+
+320
+00:12:23,440 --> 00:12:28,160
+use length. So length of V tells you how
+
+321
+00:12:25,600 --> 00:12:30,000
+many elements it has. If you're working
+
+322
+00:12:28,160 --> 00:12:32,399
+with a matrix and you want to know its
+
+323
+00:12:30,000 --> 00:12:35,200
+shape, how many rows and columns? Just
+
+324
+00:12:32,399 --> 00:12:38,079
+use size of A. Want to check if a matrix
+
+325
+00:12:35,200 --> 00:12:40,560
+is full rank? That's easy. Rank of A
+
+326
+00:12:38,079 --> 00:12:42,800
+will do the job. And when we want to
+
+327
+00:12:40,560 --> 00:12:45,040
+understand how large a matrix or vector
+
+328
+00:12:42,800 --> 00:12:47,760
+is in terms of magnitude, we use the
+
+329
+00:12:45,040 --> 00:12:49,839
+norm function. Just norm of a gives the
+
+330
+00:12:47,760 --> 00:12:52,720
+two norm by default. That's the square
+
+331
+00:12:49,839 --> 00:12:54,959
+root of the sum of squares. You can also
+
+332
+00:12:52,720 --> 00:12:57,360
+ask for specific norms like the one norm
+
+333
+00:12:54,959 --> 00:13:00,560
+using norm of a1 or the infinity norm
+
+334
+00:12:57,360 --> 00:13:02,560
+with norm of a and f. These commands
+
+335
+00:13:00,560 --> 00:13:04,480
+give you insight into the structure and
+
+336
+00:13:02,560 --> 00:13:06,320
+stability of your data. And they're
+
+337
+00:13:04,480 --> 00:13:08,399
+especially useful when you're preparing
+
+338
+00:13:06,320 --> 00:13:11,120
+data for algorithms or interpreting
+
+339
+00:13:08,399 --> 00:13:12,720
+results.
+
+340
+00:13:11,120 --> 00:13:15,360
+Let's talk about control flow,
+
+341
+00:13:12,720 --> 00:13:17,360
+specifically loops. Start with a for
+
+342
+00:13:15,360 --> 00:13:20,079
+loop. Use it when you know how many
+
+343
+00:13:17,360 --> 00:13:23,839
+times you want to repeat something.
+
+344
+00:13:20,079 --> 00:13:26,720
+For example, set x to zero. Then for i
+
+345
+00:13:23,839 --> 00:13:30,240
+from 1 to 5 in steps of two, so 1 3 and
+
+346
+00:13:26,720 --> 00:13:32,639
+5, we add i to x. At the end, x equals
+
+347
+00:13:30,240 --> 00:13:35,279
+9. For loops are useful when working
+
+348
+00:13:32,639 --> 00:13:37,680
+through a known sequence.
+
+349
+00:13:35,279 --> 00:13:40,880
+Now, a while loop runs as long as the
+
+350
+00:13:37,680 --> 00:13:44,000
+condition is true. In this example,
+
+351
+00:13:40,880 --> 00:13:46,240
+start with x equal to 7. While x is
+
+352
+00:13:44,000 --> 00:13:48,959
+greater than or equal to zero, subtract
+
+353
+00:13:46,240 --> 00:13:51,279
+two each time. The loop stops when x
+
+354
+00:13:48,959 --> 00:13:53,120
+becomes negative. Just be careful. If
+
+355
+00:13:51,279 --> 00:13:55,120
+the condition never becomes false, the
+
+356
+00:13:53,120 --> 00:13:56,959
+loop won't stop.
+
+357
+00:13:55,120 --> 00:13:59,519
+Finally, break lets you exit a loop
+
+358
+00:13:56,959 --> 00:14:02,160
+early. It's useful if you find what you
+
+359
+00:13:59,519 --> 00:14:04,800
+need before the loop finishes. In nested
+
+360
+00:14:02,160 --> 00:14:07,040
+loops, it only exits the innermost one.
+
+361
+00:14:04,800 --> 00:14:09,760
+Use it wisely. Don't skip steps that
+
+362
+00:14:07,040 --> 00:14:11,279
+still matter.
+
+363
+00:14:09,760 --> 00:14:15,120
+Let's talk about how we make decisions
+
+364
+00:14:11,279 --> 00:14:17,920
+in mat lab. First the if statement. You
+
+365
+00:14:15,120 --> 00:14:20,800
+might say if x is equal to 3, display
+
+366
+00:14:17,920 --> 00:14:23,760
+the value of x is three. If x is equal
+
+367
+00:14:20,800 --> 00:14:26,000
+to 5, display the value of x is 5.
+
+368
+00:14:23,760 --> 00:14:28,720
+Otherwise, display the value of x is not
+
+369
+00:14:26,000 --> 00:14:30,560
+three or five. This allows the program
+
+370
+00:14:28,720 --> 00:14:32,480
+to choose what to do based on the value
+
+371
+00:14:30,560 --> 00:14:34,320
+of x.
+
+372
+00:14:32,480 --> 00:14:36,399
+Now, when you want to check one variable
+
+373
+00:14:34,320 --> 00:14:38,880
+against several specific values, a
+
+374
+00:14:36,399 --> 00:14:41,519
+switch statement is better.
+
+375
+00:14:38,880 --> 00:14:44,079
+For example, if face is one, say roll
+
+376
+00:14:41,519 --> 00:14:46,560
+the one. If face is two, say roll the
+
+377
+00:14:44,079 --> 00:14:49,279
+two. Otherwise, say roll a number
+
+378
+00:14:46,560 --> 00:14:50,800
+greater than or equal to three. This is
+
+379
+00:14:49,279 --> 00:14:53,040
+easier to read than writing multiple of
+
+380
+00:14:50,800 --> 00:14:57,120
+statements. And in mat lab, the switch
+
+381
+00:14:53,040 --> 00:14:59,199
+ends automatically. No need for a break.
+
+382
+00:14:57,120 --> 00:15:01,120
+Now, let's talk about vectorization. One
+
+383
+00:14:59,199 --> 00:15:02,880
+of the most important habits in mat lab
+
+384
+00:15:01,120 --> 00:15:05,279
+programming.
+
+385
+00:15:02,880 --> 00:15:07,279
+Here's the idea. Instead of looping
+
+386
+00:15:05,279 --> 00:15:09,120
+through each element one by one, we
+
+387
+00:15:07,279 --> 00:15:10,800
+apply an operation to the whole array at
+
+388
+00:15:09,120 --> 00:15:13,760
+once.
+
+389
+00:15:10,800 --> 00:15:16,720
+For example, let's say x is the vector 1
+
+390
+00:15:13,760 --> 00:15:19,279
+2 3. Using a loop, we would add five to
+
+391
+00:15:16,720 --> 00:15:22,720
+each element one at a time. But with
+
+392
+00:15:19,279 --> 00:15:25,199
+vectorization, we just say x= x + 5. And
+
+393
+00:15:22,720 --> 00:15:28,160
+mat lab does it all at once. Same
+
+394
+00:15:25,199 --> 00:15:30,480
+result, much faster, much cleaner.
+
+395
+00:15:28,160 --> 00:15:33,279
+Whenever you can avoid loops, use
+
+396
+00:15:30,480 --> 00:15:35,760
+vectorzed operations. Mat Lab is built
+
+397
+00:15:33,279 --> 00:15:37,920
+for that.
+
+398
+00:15:35,760 --> 00:15:41,120
+Let's look at how Mat Lab handles basic
+
+399
+00:15:37,920 --> 00:15:43,839
+plots. Start by generating X values from
+
+400
+00:15:41,120 --> 00:15:46,560
+minus1 to one using lindspace. Then take
+
+401
+00:15:43,839 --> 00:15:48,720
+the sign of X to get Y.
+
+402
+00:15:46,560 --> 00:15:51,120
+Use plot X and Y to create a basic line
+
+403
+00:15:48,720 --> 00:15:53,759
+graph. To change the appearance, you can
+
+404
+00:15:51,120 --> 00:15:56,079
+specify style and color. For example,
+
+405
+00:15:53,759 --> 00:15:58,639
+plot XY black line draws the line in
+
+406
+00:15:56,079 --> 00:16:01,040
+black. Use hold on if you want to
+
+407
+00:15:58,639 --> 00:16:03,040
+overlay another plot on the same figure.
+
+408
+00:16:01,040 --> 00:16:05,279
+Use figure to open a new figure window
+
+409
+00:16:03,040 --> 00:16:07,440
+for a separate plot.
+
+410
+00:16:05,279 --> 00:16:11,600
+Plotting helps visualize data and it's
+
+411
+00:16:07,440 --> 00:16:13,519
+built into mat lab as a core strength.
+
+412
+00:16:11,600 --> 00:16:16,320
+Sometimes you want to show several plots
+
+413
+00:16:13,519 --> 00:16:18,800
+in one window. Use the subplot command
+
+414
+00:16:16,320 --> 00:16:21,680
+to divide the figure into a grid. For
+
+415
+00:16:18,800 --> 00:16:23,920
+example, subplot 2 3 1 creates two rows
+
+416
+00:16:21,680 --> 00:16:25,519
+and three columns and selects the first
+
+417
+00:16:23,920 --> 00:16:27,360
+cell.
+
+418
+00:16:25,519 --> 00:16:29,759
+Each subplot acts like an independent
+
+419
+00:16:27,360 --> 00:16:32,800
+plot. You can add titles, labels, and
+
+420
+00:16:29,759 --> 00:16:34,720
+style just like a regular figure.
+
+421
+00:16:32,800 --> 00:16:36,880
+This is helpful when comparing outputs
+
+422
+00:16:34,720 --> 00:16:39,600
+or organizing results cleanly on a
+
+423
+00:16:36,880 --> 00:16:42,480
+single screen.
+
+424
+00:16:39,600 --> 00:16:44,959
+Now, let's add a third dimension.
+
+425
+00:16:42,480 --> 00:16:47,360
+Use plot 3 of XYZ to make a 3D line
+
+426
+00:16:44,959 --> 00:16:49,120
+plot. For surfaces, use the mesh
+
+427
+00:16:47,360 --> 00:16:52,240
+command. It draws a grid over the
+
+428
+00:16:49,120 --> 00:16:54,639
+surface defined by Z values.
+
+429
+00:16:52,240 --> 00:16:57,199
+If you want a contour plot, use contour
+
+430
+00:16:54,639 --> 00:16:58,959
+Z matrix that shows level curves of a
+
+431
+00:16:57,199 --> 00:17:00,720
+surface.
+
+432
+00:16:58,959 --> 00:17:03,040
+You can also control the axis limits
+
+433
+00:17:00,720 --> 00:17:05,039
+with axis. Add a title with title and
+
+434
+00:17:03,040 --> 00:17:07,039
+label the axis using X label and Y
+
+435
+00:17:05,039 --> 00:17:08,480
+label.
+
+436
+00:17:07,039 --> 00:17:12,199
+To explain the meaning of different
+
+437
+00:17:08,480 --> 00:17:12,199
+curves, use legend.
+
+438
+00:17:12,640 --> 00:17:17,199
+Here are a few examples of what you can
+
+439
+00:17:14,559 --> 00:17:19,120
+do with mat lab plots.
+
+440
+00:17:17,199 --> 00:17:22,160
+You'll see grouped bar charts, stacked
+
+441
+00:17:19,120 --> 00:17:24,799
+bars, 2D lines, and 3D surfaces, all
+
+442
+00:17:22,160 --> 00:17:26,720
+using basic commands.
+
+443
+00:17:24,799 --> 00:17:29,440
+Try different styles, colors, and
+
+444
+00:17:26,720 --> 00:17:31,760
+layouts to get the look you want. Good
+
+445
+00:17:29,440 --> 00:17:33,679
+visualization tells a story, not just
+
+446
+00:17:31,760 --> 00:17:35,840
+numbers, but patterns, relationships,
+
+447
+00:17:33,679 --> 00:17:37,840
+and insights.
+
+448
+00:17:35,840 --> 00:17:41,120
+Use plots not just to check results, but
+
+449
+00:17:37,840 --> 00:17:42,480
+to communicate them clearly.
+
+450
+00:17:41,120 --> 00:17:44,799
+Now, let's talk about reading and
+
+451
+00:17:42,480 --> 00:17:47,600
+writing data files.
+
+452
+00:17:44,799 --> 00:17:50,480
+To open a file, use fop and pass the
+
+453
+00:17:47,600 --> 00:17:53,760
+file name and read mode. For example, f
+
+454
+00:17:50,480 --> 00:17:55,760
+open in dot RT. This gives you a file ID
+
+455
+00:17:53,760 --> 00:17:57,679
+or a FID.
+
+456
+00:17:55,760 --> 00:17:59,919
+Use fcan F to read numbers from the
+
+457
+00:17:57,679 --> 00:18:02,320
+file. When you're done, always close the
+
+458
+00:17:59,919 --> 00:18:04,400
+file using F close. If you need
+
+459
+00:18:02,320 --> 00:18:07,600
+formatting help, use help text read or
+
+460
+00:18:04,400 --> 00:18:09,679
+help fint. Below is an example of a data
+
+461
+00:18:07,600 --> 00:18:11,919
+file. It has names, types, numbers, and
+
+462
+00:18:09,679 --> 00:18:13,520
+yes or no labels.
+
+463
+00:18:11,919 --> 00:18:15,440
+You'll often need to work with mixed
+
+464
+00:18:13,520 --> 00:18:17,840
+data. So learning how to read from and
+
+465
+00:18:15,440 --> 00:18:20,559
+write to files is essential in mat lab
+
+466
+00:18:17,840 --> 00:18:22,400
+workflows.
+
+467
+00:18:20,559 --> 00:18:25,679
+Let's now learn how to read data files
+
+468
+00:18:22,400 --> 00:18:27,840
+in mat lab both fully and partially. To
+
+469
+00:18:25,679 --> 00:18:30,400
+read an entire structured data set, you
+
+470
+00:18:27,840 --> 00:18:32,559
+first open the file using fopen. Then
+
+471
+00:18:30,400 --> 00:18:35,760
+use the text read function to extract
+
+472
+00:18:32,559 --> 00:18:38,559
+data from all columns. Each data type in
+
+473
+00:18:35,760 --> 00:18:40,799
+the file corresponds to a format symbol
+
+474
+00:18:38,559 --> 00:18:43,120
+like percent s for strings, percent f
+
+475
+00:18:40,799 --> 00:18:44,880
+for floatingoint numbers and percent d
+
+476
+00:18:43,120 --> 00:18:46,960
+for integers.
+
+477
+00:18:44,880 --> 00:18:49,039
+Mat lab assigns each column to a
+
+478
+00:18:46,960 --> 00:18:50,640
+variable automatically.
+
+479
+00:18:49,039 --> 00:18:52,559
+This works well when you need to load
+
+480
+00:18:50,640 --> 00:18:55,919
+the whole data set into memory like
+
+481
+00:18:52,559 --> 00:18:57,760
+names, types, values, and so on.
+
+482
+00:18:55,919 --> 00:19:00,320
+Now, if you only want to read part of
+
+483
+00:18:57,760 --> 00:19:02,000
+the data, say just the first column, you
+
+484
+00:19:00,320 --> 00:19:04,240
+can still use text read, but with
+
+485
+00:19:02,000 --> 00:19:06,720
+asterisks added to the format string to
+
+486
+00:19:04,240 --> 00:19:08,480
+skip over the columns you don't need.
+
+487
+00:19:06,720 --> 00:19:10,400
+Mat Lab will still move through the file
+
+488
+00:19:08,480 --> 00:19:13,200
+correctly, but it'll only save the data
+
+489
+00:19:10,400 --> 00:19:15,200
+you asked for. This selective reading is
+
+490
+00:19:13,200 --> 00:19:18,960
+great for reducing memory usage or
+
+491
+00:19:15,200 --> 00:19:20,799
+focusing on relevant features.
+
+492
+00:19:18,960 --> 00:19:23,360
+Sometimes you don't need the full file,
+
+493
+00:19:20,799 --> 00:19:25,440
+you just want a specific line. Maybe
+
+494
+00:19:23,360 --> 00:19:27,600
+line two contains Joe's entry and that's
+
+495
+00:19:25,440 --> 00:19:29,520
+all you care about.
+
+496
+00:19:27,600 --> 00:19:32,000
+In this case, you can tell mat lab to
+
+497
+00:19:29,520 --> 00:19:34,080
+skip one line and then read just one.
+
+498
+00:19:32,000 --> 00:19:36,080
+You still use text read, but now with
+
+499
+00:19:34,080 --> 00:19:37,840
+two extra options, the number of lines
+
+500
+00:19:36,080 --> 00:19:39,760
+to read and the number of header lines
+
+501
+00:19:37,840 --> 00:19:41,840
+to skip.
+
+502
+00:19:39,760 --> 00:19:43,919
+This lets you directly target a record
+
+503
+00:19:41,840 --> 00:19:46,559
+without loading everything. Useful for
+
+504
+00:19:43,919 --> 00:19:50,240
+index data or when you're debugging or
+
+505
+00:19:46,559 --> 00:19:52,240
+sampling from a large file.
+
+506
+00:19:50,240 --> 00:19:54,799
+So far, we've looked at reading files.
+
+507
+00:19:52,240 --> 00:19:56,720
+Now let's switch to writing. To write
+
+508
+00:19:54,799 --> 00:19:59,840
+data out, open a file in write mode
+
+509
+00:19:56,720 --> 00:20:01,919
+using fop. Then use frrint f to format
+
+510
+00:19:59,840 --> 00:20:04,799
+the output line, inserting variables in
+
+511
+00:20:01,919 --> 00:20:06,799
+the order you want them saved.
+
+512
+00:20:04,799 --> 00:20:09,440
+For example, you can save name, type,
+
+513
+00:20:06,799 --> 00:20:11,440
+and numerical values all in one line.
+
+514
+00:20:09,440 --> 00:20:15,039
+And as always, once writing is done,
+
+515
+00:20:11,440 --> 00:20:16,799
+make sure to close the file with fclose.
+
+516
+00:20:15,039 --> 00:20:18,880
+This gives you full control over the
+
+517
+00:20:16,799 --> 00:20:21,440
+format, spacing, and layout of your
+
+518
+00:20:18,880 --> 00:20:23,280
+data. Very useful when preparing results
+
+519
+00:20:21,440 --> 00:20:26,720
+for review or generating output for
+
+520
+00:20:23,280 --> 00:20:28,640
+other software to read.
+
+521
+00:20:26,720 --> 00:20:31,679
+Next, let's see how to keep a record of
+
+522
+00:20:28,640 --> 00:20:34,559
+your work using the diary command. Start
+
+523
+00:20:31,679 --> 00:20:36,320
+with diary followed by a file name. From
+
+524
+00:20:34,559 --> 00:20:38,000
+that point on, everything you type and
+
+525
+00:20:36,320 --> 00:20:40,720
+everything MATLAB prints will be saved
+
+526
+00:20:38,000 --> 00:20:44,000
+in a log file. Once you're done, stop
+
+527
+00:20:40,720 --> 00:20:45,280
+the recording by typing diary off.
+
+528
+00:20:44,000 --> 00:20:47,440
+This is great for tracking your
+
+529
+00:20:45,280 --> 00:20:49,280
+workflow, recording sessions, or saving
+
+530
+00:20:47,440 --> 00:20:51,120
+what you've done for future reference or
+
+531
+00:20:49,280 --> 00:20:53,600
+reporting.
+
+532
+00:20:51,120 --> 00:20:55,039
+Now, another useful tool is timing. If
+
+533
+00:20:53,600 --> 00:20:57,280
+you want to measure how long your code
+
+534
+00:20:55,039 --> 00:20:59,760
+takes to run, just put tick before the
+
+535
+00:20:57,280 --> 00:21:01,200
+commands and talk after them. Mat Lab
+
+536
+00:20:59,760 --> 00:21:02,960
+will show you the elapse time in
+
+537
+00:21:01,200 --> 00:21:04,559
+seconds.
+
+538
+00:21:02,960 --> 00:21:08,000
+This helps you compare different methods
+
+539
+00:21:04,559 --> 00:21:09,919
+and optimize performance.
+
+540
+00:21:08,000 --> 00:21:13,200
+One of the key ideas in mat lab is that
+
+541
+00:21:09,919 --> 00:21:15,840
+everything is a matrix. a single number
+
+542
+00:21:13,200 --> 00:21:18,240
+that's just a one by one matrix. A row
+
+543
+00:21:15,840 --> 00:21:21,600
+of numbers is a row vector. A column is
+
+544
+00:21:18,240 --> 00:21:23,919
+a column vector. And an image that's a
+
+545
+00:21:21,600 --> 00:21:25,679
+two-dimensional matrix. If it's in
+
+546
+00:21:23,919 --> 00:21:28,720
+color, it becomes three-dimensional
+
+547
+00:21:25,679 --> 00:21:30,960
+width, height, and color channels.
+
+548
+00:21:28,720 --> 00:21:33,360
+This matrix mindset makes mat lab
+
+549
+00:21:30,960 --> 00:21:35,039
+powerful and consistent across tasks,
+
+550
+00:21:33,360 --> 00:21:37,600
+whether you're doing math, image
+
+551
+00:21:35,039 --> 00:21:41,039
+processing, or even machine learning.
+
+552
+00:21:37,600 --> 00:21:44,240
+Now, let's talk about indexing.
+
+553
+00:21:41,039 --> 00:21:47,039
+If you have a matrix A, A of I, comma, J
+
+554
+00:21:44,240 --> 00:21:50,559
+gives the element in row I in column J.
+
+555
+00:21:47,039 --> 00:21:54,000
+A of I comma gives the entire IT row. A
+
+556
+00:21:50,559 --> 00:21:56,000
+of comma J gives the whole JT column.
+
+557
+00:21:54,000 --> 00:21:58,080
+You can reshape matrices, slice out
+
+558
+00:21:56,000 --> 00:22:00,640
+parts or use logical masks to filter
+
+559
+00:21:58,080 --> 00:22:03,280
+data. To modify the matrix, use
+
+560
+00:22:00,640 --> 00:22:06,159
+expressions like A + 5, which adds five
+
+561
+00:22:03,280 --> 00:22:08,799
+to every element or a dot star B for
+
+562
+00:22:06,159 --> 00:22:11,360
+element byelement multiplication.
+
+563
+00:22:08,799 --> 00:22:14,960
+This is the foundation of mat lab matrix
+
+564
+00:22:11,360 --> 00:22:17,360
+thinking in everything you do
+
+565
+00:22:14,960 --> 00:22:19,440
+in mat lab you can do both matrix and
+
+566
+00:22:17,360 --> 00:22:22,559
+elementwise operations and the
+
+567
+00:22:19,440 --> 00:22:24,720
+difference is all in the dot a times b
+
+568
+00:22:22,559 --> 00:22:26,400
+with a single star means matrix
+
+569
+00:22:24,720 --> 00:22:29,280
+multiplication
+
+570
+00:22:26,400 --> 00:22:31,679
+a dot star b with a dot means multiply
+
+571
+00:22:29,280 --> 00:22:34,240
+element by element the same goes for
+
+572
+00:22:31,679 --> 00:22:37,039
+powers and division a corette 2 in
+
+573
+00:22:34,240 --> 00:22:39,679
+raises the matrix to a power a dot
+
+574
+00:22:37,039 --> 00:22:41,840
+corette 2 in squares each element. And
+
+575
+00:22:39,679 --> 00:22:44,080
+for division, a divided by b solves
+
+576
+00:22:41,840 --> 00:22:46,720
+equations, while a dot/b divides
+
+577
+00:22:44,080 --> 00:22:49,039
+elementwise. These small differences are
+
+578
+00:22:46,720 --> 00:22:52,400
+key when working with data equations or
+
+579
+00:22:49,039 --> 00:22:54,400
+signals in mat lab.
+
+580
+00:22:52,400 --> 00:22:57,280
+Whenever you can, avoid loops and write
+
+581
+00:22:54,400 --> 00:22:59,520
+in matrix form. Instead of looping to
+
+582
+00:22:57,280 --> 00:23:04,080
+square elements, just write a dot carrot
+
+583
+00:22:59,520 --> 00:23:07,440
+2. Want row-wise sums? Use sum of a,
+
+584
+00:23:04,080 --> 00:23:09,600
+two. Need probabilities per row? Divide
+
+585
+00:23:07,440 --> 00:23:11,840
+each row by its total using matrix
+
+586
+00:23:09,600 --> 00:23:14,960
+broadcasting. It's cleaner and faster
+
+587
+00:23:11,840 --> 00:23:16,640
+than nested loops.
+
+588
+00:23:14,960 --> 00:23:20,240
+The peaks function creates a sample
+
+589
+00:23:16,640 --> 00:23:22,000
+surface. Use mesh to visualize it. To
+
+590
+00:23:20,240 --> 00:23:24,240
+smooth it out, create a finer grid with
+
+591
+00:23:22,000 --> 00:23:27,360
+mesh grid and use interp 2 to estimate
+
+592
+00:23:24,240 --> 00:23:29,440
+new Z values. This technique is useful
+
+593
+00:23:27,360 --> 00:23:31,600
+in graphics, simulations, and image
+
+594
+00:23:29,440 --> 00:23:34,960
+processing anytime you want smoother,
+
+595
+00:23:31,600 --> 00:23:37,120
+higher resolution data.
+
+596
+00:23:34,960 --> 00:23:40,000
+Here's how we morph faces using matrix
+
+597
+00:23:37,120 --> 00:23:42,240
+tools. We warp two face images using
+
+598
+00:23:40,000 --> 00:23:44,400
+interpolation on each color channel,
+
+599
+00:23:42,240 --> 00:23:46,960
+then blend them using a weighted average
+
+600
+00:23:44,400 --> 00:23:49,520
+with alpha controlling the mix. To
+
+601
+00:23:46,960 --> 00:23:51,360
+detect unusual pixels, we reshape the
+
+602
+00:23:49,520 --> 00:23:54,000
+image and compute the Mahalobi's
+
+603
+00:23:51,360 --> 00:23:56,320
+distance from a reference color. Next,
+
+604
+00:23:54,000 --> 00:23:58,320
+we create a binary mask by thresholding
+
+605
+00:23:56,320 --> 00:24:01,039
+the distance and apply a median filter
+
+606
+00:23:58,320 --> 00:24:03,360
+to clean it up. It's a compact example
+
+607
+00:24:01,039 --> 00:24:05,200
+of how mat lab combines image warping,
+
+608
+00:24:03,360 --> 00:24:08,000
+statistics, and filtering all with
+
+609
+00:24:05,200 --> 00:24:09,840
+matrices.
+
+610
+00:24:08,000 --> 00:24:12,880
+This example shows how plot resolution
+
+611
+00:24:09,840 --> 00:24:14,799
+affects curve smoothness. In a loop, we
+
+612
+00:24:12,880 --> 00:24:18,480
+increase the number of x values using
+
+613
+00:24:14,799 --> 00:24:20,080
+lindspace, then compute y = x over 1 +
+
+614
+00:24:18,480 --> 00:24:22,320
+x^2.
+
+615
+00:24:20,080 --> 00:24:24,080
+We plot each result in a subplot grid
+
+616
+00:24:22,320 --> 00:24:26,880
+with labels and titles showing the
+
+617
+00:24:24,080 --> 00:24:29,039
+resolution. With each pause, you can see
+
+618
+00:24:26,880 --> 00:24:31,120
+the graph getting smoother. A great way
+
+619
+00:24:29,039 --> 00:24:33,760
+to visualize the impact of sampling
+
+620
+00:24:31,120 --> 00:24:35,279
+density.
+
+621
+00:24:33,760 --> 00:24:37,360
+Let's talk about the two main types of
+
+622
+00:24:35,279 --> 00:24:40,799
+files you'll create in mat lab. Scripts
+
+623
+00:24:37,360 --> 00:24:42,240
+and functions. Scripts are simple. They
+
+624
+00:24:40,799 --> 00:24:44,720
+run a series of commands and use
+
+625
+00:24:42,240 --> 00:24:46,320
+variables already in your workspace. You
+
+626
+00:24:44,720 --> 00:24:48,400
+don't pass anything in and they don't
+
+627
+00:24:46,320 --> 00:24:50,960
+return anything out. They're great for
+
+628
+00:24:48,400 --> 00:24:52,799
+quick experiments or automation.
+
+629
+00:24:50,960 --> 00:24:54,880
+Functions, on the other hand, are more
+
+630
+00:24:52,799 --> 00:24:57,840
+structured. You give them inputs and
+
+631
+00:24:54,880 --> 00:25:00,320
+they return outputs. Inside a function,
+
+632
+00:24:57,840 --> 00:25:02,320
+all variables are local, meaning they
+
+633
+00:25:00,320 --> 00:25:04,080
+don't interfere with anything else in
+
+634
+00:25:02,320 --> 00:25:05,679
+your workspace.
+
+635
+00:25:04,080 --> 00:25:07,440
+Knowing when to use a script or a
+
+636
+00:25:05,679 --> 00:25:10,320
+function is key to writing clean,
+
+637
+00:25:07,440 --> 00:25:12,320
+reliable code.
+
+638
+00:25:10,320 --> 00:25:14,000
+Here's a basic function example, one
+
+639
+00:25:12,320 --> 00:25:16,640
+that calculates the area and
+
+640
+00:25:14,000 --> 00:25:18,320
+circumference of a circle. We define a
+
+641
+00:25:16,640 --> 00:25:20,960
+function called circle that takes one
+
+642
+00:25:18,320 --> 00:25:23,919
+input, the radius. Inside we calculate
+
+643
+00:25:20,960 --> 00:25:27,120
+the area as pi * radius squared and the
+
+644
+00:25:23,919 --> 00:25:30,159
+circumference as 2 *<unk> * the radius.
+
+645
+00:25:27,120 --> 00:25:31,840
+Save this in a file named circle.mm.
+
+646
+00:25:30,159 --> 00:25:34,480
+Now to use this function, we write a
+
+647
+00:25:31,840 --> 00:25:36,480
+script. For example, if the radius is 7,
+
+648
+00:25:34,480 --> 00:25:39,279
+we call the function with that value and
+
+649
+00:25:36,480 --> 00:25:42,080
+display the result using disp. You'd
+
+650
+00:25:39,279 --> 00:25:43,760
+save this script as my script.mm.
+
+651
+00:25:42,080 --> 00:25:46,159
+This is how functions and scripts work
+
+652
+00:25:43,760 --> 00:25:49,919
+together. You build reusable tools with
+
+653
+00:25:46,159 --> 00:25:51,840
+functions and run them from scripts.
+
+654
+00:25:49,919 --> 00:25:55,760
+Let's try a simple numerical task.
+
+655
+00:25:51,840 --> 00:25:58,080
+Summing 1 / i^2 from i= 1 to 10. We can
+
+656
+00:25:55,760 --> 00:26:01,679
+do this two ways. Forward starting from
+
+657
+00:25:58,080 --> 00:26:03,600
+i= 1 or backwards starting from i= 10.
+
+658
+00:26:01,679 --> 00:26:06,880
+The code is nearly identical just with
+
+659
+00:26:03,600 --> 00:26:08,960
+the loop going in reverse. Now in theory
+
+660
+00:26:06,880 --> 00:26:10,640
+both results should be the same. But
+
+661
+00:26:08,960 --> 00:26:13,200
+because of floatingoint rounding the
+
+662
+00:26:10,640 --> 00:26:15,120
+order can make a small difference. This
+
+663
+00:26:13,200 --> 00:26:16,880
+is a great example of how numerical
+
+664
+00:26:15,120 --> 00:26:20,080
+stability matters, especially in
+
+665
+00:26:16,880 --> 00:26:21,760
+scientific computing.
+
+666
+00:26:20,080 --> 00:26:23,919
+Now, let's write our own matrix
+
+667
+00:26:21,760 --> 00:26:26,400
+multiplication function. No built-in
+
+668
+00:26:23,919 --> 00:26:29,279
+functions allowed. We create a function
+
+669
+00:26:26,400 --> 00:26:32,480
+called matrix multiply that takes two
+
+670
+00:26:29,279 --> 00:26:34,240
+square matrices and a size n. Using
+
+671
+00:26:32,480 --> 00:26:36,880
+three nested loops, we compute the
+
+672
+00:26:34,240 --> 00:26:38,799
+product row by row and column by column.
+
+673
+00:26:36,880 --> 00:26:41,120
+For each entry in the result, we take a
+
+674
+00:26:38,799 --> 00:26:44,240
+dotproduct between a row of A and a
+
+675
+00:26:41,120 --> 00:26:46,799
+column of B. This hands-on approach
+
+676
+00:26:44,240 --> 00:26:48,960
+shows exactly how matrix multiplication
+
+677
+00:26:46,799 --> 00:26:50,960
+works under the hood, which is important
+
+678
+00:26:48,960 --> 00:26:53,960
+to understand before we talk about
+
+679
+00:26:50,960 --> 00:26:53,960
+optimization.
+
+680
+00:26:54,080 --> 00:26:58,960
+To test our new function, we write a
+
+681
+00:26:56,000 --> 00:27:01,919
+quick script. We choose a matrix size N,
+
+682
+00:26:58,960 --> 00:27:04,480
+generate two random N byN matrices A and
+
+683
+00:27:01,919 --> 00:27:07,039
+B, and call our matrix multiply function
+
+684
+00:27:04,480 --> 00:27:08,960
+to compute the result. You can also
+
+685
+00:27:07,039 --> 00:27:11,440
+compare it to Mat Lab's built-in
+
+686
+00:27:08,960 --> 00:27:13,039
+multiplication to check for accuracy.
+
+687
+00:27:11,440 --> 00:27:14,960
+And here's something to think about.
+
+688
+00:27:13,039 --> 00:27:17,840
+This triple loop method works, but it's
+
+689
+00:27:14,960 --> 00:27:19,760
+not fast. Later on, we'll talk about how
+
+690
+00:27:17,840 --> 00:27:21,440
+to rewrite this using vectorzed
+
+691
+00:27:19,760 --> 00:27:23,919
+operations to make it much more
+
+692
+00:27:21,440 --> 00:27:25,440
+efficient.
+
+693
+00:27:23,919 --> 00:27:28,080
+Now, let's look at a real world
+
+694
+00:27:25,440 --> 00:27:31,120
+scientific task, measuring how stars
+
+695
+00:27:28,080 --> 00:27:33,200
+move. We start with spectral data from a
+
+696
+00:27:31,120 --> 00:27:36,000
+star. It includes many wavelengths
+
+697
+00:27:33,200 --> 00:27:38,320
+evenly spaced. The key is to find a
+
+698
+00:27:36,000 --> 00:27:40,400
+feature called the hydrogen alpha line.
+
+699
+00:27:38,320 --> 00:27:43,520
+If that line shifts, the star is moving
+
+700
+00:27:40,400 --> 00:27:45,600
+either away or toward us. With mat lab,
+
+701
+00:27:43,520 --> 00:27:47,440
+we'll identify that line, calculate how
+
+702
+00:27:45,600 --> 00:27:49,520
+much it's shifted, and then use the
+
+703
+00:27:47,440 --> 00:27:51,919
+Doppler formula to estimate the stars
+
+704
+00:27:49,520 --> 00:27:54,559
+speed.
+
+705
+00:27:51,919 --> 00:27:56,480
+Here's how we do that in mat lab. First,
+
+706
+00:27:54,559 --> 00:27:58,399
+we compute the wavelength range using
+
+707
+00:27:56,480 --> 00:28:00,799
+the start point, number of data points,
+
+708
+00:27:58,399 --> 00:28:02,399
+and spacing. Then, we build a vector of
+
+709
+00:28:00,799 --> 00:28:04,399
+wavelengths.
+
+710
+00:28:02,399 --> 00:28:06,320
+Next, we plot the spectrum and locate
+
+711
+00:28:04,399 --> 00:28:08,799
+the lowest point, which marks the
+
+712
+00:28:06,320 --> 00:28:11,440
+hydrogen alpha line. Its position gives
+
+713
+00:28:08,799 --> 00:28:13,440
+us the shifted wavelength. Using the
+
+714
+00:28:11,440 --> 00:28:16,640
+Doppler shift formula, we compute the
+
+715
+00:28:13,440 --> 00:28:19,440
+red shift, then multiply by 300,000, the
+
+716
+00:28:16,640 --> 00:28:22,240
+speed of light in kilome/s to get the
+
+717
+00:28:19,440 --> 00:28:24,000
+stars velocity. Just a few lines of
+
+718
+00:28:22,240 --> 00:28:26,640
+code, and we're measuring motion across
+
+719
+00:28:24,000 --> 00:28:29,600
+space.
+
+720
+00:28:26,640 --> 00:28:31,679
+Let's switch gears to 3D graphics. Here
+
+721
+00:28:29,600 --> 00:28:34,399
+we're creating a cone using mat lab
+
+722
+00:28:31,679 --> 00:28:37,840
+cylinder function. We define a shape
+
+723
+00:28:34,399 --> 00:28:40,559
+with the vector t= 0 1 0. This gives us
+
+724
+00:28:37,840 --> 00:28:42,399
+a cone shape. Then we call the cylinder
+
+725
+00:28:40,559 --> 00:28:45,200
+function to get the x, y, and z
+
+726
+00:28:42,399 --> 00:28:47,840
+coordinates and use surf to draw the 3D
+
+727
+00:28:45,200 --> 00:28:50,159
+surface. This shows how easily you can
+
+728
+00:28:47,840 --> 00:28:52,240
+build and visualize 3D shapes in mat
+
+729
+00:28:50,159 --> 00:28:54,960
+lab. Helpful for both learning and
+
+730
+00:28:52,240 --> 00:28:56,559
+engineering.
+
+731
+00:28:54,960 --> 00:28:59,200
+Here's the full example all in one
+
+732
+00:28:56,559 --> 00:29:02,159
+place. We define t as a vector with
+
+733
+00:28:59,200 --> 00:29:04,000
+value 0 1 0. Then we call the cylinder
+
+734
+00:29:02,159 --> 00:29:06,960
+function to generate the geometry and
+
+735
+00:29:04,000 --> 00:29:09,440
+use surf to plot it. That's it. Three
+
+736
+00:29:06,960 --> 00:29:12,159
+lines of code give us a smooth 3D cone
+
+737
+00:29:09,440 --> 00:29:13,919
+you can rotate, zoom, and customize. You
+
+738
+00:29:12,159 --> 00:29:16,159
+can even add lights, shadows, or change
+
+739
+00:29:13,919 --> 00:29:18,000
+the viewing angle. It's a simple
+
+740
+00:29:16,159 --> 00:29:21,919
+example, but it shows the power of mat
+
+741
+00:29:18,000 --> 00:29:23,760
+lab for 3D visualization.
+
+742
+00:29:21,919 --> 00:29:26,880
+Now, let's explore the image processing
+
+743
+00:29:23,760 --> 00:29:28,799
+toolbox. It includes powerful tools for
+
+744
+00:29:26,880 --> 00:29:31,360
+loading, modifying, analyzing, and
+
+745
+00:29:28,799 --> 00:29:33,440
+segmenting images. You can sharpen
+
+746
+00:29:31,360 --> 00:29:36,000
+edges, enhance contrast, or isolate
+
+747
+00:29:33,440 --> 00:29:38,480
+bright regions. It even lets you analyze
+
+748
+00:29:36,000 --> 00:29:40,159
+object shapes and intensities, which is
+
+749
+00:29:38,480 --> 00:29:43,200
+essential in fields like medical
+
+750
+00:29:40,159 --> 00:29:45,200
+imaging. You can also use it to register
+
+751
+00:29:43,200 --> 00:29:47,840
+images, align features, and prepare
+
+752
+00:29:45,200 --> 00:29:49,440
+large data sets for analysis. And if
+
+753
+00:29:47,840 --> 00:29:52,799
+needed, you can even accelerate the
+
+754
+00:29:49,440 --> 00:29:54,799
+workflow with C or C++ code. This
+
+755
+00:29:52,799 --> 00:29:56,320
+toolbox makes mat lab a great platform
+
+756
+00:29:54,799 --> 00:29:59,600
+for both learning and real world
+
+757
+00:29:56,320 --> 00:30:01,200
+applications in imaging.
+
+758
+00:29:59,600 --> 00:30:04,320
+Now let's take a look at the instrument
+
+759
+00:30:01,200 --> 00:30:06,480
+control toolbox. This toolbox allows mat
+
+760
+00:30:04,320 --> 00:30:08,640
+lab to talk directly to hardware like
+
+761
+00:30:06,480 --> 00:30:10,880
+oscilloscopes, sensors or signal
+
+762
+00:30:08,640 --> 00:30:13,279
+generators. That means you can send
+
+763
+00:30:10,880 --> 00:30:15,919
+commands, receive data and even control
+
+764
+00:30:13,279 --> 00:30:18,480
+external devices all from your mat lab
+
+765
+00:30:15,919 --> 00:30:20,480
+environment. You can also create your
+
+766
+00:30:18,480 --> 00:30:22,080
+own instrument drivers, manage device
+
+767
+00:30:20,480 --> 00:30:26,240
+sessions, and work with supported
+
+768
+00:30:22,080 --> 00:30:28,240
+protocols like Visa or TCP IP.
+
+769
+00:30:26,240 --> 00:30:30,480
+So if you're working in a lab with
+
+770
+00:30:28,240 --> 00:30:34,799
+physical instruments, this toolbox helps
+
+771
+00:30:30,480 --> 00:30:37,840
+you connect mat lab to the real world.
+
+772
+00:30:34,799 --> 00:30:39,600
+Next up, the optimization toolbox. This
+
+773
+00:30:37,840 --> 00:30:41,440
+one's all about solving problems where
+
+774
+00:30:39,600 --> 00:30:43,279
+you want to find the best outcome, like
+
+775
+00:30:41,440 --> 00:30:45,679
+minimizing cost or maximizing
+
+776
+00:30:43,279 --> 00:30:47,440
+performance. You can solve linear
+
+777
+00:30:45,679 --> 00:30:49,919
+programs, quadratic programs, and
+
+778
+00:30:47,440 --> 00:30:52,240
+nonlinear problems. It also supports
+
+779
+00:30:49,919 --> 00:30:54,480
+multi-objective optimization.
+
+780
+00:30:52,240 --> 00:30:56,000
+It's useful in many fields from data
+
+781
+00:30:54,480 --> 00:30:58,640
+fitting and machine learning to
+
+782
+00:30:56,000 --> 00:31:00,720
+operations research. If your work
+
+783
+00:30:58,640 --> 00:31:04,320
+involves tuning models or decision-m,
+
+784
+00:31:00,720 --> 00:31:06,320
+this toolbox is essential.
+
+785
+00:31:04,320 --> 00:31:09,200
+Now, we move into data science with the
+
+786
+00:31:06,320 --> 00:31:11,279
+statistics and machine learning toolbox.
+
+787
+00:31:09,200 --> 00:31:13,200
+This toolbox helps you analyze data,
+
+788
+00:31:11,279 --> 00:31:16,080
+test hypotheses, and build predictive
+
+789
+00:31:13,200 --> 00:31:18,080
+models. You can use it for clustering,
+
+790
+00:31:16,080 --> 00:31:20,559
+regression, dimensionality reduction, or
+
+791
+00:31:18,080 --> 00:31:22,320
+training classifiers. It also supports
+
+792
+00:31:20,559 --> 00:31:24,799
+parallel computing, which is great for
+
+793
+00:31:22,320 --> 00:31:27,520
+handling large data sets. And the best
+
+794
+00:31:24,799 --> 00:31:30,000
+part, many of these features work with
+
+795
+00:31:27,520 --> 00:31:31,760
+just a few lines of code, so you can try
+
+796
+00:31:30,000 --> 00:31:35,840
+powerful techniques without writing
+
+797
+00:31:31,760 --> 00:31:38,080
+complex algorithms from scratch.
+
+798
+00:31:35,840 --> 00:31:40,799
+The symbolic math toolbox brings exact
+
+799
+00:31:38,080 --> 00:31:42,720
+math into mat lab. Instead of working
+
+800
+00:31:40,799 --> 00:31:45,120
+with numbers alone, you can define
+
+801
+00:31:42,720 --> 00:31:47,519
+symbolic variables and compute exact
+
+802
+00:31:45,120 --> 00:31:49,279
+derivatives, integrals or solutions to
+
+803
+00:31:47,519 --> 00:31:50,799
+equations.
+
+804
+00:31:49,279 --> 00:31:55,039
+For example, you can write a function
+
+805
+00:31:50,799 --> 00:31:57,200
+like f ofx= x^2 * sinx and ask mat lab
+
+806
+00:31:55,039 --> 00:31:58,880
+to find its derivative. You'll get the
+
+807
+00:31:57,200 --> 00:32:00,399
+answer in symbolic form, not an
+
+808
+00:31:58,880 --> 00:32:02,559
+approximation.
+
+809
+00:32:00,399 --> 00:32:04,240
+You can also plot these expressions or
+
+810
+00:32:02,559 --> 00:32:06,720
+export them into Simulink for
+
+811
+00:32:04,240 --> 00:32:08,640
+simulation. It's a great toolbox for
+
+812
+00:32:06,720 --> 00:32:12,799
+exploring math symbolically, especially
+
+813
+00:32:08,640 --> 00:32:14,559
+in calculus and algebra heavy problems.
+
+814
+00:32:12,799 --> 00:32:16,880
+Finally, let's talk about how to keep
+
+815
+00:32:14,559 --> 00:32:19,679
+learning on your own. There's a helpful
+
+816
+00:32:16,880 --> 00:32:22,320
+online tutorial by Dr. Aernicoff that
+
+817
+00:32:19,679 --> 00:32:24,880
+introduces Mat Lab basics step by step.
+
+818
+00:32:22,320 --> 00:32:26,399
+It's clear and beginnerfriendly. A great
+
+819
+00:32:24,880 --> 00:32:29,360
+way to reinforce what we've learned
+
+820
+00:32:26,399 --> 00:32:31,679
+here. Also, don't forget about Mat Lab's
+
+821
+00:32:29,360 --> 00:32:34,720
+built-in help tools. If your cursor is
+
+822
+00:32:31,679 --> 00:32:36,320
+on a command, just press F1 or type help
+
+823
+00:32:34,720 --> 00:32:38,720
+followed by the function name in the
+
+824
+00:32:36,320 --> 00:32:40,559
+command window. For more support, you
+
+825
+00:32:38,720 --> 00:32:43,279
+can check the Math Works website, Stack
+
+826
+00:32:40,559 --> 00:32:45,039
+Overflow or Matlab Central. These are
+
+827
+00:32:43,279 --> 00:32:48,159
+great places to ask questions and find
+
+828
+00:32:45,039 --> 00:32:49,840
+real code examples. In short, keep
+
+829
+00:32:48,159 --> 00:32:54,480
+exploring, keep experimenting, and
+
+830
+00:32:49,840 --> 00:32:54,480
+you'll keep getting better. Thank you.
+

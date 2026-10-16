@@ -1,0 +1,54 @@
+\begin{table}[!htbp]
+\centering
+\caption{Answer quality in the 2$\times$2 design}
+\label{tab:sup_2x2}
+\small
+\begin{tabular}{lcccc}
+\toprule
+& \multicolumn{2}{c}{\textbf{Lecture-restricted}} & \multicolumn{2}{c}{\textbf{Retrieved (top-4)}} \\
+\textbf{Metric} & \textbf{Base} & \textbf{ALIVE} & \textbf{Base} & \textbf{ALIVE} \\
+\midrule
+BERTScore F1 & 0.738 & 0.768 & 0.744 & 0.765 \\
+ROUGE-1 & 0.494 & 0.545 & 0.503 & 0.538 \\
+ROUGE-2 & 0.305 & 0.349 & 0.315 & 0.345 \\
+ROUGE-L & 0.422 & 0.475 & 0.431 & 0.469 \\
+NLI entailment (first 1,024 chars) & 0.384 & 0.335 & 0.299 & 0.289 \\
+NLI contradiction (first 1,024 chars) & 0.079 & 0.069 & 0.063 & 0.061 \\
+Numeric-unit flag rate & 0.002 & 0.000 & 0.000 & 0.000 \\
+Answer length (words) & 33.6 & 27.2 & 33.1 & 27.8 \\
+NLI entailment (all windows) & 0.624 & 0.514 & 0.740 & 0.707 \\
+NLI neutral (all windows) & 0.291 & 0.376 & 0.150 & 0.181 \\
+NLI contradiction (all windows) & 0.085 & 0.110 & 0.110 & 0.112 \\
+\midrule
+Basic & 0.747 & 0.774 & 0.770 & 0.784 \\
+Intermediate & 0.742 & 0.765 & 0.739 & 0.764 \\
+Advanced & 0.730 & 0.769 & 0.737 & 0.756 \\
+\bottomrule
+\end{tabular}
+\par\medskip
+\begin{tabular}{llccc}
+\toprule
+\textbf{Contrast} & \textbf{Metric} & $\boldsymbol{\Delta}$ & \textbf{95\% CI} & $\boldsymbol{p}$ \\
+\midrule
+ALIVE$-$Base, lecture-restricted & BS-F1 & +0.0305 & [+0.024, +0.038] & $<10^{-12}$ \\
+ALIVE$-$Base, lecture-restricted & ROUGE-L & +0.0536 & [+0.039, +0.069] & $<10^{-12}$ \\
+ALIVE$-$Base, lecture-restricted & NLI & -0.0492 & [-0.085, -0.014] & 0.007 \\
+ALIVE$-$Base, retrieved & BS-F1 & +0.0204 & [+0.013, +0.027] & $1.0{\times}10^{-10}$ \\
+ALIVE$-$Base, retrieved & ROUGE-L & +0.0379 & [+0.024, +0.052] & $3.7{\times}10^{-8}$ \\
+ALIVE$-$Base, retrieved & NLI & -0.0098 & [-0.047, +0.026] & 0.608 \\
+Retrieved$-$lecture-restricted, Base & BS-F1 & +0.0064 & [-0.000, +0.013] & 0.066 \\
+Retrieved$-$lecture-restricted, Base & ROUGE-L & +0.0095 & [-0.003, +0.023] & 0.089 \\
+Retrieved$-$lecture-restricted, Base & NLI & -0.0846 & [-0.126, -0.041] & $8.1{\times}10^{-5}$ \\
+Retrieved$-$lecture-restricted, ALIVE & BS-F1 & -0.0038 & [-0.011, +0.004] & 0.129 \\
+Retrieved$-$lecture-restricted, ALIVE & ROUGE-L & -0.0062 & [-0.022, +0.009] & 0.155 \\
+Retrieved$-$lecture-restricted, ALIVE & NLI & -0.0453 & [-0.089, -0.002] & 0.033 \\
+Interaction (model effect, retrieved $-$ lecture-restricted) & BS-F1 & -0.0102 & [-0.019, -0.002] & --- \\
+Interaction (model effect, retrieved $-$ lecture-restricted) & ROUGE-L & -0.0157 & [-0.033, -0.000] & --- \\
+Interaction (model effect, retrieved $-$ lecture-restricted) & NLI & +0.0394 & [-0.006, +0.083] & --- \\
+\bottomrule
+\end{tabular}
+\tabnotes{508 test questions, one generation run. First block: mean per condition; second block: BERTScore F1 by
+question difficulty. Lower table: paired contrasts with bootstrap 95\% CIs and Wilcoxon $p$-values; the CIs condition on this
+single run. Retrieved = semantic top-4 over all lectures. The regenerated outputs match the originally submitted predictions
+exactly for base/lecture 80.5\%, alive/lecture 86.2\%, base/retrieved 86.8\% of the answers.}
+\end{table}

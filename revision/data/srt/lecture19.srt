@@ -1,0 +1,9764 @@
+1
+00:00:01,600 --> 00:00:06,160
+In this lecture, we move into the second
+
+2
+00:00:03,439 --> 00:00:08,000
+part of MRI imaging. The first part, as
+
+3
+00:00:06,160 --> 00:00:10,880
+you saw in the video, focused on the
+
+4
+00:00:08,000 --> 00:00:13,280
+underlying physical principles.
+
+5
+00:00:10,880 --> 00:00:15,200
+Now, we will explain how MRI imaging is
+
+6
+00:00:13,280 --> 00:00:17,039
+performed based on those physical models
+
+7
+00:00:15,200 --> 00:00:18,640
+and principles.
+
+8
+00:00:17,039 --> 00:00:20,800
+It's best to begin by reading the
+
+9
+00:00:18,640 --> 00:00:22,640
+chapter first. You may naturally have
+
+10
+00:00:20,800 --> 00:00:25,359
+questions, but that's exactly why you
+
+11
+00:00:22,640 --> 00:00:27,039
+attend this lecture. Without that
+
+12
+00:00:25,359 --> 00:00:29,679
+preparation, it's often difficult to
+
+13
+00:00:27,039 --> 00:00:31,119
+build a solid understanding. MRI is
+
+14
+00:00:29,679 --> 00:00:32,480
+quite tricky. You need to carefully
+
+15
+00:00:31,119 --> 00:00:34,320
+think about the concepts, the
+
+16
+00:00:32,480 --> 00:00:37,120
+relationships and revisit them several
+
+17
+00:00:34,320 --> 00:00:39,520
+times. Hence, an iterative approach
+
+18
+00:00:37,120 --> 00:00:43,879
+should be used to preview, discuss and
+
+19
+00:00:39,520 --> 00:00:43,879
+review again and again.
+
+20
+00:00:45,280 --> 00:00:48,800
+Again, let us see where we are. We
+
+21
+00:00:47,280 --> 00:00:50,879
+started with medical physics,
+
+22
+00:00:48,800 --> 00:00:53,680
+specifically MRI physics in the first
+
+23
+00:00:50,879 --> 00:00:56,000
+lecture. Now, we move to MR imaging. In
+
+24
+00:00:53,680 --> 00:00:58,000
+our next lecture, we'll talk about MRI
+
+25
+00:00:56,000 --> 00:01:00,399
+pulse sequences, which will give us a
+
+26
+00:00:58,000 --> 00:01:02,320
+more specific look at how MRI is applied
+
+27
+00:01:00,399 --> 00:01:04,479
+in practice.
+
+28
+00:01:02,320 --> 00:01:09,000
+However, today our goal is to first
+
+29
+00:01:04,479 --> 00:01:09,000
+revisit what we have learned so far.
+
+30
+00:01:10,159 --> 00:01:13,600
+The first part of today's lecture is a
+
+31
+00:01:11,920 --> 00:01:15,520
+review just in case you missed something
+
+32
+00:01:13,600 --> 00:01:17,280
+earlier. Even if you understood it the
+
+33
+00:01:15,520 --> 00:01:19,600
+first time, it's always good to refresh
+
+34
+00:01:17,280 --> 00:01:21,840
+these key concepts.
+
+35
+00:01:19,600 --> 00:01:24,400
+The key point is to model and understand
+
+36
+00:01:21,840 --> 00:01:26,880
+T1 and T2 which are critical relaxation
+
+37
+00:01:24,400 --> 00:01:29,200
+parameters. Along with these proton
+
+38
+00:01:26,880 --> 00:01:31,439
+density is also an essential factor and
+
+39
+00:01:29,200 --> 00:01:33,200
+fortunately that one is fairly easy to
+
+40
+00:01:31,439 --> 00:01:34,799
+understand.
+
+41
+00:01:33,200 --> 00:01:36,560
+Think of it this way. You have a
+
+42
+00:01:34,799 --> 00:01:38,400
+collection of small magnets whose
+
+43
+00:01:36,560 --> 00:01:40,880
+density is proportional to proton
+
+44
+00:01:38,400 --> 00:01:43,200
+density and together they form a large
+
+45
+00:01:40,880 --> 00:01:45,439
+magnetization vector usually called the
+
+46
+00:01:43,200 --> 00:01:47,040
+big M vector. Once you begin to
+
+47
+00:01:45,439 --> 00:01:49,040
+manipulate this M vector, you
+
+48
+00:01:47,040 --> 00:01:50,720
+immediately see the effects of T1 and
+
+49
+00:01:49,040 --> 00:01:53,040
+T2.
+
+50
+00:01:50,720 --> 00:01:55,600
+T1 and T2 are intrinsic properties of
+
+51
+00:01:53,040 --> 00:01:57,280
+tissues. They vary with tissue type and
+
+52
+00:01:55,600 --> 00:01:59,840
+they are very important for functional
+
+53
+00:01:57,280 --> 00:02:01,840
+and even molecular imaging. You need to
+
+54
+00:01:59,840 --> 00:02:04,079
+understand how the MRI signal changes
+
+55
+00:02:01,840 --> 00:02:07,040
+under the influence of T1 and T2 and how
+
+56
+00:02:04,079 --> 00:02:08,720
+these quantities can be measured. When
+
+57
+00:02:07,040 --> 00:02:11,520
+you do this properly, you can create
+
+58
+00:02:08,720 --> 00:02:14,239
+multicontrast MRI images such as proton
+
+59
+00:02:11,520 --> 00:02:16,400
+density weighted, T1 weighted, and T2
+
+60
+00:02:14,239 --> 00:02:18,239
+weighted images.
+
+61
+00:02:16,400 --> 00:02:20,800
+This is much more complicated than what
+
+62
+00:02:18,239 --> 00:02:22,319
+we encounter in X-ray imaging. In X-ray,
+
+63
+00:02:20,800 --> 00:02:24,800
+the main parameter is the linear
+
+64
+00:02:22,319 --> 00:02:26,800
+attenuation coefficient.
+
+65
+00:02:24,800 --> 00:02:28,400
+Even though this coefficient is energy
+
+66
+00:02:26,800 --> 00:02:30,400
+dependent, it still gives us a
+
+67
+00:02:28,400 --> 00:02:32,959
+straightforward measure. It tells us how
+
+68
+00:02:30,400 --> 00:02:35,200
+many photons or what fraction of photons
+
+69
+00:02:32,959 --> 00:02:36,959
+will be attenuated when an X-ray beam
+
+70
+00:02:35,200 --> 00:02:40,239
+passes through a given thickness of a
+
+71
+00:02:36,959 --> 00:02:42,959
+given tissue type. By contrast, T1 and
+
+72
+00:02:40,239 --> 00:02:44,959
+T2 are not so simple. They require more
+
+73
+00:02:42,959 --> 00:02:47,519
+imagination, especially geometrical
+
+74
+00:02:44,959 --> 00:02:49,440
+imagination to grasp.
+
+75
+00:02:47,519 --> 00:02:51,760
+Now, the remaining two parts of today's
+
+76
+00:02:49,440 --> 00:02:54,239
+lecture, slice selection and sampling in
+
+77
+00:02:51,760 --> 00:02:55,840
+Kspace, are where MRI becomes truly
+
+78
+00:02:54,239 --> 00:02:58,000
+powerful.
+
+79
+00:02:55,840 --> 00:02:59,840
+These steps allow us to extract MRI
+
+80
+00:02:58,000 --> 00:03:02,319
+signals from the sample or from the
+
+81
+00:02:59,840 --> 00:03:04,159
+patient in a spatially specific way.
+
+82
+00:03:02,319 --> 00:03:06,400
+That's how we generate cross-sectional
+
+83
+00:03:04,159 --> 00:03:09,680
+or even volutric images of the human
+
+84
+00:03:06,400 --> 00:03:11,840
+body. In summary, today we will begin by
+
+85
+00:03:09,680 --> 00:03:13,680
+revisiting T1 and T2 modeling and
+
+86
+00:03:11,840 --> 00:03:16,159
+measurement and then move on to slice
+
+87
+00:03:13,680 --> 00:03:18,000
+selection and case space sampling. These
+
+88
+00:03:16,159 --> 00:03:19,840
+latter two are really the emphasis of
+
+89
+00:03:18,000 --> 00:03:21,360
+this lecture.
+
+90
+00:03:19,840 --> 00:03:23,840
+In the previous session, we talked about
+
+91
+00:03:21,360 --> 00:03:25,519
+MRI imaging principles. Now we will
+
+92
+00:03:23,840 --> 00:03:27,200
+extend that foundation and see how it
+
+93
+00:03:25,519 --> 00:03:30,200
+translates into actual imaging
+
+94
+00:03:27,200 --> 00:03:30,200
+techniques.
+
+95
+00:03:31,840 --> 00:03:38,080
+So T1 and T2 relaxation. This is kind of
+
+96
+00:03:34,159 --> 00:03:40,480
+a review. T1 and T2 are quite different.
+
+97
+00:03:38,080 --> 00:03:42,720
+T1 we talk about the recovery of the M
+
+98
+00:03:40,480 --> 00:03:45,519
+vector along the Z-axis. That's the main
+
+99
+00:03:42,720 --> 00:03:48,239
+field direction. T1 time is defined as
+
+100
+00:03:45,519 --> 00:03:50,959
+63% recovery of our original M vector
+
+101
+00:03:48,239 --> 00:03:52,400
+which we call M. This is about spin
+
+102
+00:03:50,959 --> 00:03:55,360
+latice interaction. something that
+
+103
+00:03:52,400 --> 00:03:57,519
+involves energy. When you turn the M
+
+104
+00:03:55,360 --> 00:04:00,159
+vector into a certain direction, like a
+
+105
+00:03:57,519 --> 00:04:02,480
+90° direction, the energy you used
+
+106
+00:04:00,159 --> 00:04:05,920
+injected into the tissue will eventually
+
+107
+00:04:02,480 --> 00:04:07,920
+be lost due to spin latis interaction
+
+108
+00:04:05,920 --> 00:04:10,640
+and it will gradually return to the
+
+109
+00:04:07,920 --> 00:04:12,720
+steady state. The M vector wants to be
+
+110
+00:04:10,640 --> 00:04:16,639
+aligned along the main field direction
+
+111
+00:04:12,720 --> 00:04:18,639
+which is the B field or the Z direction.
+
+112
+00:04:16,639 --> 00:04:21,280
+On the other hand, the T2 parameter
+
+113
+00:04:18,639 --> 00:04:23,520
+talks about the defasing effect. The M
+
+114
+00:04:21,280 --> 00:04:26,080
+vector is not just an individual thing.
+
+115
+00:04:23,520 --> 00:04:27,919
+It's really a collective phenomenon.
+
+116
+00:04:26,080 --> 00:04:29,840
+All of the small magnets, the spinning
+
+117
+00:04:27,919 --> 00:04:32,800
+protons are very small magnets.
+
+118
+00:04:29,840 --> 00:04:35,360
+Altogether, they form the big M vector.
+
+119
+00:04:32,800 --> 00:04:37,440
+If you flip the M vector, say by 90°,
+
+120
+00:04:35,360 --> 00:04:39,440
+from the Z direction into the Y or X
+
+121
+00:04:37,440 --> 00:04:42,400
+direction, this big M vector at first
+
+122
+00:04:39,440 --> 00:04:44,560
+points all in one direction.
+
+123
+00:04:42,400 --> 00:04:46,880
+But it is made of many small magnets.
+
+124
+00:04:44,560 --> 00:04:49,360
+And some of those spins are faster, some
+
+125
+00:04:46,880 --> 00:04:52,160
+are slower because of inhomogeneity in
+
+126
+00:04:49,360 --> 00:04:54,880
+the B field or in the local field. The
+
+127
+00:04:52,160 --> 00:04:57,040
+local field, ions, molecules, molecular
+
+128
+00:04:54,880 --> 00:04:59,600
+motion, all these things contribute to
+
+129
+00:04:57,040 --> 00:05:01,520
+that inhomogeneity.
+
+130
+00:04:59,600 --> 00:05:04,479
+Originally, all the small magnets line
+
+131
+00:05:01,520 --> 00:05:06,720
+up along the x-axis. If you apply a 90°
+
+132
+00:05:04,479 --> 00:05:09,600
+pulse with respect to the y-axis, you
+
+133
+00:05:06,720 --> 00:05:12,400
+flip the m vector along the x-axis. But
+
+134
+00:05:09,600 --> 00:05:14,479
+with time, this will defase.
+
+135
+00:05:12,400 --> 00:05:16,720
+Some processes are a little faster. some
+
+136
+00:05:14,479 --> 00:05:19,120
+slower and after a long enough time all
+
+137
+00:05:16,720 --> 00:05:22,080
+these small magnets or spinning protons
+
+138
+00:05:19,120 --> 00:05:23,919
+are pointing in different directions.
+
+139
+00:05:22,080 --> 00:05:26,240
+The overall field is no longer this
+
+140
+00:05:23,919 --> 00:05:28,560
+original m instead it becomes
+
+141
+00:05:26,240 --> 00:05:30,880
+effectively zero.
+
+142
+00:05:28,560 --> 00:05:32,960
+The decay is modeled as an exponential
+
+143
+00:05:30,880 --> 00:05:35,440
+curve something like what you see on the
+
+144
+00:05:32,960 --> 00:05:39,199
+slide. So this is recovery and this is
+
+145
+00:05:35,440 --> 00:05:40,639
+decay. That is the t1 t2 story. Let me
+
+146
+00:05:39,199 --> 00:05:42,639
+give you a little more mathematical
+
+147
+00:05:40,639 --> 00:05:44,800
+detail so you understand why both the
+
+148
+00:05:42,639 --> 00:05:47,280
+recovery and the defasing follow an
+
+149
+00:05:44,800 --> 00:05:49,199
+exponential curve. One is growing, the
+
+150
+00:05:47,280 --> 00:05:52,199
+other is decaying. It's something like
+
+151
+00:05:49,199 --> 00:05:52,199
+this.
+
+152
+00:05:53,520 --> 00:05:57,440
+So the change rate whether it is growth
+
+153
+00:05:55,520 --> 00:05:59,680
+or decay is described by an ordinary
+
+154
+00:05:57,440 --> 00:06:01,919
+first order differential equation. The
+
+155
+00:05:59,680 --> 00:06:04,800
+first derivative the change rate is
+
+156
+00:06:01,919 --> 00:06:06,720
+proportional to the original quantity.
+
+157
+00:06:04,800 --> 00:06:09,440
+When we talk about the change of y, the
+
+158
+00:06:06,720 --> 00:06:11,199
+rate of change is proportional to y. You
+
+159
+00:06:09,440 --> 00:06:12,800
+keep seeing this kind of first order
+
+160
+00:06:11,199 --> 00:06:15,280
+differential equation in multiple
+
+161
+00:06:12,800 --> 00:06:17,520
+imaging modalities.
+
+162
+00:06:15,280 --> 00:06:19,840
+For example, in x-ray imaging, you have
+
+163
+00:06:17,520 --> 00:06:22,319
+the initial beam intensity. It will be
+
+164
+00:06:19,840 --> 00:06:24,160
+attenuated. The amount of attenuation,
+
+165
+00:06:22,319 --> 00:06:25,919
+the change of the x-ray flux is
+
+166
+00:06:24,160 --> 00:06:29,759
+proportional to the initial flux, which
+
+167
+00:06:25,919 --> 00:06:31,600
+we call I kn. Similarly, here in MRI
+
+168
+00:06:29,759 --> 00:06:34,560
+with Y, we are talking about the initial
+
+169
+00:06:31,600 --> 00:06:37,560
+M vector which is M. So we have this
+
+170
+00:06:34,560 --> 00:06:37,560
+relationship.
+
+171
+00:06:39,199 --> 00:06:42,400
+Whenever you have a governing
+
+172
+00:06:40,560 --> 00:06:45,440
+relationship like this, you can go
+
+173
+00:06:42,400 --> 00:06:47,520
+through some mathematical steps.
+
+174
+00:06:45,440 --> 00:06:49,840
+With the first derivative like this, you
+
+175
+00:06:47,520 --> 00:06:53,840
+just rearrange it a little bit. So you
+
+176
+00:06:49,840 --> 00:06:55,759
+have 1 / y d= k dt.
+
+177
+00:06:53,840 --> 00:06:57,840
+Then integrate both sides of the
+
+178
+00:06:55,759 --> 00:07:01,280
+equation. On the left you get ln
+
+179
+00:06:57,840 --> 00:07:02,960
+absolute y and on the right you get kt +
+
+180
+00:07:01,280 --> 00:07:06,319
+c.
+
+181
+00:07:02,960 --> 00:07:08,479
+Now exponentiate both sides that gives
+
+182
+00:07:06,319 --> 00:07:10,080
+equals a e to the kt where a is a
+
+183
+00:07:08,479 --> 00:07:11,919
+constant.
+
+184
+00:07:10,080 --> 00:07:13,919
+This shows that whenever the process is
+
+185
+00:07:11,919 --> 00:07:15,759
+described by a first order differential
+
+186
+00:07:13,919 --> 00:07:17,759
+equation, the solution must be of this
+
+187
+00:07:15,759 --> 00:07:20,000
+form y is exponential growth or
+
+188
+00:07:17,759 --> 00:07:22,240
+exponential decay. In other words, a
+
+189
+00:07:20,000 --> 00:07:26,960
+constant multiplied by an exponential
+
+190
+00:07:22,240 --> 00:07:29,759
+function with index kt where t is time.
+
+191
+00:07:26,960 --> 00:07:32,639
+So this explains why you see exponential
+
+192
+00:07:29,759 --> 00:07:35,280
+decay, exponential growth or attenuation
+
+193
+00:07:32,639 --> 00:07:37,120
+in earlier imaging modalities like X-ray
+
+194
+00:07:35,280 --> 00:07:41,240
+imaging and why you see the same
+
+195
+00:07:37,120 --> 00:07:41,240
+behavior here in MRI.
+
+196
+00:07:42,639 --> 00:07:47,120
+Now for T2 we need to look in more
+
+197
+00:07:44,479 --> 00:07:49,599
+detail. T2 has two components and it
+
+198
+00:07:47,120 --> 00:07:51,840
+describes defasing. The first defasing
+
+199
+00:07:49,599 --> 00:07:54,160
+is what we call the pure T2 effect or
+
+200
+00:07:51,840 --> 00:07:55,840
+spin spin interaction.
+
+201
+00:07:54,160 --> 00:07:57,680
+This happens because all the spinning
+
+202
+00:07:55,840 --> 00:07:59,599
+protons are close to each other and you
+
+203
+00:07:57,680 --> 00:08:01,120
+do not have an absolutely uniform
+
+204
+00:07:59,599 --> 00:08:03,360
+distribution. If you look
+
+205
+00:08:01,120 --> 00:08:05,120
+microscopically, the spins interact with
+
+206
+00:08:03,360 --> 00:08:07,840
+one another and there are fluctuations
+
+207
+00:08:05,120 --> 00:08:10,160
+in the local magnetic field.
+
+208
+00:08:07,840 --> 00:08:12,160
+These effects are called pure T2 shown
+
+209
+00:08:10,160 --> 00:08:14,800
+here in red and they are due to spin
+
+210
+00:08:12,160 --> 00:08:17,280
+spin interaction. This behavior in soft
+
+211
+00:08:14,800 --> 00:08:19,520
+tissue is physiological and it cannot
+
+212
+00:08:17,280 --> 00:08:22,080
+really be changed. It is a natural
+
+213
+00:08:19,520 --> 00:08:23,919
+biological phenomenon.
+
+214
+00:08:22,080 --> 00:08:26,000
+On the other hand, when you place a
+
+215
+00:08:23,919 --> 00:08:28,800
+patient or even a small animal in an
+
+216
+00:08:26,000 --> 00:08:31,280
+external magnetic field, the B field, we
+
+217
+00:08:28,800 --> 00:08:33,440
+usually describe that field as uniform.
+
+218
+00:08:31,280 --> 00:08:35,919
+But in reality, the B not field is never
+
+219
+00:08:33,440 --> 00:08:38,320
+perfectly homogeneous.
+
+220
+00:08:35,919 --> 00:08:41,039
+There will always be some inhomogeneity.
+
+221
+00:08:38,320 --> 00:08:43,279
+This inhomogeneity is fixed. When you
+
+222
+00:08:41,039 --> 00:08:45,279
+set up the Bort field, some regions are
+
+223
+00:08:43,279 --> 00:08:47,200
+slightly weaker while other regions are
+
+224
+00:08:45,279 --> 00:08:49,839
+slightly stronger.
+
+225
+00:08:47,200 --> 00:08:51,600
+So in one location the spins process a
+
+226
+00:08:49,839 --> 00:08:53,680
+little slower and in another location
+
+227
+00:08:51,600 --> 00:08:58,160
+they process a little faster. That
+
+228
+00:08:53,680 --> 00:09:00,640
+difference also contributes to defasing.
+
+229
+00:08:58,160 --> 00:09:02,240
+So both biological spin spin interaction
+
+230
+00:09:00,640 --> 00:09:04,399
+inside the tissue and physical
+
+231
+00:09:02,240 --> 00:09:06,320
+inhomogeneity of the external magnetic
+
+232
+00:09:04,399 --> 00:09:08,320
+field contribute to the same defasing
+
+233
+00:09:06,320 --> 00:09:10,240
+effect but for different reasons. The
+
+234
+00:09:08,320 --> 00:09:12,080
+external contribution is fixed and
+
+235
+00:09:10,240 --> 00:09:14,640
+constant while the biological part
+
+236
+00:09:12,080 --> 00:09:16,480
+cannot really be corrected.
+
+237
+00:09:14,640 --> 00:09:19,120
+When we combine these two, we call the
+
+238
+00:09:16,480 --> 00:09:22,480
+result T2 star. The external field in
+
+239
+00:09:19,120 --> 00:09:25,200
+homogeneity alone is called T2 plus.
+
+240
+00:09:22,480 --> 00:09:27,519
+So in summary, T2 star is the combined
+
+241
+00:09:25,200 --> 00:09:30,080
+effect of external field in homogeneity
+
+242
+00:09:27,519 --> 00:09:32,240
+and biological spin spin interaction.
+
+243
+00:09:30,080 --> 00:09:36,200
+And importantly, there is a reciprocal
+
+244
+00:09:32,240 --> 00:09:36,200
+relationship between them.
+
+245
+00:09:37,360 --> 00:09:40,720
+Let's explain the reciprocal
+
+246
+00:09:38,720 --> 00:09:42,880
+relationship. We start with a constant
+
+247
+00:09:40,720 --> 00:09:45,360
+K. This K describes the strength of
+
+248
+00:09:42,880 --> 00:09:48,000
+defasing. If defasing is due to spin
+
+249
+00:09:45,360 --> 00:09:49,920
+spin interaction, we can call it K1. If
+
+250
+00:09:48,000 --> 00:09:53,839
+defasing is due to external magnetic
+
+251
+00:09:49,920 --> 00:09:55,920
+field in homogeneity, we can call it K2.
+
+252
+00:09:53,839 --> 00:09:59,279
+So the total rate of defasing is due to
+
+253
+00:09:55,920 --> 00:10:01,519
+both K1 + K2. Then the time constant is
+
+254
+00:09:59,279 --> 00:10:04,480
+simply the reciprocal of that total 1 /
+
+255
+00:10:01,519 --> 00:10:07,680
+K1 + K2. That's where the reciprocal
+
+256
+00:10:04,480 --> 00:10:09,360
+relationship comes in. If you still feel
+
+257
+00:10:07,680 --> 00:10:11,760
+unclear, let's connect it to something
+
+258
+00:10:09,360 --> 00:10:14,079
+we already studied, nuclear imaging.
+
+259
+00:10:11,760 --> 00:10:16,480
+When we studied nuclear decay, we said
+
+260
+00:10:14,079 --> 00:10:19,360
+that a radioactive tracer inside the
+
+261
+00:10:16,480 --> 00:10:21,680
+body disappears through two processes.
+
+262
+00:10:19,360 --> 00:10:24,480
+One is physical radioactive decay which
+
+263
+00:10:21,680 --> 00:10:26,480
+happens naturally over time.
+
+264
+00:10:24,480 --> 00:10:28,079
+The other is biological clearance where
+
+265
+00:10:26,480 --> 00:10:31,360
+the tracer leaves the body through
+
+266
+00:10:28,079 --> 00:10:33,360
+circulation mainly through urination. So
+
+267
+00:10:31,360 --> 00:10:35,760
+there are two mechanisms removing the
+
+268
+00:10:33,360 --> 00:10:38,000
+tracer one biological and the other
+
+269
+00:10:35,760 --> 00:10:40,399
+physical and together they follow the
+
+270
+00:10:38,000 --> 00:10:42,640
+same reciprocal rule.
+
+271
+00:10:40,399 --> 00:10:45,440
+In that case we use the decay constant
+
+272
+00:10:42,640 --> 00:10:47,680
+lambda. The overall decay rate is lambda
+
+273
+00:10:45,440 --> 00:10:51,360
+1 plus lambda 2 and the corresponding
+
+274
+00:10:47,680 --> 00:10:53,680
+half-life is the reciprocal of lambda.
+
+275
+00:10:51,360 --> 00:10:55,760
+So just like in nuclear decay where both
+
+276
+00:10:53,680 --> 00:10:57,920
+physical and biological processes add
+
+277
+00:10:55,760 --> 00:11:00,240
+together in MRI both spin spin
+
+278
+00:10:57,920 --> 00:11:02,160
+interaction and external inhomogeneity
+
+279
+00:11:00,240 --> 00:11:03,920
+add together.
+
+280
+00:11:02,160 --> 00:11:06,640
+Don't be confused if you see these
+
+281
+00:11:03,920 --> 00:11:09,440
+different equations. Equation 2.4 for
+
+282
+00:11:06,640 --> 00:11:12,079
+nuclear medicine and equation 4.29 29
+
+283
+00:11:09,440 --> 00:11:15,839
+for MRI because mathematically they are
+
+284
+00:11:12,079 --> 00:11:18,399
+describing the same idea.
+
+285
+00:11:15,839 --> 00:11:20,320
+To summarize, when we talk about T2, we
+
+286
+00:11:18,399 --> 00:11:22,959
+really mean three different things. One
+
+287
+00:11:20,320 --> 00:11:25,519
+is the biological T2 or pure spin spin
+
+288
+00:11:22,959 --> 00:11:27,760
+relaxation. The second is T2 plus from
+
+289
+00:11:25,519 --> 00:11:29,920
+external field inhomogeneity and the
+
+290
+00:11:27,760 --> 00:11:32,640
+third is T2 star, the combined effect of
+
+291
+00:11:29,920 --> 00:11:37,160
+both. Now we have T1 and T2. The
+
+292
+00:11:32,640 --> 00:11:37,160
+question is how do we measure them?
+
+293
+00:11:38,160 --> 00:11:43,120
+To measure T1, we often use a technique
+
+294
+00:11:40,640 --> 00:11:47,040
+called inversion recovery. Here's how it
+
+295
+00:11:43,120 --> 00:11:48,959
+works. First, we apply a 180° pulse.
+
+296
+00:11:47,040 --> 00:11:52,079
+This flips the magnetization vector
+
+297
+00:11:48,959 --> 00:11:54,320
+completely upside down. At this moment,
+
+298
+00:11:52,079 --> 00:11:56,240
+there are no transverse components.
+
+299
+00:11:54,320 --> 00:11:58,480
+Remember, only transverse components
+
+300
+00:11:56,240 --> 00:12:00,480
+induces signal in the nearby coil.
+
+301
+00:11:58,480 --> 00:12:02,480
+Without a transverse component, if you
+
+302
+00:12:00,480 --> 00:12:04,959
+place a coil close to the patient, there
+
+303
+00:12:02,480 --> 00:12:07,120
+is no signal to measure.
+
+304
+00:12:04,959 --> 00:12:09,760
+Now after a time delay tow we apply a
+
+305
+00:12:07,120 --> 00:12:12,240
+90° pulse. This rotates some of the
+
+306
+00:12:09,760 --> 00:12:14,240
+magnetization into the transverse plane.
+
+307
+00:12:12,240 --> 00:12:16,639
+And once that happens the coil can
+
+308
+00:12:14,240 --> 00:12:18,959
+detect a signal. This is the signal you
+
+309
+00:12:16,639 --> 00:12:23,279
+see here. Notice that the signal itself
+
+310
+00:12:18,959 --> 00:12:26,079
+also decays. Why?
+
+311
+00:12:23,279 --> 00:12:29,120
+Because of defasing. And ask yourself is
+
+312
+00:12:26,079 --> 00:12:31,760
+this defasing due to T2 or due to T2
+
+313
+00:12:29,120 --> 00:12:33,920
+star? The answer is T2 star because it
+
+314
+00:12:31,760 --> 00:12:37,880
+includes both spin spin interaction and
+
+315
+00:12:33,920 --> 00:12:37,880
+the effect of field inhomogeneity.
+
+316
+00:12:38,000 --> 00:12:42,240
+So this is the inversion recovery
+
+317
+00:12:39,760 --> 00:12:44,639
+method. A 180° pulse followed by a time
+
+318
+00:12:42,240 --> 00:12:47,040
+delay and then a 90° pulse that produces
+
+319
+00:12:44,639 --> 00:12:48,639
+a measurable signal. The key question we
+
+320
+00:12:47,040 --> 00:12:51,880
+then ask is what is the amplitude of
+
+321
+00:12:48,639 --> 00:12:51,880
+that signal?
+
+322
+00:12:53,200 --> 00:12:57,839
+This really depends on tao the delay
+
+323
+00:12:55,040 --> 00:13:00,240
+time before you apply the 90° pulse. And
+
+324
+00:12:57,839 --> 00:13:02,720
+this is illustrated here.
+
+325
+00:13:00,240 --> 00:13:05,760
+Let's review carefully. First, you apply
+
+326
+00:13:02,720 --> 00:13:09,200
+a 180° pulse and the magnetization
+
+327
+00:13:05,760 --> 00:13:11,360
+vector M becomes minus M. If you don't
+
+328
+00:13:09,200 --> 00:13:13,360
+do anything, this remains negative.
+
+329
+00:13:11,360 --> 00:13:15,600
+Originally, you had a positive M, but
+
+330
+00:13:13,360 --> 00:13:17,279
+after the 180 pulse, it became negative
+
+331
+00:13:15,600 --> 00:13:19,120
+M.
+
+332
+00:13:17,279 --> 00:13:20,639
+This negative magnetization will
+
+333
+00:13:19,120 --> 00:13:22,639
+gradually recover back toward the
+
+334
+00:13:20,639 --> 00:13:24,880
+original M, returning to the normal
+
+335
+00:13:22,639 --> 00:13:26,959
+stable equilibrium. If you wait long
+
+336
+00:13:24,880 --> 00:13:28,959
+enough, this negative value will rise,
+
+337
+00:13:26,959 --> 00:13:32,079
+reach zero, and then continue climbing
+
+338
+00:13:28,959 --> 00:13:34,560
+until it becomes fully positive again.
+
+339
+00:13:32,079 --> 00:13:36,639
+So, it all depends on the delay. At
+
+340
+00:13:34,560 --> 00:13:38,639
+first, the amplitude is negative, then
+
+341
+00:13:36,639 --> 00:13:40,720
+it grows smaller in magnitude, reaches
+
+342
+00:13:38,639 --> 00:13:44,880
+zero, and then becomes positive, growing
+
+343
+00:13:40,720 --> 00:13:46,639
+larger and larger toward m.
+
+344
+00:13:44,880 --> 00:13:49,360
+Now if at some point during this
+
+345
+00:13:46,639 --> 00:13:51,440
+recovery you apply a 90° pulse flipping
+
+346
+00:13:49,360 --> 00:13:54,079
+it into the transverse plane along the
+
+347
+00:13:51,440 --> 00:13:56,320
+y-axis you create a transverse component
+
+348
+00:13:54,079 --> 00:13:58,560
+and that can be measured. At this moment
+
+349
+00:13:56,320 --> 00:14:01,040
+you will have a signal
+
+350
+00:13:58,560 --> 00:14:03,279
+but this signal is subject to t2 star
+
+351
+00:14:01,040 --> 00:14:06,399
+decay. So what you measure is a free
+
+352
+00:14:03,279 --> 00:14:08,079
+induction decay or fid signal. By
+
+353
+00:14:06,399 --> 00:14:10,240
+repeating this process with different
+
+354
+00:14:08,079 --> 00:14:12,160
+delay times, different values of TOAO,
+
+355
+00:14:10,240 --> 00:14:14,959
+you can measure the signal amplitude as
+
+356
+00:14:12,160 --> 00:14:17,279
+a function of TU n
+
+357
+00:14:14,959 --> 00:14:19,120
+then you can plot this relationship. By
+
+358
+00:14:17,279 --> 00:14:21,440
+arranging the equation properly, you get
+
+359
+00:14:19,120 --> 00:14:24,560
+an exponential form with an index of
+
+360
+00:14:21,440 --> 00:14:26,399
+minus ten / t1. If you take the
+
+361
+00:14:24,560 --> 00:14:29,040
+logarithm, you can obtain a straight
+
+362
+00:14:26,399 --> 00:14:31,120
+line. The slope of that line is minus1
+
+363
+00:14:29,040 --> 00:14:34,320
+over t1. And from this slope, you can
+
+364
+00:14:31,120 --> 00:14:36,639
+determine the t1 relaxation time.
+
+365
+00:14:34,320 --> 00:14:39,279
+Now be careful if you directly take the
+
+366
+00:14:36,639 --> 00:14:41,440
+log you will not immediately get t1 you
+
+367
+00:14:39,279 --> 00:14:43,519
+need to rearrange the equation but one
+
+368
+00:14:41,440 --> 00:14:45,519
+important point is that m is known
+
+369
+00:14:43,519 --> 00:14:49,240
+because you can measure it directly
+
+370
+00:14:45,519 --> 00:14:49,240
+that's why this works
+
+371
+00:14:50,560 --> 00:14:54,320
+now how do we measure t2 the most
+
+372
+00:14:52,800 --> 00:14:57,440
+important and representative pulse
+
+373
+00:14:54,320 --> 00:14:59,440
+sequence is the spin echo spin echo is a
+
+374
+00:14:57,440 --> 00:15:01,760
+very clever design it allows us to
+
+375
+00:14:59,440 --> 00:15:03,760
+measure t2 directly
+
+376
+00:15:01,760 --> 00:15:05,920
+if you don't use spin echo The signal
+
+377
+00:15:03,760 --> 00:15:07,839
+decay you observe will be governed by T2
+
+378
+00:15:05,920 --> 00:15:09,120
+star which includes both biological
+
+379
+00:15:07,839 --> 00:15:10,639
+effects and external field
+
+380
+00:15:09,120 --> 00:15:12,959
+inhomogeneities.
+
+381
+00:15:10,639 --> 00:15:14,480
+But what we want is the pure T2 which
+
+382
+00:15:12,959 --> 00:15:17,120
+reflects tissue physiology and
+
+383
+00:15:14,480 --> 00:15:19,680
+pathology. Pure T2 is a biological
+
+384
+00:15:17,120 --> 00:15:22,160
+effect while T2 star is dominated by
+
+385
+00:15:19,680 --> 00:15:24,320
+external field imperfections. Since your
+
+386
+00:15:22,160 --> 00:15:26,399
+patients physiological status should not
+
+387
+00:15:24,320 --> 00:15:30,000
+depend on imperfections in the external
+
+388
+00:15:26,399 --> 00:15:32,800
+field, we really want to measure T2.
+
+389
+00:15:30,000 --> 00:15:34,720
+So how do we do it? Spin echo. First,
+
+390
+00:15:32,800 --> 00:15:38,880
+you let the spins defase for a short
+
+391
+00:15:34,720 --> 00:15:41,199
+time. Then you apply a 180° pulse. What
+
+392
+00:15:38,880 --> 00:15:43,279
+happens? Some spins are lagging. They
+
+393
+00:15:41,199 --> 00:15:45,040
+have a phase delay. Other spins are
+
+394
+00:15:43,279 --> 00:15:46,560
+moving faster. They have an advanced
+
+395
+00:15:45,040 --> 00:15:49,279
+phase.
+
+396
+00:15:46,560 --> 00:15:51,279
+After the 180° flip, the lagging spins
+
+397
+00:15:49,279 --> 00:15:53,440
+continue to lag. And the faster spins
+
+398
+00:15:51,279 --> 00:15:55,040
+continue to advance. But because their
+
+399
+00:15:53,440 --> 00:15:56,880
+positions have been reversed by the
+
+400
+00:15:55,040 --> 00:16:00,160
+flip, they will eventually meet again
+
+401
+00:15:56,880 --> 00:16:01,839
+and refocus at a certain point. At that
+
+402
+00:16:00,160 --> 00:16:04,399
+refocusing point, the signal strength
+
+403
+00:16:01,839 --> 00:16:06,720
+grows again, giving you the spin echo.
+
+404
+00:16:04,399 --> 00:16:08,560
+This is a brilliant design, and in fact,
+
+405
+00:16:06,720 --> 00:16:12,600
+you can repeat it multiple times for
+
+406
+00:16:08,560 --> 00:16:12,600
+more echoes if you like.
+
+407
+00:16:13,759 --> 00:16:17,120
+So, here's another way to see the spin
+
+408
+00:16:15,519 --> 00:16:19,279
+echo.
+
+409
+00:16:17,120 --> 00:16:21,600
+You start with the magnetization vector.
+
+410
+00:16:19,279 --> 00:16:24,160
+Apply a 90° pulse, and now you have
+
+411
+00:16:21,600 --> 00:16:26,399
+transverse components. These transverse
+
+412
+00:16:24,160 --> 00:16:28,639
+components begin to defase. Some spins
+
+413
+00:16:26,399 --> 00:16:31,519
+are slower, shown in red, and some spins
+
+414
+00:16:28,639 --> 00:16:34,959
+are faster, shown in black.
+
+415
+00:16:31,519 --> 00:16:37,199
+Next, you apply a 180 degree pulse. This
+
+416
+00:16:34,959 --> 00:16:38,959
+instantly flips the distribution. The
+
+417
+00:16:37,199 --> 00:16:40,880
+red slower spins are moved to the
+
+418
+00:16:38,959 --> 00:16:42,639
+position where the black faster spins
+
+419
+00:16:40,880 --> 00:16:45,040
+were, and the black spins take the place
+
+420
+00:16:42,639 --> 00:16:47,680
+of the red ones. But remember, the red
+
+421
+00:16:45,040 --> 00:16:49,279
+spins are inherently slower.
+
+422
+00:16:47,680 --> 00:16:51,839
+So even though they were moved ahead,
+
+423
+00:16:49,279 --> 00:16:54,000
+they continue to process slowly. The
+
+424
+00:16:51,839 --> 00:16:55,759
+black spins are inherently faster. So
+
+425
+00:16:54,000 --> 00:16:58,399
+even though they were moved behind, they
+
+426
+00:16:55,759 --> 00:17:00,000
+continue to process quickly.
+
+427
+00:16:58,399 --> 00:17:02,560
+Now after the same amount of time
+
+428
+00:17:00,000 --> 00:17:04,559
+passes, both groups realign again. The
+
+429
+00:17:02,560 --> 00:17:06,959
+faster black spins catch up and the
+
+430
+00:17:04,559 --> 00:17:08,559
+slower red spins fall into place. At
+
+431
+00:17:06,959 --> 00:17:10,319
+that moment, all the spins point
+
+432
+00:17:08,559 --> 00:17:12,000
+together again, aligned in the same
+
+433
+00:17:10,319 --> 00:17:13,520
+direction.
+
+434
+00:17:12,000 --> 00:17:15,919
+Because they are all aligned, their
+
+435
+00:17:13,520 --> 00:17:18,319
+contributions add up constructively, and
+
+436
+00:17:15,919 --> 00:17:20,640
+the transverse magnetization reaches its
+
+437
+00:17:18,319 --> 00:17:22,559
+maximum. This produces a measurable
+
+438
+00:17:20,640 --> 00:17:26,039
+signal in the nearby coils, the spin
+
+439
+00:17:22,559 --> 00:17:26,039
+echo signal.
+
+440
+00:17:27,280 --> 00:17:31,440
+Here's an even simpler way to explain
+
+441
+00:17:29,120 --> 00:17:33,679
+spin echo. Imagine you have a group of
+
+442
+00:17:31,440 --> 00:17:35,120
+students lining up at a racetrack. At
+
+443
+00:17:33,679 --> 00:17:38,080
+the starting point, they are all
+
+444
+00:17:35,120 --> 00:17:40,000
+together right at the start line.
+
+445
+00:17:38,080 --> 00:17:41,760
+After the signal, they all run toward
+
+446
+00:17:40,000 --> 00:17:44,720
+the finish line. Some students are
+
+447
+00:17:41,760 --> 00:17:46,400
+faster and some are slower. So, after a
+
+448
+00:17:44,720 --> 00:17:48,720
+certain time, they will have covered
+
+449
+00:17:46,400 --> 00:17:50,559
+different distances.
+
+450
+00:17:48,720 --> 00:17:52,480
+Now, at that moment, we asked them all
+
+451
+00:17:50,559 --> 00:17:54,400
+to turn around and keep running, but in
+
+452
+00:17:52,480 --> 00:17:56,320
+the opposite direction. The faster
+
+453
+00:17:54,400 --> 00:17:59,280
+runners who had gone farther ahead now
+
+454
+00:17:56,320 --> 00:18:01,520
+have a longer distance to come back. The
+
+455
+00:17:59,280 --> 00:18:03,919
+slower runners who didn't go as far have
+
+456
+00:18:01,520 --> 00:18:06,080
+a shorter distance to cover, but because
+
+457
+00:18:03,919 --> 00:18:09,200
+they are slower, their speed matches the
+
+458
+00:18:06,080 --> 00:18:11,120
+distance they need to make up. After the
+
+459
+00:18:09,200 --> 00:18:12,960
+same amount of time, both the fast and
+
+460
+00:18:11,120 --> 00:18:16,559
+slow runners arrive back at the starting
+
+461
+00:18:12,960 --> 00:18:19,039
+line together. They all realign again.
+
+462
+00:18:16,559 --> 00:18:21,360
+This is the basic idea behind spin echo.
+
+463
+00:18:19,039 --> 00:18:23,600
+By using this trick, we can measure t1
+
+464
+00:18:21,360 --> 00:18:27,880
+the pure t2 without the interference of
+
+465
+00:18:23,600 --> 00:18:27,880
+the external field in homogeneity.
+
+466
+00:18:29,679 --> 00:18:34,480
+So this spin echo sequence is a very
+
+467
+00:18:31,840 --> 00:18:37,280
+clever design and from it we get two
+
+468
+00:18:34,480 --> 00:18:39,039
+very important parameters.
+
+469
+00:18:37,280 --> 00:18:41,679
+The first one is the echo time which we
+
+470
+00:18:39,039 --> 00:18:45,520
+write as te. This is defined as the time
+
+471
+00:18:41,679 --> 00:18:48,720
+from the 90° pulse to the echo peak. In
+
+472
+00:18:45,520 --> 00:18:51,360
+practice, you apply a 90° pulse, then a
+
+473
+00:18:48,720 --> 00:18:55,919
+180°ree pulse, and the time from the 90°
+
+474
+00:18:51,360 --> 00:18:58,480
+to the 180 is TE / 2. Then after the 180
+
+475
+00:18:55,919 --> 00:19:00,160
+pulse, you wait another TE divided by
+
+476
+00:18:58,480 --> 00:19:01,760
+two, and that's when the spin echo
+
+477
+00:19:00,160 --> 00:19:03,679
+appears.
+
+478
+00:19:01,760 --> 00:19:06,080
+The spin echo amplitude reflects the
+
+479
+00:19:03,679 --> 00:19:08,320
+decay due to pure T2 independent of
+
+480
+00:19:06,080 --> 00:19:11,200
+external field in homogeneity. That's
+
+481
+00:19:08,320 --> 00:19:14,160
+the significance of T. The second
+
+482
+00:19:11,200 --> 00:19:15,840
+parameter is the repetition time or TR.
+
+483
+00:19:14,160 --> 00:19:18,000
+After the first sequence, you can wait
+
+484
+00:19:15,840 --> 00:19:22,559
+for a time TR and then repeat the same
+
+485
+00:19:18,000 --> 00:19:24,240
+trick. 90° 180° another spin echo.
+
+486
+00:19:22,559 --> 00:19:26,160
+But in order for the system to be in a
+
+487
+00:19:24,240 --> 00:19:28,559
+stable state, TR has to be long enough
+
+488
+00:19:26,160 --> 00:19:30,400
+so that the magnetization vector M has
+
+489
+00:19:28,559 --> 00:19:32,960
+fully recovered.
+
+490
+00:19:30,400 --> 00:19:34,640
+If for example TR is chosen as 2,000
+
+491
+00:19:32,960 --> 00:19:36,799
+milliseconds, that may not be long
+
+492
+00:19:34,640 --> 00:19:39,120
+enough for full recovery. In that case,
+
+493
+00:19:36,799 --> 00:19:41,280
+the longitudinal magnetization is still
+
+494
+00:19:39,120 --> 00:19:43,280
+less than the original M and the signal
+
+495
+00:19:41,280 --> 00:19:45,200
+will be reduced.
+
+496
+00:19:43,280 --> 00:19:47,600
+So this is why TE and TR are
+
+497
+00:19:45,200 --> 00:19:51,039
+significant. By definition, TE should
+
+498
+00:19:47,600 --> 00:19:53,440
+always be less than TR.
+
+499
+00:19:51,039 --> 00:19:55,280
+Now this also connects to imaging. At
+
+500
+00:19:53,440 --> 00:19:57,679
+the top, when we look at the spin echo
+
+501
+00:19:55,280 --> 00:20:00,000
+for the whole sample, we get one signal
+
+502
+00:19:57,679 --> 00:20:02,720
+that represents the entire patient or
+
+503
+00:20:00,000 --> 00:20:05,440
+sample as a whole. But in imaging, we
+
+504
+00:20:02,720 --> 00:20:08,000
+want more than that. We want to know the
+
+505
+00:20:05,440 --> 00:20:10,320
+values of T1 and T2 for each pixel or
+
+506
+00:20:08,000 --> 00:20:12,080
+voxil, not just the whole object. that
+
+507
+00:20:10,320 --> 00:20:14,000
+requires us to encode spatial
+
+508
+00:20:12,080 --> 00:20:17,880
+information. We'll get into that
+
+509
+00:20:14,000 --> 00:20:17,880
+starting with the next slide.
+
+510
+00:20:19,200 --> 00:20:22,960
+So now we move to the next part being
+
+511
+00:20:20,880 --> 00:20:25,200
+spatially specific.
+
+512
+00:20:22,960 --> 00:20:27,520
+In MRI we don't just want a signal from
+
+513
+00:20:25,200 --> 00:20:29,840
+the whole sample. We want to isolate a
+
+514
+00:20:27,520 --> 00:20:32,159
+particular slice. Not every layer but
+
+515
+00:20:29,840 --> 00:20:34,159
+just one slice. And not only that,
+
+516
+00:20:32,159 --> 00:20:36,960
+within that slice, we also want to know
+
+517
+00:20:34,159 --> 00:20:39,200
+the signal from each location.
+
+518
+00:20:36,960 --> 00:20:41,280
+That means we need to encode each pixel
+
+519
+00:20:39,200 --> 00:20:43,280
+in a way that makes its signal slightly
+
+520
+00:20:41,280 --> 00:20:45,039
+different from every other pixel. Only
+
+521
+00:20:43,280 --> 00:20:47,039
+then can we reconstruct an image that
+
+522
+00:20:45,039 --> 00:20:48,720
+shows the T1 and T2 values for each
+
+523
+00:20:47,039 --> 00:20:50,880
+voxil.
+
+524
+00:20:48,720 --> 00:20:53,120
+The first step in this process is slice
+
+525
+00:20:50,880 --> 00:20:57,000
+selection. We begin by defining which
+
+526
+00:20:53,120 --> 00:20:57,000
+slice we want to image.
+
+527
+00:20:58,559 --> 00:21:02,480
+So this is about the processional
+
+528
+00:21:00,080 --> 00:21:03,919
+frequency on B. In the textbook, we
+
+529
+00:21:02,480 --> 00:21:05,600
+actually mentioned this in the previous
+
+530
+00:21:03,919 --> 00:21:08,080
+lecture.
+
+531
+00:21:05,600 --> 00:21:10,159
+But let's focus on the conclusion. The
+
+532
+00:21:08,080 --> 00:21:11,760
+derivation goes through all these steps
+
+533
+00:21:10,159 --> 00:21:14,080
+and if you take the time you will
+
+534
+00:21:11,760 --> 00:21:16,159
+understand the details.
+
+535
+00:21:14,080 --> 00:21:18,080
+The key point is this. The processional
+
+536
+00:21:16,159 --> 00:21:20,320
+frequency is proportional to the local
+
+537
+00:21:18,080 --> 00:21:22,400
+magnetic field. That means if the
+
+538
+00:21:20,320 --> 00:21:24,480
+overall field is stronger the M vector
+
+539
+00:21:22,400 --> 00:21:27,919
+or you can think of it as a spinning top
+
+540
+00:21:24,480 --> 00:21:29,919
+will process faster.
+
+541
+00:21:27,919 --> 00:21:32,000
+So just follow the picture here. The
+
+542
+00:21:29,919 --> 00:21:34,159
+last line is very clear. The angular
+
+543
+00:21:32,000 --> 00:21:35,919
+frequency of precession omega is
+
+544
+00:21:34,159 --> 00:21:39,360
+proportional to the local magnetic
+
+545
+00:21:35,919 --> 00:21:42,480
+field. If we call the main field B, then
+
+546
+00:21:39,360 --> 00:21:45,039
+omega is proportional to B. Later on, if
+
+547
+00:21:42,480 --> 00:21:48,000
+you change B to B prime, omega will be
+
+548
+00:21:45,039 --> 00:21:49,919
+proportional to B prime. And then you
+
+549
+00:21:48,000 --> 00:21:51,440
+multiply by a physical constant called
+
+550
+00:21:49,919 --> 00:21:56,600
+gamma.
+
+551
+00:21:51,440 --> 00:21:56,600
+So in short, omega equals gamma* B.
+
+552
+00:21:57,760 --> 00:22:01,440
+Now if you want to explore a little more
+
+553
+00:21:59,520 --> 00:22:04,799
+detail, you can check the derivation for
+
+554
+00:22:01,440 --> 00:22:06,880
+this mechanical precession of motion.
+
+555
+00:22:04,799 --> 00:22:09,280
+In this case, the angular frequency is
+
+556
+00:22:06,880 --> 00:22:11,760
+proportional to the gravitational force.
+
+557
+00:22:09,280 --> 00:22:13,840
+I've marked it in green on the slide.
+
+558
+00:22:11,760 --> 00:22:16,960
+This is basically a physics analogy
+
+559
+00:22:13,840 --> 00:22:19,120
+using a spinning top and torque.
+
+560
+00:22:16,960 --> 00:22:21,039
+If you're interested, you can read it.
+
+561
+00:22:19,120 --> 00:22:25,640
+Otherwise, don't worry too much. It's
+
+562
+00:22:21,039 --> 00:22:25,640
+not essential for our discussion of MRI.
+
+563
+00:22:27,039 --> 00:22:30,799
+Now here comes the great idea.
+
+564
+00:22:28,880 --> 00:22:33,360
+Introducing a gradient field on top of
+
+565
+00:22:30,799 --> 00:22:35,280
+the background field B not. This was
+
+566
+00:22:33,360 --> 00:22:37,360
+such an important idea that it led to a
+
+567
+00:22:35,280 --> 00:22:39,919
+Nobel Prize.
+
+568
+00:22:37,360 --> 00:22:41,679
+So why is this so important?
+
+569
+00:22:39,919 --> 00:22:44,880
+Because this is the key step that allows
+
+570
+00:22:41,679 --> 00:22:47,039
+us to encode spatial information.
+
+571
+00:22:44,880 --> 00:22:48,799
+In the main field B not the processional
+
+572
+00:22:47,039 --> 00:22:50,720
+frequency of all spins would be the
+
+573
+00:22:48,799 --> 00:22:53,919
+same. That would not allow us to
+
+574
+00:22:50,720 --> 00:22:56,000
+distinguish one location from another.
+
+575
+00:22:53,919 --> 00:22:58,320
+But if we apply a gradient field, we
+
+576
+00:22:56,000 --> 00:23:01,120
+change the situation. The magnetic field
+
+577
+00:22:58,320 --> 00:23:03,039
+strength will now depend on position.
+
+578
+00:23:01,120 --> 00:23:05,360
+For example, the larger the zcoordinate,
+
+579
+00:23:03,039 --> 00:23:07,360
+the stronger the field. As a result, the
+
+580
+00:23:05,360 --> 00:23:09,360
+processional frequency will also depend
+
+581
+00:23:07,360 --> 00:23:11,360
+on position.
+
+582
+00:23:09,360 --> 00:23:13,200
+So now instead of all spins having the
+
+583
+00:23:11,360 --> 00:23:15,840
+same frequency, their frequency varies
+
+584
+00:23:13,200 --> 00:23:18,080
+with location. At Z equals 0, the
+
+585
+00:23:15,840 --> 00:23:20,080
+frequency is the original B frequency,
+
+586
+00:23:18,080 --> 00:23:23,120
+but away from zero, it becomes stronger
+
+587
+00:23:20,080 --> 00:23:27,559
+or weaker depending on the gradient.
+
+588
+00:23:23,120 --> 00:23:27,559
+This is the concept of a field gradient.
+
+589
+00:23:28,960 --> 00:23:32,880
+Once we have a field gradient, we can
+
+590
+00:23:30,640 --> 00:23:34,880
+apply an external rotating magnetic
+
+591
+00:23:32,880 --> 00:23:36,880
+field to push the M vector at its
+
+592
+00:23:34,880 --> 00:23:39,360
+resonant frequency. That is its
+
+593
+00:23:36,880 --> 00:23:41,280
+processional frequency.
+
+594
+00:23:39,360 --> 00:23:42,640
+Now, think back to the analogy from the
+
+595
+00:23:41,280 --> 00:23:44,799
+previous lecture. Remember the
+
+596
+00:23:42,640 --> 00:23:46,480
+photograph of a lady pushing a rotating
+
+597
+00:23:44,799 --> 00:23:48,799
+door?
+
+598
+00:23:46,480 --> 00:23:50,799
+That's the same idea. You have to push
+
+599
+00:23:48,799 --> 00:23:53,360
+the door at just the right time to keep
+
+600
+00:23:50,799 --> 00:23:54,960
+it moving smoothly. Similarly, you have
+
+601
+00:23:53,360 --> 00:23:58,080
+to push the spins at just the right
+
+602
+00:23:54,960 --> 00:23:59,679
+frequency to change their orientation.
+
+603
+00:23:58,080 --> 00:24:01,280
+And even earlier, we watched a short
+
+604
+00:23:59,679 --> 00:24:04,240
+video where the instructor explained how
+
+605
+00:24:01,280 --> 00:24:06,240
+an MRI works in less than 10 minutes. He
+
+606
+00:24:04,240 --> 00:24:09,520
+said you simply send in an RF frequency
+
+607
+00:24:06,240 --> 00:24:11,919
+signal. That RF signal or RF pulse is a
+
+608
+00:24:09,520 --> 00:24:13,840
+form of electromagnetic wave. And
+
+609
+00:24:11,919 --> 00:24:16,000
+electromagnetic waves are oscillating
+
+610
+00:24:13,840 --> 00:24:18,159
+magnetic fields.
+
+611
+00:24:16,000 --> 00:24:19,840
+So when you send in an RF pulse whose
+
+612
+00:24:18,159 --> 00:24:22,080
+frequency is in resonance with the
+
+613
+00:24:19,840 --> 00:24:24,159
+processional frequency of the spins, you
+
+614
+00:24:22,080 --> 00:24:26,400
+are effectively pushing those tiny
+
+615
+00:24:24,159 --> 00:24:28,640
+spinning tops, the protons, in a
+
+616
+00:24:26,400 --> 00:24:30,240
+coordinated way.
+
+617
+00:24:28,640 --> 00:24:32,400
+With each push, you tilt the
+
+618
+00:24:30,240 --> 00:24:34,159
+magnetization vector a little more and
+
+619
+00:24:32,400 --> 00:24:36,480
+eventually you flip the M vector from
+
+620
+00:24:34,159 --> 00:24:39,120
+its original orientation along the Z
+
+621
+00:24:36,480 --> 00:24:42,480
+axis into one of the horizontal axis
+
+622
+00:24:39,120 --> 00:24:44,240
+like the Xaxis or Yaxis.
+
+623
+00:24:42,480 --> 00:24:46,720
+Now, here's the key. You don't want to
+
+624
+00:24:44,240 --> 00:24:48,320
+flip every proton in the body. You only
+
+625
+00:24:46,720 --> 00:24:50,400
+want to flip the spins in a specific
+
+626
+00:24:48,320 --> 00:24:51,919
+slice of tissue. To do that, you must
+
+627
+00:24:50,400 --> 00:24:54,960
+use both the gradient field and the
+
+628
+00:24:51,919 --> 00:24:57,200
+bandwidth of your RF pulse together.
+
+629
+00:24:54,960 --> 00:24:59,279
+The frequency range of the RF pulse is
+
+630
+00:24:57,200 --> 00:25:02,400
+centered at some frequency. Call it
+
+631
+00:24:59,279 --> 00:25:05,760
+omega s. And it spans from omega s minus
+
+632
+00:25:02,400 --> 00:25:09,600
+delta omega s to omega s plus delta
+
+633
+00:25:05,760 --> 00:25:11,679
+omega s. So it has a certain bandwidth.
+
+634
+00:25:09,600 --> 00:25:14,320
+In the time domain, this looks like a
+
+635
+00:25:11,679 --> 00:25:17,039
+rectangular pulse. a signal that is on
+
+636
+00:25:14,320 --> 00:25:19,760
+for a finite duration. When you take the
+
+637
+00:25:17,039 --> 00:25:22,159
+forier transform that rectangular pulse
+
+638
+00:25:19,760 --> 00:25:25,279
+in the time domain becomes a syncshaped
+
+639
+00:25:22,159 --> 00:25:27,440
+function in the frequency domain.
+
+640
+00:25:25,279 --> 00:25:29,840
+So in practice even though you are
+
+641
+00:25:27,440 --> 00:25:31,840
+sending an RF signal in the time domain
+
+642
+00:25:29,840 --> 00:25:34,000
+that looks like a sync function in the
+
+643
+00:25:31,840 --> 00:25:36,320
+frequency domain it corresponds to a
+
+644
+00:25:34,000 --> 00:25:38,159
+rectangular function.
+
+645
+00:25:36,320 --> 00:25:40,080
+This rectangular frequency band means
+
+646
+00:25:38,159 --> 00:25:41,840
+that only those spins whose processional
+
+647
+00:25:40,080 --> 00:25:43,760
+frequencies fall within that band will
+
+648
+00:25:41,840 --> 00:25:45,440
+be excited.
+
+649
+00:25:43,760 --> 00:25:47,200
+Now recall because of the gradient
+
+650
+00:25:45,440 --> 00:25:49,520
+field, the processional frequency
+
+651
+00:25:47,200 --> 00:25:51,919
+depends on Z location. So different
+
+652
+00:25:49,520 --> 00:25:54,960
+positions along the Z-axis correspond to
+
+653
+00:25:51,919 --> 00:25:56,720
+different resonance frequencies.
+
+654
+00:25:54,960 --> 00:25:58,640
+Therefore, when you send in your RF
+
+655
+00:25:56,720 --> 00:26:00,640
+pulse with its defined bandwidth, only
+
+656
+00:25:58,640 --> 00:26:02,720
+the spins whose Z positions correspond
+
+657
+00:26:00,640 --> 00:26:05,679
+to that frequency band will resonate and
+
+658
+00:26:02,720 --> 00:26:07,360
+be flipped. spins outside that band will
+
+659
+00:26:05,679 --> 00:26:09,440
+not be affected. They simply won't
+
+660
+00:26:07,360 --> 00:26:12,400
+respond because the RF pulse is not in
+
+661
+00:26:09,440 --> 00:26:14,240
+resonance with them. So the slice
+
+662
+00:26:12,400 --> 00:26:16,159
+thickness directly corresponds to the
+
+663
+00:26:14,240 --> 00:26:18,480
+frequency range of the RF pulse under
+
+664
+00:26:16,159 --> 00:26:20,400
+the influence of the gradient field. If
+
+665
+00:26:18,480 --> 00:26:22,320
+you make the bandwidth larger, the slice
+
+666
+00:26:20,400 --> 00:26:24,400
+thickness increases. If you make the
+
+667
+00:26:22,320 --> 00:26:26,240
+bandwidth smaller, the slice thickness
+
+668
+00:26:24,400 --> 00:26:28,559
+decreases.
+
+669
+00:26:26,240 --> 00:26:30,640
+To summarize, you apply a gradient field
+
+670
+00:26:28,559 --> 00:26:33,200
+to make the processional frequency vary
+
+671
+00:26:30,640 --> 00:26:35,360
+with Z location. Then you send in an RF
+
+672
+00:26:33,200 --> 00:26:37,440
+poles with a defined frequency band.
+
+673
+00:26:35,360 --> 00:26:40,640
+Only those spins in the matching Z-range
+
+674
+00:26:37,440 --> 00:26:42,799
+that slice are excited and flipped.
+
+675
+00:26:40,640 --> 00:26:44,799
+Everything outside remains untouched.
+
+676
+00:26:42,799 --> 00:26:47,799
+That is how slice selection in MRI
+
+677
+00:26:44,799 --> 00:26:47,799
+works.
+
+678
+00:26:49,120 --> 00:26:53,039
+Graphically we can show this as you see
+
+679
+00:26:51,039 --> 00:26:54,880
+on the slide.
+
+680
+00:26:53,039 --> 00:26:57,600
+The gradient field creates a range of
+
+681
+00:26:54,880 --> 00:26:59,760
+resonance frequencies along the Z-axis.
+
+682
+00:26:57,600 --> 00:27:01,760
+When you send an RF pulse with a defined
+
+683
+00:26:59,760 --> 00:27:03,600
+frequency range, only the spins within
+
+684
+00:27:01,760 --> 00:27:07,360
+that frequency range and therefore
+
+685
+00:27:03,600 --> 00:27:09,520
+within a specific Z range are excited.
+
+686
+00:27:07,360 --> 00:27:11,600
+That Z range corresponds to the slice
+
+687
+00:27:09,520 --> 00:27:13,840
+thickness. So this is how we select a
+
+688
+00:27:11,600 --> 00:27:15,279
+slice in MRI.
+
+689
+00:27:13,840 --> 00:27:17,120
+What we've explained here is the
+
+690
+00:27:15,279 --> 00:27:20,120
+principle for slice selection along the
+
+691
+00:27:17,120 --> 00:27:20,120
+Z-axis.
+
+692
+00:27:21,919 --> 00:27:25,679
+Now let's look at slice selection in
+
+693
+00:27:23,679 --> 00:27:28,480
+more detail. In your textbook, you'll
+
+694
+00:27:25,679 --> 00:27:30,240
+find this figure labeled as 4.16. Here
+
+695
+00:27:28,480 --> 00:27:31,840
+you see that slice selection can be
+
+696
+00:27:30,240 --> 00:27:35,120
+performed using gradients along the
+
+697
+00:27:31,840 --> 00:27:37,279
+x-axis, the y-axis, or the z-axis. That
+
+698
+00:27:35,120 --> 00:27:39,440
+means you can select a coronal slice, an
+
+699
+00:27:37,279 --> 00:27:42,559
+axial slice, or a sagittal slice
+
+700
+00:27:39,440 --> 00:27:44,480
+depending on which gradient you apply.
+
+701
+00:27:42,559 --> 00:27:46,480
+And the beauty of MRI is that you are
+
+702
+00:27:44,480 --> 00:27:48,240
+not limited to just these orthogonal
+
+703
+00:27:46,480 --> 00:27:50,000
+planes.
+
+704
+00:27:48,240 --> 00:27:52,320
+With the right gradient combinations,
+
+705
+00:27:50,000 --> 00:27:54,640
+you can select slices at any orientation
+
+706
+00:27:52,320 --> 00:27:56,480
+you like, even oblique slices at odd
+
+707
+00:27:54,640 --> 00:27:59,679
+angles. This is one of the great
+
+708
+00:27:56,480 --> 00:28:02,159
+flexibilities of MRI imaging.
+
+709
+00:27:59,679 --> 00:28:04,159
+Now, let's think about why this matters.
+
+710
+00:28:02,159 --> 00:28:06,720
+Before we introduced gradient fields,
+
+711
+00:28:04,159 --> 00:28:08,399
+all we could do was measure T1 and T2
+
+712
+00:28:06,720 --> 00:28:10,080
+signals from the whole sample.
+
+713
+00:28:08,399 --> 00:28:12,000
+Essentially, we had no spatial
+
+714
+00:28:10,080 --> 00:28:13,440
+specificity.
+
+715
+00:28:12,000 --> 00:28:15,520
+We were only getting the overall
+
+716
+00:28:13,440 --> 00:28:18,000
+relaxation properties averaged over the
+
+717
+00:28:15,520 --> 00:28:20,960
+entire tissue volume. But now with slice
+
+718
+00:28:18,000 --> 00:28:22,720
+selection, we can be much more specific.
+
+719
+00:28:20,960 --> 00:28:25,039
+We can tell the scanner, "Excite this
+
+720
+00:28:22,720 --> 00:28:27,039
+slice only." That means the signals we
+
+721
+00:28:25,039 --> 00:28:29,039
+collect come from just that defined
+
+722
+00:28:27,039 --> 00:28:30,799
+region. All the other spins, those
+
+723
+00:28:29,039 --> 00:28:33,039
+outside of the slice, whether they're
+
+724
+00:28:30,799 --> 00:28:34,720
+above, below, or to the side, will not
+
+725
+00:28:33,039 --> 00:28:36,640
+contribute
+
+726
+00:28:34,720 --> 00:28:38,080
+because remember resonance is only
+
+727
+00:28:36,640 --> 00:28:40,159
+defined for those spins whose
+
+728
+00:28:38,080 --> 00:28:41,840
+frequencies match the selected RF
+
+729
+00:28:40,159 --> 00:28:44,399
+bandwidth, which corresponds to the
+
+730
+00:28:41,840 --> 00:28:46,240
+gradient defined slice.
+
+731
+00:28:44,399 --> 00:28:48,399
+So in practice the signals from outside
+
+732
+00:28:46,240 --> 00:28:50,559
+the slice those spins located elsewhere
+
+733
+00:28:48,399 --> 00:28:52,240
+remain silent. Only the spins inside
+
+734
+00:28:50,559 --> 00:28:54,480
+that slice range are excited and
+
+735
+00:28:52,240 --> 00:28:58,039
+measured. This is the principle of slice
+
+736
+00:28:54,480 --> 00:28:58,039
+selection in MRI.
+
+737
+00:28:59,520 --> 00:29:03,200
+Now there is an important technical
+
+738
+00:29:01,039 --> 00:29:05,039
+subtlety about slice selection that we
+
+739
+00:29:03,200 --> 00:29:06,880
+need to address.
+
+740
+00:29:05,039 --> 00:29:09,200
+When we apply a gradient field by
+
+741
+00:29:06,880 --> 00:29:11,679
+definition it is not homogeneous.
+
+742
+00:29:09,200 --> 00:29:13,520
+Instead it varies linearly across space.
+
+743
+00:29:11,679 --> 00:29:15,840
+But remember, any deviation from a
+
+744
+00:29:13,520 --> 00:29:18,720
+homogeneous magnetic field introduces a
+
+745
+00:29:15,840 --> 00:29:20,960
+problem. It causes defasing.
+
+746
+00:29:18,720 --> 00:29:22,559
+Let's break this down. On the right hand
+
+747
+00:29:20,960 --> 00:29:24,720
+side of the diagram, you see the
+
+748
+00:29:22,559 --> 00:29:27,039
+gradient field. On one side, the
+
+749
+00:29:24,720 --> 00:29:29,120
+magnetic field is a little stronger. On
+
+750
+00:29:27,039 --> 00:29:31,200
+the other side, it is a little weaker.
+
+751
+00:29:29,120 --> 00:29:33,520
+Stronger fields correspond to faster
+
+752
+00:29:31,200 --> 00:29:35,600
+precession. Weaker fields correspond to
+
+753
+00:29:33,520 --> 00:29:37,039
+slower precession.
+
+754
+00:29:35,600 --> 00:29:38,480
+So, when you look across the entire
+
+755
+00:29:37,039 --> 00:29:41,039
+slice, the spins are no longer
+
+756
+00:29:38,480 --> 00:29:43,520
+processing together in sync. Some spins
+
+757
+00:29:41,039 --> 00:29:45,039
+are ahead, some are behind.
+
+758
+00:29:43,520 --> 00:29:47,120
+If you just add all these signals
+
+759
+00:29:45,039 --> 00:29:49,760
+together, they partially cancel each
+
+760
+00:29:47,120 --> 00:29:52,080
+other out. The result is a substantial
+
+761
+00:29:49,760 --> 00:29:54,320
+reduction in signal strength. That's the
+
+762
+00:29:52,080 --> 00:29:56,399
+defasing problem.
+
+763
+00:29:54,320 --> 00:29:59,120
+So, how do we fix it? We use what's
+
+764
+00:29:56,399 --> 00:30:01,520
+called a rephasing gradient.
+
+765
+00:29:59,120 --> 00:30:03,120
+Here's the idea. Within the slice, after
+
+766
+00:30:01,520 --> 00:30:05,279
+you've applied the slice select
+
+767
+00:30:03,120 --> 00:30:07,440
+gradient, the spins have accumulated
+
+768
+00:30:05,279 --> 00:30:09,120
+different phases. that is described
+
+769
+00:30:07,440 --> 00:30:12,240
+mathematically in your textbook by
+
+770
+00:30:09,120 --> 00:30:14,320
+equation 441. The phase shift depends on
+
+771
+00:30:12,240 --> 00:30:16,000
+the Z position and on the gradient
+
+772
+00:30:14,320 --> 00:30:18,159
+strength.
+
+773
+00:30:16,000 --> 00:30:20,960
+But notice the formula includes tao over
+
+774
+00:30:18,159 --> 00:30:24,000
+two not to. Why is it tha divided by
+
+775
+00:30:20,960 --> 00:30:25,919
+two? Well, think about it this way.
+
+776
+00:30:24,000 --> 00:30:27,520
+During the full pulse duration towel,
+
+777
+00:30:25,919 --> 00:30:29,679
+the spins at the top of the slice
+
+778
+00:30:27,520 --> 00:30:31,600
+accumulate the maximum phase and the
+
+779
+00:30:29,679 --> 00:30:33,760
+spins at the bottom accumulate the
+
+780
+00:30:31,600 --> 00:30:35,360
+opposite phase.
+
+781
+00:30:33,760 --> 00:30:37,120
+The middle spins are only halfway
+
+782
+00:30:35,360 --> 00:30:38,960
+through. So if you take the average
+
+783
+00:30:37,120 --> 00:30:41,919
+phase across the slice, it corresponds
+
+784
+00:30:38,960 --> 00:30:45,039
+to tao divided by two. That's why this
+
+785
+00:30:41,919 --> 00:30:46,720
+factor appears.
+
+786
+00:30:45,039 --> 00:30:48,880
+Now to correct for this unwanted
+
+787
+00:30:46,720 --> 00:30:51,200
+defasing, we apply a second gradient,
+
+788
+00:30:48,880 --> 00:30:53,600
+but this time with opposite polarity. We
+
+789
+00:30:51,200 --> 00:30:55,600
+call it the rephasing gradient. It lasts
+
+790
+00:30:53,600 --> 00:30:57,520
+for a short time tarf and its strength
+
+791
+00:30:55,600 --> 00:31:00,240
+is chosen so that the overall effect
+
+792
+00:30:57,520 --> 00:31:02,159
+cancels the earlier phase spread.
+
+793
+00:31:00,240 --> 00:31:03,840
+Mathematically, the product of gradient
+
+794
+00:31:02,159 --> 00:31:06,320
+strength and time for this refacing
+
+795
+00:31:03,840 --> 00:31:08,159
+pulse must equal towo over two times the
+
+796
+00:31:06,320 --> 00:31:11,520
+original gradient strength. That's
+
+797
+00:31:08,159 --> 00:31:13,279
+equation 4.42 in your textbook.
+
+798
+00:31:11,520 --> 00:31:15,440
+The result is that the spins which had
+
+799
+00:31:13,279 --> 00:31:17,600
+drifted apart in phase are brought back
+
+800
+00:31:15,440 --> 00:31:19,600
+into alignment. This cancels out the
+
+801
+00:31:17,600 --> 00:31:23,360
+artificial defasing caused by the slice
+
+802
+00:31:19,600 --> 00:31:25,360
+selection gradient itself.
+
+803
+00:31:23,360 --> 00:31:27,679
+So now within the slice, you're left
+
+804
+00:31:25,360 --> 00:31:29,760
+with a clean signal. The signal strength
+
+805
+00:31:27,679 --> 00:31:32,080
+mathematically is proportional to the
+
+806
+00:31:29,760 --> 00:31:33,919
+number of spins inside the slice. That's
+
+807
+00:31:32,080 --> 00:31:36,640
+why the formula is written as a double
+
+808
+00:31:33,919 --> 00:31:39,200
+integral over x and y within the slice.
+
+809
+00:31:36,640 --> 00:31:42,159
+It represents the total proton density
+
+810
+00:31:39,200 --> 00:31:44,480
+summed across the slice area.
+
+811
+00:31:42,159 --> 00:31:46,480
+This is a big improvement. Without slice
+
+812
+00:31:44,480 --> 00:31:49,360
+selection, we had a triple integral over
+
+813
+00:31:46,480 --> 00:31:51,519
+x, y, and z, the entire volume. But now
+
+814
+00:31:49,360 --> 00:31:54,080
+we've reduced it to just two dimensions,
+
+815
+00:31:51,519 --> 00:31:56,080
+a double integral. This means our signal
+
+816
+00:31:54,080 --> 00:31:58,320
+comes only from the selected slice, not
+
+817
+00:31:56,080 --> 00:32:00,399
+the whole volume.
+
+818
+00:31:58,320 --> 00:32:02,480
+That's a huge step forward, but it's
+
+819
+00:32:00,399 --> 00:32:04,399
+still not the final goal because in
+
+820
+00:32:02,480 --> 00:32:06,559
+imaging, we don't just want the sum over
+
+821
+00:32:04,399 --> 00:32:08,399
+the entire slice. We want to know the
+
+822
+00:32:06,559 --> 00:32:09,919
+signal at each individual pixel or
+
+823
+00:32:08,399 --> 00:32:12,240
+voxil.
+
+824
+00:32:09,919 --> 00:32:15,200
+We want to resolve spatial detail. What
+
+825
+00:32:12,240 --> 00:32:17,360
+is the proton density, the T1 or the T2
+
+826
+00:32:15,200 --> 00:32:21,320
+value at each location? That's what
+
+827
+00:32:17,360 --> 00:32:21,320
+we'll cover in the next part.
+
+828
+00:32:22,399 --> 00:32:26,480
+Now we move to the next major step,
+
+829
+00:32:24,080 --> 00:32:28,000
+sampling in case.
+
+830
+00:32:26,480 --> 00:32:30,720
+This is probably the most important
+
+831
+00:32:28,000 --> 00:32:33,440
+concept in MRI. And I'll be honest, it's
+
+832
+00:32:30,720 --> 00:32:35,200
+also one of the trickiest. So I strongly
+
+833
+00:32:33,440 --> 00:32:37,600
+encourage you to review this multiple
+
+834
+00:32:35,200 --> 00:32:39,200
+times both in the textbook and in these
+
+835
+00:32:37,600 --> 00:32:41,840
+lectures.
+
+836
+00:32:39,200 --> 00:32:44,080
+The idea is this. When we add gradient
+
+837
+00:32:41,840 --> 00:32:46,559
+encoding, both phase encoding and
+
+838
+00:32:44,080 --> 00:32:48,399
+frequency encoding, the MRI signal we
+
+839
+00:32:46,559 --> 00:32:50,559
+measure naturally corresponds to a
+
+840
+00:32:48,399 --> 00:32:52,240
+forier transform of the object we're
+
+841
+00:32:50,559 --> 00:32:54,399
+imaging.
+
+842
+00:32:52,240 --> 00:32:56,640
+So the scanner doesn't measure an image
+
+843
+00:32:54,399 --> 00:32:58,640
+directly. Instead, it measures data in
+
+844
+00:32:56,640 --> 00:33:00,960
+kspace, which is essentially the forier
+
+845
+00:32:58,640 --> 00:33:03,200
+space of the image. Then by applying the
+
+846
+00:33:00,960 --> 00:33:06,240
+forier transform, we reconstruct the
+
+847
+00:33:03,200 --> 00:33:08,240
+actual image in spatial coordinates.
+
+848
+00:33:06,240 --> 00:33:10,880
+This concept is formalized in what we
+
+849
+00:33:08,240 --> 00:33:13,440
+call the kspace theorem. And as you'll
+
+850
+00:33:10,880 --> 00:33:15,760
+see, the kspace theorem in MRI is
+
+851
+00:33:13,440 --> 00:33:17,760
+directly analogous to the forier slice
+
+852
+00:33:15,760 --> 00:33:19,919
+theorem we studied earlier for X-ray
+
+853
+00:33:17,760 --> 00:33:22,320
+computed tomography.
+
+854
+00:33:19,919 --> 00:33:25,120
+So in summary, slice selection gave us
+
+855
+00:33:22,320 --> 00:33:27,360
+spatial specificity along one axis.
+
+856
+00:33:25,120 --> 00:33:29,919
+Refasing gradients fix the signal within
+
+857
+00:33:27,360 --> 00:33:31,519
+that slice. And now sampling in Kspace
+
+858
+00:33:29,919 --> 00:33:33,279
+gives us the ability to encode and
+
+859
+00:33:31,519 --> 00:33:34,880
+reconstruct every pixel inside the
+
+860
+00:33:33,279 --> 00:33:36,799
+slice.
+
+861
+00:33:34,880 --> 00:33:39,519
+This is the final piece that allows us
+
+862
+00:33:36,799 --> 00:33:42,519
+to turn raw MR signals into detailed
+
+863
+00:33:39,519 --> 00:33:42,519
+images.
+
+864
+00:33:44,000 --> 00:33:48,080
+Up to this point, we've been talking
+
+865
+00:33:45,600 --> 00:33:49,760
+about signals coming from a whole slice.
+
+866
+00:33:48,080 --> 00:33:51,840
+But instead of just getting a collective
+
+867
+00:33:49,760 --> 00:33:54,320
+signal from all the protons in the
+
+868
+00:33:51,840 --> 00:33:58,000
+selected slice, our goal is to resolve
+
+869
+00:33:54,320 --> 00:33:59,840
+individual locations inside that slice.
+
+870
+00:33:58,000 --> 00:34:01,840
+We want to know what is the proton
+
+871
+00:33:59,840 --> 00:34:04,159
+density, often called a row, at a given
+
+872
+00:34:01,840 --> 00:34:06,399
+pixel location. What is the T1
+
+873
+00:34:04,159 --> 00:34:09,839
+relaxation time for that pixel? What is
+
+874
+00:34:06,399 --> 00:34:12,079
+the T2 relaxation time for that pixel?
+
+875
+00:34:09,839 --> 00:34:13,679
+Once you know all this information pixel
+
+876
+00:34:12,079 --> 00:34:15,919
+by pixel, you can construct a
+
+877
+00:34:13,679 --> 00:34:19,119
+cross-sectional image. And that is the
+
+878
+00:34:15,919 --> 00:34:21,440
+true purpose of tomographic imaging.
+
+879
+00:34:19,119 --> 00:34:23,760
+So here's the challenge. Let's pause for
+
+880
+00:34:21,440 --> 00:34:25,839
+a moment and think carefully. We have an
+
+881
+00:34:23,760 --> 00:34:27,919
+equation. You can see it here. Which
+
+882
+00:34:25,839 --> 00:34:30,079
+tells us that the signal is proportional
+
+883
+00:34:27,919 --> 00:34:32,720
+to the sum over all spins inside the
+
+884
+00:34:30,079 --> 00:34:34,879
+slice. That's already an improvement.
+
+885
+00:34:32,720 --> 00:34:37,760
+It's much more specific than before when
+
+886
+00:34:34,879 --> 00:34:39,440
+we were averaging over the whole volume.
+
+887
+00:34:37,760 --> 00:34:42,560
+Now the signal comes only from one
+
+888
+00:34:39,440 --> 00:34:44,480
+slice. But here's the puzzle. How can we
+
+889
+00:34:42,560 --> 00:34:46,480
+take this equation which only tells us
+
+890
+00:34:44,480 --> 00:34:48,399
+the total signal from the slice and
+
+891
+00:34:46,480 --> 00:34:50,560
+somehow extract the spatial information
+
+892
+00:34:48,399 --> 00:34:52,480
+pixel by pixel?
+
+893
+00:34:50,560 --> 00:34:55,679
+How can we single out for example the
+
+894
+00:34:52,480 --> 00:34:59,040
+value of rho or t1 or t2 at a particular
+
+895
+00:34:55,679 --> 00:35:00,720
+coordinate say xn y?
+
+896
+00:34:59,040 --> 00:35:02,880
+I encourage you to really think about
+
+897
+00:35:00,720 --> 00:35:04,960
+this problem. Imagine you are designing
+
+898
+00:35:02,880 --> 00:35:06,480
+the experiment yourself. How would you
+
+899
+00:35:04,960 --> 00:35:08,320
+go about resolving the spatial
+
+900
+00:35:06,480 --> 00:35:10,560
+information?
+
+901
+00:35:08,320 --> 00:35:12,400
+How would you separate the contributions
+
+902
+00:35:10,560 --> 00:35:14,160
+from different locations within the
+
+903
+00:35:12,400 --> 00:35:16,160
+slice?
+
+904
+00:35:14,160 --> 00:35:18,079
+There are actually multiple ways to
+
+905
+00:35:16,160 --> 00:35:20,000
+approach this. The method I'm going to
+
+906
+00:35:18,079 --> 00:35:21,440
+explain to you is very elegant and very
+
+907
+00:35:20,000 --> 00:35:24,000
+efficient, but it's not the only
+
+908
+00:35:21,440 --> 00:35:25,680
+possibility. So think independently. If
+
+909
+00:35:24,000 --> 00:35:27,520
+you are faced with this challenge, how
+
+910
+00:35:25,680 --> 00:35:29,839
+would you do it?
+
+911
+00:35:27,520 --> 00:35:32,079
+The solution we use in MRI is to
+
+912
+00:35:29,839 --> 00:35:34,160
+introduce phase encoding and frequency
+
+913
+00:35:32,079 --> 00:35:36,560
+encoding. These tricks allow us to
+
+914
+00:35:34,160 --> 00:35:38,480
+separate the signals spatially. When you
+
+915
+00:35:36,560 --> 00:35:40,560
+see how it works, you'll realize it's
+
+916
+00:35:38,480 --> 00:35:44,760
+both clever and practical. And that's
+
+917
+00:35:40,560 --> 00:35:44,760
+what we'll now begin to explain.
+
+918
+00:35:46,240 --> 00:35:50,640
+Let's start with phase encoding. Suppose
+
+919
+00:35:48,560 --> 00:35:52,480
+you do nothing special. What happens?
+
+920
+00:35:50,640 --> 00:35:54,720
+All the signals from the slice come out
+
+921
+00:35:52,480 --> 00:35:56,640
+at the same frequency and they just add
+
+922
+00:35:54,720 --> 00:35:58,720
+together. You can't tell which signal
+
+923
+00:35:56,640 --> 00:36:00,560
+came from which location. It's like
+
+924
+00:35:58,720 --> 00:36:02,640
+hearing a classroom of students speaking
+
+925
+00:36:00,560 --> 00:36:04,320
+at once, all in the same pitch. You
+
+926
+00:36:02,640 --> 00:36:07,359
+know, there are many voices, but you
+
+927
+00:36:04,320 --> 00:36:09,760
+can't separate them. So, how do we make
+
+928
+00:36:07,359 --> 00:36:11,920
+progress? We apply a gradient encoding
+
+929
+00:36:09,760 --> 00:36:13,680
+along one direction of the slice. This
+
+930
+00:36:11,920 --> 00:36:17,040
+gradient is turned on for a certain
+
+931
+00:36:13,680 --> 00:36:18,800
+amount of time. What happens then? At
+
+932
+00:36:17,040 --> 00:36:21,119
+the beginning, before the gradient is
+
+933
+00:36:18,800 --> 00:36:22,880
+applied, all the spins are in phase. But
+
+934
+00:36:21,119 --> 00:36:24,720
+once the gradient is turned on, the
+
+935
+00:36:22,880 --> 00:36:26,960
+magnetic field is no longer the same
+
+936
+00:36:24,720 --> 00:36:28,960
+everywhere. At one location, say at the
+
+937
+00:36:26,960 --> 00:36:31,119
+top, the field is a little weaker. At
+
+938
+00:36:28,960 --> 00:36:33,920
+another location, maybe lower down, the
+
+939
+00:36:31,119 --> 00:36:35,760
+field is stronger. Because procession
+
+940
+00:36:33,920 --> 00:36:37,680
+frequency depends on field strength, the
+
+941
+00:36:35,760 --> 00:36:39,359
+spins at different locations accumulate
+
+942
+00:36:37,680 --> 00:36:41,680
+different amounts of phase shift over
+
+943
+00:36:39,359 --> 00:36:43,440
+that same time interval.
+
+944
+00:36:41,680 --> 00:36:45,760
+Where the field is weak, the spins
+
+945
+00:36:43,440 --> 00:36:48,079
+process more slowly. Where the field is
+
+946
+00:36:45,760 --> 00:36:50,000
+strong, the spins process more quickly.
+
+947
+00:36:48,079 --> 00:36:51,599
+And since the gradient is linear, the
+
+948
+00:36:50,000 --> 00:36:54,640
+phase difference grows proportionally
+
+949
+00:36:51,599 --> 00:36:56,960
+with position.
+
+950
+00:36:54,640 --> 00:36:59,200
+So after the gradient pulse, spins at
+
+951
+00:36:56,960 --> 00:37:01,440
+the top may have accumulated only a
+
+952
+00:36:59,200 --> 00:37:03,359
+small phase change, while spins at the
+
+953
+00:37:01,440 --> 00:37:07,839
+bottom may have accumulated a large
+
+954
+00:37:03,359 --> 00:37:09,760
+phase change, maybe even 180°.
+
+955
+00:37:07,839 --> 00:37:11,920
+Now, when you collect the signal, you
+
+956
+00:37:09,760 --> 00:37:13,599
+know that spins with little or no phase
+
+957
+00:37:11,920 --> 00:37:15,440
+shift must have come from one end of the
+
+958
+00:37:13,599 --> 00:37:16,800
+slice, and spins with larger phase
+
+959
+00:37:15,440 --> 00:37:18,480
+shifts must have come from the other
+
+960
+00:37:16,800 --> 00:37:20,720
+end.
+
+961
+00:37:18,480 --> 00:37:22,400
+This is the essence of phase encoding.
+
+962
+00:37:20,720 --> 00:37:24,400
+You haven't fully reconstructed the
+
+963
+00:37:22,400 --> 00:37:26,240
+image yet, but you now have row-wise
+
+964
+00:37:24,400 --> 00:37:28,320
+spatial information. It's like being
+
+965
+00:37:26,240 --> 00:37:30,640
+able to say that sound came from the
+
+966
+00:37:28,320 --> 00:37:32,560
+front row or the middle row or the back
+
+967
+00:37:30,640 --> 00:37:35,040
+row, even if you don't yet know exactly
+
+968
+00:37:32,560 --> 00:37:37,119
+which student was speaking.
+
+969
+00:37:35,040 --> 00:37:39,119
+Phase encoding is the first step toward
+
+970
+00:37:37,119 --> 00:37:42,119
+resolving spatial information inside the
+
+971
+00:37:39,119 --> 00:37:42,119
+slice.
+
+972
+00:37:43,440 --> 00:37:47,280
+Now, let's connect this with the
+
+973
+00:37:44,880 --> 00:37:49,040
+equations from your textbook.
+
+974
+00:37:47,280 --> 00:37:50,960
+As explained in the book, the phase
+
+975
+00:37:49,040 --> 00:37:53,119
+factor is determined by the local
+
+976
+00:37:50,960 --> 00:37:55,200
+processional angular frequency and the
+
+977
+00:37:53,119 --> 00:37:57,520
+total time for which the phase encoding
+
+978
+00:37:55,200 --> 00:37:59,359
+gradient is applied.
+
+979
+00:37:57,520 --> 00:38:01,520
+Mathematically, it's the product of
+
+980
+00:37:59,359 --> 00:38:03,280
+frequency and time. But remember, the
+
+981
+00:38:01,520 --> 00:38:05,599
+local processional frequency is
+
+982
+00:38:03,280 --> 00:38:08,000
+proportional to the local magnetic
+
+983
+00:38:05,599 --> 00:38:10,480
+field. And the local magnetic field is
+
+984
+00:38:08,000 --> 00:38:13,280
+not uniform. It's linearly changing
+
+985
+00:38:10,480 --> 00:38:15,359
+because of the applied gradient.
+
+986
+00:38:13,280 --> 00:38:18,720
+So we can write the local field as gamma
+
+987
+00:38:15,359 --> 00:38:21,280
+* g y * y. That is the gradient strength
+
+988
+00:38:18,720 --> 00:38:24,720
+g y multiplied by the coordinate y * the
+
+989
+00:38:21,280 --> 00:38:26,400
+gyroagnetic ratio gamma. This means the
+
+990
+00:38:24,720 --> 00:38:29,119
+accumulated phase factor depends
+
+991
+00:38:26,400 --> 00:38:30,960
+directly on position y. Spins at
+
+992
+00:38:29,119 --> 00:38:32,560
+different y locations accumulate
+
+993
+00:38:30,960 --> 00:38:36,079
+different phase shifts during the same
+
+994
+00:38:32,560 --> 00:38:37,760
+encoding time. So after phase encoding,
+
+995
+00:38:36,079 --> 00:38:39,599
+if you collect the signal, it still
+
+996
+00:38:37,760 --> 00:38:41,760
+comes from the same slice, but now it's
+
+997
+00:38:39,599 --> 00:38:43,839
+modulated by this spatially dependent
+
+998
+00:38:41,760 --> 00:38:45,520
+phase factor that gives you extra
+
+999
+00:38:43,839 --> 00:38:47,599
+information.
+
+1000
+00:38:45,520 --> 00:38:49,520
+To put it simply, now you can resolve
+
+1001
+00:38:47,599 --> 00:38:51,680
+the signal line by line across the
+
+1002
+00:38:49,520 --> 00:38:54,160
+slice. You're no longer dealing with one
+
+1003
+00:38:51,680 --> 00:38:56,480
+lumped signal. Instead, you can tell
+
+1004
+00:38:54,160 --> 00:38:58,560
+which row in the slice contributed to
+
+1005
+00:38:56,480 --> 00:39:01,520
+the measured data. Of course, this is
+
+1006
+00:38:58,560 --> 00:39:03,680
+not yet a full tomographic image. What
+
+1007
+00:39:01,520 --> 00:39:05,440
+we want is pixel-wise resolution.
+
+1008
+00:39:03,680 --> 00:39:07,599
+Knowing the value at every point in the
+
+1009
+00:39:05,440 --> 00:39:09,920
+slice, phase encoding alone only gives
+
+1010
+00:39:07,599 --> 00:39:11,760
+us line by line information. To complete
+
+1011
+00:39:09,920 --> 00:39:13,920
+the picture, we'll need to add frequency
+
+1012
+00:39:11,760 --> 00:39:17,240
+encoding on top of it. That's what we'll
+
+1013
+00:39:13,920 --> 00:39:17,240
+discuss next.
+
+1014
+00:39:18,400 --> 00:39:22,800
+The next important idea in MRI is called
+
+1015
+00:39:20,640 --> 00:39:24,960
+frequency encoding. After we finish
+
+1016
+00:39:22,800 --> 00:39:27,520
+phase encoding, we do not immediately
+
+1017
+00:39:24,960 --> 00:39:29,280
+record any signal. At that stage, the
+
+1018
+00:39:27,520 --> 00:39:31,119
+information is already encoded into the
+
+1019
+00:39:29,280 --> 00:39:33,040
+spins as phase shifts, but the signal is
+
+1020
+00:39:31,119 --> 00:39:35,119
+not read out yet.
+
+1021
+00:39:33,040 --> 00:39:37,760
+The next step is to apply what we call
+
+1022
+00:39:35,119 --> 00:39:40,960
+the frequency encoding gradient, often
+
+1023
+00:39:37,760 --> 00:39:43,119
+denoted as G subs or simply the readout
+
+1024
+00:39:40,960 --> 00:39:46,240
+gradient. Once this gradient is applied,
+
+1025
+00:39:43,119 --> 00:39:48,400
+we begin recording the MR signal. What
+
+1026
+00:39:46,240 --> 00:39:51,520
+happens here is that the local magnetic
+
+1027
+00:39:48,400 --> 00:39:53,359
+field is no longer homogeneous. Instead,
+
+1028
+00:39:51,520 --> 00:39:55,359
+because of the gradient, the magnetic
+
+1029
+00:39:53,359 --> 00:39:58,160
+field strength changes linearly across
+
+1030
+00:39:55,359 --> 00:40:00,079
+the imaging plane. On the right hand
+
+1031
+00:39:58,160 --> 00:40:02,079
+side, the field is stronger and on the
+
+1032
+00:40:00,079 --> 00:40:03,920
+left hand side, the field is weaker.
+
+1033
+00:40:02,079 --> 00:40:05,599
+This change in field strength directly
+
+1034
+00:40:03,920 --> 00:40:07,440
+affects the processional frequency of
+
+1035
+00:40:05,599 --> 00:40:09,359
+the spins.
+
+1036
+00:40:07,440 --> 00:40:11,440
+Spins that sit in regions of higher
+
+1037
+00:40:09,359 --> 00:40:13,280
+field will process faster while those in
+
+1038
+00:40:11,440 --> 00:40:15,599
+lower field regions will process more
+
+1039
+00:40:13,280 --> 00:40:17,440
+slowly. This is a very clever way to
+
+1040
+00:40:15,599 --> 00:40:20,560
+extract spatial information from the
+
+1041
+00:40:17,440 --> 00:40:23,119
+signal. Now when we measure the signal,
+
+1042
+00:40:20,560 --> 00:40:25,520
+if we see a component oscillating at a
+
+1043
+00:40:23,119 --> 00:40:27,760
+very high frequency, we know that signal
+
+1044
+00:40:25,520 --> 00:40:29,440
+must have come from spins located on the
+
+1045
+00:40:27,760 --> 00:40:31,839
+right hand side of the image where the
+
+1046
+00:40:29,440 --> 00:40:34,160
+field is strongest.
+
+1047
+00:40:31,839 --> 00:40:36,160
+Conversely, if the signal oscillates at
+
+1048
+00:40:34,160 --> 00:40:38,000
+a lower frequency, we know it must have
+
+1049
+00:40:36,160 --> 00:40:40,079
+come from the left hand side where the
+
+1050
+00:40:38,000 --> 00:40:42,240
+field is weaker. In other words, the
+
+1051
+00:40:40,079 --> 00:40:44,400
+frequency of the signal directly encodes
+
+1052
+00:40:42,240 --> 00:40:47,200
+the spatial position of the spins along
+
+1053
+00:40:44,400 --> 00:40:48,960
+the direction of the gradient.
+
+1054
+00:40:47,200 --> 00:40:51,200
+So, the field is no longer uniform
+
+1055
+00:40:48,960 --> 00:40:53,359
+across the entire plane. Instead, the
+
+1056
+00:40:51,200 --> 00:40:55,839
+gradient introduces a mapping between
+
+1057
+00:40:53,359 --> 00:40:58,079
+position and frequency.
+
+1058
+00:40:55,839 --> 00:41:00,319
+The faster oscillations in the measured
+
+1059
+00:40:58,079 --> 00:41:02,319
+signal correspond to spins located
+
+1060
+00:41:00,319 --> 00:41:04,640
+toward the right side, while the slower
+
+1061
+00:41:02,319 --> 00:41:06,720
+oscillations correspond to spins on the
+
+1062
+00:41:04,640 --> 00:41:08,560
+left side. All of the low frequency
+
+1063
+00:41:06,720 --> 00:41:10,560
+signals come from the left hand side of
+
+1064
+00:41:08,560 --> 00:41:13,520
+the slice, and all of the highfrequency
+
+1065
+00:41:10,560 --> 00:41:15,440
+signals come from the right hand side.
+
+1066
+00:41:13,520 --> 00:41:17,599
+By combining this frequency information
+
+1067
+00:41:15,440 --> 00:41:19,680
+with the phase information we already
+
+1068
+00:41:17,599 --> 00:41:21,680
+stored in the earlier phase encoding
+
+1069
+00:41:19,680 --> 00:41:23,920
+step, we can now determine not only
+
+1070
+00:41:21,680 --> 00:41:26,000
+which row the signal came from, but also
+
+1071
+00:41:23,920 --> 00:41:28,319
+which column. In this way, we can
+
+1072
+00:41:26,000 --> 00:41:32,440
+resolve the precise pixel location of
+
+1073
+00:41:28,319 --> 00:41:32,440
+the signal within the slice.
+
+1074
+00:41:33,920 --> 00:41:37,839
+Now, let's put everything together. The
+
+1075
+00:41:36,000 --> 00:41:40,079
+phase angle that you see here carries
+
+1076
+00:41:37,839 --> 00:41:42,240
+important spatial meaning. Spins at the
+
+1077
+00:41:40,079 --> 00:41:44,400
+top of the slice accumulate a smaller
+
+1078
+00:41:42,240 --> 00:41:47,440
+phase angle while spins at the bottom
+
+1079
+00:41:44,400 --> 00:41:49,440
+accumulate a larger phase angle.
+
+1080
+00:41:47,440 --> 00:41:51,280
+So, when you combine phase encoding with
+
+1081
+00:41:49,440 --> 00:41:52,880
+frequency encoding, you can start to
+
+1082
+00:41:51,280 --> 00:41:55,359
+separate the signals point by point
+
+1083
+00:41:52,880 --> 00:41:57,119
+within the slice. This is the basic idea
+
+1084
+00:41:55,359 --> 00:42:00,400
+of how we move from bulk signals to
+
+1085
+00:41:57,119 --> 00:42:02,400
+localized pixel specific information.
+
+1086
+00:42:00,400 --> 00:42:04,480
+You may wonder why do we need two more
+
+1087
+00:42:02,400 --> 00:42:06,160
+gradient fields. At the very beginning,
+
+1088
+00:42:04,480 --> 00:42:07,920
+we already used a slice selection
+
+1089
+00:42:06,160 --> 00:42:10,079
+gradient, let's say along the Z
+
+1090
+00:42:07,920 --> 00:42:12,240
+direction to pick out one slice from the
+
+1091
+00:42:10,079 --> 00:42:14,800
+entire volume. But that only gives us
+
+1092
+00:42:12,240 --> 00:42:16,400
+localization in one dimension. To fully
+
+1093
+00:42:14,800 --> 00:42:18,400
+resolve the slice, we need to further
+
+1094
+00:42:16,400 --> 00:42:20,319
+encode along the other two directions.
+
+1095
+00:42:18,400 --> 00:42:23,440
+The Y direction for phase encoding and
+
+1096
+00:42:20,319 --> 00:42:25,599
+the X direction for frequency encoding.
+
+1097
+00:42:23,440 --> 00:42:27,599
+By applying gradients step by step, we
+
+1098
+00:42:25,599 --> 00:42:29,680
+gradually eliminate one dimension at a
+
+1099
+00:42:27,599 --> 00:42:31,839
+time. Slice selection removes the Z
+
+1100
+00:42:29,680 --> 00:42:33,839
+dimension, phase encoding handles the Y
+
+1101
+00:42:31,839 --> 00:42:36,160
+dimension, and frequency encoding takes
+
+1102
+00:42:33,839 --> 00:42:38,240
+care of the X dimension. The end result
+
+1103
+00:42:36,160 --> 00:42:40,720
+is three-dimensional point specific
+
+1104
+00:42:38,240 --> 00:42:43,760
+localization of the MR signal. This is
+
+1105
+00:42:40,720 --> 00:42:45,760
+the foundation of tomographic imaging.
+
+1106
+00:42:43,760 --> 00:42:48,400
+Mathematically, we can describe this
+
+1107
+00:42:45,760 --> 00:42:50,400
+process using the equations shown here.
+
+1108
+00:42:48,400 --> 00:42:52,319
+If we only apply frequency encoding
+
+1109
+00:42:50,400 --> 00:42:54,480
+without phase encoding, the acquired
+
+1110
+00:42:52,319 --> 00:42:56,720
+signal is expressed as an integral over
+
+1111
+00:42:54,480 --> 00:43:01,280
+the slice that includes a factor of e to
+
+1112
+00:42:56,720 --> 00:43:02,800
+the minus j gamma gx * x * t.
+
+1113
+00:43:01,280 --> 00:43:05,119
+This captures spatial frequency
+
+1114
+00:43:02,800 --> 00:43:07,520
+information along the x direction. But
+
+1115
+00:43:05,119 --> 00:43:09,760
+when we combine both phase encoding and
+
+1116
+00:43:07,520 --> 00:43:11,920
+frequency encoding, the signal equation
+
+1117
+00:43:09,760 --> 00:43:14,800
+becomes the one you see at the bottom of
+
+1118
+00:43:11,920 --> 00:43:18,319
+the slide. Here you have an additional
+
+1119
+00:43:14,800 --> 00:43:20,880
+factor of e to the minus j gamma g y * y
+
+1120
+00:43:18,319 --> 00:43:22,960
+* p. This accounts for the phase
+
+1121
+00:43:20,880 --> 00:43:26,560
+encoding gradient applied in the y
+
+1122
+00:43:22,960 --> 00:43:28,480
+direction for a certain time to p.
+
+1123
+00:43:26,560 --> 00:43:30,319
+Now looking at this combined equation
+
+1124
+00:43:28,480 --> 00:43:32,400
+you can see it resembles a forier
+
+1125
+00:43:30,319 --> 00:43:34,640
+transformation. You have terms in both
+
+1126
+00:43:32,400 --> 00:43:37,680
+the x and y directions frequency terms
+
+1127
+00:43:34,640 --> 00:43:39,520
+in x and phase terms in y.
+
+1128
+00:43:37,680 --> 00:43:41,200
+Together they allow us to map spatial
+
+1129
+00:43:39,520 --> 00:43:43,520
+coordinates into measurable signal
+
+1130
+00:43:41,200 --> 00:43:46,400
+space. This is the mathematical backbone
+
+1131
+00:43:43,520 --> 00:43:48,720
+of MRI imaging. We will go deeper into
+
+1132
+00:43:46,400 --> 00:43:50,400
+this forier interpretation later in the
+
+1133
+00:43:48,720 --> 00:43:52,079
+lecture.
+
+1134
+00:43:50,400 --> 00:43:53,920
+But for now, recognize that the
+
+1135
+00:43:52,079 --> 00:43:56,000
+combination of slice selection, phase
+
+1136
+00:43:53,920 --> 00:43:58,079
+encoding, and frequency encoding
+
+1137
+00:43:56,000 --> 00:44:00,400
+provides us with true point-wise
+
+1138
+00:43:58,079 --> 00:44:02,319
+information. Graphically, as shown here,
+
+1139
+00:44:00,400 --> 00:44:05,319
+this is exactly how the imaging sequence
+
+1140
+00:44:02,319 --> 00:44:05,319
+works.
+
+1141
+00:44:06,560 --> 00:44:10,319
+So here we come to the full sequence
+
+1142
+00:44:08,400 --> 00:44:12,800
+that combines slice selection, phase
+
+1143
+00:44:10,319 --> 00:44:16,240
+encoding and frequency encoding. The
+
+1144
+00:44:12,800 --> 00:44:18,240
+process begins with a 90° pulse.
+
+1145
+00:44:16,240 --> 00:44:20,400
+This radio frequency pulse flips the
+
+1146
+00:44:18,240 --> 00:44:23,359
+magnetization vector, the big M vector
+
+1147
+00:44:20,400 --> 00:44:25,359
+into the XY plane. Once it is in the XY
+
+1148
+00:44:23,359 --> 00:44:27,040
+plane, the transverse components begin
+
+1149
+00:44:25,359 --> 00:44:29,200
+to process and these processing
+
+1150
+00:44:27,040 --> 00:44:31,680
+components induce an alternating
+
+1151
+00:44:29,200 --> 00:44:34,000
+magnetic field around the patient or the
+
+1152
+00:44:31,680 --> 00:44:36,640
+sample. That alternating field is what
+
+1153
+00:44:34,000 --> 00:44:38,319
+we measure as the MR signal.
+
+1154
+00:44:36,640 --> 00:44:40,720
+Now you want to make sure that you are
+
+1155
+00:44:38,319 --> 00:44:42,400
+not flipping every spin in the body. You
+
+1156
+00:44:40,720 --> 00:44:44,560
+only want to flip the spins within a
+
+1157
+00:44:42,400 --> 00:44:47,040
+single slice. That is where slice
+
+1158
+00:44:44,560 --> 00:44:48,800
+selection comes in. During the 90°
+
+1159
+00:44:47,040 --> 00:44:50,319
+pulse, you apply a slice selection
+
+1160
+00:44:48,800 --> 00:44:52,319
+gradient.
+
+1161
+00:44:50,319 --> 00:44:53,920
+This gradient ensures that only the
+
+1162
+00:44:52,319 --> 00:44:55,920
+spins that are resonant within that
+
+1163
+00:44:53,920 --> 00:44:58,480
+slice frequency range are flipped into
+
+1164
+00:44:55,920 --> 00:45:00,160
+the XY plane. Spins outside the slice
+
+1165
+00:44:58,480 --> 00:45:02,400
+are not flipped and so they do not
+
+1166
+00:45:00,160 --> 00:45:04,319
+contribute to the signal. This is the
+
+1167
+00:45:02,400 --> 00:45:06,319
+first major step. Slice selection
+
+1168
+00:45:04,319 --> 00:45:09,040
+removes one dimension narrowing the
+
+1169
+00:45:06,319 --> 00:45:11,520
+signal to a single slice.
+
+1170
+00:45:09,040 --> 00:45:13,680
+Next, you apply phase encoding. On the
+
+1171
+00:45:11,520 --> 00:45:16,319
+slide, you see these multiple horizontal
+
+1172
+00:45:13,680 --> 00:45:18,480
+lines under the label G-phase. This is
+
+1173
+00:45:16,319 --> 00:45:20,640
+because phase encoding must be repeated
+
+1174
+00:45:18,480 --> 00:45:22,800
+multiple times with different gradient
+
+1175
+00:45:20,640 --> 00:45:24,800
+strengths. You can start from a minimum
+
+1176
+00:45:22,800 --> 00:45:26,640
+value, then gradually increase step by
+
+1177
+00:45:24,800 --> 00:45:29,119
+step, covering a full range of gradient
+
+1178
+00:45:26,640 --> 00:45:31,200
+amplitudes. Each phase encoding step
+
+1179
+00:45:29,119 --> 00:45:33,520
+imprints a different spatially dependent
+
+1180
+00:45:31,200 --> 00:45:38,000
+phase shift onto the spins along the y
+
+1181
+00:45:33,520 --> 00:45:40,400
+direction. Why do we need so many lines?
+
+1182
+00:45:38,000 --> 00:45:42,560
+The reason is the forier transformation.
+
+1183
+00:45:40,400 --> 00:45:44,240
+To fully reconstruct an image, we need
+
+1184
+00:45:42,560 --> 00:45:46,400
+information along two degrees of
+
+1185
+00:45:44,240 --> 00:45:48,560
+freedom. One for the phase dimension and
+
+1186
+00:45:46,400 --> 00:45:50,400
+one for the frequency dimension. Each
+
+1187
+00:45:48,560 --> 00:45:52,960
+phase encoding line is like collecting
+
+1188
+00:45:50,400 --> 00:45:55,040
+one row of data in forier space which we
+
+1189
+00:45:52,960 --> 00:45:57,200
+call k space.
+
+1190
+00:45:55,040 --> 00:45:59,200
+After that we apply frequency encoding
+
+1191
+00:45:57,200 --> 00:46:01,359
+shown here as G frack. Frequency
+
+1192
+00:45:59,200 --> 00:46:03,599
+encoding happens during the readout.
+
+1193
+00:46:01,359 --> 00:46:05,119
+With this gradient on different spatial
+
+1194
+00:46:03,599 --> 00:46:06,640
+locations along the X direction
+
+1195
+00:46:05,119 --> 00:46:08,480
+correspond to different precession
+
+1196
+00:46:06,640 --> 00:46:10,560
+frequencies.
+
+1197
+00:46:08,480 --> 00:46:12,720
+When you record the signal you collect a
+
+1198
+00:46:10,560 --> 00:46:15,440
+series of oscillations that map into the
+
+1199
+00:46:12,720 --> 00:46:17,280
+X-axis of K space. Each readout provides
+
+1200
+00:46:15,440 --> 00:46:19,440
+you with n data points along this
+
+1201
+00:46:17,280 --> 00:46:21,599
+horizontal axis.
+
+1202
+00:46:19,440 --> 00:46:23,680
+So putting everything together for each
+
+1203
+00:46:21,599 --> 00:46:26,000
+phase encoding step you collect one
+
+1204
+00:46:23,680 --> 00:46:27,920
+frequency encoded readout with n data
+
+1205
+00:46:26,000 --> 00:46:29,839
+points. After repeating this process
+
+1206
+00:46:27,920 --> 00:46:32,079
+with many different phase encoding steps
+
+1207
+00:46:29,839 --> 00:46:34,160
+you end up with a full grid of data n
+
+1208
+00:46:32,079 --> 00:46:36,319
+byn points.
+
+1209
+00:46:34,160 --> 00:46:38,400
+Each row comes from one phase encoding
+
+1210
+00:46:36,319 --> 00:46:41,200
+and each column comes from the frequency
+
+1211
+00:46:38,400 --> 00:46:43,040
+encoding readout. Altogether this maps
+
+1212
+00:46:41,200 --> 00:46:45,280
+the entire cross-section of the slice
+
+1213
+00:46:43,040 --> 00:46:47,520
+into kspace. Then by applying a
+
+1214
+00:46:45,280 --> 00:46:50,160
+two-dimensional forier transform, you
+
+1215
+00:46:47,520 --> 00:46:52,319
+reconstruct the final image.
+
+1216
+00:46:50,160 --> 00:46:54,319
+This is the essence of forier imaging or
+
+1217
+00:46:52,319 --> 00:46:56,000
+what we call casebased formulation in
+
+1218
+00:46:54,319 --> 00:46:58,240
+MRI.
+
+1219
+00:46:56,000 --> 00:47:00,400
+Slice selection removes one dimension,
+
+1220
+00:46:58,240 --> 00:47:02,480
+phase encoding handles the Y dimension
+
+1221
+00:47:00,400 --> 00:47:04,640
+and frequency encoding handles the X
+
+1222
+00:47:02,480 --> 00:47:06,560
+dimension. The result is a complete
+
+1223
+00:47:04,640 --> 00:47:10,839
+two-dimensional image of the selected
+
+1224
+00:47:06,560 --> 00:47:10,839
+slice pixel by pixel.
+
+1225
+00:47:12,160 --> 00:47:18,400
+So if we call the whole term for
+
+1226
+00:47:14,000 --> 00:47:21,200
+frequency encoding gx * t simply kx and
+
+1227
+00:47:18,400 --> 00:47:23,280
+we call the phase encoding term ky then
+
+1228
+00:47:21,200 --> 00:47:26,400
+the previous formula we derived can be
+
+1229
+00:47:23,280 --> 00:47:27,920
+rewritten in this kspace format
+
+1230
+00:47:26,400 --> 00:47:31,040
+the signal is proportional to the
+
+1231
+00:47:27,920 --> 00:47:32,560
+factors kx * x and ky * y and this
+
+1232
+00:47:31,040 --> 00:47:34,400
+immediately shows that the signal we
+
+1233
+00:47:32,560 --> 00:47:36,319
+measure is essentially a forier
+
+1234
+00:47:34,400 --> 00:47:38,640
+transformation
+
+1235
+00:47:36,319 --> 00:47:40,319
+for any fixed time point during readout
+
+1236
+00:47:38,640 --> 00:47:42,960
+the time t sets a specific specific
+
+1237
+00:47:40,319 --> 00:47:45,040
+value of kx while ky is determined by
+
+1238
+00:47:42,960 --> 00:47:47,359
+the strength of the gradient gy and the
+
+1239
+00:47:45,040 --> 00:47:49,359
+duration of the phase encoding step to
+
+1240
+00:47:47,359 --> 00:47:51,839
+p. In other words, the frequency
+
+1241
+00:47:49,359 --> 00:47:53,920
+encoding factor is traced out by letting
+
+1242
+00:47:51,839 --> 00:47:56,319
+time run during readout which sweeps
+
+1243
+00:47:53,920 --> 00:47:58,640
+continuously along one line in k space
+
+1244
+00:47:56,319 --> 00:48:01,200
+while the phase encoding only gives one
+
+1245
+00:47:58,640 --> 00:48:04,400
+value of ky per line. And this is why we
+
+1246
+00:48:01,200 --> 00:48:06,160
+need multiple phase encoding steps.
+
+1247
+00:48:04,400 --> 00:48:08,240
+By repeating the experiment with many
+
+1248
+00:48:06,160 --> 00:48:10,560
+different gradient strengths for gy, we
+
+1249
+00:48:08,240 --> 00:48:12,800
+can step through multiple values of KY
+
+1250
+00:48:10,560 --> 00:48:15,040
+gradually filling the two-dimensional k
+
+1251
+00:48:12,800 --> 00:48:16,640
+space. This is the basis of forier
+
+1252
+00:48:15,040 --> 00:48:18,560
+imaging.
+
+1253
+00:48:16,640 --> 00:48:21,839
+On the slide, you can see the formal
+
+1254
+00:48:18,560 --> 00:48:26,079
+definitions written explicitly kx= gamma
+
+1255
+00:48:21,839 --> 00:48:29,760
+/ 2<unk>i * gx * t and ky = gamma over
+
+1256
+00:48:26,079 --> 00:48:31,599
+2<unk>i * gy * p. Substituting these
+
+1257
+00:48:29,760 --> 00:48:34,079
+into the signal equation, we get that s
+
+1258
+00:48:31,599 --> 00:48:37,280
+of kx ky is proportional to the double
+
+1259
+00:48:34,079 --> 00:48:41,680
+integral over the slice of rho of x y *
+
+1260
+00:48:37,280 --> 00:48:45,280
+eus j 2<unk>i * open parenthesis kxx + k
+
+1261
+00:48:41,680 --> 00:48:48,000
+y y close parenthesis dx dy. This is
+
+1262
+00:48:45,280 --> 00:48:50,079
+shown as equation 4.49 and it is the
+
+1263
+00:48:48,000 --> 00:48:51,680
+central mathematical statement of forier
+
+1264
+00:48:50,079 --> 00:48:53,839
+MRI.
+
+1265
+00:48:51,680 --> 00:48:56,000
+Notice that in your textbook the 2PI
+
+1266
+00:48:53,839 --> 00:48:57,839
+factor is missing inside the exponential
+
+1267
+00:48:56,000 --> 00:49:00,079
+and this is actually a common oversight
+
+1268
+00:48:57,839 --> 00:49:02,960
+in many texts including mine and in my
+
+1269
+00:49:00,079 --> 00:49:04,720
+lectures. In reality the 2PI must be
+
+1270
+00:49:02,960 --> 00:49:07,200
+included to match the conventional
+
+1271
+00:49:04,720 --> 00:49:09,119
+definition of the forier transform. So
+
+1272
+00:49:07,200 --> 00:49:11,040
+keep that in mind as a small but
+
+1273
+00:49:09,119 --> 00:49:12,880
+important detail.
+
+1274
+00:49:11,040 --> 00:49:15,040
+The essential point here is that through
+
+1275
+00:49:12,880 --> 00:49:17,520
+phase encoding and frequency encoding
+
+1276
+00:49:15,040 --> 00:49:20,000
+the data we measure in MRI are already
+
+1277
+00:49:17,520 --> 00:49:22,079
+furer components. This is very different
+
+1278
+00:49:20,000 --> 00:49:24,640
+from X-ray imaging where the Furier
+
+1279
+00:49:22,079 --> 00:49:26,319
+slice theorem has to be used. There each
+
+1280
+00:49:24,640 --> 00:49:28,480
+projection profile must be
+
+1281
+00:49:26,319 --> 00:49:31,040
+one-dimensionally transformed to draw a
+
+1282
+00:49:28,480 --> 00:49:34,480
+radial line in Furier space and extra
+
+1283
+00:49:31,040 --> 00:49:36,800
+processing is needed. In MRI the signals
+
+1284
+00:49:34,480 --> 00:49:38,800
+themselves directly populate kspace
+
+1285
+00:49:36,800 --> 00:49:40,559
+which means the forier information is
+
+1286
+00:49:38,800 --> 00:49:42,079
+collected naturally as part of the
+
+1287
+00:49:40,559 --> 00:49:44,160
+measurement.
+
+1288
+00:49:42,079 --> 00:49:46,400
+Each phase encoding step contributes to
+
+1289
+00:49:44,160 --> 00:49:48,240
+the vertical direction in kspace and the
+
+1290
+00:49:46,400 --> 00:49:50,240
+continuous readout under the frequency
+
+1291
+00:49:48,240 --> 00:49:52,880
+encoding gradient sweeps across the
+
+1292
+00:49:50,240 --> 00:49:54,960
+horizontal direction. By combining both
+
+1293
+00:49:52,880 --> 00:49:57,440
+we directly fill kspace and after
+
+1294
+00:49:54,960 --> 00:50:01,559
+applying the inverse furier transform we
+
+1295
+00:49:57,440 --> 00:50:01,559
+reconstruct the final image.
+
+1296
+00:50:02,960 --> 00:50:07,520
+So now let's talk about how the data are
+
+1297
+00:50:05,119 --> 00:50:10,400
+actually collected in the kspace. When
+
+1298
+00:50:07,520 --> 00:50:12,400
+time t equals zero, the k value is also
+
+1299
+00:50:10,400 --> 00:50:14,640
+zero, which means you are sitting right
+
+1300
+00:50:12,400 --> 00:50:16,559
+at the center of k space. As time
+
+1301
+00:50:14,640 --> 00:50:18,400
+increases during the frequency encoding
+
+1302
+00:50:16,559 --> 00:50:20,720
+readout, the trajectory moves gradually
+
+1303
+00:50:18,400 --> 00:50:22,400
+toward the right hand side along the kx
+
+1304
+00:50:20,720 --> 00:50:24,079
+direction.
+
+1305
+00:50:22,400 --> 00:50:26,480
+In this way, you begin to cover half of
+
+1306
+00:50:24,079 --> 00:50:28,319
+the forier domain. Now remember, for
+
+1307
+00:50:26,480 --> 00:50:30,400
+real valued functions, the furier
+
+1308
+00:50:28,319 --> 00:50:32,400
+transform has a very useful symmetry
+
+1309
+00:50:30,400 --> 00:50:34,559
+property. If you only collect data from
+
+1310
+00:50:32,400 --> 00:50:36,559
+one half of kspace, the other half can
+
+1311
+00:50:34,559 --> 00:50:38,720
+be inferred mathematically. This
+
+1312
+00:50:36,559 --> 00:50:41,200
+symmetry reduces the amount of data we
+
+1313
+00:50:38,720 --> 00:50:43,280
+need, but in practice, MRI systems still
+
+1314
+00:50:41,200 --> 00:50:45,040
+often collect both halves to account for
+
+1315
+00:50:43,280 --> 00:50:47,040
+noise and to achieve cleaner
+
+1316
+00:50:45,040 --> 00:50:49,200
+reconstructions.
+
+1317
+00:50:47,040 --> 00:50:51,200
+This diagram shows how the data lines
+
+1318
+00:50:49,200 --> 00:50:52,880
+are filled. Each horizontal line
+
+1319
+00:50:51,200 --> 00:50:54,559
+corresponds to a readout under the
+
+1320
+00:50:52,880 --> 00:50:57,119
+frequency encoding gradient, which
+
+1321
+00:50:54,559 --> 00:50:58,880
+traces across kx. After finishing one
+
+1322
+00:50:57,119 --> 00:51:01,200
+line, you step the phase encoding
+
+1323
+00:50:58,880 --> 00:51:03,200
+gradient to a new value, moving up or
+
+1324
+00:51:01,200 --> 00:51:06,480
+down in the ky direction, and then
+
+1325
+00:51:03,200 --> 00:51:08,559
+record another frequency encoded line.
+
+1326
+00:51:06,480 --> 00:51:10,400
+So for example, line one at the bottom
+
+1327
+00:51:08,559 --> 00:51:12,720
+corresponds to the maximum negative
+
+1328
+00:51:10,400 --> 00:51:15,040
+value of the phase encoding gradient.
+
+1329
+00:51:12,720 --> 00:51:16,880
+Then you step gradually upward line by
+
+1330
+00:51:15,040 --> 00:51:19,520
+line until you reach the maximum
+
+1331
+00:51:16,880 --> 00:51:21,839
+positive value of ky. The spacing
+
+1332
+00:51:19,520 --> 00:51:23,760
+between these lines is delta ky and the
+
+1333
+00:51:21,839 --> 00:51:26,720
+spacing along the frequency encoding
+
+1334
+00:51:23,760 --> 00:51:28,800
+direction is delta kx. By repeating this
+
+1335
+00:51:26,720 --> 00:51:32,000
+process, you fill up the entire kspace
+
+1336
+00:51:28,800 --> 00:51:34,480
+grid point by point, line by line.
+
+1337
+00:51:32,000 --> 00:51:37,359
+This is why we call it kspace. Each
+
+1338
+00:51:34,480 --> 00:51:39,760
+coordinate kx and ky corresponds to a
+
+1339
+00:51:37,359 --> 00:51:41,839
+furier component of the image. Once the
+
+1340
+00:51:39,760 --> 00:51:43,760
+kspace is fully sampled, an inverse
+
+1341
+00:51:41,839 --> 00:51:45,599
+furier transform is applied and that
+
+1342
+00:51:43,760 --> 00:51:47,680
+directly reconstructs the image in the
+
+1343
+00:51:45,599 --> 00:51:50,319
+spatial domain.
+
+1344
+00:51:47,680 --> 00:51:52,720
+So the essential idea is very simple but
+
+1345
+00:51:50,319 --> 00:51:55,280
+very powerful. MRI does not record the
+
+1346
+00:51:52,720 --> 00:51:57,760
+image directly. Instead, it records data
+
+1347
+00:51:55,280 --> 00:51:59,520
+in k space which is really the forier
+
+1348
+00:51:57,760 --> 00:52:01,520
+space and then uses the inverse
+
+1349
+00:51:59,520 --> 00:52:05,200
+transform to bring everything back into
+
+1350
+00:52:01,520 --> 00:52:05,200
+an image we can see.
+
+1351
+00:52:06,640 --> 00:52:11,040
+And here you see another important point
+
+1352
+00:52:08,559 --> 00:52:12,800
+full coverage in Kspace. If we look at
+
+1353
+00:52:11,040 --> 00:52:14,800
+this figure, you can see how we can
+
+1354
+00:52:12,800 --> 00:52:16,559
+slightly modify the pulse sequence to
+
+1355
+00:52:14,800 --> 00:52:18,800
+make sure the entire Ksp space is
+
+1356
+00:52:16,559 --> 00:52:21,040
+covered symmetrically.
+
+1357
+00:52:18,800 --> 00:52:22,880
+Normally during frequency encoding, you
+
+1358
+00:52:21,040 --> 00:52:24,880
+simply start your data collection right
+
+1359
+00:52:22,880 --> 00:52:27,440
+away. That means your measurement begins
+
+1360
+00:52:24,880 --> 00:52:29,680
+at time t equal to zero. So the kx
+
+1361
+00:52:27,440 --> 00:52:32,000
+trajectory also starts at zero and moves
+
+1362
+00:52:29,680 --> 00:52:33,839
+only into the positive side. This means
+
+1363
+00:52:32,000 --> 00:52:36,640
+by default you are not covering the
+
+1364
+00:52:33,839 --> 00:52:39,200
+negative part of kspace.
+
+1365
+00:52:36,640 --> 00:52:40,960
+So how do we fix this?
+
+1366
+00:52:39,200 --> 00:52:42,880
+Before the regular frequency encoding
+
+1367
+00:52:40,960 --> 00:52:45,359
+and data acquisition, we apply what is
+
+1368
+00:52:42,880 --> 00:52:48,000
+called a defasing gradient. This is
+
+1369
+00:52:45,359 --> 00:52:50,240
+shown here as GDPhase. By applying this
+
+1370
+00:52:48,000 --> 00:52:52,319
+defasing pulse, we effectively shift the
+
+1371
+00:52:50,240 --> 00:52:54,720
+starting point of the kx trajectory into
+
+1372
+00:52:52,319 --> 00:52:56,559
+the negative region. In other words,
+
+1373
+00:52:54,720 --> 00:52:58,559
+instead of starting at zero, all the
+
+1374
+00:52:56,559 --> 00:53:01,200
+frequency components now begin with a
+
+1375
+00:52:58,559 --> 00:53:02,960
+negative kx value.
+
+1376
+00:53:01,200 --> 00:53:04,800
+Then as time increases during the
+
+1377
+00:53:02,960 --> 00:53:06,880
+readout, the trajectory sweeps across
+
+1378
+00:53:04,800 --> 00:53:09,680
+kspace and eventually moves into the
+
+1379
+00:53:06,880 --> 00:53:12,800
+positive side. By doing this, you cover
+
+1380
+00:53:09,680 --> 00:53:15,440
+the entire rectangular region of K space
+
+1381
+00:53:12,800 --> 00:53:17,280
+centered around the origin.
+
+1382
+00:53:15,440 --> 00:53:19,520
+This is important because according to
+
+1383
+00:53:17,280 --> 00:53:21,520
+the Nyquis sampling theorem, you need to
+
+1384
+00:53:19,520 --> 00:53:24,079
+cover the full bandwidth of frequencies
+
+1385
+00:53:21,520 --> 00:53:25,839
+to accurately reconstruct the image. If
+
+1386
+00:53:24,079 --> 00:53:27,680
+your sampling region is too narrow, you
+
+1387
+00:53:25,839 --> 00:53:29,920
+will miss some forier components and
+
+1388
+00:53:27,680 --> 00:53:32,400
+that leads to aliasing or artifacts in
+
+1389
+00:53:29,920 --> 00:53:34,480
+the reconstructed image.
+
+1390
+00:53:32,400 --> 00:53:36,400
+By carefully choosing the defasing and
+
+1391
+00:53:34,480 --> 00:53:38,559
+refasing gradients, you make sure that
+
+1392
+00:53:36,400 --> 00:53:40,240
+this rectangular region in kspace is
+
+1393
+00:53:38,559 --> 00:53:42,160
+wide enough to include all of the
+
+1394
+00:53:40,240 --> 00:53:43,839
+significant fur components of the
+
+1395
+00:53:42,160 --> 00:53:46,480
+object.
+
+1396
+00:53:43,839 --> 00:53:49,119
+So the essential idea here is that MRI
+
+1397
+00:53:46,480 --> 00:53:52,160
+imaging works in Kspace and by adjusting
+
+1398
+00:53:49,119 --> 00:53:54,559
+the gradient pulses defasing first then
+
+1399
+00:53:52,160 --> 00:53:57,040
+rephasing with frequency encoding you
+
+1400
+00:53:54,559 --> 00:54:00,559
+can guarantee full coverage. This is how
+
+1401
+00:53:57,040 --> 00:54:02,800
+the KSPace theorem is applied in MRI.
+
+1402
+00:54:00,559 --> 00:54:04,559
+And remember in our setup phase encoding
+
+1403
+00:54:02,800 --> 00:54:06,079
+is along the vertical direction while
+
+1404
+00:54:04,559 --> 00:54:08,480
+frequency encoding is along the
+
+1405
+00:54:06,079 --> 00:54:10,480
+horizontal direction. Together they fill
+
+1406
+00:54:08,480 --> 00:54:12,640
+the kspace grid ensuring that the
+
+1407
+00:54:10,480 --> 00:54:17,000
+reconstructed image contains all the
+
+1408
+00:54:12,640 --> 00:54:17,000
+spatial information of the object.
+
+1409
+00:54:18,319 --> 00:54:22,240
+Now let me explain this idea more
+
+1410
+00:54:20,000 --> 00:54:23,760
+generally. Here towel shown in green is
+
+1411
+00:54:22,240 --> 00:54:26,000
+the time you spend applying the phase
+
+1412
+00:54:23,760 --> 00:54:27,839
+encoding gradient. During this phase
+
+1413
+00:54:26,000 --> 00:54:29,680
+encoding you introduce a phase
+
+1414
+00:54:27,839 --> 00:54:32,319
+difference across the spins but you are
+
+1415
+00:54:29,680 --> 00:54:34,480
+not yet collecting any signal.
+
+1416
+00:54:32,319 --> 00:54:36,480
+After that you let time to run shown in
+
+1417
+00:54:34,480 --> 00:54:38,720
+red and that is when you actually begin
+
+1418
+00:54:36,480 --> 00:54:40,960
+collecting the MR signal. This is the
+
+1419
+00:54:38,720 --> 00:54:43,680
+formulation with both phase encoding and
+
+1420
+00:54:40,960 --> 00:54:45,280
+frequency encoding included.
+
+1421
+00:54:43,680 --> 00:54:47,280
+We first perform phase encoding
+
+1422
+00:54:45,280 --> 00:54:49,839
+longitudinally then we do frequency
+
+1423
+00:54:47,280 --> 00:54:51,920
+encoding horizontally. But in fact you
+
+1424
+00:54:49,839 --> 00:54:53,920
+can do this in different ways. You can
+
+1425
+00:54:51,920 --> 00:54:57,119
+apply gradients in both the vertical and
+
+1426
+00:54:53,920 --> 00:54:59,280
+horizontal directions simultaneously.
+
+1427
+00:54:57,119 --> 00:55:01,040
+When you do this during the time towel,
+
+1428
+00:54:59,280 --> 00:55:03,440
+you move the starting phase point
+
+1429
+00:55:01,040 --> 00:55:05,520
+diagonally in case depending on the
+
+1430
+00:55:03,440 --> 00:55:06,960
+relative strength of the gradients. If
+
+1431
+00:55:05,520 --> 00:55:09,119
+you then start collecting signal
+
+1432
+00:55:06,960 --> 00:55:11,520
+immediately, the case trajectory begins
+
+1433
+00:55:09,119 --> 00:55:13,599
+from that shifted point.
+
+1434
+00:55:11,520 --> 00:55:15,680
+Alternatively, you might first move the
+
+1435
+00:55:13,599 --> 00:55:17,680
+starting point horizontally by applying
+
+1436
+00:55:15,680 --> 00:55:19,680
+one gradient, then switch to a vertical
+
+1437
+00:55:17,680 --> 00:55:21,440
+gradient and move to another position
+
+1438
+00:55:19,680 --> 00:55:23,440
+and only then begin collecting the
+
+1439
+00:55:21,440 --> 00:55:26,720
+signal. Each different choice changes
+
+1440
+00:55:23,440 --> 00:55:28,720
+the trajectory you trace in kspace.
+
+1441
+00:55:26,720 --> 00:55:31,040
+For example, if you use an X gradient
+
+1442
+00:55:28,720 --> 00:55:33,040
+for frequency encoding, then as time t
+
+1443
+00:55:31,040 --> 00:55:35,040
+increases from zero, the kx value
+
+1444
+00:55:33,040 --> 00:55:36,640
+changes continuously toward positive
+
+1445
+00:55:35,040 --> 00:55:38,880
+values.
+
+1446
+00:55:36,640 --> 00:55:41,040
+If instead you first apply a horizontal
+
+1447
+00:55:38,880 --> 00:55:43,839
+gradient as a phase encoding step, the
+
+1448
+00:55:41,040 --> 00:55:46,160
+initial point shifts along the kxis.
+
+1449
+00:55:43,839 --> 00:55:48,319
+Then by applying a vertical gradient,
+
+1450
+00:55:46,160 --> 00:55:50,319
+you move the starting point vertically.
+
+1451
+00:55:48,319 --> 00:55:52,400
+Once you begin signal acquisition, you
+
+1452
+00:55:50,319 --> 00:55:54,160
+trace a horizontal or vertical line in
+
+1453
+00:55:52,400 --> 00:55:56,400
+kspace.
+
+1454
+00:55:54,160 --> 00:55:58,319
+Finally, if you apply both gradients at
+
+1455
+00:55:56,400 --> 00:56:00,319
+once and immediately collect the signal,
+
+1456
+00:55:58,319 --> 00:56:02,160
+you start at the origin and move along a
+
+1457
+00:56:00,319 --> 00:56:05,119
+straight line at a slope determined by
+
+1458
+00:56:02,160 --> 00:56:07,040
+the ratio of the two gradients.
+
+1459
+00:56:05,119 --> 00:56:08,880
+The essential idea is that whenever you
+
+1460
+00:56:07,040 --> 00:56:10,720
+collect a signal with a gradient on, the
+
+1461
+00:56:08,880 --> 00:56:12,640
+frequency of procession is shifted and
+
+1462
+00:56:10,720 --> 00:56:14,559
+that frequency determines the trajectory
+
+1463
+00:56:12,640 --> 00:56:16,160
+in kspace.
+
+1464
+00:56:14,559 --> 00:56:17,680
+If you apply a gradient without
+
+1465
+00:56:16,160 --> 00:56:20,160
+collecting a signal, the spins
+
+1466
+00:56:17,680 --> 00:56:22,480
+accumulate phase instead. By combining
+
+1467
+00:56:20,160 --> 00:56:24,559
+these options, you can navigate Kspace
+
+1468
+00:56:22,480 --> 00:56:27,280
+in virtually any pattern. This
+
+1469
+00:56:24,559 --> 00:56:29,280
+flexibility is what allows MRI to encode
+
+1470
+00:56:27,280 --> 00:56:34,040
+spatial information and build an image
+
+1471
+00:56:29,280 --> 00:56:34,040
+slice by slice, pixel by pixel.
+
+1472
+00:56:35,280 --> 00:56:38,559
+At this point, you might be wondering,
+
+1473
+00:56:36,960 --> 00:56:40,640
+have you understood this or are you
+
+1474
+00:56:38,559 --> 00:56:42,400
+confused? Honestly, if you have never
+
+1475
+00:56:40,640 --> 00:56:44,640
+studied this carefully before, it is
+
+1476
+00:56:42,400 --> 00:56:46,799
+very natural to be confused. Even for
+
+1477
+00:56:44,640 --> 00:56:48,480
+me, when I first studied this, I had to
+
+1478
+00:56:46,799 --> 00:56:50,640
+go through it several times very
+
+1479
+00:56:48,480 --> 00:56:53,200
+carefully before I felt I understood it
+
+1480
+00:56:50,640 --> 00:56:55,040
+clearly.
+
+1481
+00:56:53,200 --> 00:56:57,119
+So, let's check ourselves. If you
+
+1482
+00:56:55,040 --> 00:56:59,440
+basically follow the logical flow so
+
+1483
+00:56:57,119 --> 00:57:01,520
+far, you can feel confident. If you are
+
+1484
+00:56:59,440 --> 00:57:03,280
+quite confused, that's also expected
+
+1485
+00:57:01,520 --> 00:57:05,280
+because these concepts are tricky and
+
+1486
+00:57:03,280 --> 00:57:07,040
+require repeated review. If you're
+
+1487
+00:57:05,280 --> 00:57:09,040
+somewhere in between, that's normal,
+
+1488
+00:57:07,040 --> 00:57:10,720
+too. The important thing is not to get
+
+1489
+00:57:09,040 --> 00:57:12,960
+discouraged.
+
+1490
+00:57:10,720 --> 00:57:14,880
+What I will do now is go over the same
+
+1491
+00:57:12,960 --> 00:57:16,880
+ideas again but from a slightly
+
+1492
+00:57:14,880 --> 00:57:18,880
+different angle with more detail and
+
+1493
+00:57:16,880 --> 00:57:22,359
+more illustrations so that the picture
+
+1494
+00:57:18,880 --> 00:57:22,359
+becomes clearer.
+
+1495
+00:57:23,520 --> 00:57:28,160
+Now let's revisit spin echo with another
+
+1496
+00:57:25,760 --> 00:57:30,799
+illustration. Spin echo is a very clever
+
+1497
+00:57:28,160 --> 00:57:32,720
+but also highly simplified signal model.
+
+1498
+00:57:30,799 --> 00:57:34,559
+In this figure you can see the sequence
+
+1499
+00:57:32,720 --> 00:57:36,799
+step by step. You begin with the
+
+1500
+00:57:34,559 --> 00:57:38,799
+magnetization vector aligned along the
+
+1501
+00:57:36,799 --> 00:57:41,520
+z-axis.
+
+1502
+00:57:38,799 --> 00:57:43,440
+Then you apply a 90° pulse which flips
+
+1503
+00:57:41,520 --> 00:57:45,599
+the vector into the transverse plane.
+
+1504
+00:57:43,440 --> 00:57:47,200
+Here shown along the y-axis, though it
+
+1505
+00:57:45,599 --> 00:57:49,200
+could just as well be flipped along the
+
+1506
+00:57:47,200 --> 00:57:52,079
+x-axis depending on how the pulse is
+
+1507
+00:57:49,200 --> 00:57:54,160
+applied. Once in the transverse plane,
+
+1508
+00:57:52,079 --> 00:57:56,960
+the spins begin to defphase because of
+
+1509
+00:57:54,160 --> 00:57:58,720
+local field inhomogeneities. Some spins
+
+1510
+00:57:56,960 --> 00:58:00,559
+process slightly faster and others
+
+1511
+00:57:58,720 --> 00:58:02,480
+slightly slower. Over time, this
+
+1512
+00:58:00,559 --> 00:58:05,440
+produces a spread in phase as shown
+
+1513
+00:58:02,480 --> 00:58:07,520
+here. Then comes the magic step. A 180°
+
+1514
+00:58:05,440 --> 00:58:09,920
+pulse is applied.
+
+1515
+00:58:07,520 --> 00:58:11,920
+This pulse flips the spins over so that
+
+1516
+00:58:09,920 --> 00:58:13,440
+those that were lagging are now ahead
+
+1517
+00:58:11,920 --> 00:58:15,440
+and those that were ahead are now
+
+1518
+00:58:13,440 --> 00:58:17,839
+behind. From that point forward, the
+
+1519
+00:58:15,440 --> 00:58:19,359
+phase differences begin to refocus.
+
+1520
+00:58:17,839 --> 00:58:20,960
+After the same amount of time has
+
+1521
+00:58:19,359 --> 00:58:23,599
+passed, the spins come back into
+
+1522
+00:58:20,960 --> 00:58:25,200
+alignment forming an echo.
+
+1523
+00:58:23,599 --> 00:58:27,680
+This is the echo signal that can be
+
+1524
+00:58:25,200 --> 00:58:29,920
+detected by the coil. Importantly, this
+
+1525
+00:58:27,680 --> 00:58:31,839
+echo arises from the selected slice,
+
+1526
+00:58:29,920 --> 00:58:33,680
+assuming you have already applied slice
+
+1527
+00:58:31,839 --> 00:58:36,480
+selection.
+
+1528
+00:58:33,680 --> 00:58:38,720
+The equation shown here, equation 423,
+
+1529
+00:58:36,480 --> 00:58:40,480
+expresses the signal mathematically as
+
+1530
+00:58:38,720 --> 00:58:43,200
+being proportional to the integral of
+
+1531
+00:58:40,480 --> 00:58:45,520
+the proton density over the slice. In
+
+1532
+00:58:43,200 --> 00:58:48,000
+other words, the echo represents the
+
+1533
+00:58:45,520 --> 00:58:50,640
+combined contribution of all the spins
+
+1534
+00:58:48,000 --> 00:58:52,240
+in that slice after refocusing has
+
+1535
+00:58:50,640 --> 00:58:54,640
+occurred.
+
+1536
+00:58:52,240 --> 00:58:56,720
+So, spin echo illustrates in a very
+
+1537
+00:58:54,640 --> 00:58:59,040
+clear way how we can recover useful
+
+1538
+00:58:56,720 --> 00:59:01,440
+signal despite defasing and how
+
+1539
+00:58:59,040 --> 00:59:02,880
+gradients and RF pulses can be combined
+
+1540
+00:59:01,440 --> 00:59:07,079
+to control the evolution of
+
+1541
+00:59:02,880 --> 00:59:07,079
+magnetization in MRI.
+
+1542
+00:59:08,559 --> 00:59:12,480
+And now let's talk about the actual
+
+1543
+00:59:10,160 --> 00:59:15,200
+signal we can measure in MRI which is
+
+1544
+00:59:12,480 --> 00:59:17,839
+called the free induction decay or FID.
+
+1545
+00:59:15,200 --> 00:59:20,160
+After applying a 90deree RF pulse, the
+
+1546
+00:59:17,839 --> 00:59:22,480
+net magnetization vector is flipped into
+
+1547
+00:59:20,160 --> 00:59:24,559
+the transverse plane. This transverse
+
+1548
+00:59:22,480 --> 00:59:26,480
+component of magnetization is constantly
+
+1549
+00:59:24,559 --> 00:59:28,960
+rotating around the main magnetic field
+
+1550
+00:59:26,480 --> 00:59:31,200
+B 0. Because of this procession, the
+
+1551
+00:59:28,960 --> 00:59:34,720
+changing magnetic field induces an
+
+1552
+00:59:31,200 --> 00:59:36,480
+alternating electromagnetic field. And
+
+1553
+00:59:34,720 --> 00:59:39,040
+as you learned in high school physics,
+
+1554
+00:59:36,480 --> 00:59:41,599
+an alternating magnetic field induces an
+
+1555
+00:59:39,040 --> 00:59:43,760
+electric current in a nearby coil. So if
+
+1556
+00:59:41,599 --> 00:59:45,520
+we place a receiver coil close to the
+
+1557
+00:59:43,760 --> 00:59:47,680
+patient, that coil will detect this
+
+1558
+00:59:45,520 --> 00:59:49,359
+alternating signal.
+
+1559
+00:59:47,680 --> 00:59:51,839
+However, the signal does not last
+
+1560
+00:59:49,359 --> 00:59:54,720
+forever. It decays over time and this
+
+1561
+00:59:51,839 --> 00:59:56,720
+decay is due to the T2 star relaxation.
+
+1562
+00:59:54,720 --> 00:59:58,559
+The spins gradually lose phase coherence
+
+1563
+00:59:56,720 --> 01:00:00,480
+and the signal amplitude decreases
+
+1564
+00:59:58,559 --> 01:00:02,640
+exponentially.
+
+1565
+01:00:00,480 --> 01:00:04,720
+What we record is not a constant sine
+
+1566
+01:00:02,640 --> 01:00:06,960
+wave of fixed amplitude, but a damped
+
+1567
+01:00:04,720 --> 01:00:09,040
+oscillation that fades away with time.
+
+1568
+01:00:06,960 --> 01:00:10,799
+This decaying signal directly measured
+
+1569
+01:00:09,040 --> 01:00:12,720
+from the whole sample or from a whole
+
+1570
+01:00:10,799 --> 01:00:16,160
+slice if slice selection is applied is
+
+1571
+01:00:12,720 --> 01:00:18,640
+the free induction decay or FID. This is
+
+1572
+01:00:16,160 --> 01:00:21,640
+the fundamental NMR signal we detect in
+
+1573
+01:00:18,640 --> 01:00:21,640
+MRI.
+
+1574
+01:00:23,040 --> 01:00:26,799
+Now let's look at how we time the
+
+1575
+01:00:24,640 --> 01:00:29,040
+acquisition of this signal. Two very
+
+1576
+01:00:26,799 --> 01:00:31,760
+important parameters in MRI are TE and
+
+1577
+01:00:29,040 --> 01:00:33,520
+TR. TE stands for echo time, which is
+
+1578
+01:00:31,760 --> 01:00:35,280
+the time from the application of the RF
+
+1579
+01:00:33,520 --> 01:00:38,319
+pulse to the moment we collect the peak
+
+1580
+01:00:35,280 --> 01:00:39,839
+of the echo signal. TR stands for
+
+1581
+01:00:38,319 --> 01:00:42,400
+repetition time, which is the time
+
+1582
+01:00:39,839 --> 01:00:44,480
+between successive RF excitations. You
+
+1583
+01:00:42,400 --> 01:00:48,319
+see in this diagram that we often use a
+
+1584
+01:00:44,480 --> 01:00:51,200
+90° pulse followed by a 180° refocusing
+
+1585
+01:00:48,319 --> 01:00:53,760
+pulse to generate a spin echo. The echo
+
+1586
+01:00:51,200 --> 01:00:56,799
+forms at time TE. TR is measured from
+
+1587
+01:00:53,760 --> 01:00:59,520
+one excitation pulse to the next.
+
+1588
+01:00:56,799 --> 01:01:01,440
+These two parameters TE and TR are under
+
+1589
+01:00:59,520 --> 01:01:03,680
+our control. They are not properties of
+
+1590
+01:01:01,440 --> 01:01:06,240
+the tissue itself but technical choices
+
+1591
+01:01:03,680 --> 01:01:08,559
+we make during the imaging sequence. By
+
+1592
+01:01:06,240 --> 01:01:10,640
+carefully selecting TE and TR we can
+
+1593
+01:01:08,559 --> 01:01:13,359
+emphasize different tissue contrasts,
+
+1594
+01:01:10,640 --> 01:01:15,920
+highlight T1 waiting, T2 waiting or
+
+1595
+01:01:13,359 --> 01:01:18,079
+proton density waiting. And at the same
+
+1596
+01:01:15,920 --> 01:01:21,280
+time we can also balance image quality
+
+1597
+01:01:18,079 --> 01:01:23,359
+with scan time. If TR is long, the
+
+1598
+01:01:21,280 --> 01:01:25,359
+magnetization has more time to recover,
+
+1599
+01:01:23,359 --> 01:01:27,599
+giving us strong signals, but the scan
+
+1600
+01:01:25,359 --> 01:01:29,200
+will take longer. If TR is short,
+
+1601
+01:01:27,599 --> 01:01:30,960
+scanning is faster, but some
+
+1602
+01:01:29,200 --> 01:01:33,839
+magnetization may not have fully
+
+1603
+01:01:30,960 --> 01:01:36,480
+recovered, which reduces the signal.
+
+1604
+01:01:33,839 --> 01:01:38,640
+TE works similarly. Shorter echo times
+
+1605
+01:01:36,480 --> 01:01:40,720
+reduce T2 contrast, but keep signal
+
+1606
+01:01:38,640 --> 01:01:42,799
+strong, while longer echo times allow
+
+1607
+01:01:40,720 --> 01:01:44,799
+more T2 differences to emerge, but at
+
+1608
+01:01:42,799 --> 01:01:47,440
+the cost of weaker signals. These
+
+1609
+01:01:44,799 --> 01:01:49,040
+parameters TE and TR are the main levers
+
+1610
+01:01:47,440 --> 01:01:52,599
+we adjust to create different kinds of
+
+1611
+01:01:49,040 --> 01:01:52,599
+MRI contrast.
+
+1612
+01:01:53,920 --> 01:01:58,240
+And I said that you can collect a signal
+
+1613
+01:01:55,680 --> 01:02:00,400
+with a nearby coil. Then if you place
+
+1614
+01:01:58,240 --> 01:02:02,480
+another coil, you can also get a signal.
+
+1615
+01:02:00,400 --> 01:02:05,280
+Remember the horizontal component of the
+
+1616
+01:02:02,480 --> 01:02:08,000
+magnetization is a rotational vector. So
+
+1617
+01:02:05,280 --> 01:02:09,680
+the signal actually has two parts.
+
+1618
+01:02:08,000 --> 01:02:12,000
+It depends both on amplitude and on
+
+1619
+01:02:09,680 --> 01:02:14,240
+phase. The signal detected along the
+
+1620
+01:02:12,000 --> 01:02:17,040
+x-axis and the signal detected along the
+
+1621
+01:02:14,240 --> 01:02:18,880
+y-axis naturally have a 90° phase
+
+1622
+01:02:17,040 --> 01:02:21,440
+difference because the magnetization
+
+1623
+01:02:18,880 --> 01:02:24,000
+keeps rotating. That makes the signal a
+
+1624
+01:02:21,440 --> 01:02:26,319
+complex valued quantity.
+
+1625
+01:02:24,000 --> 01:02:29,200
+So let's describe it mathematically. You
+
+1626
+01:02:26,319 --> 01:02:31,680
+can record sx which is modulated as m0.
+
+1627
+01:02:29,200 --> 01:02:34,000
+After a 90° pulse, this transverse
+
+1628
+01:02:31,680 --> 01:02:36,720
+signal is subject to spin echo formation
+
+1629
+01:02:34,000 --> 01:02:38,559
+and also subject to t2 decay. The sx
+
+1630
+01:02:36,720 --> 01:02:40,960
+term represents the amplitude and the
+
+1631
+01:02:38,559 --> 01:02:43,520
+frequency content along the x-axis.
+
+1632
+01:02:40,960 --> 01:02:45,839
+Likewise, you have a s component which
+
+1633
+01:02:43,520 --> 01:02:47,680
+is just the complimentary sign term.
+
+1634
+01:02:45,839 --> 01:02:51,040
+Together, these two components give you
+
+1635
+01:02:47,680 --> 01:02:52,960
+both cosine and s contributions.
+
+1636
+01:02:51,040 --> 01:02:54,960
+If we put them into compact form, we can
+
+1637
+01:02:52,960 --> 01:02:57,440
+write the signal as a complex number, a
+
+1638
+01:02:54,960 --> 01:02:59,839
+real part and an imaginary part. This
+
+1639
+01:02:57,440 --> 01:03:02,160
+gives us a very compact complex valued
+
+1640
+01:02:59,839 --> 01:03:04,160
+signal representation.
+
+1641
+01:03:02,160 --> 01:03:06,720
+In this notation, I have chosen to place
+
+1642
+01:03:04,160 --> 01:03:08,799
+the imaginary part corresponding to S.
+
+1643
+01:03:06,720 --> 01:03:11,359
+This is just a convention. The coding
+
+1644
+01:03:08,799 --> 01:03:13,599
+system can be chosen differently. Here I
+
+1645
+01:03:11,359 --> 01:03:15,359
+simply make s the imaginary component.
+
+1646
+01:03:13,599 --> 01:03:17,599
+But for physical measurement, both the
+
+1647
+01:03:15,359 --> 01:03:20,000
+real part and the imaginary part are
+
+1648
+01:03:17,599 --> 01:03:22,720
+equally meaningful. We use complex
+
+1649
+01:03:20,000 --> 01:03:24,559
+notation mainly for convenience.
+
+1650
+01:03:22,720 --> 01:03:26,640
+This idea is similar to what we saw in
+
+1651
+01:03:24,559 --> 01:03:28,960
+Forier series and Forier transforms
+
+1652
+01:03:26,640 --> 01:03:30,880
+where using a complex exponential makes
+
+1653
+01:03:28,960 --> 01:03:33,359
+the notation compact but the actual
+
+1654
+01:03:30,880 --> 01:03:36,000
+measured signal is real. Any complex
+
+1655
+01:03:33,359 --> 01:03:39,200
+form can always be converted back into a
+
+1656
+01:03:36,000 --> 01:03:41,440
+purely real form if needed. Now the
+
+1657
+01:03:39,200 --> 01:03:43,760
+processional frequency is omega 0
+
+1658
+01:03:41,440 --> 01:03:45,520
+determined by the main field B 0. The
+
+1659
+01:03:43,760 --> 01:03:47,599
+transverse magnetization keeps
+
+1660
+01:03:45,520 --> 01:03:51,119
+processing at this angular frequency
+
+1661
+01:03:47,599 --> 01:03:52,720
+omega 0. If we use a rotating frame,
+
+1662
+01:03:51,119 --> 01:03:54,480
+meaning we mentally rotate our
+
+1663
+01:03:52,720 --> 01:03:56,720
+coordinate system at the same frequency
+
+1664
+01:03:54,480 --> 01:03:58,880
+as the spins, then the signal appears
+
+1665
+01:03:56,720 --> 01:04:00,960
+stationary. In the rotating frame, the
+
+1666
+01:03:58,880 --> 01:04:03,359
+oscilly part is removed and the signal
+
+1667
+01:04:00,960 --> 01:04:07,119
+just decays exponentially with T2. This
+
+1668
+01:04:03,359 --> 01:04:09,200
+makes the description much simpler.
+
+1669
+01:04:07,119 --> 01:04:11,520
+So this is the signal in the rotating
+
+1670
+01:04:09,200 --> 01:04:14,640
+frame, stationary but still decaying due
+
+1671
+01:04:11,520 --> 01:04:17,200
+to T2 relaxation. And remember T2 decay
+
+1672
+01:04:14,640 --> 01:04:19,200
+is a physiological property. We cannot
+
+1673
+01:04:17,200 --> 01:04:21,680
+control it. It reflects interactions
+
+1674
+01:04:19,200 --> 01:04:24,079
+within the tissue itself.
+
+1675
+01:04:21,680 --> 01:04:26,240
+Now what about repetition?
+
+1676
+01:04:24,079 --> 01:04:28,960
+The MRI sequence is repeated after a
+
+1677
+01:04:26,240 --> 01:04:30,319
+certain repetition time TR. If TR is not
+
+1678
+01:04:28,960 --> 01:04:32,799
+long enough, the longitudinal
+
+1679
+01:04:30,319 --> 01:04:35,760
+magnetization M0 has not fully
+
+1680
+01:04:32,799 --> 01:04:37,440
+recovered. T1 relaxation determines how
+
+1681
+01:04:35,760 --> 01:04:39,680
+much of the original longitudinal
+
+1682
+01:04:37,440 --> 01:04:42,480
+magnetization is available at the start
+
+1683
+01:04:39,680 --> 01:04:44,559
+of the next cycle. So after TR, the
+
+1684
+01:04:42,480 --> 01:04:47,359
+signal amplitude depends on both T1
+
+1685
+01:04:44,559 --> 01:04:49,359
+recovery and T2 decay.
+
+1686
+01:04:47,359 --> 01:04:51,440
+The total signal at time t is therefore
+
+1687
+01:04:49,359 --> 01:04:54,799
+a combination of these factors. Proton
+
+1688
+01:04:51,440 --> 01:04:56,799
+density hidden inside M0, T1 recovery,
+
+1689
+01:04:54,799 --> 01:04:59,119
+which determines how much longitudinal
+
+1690
+01:04:56,799 --> 01:05:01,280
+magnetization has returned, and T2
+
+1691
+01:04:59,119 --> 01:05:03,760
+decay, which determines how fast the
+
+1692
+01:05:01,280 --> 01:05:05,839
+transverse signal fades. Together, these
+
+1693
+01:05:03,760 --> 01:05:07,599
+biological properties determine tissue
+
+1694
+01:05:05,839 --> 01:05:09,599
+contrast.
+
+1695
+01:05:07,599 --> 01:05:12,000
+In addition to tissue properties,
+
+1696
+01:05:09,599 --> 01:05:14,720
+technical parameters such as B 0, the
+
+1697
+01:05:12,000 --> 01:05:17,920
+main magnetic field, TR, repetition
+
+1698
+01:05:14,720 --> 01:05:20,000
+time, and TE, echo time, are under our
+
+1699
+01:05:17,920 --> 01:05:22,880
+control and reflect scanning choices
+
+1700
+01:05:20,000 --> 01:05:25,039
+rather than patient pathology.
+
+1701
+01:05:22,880 --> 01:05:27,119
+Repetition is necessary because in phase
+
+1702
+01:05:25,039 --> 01:05:29,359
+encoding, each acquisition captures only
+
+1703
+01:05:27,119 --> 01:05:31,200
+one line of Kspace. Frequency encoding
+
+1704
+01:05:29,359 --> 01:05:33,200
+samples along that line. But since
+
+1705
+01:05:31,200 --> 01:05:35,599
+KSPace is two-dimensional, multiple
+
+1706
+01:05:33,200 --> 01:05:37,760
+phase encoding steps are required. Thus,
+
+1707
+01:05:35,599 --> 01:05:40,079
+the MRI sequence must be repeated many
+
+1708
+01:05:37,760 --> 01:05:42,160
+times, similar to how CT scanning
+
+1709
+01:05:40,079 --> 01:05:45,520
+gathers multiple projections to fully
+
+1710
+01:05:42,160 --> 01:05:48,079
+fill K space and reconstruct the image.
+
+1711
+01:05:45,520 --> 01:05:49,599
+If TR is very long, M0 fully recovers
+
+1712
+01:05:48,079 --> 01:05:51,920
+between repetitions, giving strong
+
+1713
+01:05:49,599 --> 01:05:53,680
+signals but longer scan times. If TR is
+
+1714
+01:05:51,920 --> 01:05:55,599
+too short, recovery is incomplete,
+
+1715
+01:05:53,680 --> 01:05:57,680
+producing weaker signals but faster
+
+1716
+01:05:55,599 --> 01:06:00,640
+scans. Thus, there's a trade-off between
+
+1717
+01:05:57,680 --> 01:06:03,520
+image quality and scan speed.
+
+1718
+01:06:00,640 --> 01:06:06,559
+Adjusting TR and TE also controls image
+
+1719
+01:06:03,520 --> 01:06:09,680
+contrast. Short TR and TE produce T1
+
+1720
+01:06:06,559 --> 01:06:11,839
+weighted images. Long TR and TE yield T2
+
+1721
+01:06:09,680 --> 01:06:14,480
+weighted images and intermediate values
+
+1722
+01:06:11,839 --> 01:06:16,559
+give proton density waiting. Overall the
+
+1723
+01:06:14,480 --> 01:06:19,680
+MRI signal depends on both tissue
+
+1724
+01:06:16,559 --> 01:06:23,039
+properties proton density T1 T2 and
+
+1725
+01:06:19,680 --> 01:06:27,400
+technical factors B 0 TR TE time which
+
+1726
+01:06:23,039 --> 01:06:27,400
+together determine image contrast.
+
+1727
+01:06:29,119 --> 01:06:34,240
+And you can use short TR or long TR. You
+
+1728
+01:06:32,000 --> 01:06:36,000
+can use short TE or long TE and with
+
+1729
+01:06:34,240 --> 01:06:38,799
+different combinations your image can
+
+1730
+01:06:36,000 --> 01:06:40,640
+reflect more about RO about T1 or about
+
+1731
+01:06:38,799 --> 01:06:42,319
+T2.
+
+1732
+01:06:40,640 --> 01:06:44,400
+So with different combinations you
+
+1733
+01:06:42,319 --> 01:06:46,480
+measure different parameters. This is
+
+1734
+01:06:44,400 --> 01:06:49,599
+not like CT where you only measure the
+
+1735
+01:06:46,480 --> 01:06:52,160
+attenuation coefficient mu. In MRI you
+
+1736
+01:06:49,599 --> 01:06:54,400
+have T1, you have T2 and you have RHO,
+
+1737
+01:06:52,160 --> 01:06:56,240
+the proton density.
+
+1738
+01:06:54,400 --> 01:06:58,480
+If you just do one measurement, one kind
+
+1739
+01:06:56,240 --> 01:07:00,640
+of image, then the image really reflects
+
+1740
+01:06:58,480 --> 01:07:02,720
+all of these parameters mixed together.
+
+1741
+01:07:00,640 --> 01:07:04,799
+But if you purposely want to emphasize
+
+1742
+01:07:02,720 --> 01:07:08,559
+one of the three parameters, you need to
+
+1743
+01:07:04,799 --> 01:07:10,240
+select the proper technical parameters.
+
+1744
+01:07:08,559 --> 01:07:13,440
+So first let me explain what I mean by
+
+1745
+01:07:10,240 --> 01:07:15,039
+long TR. TR is the time for repetition.
+
+1746
+01:07:13,440 --> 01:07:17,280
+If you wait long enough after each
+
+1747
+01:07:15,039 --> 01:07:19,920
+excitation, the M vector will return to
+
+1748
+01:07:17,280 --> 01:07:22,559
+the original position along the Z-axis.
+
+1749
+01:07:19,920 --> 01:07:25,039
+So MO aligns with the Z-axis. That is
+
+1750
+01:07:22,559 --> 01:07:27,440
+what we mean by long TR.
+
+1751
+01:07:25,039 --> 01:07:30,000
+Long TR means the magnetization has had
+
+1752
+01:07:27,440 --> 01:07:31,760
+enough time to fully recover. Short TR
+
+1753
+01:07:30,000 --> 01:07:33,839
+means you do not give the system enough
+
+1754
+01:07:31,760 --> 01:07:36,480
+time. So the full value of M0 has not
+
+1755
+01:07:33,839 --> 01:07:38,240
+yet been recovered along the Z axis.
+
+1756
+01:07:36,480 --> 01:07:39,760
+That's the meaning of long TR and short
+
+1757
+01:07:38,240 --> 01:07:42,160
+TR.
+
+1758
+01:07:39,760 --> 01:07:44,480
+Now let's talk about TE. The echo time.
+
+1759
+01:07:42,160 --> 01:07:46,480
+What do we mean by short TE? Short TE
+
+1760
+01:07:44,480 --> 01:07:48,480
+means the echo time is very short. The
+
+1761
+01:07:46,480 --> 01:07:50,480
+spin echo is collected quickly. So the
+
+1762
+01:07:48,480 --> 01:07:52,799
+flipped M vector doesn't have enough
+
+1763
+01:07:50,480 --> 01:07:54,480
+time to defphase because the echo is
+
+1764
+01:07:52,799 --> 01:07:57,280
+measured soon after flipping. The
+
+1765
+01:07:54,480 --> 01:07:59,440
+defasing is not serious.
+
+1766
+01:07:57,280 --> 01:08:01,680
+So MXY the transverse component after
+
+1767
+01:07:59,440 --> 01:08:03,520
+the 90° flip has had very little time to
+
+1768
+01:08:01,680 --> 01:08:05,680
+defphase. That means there is no
+
+1769
+01:08:03,520 --> 01:08:07,839
+significant T2 effect. If you measure
+
+1770
+01:08:05,680 --> 01:08:10,400
+the signal with a short TE, you cannot
+
+1771
+01:08:07,839 --> 01:08:11,920
+tell how much T2 contributes because T2
+
+1772
+01:08:10,400 --> 01:08:13,440
+hasn't had enough time to show its
+
+1773
+01:08:11,920 --> 01:08:15,520
+effect.
+
+1774
+01:08:13,440 --> 01:08:17,920
+Now if you use a long TR, then the
+
+1775
+01:08:15,520 --> 01:08:19,839
+magnetization has fully recovered. That
+
+1776
+01:08:17,920 --> 01:08:21,679
+means you have no information about T1
+
+1777
+01:08:19,839 --> 01:08:23,920
+because T1 does not play a role when you
+
+1778
+01:08:21,679 --> 01:08:25,679
+wait long enough. If you use short TR,
+
+1779
+01:08:23,920 --> 01:08:27,440
+the recovery along the Z axis is
+
+1780
+01:08:25,679 --> 01:08:29,199
+incomplete.
+
+1781
+01:08:27,440 --> 01:08:31,040
+In that case, the effect you observe
+
+1782
+01:08:29,199 --> 01:08:32,960
+depends on the degree of recovery of the
+
+1783
+01:08:31,040 --> 01:08:35,279
+longitudinal component. So you see the
+
+1784
+01:08:32,960 --> 01:08:38,560
+T1 effect. That's why short TR with
+
+1785
+01:08:35,279 --> 01:08:40,799
+short TE is called T1 weighted imaging.
+
+1786
+01:08:38,560 --> 01:08:42,640
+Next, if you use long TE, the echo time
+
+1787
+01:08:40,799 --> 01:08:45,679
+is long enough for T2 decay to take
+
+1788
+01:08:42,640 --> 01:08:48,000
+effect. And if you also use long TR, so
+
+1789
+01:08:45,679 --> 01:08:50,799
+the longitudinal magnetization has fully
+
+1790
+01:08:48,000 --> 01:08:52,719
+recovered, then there is no T1 effect.
+
+1791
+01:08:50,799 --> 01:08:55,759
+In this case, the signal is dominated by
+
+1792
+01:08:52,719 --> 01:08:58,319
+T2 decay. So it is T2 weighted. That is
+
+1793
+01:08:55,759 --> 01:09:00,719
+shown here with the green arrow.
+
+1794
+01:08:58,319 --> 01:09:03,199
+Now if you use long TR and short TE
+
+1795
+01:09:00,719 --> 01:09:05,920
+together, then there is no T1 effect and
+
+1796
+01:09:03,199 --> 01:09:08,880
+no T2 effect. In that case, the signal
+
+1797
+01:09:05,920 --> 01:09:10,719
+is proportional to RH the proton density
+
+1798
+01:09:08,880 --> 01:09:13,520
+because you are basically measuring the
+
+1799
+01:09:10,719 --> 01:09:15,920
+full magnetization without either T1 or
+
+1800
+01:09:13,520 --> 01:09:17,920
+T2 altering it. That is called RO
+
+1801
+01:09:15,920 --> 01:09:20,080
+weighted imaging.
+
+1802
+01:09:17,920 --> 01:09:22,799
+There is also a combination shown here
+
+1803
+01:09:20,080 --> 01:09:25,600
+with short TR and long TE. But that is
+
+1804
+01:09:22,799 --> 01:09:27,920
+not possible in practice. Remember TR is
+
+1805
+01:09:25,600 --> 01:09:30,319
+the repetition time and TE is the echo
+
+1806
+01:09:27,920 --> 01:09:32,480
+time within that repetition. TE normally
+
+1807
+01:09:30,319 --> 01:09:35,199
+should not be longer than TR. So this
+
+1808
+01:09:32,480 --> 01:09:38,159
+case does not exist physically.
+
+1809
+01:09:35,199 --> 01:09:40,799
+So to summarize, short TR and short TE
+
+1810
+01:09:38,159 --> 01:09:42,960
+give you T1 weighted imaging. Long TR
+
+1811
+01:09:40,799 --> 01:09:45,520
+and long TE give you T2 weighted
+
+1812
+01:09:42,960 --> 01:09:48,159
+imaging. and long TR with short TE gives
+
+1813
+01:09:45,520 --> 01:09:50,239
+you row weighted imaging.
+
+1814
+01:09:48,159 --> 01:09:52,400
+Again, this takes time for you to fully
+
+1815
+01:09:50,239 --> 01:09:54,560
+understand. And if this is your first
+
+1816
+01:09:52,400 --> 01:09:57,800
+time seeing it, it is natural to feel a
+
+1817
+01:09:54,560 --> 01:09:57,800
+little confused.
+
+1818
+01:09:59,520 --> 01:10:03,360
+Now, let's take a look at some real
+
+1819
+01:10:01,120 --> 01:10:05,040
+examples of brain images. On the same
+
+1820
+01:10:03,360 --> 01:10:07,360
+slide, you can see three different types
+
+1821
+01:10:05,040 --> 01:10:10,800
+of images. Row weighted, T1 weighted,
+
+1822
+01:10:07,360 --> 01:10:14,320
+and T2- weighted. In MRI, RHO here means
+
+1823
+01:10:10,800 --> 01:10:16,080
+proton density waiting, not P weighted.
+
+1824
+01:10:14,320 --> 01:10:17,679
+In the brain, there are mainly five
+
+1825
+01:10:16,080 --> 01:10:19,520
+important tissue types that we care
+
+1826
+01:10:17,679 --> 01:10:22,159
+about. Gray matter, white matter,
+
+1827
+01:10:19,520 --> 01:10:24,080
+cerebral spinal fluid or CSF, blood, and
+
+1828
+01:10:22,159 --> 01:10:26,480
+water. If you look carefully at the
+
+1829
+01:10:24,080 --> 01:10:28,640
+table, you'll notice that the T1 and T2
+
+1830
+01:10:26,480 --> 01:10:30,560
+relaxation times are quite different for
+
+1831
+01:10:28,640 --> 01:10:32,640
+each tissue.
+
+1832
+01:10:30,560 --> 01:10:35,600
+For example, gray matter has a T1 of
+
+1833
+01:10:32,640 --> 01:10:38,320
+about 1 second and a T2 of about 0.1
+
+1834
+01:10:35,600 --> 01:10:40,640
+seconds. While CSF has a much longer T1
+
+1835
+01:10:38,320 --> 01:10:43,440
+of around 2 seconds and a T2 of around
+
+1836
+01:10:40,640 --> 01:10:45,600
+0.25 seconds.
+
+1837
+01:10:43,440 --> 01:10:49,040
+Water has even longer values. T1 about
+
+1838
+01:10:45,600 --> 01:10:51,199
+4.7 seconds and T2 about 3.5 seconds.
+
+1839
+01:10:49,040 --> 01:10:53,440
+These differences are the key to MRI
+
+1840
+01:10:51,199 --> 01:10:55,040
+contrast. The very same slice of the
+
+1841
+01:10:53,440 --> 01:10:56,640
+brain can look dramatically different
+
+1842
+01:10:55,040 --> 01:11:01,040
+depending on whether you emphasize
+
+1843
+01:10:56,640 --> 01:11:03,600
+proton density, T1 or T2 weighting.
+
+1844
+01:11:01,040 --> 01:11:05,280
+So depending on your imaging parameters,
+
+1845
+01:11:03,600 --> 01:11:07,440
+you can choose to highlight different
+
+1846
+01:11:05,280 --> 01:11:09,840
+tissue characteristics. This is
+
+1847
+01:11:07,440 --> 01:11:12,320
+something CT cannot do because CT only
+
+1848
+01:11:09,840 --> 01:11:14,239
+measures the attenuation coefficient mu.
+
+1849
+01:11:12,320 --> 01:11:17,360
+But MRI gives us much richer information
+
+1850
+01:11:14,239 --> 01:11:19,760
+because of RHO T1 and T2.
+
+1851
+01:11:17,360 --> 01:11:21,520
+And for a special case, we can use GX
+
+1852
+01:11:19,760 --> 01:11:24,159
+gradient encoding to separate
+
+1853
+01:11:21,520 --> 01:11:26,320
+frequencies along the X-axis. That
+
+1854
+01:11:24,159 --> 01:11:28,480
+allows us to further refine how we
+
+1855
+01:11:26,320 --> 01:11:32,199
+differentiate tissue types based on
+
+1856
+01:11:28,480 --> 01:11:32,199
+their signal behavior.
+
+1857
+01:11:33,520 --> 01:11:38,080
+Here we are looking at a special case GX
+
+1858
+01:11:35,840 --> 01:11:40,480
+gradient encoding. That means we apply a
+
+1859
+01:11:38,080 --> 01:11:42,000
+linear gradient along the X-axis so that
+
+1860
+01:11:40,480 --> 01:11:44,320
+the procession frequency depends
+
+1861
+01:11:42,000 --> 01:11:46,239
+directly on the coordinate X. In this
+
+1862
+01:11:44,320 --> 01:11:48,640
+case, the signal we observe combines
+
+1863
+01:11:46,239 --> 01:11:51,520
+several effects. Proton density, T1
+
+1864
+01:11:48,640 --> 01:11:53,120
+recovery, and T2 decay.
+
+1865
+01:11:51,520 --> 01:11:55,199
+You can see the equation here. The
+
+1866
+01:11:53,120 --> 01:11:57,679
+amplitude of the local signal depends on
+
+1867
+01:11:55,199 --> 01:12:00,080
+RH multiplied by the term for partial
+
+1868
+01:11:57,679 --> 01:12:02,800
+recovery due to T1 and multiplied again
+
+1869
+01:12:00,080 --> 01:12:04,320
+by the decay due to T2. This gives the
+
+1870
+01:12:02,800 --> 01:12:06,080
+overall signal strength at each
+
+1871
+01:12:04,320 --> 01:12:08,640
+location.
+
+1872
+01:12:06,080 --> 01:12:10,880
+Then with the JX gradient, we impose a
+
+1873
+01:12:08,640 --> 01:12:12,560
+position dependent frequency shift.
+
+1874
+01:12:10,880 --> 01:12:15,280
+That's why the exponential factor here
+
+1875
+01:12:12,560 --> 01:12:17,679
+involves gx * x.
+
+1876
+01:12:15,280 --> 01:12:19,280
+So summarizing the total signal is
+
+1877
+01:12:17,679 --> 01:12:21,280
+complex but you can think of it as
+
+1878
+01:12:19,280 --> 01:12:24,480
+having two parts. The amplitude of the
+
+1879
+01:12:21,280 --> 01:12:26,320
+local signal determined by rho t1 and t2
+
+1880
+01:12:24,480 --> 01:12:28,239
+and the frequency of the local signal
+
+1881
+01:12:26,320 --> 01:12:30,239
+determined by the gradient. This
+
+1882
+01:12:28,239 --> 01:12:32,080
+separation is very useful because it
+
+1883
+01:12:30,239 --> 01:12:34,000
+tells us what portion of the signal
+
+1884
+01:12:32,080 --> 01:12:36,400
+comes from tissue properties and what
+
+1885
+01:12:34,000 --> 01:12:38,480
+portion comes from our encoding scheme.
+
+1886
+01:12:36,400 --> 01:12:41,480
+This prepares us for data collection in
+
+1887
+01:12:38,480 --> 01:12:41,480
+kspace.
+
+1888
+01:12:42,960 --> 01:12:47,520
+Now let's move this into the kspace
+
+1889
+01:12:44,800 --> 01:12:50,480
+picture. We define a function f of x and
+
+1890
+01:12:47,520 --> 01:12:52,640
+y which includes rho the proton density
+
+1891
+01:12:50,480 --> 01:12:55,120
+multiplied by the t1 recovery term and
+
+1892
+01:12:52,640 --> 01:12:56,960
+the t2 decay term. This function
+
+1893
+01:12:55,120 --> 01:12:59,520
+describes the true tissue properties in
+
+1894
+01:12:56,960 --> 01:13:03,280
+space. Then we define kx as gamma over
+
+1895
+01:12:59,520 --> 01:13:05,920
+2p * gx * t minus t.
+
+1896
+01:13:03,280 --> 01:13:08,800
+So as time increases kx traces out a
+
+1897
+01:13:05,920 --> 01:13:10,560
+trajectory in 4a space. The signal of t
+
+1898
+01:13:08,800 --> 01:13:13,440
+the thing we actually measure is the
+
+1899
+01:13:10,560 --> 01:13:16,640
+furier transform of f of x and y
+
+1900
+01:13:13,440 --> 01:13:18,719
+evaluated along the kx axis.
+
+1901
+01:13:16,640 --> 01:13:21,040
+So in this case we are scanning a single
+
+1902
+01:13:18,719 --> 01:13:23,120
+line in kspace the horizontal line
+
+1903
+01:13:21,040 --> 01:13:24,640
+because the gradient field is only along
+
+1904
+01:13:23,120 --> 01:13:26,719
+x.
+
+1905
+01:13:24,640 --> 01:13:29,040
+This is a very special case but it makes
+
+1906
+01:13:26,719 --> 01:13:31,199
+the principle clear. Our signal directly
+
+1907
+01:13:29,040 --> 01:13:33,199
+corresponds to the furier components of
+
+1908
+01:13:31,199 --> 01:13:35,440
+the object we are imaging. That's why
+
+1909
+01:13:33,199 --> 01:13:37,760
+MRI data is often first collected in
+
+1910
+01:13:35,440 --> 01:13:43,080
+kspace and then reconstructed by inverse
+
+1911
+01:13:37,760 --> 01:13:43,080
+forier transform to get the final image.
+
+1912
+01:13:44,480 --> 01:13:48,320
+Now let's consider the general case.
+
+1913
+01:13:46,480 --> 01:13:50,800
+Instead of just gx we allow general
+
+1914
+01:13:48,320 --> 01:13:52,719
+gradients along x y and z. These
+
+1915
+01:13:50,800 --> 01:13:55,199
+gradients can vary with time and their
+
+1916
+01:13:52,719 --> 01:13:56,880
+effects accumulate as the spins process.
+
+1917
+01:13:55,199 --> 01:13:58,480
+The local procession frequency is
+
+1918
+01:13:56,880 --> 01:14:00,880
+determined by the inner product of the
+
+1919
+01:13:58,480 --> 01:14:02,800
+gradient vector g of t and the position
+
+1920
+01:14:00,880 --> 01:14:04,719
+vector r.
+
+1921
+01:14:02,800 --> 01:14:07,280
+When we integrate this over time, we get
+
+1922
+01:14:04,719 --> 01:14:09,600
+a phase factor that builds up gradually.
+
+1923
+01:14:07,280 --> 01:14:12,560
+This leads us to define k of t as gamma
+
+1924
+01:14:09,600 --> 01:14:14,480
+over 2 pi * the time integral of g of t
+
+1925
+01:14:12,560 --> 01:14:16,880
+to da.
+
+1926
+01:14:14,480 --> 01:14:19,040
+In other words, k of t is a trajectory
+
+1927
+01:14:16,880 --> 01:14:21,280
+through fier space controlled entirely
+
+1928
+01:14:19,040 --> 01:14:23,600
+by our choice of gradient waveforms. The
+
+1929
+01:14:21,280 --> 01:14:25,920
+measured signal s of t is then the
+
+1930
+01:14:23,600 --> 01:14:29,679
+forier transform of the object's spin
+
+1931
+01:14:25,920 --> 01:14:32,159
+density f of xyz evaluated along this
+
+1932
+01:14:29,679 --> 01:14:34,480
+kspace trajectory.
+
+1933
+01:14:32,159 --> 01:14:36,640
+This is the KSpace theorem. It tells us
+
+1934
+01:14:34,480 --> 01:14:39,040
+that by designing gradient waveforms, we
+
+1935
+01:14:36,640 --> 01:14:41,120
+can sample any path we want in kspace.
+
+1936
+01:14:39,040 --> 01:14:43,840
+Straight lines, zigzags, spirals,
+
+1937
+01:14:41,120 --> 01:14:46,400
+anything. That's why MRI is so flexible.
+
+1938
+01:14:43,840 --> 01:14:48,239
+This general forier space formulation is
+
+1939
+01:14:46,400 --> 01:14:50,400
+extremely powerful because it connects
+
+1940
+01:14:48,239 --> 01:14:52,320
+what we measure directly to the spatial
+
+1941
+01:14:50,400 --> 01:14:54,960
+distribution of spins inside the
+
+1942
+01:14:52,320 --> 01:14:56,719
+patient. And again by inverse fur
+
+1943
+01:14:54,960 --> 01:15:00,520
+transforming the collected data, we
+
+1944
+01:14:56,719 --> 01:15:00,520
+reconstruct the image.
+
+1945
+01:15:02,000 --> 01:15:05,679
+So at this point I need to emphasize
+
+1946
+01:15:03,840 --> 01:15:07,840
+that this formulation is only
+
+1947
+01:15:05,679 --> 01:15:09,920
+approximate. Where exactly do the
+
+1948
+01:15:07,840 --> 01:15:11,920
+approximations come in? There are really
+
+1949
+01:15:09,920 --> 01:15:13,679
+three places.
+
+1950
+01:15:11,920 --> 01:15:15,440
+First, if you look at this expression,
+
+1951
+01:15:13,679 --> 01:15:17,840
+you see that the function depends on
+
+1952
+01:15:15,440 --> 01:15:19,760
+time t. But when we talk about the k
+
+1953
+01:15:17,840 --> 01:15:21,760
+space theorem, we treat it as if the
+
+1954
+01:15:19,760 --> 01:15:24,480
+whole function is fixed in space,
+
+1955
+01:15:21,760 --> 01:15:26,800
+something like f of xyz and not time
+
+1956
+01:15:24,480 --> 01:15:28,719
+varying. In reality, there is a time
+
+1957
+01:15:26,800 --> 01:15:31,520
+dependence here. And when we ignore that
+
+1958
+01:15:28,719 --> 01:15:33,280
+we are making an approximation.
+
+1959
+01:15:31,520 --> 01:15:35,520
+Second you see this vector R the
+
+1960
+01:15:33,280 --> 01:15:38,159
+positional vector. We treat it as if it
+
+1961
+01:15:35,520 --> 01:15:40,640
+is constant fixed in space. But in
+
+1962
+01:15:38,159 --> 01:15:43,120
+reality spins may move. For example
+
+1963
+01:15:40,640 --> 01:15:45,280
+spins in blood keep moving. Patients may
+
+1964
+01:15:43,120 --> 01:15:47,440
+also move. Even molecular motion
+
+1965
+01:15:45,280 --> 01:15:49,840
+introduces some effects. But in this
+
+1966
+01:15:47,440 --> 01:15:52,080
+model we ignore those motions and assume
+
+1967
+01:15:49,840 --> 01:15:54,000
+R is constant. That is another
+
+1968
+01:15:52,080 --> 01:15:56,560
+approximation.
+
+1969
+01:15:54,000 --> 01:15:58,159
+and third the factor related to signal
+
+1970
+01:15:56,560 --> 01:16:00,159
+decay.
+
+1971
+01:15:58,159 --> 01:16:02,640
+In practice the signal we measure is
+
+1972
+01:16:00,159 --> 01:16:04,800
+subject to T2 star decay. But in this
+
+1973
+01:16:02,640 --> 01:16:07,199
+approximation we assume that the readout
+
+1974
+01:16:04,800 --> 01:16:09,600
+is fast enough so that no significant T2
+
+1975
+01:16:07,199 --> 01:16:11,760
+star decay occurs during acquisition.
+
+1976
+01:16:09,600 --> 01:16:13,440
+That is a third approximation. Under
+
+1977
+01:16:11,760 --> 01:16:15,199
+these assumptions the formulation
+
+1978
+01:16:13,440 --> 01:16:16,800
+reduces neatly to a forier
+
+1979
+01:16:15,199 --> 01:16:19,600
+transformation which makes image
+
+1980
+01:16:16,800 --> 01:16:21,520
+reconstruction straightforward.
+
+1981
+01:16:19,600 --> 01:16:23,440
+But if you want very accurate imaging,
+
+1982
+01:16:21,520 --> 01:16:25,840
+all these neglected factors must be
+
+1983
+01:16:23,440 --> 01:16:27,679
+included. And once you include them, the
+
+1984
+01:16:25,840 --> 01:16:30,159
+reconstruction is no longer a simple
+
+1985
+01:16:27,679 --> 01:16:31,920
+forier transform. It becomes much more
+
+1986
+01:16:30,159 --> 01:16:33,760
+complex.
+
+1987
+01:16:31,920 --> 01:16:35,440
+In fact, this is an area where machine
+
+1988
+01:16:33,760 --> 01:16:37,840
+learning and advanced reconstruction
+
+1989
+01:16:35,440 --> 01:16:39,679
+methods can play a big role. In the last
+
+1990
+01:16:37,840 --> 01:16:41,360
+part of the course, I will mention how
+
+1991
+01:16:39,679 --> 01:16:44,920
+modern approaches are being used to
+
+1992
+01:16:41,360 --> 01:16:44,920
+solve these challenges.
+
+1993
+01:16:46,400 --> 01:16:50,560
+Now let me give you a simple example to
+
+1994
+01:16:48,640 --> 01:16:52,640
+make this clearer. Under the three
+
+1995
+01:16:50,560 --> 01:16:54,960
+approximations we just discussed, we can
+
+1996
+01:16:52,640 --> 01:16:56,719
+measure the forier space information.
+
+1997
+01:16:54,960 --> 01:16:59,520
+The figure on the left shows what is
+
+1998
+01:16:56,719 --> 01:17:01,679
+recorded in k space.
+
+1999
+01:16:59,520 --> 01:17:04,239
+Remember the forier transform is a
+
+2000
+01:17:01,679 --> 01:17:06,800
+complex function. It has both amplitude
+
+2001
+01:17:04,239 --> 01:17:09,199
+and phase. But what we display here is
+
+2002
+01:17:06,800 --> 01:17:11,440
+only the amplitude. It looks something
+
+2003
+01:17:09,199 --> 01:17:13,679
+like this. A distribution of intensities
+
+2004
+01:17:11,440 --> 01:17:15,760
+in k space.
+
+2005
+01:17:13,679 --> 01:17:17,600
+Then if you apply an inverse forier
+
+2006
+01:17:15,760 --> 01:17:19,280
+transformation, you obtain the image on
+
+2007
+01:17:17,600 --> 01:17:21,840
+the right which is a cross-sectional
+
+2008
+01:17:19,280 --> 01:17:23,920
+image of the brain. So with MRI by
+
+2009
+01:17:21,840 --> 01:17:26,000
+collecting data in Kspace and applying
+
+2010
+01:17:23,920 --> 01:17:28,080
+an inverse forier transform, we can
+
+2011
+01:17:26,000 --> 01:17:30,000
+reconstruct detailed cross-sectional
+
+2012
+01:17:28,080 --> 01:17:31,600
+anatomy.
+
+2013
+01:17:30,000 --> 01:17:33,280
+I think this is really an amazing
+
+2014
+01:17:31,600 --> 01:17:36,080
+achievement especially when you compare
+
+2015
+01:17:33,280 --> 01:17:37,600
+it with X-ray CT. MRI provides a
+
+2016
+01:17:36,080 --> 01:17:39,360
+completely different way of obtaining
+
+2017
+01:17:37,600 --> 01:17:41,760
+cross-sectional images not from
+
+2018
+01:17:39,360 --> 01:17:44,960
+attenuation but directly from signals in
+
+2019
+01:17:41,760 --> 01:17:44,960
+forier space.
+
+2020
+01:17:46,800 --> 01:17:50,880
+So now we come to the final part of this
+
+2021
+01:17:48,880 --> 01:17:53,440
+lecture. You see we have obtained
+
+2022
+01:17:50,880 --> 01:17:55,440
+cross-sectional images using MRI. The
+
+2023
+01:17:53,440 --> 01:17:57,280
+last slides summarize the key points and
+
+2024
+01:17:55,440 --> 01:17:58,960
+also point to the MRI scanners
+
+2025
+01:17:57,280 --> 01:18:00,560
+themselves.
+
+2026
+01:17:58,960 --> 01:18:02,560
+I will not go into the engineering
+
+2027
+01:18:00,560 --> 01:18:04,320
+details of scanners here since these are
+
+2028
+01:18:02,560 --> 01:18:06,800
+mostly descriptive and you can easily
+
+2029
+01:18:04,320 --> 01:18:08,880
+read them from the textbook.
+
+2030
+01:18:06,800 --> 01:18:11,280
+The textbook straightforwardly explains
+
+2031
+01:18:08,880 --> 01:18:13,520
+the scanner components. If you read
+
+2032
+01:18:11,280 --> 01:18:15,920
+carefully, you will find it both easy
+
+2033
+01:18:13,520 --> 01:18:18,080
+and interesting to understand. You will
+
+2034
+01:18:15,920 --> 01:18:20,880
+also find additional material about spin
+
+2035
+01:18:18,080 --> 01:18:22,480
+echo sequences, gradient echo, and slice
+
+2036
+01:18:20,880 --> 01:18:24,239
+selection, which can deepen your
+
+2037
+01:18:22,480 --> 01:18:25,920
+understanding.
+
+2038
+01:18:24,239 --> 01:18:27,440
+These are not required for the core
+
+2039
+01:18:25,920 --> 01:18:29,440
+lecture, but they are excellent
+
+2040
+01:18:27,440 --> 01:18:31,600
+supplemental resources if you want to
+
+2041
+01:18:29,440 --> 01:18:33,679
+learn more. And finally, you will have
+
+2042
+01:18:31,600 --> 01:18:35,760
+some homework related to this lecture so
+
+2043
+01:18:33,679 --> 01:18:40,199
+that you can review the key ideas and
+
+2044
+01:18:35,760 --> 01:18:40,199
+practice the concepts we discussed.
+
+2045
+01:18:41,679 --> 01:18:44,880
+This diagram shows a block
+
+2046
+01:18:43,040 --> 01:18:46,880
+representation of how an MRI system
+
+2047
+01:18:44,880 --> 01:18:48,960
+works. Starting from signal generation
+
+2048
+01:18:46,880 --> 01:18:50,719
+to image display. At the heart of the
+
+2049
+01:18:48,960 --> 01:18:52,719
+scanner, you have the patient placed
+
+2050
+01:18:50,719 --> 01:18:55,280
+inside the bore surrounded by gradient
+
+2051
+01:18:52,719 --> 01:18:56,800
+coils and the RF or radio frequency
+
+2052
+01:18:55,280 --> 01:18:59,440
+coil.
+
+2053
+01:18:56,800 --> 01:19:01,760
+The RF coil serves two purposes. It
+
+2054
+01:18:59,440 --> 01:19:03,600
+transmits the excitation pulses into the
+
+2055
+01:19:01,760 --> 01:19:06,719
+body and it also receives the weak
+
+2056
+01:19:03,600 --> 01:19:08,640
+signals emitted back from the tissue.
+
+2057
+01:19:06,719 --> 01:19:11,120
+To generate those pulses, a frequency
+
+2058
+01:19:08,640 --> 01:19:13,520
+synthesizer and an RF amplifier create
+
+2059
+01:19:11,120 --> 01:19:15,600
+the correct radio frequency signal. That
+
+2060
+01:19:13,520 --> 01:19:17,360
+signal is then sent through a transmit
+
+2061
+01:19:15,600 --> 01:19:19,679
+receive switch, which ensures that the
+
+2062
+01:19:17,360 --> 01:19:22,000
+same RF coil can switch roles between
+
+2063
+01:19:19,679 --> 01:19:24,080
+sending and receiving.
+
+2064
+01:19:22,000 --> 01:19:26,640
+Once the RF coil receives the returning
+
+2065
+01:19:24,080 --> 01:19:28,560
+signal, it is very weak. So the signal
+
+2066
+01:19:26,640 --> 01:19:30,640
+first goes through a pre-amplifier to
+
+2067
+01:19:28,560 --> 01:19:32,560
+boost it. Then it passes through a
+
+2068
+01:19:30,640 --> 01:19:35,280
+receiver blanking unit to protect the
+
+2069
+01:19:32,560 --> 01:19:37,440
+electronics during transmission.
+
+2070
+01:19:35,280 --> 01:19:39,760
+After that the signal is routed to an RF
+
+2071
+01:19:37,440 --> 01:19:41,920
+amplifier and a de modulator followed by
+
+2072
+01:19:39,760 --> 01:19:43,679
+a quadriure mixer which separates the
+
+2073
+01:19:41,920 --> 01:19:46,080
+signal into its real and imaginary
+
+2074
+01:19:43,679 --> 01:19:49,360
+components. These components represent
+
+2075
+01:19:46,080 --> 01:19:51,760
+the complex valued MRI signal. The
+
+2076
+01:19:49,360 --> 01:19:54,640
+analog signal is then converted into a
+
+2077
+01:19:51,760 --> 01:19:57,199
+digital form by an analog to digital or
+
+2078
+01:19:54,640 --> 01:20:00,080
+AD converter. From there the digital
+
+2079
+01:19:57,199 --> 01:20:03,280
+data is stored temporarily in RAM memory
+
+2080
+01:20:00,080 --> 01:20:05,120
+and controlled by the host computer.
+
+2081
+01:20:03,280 --> 01:20:07,280
+The computer performs the essential
+
+2082
+01:20:05,120 --> 01:20:11,199
+reconstruction step, the two-dimensional
+
+2083
+01:20:07,280 --> 01:20:14,000
+inverse fur transform or 2D IFFT. This
+
+2084
+01:20:11,199 --> 01:20:16,800
+is what converts raw KSpace data into an
+
+2085
+01:20:14,000 --> 01:20:18,640
+actual image that can be displayed.
+
+2086
+01:20:16,800 --> 01:20:20,640
+On the control side of the system, there
+
+2087
+01:20:18,640 --> 01:20:23,199
+are waveform generator timing boards and
+
+2088
+01:20:20,640 --> 01:20:25,679
+gradient amplifiers. These control the
+
+2089
+01:20:23,199 --> 01:20:27,600
+gradient coils inside the scanner which
+
+2090
+01:20:25,679 --> 01:20:31,120
+are responsible for slice selection,
+
+2091
+01:20:27,600 --> 01:20:32,800
+phase encoding, and frequency encoding.
+
+2092
+01:20:31,120 --> 01:20:34,560
+The pulse programmer and software
+
+2093
+01:20:32,800 --> 01:20:36,640
+interface also controlled by the
+
+2094
+01:20:34,560 --> 01:20:38,560
+computer dictate exactly when and how
+
+2095
+01:20:36,640 --> 01:20:40,880
+these gradients and RF pulses are
+
+2096
+01:20:38,560 --> 01:20:42,960
+applied. Together this timing sequence
+
+2097
+01:20:40,880 --> 01:20:45,440
+ensures precise spatial encoding of the
+
+2098
+01:20:42,960 --> 01:20:48,000
+MRI signal, allowing us to reconstruct
+
+2099
+01:20:45,440 --> 01:20:50,480
+highresolution images.
+
+2100
+01:20:48,000 --> 01:20:52,719
+So overall this diagram gives us a
+
+2101
+01:20:50,480 --> 01:20:54,960
+complete picture from the RF system and
+
+2102
+01:20:52,719 --> 01:20:57,280
+gradient amplifiers to signal detection,
+
+2103
+01:20:54,960 --> 01:20:59,440
+digitization, forier reconstruction and
+
+2104
+01:20:57,280 --> 01:21:01,280
+finally the image display. It ties
+
+2105
+01:20:59,440 --> 01:21:05,800
+together all the engineering components
+
+2106
+01:21:01,280 --> 01:21:05,800
+that make MRI imaging possible.
+
+2107
+01:21:07,199 --> 01:21:11,520
+This 3D rendering gives us a cutaway
+
+2108
+01:21:09,360 --> 01:21:13,520
+view of how an MRI scanner is structured
+
+2109
+01:21:11,520 --> 01:21:15,520
+and how a patient fits inside the
+
+2110
+01:21:13,520 --> 01:21:17,760
+system. At the center, you see the
+
+2111
+01:21:15,520 --> 01:21:20,320
+patient lying on the patient table which
+
+2112
+01:21:17,760 --> 01:21:22,400
+slides into the bore of the scanner.
+
+2113
+01:21:20,320 --> 01:21:24,400
+Surrounding the patient are several key
+
+2114
+01:21:22,400 --> 01:21:26,080
+components.
+
+2115
+01:21:24,400 --> 01:21:28,239
+Closest to the body are the radio
+
+2116
+01:21:26,080 --> 01:21:30,080
+frequency coils. These coils are
+
+2117
+01:21:28,239 --> 01:21:32,080
+responsible for transmitting the RF
+
+2118
+01:21:30,080 --> 01:21:34,080
+pulses that flip the spins inside the
+
+2119
+01:21:32,080 --> 01:21:36,239
+tissue and also for receiving the weak
+
+2120
+01:21:34,080 --> 01:21:38,480
+signals emitted back from the patient.
+
+2121
+01:21:36,239 --> 01:21:40,080
+Without these coils, no imaging would be
+
+2122
+01:21:38,480 --> 01:21:41,920
+possible.
+
+2123
+01:21:40,080 --> 01:21:44,560
+Just outside the RF coils are the
+
+2124
+01:21:41,920 --> 01:21:46,960
+gradient coils. These coils are used to
+
+2125
+01:21:44,560 --> 01:21:48,880
+create small linearly varying magnetic
+
+2126
+01:21:46,960 --> 01:21:52,000
+fields on top of the main magnetic
+
+2127
+01:21:48,880 --> 01:21:53,760
+field. By turning the gradient coils on
+
+2128
+01:21:52,000 --> 01:21:56,080
+and off in different directions, the
+
+2129
+01:21:53,760 --> 01:21:58,480
+scanner performs slice selection, phase
+
+2130
+01:21:56,080 --> 01:22:00,400
+encoding, and frequency encoding, which
+
+2131
+01:21:58,480 --> 01:22:04,000
+are the core steps that allow spatial
+
+2132
+01:22:00,400 --> 01:22:06,320
+localization of the MRI signal.
+
+2133
+01:22:04,000 --> 01:22:08,719
+Encasing the gradient coils is the large
+
+2134
+01:22:06,320 --> 01:22:10,159
+superconducting magnet shown here as the
+
+2135
+01:22:08,719 --> 01:22:11,840
+main cylindrical structure of the
+
+2136
+01:22:10,159 --> 01:22:14,080
+scanner.
+
+2137
+01:22:11,840 --> 01:22:16,800
+This magnet produces the strong uniform
+
+2138
+01:22:14,080 --> 01:22:19,679
+field we call B 0 typically 1 and a half
+
+2139
+01:22:16,800 --> 01:22:21,760
+Tesla 3 Tesla or even higher in advanced
+
+2140
+01:22:19,679 --> 01:22:23,600
+systems. The magnet is what aligns the
+
+2141
+01:22:21,760 --> 01:22:26,560
+spins in the body creating the initial
+
+2142
+01:22:23,600 --> 01:22:28,800
+conditions necessary for MRI.
+
+2143
+01:22:26,560 --> 01:22:30,560
+All of this hardware is integrated into
+
+2144
+01:22:28,800 --> 01:22:32,800
+the scanner body which you see as the
+
+2145
+01:22:30,560 --> 01:22:34,159
+outer blue casing. The patient is
+
+2146
+01:22:32,800 --> 01:22:36,800
+positioned on the table and moved
+
+2147
+01:22:34,159 --> 01:22:39,040
+smoothly into the bore for imaging.
+
+2148
+01:22:36,800 --> 01:22:40,639
+This design allows precise alignment of
+
+2149
+01:22:39,040 --> 01:22:42,480
+the body part of interest with the
+
+2150
+01:22:40,639 --> 01:22:44,400
+center of the magnet where the field is
+
+2151
+01:22:42,480 --> 01:22:46,880
+most uniform.
+
+2152
+01:22:44,400 --> 01:22:49,280
+So in summary, this diagram shows the
+
+2153
+01:22:46,880 --> 01:22:51,440
+layered structure of an MRI scanner, the
+
+2154
+01:22:49,280 --> 01:22:53,360
+patient table for positioning, the RF
+
+2155
+01:22:51,440 --> 01:22:55,520
+coils for transmit and receive, the
+
+2156
+01:22:53,360 --> 01:22:57,360
+gradient coils for spatial encoding, and
+
+2157
+01:22:55,520 --> 01:22:59,360
+the large magnet that provides the
+
+2158
+01:22:57,360 --> 01:23:01,840
+powerful stable field at the heart of
+
+2159
+01:22:59,360 --> 01:23:04,159
+the system.
+
+2160
+01:23:01,840 --> 01:23:06,719
+Here
+
+2161
+01:23:04,159 --> 01:23:08,639
+we see a modern clinical MRI scanner.
+
+2162
+01:23:06,719 --> 01:23:11,440
+This particular system is the Sparkler
+
+2163
+01:23:08,639 --> 01:23:13,600
+1.5 Tesla MRI which was made through a
+
+2164
+01:23:11,440 --> 01:23:15,920
+joint venture between Philips and Newoft
+
+2165
+01:23:13,600 --> 01:23:17,679
+in 2008.
+
+2166
+01:23:15,920 --> 01:23:19,440
+What you notice first is the large
+
+2167
+01:23:17,679 --> 01:23:21,520
+cylindrical magnet housing which
+
+2168
+01:23:19,440 --> 01:23:23,120
+contains the superconducting magnet that
+
+2169
+01:23:21,520 --> 01:23:26,239
+generates the powerful and stable
+
+2170
+01:23:23,120 --> 01:23:28,400
+magnetic field known as B0. That main
+
+2171
+01:23:26,239 --> 01:23:30,639
+field is what aligns the spins inside
+
+2172
+01:23:28,400 --> 01:23:32,159
+the patient's body and makes MRI
+
+2173
+01:23:30,639 --> 01:23:34,080
+possible.
+
+2174
+01:23:32,159 --> 01:23:36,080
+At the front of the scanner is the bore
+
+2175
+01:23:34,080 --> 01:23:38,400
+opening with the patient table extending
+
+2176
+01:23:36,080 --> 01:23:40,560
+outward. The table is designed to move
+
+2177
+01:23:38,400 --> 01:23:43,120
+smoothly into the bore, positioning the
+
+2178
+01:23:40,560 --> 01:23:45,360
+patient precisely at the iso center of
+
+2179
+01:23:43,120 --> 01:23:47,360
+the magnet where the magnetic field is
+
+2180
+01:23:45,360 --> 01:23:49,199
+most uniform.
+
+2181
+01:23:47,360 --> 01:23:51,199
+Inside the bore, hidden from view in
+
+2182
+01:23:49,199 --> 01:23:53,679
+this picture are the gradient coils and
+
+2183
+01:23:51,199 --> 01:23:55,760
+the radio frequency coils which together
+
+2184
+01:23:53,679 --> 01:23:58,239
+perform the tasks of spatial encoding
+
+2185
+01:23:55,760 --> 01:23:59,679
+and signal detection. The control panels
+
+2186
+01:23:58,239 --> 01:24:01,360
+you see on either side allow the
+
+2187
+01:23:59,679 --> 01:24:04,080
+operator to manage some of the basic
+
+2188
+01:24:01,360 --> 01:24:07,120
+functions and safety interlocks.
+
+2189
+01:24:04,080 --> 01:24:08,719
+This specific 1.5 Tesla strength is one
+
+2190
+01:24:07,120 --> 01:24:10,639
+of the most common clinical field
+
+2191
+01:24:08,719 --> 01:24:12,960
+strengths worldwide. Balancing good
+
+2192
+01:24:10,639 --> 01:24:15,040
+image quality with manageable cost and
+
+2193
+01:24:12,960 --> 01:24:16,800
+patient comfort.
+
+2194
+01:24:15,040 --> 01:24:18,880
+It represents an industry standard for
+
+2195
+01:24:16,800 --> 01:24:21,600
+many diagnostic applications including
+
+2196
+01:24:18,880 --> 01:24:23,199
+brain, spine, and body imaging. So, this
+
+2197
+01:24:21,600 --> 01:24:25,120
+photo gives you a sense of what an
+
+2198
+01:24:23,199 --> 01:24:26,800
+actual MRI scanner looks like in the
+
+2199
+01:24:25,120 --> 01:24:28,719
+clinic as compared to the system
+
+2200
+01:24:26,800 --> 01:24:32,040
+diagrams and cutaway renderings we
+
+2201
+01:24:28,719 --> 01:24:32,040
+discussed earlier.
+
+2202
+01:24:33,440 --> 01:24:38,000
+Here we see a PET MRI scanner which is
+
+2203
+01:24:35,840 --> 01:24:39,520
+an advanced hybrid imaging system. On
+
+2204
+01:24:38,000 --> 01:24:41,280
+the left side of the slide, there is a
+
+2205
+01:24:39,520 --> 01:24:43,199
+schematic diagram showing how the
+
+2206
+01:24:41,280 --> 01:24:45,040
+different components are arranged and on
+
+2207
+01:24:43,199 --> 01:24:48,080
+the right side you see an actual
+
+2208
+01:24:45,040 --> 01:24:50,000
+Seaman's PET MRI machine.
+
+2209
+01:24:48,080 --> 01:24:51,920
+The MRI part of the scanner is built
+
+2210
+01:24:50,000 --> 01:24:54,560
+around the large cylindrical magnet.
+
+2211
+01:24:51,920 --> 01:24:57,040
+Just like a conventional MRI, the magnet
+
+2212
+01:24:54,560 --> 01:24:59,280
+shielding coil, the primary magnet coil,
+
+2213
+01:24:57,040 --> 01:25:00,880
+and the gradient coils are all stacked
+
+2214
+01:24:59,280 --> 01:25:03,040
+concentrically, forming the core
+
+2215
+01:25:00,880 --> 01:25:04,719
+structure of the system. These generate
+
+2216
+01:25:03,040 --> 01:25:06,800
+the strong static field and the
+
+2217
+01:25:04,719 --> 01:25:09,760
+spatially varying gradient fields needed
+
+2218
+01:25:06,800 --> 01:25:12,080
+for magnetic resonance imaging.
+
+2219
+01:25:09,760 --> 01:25:14,320
+Inside this same system, petty detector
+
+2220
+01:25:12,080 --> 01:25:16,480
+modules are integrated. These include
+
+2221
+01:25:14,320 --> 01:25:18,560
+layers such as the PX camera, avalanche
+
+2222
+01:25:16,480 --> 01:25:20,080
+photo dodes, LSO crystals, and
+
+2223
+01:25:18,560 --> 01:25:22,239
+associated electronics like
+
+2224
+01:25:20,080 --> 01:25:24,159
+preamplifiers and driver boards.
+
+2225
+01:25:22,239 --> 01:25:26,480
+Together, these PET modules detect the
+
+2226
+01:25:24,159 --> 01:25:29,679
+gamma rays emitted by radioactive traces
+
+2227
+01:25:26,480 --> 01:25:31,760
+inside the patient's body. An RF head
+
+2228
+01:25:29,679 --> 01:25:34,080
+coil is also shown in the diagram, which
+
+2229
+01:25:31,760 --> 01:25:36,080
+is part of the MRI subsystem used to
+
+2230
+01:25:34,080 --> 01:25:38,560
+transmit radio frequency pulses and
+
+2231
+01:25:36,080 --> 01:25:41,040
+receive the MR signal.
+
+2232
+01:25:38,560 --> 01:25:43,120
+The magnet cryostat shown as the outer
+
+2233
+01:25:41,040 --> 01:25:45,199
+casing maintains the superconducting
+
+2234
+01:25:43,120 --> 01:25:48,080
+coils at very low temperatures so that
+
+2235
+01:25:45,199 --> 01:25:49,920
+the magnetic field stays stable.
+
+2236
+01:25:48,080 --> 01:25:52,239
+On the right hand side, the seaman's
+
+2237
+01:25:49,920 --> 01:25:54,960
+clinical PET MRI scanner looks very much
+
+2238
+01:25:52,239 --> 01:25:57,040
+like a conventional MRI machine. But the
+
+2239
+01:25:54,960 --> 01:25:59,280
+key difference is that the PET detectors
+
+2240
+01:25:57,040 --> 01:26:02,239
+are integrated into the bore allowing
+
+2241
+01:25:59,280 --> 01:26:04,320
+simultaneous acquisition of MRI data and
+
+2242
+01:26:02,239 --> 01:26:06,320
+PET data.
+
+2243
+01:26:04,320 --> 01:26:08,000
+This means that while MRI provides
+
+2244
+01:26:06,320 --> 01:26:10,400
+excellent soft tissue contrast and
+
+2245
+01:26:08,000 --> 01:26:12,159
+anatomical detail, PET simultaneously
+
+2246
+01:26:10,400 --> 01:26:14,320
+provides functional and metabolic
+
+2247
+01:26:12,159 --> 01:26:16,719
+information. The result is a powerful
+
+2248
+01:26:14,320 --> 01:26:20,560
+hybrid modality that combines structural
+
+2249
+01:26:16,719 --> 01:26:22,880
+and functional imaging in a single scan.
+
+2250
+01:26:20,560 --> 01:26:24,880
+This PET MRI approach is especially
+
+2251
+01:26:22,880 --> 01:26:26,639
+important in neurology, oncology, and
+
+2252
+01:26:24,880 --> 01:26:28,639
+cardiology where you want to see not
+
+2253
+01:26:26,639 --> 01:26:30,400
+just anatomy, but also how tissues are
+
+2254
+01:26:28,639 --> 01:26:33,400
+functioning or metabolizing in real
+
+2255
+01:26:30,400 --> 01:26:33,400
+time.
+
+2256
+01:26:34,560 --> 01:26:38,159
+This photo shows a pre-clinical MRI
+
+2257
+01:26:36,639 --> 01:26:41,120
+scanner, specifically the Brooker
+
+2258
+01:26:38,159 --> 01:26:44,000
+Biotech Advanced 3 9420 system, which
+
+2259
+01:26:41,120 --> 01:26:46,000
+operates at 9.4 Tesla. Unlike clinical
+
+2260
+01:26:44,000 --> 01:26:48,320
+MRI scanners that are designed for human
+
+2261
+01:26:46,000 --> 01:26:50,080
+patients, preclinical MRI systems are
+
+2262
+01:26:48,320 --> 01:26:52,719
+mainly used for small animals such as
+
+2263
+01:26:50,080 --> 01:26:54,320
+mice, rats, or rabbits.
+
+2264
+01:26:52,719 --> 01:26:56,320
+These scanners are critical in
+
+2265
+01:26:54,320 --> 01:26:58,400
+biomedical research because they allow
+
+2266
+01:26:56,320 --> 01:26:59,840
+scientists to study disease models,
+
+2267
+01:26:58,400 --> 01:27:02,239
+monitor treatment effects, and
+
+2268
+01:26:59,840 --> 01:27:04,320
+investigate basic biological processes
+
+2269
+01:27:02,239 --> 01:27:06,239
+in a controlled setting before moving to
+
+2270
+01:27:04,320 --> 01:27:08,400
+human trials.
+
+2271
+01:27:06,239 --> 01:27:10,880
+The scanner looks similar in shape to a
+
+2272
+01:27:08,400 --> 01:27:13,120
+clinical MRI with a large cylindrical
+
+2273
+01:27:10,880 --> 01:27:15,120
+magnet and a bore in the center, but the
+
+2274
+01:27:13,120 --> 01:27:17,840
+bore is much smaller since it is
+
+2275
+01:27:15,120 --> 01:27:19,920
+designed for animal studies.
+
+2276
+01:27:17,840 --> 01:27:22,639
+The extremely high magnetic field
+
+2277
+01:27:19,920 --> 01:27:24,800
+strength of 9.4 4 Tesla gives very high
+
+2278
+01:27:22,639 --> 01:27:26,960
+resolution and sensitivity, allowing
+
+2279
+01:27:24,800 --> 01:27:28,960
+researchers to visualize fine structural
+
+2280
+01:27:26,960 --> 01:27:30,800
+details that would not be possible at
+
+2281
+01:27:28,960 --> 01:27:32,320
+lower field strengths. With this
+
+2282
+01:27:30,800 --> 01:27:33,920
+scanner, scientists can measure
+
+2283
+01:27:32,320 --> 01:27:36,239
+anatomical structures, functional
+
+2284
+01:27:33,920 --> 01:27:38,480
+activity, and even molecular processes,
+
+2285
+01:27:36,239 --> 01:27:40,880
+all non-invasively.
+
+2286
+01:27:38,480 --> 01:27:42,800
+Preclinical MRI scanners like this one
+
+2287
+01:27:40,880 --> 01:27:44,639
+play a vital role in translational
+
+2288
+01:27:42,800 --> 01:27:46,400
+medicine, serving as a bridge between
+
+2289
+01:27:44,639 --> 01:27:48,400
+laboratory discoveries and clinical
+
+2290
+01:27:46,400 --> 01:27:50,560
+applications.
+
+2291
+01:27:48,400 --> 01:27:52,320
+By studying animal models of diseases
+
+2292
+01:27:50,560 --> 01:27:54,719
+such as cancer, stroke or
+
+2293
+01:27:52,320 --> 01:27:57,040
+neurodeenerative disorders, researchers
+
+2294
+01:27:54,719 --> 01:27:59,040
+can optimize imaging protocols, test new
+
+2295
+01:27:57,040 --> 01:28:01,040
+therapies, and gather critical data
+
+2296
+01:27:59,040 --> 01:28:04,040
+before applying these methods in human
+
+2297
+01:28:01,040 --> 01:28:04,040
+patients.
+
+2298
+01:28:05,600 --> 01:28:10,480
+His photo shows a modern CTMRI guided
+
+2299
+01:28:08,239 --> 01:28:13,120
+radiation therapy system. In radiation
+
+2300
+01:28:10,480 --> 01:28:15,040
+oncology, precise targeting of tumors is
+
+2301
+01:28:13,120 --> 01:28:17,280
+critical because you want to deliver a
+
+2302
+01:28:15,040 --> 01:28:19,199
+very high radiation dose to cancer cells
+
+2303
+01:28:17,280 --> 01:28:21,679
+while sparing as much of the surrounding
+
+2304
+01:28:19,199 --> 01:28:23,520
+healthy tissue as possible.
+
+2305
+01:28:21,679 --> 01:28:25,679
+Traditionally, CT has been used for
+
+2306
+01:28:23,520 --> 01:28:27,920
+radiation planning because CT provides
+
+2307
+01:28:25,679 --> 01:28:29,920
+good information on patient anatomy and
+
+2308
+01:28:27,920 --> 01:28:33,360
+electron density which are needed to
+
+2309
+01:28:29,920 --> 01:28:35,920
+calculate radiation dose. However, CT
+
+2310
+01:28:33,360 --> 01:28:38,320
+has limited soft tissue contrast, which
+
+2311
+01:28:35,920 --> 01:28:40,800
+means tumors in organs like the brain,
+
+2312
+01:28:38,320 --> 01:28:42,880
+liver, or pelvis may be difficult to
+
+2313
+01:28:40,800 --> 01:28:45,760
+outline clearly.
+
+2314
+01:28:42,880 --> 01:28:47,920
+By combining MRI with CT in radiation
+
+2315
+01:28:45,760 --> 01:28:51,040
+therapy, doctors can take advantage of
+
+2316
+01:28:47,920 --> 01:28:53,199
+the strengths of both modalities.
+
+2317
+01:28:51,040 --> 01:28:55,040
+MRI provides excellent soft tissue
+
+2318
+01:28:53,199 --> 01:28:57,120
+contrast, allowing the tumor to be
+
+2319
+01:28:55,040 --> 01:28:58,560
+visualized more clearly, while CT
+
+2320
+01:28:57,120 --> 01:29:00,239
+provides the necessary density
+
+2321
+01:28:58,560 --> 01:29:02,480
+information for radiation dose
+
+2322
+01:29:00,239 --> 01:29:05,440
+calculation. This hybrid approach makes
+
+2323
+01:29:02,480 --> 01:29:07,280
+the targeting more accurate and safer.
+
+2324
+01:29:05,440 --> 01:29:09,040
+In this photo, you see the treatment
+
+2325
+01:29:07,280 --> 01:29:11,120
+couch where the patient lies with
+
+2326
+01:29:09,040 --> 01:29:13,040
+immobilization devices to keep the
+
+2327
+01:29:11,120 --> 01:29:15,199
+patient still.
+
+2328
+01:29:13,040 --> 01:29:17,679
+The large circular gantry houses the
+
+2329
+01:29:15,199 --> 01:29:19,600
+imaging and radiation components. During
+
+2330
+01:29:17,679 --> 01:29:21,760
+treatment, the system acquires imaging
+
+2331
+01:29:19,600 --> 01:29:23,760
+data to confirm the tumor's position and
+
+2332
+01:29:21,760 --> 01:29:25,840
+then the linear accelerator delivers a
+
+2333
+01:29:23,760 --> 01:29:27,600
+precisely shaped beam of radiation to
+
+2334
+01:29:25,840 --> 01:29:29,840
+the tumor.
+
+2335
+01:29:27,600 --> 01:29:32,480
+This technology represents a powerful
+
+2336
+01:29:29,840 --> 01:29:35,280
+integration of imaging and therapy using
+
+2337
+01:29:32,480 --> 01:29:37,360
+CT and MRI together to guide radiation
+
+2338
+01:29:35,280 --> 01:29:39,600
+treatment in real time which improves
+
+2339
+01:29:37,360 --> 01:29:42,840
+tumor control and reduces side effects
+
+2340
+01:29:39,600 --> 01:29:42,840
+for patients.
+
+2341
+01:29:44,320 --> 01:29:48,800
+This slide shows a potential MRI guided
+
+2342
+01:29:46,880 --> 01:29:51,120
+radiation therapy design proposed by
+
+2343
+01:29:48,800 --> 01:29:53,199
+Zanja and colleagues. What you see here
+
+2344
+01:29:51,120 --> 01:29:55,199
+is a concept where the MRI magnet is
+
+2345
+01:29:53,199 --> 01:29:58,239
+split into two halves with a separation
+
+2346
+01:29:55,199 --> 01:30:00,400
+of about 70 cm.
+
+2347
+01:29:58,239 --> 01:30:02,000
+That gap allows room for radiation beams
+
+2348
+01:30:00,400 --> 01:30:03,920
+to pass through while still maintaining
+
+2349
+01:30:02,000 --> 01:30:06,000
+the magnetic field needed for MRI
+
+2350
+01:30:03,920 --> 01:30:08,320
+imaging. The design also includes a
+
+2351
+01:30:06,000 --> 01:30:10,960
+couch that can rotate by plus or minus
+
+2352
+01:30:08,320 --> 01:30:14,320
+25°, giving flexibility in patient
+
+2353
+01:30:10,960 --> 01:30:16,400
+positioning and beam delivery angles.
+
+2354
+01:30:14,320 --> 01:30:18,239
+The circular ring you see provides both
+
+2355
+01:30:16,400 --> 01:30:20,080
+mechanical stability and magnet
+
+2356
+01:30:18,239 --> 01:30:22,080
+shielding. This is very important
+
+2357
+01:30:20,080 --> 01:30:24,159
+because strong magnetic fields need to
+
+2358
+01:30:22,080 --> 01:30:25,840
+be contained and stabilized to prevent
+
+2359
+01:30:24,159 --> 01:30:28,800
+interference with surrounding equipment
+
+2360
+01:30:25,840 --> 01:30:30,880
+and to protect patient safety.
+
+2361
+01:30:28,800 --> 01:30:32,960
+In addition to the MRI magnet, the
+
+2362
+01:30:30,880 --> 01:30:36,159
+design also considers adding a cone beam
+
+2363
+01:30:32,960 --> 01:30:37,840
+CT or CBCT mounted on the same ring.
+
+2364
+01:30:36,159 --> 01:30:40,080
+Although not shown in this illustration,
+
+2365
+01:30:37,840 --> 01:30:42,080
+the CBCT would provide complimentary
+
+2366
+01:30:40,080 --> 01:30:43,840
+X-ray imaging, making this a hybrid
+
+2367
+01:30:42,080 --> 01:30:46,159
+system that combines MRI's excellent
+
+2368
+01:30:43,840 --> 01:30:48,639
+soft tissue contrast with CT's accuracy
+
+2369
+01:30:46,159 --> 01:30:50,639
+for dose calculation.
+
+2370
+01:30:48,639 --> 01:30:53,679
+Clearly, this figure illustrates an
+
+2371
+01:30:50,639 --> 01:30:56,800
+innovative idea in radiation oncology. A
+
+2372
+01:30:53,679 --> 01:30:59,280
+split magnet MRI system integrated into
+
+2373
+01:30:56,800 --> 01:31:01,199
+a rotating gantry designed to guide
+
+2374
+01:30:59,280 --> 01:31:04,000
+precise radiation treatment while
+
+2375
+01:31:01,199 --> 01:31:07,000
+maintaining realtime MRI imaging of the
+
+2376
+01:31:04,000 --> 01:31:07,000
+tumor.
+
+2377
+01:31:08,320 --> 01:31:13,199
+This slide is a list of extra resources
+
+2378
+01:31:10,719 --> 01:31:14,800
+for you to explore outside the lecture.
+
+2379
+01:31:13,199 --> 01:31:16,560
+These links are short videos that
+
+2380
+01:31:14,800 --> 01:31:19,360
+explain some of the key concepts we
+
+2381
+01:31:16,560 --> 01:31:21,600
+discussed in more detail. The first
+
+2382
+01:31:19,360 --> 01:31:23,760
+group of links is about the spin echo.
+
+2383
+01:31:21,600 --> 01:31:26,159
+Spin echo is one of the most fundamental
+
+2384
+01:31:23,760 --> 01:31:28,560
+sequences in MRI. So, watching those
+
+2385
+01:31:26,159 --> 01:31:32,080
+demonstrations will help reinforce how a
+
+2386
+01:31:28,560 --> 01:31:34,639
+90° pulse and a 180° pulse work together
+
+2387
+01:31:32,080 --> 01:31:37,760
+to refocus the signal. The second group
+
+2388
+01:31:34,639 --> 01:31:39,679
+of links is about the gradient echo.
+
+2389
+01:31:37,760 --> 01:31:41,600
+Gradient echo is a variation where
+
+2390
+01:31:39,679 --> 01:31:44,560
+gradients are used to generate echoes
+
+2391
+01:31:41,600 --> 01:31:46,159
+instead of a 180°ree pulse. These videos
+
+2392
+01:31:44,560 --> 01:31:48,639
+will show you the difference in how the
+
+2393
+01:31:46,159 --> 01:31:51,199
+signal is produced. Finally, the last
+
+2394
+01:31:48,639 --> 01:31:53,199
+link is about slice selection. As we
+
+2395
+01:31:51,199 --> 01:31:55,520
+discussed, slice selection is how we
+
+2396
+01:31:53,199 --> 01:31:57,679
+target a specific region of the body by
+
+2397
+01:31:55,520 --> 01:31:59,679
+combining a magnetic gradient with the
+
+2398
+01:31:57,679 --> 01:32:01,600
+RF pulse.
+
+2399
+01:31:59,679 --> 01:32:03,280
+Note that although these videos are not
+
+2400
+01:32:01,600 --> 01:32:05,679
+required, they are helpful if you want
+
+2401
+01:32:03,280 --> 01:32:06,960
+to review the concepts visually. They
+
+2402
+01:32:05,679 --> 01:32:08,800
+can give you an extra layer of
+
+2403
+01:32:06,960 --> 01:32:12,520
+understanding especially if you are new
+
+2404
+01:32:08,800 --> 01:32:12,520
+to MRI physics.
+
+2405
+01:32:13,920 --> 01:32:17,920
+This slide gives you the homework
+
+2406
+01:32:15,600 --> 01:32:20,159
+assignment for this section. You can see
+
+2407
+01:32:17,920 --> 01:32:23,360
+that it has three problems numbered 4.7
+
+2408
+01:32:20,159 --> 01:32:25,120
+through 4.9. In problem 4.7, you are
+
+2409
+01:32:23,360 --> 01:32:27,120
+asked to look at the five frequencies
+
+2410
+01:32:25,120 --> 01:32:29,600
+shown in the figure above and then state
+
+2411
+01:32:27,120 --> 01:32:31,280
+the order of the T1 and T2 relaxation
+
+2412
+01:32:29,600 --> 01:32:32,800
+times.
+
+2413
+01:32:31,280 --> 01:32:35,520
+For example, you might write something
+
+2414
+01:32:32,800 --> 01:32:38,159
+like T1 of brain is greater than T1 of
+
+2415
+01:32:35,520 --> 01:32:40,800
+CSF, which is greater than T1 of aquous
+
+2416
+01:32:38,159 --> 01:32:42,639
+humor. The goal here is to compare how
+
+2417
+01:32:40,800 --> 01:32:44,320
+different tissues relax under different
+
+2418
+01:32:42,639 --> 01:32:46,400
+frequencies.
+
+2419
+01:32:44,320 --> 01:32:48,880
+In problem 4.8, you are working with
+
+2420
+01:32:46,400 --> 01:32:51,280
+hydrogen nuclei in fat and water. You
+
+2421
+01:32:48,880 --> 01:32:53,199
+are told that the T2 value of fat is 100
+
+2422
+01:32:51,280 --> 01:32:55,920
+milliseconds and the T2 value of water
+
+2423
+01:32:53,199 --> 01:32:58,320
+is 500 milliseconds.
+
+2424
+01:32:55,920 --> 01:33:00,800
+In a spin echo experiment, you need to
+
+2425
+01:32:58,320 --> 01:33:03,840
+calculate the delay time between the 90°
+
+2426
+01:33:00,800 --> 01:33:06,000
+pulse and the 180° pulse that maximizes
+
+2427
+01:33:03,840 --> 01:33:07,920
+the difference in signal between fat and
+
+2428
+01:33:06,000 --> 01:33:09,520
+water. This problem makes you think
+
+2429
+01:33:07,920 --> 01:33:12,480
+about how relaxation differences
+
+2430
+01:33:09,520 --> 01:33:15,120
+translate into image contrast.
+
+2431
+01:33:12,480 --> 01:33:16,480
+Finally, in problem 4.9, you are asked
+
+2432
+01:33:15,120 --> 01:33:19,440
+to write an expression for the
+
+2433
+01:33:16,480 --> 01:33:22,719
+longitudinal magnetization MZ as a
+
+2434
+01:33:19,440 --> 01:33:24,560
+function of time after a 180° pulse. You
+
+2435
+01:33:22,719 --> 01:33:27,120
+should then determine the time at which
+
+2436
+01:33:24,560 --> 01:33:28,639
+MZ becomes zero.
+
+2437
+01:33:27,120 --> 01:33:31,280
+After that, you need to plot what
+
+2438
+01:33:28,639 --> 01:33:34,239
+happens if instead of a 180° pulse, you
+
+2439
+01:33:31,280 --> 01:33:36,159
+apply a 135° pulse. This problem
+
+2440
+01:33:34,239 --> 01:33:41,080
+connects the mathematical model to how
+
+2441
+01:33:36,159 --> 01:33:41,080
+pulse angle changes affect the signal.
+

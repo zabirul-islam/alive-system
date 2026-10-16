@@ -1,0 +1,6436 @@
+1
+00:00:02,720 --> 00:00:06,400
+Hello everyone. In this lecture, we'll
+
+2
+00:00:04,799 --> 00:00:08,160
+continue our foundational story and
+
+3
+00:00:06,400 --> 00:00:10,880
+focus on understanding the discrete
+
+4
+00:00:08,160 --> 00:00:14,000
+forier transform or DFT and its inverse,
+
+5
+00:00:10,880 --> 00:00:15,759
+the IDFT. These slides in my book draft
+
+6
+00:00:14,000 --> 00:00:18,160
+will be your main reference and they
+
+7
+00:00:15,759 --> 00:00:20,400
+provide a clear step-by-step path for
+
+8
+00:00:18,160 --> 00:00:22,080
+following the key steps and get the main
+
+9
+00:00:20,400 --> 00:00:24,080
+idea.
+
+10
+00:00:22,080 --> 00:00:26,480
+The content you see here is part of a
+
+11
+00:00:24,080 --> 00:00:28,640
+larger foundation in medical imaging.
+
+12
+00:00:26,480 --> 00:00:30,480
+Once you have a solid grasp of these
+
+13
+00:00:28,640 --> 00:00:32,640
+concepts, it will be much easier to
+
+14
+00:00:30,480 --> 00:00:36,719
+understand advanced topics like X-ray
+
+15
+00:00:32,640 --> 00:00:38,800
+tomography, nuclear imaging, and MRI.
+
+16
+00:00:36,719 --> 00:00:41,600
+Forier analysis is central to all of
+
+17
+00:00:38,800 --> 00:00:43,680
+these areas. We'll use it to analyze and
+
+18
+00:00:41,600 --> 00:00:45,760
+process signals in both continuous and
+
+19
+00:00:43,680 --> 00:00:48,000
+discrete forms and to move back and
+
+20
+00:00:45,760 --> 00:00:50,239
+forth between the time or spatial domain
+
+21
+00:00:48,000 --> 00:00:52,960
+and the frequency domain in either a
+
+22
+00:00:50,239 --> 00:00:55,039
+continuous or discrete form.
+
+23
+00:00:52,960 --> 00:00:56,640
+In practice, we digitize signals and
+
+24
+00:00:55,039 --> 00:00:59,199
+then perform operations such as
+
+25
+00:00:56,640 --> 00:01:01,120
+convolution, forier transforms and
+
+26
+00:00:59,199 --> 00:01:03,520
+inverse forier transforms in one
+
+27
+00:01:01,120 --> 00:01:05,280
+dimension, two dimensions and beyond.
+
+28
+00:01:03,520 --> 00:01:09,479
+This lecture will begin building the
+
+29
+00:01:05,280 --> 00:01:09,479
+tools you need for that process.
+
+30
+00:01:11,200 --> 00:01:15,520
+We're moving along right on track in our
+
+31
+00:01:13,119 --> 00:01:17,119
+journey through this course.
+
+32
+00:01:15,520 --> 00:01:18,640
+If you've had the chance to preview the
+
+33
+00:01:17,119 --> 00:01:20,240
+reading materials for today, that's
+
+34
+00:01:18,640 --> 00:01:22,479
+great. It will help you connect the
+
+35
+00:01:20,240 --> 00:01:24,400
+concepts more quickly. If not, that's
+
+36
+00:01:22,479 --> 00:01:26,479
+fine, too.
+
+37
+00:01:24,400 --> 00:01:29,040
+Just follow along closely and make time
+
+38
+00:01:26,479 --> 00:01:30,960
+afterward to review the main ideas.
+
+39
+00:01:29,040 --> 00:01:32,960
+Building this habit of reinforcing
+
+40
+00:01:30,960 --> 00:01:34,479
+concepts as we go will make your
+
+41
+00:01:32,960 --> 00:01:36,560
+understanding stronger and more
+
+42
+00:01:34,479 --> 00:01:40,200
+intuitive, especially as the topics
+
+43
+00:01:36,560 --> 00:01:40,200
+become more mathematical.
+
+44
+00:01:42,000 --> 00:01:46,240
+In our last lecture, we examined the
+
+45
+00:01:43,920 --> 00:01:48,640
+sampling theorem in detail, focusing on
+
+46
+00:01:46,240 --> 00:01:51,200
+key concepts such as the sampling rate
+
+47
+00:01:48,640 --> 00:01:53,360
+and the Nyquis rate.
+
+48
+00:01:51,200 --> 00:01:55,600
+By now, you should have a clear idea of
+
+49
+00:01:53,360 --> 00:01:57,680
+why under certain conditions, we can
+
+50
+00:01:55,600 --> 00:02:00,240
+perfectly recover a continuous signal
+
+51
+00:01:57,680 --> 00:02:02,719
+from its sampled version.
+
+52
+00:02:00,240 --> 00:02:05,439
+Here's the key idea. We start with a
+
+53
+00:02:02,719 --> 00:02:07,280
+continuous signal f of t shown here.
+
+54
+00:02:05,439 --> 00:02:08,959
+When we sample it at regular time
+
+55
+00:02:07,280 --> 00:02:11,520
+intervals, let's call that interval
+
+56
+00:02:08,959 --> 00:02:14,319
+delta t, we obtain a discrete sequence
+
+57
+00:02:11,520 --> 00:02:16,879
+of values. The sampling theorem tells us
+
+58
+00:02:14,319 --> 00:02:19,040
+that if certain conditions are met, we
+
+59
+00:02:16,879 --> 00:02:21,360
+can reconstruct the original continuous
+
+60
+00:02:19,040 --> 00:02:24,560
+signal from these samples without losing
+
+61
+00:02:21,360 --> 00:02:26,560
+any information.
+
+62
+00:02:24,560 --> 00:02:28,720
+That's remarkable because even though we
+
+63
+00:02:26,560 --> 00:02:31,040
+only record values at specific time
+
+64
+00:02:28,720 --> 00:02:33,440
+points and there's missing information
+
+65
+00:02:31,040 --> 00:02:36,080
+in between, the theorem guarantees
+
+66
+00:02:33,440 --> 00:02:38,160
+perfect recovery. But this only works if
+
+67
+00:02:36,080 --> 00:02:40,480
+the original signal's 4A transform is
+
+68
+00:02:38,160 --> 00:02:42,560
+band limited. That means its frequency
+
+69
+00:02:40,480 --> 00:02:47,440
+spectrum is essentially zero outside a
+
+70
+00:02:42,560 --> 00:02:49,440
+certain range from minus W to plus W.
+
+71
+00:02:47,440 --> 00:02:51,599
+In the frequency domain, sampling
+
+72
+00:02:49,440 --> 00:02:54,239
+corresponds to a convolution between the
+
+73
+00:02:51,599 --> 00:02:56,959
+original continuous forier spectrum and
+
+74
+00:02:54,239 --> 00:02:59,040
+a periodic train of delta functions.
+
+75
+00:02:56,959 --> 00:03:00,959
+This delta train in frequency comes from
+
+76
+00:02:59,040 --> 00:03:03,360
+the forier transform of the impulse
+
+77
+00:03:00,959 --> 00:03:06,000
+train in time. The spacing between the
+
+78
+00:03:03,360 --> 00:03:07,760
+deltas in frequency, which we'll call P,
+
+79
+00:03:06,000 --> 00:03:10,239
+is the reciprocal of the sampling
+
+80
+00:03:07,760 --> 00:03:12,400
+interval delta T.
+
+81
+00:03:10,239 --> 00:03:15,280
+To avoid any distortion, P must be at
+
+82
+00:03:12,400 --> 00:03:17,200
+least 2 W. This ensures there is no
+
+83
+00:03:15,280 --> 00:03:19,519
+overlap between the repeated copies of
+
+84
+00:03:17,200 --> 00:03:21,280
+the spectrum in the frequency domain.
+
+85
+00:03:19,519 --> 00:03:23,599
+You can think of each delta function as
+
+86
+00:03:21,280 --> 00:03:25,519
+a copying machine. Each one shifts and
+
+87
+00:03:23,599 --> 00:03:28,080
+reproduces the original spectrum at
+
+88
+00:03:25,519 --> 00:03:30,080
+regular intervals. If the copies don't
+
+89
+00:03:28,080 --> 00:03:32,560
+overlap, the original information is
+
+90
+00:03:30,080 --> 00:03:34,640
+preserved perfectly.
+
+91
+00:03:32,560 --> 00:03:36,879
+In practice, we can apply a lowass
+
+92
+00:03:34,640 --> 00:03:39,120
+filter to keep only the central copy of
+
+93
+00:03:36,879 --> 00:03:41,519
+the spectrum. Then perform an inverse
+
+94
+00:03:39,120 --> 00:03:45,200
+forier transform to reconstruct the
+
+95
+00:03:41,519 --> 00:03:47,120
+exact original signal.
+
+96
+00:03:45,200 --> 00:03:49,840
+Now, a small note about the special case
+
+97
+00:03:47,120 --> 00:03:52,159
+where P equals exactly 2W. Here the
+
+98
+00:03:49,840 --> 00:03:54,159
+copies just touch at a single point.
+
+99
+00:03:52,159 --> 00:03:56,400
+This doesn't cause problems unless that
+
+100
+00:03:54,159 --> 00:03:58,799
+single point is a delta function with a
+
+101
+00:03:56,400 --> 00:04:01,280
+finite value, in which case it could
+
+102
+00:03:58,799 --> 00:04:03,280
+contribute to the result. But in most
+
+103
+00:04:01,280 --> 00:04:07,239
+practical signals that single point has
+
+104
+00:04:03,280 --> 00:04:07,239
+no significant effect.
+
+105
+00:04:08,720 --> 00:04:13,760
+Now let's look at the special case where
+
+106
+00:04:10,560 --> 00:04:15,840
+P equals exactly 2 W. Suppose our
+
+107
+00:04:13,760 --> 00:04:18,320
+continuous signal is a pure sine wave
+
+108
+00:04:15,840 --> 00:04:20,400
+with a frequency of 1 herz. That means
+
+109
+00:04:18,320 --> 00:04:22,720
+it completes exactly one cycle in 1
+
+110
+00:04:20,400 --> 00:04:25,120
+second. In the frequency domain, this is
+
+111
+00:04:22,720 --> 00:04:27,759
+a band limited signal. Its maximum
+
+112
+00:04:25,120 --> 00:04:29,759
+frequency is 1 herz.
+
+113
+00:04:27,759 --> 00:04:32,080
+If we sample at exactly twice that
+
+114
+00:04:29,759 --> 00:04:34,800
+frequency, so at two hertz, we meet the
+
+115
+00:04:32,080 --> 00:04:37,120
+Nyquist rate exactly. In this case, we
+
+116
+00:04:34,800 --> 00:04:39,280
+take two samples within each cycle. For
+
+117
+00:04:37,120 --> 00:04:40,960
+a pure sinosoid, two unknowns fully
+
+118
+00:04:39,280 --> 00:04:44,240
+describe it, the amplitude and the
+
+119
+00:04:40,960 --> 00:04:45,919
+phase. In theory, two samples per cycle
+
+120
+00:04:44,240 --> 00:04:48,919
+should be enough to determine those two
+
+121
+00:04:45,919 --> 00:04:48,919
+unknowns.
+
+122
+00:04:48,960 --> 00:04:53,759
+However, here's the problem.
+
+123
+00:04:51,440 --> 00:04:56,000
+Depending on where the samples fall, we
+
+124
+00:04:53,759 --> 00:04:58,560
+might end up with the exact same sample
+
+125
+00:04:56,000 --> 00:05:00,720
+value each time. For example, always
+
+126
+00:04:58,560 --> 00:05:03,520
+sampling at the zero crossings of the
+
+127
+00:05:00,720 --> 00:05:05,520
+sine wave. In that case, all our samples
+
+128
+00:05:03,520 --> 00:05:07,520
+would be zero and we would have no
+
+129
+00:05:05,520 --> 00:05:10,160
+reliable way to determine the original
+
+130
+00:05:07,520 --> 00:05:12,880
+signal.
+
+131
+00:05:10,160 --> 00:05:14,880
+In the forier domain, a pure sine wave
+
+132
+00:05:12,880 --> 00:05:16,960
+corresponds to a pair of delta functions
+
+133
+00:05:14,880 --> 00:05:19,600
+located at its positive and negative
+
+134
+00:05:16,960 --> 00:05:22,000
+frequency components. When we sample at
+
+135
+00:05:19,600 --> 00:05:23,680
+exactly 2 W, the duplicated spectra in
+
+136
+00:05:22,000 --> 00:05:26,560
+the frequency domain just touch each
+
+137
+00:05:23,680 --> 00:05:29,039
+other. If the touching points happen to
+
+138
+00:05:26,560 --> 00:05:30,639
+be delta functions, those deltas overlap
+
+139
+00:05:29,039 --> 00:05:32,560
+and we can no longer separate the
+
+140
+00:05:30,639 --> 00:05:34,320
+contributions from each one.
+
+141
+00:05:32,560 --> 00:05:37,360
+Mathematically, it's like having the
+
+142
+00:05:34,320 --> 00:05:40,240
+equation x + y equals c. You know the
+
+143
+00:05:37,360 --> 00:05:42,960
+sum, but not the individual values. This
+
+144
+00:05:40,240 --> 00:05:45,039
+is an aliasing problem.
+
+145
+00:05:42,960 --> 00:05:47,759
+That's why in practice sampling exactly
+
+146
+00:05:45,039 --> 00:05:50,560
+at 2 w is risky.
+
+147
+00:05:47,759 --> 00:05:52,720
+To be safe, we require PPP, the spacing
+
+148
+00:05:50,560 --> 00:05:55,600
+between repeated spectra and frequency
+
+149
+00:05:52,720 --> 00:05:57,440
+to be slightly greater than 2W. In other
+
+150
+00:05:55,600 --> 00:05:59,360
+words, the sampling rate should be a
+
+151
+00:05:57,440 --> 00:06:01,520
+little higher than twice the maximum
+
+152
+00:05:59,360 --> 00:06:03,440
+frequency in the signal. This extra
+
+153
+00:06:01,520 --> 00:06:07,880
+margin ensures that no overlap occurs
+
+154
+00:06:03,440 --> 00:06:07,880
+and reconstruction remains reliable.
+
+155
+00:06:09,440 --> 00:06:14,880
+Here we have the whole derivation of the
+
+156
+00:06:11,280 --> 00:06:17,440
+sampling theorem summarized on one page.
+
+157
+00:06:14,880 --> 00:06:19,120
+You see a few steps underlined in red.
+
+158
+00:06:17,440 --> 00:06:21,120
+These are the important turning points
+
+159
+00:06:19,120 --> 00:06:24,080
+in the math, the places where something
+
+160
+00:06:21,120 --> 00:06:25,919
+key happens. In a detailed lecture, we
+
+161
+00:06:24,080 --> 00:06:27,680
+would walk through each of them slowly.
+
+162
+00:06:25,919 --> 00:06:30,400
+But here, I want to focus on the big
+
+163
+00:06:27,680 --> 00:06:32,560
+picture.
+
+164
+00:06:30,400 --> 00:06:34,479
+We start in the frequency domain where
+
+165
+00:06:32,560 --> 00:06:37,680
+the spectrum of our signal is multiplied
+
+166
+00:06:34,479 --> 00:06:39,520
+by a periodic train of impulses.
+
+167
+00:06:37,680 --> 00:06:41,759
+When we bring this back to the time
+
+168
+00:06:39,520 --> 00:06:43,840
+domain, that multiplication turns into a
+
+169
+00:06:41,759 --> 00:06:46,080
+convolution. The result of that
+
+170
+00:06:43,840 --> 00:06:48,560
+convolution involves a special function
+
+171
+00:06:46,080 --> 00:06:50,639
+called sync which naturally appears when
+
+172
+00:06:48,560 --> 00:06:53,840
+you take the forier transform of a
+
+173
+00:06:50,639 --> 00:06:55,919
+rectangular shape in frequency.
+
+174
+00:06:53,840 --> 00:06:58,319
+Next, when we write out the convolution,
+
+175
+00:06:55,919 --> 00:07:01,120
+we see it as an infinite sum, a series
+
+176
+00:06:58,319 --> 00:07:03,199
+of shifted sync functions. Each one is
+
+177
+00:07:01,120 --> 00:07:05,360
+scaled by the value of our signal at a
+
+178
+00:07:03,199 --> 00:07:07,759
+sample point. The distance between these
+
+179
+00:07:05,360 --> 00:07:09,919
+samples is delta t, and that's simply 1
+
+180
+00:07:07,759 --> 00:07:11,759
+over p, the spacing in the frequency
+
+181
+00:07:09,919 --> 00:07:13,680
+domain.
+
+182
+00:07:11,759 --> 00:07:16,080
+The final line is the famous Shannon
+
+183
+00:07:13,680 --> 00:07:18,160
+interpolation formula. In words, it
+
+184
+00:07:16,080 --> 00:07:20,160
+says, "Take each sample of your signal,
+
+185
+00:07:18,160 --> 00:07:22,639
+put a sync function centered at that
+
+186
+00:07:20,160 --> 00:07:24,960
+sample, scale it by the sample's value,
+
+187
+00:07:22,639 --> 00:07:27,039
+and then add them all together. Do this
+
+188
+00:07:24,960 --> 00:07:29,360
+for every sample, stretching infinitely
+
+189
+00:07:27,039 --> 00:07:32,160
+in both directions, and you get your
+
+190
+00:07:29,360 --> 00:07:34,000
+original continuous signal back exactly
+
+191
+00:07:32,160 --> 00:07:35,919
+as long as the sampling conditions are
+
+192
+00:07:34,000 --> 00:07:38,560
+satisfied.
+
+193
+00:07:35,919 --> 00:07:40,639
+This is a beautiful result. It tells us
+
+194
+00:07:38,560 --> 00:07:42,720
+that perfect reconstruction is not just
+
+195
+00:07:40,639 --> 00:07:45,039
+possible. It's a direct consequence of
+
+196
+00:07:42,720 --> 00:07:46,800
+the sampling theorem. And this formula
+
+197
+00:07:45,039 --> 00:07:50,759
+is one of the core foundations of all
+
+198
+00:07:46,800 --> 00:07:50,759
+digital signal processing.
+
+199
+00:07:52,479 --> 00:07:56,319
+Let's look at a good case when our
+
+200
+00:07:54,479 --> 00:07:59,280
+sampling rate is high enough to meet the
+
+201
+00:07:56,319 --> 00:08:01,120
+sampling theorem's requirement.
+
+202
+00:07:59,280 --> 00:08:03,440
+The black curve here is our original
+
+203
+00:08:01,120 --> 00:08:05,919
+continuous signal. Think of it as the
+
+204
+00:08:03,440 --> 00:08:08,319
+true signal. The blue points show where
+
+205
+00:08:05,919 --> 00:08:11,599
+we took our samples. A limited number of
+
+206
+00:08:08,319 --> 00:08:13,759
+values spaced evenly in time.
+
+207
+00:08:11,599 --> 00:08:15,599
+Here's the magic. If the sampling rate
+
+208
+00:08:13,759 --> 00:08:17,599
+is greater than twice the maximum
+
+209
+00:08:15,599 --> 00:08:19,840
+frequency in the signal, the Nyquist
+
+210
+00:08:17,599 --> 00:08:21,360
+rate, then we can take these discrete
+
+211
+00:08:19,840 --> 00:08:23,599
+samples and use the Shannon
+
+212
+00:08:21,360 --> 00:08:26,240
+interpolation formula to reconstruct the
+
+213
+00:08:23,599 --> 00:08:28,400
+original signal perfectly.
+
+214
+00:08:26,240 --> 00:08:31,039
+When we do that here, the reconstructed
+
+215
+00:08:28,400 --> 00:08:33,599
+signal shown in red lies exactly on top
+
+216
+00:08:31,039 --> 00:08:35,440
+of the original black curve. They match
+
+217
+00:08:33,599 --> 00:08:37,200
+so perfectly that you can't even see the
+
+218
+00:08:35,440 --> 00:08:40,320
+difference.
+
+219
+00:08:37,200 --> 00:08:42,560
+This is the sampling theorem in action.
+
+220
+00:08:40,320 --> 00:08:44,560
+For band limited signals, as long as we
+
+221
+00:08:42,560 --> 00:08:46,560
+sample fast enough, we can go back and
+
+222
+00:08:44,560 --> 00:08:49,120
+forth between continuous and discrete
+
+223
+00:08:46,560 --> 00:08:51,440
+forms without losing information. You
+
+224
+00:08:49,120 --> 00:08:53,120
+can repeat this process over and over
+
+225
+00:08:51,440 --> 00:08:55,440
+with different sample sets, and it will
+
+226
+00:08:53,120 --> 00:08:57,600
+work every time.
+
+227
+00:08:55,440 --> 00:09:01,959
+In short, with the right sampling rate,
+
+228
+00:08:57,600 --> 00:09:01,959
+theory and practice agree perfectly.
+
+229
+00:09:03,519 --> 00:09:07,839
+Now, here's a bad case when the sampling
+
+230
+00:09:05,680 --> 00:09:10,000
+rate is too low.
+
+231
+00:09:07,839 --> 00:09:12,240
+The black curve is again our original
+
+232
+00:09:10,000 --> 00:09:14,480
+continuous signal. The blue points are
+
+233
+00:09:12,240 --> 00:09:16,160
+where we took our samples, and the red
+
+234
+00:09:14,480 --> 00:09:17,760
+curve is what we get when we try to
+
+235
+00:09:16,160 --> 00:09:19,600
+reconstruct the signal from those
+
+236
+00:09:17,760 --> 00:09:21,279
+samples.
+
+237
+00:09:19,600 --> 00:09:23,440
+At the sample locations, the
+
+238
+00:09:21,279 --> 00:09:25,600
+reconstructed red curve passes exactly
+
+239
+00:09:23,440 --> 00:09:28,240
+through the blue points. So, it matches
+
+240
+00:09:25,600 --> 00:09:30,000
+the original at those specific spots.
+
+241
+00:09:28,240 --> 00:09:31,920
+But between the sample points, the red
+
+242
+00:09:30,000 --> 00:09:33,920
+curve drifts far away from the true
+
+243
+00:09:31,920 --> 00:09:37,279
+black signal.
+
+244
+00:09:33,920 --> 00:09:38,959
+This mismatch is caused by aliasing.
+
+245
+00:09:37,279 --> 00:09:40,800
+Because our sampling rate is less than
+
+246
+00:09:38,959 --> 00:09:42,560
+twice the maximum frequency in the
+
+247
+00:09:40,800 --> 00:09:45,279
+signal, the repeated spectra in the
+
+248
+00:09:42,560 --> 00:09:47,200
+frequency domain overlap. That overlap
+
+249
+00:09:45,279 --> 00:09:49,279
+distorts the information and once it
+
+250
+00:09:47,200 --> 00:09:52,959
+happens, no amount of interpolation can
+
+251
+00:09:49,279 --> 00:09:54,800
+recover the original shape.
+
+252
+00:09:52,959 --> 00:09:56,640
+So while the reconstruction looks fine
+
+253
+00:09:54,800 --> 00:09:58,480
+exactly at the sampled points, the
+
+254
+00:09:56,640 --> 00:10:01,120
+continuous waveform in between is
+
+255
+00:09:58,480 --> 00:10:03,200
+completely wrong. This is why respecting
+
+256
+00:10:01,120 --> 00:10:05,279
+the sampling theorem is essential. If
+
+257
+00:10:03,200 --> 00:10:08,519
+you don't sample fast enough, the damage
+
+258
+00:10:05,279 --> 00:10:08,519
+is permanent.
+
+259
+00:10:10,000 --> 00:10:15,760
+Let's step back and see the big picture.
+
+260
+00:10:13,040 --> 00:10:17,760
+There are really two parts here.
+
+261
+00:10:15,760 --> 00:10:20,160
+On the top half, we have discretized the
+
+262
+00:10:17,760 --> 00:10:22,079
+signal in the time domain. This means we
+
+263
+00:10:20,160 --> 00:10:23,920
+start with a continuous signal, sample
+
+264
+00:10:22,079 --> 00:10:26,320
+it at regular intervals and get a
+
+265
+00:10:23,920 --> 00:10:29,120
+discrete set of values, something we can
+
+266
+00:10:26,320 --> 00:10:31,200
+store and process in a digital computer.
+
+267
+00:10:29,120 --> 00:10:34,640
+If the sampling theorem is satisfied,
+
+268
+00:10:31,200 --> 00:10:36,800
+this step causes no information loss.
+
+269
+00:10:34,640 --> 00:10:38,560
+But the story doesn't end there. Even
+
+270
+00:10:36,800 --> 00:10:40,399
+though our signal is now discrete in
+
+271
+00:10:38,560 --> 00:10:42,880
+time, its forier spectrum is still
+
+272
+00:10:40,399 --> 00:10:44,880
+continuous. And a continuous spectrum
+
+273
+00:10:42,880 --> 00:10:46,560
+cannot be stored directly in a computer
+
+274
+00:10:44,880 --> 00:10:48,240
+either.
+
+275
+00:10:46,560 --> 00:10:50,959
+That's where the second part comes in
+
+276
+00:10:48,240 --> 00:10:52,480
+discretizing the spectrum.
+
+277
+00:10:50,959 --> 00:10:54,320
+This is the central topic of this
+
+278
+00:10:52,480 --> 00:10:56,640
+lecture. The idea is to take the
+
+279
+00:10:54,320 --> 00:10:58,640
+continuous fora spectrum and multiply it
+
+280
+00:10:56,640 --> 00:11:00,800
+by a periodic train of delta functions
+
+281
+00:10:58,640 --> 00:11:02,720
+in the frequency domain. This
+
+282
+00:11:00,800 --> 00:11:04,560
+multiplication in frequency corresponds
+
+283
+00:11:02,720 --> 00:11:06,320
+to convolution in the time domain which
+
+284
+00:11:04,560 --> 00:11:09,040
+effectively copies our time domain
+
+285
+00:11:06,320 --> 00:11:12,880
+signal over and over again spaced apart
+
+286
+00:11:09,040 --> 00:11:14,880
+by a fixed period t.
+
+287
+00:11:12,880 --> 00:11:17,600
+In other words, sampling in one domain
+
+288
+00:11:14,880 --> 00:11:19,760
+causes repetition or duplication in the
+
+289
+00:11:17,600 --> 00:11:21,839
+other domain. When we discretize both
+
+290
+00:11:19,760 --> 00:11:23,519
+the time domain signal and the frequency
+
+291
+00:11:21,839 --> 00:11:26,880
+domain spectrum, we end up with a
+
+292
+00:11:23,519 --> 00:11:29,120
+periodic structure in both domains.
+
+293
+00:11:26,880 --> 00:11:31,120
+The key point here is that now both our
+
+294
+00:11:29,120 --> 00:11:33,839
+signal in time and its spectrum and
+
+295
+00:11:31,120 --> 00:11:35,519
+frequency are discrete and periodic.
+
+296
+00:11:33,839 --> 00:11:37,760
+This makes them fully compatible with
+
+297
+00:11:35,519 --> 00:11:39,200
+digital processing and this is the
+
+298
+00:11:37,760 --> 00:11:43,160
+foundation for moving toward the
+
+299
+00:11:39,200 --> 00:11:43,160
+discrete forier transform.
+
+300
+00:11:44,959 --> 00:11:48,880
+Signal sampling is a fundamental
+
+301
+00:11:46,880 --> 00:11:51,200
+concept, but it can be confusing if you
+
+302
+00:11:48,880 --> 00:11:54,079
+only look at it quickly. So, let's slow
+
+303
+00:11:51,200 --> 00:11:57,040
+down and really understand it. At the
+
+304
+00:11:54,079 --> 00:11:59,120
+top, we have our continuous signal FX.
+
+305
+00:11:57,040 --> 00:12:01,200
+This is defined for every value of X and
+
+306
+00:11:59,120 --> 00:12:05,680
+could represent anything, a sound wave,
+
+307
+00:12:01,200 --> 00:12:07,279
+an image profile, or a measured signal.
+
+308
+00:12:05,680 --> 00:12:10,000
+Next, we have what's called a SHA
+
+309
+00:12:07,279 --> 00:12:11,839
+function or an impulse train.
+
+310
+00:12:10,000 --> 00:12:14,639
+This is simply a series of delta
+
+311
+00:12:11,839 --> 00:12:16,560
+functions each space t units apart.
+
+312
+00:12:14,639 --> 00:12:18,399
+Mathematically, it's written as the sum
+
+313
+00:12:16,560 --> 00:12:21,200
+of delta functions where each one is
+
+314
+00:12:18,399 --> 00:12:23,360
+located at x= nt with n being an
+
+315
+00:12:21,200 --> 00:12:25,600
+integer. You can think of this impulse
+
+316
+00:12:23,360 --> 00:12:28,639
+train as a ruler that marks the exact
+
+317
+00:12:25,600 --> 00:12:30,959
+points where we'll take our samples.
+
+318
+00:12:28,639 --> 00:12:33,200
+When we multiply the continuous signal f
+
+319
+00:12:30,959 --> 00:12:35,920
+of x by this impulse train, we get the
+
+320
+00:12:33,200 --> 00:12:38,079
+sampled function. This multiplication is
+
+321
+00:12:35,920 --> 00:12:40,079
+done point by point. At each delta
+
+322
+00:12:38,079 --> 00:12:43,360
+function's location, we keep the value
+
+323
+00:12:40,079 --> 00:12:46,079
+of f ofx. Everywhere else, the result is
+
+324
+00:12:43,360 --> 00:12:47,760
+zero.
+
+325
+00:12:46,079 --> 00:12:50,079
+So the sampled signal is really the
+
+326
+00:12:47,760 --> 00:12:52,800
+original signal's values attached to the
+
+327
+00:12:50,079 --> 00:12:54,560
+impulses in the train. The impulses mark
+
+328
+00:12:52,800 --> 00:12:56,800
+the positions and the heights of the
+
+329
+00:12:54,560 --> 00:12:59,040
+impulses carry the signals values at
+
+330
+00:12:56,800 --> 00:13:00,959
+those positions.
+
+331
+00:12:59,040 --> 00:13:02,880
+In other words, the sampled function is
+
+332
+00:13:00,959 --> 00:13:06,079
+just the original function but only at
+
+333
+00:13:02,880 --> 00:13:07,839
+discrete regularly spaced points. This
+
+334
+00:13:06,079 --> 00:13:12,360
+is the first step in moving from the
+
+335
+00:13:07,839 --> 00:13:12,360
+continuous world to the digital world.
+
+336
+00:13:13,680 --> 00:13:17,600
+When we sample a signal in the time
+
+337
+00:13:15,440 --> 00:13:19,760
+domain or the spatial domain, it creates
+
+338
+00:13:17,600 --> 00:13:22,240
+a very specific effect in the frequency
+
+339
+00:13:19,760 --> 00:13:23,920
+domain. Sampling in one domain is
+
+340
+00:13:22,240 --> 00:13:26,079
+equivalent to performing a convolution
+
+341
+00:13:23,920 --> 00:13:28,320
+in the other domain.
+
+342
+00:13:26,079 --> 00:13:30,160
+Let's walk through it.
+
+343
+00:13:28,320 --> 00:13:32,800
+We start with our original spectrum
+
+344
+00:13:30,160 --> 00:13:35,040
+which we'll call f of u. Here u
+
+345
+00:13:32,800 --> 00:13:37,279
+represents frequency and uax is the
+
+346
+00:13:35,040 --> 00:13:39,519
+highest frequency present in the signal
+
+347
+00:13:37,279 --> 00:13:41,839
+its bandwidth.
+
+348
+00:13:39,519 --> 00:13:44,160
+When we multiply our signal in time by
+
+349
+00:13:41,839 --> 00:13:47,040
+an impulse train, a set of regularly
+
+350
+00:13:44,160 --> 00:13:49,920
+spaced spikes, that multiplication turns
+
+351
+00:13:47,040 --> 00:13:51,680
+into a convolution in frequency. The
+
+352
+00:13:49,920 --> 00:13:54,000
+result is that the original spectrum
+
+353
+00:13:51,680 --> 00:13:58,160
+gets repeated again and again spaced
+
+354
+00:13:54,000 --> 00:14:00,160
+apart by the sampling frequency.
+
+355
+00:13:58,160 --> 00:14:02,160
+In this diagram, the middle shape is the
+
+356
+00:14:00,160 --> 00:14:04,800
+original spectrum. To the left and
+
+357
+00:14:02,160 --> 00:14:07,120
+right, you can see identical copies. The
+
+358
+00:14:04,800 --> 00:14:09,120
+spacing between them is 1 / capital T,
+
+359
+00:14:07,120 --> 00:14:11,040
+where capital T is the sampling interval
+
+360
+00:14:09,120 --> 00:14:13,519
+in time.
+
+361
+00:14:11,040 --> 00:14:15,600
+If our sampling frequency, which is 1 /
+
+362
+00:14:13,519 --> 00:14:17,519
+T, is at least twice the maximum
+
+363
+00:14:15,600 --> 00:14:19,839
+frequency in the signal, then these
+
+364
+00:14:17,519 --> 00:14:21,600
+repeated copies don't touch each other.
+
+365
+00:14:19,839 --> 00:14:23,279
+In that case, we can simply keep the
+
+366
+00:14:21,600 --> 00:14:25,839
+central copy and reconstruct the
+
+367
+00:14:23,279 --> 00:14:27,920
+original signal perfectly.
+
+368
+00:14:25,839 --> 00:14:30,560
+But if we sample too slowly, the copies
+
+369
+00:14:27,920 --> 00:14:32,399
+overlap. This overlap distorts the
+
+370
+00:14:30,560 --> 00:14:34,560
+spectrum. And once that happens, there's
+
+371
+00:14:32,399 --> 00:14:37,040
+no way to separate the original from the
+
+372
+00:14:34,560 --> 00:14:41,959
+distortion. That's the aliasing problem
+
+373
+00:14:37,040 --> 00:14:41,959
+we saw in the earlier bad case example.
+
+374
+00:14:43,519 --> 00:14:48,480
+Here's the Nyquis theorem in action.
+
+375
+00:14:46,560 --> 00:14:50,639
+In the diagram, you can see the original
+
+376
+00:14:48,480 --> 00:14:52,639
+spectrum and its repeated copies created
+
+377
+00:14:50,639 --> 00:14:54,720
+by sampling.
+
+378
+00:14:52,639 --> 00:14:57,040
+If our sampling rate is too low, these
+
+379
+00:14:54,720 --> 00:14:58,800
+copies start to overlap. When that
+
+380
+00:14:57,040 --> 00:15:02,079
+happens, the frequency components from
+
+381
+00:14:58,800 --> 00:15:04,720
+one copy mix with those from another.
+
+382
+00:15:02,079 --> 00:15:06,639
+This is aliasing. And once it occurs, we
+
+383
+00:15:04,720 --> 00:15:08,880
+can't tell which part of the spectrum
+
+384
+00:15:06,639 --> 00:15:11,600
+came from the original signal and which
+
+385
+00:15:08,880 --> 00:15:13,920
+part came from the overlap.
+
+386
+00:15:11,600 --> 00:15:15,680
+To avoid aliasing, we must make sure
+
+387
+00:15:13,920 --> 00:15:18,720
+that the highest frequency in the
+
+388
+00:15:15,680 --> 00:15:21,120
+signal, we call it UMAX, is less than
+
+389
+00:15:18,720 --> 00:15:23,519
+one divided by twice the sampling
+
+390
+00:15:21,120 --> 00:15:25,440
+interval. In spoken terms, the sampling
+
+391
+00:15:23,519 --> 00:15:27,600
+frequency must be greater than twice
+
+392
+00:15:25,440 --> 00:15:31,040
+umax. This threshold is called the
+
+393
+00:15:27,600 --> 00:15:32,959
+Nyquist frequency.
+
+394
+00:15:31,040 --> 00:15:35,519
+When the condition is satisfied, we can
+
+395
+00:15:32,959 --> 00:15:37,519
+use a rectangular filter, often called a
+
+396
+00:15:35,519 --> 00:15:39,920
+gate function, to select just the
+
+397
+00:15:37,519 --> 00:15:42,079
+central copy of the spectrum. That
+
+398
+00:15:39,920 --> 00:15:44,000
+single copy contains all the information
+
+399
+00:15:42,079 --> 00:15:46,079
+needed to perfectly reconstruct the
+
+400
+00:15:44,000 --> 00:15:48,160
+original signal.
+
+401
+00:15:46,079 --> 00:15:50,320
+It's like DNA testing. You don't need
+
+402
+00:15:48,160 --> 00:15:51,839
+the whole organism, just a small sample
+
+403
+00:15:50,320 --> 00:15:54,160
+because it contains the complete
+
+404
+00:15:51,839 --> 00:15:56,079
+blueprint. In the same way, one clean
+
+405
+00:15:54,160 --> 00:15:57,920
+copy of the spectrum contains everything
+
+406
+00:15:56,079 --> 00:15:59,839
+we need.
+
+407
+00:15:57,920 --> 00:16:01,920
+But if the sampling rate is too low and
+
+408
+00:15:59,839 --> 00:16:04,320
+overlap happens, no filter can separate
+
+409
+00:16:01,920 --> 00:16:07,560
+the mixed components. The information is
+
+410
+00:16:04,320 --> 00:16:07,560
+lost forever.
+
+411
+00:16:09,120 --> 00:16:13,199
+Now, let's see why aliasing makes
+
+412
+00:16:10,720 --> 00:16:15,519
+recovery non-unique.
+
+413
+00:16:13,199 --> 00:16:16,959
+In this diagram, the red and blue curves
+
+414
+00:16:15,519 --> 00:16:19,600
+represent two different sets of
+
+415
+00:16:16,959 --> 00:16:21,600
+frequency components. When aliasing
+
+416
+00:16:19,600 --> 00:16:23,839
+happens, these components overlap in the
+
+417
+00:16:21,600 --> 00:16:25,680
+frequency domain. At the points where
+
+418
+00:16:23,839 --> 00:16:29,360
+they overlap, what we measure is just
+
+419
+00:16:25,680 --> 00:16:31,120
+the sum of their values.
+
+420
+00:16:29,360 --> 00:16:32,880
+For example, imagine that at a certain
+
+421
+00:16:31,120 --> 00:16:34,880
+frequency, the blue component has a
+
+422
+00:16:32,880 --> 00:16:37,279
+value of a and the red component also
+
+423
+00:16:34,880 --> 00:16:39,519
+has some value. When they overlap, all
+
+424
+00:16:37,279 --> 00:16:41,279
+we see is their sum. That means many
+
+425
+00:16:39,519 --> 00:16:44,560
+different combinations of blue and red
+
+426
+00:16:41,279 --> 00:16:46,880
+could produce the exact same total.
+
+427
+00:16:44,560 --> 00:16:48,800
+In other words, you can't tell exactly
+
+428
+00:16:46,880 --> 00:16:50,880
+how much came from the blue curve and
+
+429
+00:16:48,800 --> 00:16:52,880
+how much came from the red one. The
+
+430
+00:16:50,880 --> 00:16:54,639
+information about their contributions is
+
+431
+00:16:52,880 --> 00:16:57,120
+lost.
+
+432
+00:16:54,639 --> 00:16:59,440
+This is why aliasing is such a problem.
+
+433
+00:16:57,120 --> 00:17:01,920
+Once two spectra overlap, there is no
+
+434
+00:16:59,440 --> 00:17:03,759
+unique way to separate them. No matter
+
+435
+00:17:01,920 --> 00:17:05,760
+how you process the data, you can't
+
+436
+00:17:03,759 --> 00:17:07,679
+reconstruct the original spectrum with
+
+437
+00:17:05,760 --> 00:17:09,360
+certainty.
+
+438
+00:17:07,679 --> 00:17:11,919
+That's why the Nyquis theorem's
+
+439
+00:17:09,360 --> 00:17:14,959
+condition sampling faster than twice the
+
+440
+00:17:11,919 --> 00:17:16,799
+highest frequency is so important. It
+
+441
+00:17:14,959 --> 00:17:21,079
+prevents this kind of overlap, keeping
+
+442
+00:17:16,799 --> 00:17:21,079
+the spectrum unique and recoverable.
+
+443
+00:17:22,880 --> 00:17:27,520
+Up to this point, we've been talking
+
+444
+00:17:24,240 --> 00:17:29,520
+about aliasing and how to avoid it.
+
+445
+00:17:27,520 --> 00:17:31,360
+Let's now assume we've done that. Our
+
+446
+00:17:29,520 --> 00:17:34,320
+sampling rate is always high enough and
+
+447
+00:17:31,360 --> 00:17:36,720
+the spectra are well separated. Aliasing
+
+448
+00:17:34,320 --> 00:17:38,559
+is no longer an issue.
+
+449
+00:17:36,720 --> 00:17:41,120
+On the top row, you see our original
+
+450
+00:17:38,559 --> 00:17:43,120
+continuous time signal on the left. On
+
+451
+00:17:41,120 --> 00:17:45,200
+the right, it's been sampled. We now
+
+452
+00:17:43,120 --> 00:17:47,760
+have a series of discrete values at
+
+453
+00:17:45,200 --> 00:17:49,440
+regular time intervals.
+
+454
+00:17:47,760 --> 00:17:51,760
+On the bottom row, you see what this
+
+455
+00:17:49,440 --> 00:17:53,760
+means in the frequency domain. On the
+
+456
+00:17:51,760 --> 00:17:57,120
+left is the original spectrum limited to
+
+457
+00:17:53,760 --> 00:17:59,919
+a maximum frequency UAX. On the right is
+
+458
+00:17:57,120 --> 00:18:02,000
+the sampled spectrum, multiple non-over
+
+459
+00:17:59,919 --> 00:18:03,760
+overlapping copies spaced apart by the
+
+460
+00:18:02,000 --> 00:18:06,640
+sampling frequency, which is 1 over
+
+461
+00:18:03,760 --> 00:18:08,559
+capital T.
+
+462
+00:18:06,640 --> 00:18:10,000
+So yes, the signal is now discreet in
+
+463
+00:18:08,559 --> 00:18:12,720
+time and its spectrum is nicely
+
+464
+00:18:10,000 --> 00:18:14,799
+replicated without overlap.
+
+465
+00:18:12,720 --> 00:18:16,320
+But our job isn't finished yet. The
+
+466
+00:18:14,799 --> 00:18:18,480
+spectrum is still continuous in
+
+467
+00:18:16,320 --> 00:18:20,720
+frequency. And if we want to fully
+
+468
+00:18:18,480 --> 00:18:23,039
+digitize the signal so that both the
+
+469
+00:18:20,720 --> 00:18:25,120
+time domain and the frequency domain are
+
+470
+00:18:23,039 --> 00:18:26,720
+discrete, we still have another step to
+
+471
+00:18:25,120 --> 00:18:28,799
+go.
+
+472
+00:18:26,720 --> 00:18:30,320
+That step is discretizing the spectrum,
+
+473
+00:18:28,799 --> 00:18:33,320
+which is exactly where we're heading
+
+474
+00:18:30,320 --> 00:18:33,320
+next.
+
+475
+00:18:34,960 --> 00:18:39,200
+Now that our signal is discrete in time
+
+476
+00:18:36,960 --> 00:18:42,799
+and aliasing is avoided, the next step
+
+477
+00:18:39,200 --> 00:18:44,240
+is to discretise the forier spectrum.
+
+478
+00:18:42,799 --> 00:18:46,720
+On the right, we start with the
+
+479
+00:18:44,240 --> 00:18:48,880
+continuous periodic forier spectrum of
+
+480
+00:18:46,720 --> 00:18:50,559
+our sampled signal. The peaks are
+
+481
+00:18:48,880 --> 00:18:52,799
+separated because our time domain
+
+482
+00:18:50,559 --> 00:18:56,160
+sampling rate was high enough. That's
+
+483
+00:18:52,799 --> 00:18:58,000
+good. No overlap here. Our goal is to
+
+484
+00:18:56,160 --> 00:18:59,520
+make the frequency domain discreet as
+
+485
+00:18:58,000 --> 00:19:01,600
+well.
+
+486
+00:18:59,520 --> 00:19:03,919
+To do that, we multiply the spectrum by
+
+487
+00:19:01,600 --> 00:19:06,160
+a periodic train of impulses shown here
+
+488
+00:19:03,919 --> 00:19:07,840
+in green. This is just like what we did
+
+489
+00:19:06,160 --> 00:19:11,039
+before in the time domain, but now we're
+
+490
+00:19:07,840 --> 00:19:12,799
+applying it in the frequency domain.
+
+491
+00:19:11,039 --> 00:19:14,559
+Multiplication in the frequency domain
+
+492
+00:19:12,799 --> 00:19:16,240
+corresponds to convolution in the time
+
+493
+00:19:14,559 --> 00:19:18,160
+domain.
+
+494
+00:19:16,240 --> 00:19:20,400
+So when we apply this green impulse
+
+495
+00:19:18,160 --> 00:19:22,559
+train to the spectrum, the effect in the
+
+496
+00:19:20,400 --> 00:19:24,880
+time domain is that our discrete signal
+
+497
+00:19:22,559 --> 00:19:27,520
+gets duplicated at regular intervals
+
+498
+00:19:24,880 --> 00:19:30,480
+spaced by capital T.
+
+499
+00:19:27,520 --> 00:19:33,120
+Here deltaU the spacing between impulses
+
+500
+00:19:30,480 --> 00:19:35,280
+in the frequency domain equals 1 over
+
+501
+00:19:33,120 --> 00:19:36,960
+capital T where capital T is the period
+
+502
+00:19:35,280 --> 00:19:38,559
+of each repeated signal in the time
+
+503
+00:19:36,960 --> 00:19:40,640
+domain.
+
+504
+00:19:38,559 --> 00:19:42,960
+As before, we must choose our frequency
+
+505
+00:19:40,640 --> 00:19:45,120
+domain sampling rate carefully. The
+
+506
+00:19:42,960 --> 00:19:47,280
+impulses in frequency must be close
+
+507
+00:19:45,120 --> 00:19:50,000
+enough together. In other words, our
+
+508
+00:19:47,280 --> 00:19:52,960
+spacing deltaU must be small enough to
+
+509
+00:19:50,000 --> 00:19:54,960
+avoid overlaps in the time domain. This
+
+510
+00:19:52,960 --> 00:19:57,760
+is the same logic as before just in the
+
+511
+00:19:54,960 --> 00:19:59,600
+other domain.
+
+512
+00:19:57,760 --> 00:20:01,679
+By doing this we end up with a signal
+
+513
+00:19:59,600 --> 00:20:04,240
+that is discrete in both the time domain
+
+514
+00:20:01,679 --> 00:20:05,840
+and the frequency domain. This is the
+
+515
+00:20:04,240 --> 00:20:10,679
+essential step that brings us to the
+
+516
+00:20:05,840 --> 00:20:10,679
+discrete forier transform or DFT.
+
+517
+00:20:12,480 --> 00:20:16,160
+Let's restate the big idea in another
+
+518
+00:20:14,559 --> 00:20:18,080
+way.
+
+519
+00:20:16,160 --> 00:20:21,679
+We start with a continuous function in
+
+520
+00:20:18,080 --> 00:20:23,919
+the time domain which we'll call f of t.
+
+521
+00:20:21,679 --> 00:20:26,799
+It has a continuous forier transform
+
+522
+00:20:23,919 --> 00:20:29,280
+capital f of u in the frequency domain.
+
+523
+00:20:26,799 --> 00:20:31,360
+These two are perfectly related. One can
+
+524
+00:20:29,280 --> 00:20:34,919
+be transformed into the other with no
+
+525
+00:20:31,360 --> 00:20:34,919
+loss of information.
+
+526
+00:20:34,960 --> 00:20:39,120
+Now if we sample f of t at the nyquist
+
+527
+00:20:37,360 --> 00:20:41,360
+rate or higher, we get a discrete
+
+528
+00:20:39,120 --> 00:20:43,600
+version of the signal here shown as g of
+
+529
+00:20:41,360 --> 00:20:45,840
+t. And because our sampling rate
+
+530
+00:20:43,600 --> 00:20:47,360
+satisfies a theorem, there's no loss of
+
+531
+00:20:45,840 --> 00:20:49,360
+information in moving from the
+
+532
+00:20:47,360 --> 00:20:51,200
+continuous signal to its discrete
+
+533
+00:20:49,360 --> 00:20:54,080
+version.
+
+534
+00:20:51,200 --> 00:20:56,559
+That discrete time signal G of T also
+
+535
+00:20:54,080 --> 00:20:59,120
+has its own forier transform here
+
+536
+00:20:56,559 --> 00:21:00,720
+represented as capital G of U. And
+
+537
+00:20:59,120 --> 00:21:02,400
+again, as long as we have sampled
+
+538
+00:21:00,720 --> 00:21:04,080
+properly, this discrete spectrum
+
+539
+00:21:02,400 --> 00:21:08,720
+contains the same information as the
+
+540
+00:21:04,080 --> 00:21:10,400
+continuous spectrum capital F of U.
+
+541
+00:21:08,720 --> 00:21:13,120
+The key point is that the Forier
+
+542
+00:21:10,400 --> 00:21:15,919
+transform is an invertible process. That
+
+543
+00:21:13,120 --> 00:21:18,880
+means moving from f of t to capital f of
+
+544
+00:21:15,919 --> 00:21:20,559
+u or from g of t to capital g of u can
+
+545
+00:21:18,880 --> 00:21:22,640
+be done in either direction without
+
+546
+00:21:20,559 --> 00:21:26,480
+losing information as long as the
+
+547
+00:21:22,640 --> 00:21:28,320
+sampling theorem is respected.
+
+548
+00:21:26,480 --> 00:21:30,159
+So whether we choose to work in the
+
+549
+00:21:28,320 --> 00:21:32,640
+continuous domain or in the discrete
+
+550
+00:21:30,159 --> 00:21:34,640
+domain we can perform equivalent signal
+
+551
+00:21:32,640 --> 00:21:36,480
+analysis.
+
+552
+00:21:34,640 --> 00:21:39,120
+The difference is that in the real world
+
+553
+00:21:36,480 --> 00:21:40,799
+our computers are digital.
+
+554
+00:21:39,120 --> 00:21:42,960
+That means we do everything in the
+
+555
+00:21:40,799 --> 00:21:44,880
+discrete domain. But thanks to the
+
+556
+00:21:42,960 --> 00:21:46,960
+theory, we can be confident that our
+
+557
+00:21:44,880 --> 00:21:50,600
+results match what we would get in the
+
+558
+00:21:46,960 --> 00:21:50,600
+continuous world.
+
+559
+00:21:52,000 --> 00:21:55,520
+Let's now bring everything together in
+
+560
+00:21:53,760 --> 00:21:57,200
+one big picture, but with a bit more
+
+561
+00:21:55,520 --> 00:21:59,600
+detail.
+
+562
+00:21:57,200 --> 00:22:01,919
+We start with a continuous function f of
+
+563
+00:21:59,600 --> 00:22:04,559
+t and its continuous forier spectrum
+
+564
+00:22:01,919 --> 00:22:06,400
+capital f of u. Our goal is to sample
+
+565
+00:22:04,559 --> 00:22:08,159
+both the time domain and the frequency
+
+566
+00:22:06,400 --> 00:22:10,559
+domain in a way that makes sense for
+
+567
+00:22:08,159 --> 00:22:12,400
+digital processing.
+
+568
+00:22:10,559 --> 00:22:15,919
+First, let's ask how many samples will
+
+569
+00:22:12,400 --> 00:22:18,559
+we have in the time domain.
+
+570
+00:22:15,919 --> 00:22:21,039
+This depends on two things. The sampling
+
+571
+00:22:18,559 --> 00:22:23,200
+interval in time delta t. This is equal
+
+572
+00:22:21,039 --> 00:22:25,600
+to 1 over capital p where capital p is
+
+573
+00:22:23,200 --> 00:22:27,679
+the spacing in the frequency domain. The
+
+574
+00:22:25,600 --> 00:22:29,840
+smaller the delta t, the more data
+
+575
+00:22:27,679 --> 00:22:32,000
+points we collect.
+
+576
+00:22:29,840 --> 00:22:34,320
+The total duration of the signal capital
+
+577
+00:22:32,000 --> 00:22:36,559
+t, the longer we record, the more
+
+578
+00:22:34,320 --> 00:22:38,640
+samples we have.
+
+579
+00:22:36,559 --> 00:22:41,120
+The total number of samples in the time
+
+580
+00:22:38,640 --> 00:22:45,520
+domain, call it n, is simply the total
+
+581
+00:22:41,120 --> 00:22:47,280
+duration t / delta t. Since delta t is 1
+
+582
+00:22:45,520 --> 00:22:52,640
+/ p,
+
+583
+00:22:47,280 --> 00:22:54,240
+we can write n= t * p.
+
+584
+00:22:52,640 --> 00:22:56,000
+Now let's switch to the frequency
+
+585
+00:22:54,240 --> 00:22:58,159
+domain.
+
+586
+00:22:56,000 --> 00:23:00,480
+Here the total span of one period in
+
+587
+00:22:58,159 --> 00:23:02,559
+frequency is capital p. The sampling
+
+588
+00:23:00,480 --> 00:23:05,280
+interval in frequency delta is equal to
+
+589
+00:23:02,559 --> 00:23:07,440
+1 over capital t. So the total number of
+
+590
+00:23:05,280 --> 00:23:10,320
+samples in frequency over one period
+
+591
+00:23:07,440 --> 00:23:14,480
+call it M is the total span P divided by
+
+592
+00:23:10,320 --> 00:23:16,880
+deltaU. That's again P multiplied by T.
+
+593
+00:23:14,480 --> 00:23:18,960
+This symmetry is important. The number
+
+594
+00:23:16,880 --> 00:23:20,480
+of data points in the time domain and
+
+595
+00:23:18,960 --> 00:23:22,880
+the number of data points in the
+
+596
+00:23:20,480 --> 00:23:26,640
+frequency domain are the same both equal
+
+597
+00:23:22,880 --> 00:23:28,720
+to P multiplied by T.
+
+598
+00:23:26,640 --> 00:23:30,720
+So whether we're sampling in time or in
+
+599
+00:23:28,720 --> 00:23:32,320
+frequency, the total number of samples
+
+600
+00:23:30,720 --> 00:23:34,080
+is determined by the product of the
+
+601
+00:23:32,320 --> 00:23:36,799
+total span in one domain and the
+
+602
+00:23:34,080 --> 00:23:38,640
+sampling density in the other.
+
+603
+00:23:36,799 --> 00:23:41,039
+This is the balanced relationship that
+
+604
+00:23:38,640 --> 00:23:43,039
+underlies the discrete forier transform
+
+605
+00:23:41,039 --> 00:23:45,280
+and it's why we can move between time
+
+606
+00:23:43,039 --> 00:23:46,960
+and frequency representations so
+
+607
+00:23:45,280 --> 00:23:49,960
+efficiently in digital signal
+
+608
+00:23:46,960 --> 00:23:49,960
+processing.
+
+609
+00:23:51,679 --> 00:23:55,200
+Now let's highlight the key variables
+
+610
+00:23:53,520 --> 00:23:58,240
+and the important relationship between
+
+611
+00:23:55,200 --> 00:24:01,440
+them. In the time domain, the total
+
+612
+00:23:58,240 --> 00:24:03,760
+number of samples is t * p.
+
+613
+00:24:01,440 --> 00:24:05,840
+Here capital t is the total duration of
+
+614
+00:24:03,760 --> 00:24:08,240
+the signal and capital p is the spacing
+
+615
+00:24:05,840 --> 00:24:11,120
+in the frequency domain. So we have n
+
+616
+00:24:08,240 --> 00:24:12,880
+equal to t multiplied by p.
+
+617
+00:24:11,120 --> 00:24:15,039
+In the frequency domain, we have the
+
+618
+00:24:12,880 --> 00:24:17,840
+exact same number of samples also t
+
+619
+00:24:15,039 --> 00:24:20,080
+multiplied by p. We call this number m.
+
+620
+00:24:17,840 --> 00:24:22,559
+And here P is the total span of one
+
+621
+00:24:20,080 --> 00:24:25,360
+period in frequency while T controls the
+
+622
+00:24:22,559 --> 00:24:27,440
+sampling density in frequency.
+
+623
+00:24:25,360 --> 00:24:30,240
+If we take the reciprocal of N, we get a
+
+624
+00:24:27,440 --> 00:24:33,520
+very useful relationship. 1 / N equals
+
+625
+00:24:30,240 --> 00:24:35,840
+delta T * deltaU where deltat t is the
+
+626
+00:24:33,520 --> 00:24:39,039
+sampling step size in time and deltaU is
+
+627
+00:24:35,840 --> 00:24:40,799
+the sampling step size and frequency.
+
+628
+00:24:39,039 --> 00:24:43,600
+This is an expression of the duality
+
+629
+00:24:40,799 --> 00:24:46,159
+between time and frequency.
+
+630
+00:24:43,600 --> 00:24:48,320
+If we fix the total number of samples, n
+
+631
+00:24:46,159 --> 00:24:50,559
+making delta t smaller, meaning we
+
+632
+00:24:48,320 --> 00:24:52,880
+sample more finely in time, will make
+
+633
+00:24:50,559 --> 00:24:55,440
+deltaU larger, meaning the frequency
+
+634
+00:24:52,880 --> 00:24:58,559
+samples are spaced farther apart. And
+
+635
+00:24:55,440 --> 00:25:00,559
+the reverse is also true. In simple
+
+636
+00:24:58,559 --> 00:25:02,400
+terms, if you zoom in more on one
+
+637
+00:25:00,559 --> 00:25:04,480
+domain, you automatically zoom out in
+
+638
+00:25:02,400 --> 00:25:06,640
+the other. This balance is built into
+
+639
+00:25:04,480 --> 00:25:08,480
+the mathematics of the forier transform
+
+640
+00:25:06,640 --> 00:25:11,799
+and is something we'll use later when we
+
+641
+00:25:08,480 --> 00:25:11,799
+look at applications.
+
+642
+00:25:13,679 --> 00:25:16,880
+Now we're ready to move from the
+
+643
+00:25:15,039 --> 00:25:19,600
+continuous Foriera transform to the
+
+644
+00:25:16,880 --> 00:25:21,760
+discrete forier transform.
+
+645
+00:25:19,600 --> 00:25:23,679
+When we sample a continuous signal, it
+
+646
+00:25:21,760 --> 00:25:26,559
+stops being a smooth curve that exists
+
+647
+00:25:23,679 --> 00:25:28,400
+at every moment in time.
+
+648
+00:25:26,559 --> 00:25:30,480
+Instead, it becomes the product of the
+
+649
+00:25:28,400 --> 00:25:32,400
+original signal and a series of equally
+
+650
+00:25:30,480 --> 00:25:35,039
+spaced spikes at what we call delta
+
+651
+00:25:32,400 --> 00:25:37,360
+functions. These spikes occur at time
+
+652
+00:25:35,039 --> 00:25:39,520
+intervals of deltat t, which means each
+
+653
+00:25:37,360 --> 00:25:42,000
+spike is separated by 1 divided by
+
+654
+00:25:39,520 --> 00:25:43,600
+capital p in time.
+
+655
+00:25:42,000 --> 00:25:45,440
+In other words, we only keep the
+
+656
+00:25:43,600 --> 00:25:48,400
+signal's value at these regular time
+
+657
+00:25:45,440 --> 00:25:50,480
+points and everywhere else is zero.
+
+658
+00:25:48,400 --> 00:25:52,960
+We can describe this mathematically as a
+
+659
+00:25:50,480 --> 00:25:56,000
+sum of delta spikes.
+
+660
+00:25:52,960 --> 00:25:58,640
+Each spike occurs at a time equal to n /
+
+661
+00:25:56,000 --> 00:26:00,960
+p, where n goes from 0 up to n minus
+
+662
+00:25:58,640 --> 00:26:03,120
+one. The height of each spike is simply
+
+663
+00:26:00,960 --> 00:26:05,760
+the value of the original signal at that
+
+664
+00:26:03,120 --> 00:26:07,600
+time. You can imagine it as a row of
+
+665
+00:26:05,760 --> 00:26:09,600
+vertical lines each carrying the
+
+666
+00:26:07,600 --> 00:26:12,240
+amplitude of the signal at its sampling
+
+667
+00:26:09,600 --> 00:26:14,080
+point.
+
+668
+00:26:12,240 --> 00:26:16,320
+This gives us the discrete version of
+
+669
+00:26:14,080 --> 00:26:17,840
+the signal in the time domain. Even
+
+670
+00:26:16,320 --> 00:26:19,600
+though it's just a set of separate
+
+671
+00:26:17,840 --> 00:26:21,600
+values, it still represents a function
+
+672
+00:26:19,600 --> 00:26:23,520
+of time. So we can take its fur
+
+673
+00:26:21,600 --> 00:26:25,520
+transform.
+
+674
+00:26:23,520 --> 00:26:27,600
+When we do that, the furier transform
+
+675
+00:26:25,520 --> 00:26:30,320
+turns into a sum over all the sampled
+
+676
+00:26:27,600 --> 00:26:32,880
+points. The oscillating factor, what we
+
+677
+00:26:30,320 --> 00:26:35,600
+call the kernel, still has the form e to
+
+678
+00:26:32,880 --> 00:26:39,200
+the power of minus j * 2<unk>i * the
+
+679
+00:26:35,600 --> 00:26:40,960
+frequency u * n / p. But now we only
+
+680
+00:26:39,200 --> 00:26:42,559
+evaluate it at those sampled time
+
+681
+00:26:40,960 --> 00:26:44,400
+points.
+
+682
+00:26:42,559 --> 00:26:47,039
+The outcome is what we call the direct
+
+683
+00:26:44,400 --> 00:26:48,880
+forier transform of the sampled signal.
+
+684
+00:26:47,039 --> 00:26:51,200
+This is how we connect the continuous
+
+685
+00:26:48,880 --> 00:26:53,360
+theory to the practical digital form of
+
+686
+00:26:51,200 --> 00:26:56,840
+the discrete forier transform that we
+
+687
+00:26:53,360 --> 00:26:56,840
+use in computation.
+
+688
+00:26:58,559 --> 00:27:02,159
+The discrete forier transform we just
+
+689
+00:27:00,480 --> 00:27:05,520
+discussed is actually a periodic
+
+690
+00:27:02,159 --> 00:27:08,720
+function. Let's understand why.
+
+691
+00:27:05,520 --> 00:27:11,039
+Think back to the fier series.
+
+692
+00:27:08,720 --> 00:27:13,279
+In the time domain, a furier series is
+
+693
+00:27:11,039 --> 00:27:16,240
+built from sinosoidal components. Each
+
+694
+00:27:13,279 --> 00:27:17,919
+one a sine or cosine wave. And by
+
+695
+00:27:16,240 --> 00:27:20,080
+definition, each of these components is
+
+696
+00:27:17,919 --> 00:27:22,159
+periodic. Whether we have just one
+
+697
+00:27:20,080 --> 00:27:25,279
+frequency or many, the result will still
+
+698
+00:27:22,159 --> 00:27:27,200
+be periodic.
+
+699
+00:27:25,279 --> 00:27:29,360
+Now in this expression at the top the
+
+700
+00:27:27,200 --> 00:27:31,600
+left hand side shows the forier series
+
+701
+00:27:29,360 --> 00:27:34,240
+in the time domain with terms involving
+
+702
+00:27:31,600 --> 00:27:36,240
+t over capital t.
+
+703
+00:27:34,240 --> 00:27:38,480
+On the right hand side we have an almost
+
+704
+00:27:36,240 --> 00:27:41,120
+identical formula but here the variable
+
+705
+00:27:38,480 --> 00:27:43,600
+t has been replaced by u and t has been
+
+706
+00:27:41,120 --> 00:27:45,840
+replaced by p. This tells us that in the
+
+707
+00:27:43,600 --> 00:27:47,440
+frequency domain we also get a periodic
+
+708
+00:27:45,840 --> 00:27:49,520
+function.
+
+709
+00:27:47,440 --> 00:27:51,279
+The periodicity comes directly from the
+
+710
+00:27:49,520 --> 00:27:52,960
+fact that the forier transform of a
+
+711
+00:27:51,279 --> 00:27:55,520
+sampled signal is made up of these
+
+712
+00:27:52,960 --> 00:27:58,080
+repeating sinosoidal components. Each
+
+713
+00:27:55,520 --> 00:27:59,840
+one repeats over and over giving us a
+
+714
+00:27:58,080 --> 00:28:03,120
+continuous function in the frequency
+
+715
+00:27:59,840 --> 00:28:04,880
+domain that is also periodic.
+
+716
+00:28:03,120 --> 00:28:07,120
+This is exactly what we saw in the big
+
+717
+00:28:04,880 --> 00:28:09,279
+picture earlier. When we sample in one
+
+718
+00:28:07,120 --> 00:28:13,399
+domain, the forier transform becomes
+
+719
+00:28:09,279 --> 00:28:13,399
+periodic in the other domain.
+
+720
+00:28:14,880 --> 00:28:18,960
+Up to now we've mostly talked about
+
+721
+00:28:16,559 --> 00:28:21,039
+sampling in the time domain. But we can
+
+722
+00:28:18,960 --> 00:28:22,720
+also sample directly in the farier
+
+723
+00:28:21,039 --> 00:28:24,799
+domain.
+
+724
+00:28:22,720 --> 00:28:28,640
+Let's start with the forier transform of
+
+725
+00:28:24,799 --> 00:28:30,799
+our signal fhat of u. If we multiply
+
+726
+00:28:28,640 --> 00:28:33,120
+this spectrum by a train of delta
+
+727
+00:28:30,799 --> 00:28:35,360
+functions in the frequency domain just
+
+728
+00:28:33,120 --> 00:28:36,960
+like we did earlier in the time domain,
+
+729
+00:28:35,360 --> 00:28:39,360
+we get a sampled version of the
+
+730
+00:28:36,960 --> 00:28:41,679
+spectrum. That means we only keep its
+
+731
+00:28:39,360 --> 00:28:44,559
+values at certain frequency points which
+
+732
+00:28:41,679 --> 00:28:47,919
+we can label as U0 u1 all the way up to
+
+733
+00:28:44,559 --> 00:28:49,919
+u n minus one.
+
+734
+00:28:47,919 --> 00:28:52,880
+Here the spacing between these frequency
+
+735
+00:28:49,919 --> 00:28:55,120
+samples is 1 / capital t where capital t
+
+736
+00:28:52,880 --> 00:28:57,679
+is the period in the time domain. The
+
+737
+00:28:55,120 --> 00:29:00,000
+index m runs from 0 to n minus one just
+
+738
+00:28:57,679 --> 00:29:01,760
+like it did in the time domain case. And
+
+739
+00:29:00,000 --> 00:29:03,840
+the total number of samples in the
+
+740
+00:29:01,760 --> 00:29:08,399
+frequency domain is the same as in the
+
+741
+00:29:03,840 --> 00:29:10,480
+time domain both equal to capital n.
+
+742
+00:29:08,399 --> 00:29:13,039
+Mathematically, we can write the sampled
+
+743
+00:29:10,480 --> 00:29:16,399
+spectrum at position u m as a sum over
+
+744
+00:29:13,039 --> 00:29:19,039
+all the time domain samples f of n / p
+
+745
+00:29:16,399 --> 00:29:21,360
+multiplied by a complex exponential. The
+
+746
+00:29:19,039 --> 00:29:25,440
+exponent has a nice symmetry. It's e to
+
+747
+00:29:21,360 --> 00:29:27,039
+the^ of minus j 2<unk>i n * m / capital
+
+748
+00:29:25,440 --> 00:29:29,279
+n.
+
+749
+00:29:27,039 --> 00:29:31,600
+This symmetry is important. It shows
+
+750
+00:29:29,279 --> 00:29:33,600
+that sampling in the forier domain has
+
+751
+00:29:31,600 --> 00:29:36,159
+exactly the same mathematical structure
+
+752
+00:29:33,600 --> 00:29:38,240
+as sampling in the time domain. The
+
+753
+00:29:36,159 --> 00:29:41,679
+formulas look almost identical just with
+
+754
+00:29:38,240 --> 00:29:43,760
+the roles of time and frequency swapped.
+
+755
+00:29:41,679 --> 00:29:46,480
+This parallel is one of the reasons the
+
+756
+00:29:43,760 --> 00:29:48,240
+discrete forier transform is so elegant.
+
+757
+00:29:46,480 --> 00:29:50,240
+It's the same process whether you're
+
+758
+00:29:48,240 --> 00:29:53,799
+thinking in terms of time samples or
+
+759
+00:29:50,240 --> 00:29:53,799
+frequency samples.
+
+760
+00:29:55,600 --> 00:29:59,360
+Now we can state the discrete forier
+
+761
+00:29:57,440 --> 00:30:02,559
+transform.
+
+762
+00:29:59,360 --> 00:30:07,919
+We've sampled the signal at times tn= to
+
+763
+00:30:02,559 --> 00:30:10,480
+n / capital p for n= to 01 n minus one.
+
+764
+00:30:07,919 --> 00:30:14,559
+We'll read the spectrum at frequencies
+
+765
+00:30:10,480 --> 00:30:19,039
+um m= to m / capital t for m= to 0 1
+
+766
+00:30:14,559 --> 00:30:22,720
+nus1 with n= to t * p.
+
+767
+00:30:19,039 --> 00:30:26,080
+The DFT value at um M is sum from n= 0
+
+768
+00:30:22,720 --> 00:30:30,000
+to n minus1 f of n / p into e to the
+
+769
+00:30:26,080 --> 00:30:31,840
+power of minus j 2 pi mn /n.
+
+770
+00:30:30,000 --> 00:30:35,039
+This is just an inner product with a
+
+771
+00:30:31,840 --> 00:30:37,279
+complex sinosoid of frequency index m.
+
+772
+00:30:35,039 --> 00:30:39,120
+Each output is complex. Its magnitude
+
+773
+00:30:37,279 --> 00:30:41,520
+tells us how much of that frequency is
+
+774
+00:30:39,120 --> 00:30:43,279
+present and its angle the phase tells us
+
+775
+00:30:41,520 --> 00:30:46,720
+the shift.
+
+776
+00:30:43,279 --> 00:30:49,679
+A few quick anchors. TN= to N / P are
+
+777
+00:30:46,720 --> 00:30:53,279
+the time samples. U M equals to M / T
+
+778
+00:30:49,679 --> 00:30:56,880
+are the frequency samples.
+
+779
+00:30:53,279 --> 00:31:00,880
+The exponential E the minus J2 pi MN /N
+
+780
+00:30:56,880 --> 00:31:03,120
+is the rotating basis wave.
+
+781
+00:31:00,880 --> 00:31:05,360
+Next, we'll write the inverse D of T and
+
+782
+00:31:03,120 --> 00:31:07,520
+see why a factor of 1 /N naturally
+
+783
+00:31:05,360 --> 00:31:11,080
+appears. So we can reconstruct the time
+
+784
+00:31:07,520 --> 00:31:11,080
+samples exactly.
+
+785
+00:31:12,720 --> 00:31:17,679
+Up to now, we've been writing our time
+
+786
+00:31:14,480 --> 00:31:20,880
+samples as T0, T1, T2, and so on. and
+
+787
+00:31:17,679 --> 00:31:23,039
+our frequency samples as U0, U1, U2 and
+
+788
+00:31:20,880 --> 00:31:24,559
+so on. But when we work with sample
+
+789
+00:31:23,039 --> 00:31:28,799
+data, what really matters are the
+
+790
+00:31:24,559 --> 00:31:30,960
+integer positions of these samples.
+
+791
+00:31:28,799 --> 00:31:33,760
+So to make things simpler, we'll label
+
+792
+00:31:30,960 --> 00:31:36,480
+them using integers in square brackets.
+
+793
+00:31:33,760 --> 00:31:39,919
+For example, f of0 means the value of
+
+794
+00:31:36,480 --> 00:31:42,000
+the function at time sample t0.
+
+795
+00:31:39,919 --> 00:31:43,760
+Of one means the value at time sample
+
+796
+00:31:42,000 --> 00:31:45,840
+t1.
+
+797
+00:31:43,760 --> 00:31:49,120
+f of n minus one means the value at the
+
+798
+00:31:45,840 --> 00:31:51,360
+last time sample tn minus one.
+
+799
+00:31:49,120 --> 00:31:54,240
+We do the same in the frequency domain.
+
+800
+00:31:51,360 --> 00:31:57,120
+fhat of 0 means the fora transform value
+
+801
+00:31:54,240 --> 00:32:00,399
+at frequency sample u0.
+
+802
+00:31:57,120 --> 00:32:03,519
+fhat of 1 is at u1 and so on up to fhat
+
+803
+00:32:00,399 --> 00:32:05,840
+of n minus one.
+
+804
+00:32:03,519 --> 00:32:08,640
+With this notation, the discrete fier
+
+805
+00:32:05,840 --> 00:32:11,600
+transform reads like this. fhat of m
+
+806
+00:32:08,640 --> 00:32:14,399
+equals the sum from n= 0 to n minus 1 of
+
+807
+00:32:11,600 --> 00:32:18,799
+f of n multiplied by e ^ of minus j
+
+808
+00:32:14,399 --> 00:32:20,880
+2<unk> m * n / n.
+
+809
+00:32:18,799 --> 00:32:23,039
+Here n is the index for time domain
+
+810
+00:32:20,880 --> 00:32:24,960
+samples and m is the index for frequency
+
+811
+00:32:23,039 --> 00:32:27,279
+components.
+
+812
+00:32:24,960 --> 00:32:29,519
+Each term is just the sample value f of
+
+813
+00:32:27,279 --> 00:32:32,159
+n multiplied by a sinosoidal basis wave
+
+814
+00:32:29,519 --> 00:32:33,840
+at frequency index m. Adding all those
+
+815
+00:32:32,159 --> 00:32:36,080
+terms together gives the strength of
+
+816
+00:32:33,840 --> 00:32:38,720
+that frequency in the signal. That's our
+
+817
+00:32:36,080 --> 00:32:40,640
+forier coefficient.
+
+818
+00:32:38,720 --> 00:32:43,840
+We can also see this as a matrix
+
+819
+00:32:40,640 --> 00:32:46,720
+multiplication. The time samples f of 0,
+
+820
+00:32:43,840 --> 00:32:48,399
+f of 1, f of n minus one form a column
+
+821
+00:32:46,720 --> 00:32:51,039
+vector.
+
+822
+00:32:48,399 --> 00:32:52,640
+They are multiplied by an n byn matrix
+
+823
+00:32:51,039 --> 00:32:55,760
+whose entries are these complex
+
+824
+00:32:52,640 --> 00:32:58,880
+exponentials e to the power of minus j 2
+
+825
+00:32:55,760 --> 00:33:00,880
+m * n / n.
+
+826
+00:32:58,880 --> 00:33:03,120
+The result is another vector containing
+
+827
+00:33:00,880 --> 00:33:08,159
+all the frequency samples fhat of zero
+
+828
+00:33:03,120 --> 00:33:10,399
+fhat of one fhat of n minus one.
+
+829
+00:33:08,159 --> 00:33:12,960
+For the first frequency index m equals
+
+830
+00:33:10,399 --> 00:33:15,279
+z, every exponential equals 1. So the
+
+831
+00:33:12,960 --> 00:33:19,360
+first forier coefficient is simply the
+
+832
+00:33:15,279 --> 00:33:21,519
+sum of all the time samples.
+
+833
+00:33:19,360 --> 00:33:23,600
+Later we'll talk about scaling factors
+
+834
+00:33:21,519 --> 00:33:26,080
+to account for the sampling step size.
+
+835
+00:33:23,600 --> 00:33:28,720
+But for now, this integer index form
+
+836
+00:33:26,080 --> 00:33:31,960
+keeps the DFT definition clean and easy
+
+837
+00:33:28,720 --> 00:33:31,960
+to use.
+
+838
+00:33:33,519 --> 00:33:38,000
+Once we have all the discrete forier
+
+839
+00:33:35,519 --> 00:33:40,799
+coefficients that is fhat of m for m
+
+840
+00:33:38,000 --> 00:33:42,720
+equals 0 up to n minus one, we can
+
+841
+00:33:40,799 --> 00:33:44,880
+recover the original sampled signal
+
+842
+00:33:42,720 --> 00:33:47,600
+values f of n by using the inverse
+
+843
+00:33:44,880 --> 00:33:51,440
+discrete forier transform.
+
+844
+00:33:47,600 --> 00:33:54,399
+In words, the formula says f of n = 1 /
+
+845
+00:33:51,440 --> 00:33:57,760
+capital n times the sum from m= 0 to n
+
+846
+00:33:54,399 --> 00:34:03,679
+minus one of f of multiplied e to the
+
+847
+00:33:57,760 --> 00:34:06,240
+power of + j 2 pi m * n / n.
+
+848
+00:34:03,679 --> 00:34:09,040
+Here n is the time sample index and m is
+
+849
+00:34:06,240 --> 00:34:10,720
+the frequency sample index.
+
+850
+00:34:09,040 --> 00:34:12,240
+The plus sign in the exponent is
+
+851
+00:34:10,720 --> 00:34:14,000
+important. It's the opposite of the
+
+852
+00:34:12,240 --> 00:34:17,040
+minus sign we used in the forward
+
+853
+00:34:14,000 --> 00:34:19,119
+discrete furier transform. This sign
+
+854
+00:34:17,040 --> 00:34:20,879
+change is what allows us to reverse the
+
+855
+00:34:19,119 --> 00:34:23,040
+process.
+
+856
+00:34:20,879 --> 00:34:25,200
+The factor of one over capital n also
+
+857
+00:34:23,040 --> 00:34:27,440
+plays a key role.
+
+858
+00:34:25,200 --> 00:34:29,760
+When we computed fhat of zero in the
+
+859
+00:34:27,440 --> 00:34:31,760
+forward transform, we were summing all
+
+860
+00:34:29,760 --> 00:34:33,679
+the time samples, but we didn't average
+
+861
+00:34:31,760 --> 00:34:35,359
+them. This factor in the inverse
+
+862
+00:34:33,679 --> 00:34:38,320
+transform takes care of that averaging
+
+863
+00:34:35,359 --> 00:34:40,560
+so we get the correct values back.
+
+864
+00:34:38,320 --> 00:34:42,159
+Some people prefer a symmetric version.
+
+865
+00:34:40,560 --> 00:34:43,919
+Instead of putting all the scaling in
+
+866
+00:34:42,159 --> 00:34:46,320
+the inverse transform, they split it
+
+867
+00:34:43,919 --> 00:34:48,320
+evenly using 1 over the square roo<unk>
+
+868
+00:34:46,320 --> 00:34:50,480
+of n in both the forward and inverse
+
+869
+00:34:48,320 --> 00:34:53,440
+formulas. This is purely a matter of
+
+870
+00:34:50,480 --> 00:34:56,079
+definition. The math works either way.
+
+871
+00:34:53,440 --> 00:34:58,000
+You can also see this in matrix form. In
+
+872
+00:34:56,079 --> 00:35:00,400
+the forward transform, we multiply the
+
+873
+00:34:58,000 --> 00:35:04,119
+time sample vector by the foraier matrix
+
+874
+00:35:00,400 --> 00:35:04,119
+of complex exponentials.
+
+875
+00:35:04,240 --> 00:35:08,160
+In the inverse transform, we multiply
+
+876
+00:35:06,240 --> 00:35:10,079
+the frequency sample vector by the
+
+877
+00:35:08,160 --> 00:35:12,480
+inverse of that matrix, which has the
+
+878
+00:35:10,079 --> 00:35:14,800
+plus sign in the exponent and the 1 /n
+
+879
+00:35:12,480 --> 00:35:17,040
+factor out front.
+
+880
+00:35:14,800 --> 00:35:19,119
+With these two formulas, forward and
+
+881
+00:35:17,040 --> 00:35:21,599
+inverse, we can move back and forth
+
+882
+00:35:19,119 --> 00:35:23,839
+between a discretized time domain signal
+
+883
+00:35:21,599 --> 00:35:25,920
+and its discretized frequency domain
+
+884
+00:35:23,839 --> 00:35:27,440
+spectrum with no information loss as
+
+885
+00:35:25,920 --> 00:35:31,560
+long as the sampling theorem was
+
+886
+00:35:27,440 --> 00:35:31,560
+satisfied in the first place.
+
+887
+00:35:33,119 --> 00:35:37,839
+Let's talk about why we have this factor
+
+888
+00:35:34,880 --> 00:35:40,320
+of 1 / capital n in the inverse discrete
+
+889
+00:35:37,839 --> 00:35:42,720
+forier transform.
+
+890
+00:35:40,320 --> 00:35:46,400
+Earlier I mentioned that 1 / n is equal
+
+891
+00:35:42,720 --> 00:35:48,320
+to delta t * deltau. Here delta t is the
+
+892
+00:35:46,400 --> 00:35:50,400
+sampling interval in the time domain and
+
+893
+00:35:48,320 --> 00:35:52,640
+deltau is the sampling interval in the
+
+894
+00:35:50,400 --> 00:35:54,480
+frequency domain.
+
+895
+00:35:52,640 --> 00:35:56,560
+Think of it this way. When we move from
+
+896
+00:35:54,480 --> 00:35:58,480
+the continuous forier transform to the
+
+897
+00:35:56,560 --> 00:36:01,839
+discrete version, we're replacing
+
+898
+00:35:58,480 --> 00:36:03,920
+continuous integrals with sums.
+
+899
+00:36:01,839 --> 00:36:05,760
+In the time domain, we can picture our
+
+900
+00:36:03,920 --> 00:36:07,359
+original continuous function as being
+
+901
+00:36:05,760 --> 00:36:09,920
+approximated by a collection of
+
+902
+00:36:07,359 --> 00:36:12,320
+rectangles. Each rectangle has a height
+
+903
+00:36:09,920 --> 00:36:14,640
+equal to the sample value f of n and a
+
+904
+00:36:12,320 --> 00:36:16,960
+width of delta t.
+
+905
+00:36:14,640 --> 00:36:19,520
+Likewise, in the frequency domain, the
+
+906
+00:36:16,960 --> 00:36:22,000
+forier spectrum is also represented as a
+
+907
+00:36:19,520 --> 00:36:24,560
+collection of rectangles. Each one has a
+
+908
+00:36:22,000 --> 00:36:26,720
+height equal to fhat of m and a width of
+
+909
+00:36:24,560 --> 00:36:28,800
+deltau.
+
+910
+00:36:26,720 --> 00:36:30,640
+When we go from the spectrum back to the
+
+911
+00:36:28,800 --> 00:36:33,760
+signal, we're essentially adding up all
+
+912
+00:36:30,640 --> 00:36:36,720
+of these little rectangular pieces.
+
+913
+00:36:33,760 --> 00:36:38,079
+The factor of delta t * deltaU captures
+
+914
+00:36:36,720 --> 00:36:40,640
+the combined effect of this
+
+915
+00:36:38,079 --> 00:36:43,760
+discretization in both domains. And
+
+916
+00:36:40,640 --> 00:36:45,440
+since 1 / n= delta t * deltau, that's
+
+917
+00:36:43,760 --> 00:36:47,520
+why the factor appears in the inverse
+
+918
+00:36:45,440 --> 00:36:49,599
+dft.
+
+919
+00:36:47,520 --> 00:36:51,520
+This is the discrete equivalent of what
+
+920
+00:36:49,599 --> 00:36:54,000
+happens in the continuous forier
+
+921
+00:36:51,520 --> 00:36:56,400
+transform where we also have a scaling
+
+922
+00:36:54,000 --> 00:36:58,079
+factor in the inverse formula. The
+
+923
+00:36:56,400 --> 00:37:00,240
+difference is that here the scaling is
+
+924
+00:36:58,079 --> 00:37:03,480
+tied directly to our sampling steps in
+
+925
+00:37:00,240 --> 00:37:03,480
+both domains.
+
+926
+00:37:05,280 --> 00:37:09,359
+The factor of 1 / capital n comes
+
+927
+00:37:07,440 --> 00:37:11,440
+directly from how the continuous forier
+
+928
+00:37:09,359 --> 00:37:13,040
+transform becomes a discrete one when we
+
+929
+00:37:11,440 --> 00:37:14,720
+sample.
+
+930
+00:37:13,040 --> 00:37:16,880
+In the continuous world, both the
+
+931
+00:37:14,720 --> 00:37:18,880
+forward and inverse forier transforms
+
+932
+00:37:16,880 --> 00:37:20,880
+are integrals.
+
+933
+00:37:18,880 --> 00:37:23,359
+But when we digitize the process, we
+
+934
+00:37:20,880 --> 00:37:25,200
+replace those integrals with sums.
+
+935
+00:37:23,359 --> 00:37:27,359
+That's what we see in this figure. The
+
+936
+00:37:25,200 --> 00:37:30,240
+smooth area under the curve is replaced
+
+937
+00:37:27,359 --> 00:37:32,400
+by a set of thin rectangular strips.
+
+938
+00:37:30,240 --> 00:37:34,400
+Each strip has a height equal to the
+
+939
+00:37:32,400 --> 00:37:37,599
+function value at a sample point and a
+
+940
+00:37:34,400 --> 00:37:39,920
+width equal to the sampling interval.
+
+941
+00:37:37,599 --> 00:37:42,880
+In the time domain, that width is delta
+
+942
+00:37:39,920 --> 00:37:44,960
+t, the spacing between time samples. In
+
+943
+00:37:42,880 --> 00:37:48,160
+the frequency domain, it's deltaU, the
+
+944
+00:37:44,960 --> 00:37:50,160
+spacing between frequency samples.
+
+945
+00:37:48,160 --> 00:37:52,320
+When we perform a forward Forier
+
+946
+00:37:50,160 --> 00:37:54,880
+transform, the discretization introduces
+
+947
+00:37:52,320 --> 00:37:56,800
+a factor of delta T.
+
+948
+00:37:54,880 --> 00:37:58,880
+When we perform the inverse transform,
+
+949
+00:37:56,800 --> 00:38:01,440
+the discretization introduces a factor
+
+950
+00:37:58,880 --> 00:38:04,160
+of deltaU. Multiply those together and
+
+951
+00:38:01,440 --> 00:38:07,359
+you get delta T * deltaU, which we know
+
+952
+00:38:04,160 --> 00:38:09,280
+is equal to 1 / capital N.
+
+953
+00:38:07,359 --> 00:38:12,240
+This is why in the inverse discrete
+
+954
+00:38:09,280 --> 00:38:14,480
+furier transform we include the 1 / n
+
+955
+00:38:12,240 --> 00:38:16,880
+factor. It accounts for both steps of
+
+956
+00:38:14,480 --> 00:38:18,800
+discretization. First in time then in
+
+957
+00:38:16,880 --> 00:38:20,560
+frequency.
+
+958
+00:38:18,800 --> 00:38:22,320
+And remember there's one more difference
+
+959
+00:38:20,560 --> 00:38:25,200
+between the forward and inverse
+
+960
+00:38:22,320 --> 00:38:27,200
+formulas. The forward transform uses a
+
+961
+00:38:25,200 --> 00:38:30,079
+minus sign in the exponent and the
+
+962
+00:38:27,200 --> 00:38:31,680
+inverse transform uses a plus sign. This
+
+963
+00:38:30,079 --> 00:38:35,920
+sign change is what lets the two
+
+964
+00:38:31,680 --> 00:38:38,079
+operations perfectly undo each other.
+
+965
+00:38:35,920 --> 00:38:40,640
+So the 1 / n is there because of how
+
+966
+00:38:38,079 --> 00:38:43,200
+sampling replaces integrals with sums in
+
+967
+00:38:40,640 --> 00:38:45,200
+both domains. It's the scaling factor
+
+968
+00:38:43,200 --> 00:38:49,480
+that ensures the forward and inverse
+
+969
+00:38:45,200 --> 00:38:49,480
+transforms work together exactly.
+
+970
+00:38:51,200 --> 00:38:54,640
+The second way to look at the discrete
+
+971
+00:38:52,800 --> 00:38:56,880
+forier transform is from the perspective
+
+972
+00:38:54,640 --> 00:38:58,880
+of harmonics.
+
+973
+00:38:56,880 --> 00:39:00,960
+When we do a forward DFT, we can think
+
+974
+00:38:58,880 --> 00:39:03,200
+of it as multiplying our vector of time
+
+975
+00:39:00,960 --> 00:39:06,160
+samples by a square matrix of complex
+
+976
+00:39:03,200 --> 00:39:08,720
+exponentials. This matrix acts like a
+
+977
+00:39:06,160 --> 00:39:10,560
+rotation in a highdimensional space. It
+
+978
+00:39:08,720 --> 00:39:12,960
+changes our coordinates from the time
+
+979
+00:39:10,560 --> 00:39:15,520
+domain representation to the frequency
+
+980
+00:39:12,960 --> 00:39:17,920
+domain representation.
+
+981
+00:39:15,520 --> 00:39:19,599
+The set of forier basis functions the
+
+982
+00:39:17,920 --> 00:39:23,760
+sinosoids at different discrete
+
+983
+00:39:19,599 --> 00:39:25,920
+frequencies form an orthonormal basis.
+
+984
+00:39:23,760 --> 00:39:28,320
+That means they are all perpendicular to
+
+985
+00:39:25,920 --> 00:39:30,160
+each other in this mathematical space.
+
+986
+00:39:28,320 --> 00:39:32,320
+The forward transform rotates our
+
+987
+00:39:30,160 --> 00:39:34,880
+coordinates from the time axis basis to
+
+988
+00:39:32,320 --> 00:39:37,599
+the frequency axis basis. The inverse
+
+989
+00:39:34,880 --> 00:39:40,960
+transform simply rotates them back. This
+
+990
+00:39:37,599 --> 00:39:43,119
+idea generalizes.
+
+991
+00:39:40,960 --> 00:39:45,760
+In one dimension, the forier basis is
+
+992
+00:39:43,119 --> 00:39:48,079
+just signs and cosiness. But in two or
+
+993
+00:39:45,760 --> 00:39:50,720
+three dimensions or on a sphere, we can
+
+994
+00:39:48,079 --> 00:39:53,200
+define more complex sinosoidal patterns
+
+995
+00:39:50,720 --> 00:39:55,200
+called harmonics. On a sphere, these are
+
+996
+00:39:53,200 --> 00:39:57,040
+the spherical harmonics. each one
+
+997
+00:39:55,200 --> 00:39:59,680
+corresponding to a certain frequency
+
+998
+00:39:57,040 --> 00:40:01,520
+pattern over the surface.
+
+999
+00:39:59,680 --> 00:40:03,440
+The key property is the same. If you
+
+1000
+00:40:01,520 --> 00:40:05,920
+take two different harmonics and compute
+
+1001
+00:40:03,440 --> 00:40:08,240
+their inner product, the result is zero.
+
+1002
+00:40:05,920 --> 00:40:09,839
+They are orthogonal. If you take one
+
+1003
+00:40:08,240 --> 00:40:14,000
+harmonic and do an inner product with
+
+1004
+00:40:09,839 --> 00:40:16,000
+itself, you get one. It's normalized.
+
+1005
+00:40:14,000 --> 00:40:18,160
+So whether we are talking about simple
+
+1006
+00:40:16,000 --> 00:40:20,400
+signs and coins or more complex
+
+1007
+00:40:18,160 --> 00:40:22,480
+spherical harmonics, the forier
+
+1008
+00:40:20,400 --> 00:40:24,640
+transform is still just expressing a
+
+1009
+00:40:22,480 --> 00:40:26,800
+signal in terms of an orthogonal set of
+
+1010
+00:40:24,640 --> 00:40:30,040
+basis functions then rotating between
+
+1011
+00:40:26,800 --> 00:40:30,040
+these bases.
+
+1012
+00:40:31,599 --> 00:40:35,040
+Here we're looking at a particular
+
+1013
+00:40:33,040 --> 00:40:36,800
+orthonormal basis used in forier
+
+1014
+00:40:35,040 --> 00:40:40,240
+analysis.
+
+1015
+00:40:36,800 --> 00:40:45,119
+Our basis functions have the form e ^ of
+
+1016
+00:40:40,240 --> 00:40:47,280
+j 2 pi m * t / capital t where m is the
+
+1017
+00:40:45,119 --> 00:40:49,440
+frequency index.
+
+1018
+00:40:47,280 --> 00:40:51,200
+If we take two of these basis functions
+
+1019
+00:40:49,440 --> 00:40:54,160
+one with index m and the other with
+
+1020
+00:40:51,200 --> 00:40:56,079
+index n and compute their inner product
+
+1021
+00:40:54,160 --> 00:40:58,240
+meaning we integrate the product of one
+
+1022
+00:40:56,079 --> 00:41:00,160
+and the complex conjugate of the other
+
+1023
+00:40:58,240 --> 00:41:03,920
+over the full interval from zero to
+
+1024
+00:41:00,160 --> 00:41:05,920
+capital t. Two things can happen.
+
+1025
+00:41:03,920 --> 00:41:08,079
+If m and n are different, the integral
+
+1026
+00:41:05,920 --> 00:41:10,000
+is zero. That means the functions are
+
+1027
+00:41:08,079 --> 00:41:11,760
+orthogonal. They share no common
+
+1028
+00:41:10,000 --> 00:41:13,920
+component.
+
+1029
+00:41:11,760 --> 00:41:16,319
+If m and n are the same, the integral is
+
+1030
+00:41:13,920 --> 00:41:20,160
+one. That means each basis function has
+
+1031
+00:41:16,319 --> 00:41:22,319
+a unit norm or length equal to one.
+
+1032
+00:41:20,160 --> 00:41:24,160
+This is exactly what orthonormal means.
+
+1033
+00:41:22,319 --> 00:41:27,119
+The functions are orthogonal to each
+
+1034
+00:41:24,160 --> 00:41:29,040
+other and each one has length one.
+
+1035
+00:41:27,119 --> 00:41:31,520
+Because the Forier basis has this
+
+1036
+00:41:29,040 --> 00:41:33,839
+orthonormal property, we can represent
+
+1037
+00:41:31,520 --> 00:41:36,160
+any signal as a sum of these basis
+
+1038
+00:41:33,839 --> 00:41:38,160
+functions without losing information.
+
+1039
+00:41:36,160 --> 00:41:40,000
+And we can go back and forth between the
+
+1040
+00:41:38,160 --> 00:41:42,160
+time domain representation and the
+
+1041
+00:41:40,000 --> 00:41:44,400
+frequency domain representation using
+
+1042
+00:41:42,160 --> 00:41:46,800
+the discrete forier transform and its
+
+1043
+00:41:44,400 --> 00:41:48,640
+inverse knowing that the relationship is
+
+1044
+00:41:46,800 --> 00:41:51,640
+exact when the sampling theorem is
+
+1045
+00:41:48,640 --> 00:41:51,640
+satisfied.
+
+1046
+00:41:53,359 --> 00:41:57,599
+What we see here is just another way to
+
+1047
+00:41:55,280 --> 00:41:59,920
+write the discrete forier transform and
+
+1048
+00:41:57,599 --> 00:42:01,680
+its inverse. Same math, just different
+
+1049
+00:41:59,920 --> 00:42:03,280
+symbols.
+
+1050
+00:42:01,680 --> 00:42:05,200
+You'll often see different papers or
+
+1051
+00:42:03,280 --> 00:42:06,800
+books use different notations. So, it's
+
+1052
+00:42:05,200 --> 00:42:09,200
+important to recognize that they all
+
+1053
+00:42:06,800 --> 00:42:11,040
+mean the same thing.
+
+1054
+00:42:09,200 --> 00:42:13,040
+Let's say we have n data points in the
+
+1055
+00:42:11,040 --> 00:42:15,599
+time domain.
+
+1056
+00:42:13,040 --> 00:42:18,240
+We'll call them h k where k runs from 0
+
+1057
+00:42:15,599 --> 00:42:20,160
+to n minus one. These are our measured
+
+1058
+00:42:18,240 --> 00:42:22,000
+samples. They could represent anything
+
+1059
+00:42:20,160 --> 00:42:23,839
+such as temperature values taken at
+
+1060
+00:42:22,000 --> 00:42:25,200
+different times.
+
+1061
+00:42:23,839 --> 00:42:27,760
+To get the frequency domain
+
+1062
+00:42:25,200 --> 00:42:31,119
+representation, we compute hn the forier
+
+1063
+00:42:27,760 --> 00:42:35,119
+coefficients using the formula hn= the
+
+1064
+00:42:31,119 --> 00:42:40,000
+sum from k= 0 to n -1 of h k * e ^ of
+
+1065
+00:42:35,119 --> 00:42:41,760
+minus j 2 pi k / n.
+
+1066
+00:42:40,000 --> 00:42:43,920
+This is the forward discrete forier
+
+1067
+00:42:41,760 --> 00:42:45,760
+transform. The minus sign in the
+
+1068
+00:42:43,920 --> 00:42:47,599
+exponent tells us we're rotating our
+
+1069
+00:42:45,760 --> 00:42:50,160
+coordinates in one direction in this
+
+1070
+00:42:47,599 --> 00:42:52,000
+n-dimensional space.
+
+1071
+00:42:50,160 --> 00:42:54,400
+The inverse transform takes us back from
+
+1072
+00:42:52,000 --> 00:42:58,800
+the frequency coefficients hn to the
+
+1073
+00:42:54,400 --> 00:43:04,000
+time samples hk. hk= 1 / n * the sum
+
+1074
+00:42:58,800 --> 00:43:08,000
+from n= 0 to n minus1 of hn * e^ + j 2
+
+1075
+00:43:04,000 --> 00:43:10,240
+pi kn / n.
+
+1076
+00:43:08,000 --> 00:43:12,720
+Here the plus sign in the exponent means
+
+1077
+00:43:10,240 --> 00:43:15,440
+we're rotating back and the factor of 1
+
+1078
+00:43:12,720 --> 00:43:17,359
+/ n is the scaling we discussed earlier.
+
+1079
+00:43:15,440 --> 00:43:19,760
+It accounts for the sampling steps in
+
+1080
+00:43:17,359 --> 00:43:21,920
+both time and frequency. Some
+
+1081
+00:43:19,760 --> 00:43:23,520
+definitions split the scaling evenly
+
+1082
+00:43:21,920 --> 00:43:25,280
+between the forward and inverse
+
+1083
+00:43:23,520 --> 00:43:27,440
+transforms to make them look perfectly
+
+1084
+00:43:25,280 --> 00:43:29,280
+symmetric. But that's just a matter of
+
+1085
+00:43:27,440 --> 00:43:32,000
+convention.
+
+1086
+00:43:29,280 --> 00:43:35,359
+The key points we have n samples. So we
+
+1087
+00:43:32,000 --> 00:43:37,440
+only need n orthogonal basis functions.
+
+1088
+00:43:35,359 --> 00:43:39,520
+Those basis functions are harmonics
+
+1089
+00:43:37,440 --> 00:43:41,359
+whose frequencies differ by a constant
+
+1090
+00:43:39,520 --> 00:43:43,599
+increment.
+
+1091
+00:43:41,359 --> 00:43:45,920
+The forward and inverse transforms are
+
+1092
+00:43:43,599 --> 00:43:47,839
+nearly symmetric. The main difference is
+
+1093
+00:43:45,920 --> 00:43:50,400
+the sign in the exponent and where we
+
+1094
+00:43:47,839 --> 00:43:52,480
+put the scaling factor.
+
+1095
+00:43:50,400 --> 00:43:54,960
+From a computational point of view, each
+
+1096
+00:43:52,480 --> 00:43:57,200
+row of the forier transform matrix has n
+
+1097
+00:43:54,960 --> 00:43:59,520
+elements. To compute one for
+
+1098
+00:43:57,200 --> 00:44:01,760
+coefficient, we do n multiplications and
+
+1099
+00:43:59,520 --> 00:44:03,760
+n additions. Since we have n
+
+1100
+00:44:01,760 --> 00:44:06,800
+coefficients to compute, the total work
+
+1101
+00:44:03,760 --> 00:44:08,960
+is proportional to n^ squ.
+
+1102
+00:44:06,800 --> 00:44:10,720
+This n squared growth in computations
+
+1103
+00:44:08,960 --> 00:44:12,960
+was a big deal in the early days of
+
+1104
+00:44:10,720 --> 00:44:15,200
+signal processing when n could be very
+
+1105
+00:44:12,960 --> 00:44:17,920
+large. That's why the development of the
+
+1106
+00:44:15,200 --> 00:44:19,599
+fastfor transform or fft was such a
+
+1107
+00:44:17,920 --> 00:44:22,599
+breakthrough. It reduced this cost
+
+1108
+00:44:19,599 --> 00:44:22,599
+dramatically.
+
+1109
+00:44:24,319 --> 00:44:29,680
+The fast forier transform or FFT is an
+
+1110
+00:44:27,760 --> 00:44:32,720
+efficient algorithm for computing the
+
+1111
+00:44:29,680 --> 00:44:35,040
+discrete forier transform.
+
+1112
+00:44:32,720 --> 00:44:37,839
+It was published by Kulie and Tuki in
+
+1113
+00:44:35,040 --> 00:44:40,640
+1965 and it completely changed the way
+
+1114
+00:44:37,839 --> 00:44:42,640
+we do signal processing.
+
+1115
+00:44:40,640 --> 00:44:45,280
+To give you an idea of its impact in
+
+1116
+00:44:42,640 --> 00:44:47,839
+1969 analyzing
+
+1117
+00:44:45,280 --> 00:44:50,800
+148 data points from a seismic trace
+
+1118
+00:44:47,839 --> 00:44:53,520
+using the standard DFT took more than 13
+
+1119
+00:44:50,800 --> 00:44:55,920
+hours. using the FFT on the exact same
+
+1120
+00:44:53,520 --> 00:45:00,640
+machine, the same analysis took just 2.4
+
+1121
+00:44:55,920 --> 00:45:02,480
+seconds. That's an enormous improvement.
+
+1122
+00:45:00,640 --> 00:45:05,839
+I remember when I was in primary school,
+
+1123
+00:45:02,480 --> 00:45:08,160
+a 2000 point seismic data analysis could
+
+1124
+00:45:05,839 --> 00:45:10,240
+take more than a full day to process.
+
+1125
+00:45:08,160 --> 00:45:13,200
+But with FFT, the same task could be
+
+1126
+00:45:10,240 --> 00:45:15,119
+finished in under 3 seconds.
+
+1127
+00:45:13,200 --> 00:45:17,200
+This kind of speed up is critical in
+
+1128
+00:45:15,119 --> 00:45:19,280
+many applications, especially those that
+
+1129
+00:45:17,200 --> 00:45:21,280
+need real-time results. Whether it's
+
+1130
+00:45:19,280 --> 00:45:23,680
+analyzing signals from an airplane
+
+1131
+00:45:21,280 --> 00:45:25,040
+sensors, monitoring seismic activity, or
+
+1132
+00:45:23,680 --> 00:45:27,040
+performing real-time image
+
+1133
+00:45:25,040 --> 00:45:29,440
+reconstruction,
+
+1134
+00:45:27,040 --> 00:45:32,800
+the reason FFT is so powerful is that it
+
+1135
+00:45:29,440 --> 00:45:35,599
+reduces the computational complexity.
+
+1136
+00:45:32,800 --> 00:45:38,000
+A naive DFT requires about n squared
+
+1137
+00:45:35,599 --> 00:45:41,119
+operations. That's n multiplications and
+
+1138
+00:45:38,000 --> 00:45:44,400
+additions for each of the n outputs.
+
+1139
+00:45:41,119 --> 00:45:49,440
+The FFT reduces this to n* log base 2 of
+
+1140
+00:45:44,400 --> 00:45:52,079
+n operations. That's a huge difference.
+
+1141
+00:45:49,440 --> 00:45:54,640
+For example, if n is 1,000, the log base
+
+1142
+00:45:52,079 --> 00:45:56,720
+2 of n is about 10. So instead of doing
+
+1143
+00:45:54,640 --> 00:45:59,280
+a million operations, we only need about
+
+1144
+00:45:56,720 --> 00:46:01,920
+10,000. The larger n gets, the more
+
+1145
+00:45:59,280 --> 00:46:04,480
+dramatic the savings become.
+
+1146
+00:46:01,920 --> 00:46:06,720
+Because of this efficiency, FFT still
+
+1147
+00:46:04,480 --> 00:46:09,040
+plays an essential role in modern signal
+
+1148
+00:46:06,720 --> 00:46:10,960
+processing, and it's also widely used in
+
+1149
+00:46:09,040 --> 00:46:12,560
+areas like medical imaging, machine
+
+1150
+00:46:10,960 --> 00:46:15,560
+learning, and convolutionbased
+
+1151
+00:46:12,560 --> 00:46:15,560
+computations.
+
+1152
+00:46:17,440 --> 00:46:21,359
+Because the inverse discrete forier
+
+1153
+00:46:19,440 --> 00:46:23,440
+transform is so similar to the forward
+
+1154
+00:46:21,359 --> 00:46:25,920
+transform, we can design a fast
+
+1155
+00:46:23,440 --> 00:46:29,280
+algorithm for it as well. This is called
+
+1156
+00:46:25,920 --> 00:46:31,680
+the inverse FFT or IFF.
+
+1157
+00:46:29,280 --> 00:46:34,480
+In mat lab, the FFT function computes
+
+1158
+00:46:31,680 --> 00:46:37,359
+the forward FFT and the iff function
+
+1159
+00:46:34,480 --> 00:46:41,280
+computes the inverse FFT. For example,
+
+1160
+00:46:37,359 --> 00:46:43,520
+FFT of XN computes an endpoint FFT. If
+
+1161
+00:46:41,280 --> 00:46:45,520
+the vector X has fewer than N points, it
+
+1162
+00:46:43,520 --> 00:46:48,319
+pads with zeros. If it has more, it
+
+1163
+00:46:45,520 --> 00:46:51,359
+truncates. The IFFT works the same way,
+
+1164
+00:46:48,319 --> 00:46:53,200
+just in reverse.
+
+1165
+00:46:51,359 --> 00:46:55,520
+If we were to implement the forier
+
+1166
+00:46:53,200 --> 00:46:57,920
+transform exactly as in the mathematical
+
+1167
+00:46:55,520 --> 00:47:01,040
+definition, we would do a summation for
+
+1168
+00:46:57,920 --> 00:47:03,040
+each frequency index k. Each summation
+
+1169
+00:47:01,040 --> 00:47:05,040
+is essentially an inner product. It
+
+1170
+00:47:03,040 --> 00:47:07,280
+requires n multiplications and n
+
+1171
+00:47:05,040 --> 00:47:10,240
+additions. And we need to do this for
+
+1172
+00:47:07,280 --> 00:47:14,400
+each of the n output points. That's n *
+
+1173
+00:47:10,240 --> 00:47:16,560
+n operations, n^ squ in total.
+
+1174
+00:47:14,400 --> 00:47:18,480
+The FFT and IFFF are like built-in
+
+1175
+00:47:16,560 --> 00:47:20,079
+shortcuts.
+
+1176
+00:47:18,480 --> 00:47:22,319
+You don't need to know all the details
+
+1177
+00:47:20,079 --> 00:47:24,079
+of how they work to use them. Just like
+
+1178
+00:47:22,319 --> 00:47:25,760
+you don't need to know how your phone
+
+1179
+00:47:24,079 --> 00:47:28,560
+connects to your friend when you press
+
+1180
+00:47:25,760 --> 00:47:31,280
+the call button, you can treat FFT and
+
+1181
+00:47:28,560 --> 00:47:33,040
+if blackboxes, you give them the data
+
+1182
+00:47:31,280 --> 00:47:34,800
+and they give you the result quickly and
+
+1183
+00:47:33,040 --> 00:47:38,480
+efficiently.
+
+1184
+00:47:34,800 --> 00:47:41,359
+With FFT and IFFT, Fieralis becomes
+
+1185
+00:47:38,480 --> 00:47:43,440
+practical for realtime work.
+
+1186
+00:47:41,359 --> 00:47:46,000
+Once we can efficiently move between the
+
+1187
+00:47:43,440 --> 00:47:47,520
+time domain and the frequency domain, we
+
+1188
+00:47:46,000 --> 00:47:49,920
+can use this power for many
+
+1189
+00:47:47,520 --> 00:47:52,000
+applications. Performing convolution,
+
+1190
+00:47:49,920 --> 00:47:53,839
+estimating spectra, removing noise,
+
+1191
+00:47:52,000 --> 00:47:57,640
+detecting patterns or contours in
+
+1192
+00:47:53,839 --> 00:47:57,640
+images, and much more.
+
+1193
+00:47:59,040 --> 00:48:02,640
+Let's look at our first example. How to
+
+1194
+00:48:00,880 --> 00:48:05,760
+compute convolution using the fast
+
+1195
+00:48:02,640 --> 00:48:07,599
+forier transform or FFT.
+
+1196
+00:48:05,760 --> 00:48:10,000
+You already know the direct method, the
+
+1197
+00:48:07,599 --> 00:48:12,000
+one we practiced in class. You take one
+
+1198
+00:48:10,000 --> 00:48:14,240
+sequence, flip it, shift it, multiply
+
+1199
+00:48:12,000 --> 00:48:16,560
+corresponding terms and sum them up.
+
+1200
+00:48:14,240 --> 00:48:18,480
+Then you repeat for each shift. This
+
+1201
+00:48:16,560 --> 00:48:20,480
+gives the convolution directly in the
+
+1202
+00:48:18,480 --> 00:48:22,400
+time domain.
+
+1203
+00:48:20,480 --> 00:48:24,720
+If the first sequence has length n and
+
+1204
+00:48:22,400 --> 00:48:27,760
+the second has length m, the convolution
+
+1205
+00:48:24,720 --> 00:48:29,200
+result has n + m minus one points.
+
+1206
+00:48:27,760 --> 00:48:31,520
+That's how many shifts we need to
+
+1207
+00:48:29,200 --> 00:48:33,280
+perform. And in terms of computation,
+
+1208
+00:48:31,520 --> 00:48:35,440
+this direct method takes time
+
+1209
+00:48:33,280 --> 00:48:38,160
+proportional to n squares, where n is
+
+1210
+00:48:35,440 --> 00:48:40,079
+roughly the size of the data.
+
+1211
+00:48:38,160 --> 00:48:42,400
+But there's a much faster indirect
+
+1212
+00:48:40,079 --> 00:48:44,160
+method. Instead of doing the convolution
+
+1213
+00:48:42,400 --> 00:48:48,880
+directly in the time domain, we switch
+
+1214
+00:48:44,160 --> 00:48:51,200
+to the frequency domain using the FFT.
+
+1215
+00:48:48,880 --> 00:48:53,520
+Here's the mat lab approach. First
+
+1216
+00:48:51,200 --> 00:48:55,839
+compute the FFT of X. That gives us its
+
+1217
+00:48:53,520 --> 00:48:58,240
+frequency spectrum.
+
+1218
+00:48:55,839 --> 00:49:01,440
+Then compute the FFT of Y, the spectrum
+
+1219
+00:48:58,240 --> 00:49:03,280
+of the filter or second sequence.
+
+1220
+00:49:01,440 --> 00:49:05,760
+In the frequency domain, convolution
+
+1221
+00:49:03,280 --> 00:49:07,760
+turns into multiplication. So we simply
+
+1222
+00:49:05,760 --> 00:49:09,359
+multiply the two spectra element by
+
+1223
+00:49:07,760 --> 00:49:11,760
+element.
+
+1224
+00:49:09,359 --> 00:49:14,880
+Finally apply the inverse FFT to that
+
+1225
+00:49:11,760 --> 00:49:16,640
+product to return to the time domain.
+
+1226
+00:49:14,880 --> 00:49:18,640
+This works because of the convolution
+
+1227
+00:49:16,640 --> 00:49:20,720
+theorem. It says convolution in the time
+
+1228
+00:49:18,640 --> 00:49:23,440
+domain is equivalent to multiplication
+
+1229
+00:49:20,720 --> 00:49:25,200
+in the frequency domain.
+
+1230
+00:49:23,440 --> 00:49:27,520
+If you compare the results from the
+
+1231
+00:49:25,200 --> 00:49:30,720
+direct method and the FFTbased method in
+
+1232
+00:49:27,520 --> 00:49:33,440
+mat lab, you'll see they match exactly.
+
+1233
+00:49:30,720 --> 00:49:36,720
+The key difference is efficiency. Direct
+
+1234
+00:49:33,440 --> 00:49:39,359
+convolution about n square operations.
+
+1235
+00:49:36,720 --> 00:49:42,880
+FFTbased convolution about n log n
+
+1236
+00:49:39,359 --> 00:49:45,680
+operations much faster for large n. One
+
+1237
+00:49:42,880 --> 00:49:47,599
+small detail in discrete forier analysis
+
+1238
+00:49:45,680 --> 00:49:50,240
+both the time domain and the frequency
+
+1239
+00:49:47,599 --> 00:49:52,960
+domain are treated as periodic. That
+
+1240
+00:49:50,240 --> 00:49:55,040
+means this fftbased convolution actually
+
+1241
+00:49:52,960 --> 00:49:58,839
+performs circular convolution unless you
+
+1242
+00:49:55,040 --> 00:49:58,839
+handle padding carefully.
+
+1243
+00:50:00,319 --> 00:50:04,880
+Let's look at a second example. And
+
+1244
+00:50:02,079 --> 00:50:06,800
+here's where things get interesting.
+
+1245
+00:50:04,880 --> 00:50:09,040
+We again compute convolution in two
+
+1246
+00:50:06,800 --> 00:50:11,119
+ways. First, the direct method in the
+
+1247
+00:50:09,040 --> 00:50:13,359
+time domain.
+
+1248
+00:50:11,119 --> 00:50:15,280
+Second, the FFTbased method multiplying
+
+1249
+00:50:13,359 --> 00:50:18,319
+in the frequency domain and taking the
+
+1250
+00:50:15,280 --> 00:50:21,920
+inverse FFT. This time the results are
+
+1251
+00:50:18,319 --> 00:50:23,520
+different. Why?
+
+1252
+00:50:21,920 --> 00:50:26,240
+It comes down to the fact that in
+
+1253
+00:50:23,520 --> 00:50:28,559
+discrete furier analysis, our signals
+
+1254
+00:50:26,240 --> 00:50:31,200
+are treated as periodic, not single
+
+1255
+00:50:28,559 --> 00:50:33,760
+isolated sequences, but infinitely
+
+1256
+00:50:31,200 --> 00:50:36,000
+repeated copies.
+
+1257
+00:50:33,760 --> 00:50:37,839
+Imagine X as one segment in time and Y
+
+1258
+00:50:36,000 --> 00:50:39,760
+as another.
+
+1259
+00:50:37,839 --> 00:50:41,520
+In the continuous world, when we shift
+
+1260
+00:50:39,760 --> 00:50:43,359
+one relative to the other, we only
+
+1261
+00:50:41,520 --> 00:50:45,680
+overlap the part that exists in the
+
+1262
+00:50:43,359 --> 00:50:47,839
+original copy. But in the discrete
+
+1263
+00:50:45,680 --> 00:50:49,760
+furier model, when you shift, parts of
+
+1264
+00:50:47,839 --> 00:50:52,480
+one copy can wrap around and overlap
+
+1265
+00:50:49,760 --> 00:50:54,559
+with the start of the other copy.
+
+1266
+00:50:52,480 --> 00:50:56,960
+It's as if your neighbor signal is
+
+1267
+00:50:54,559 --> 00:50:58,559
+spilling into your yard and at the same
+
+1268
+00:50:56,960 --> 00:51:01,359
+time you're spilling into your other
+
+1269
+00:50:58,559 --> 00:51:03,440
+neighbor's yard on the left.
+
+1270
+00:51:01,359 --> 00:51:06,079
+That wraparound interaction is exactly
+
+1271
+00:51:03,440 --> 00:51:07,760
+what circular convolution means. The
+
+1272
+00:51:06,079 --> 00:51:09,920
+signals are treated as if arranged
+
+1273
+00:51:07,760 --> 00:51:11,760
+around a circle.
+
+1274
+00:51:09,920 --> 00:51:13,920
+When you slide one past the end, it
+
+1275
+00:51:11,760 --> 00:51:16,240
+reappears at the other side. The
+
+1276
+00:51:13,920 --> 00:51:18,559
+FFTbased convolution performs this
+
+1277
+00:51:16,240 --> 00:51:20,240
+circular convolution by default which is
+
+1278
+00:51:18,559 --> 00:51:23,200
+why the result here doesn't match the
+
+1279
+00:51:20,240 --> 00:51:24,960
+direct linear convolution.
+
+1280
+00:51:23,200 --> 00:51:27,280
+Later we'll see how to avoid this
+
+1281
+00:51:24,960 --> 00:51:31,720
+wraparound effect. So the FFT method
+
+1282
+00:51:27,280 --> 00:51:31,720
+matches the true linear convolution.
+
+1283
+00:51:33,440 --> 00:51:38,319
+We just saw that FFTbased convolution
+
+1284
+00:51:36,000 --> 00:51:40,319
+gives us circular convolution by default
+
+1285
+00:51:38,319 --> 00:51:42,480
+where the neighboring copies wrap around
+
+1286
+00:51:40,319 --> 00:51:43,920
+and interfere.
+
+1287
+00:51:42,480 --> 00:51:45,599
+The simplest way to avoid that
+
+1288
+00:51:43,920 --> 00:51:47,440
+wraparound is to make sure those
+
+1289
+00:51:45,599 --> 00:51:49,760
+neighbors are far enough away so they
+
+1290
+00:51:47,440 --> 00:51:52,240
+can't overlap during the shift. That's
+
+1291
+00:51:49,760 --> 00:51:54,319
+what zero padding does.
+
+1292
+00:51:52,240 --> 00:51:56,400
+We take our original signals and append
+
+1293
+00:51:54,319 --> 00:51:59,760
+enough zeros to both so that the total
+
+1294
+00:51:56,400 --> 00:52:01,760
+length is at least n + m minus one where
+
+1295
+00:51:59,760 --> 00:52:04,000
+n and m are the original lengths of the
+
+1296
+00:52:01,760 --> 00:52:05,920
+two sequences.
+
+1297
+00:52:04,000 --> 00:52:07,920
+In this example, each signal is only
+
+1298
+00:52:05,920 --> 00:52:11,280
+five samples long, but we pad them out
+
+1299
+00:52:07,920 --> 00:52:13,839
+to length 16.
+
+1300
+00:52:11,280 --> 00:52:15,440
+Now when we perform the FFT multiply in
+
+1301
+00:52:13,839 --> 00:52:18,000
+the frequency domain and take the
+
+1302
+00:52:15,440 --> 00:52:20,400
+inverse FFT the wraparound region is all
+
+1303
+00:52:18,000 --> 00:52:23,359
+zeros. So the result matches the direct
+
+1304
+00:52:20,400 --> 00:52:25,440
+linear convolution exactly.
+
+1305
+00:52:23,359 --> 00:52:27,280
+In other words, zero padding is like
+
+1306
+00:52:25,440 --> 00:52:29,280
+making your yard so wide that your
+
+1307
+00:52:27,280 --> 00:52:32,280
+neighbors are too far away to cause any
+
+1308
+00:52:29,280 --> 00:52:32,280
+trouble.
+
+1309
+00:52:33,760 --> 00:52:38,000
+This picture shows the idea of zero
+
+1310
+00:52:35,359 --> 00:52:40,319
+padding in a visual way.
+
+1311
+00:52:38,000 --> 00:52:42,319
+on top. The red triangles represent one
+
+1312
+00:52:40,319 --> 00:52:44,079
+signal and the blue triangles represent
+
+1313
+00:52:42,319 --> 00:52:45,680
+the other.
+
+1314
+00:52:44,079 --> 00:52:48,000
+Without padding, these shapes are
+
+1315
+00:52:45,680 --> 00:52:50,079
+repeated periodically. So when you slide
+
+1316
+00:52:48,000 --> 00:52:52,400
+them for convolution, parts from the
+
+1317
+00:52:50,079 --> 00:52:54,000
+neighboring copies wrap around and
+
+1318
+00:52:52,400 --> 00:52:58,079
+interfere. That's the circular
+
+1319
+00:52:54,000 --> 00:53:00,000
+convolution effect we saw earlier.
+
+1320
+00:52:58,079 --> 00:53:02,319
+Now by adding enough zeros, we
+
+1321
+00:53:00,000 --> 00:53:04,000
+artificially extend the period. This
+
+1322
+00:53:02,319 --> 00:53:05,520
+pushes the neighboring copies farther
+
+1323
+00:53:04,000 --> 00:53:08,079
+apart. So when we perform the
+
+1324
+00:53:05,520 --> 00:53:10,480
+convolution only the single red copy and
+
+1325
+00:53:08,079 --> 00:53:12,000
+the single blue copy overlap. The
+
+1326
+00:53:10,480 --> 00:53:13,839
+neighbors never get close enough to
+
+1327
+00:53:12,000 --> 00:53:15,760
+contribute.
+
+1328
+00:53:13,839 --> 00:53:17,520
+The result is that our circular
+
+1329
+00:53:15,760 --> 00:53:19,760
+convolution now matches the linear
+
+1330
+00:53:17,520 --> 00:53:22,319
+convolution exactly because there's no
+
+1331
+00:53:19,760 --> 00:53:23,839
+wraparound. The earlier mismatch happens
+
+1332
+00:53:22,319 --> 00:53:25,680
+simply because we didn't have enough
+
+1333
+00:53:23,839 --> 00:53:27,520
+zeros. So the neighbors still
+
+1334
+00:53:25,680 --> 00:53:29,839
+overlapped.
+
+1335
+00:53:27,520 --> 00:53:31,839
+This is the essence of zero padding.
+
+1336
+00:53:29,839 --> 00:53:33,359
+Make the yard wide enough so your
+
+1337
+00:53:31,839 --> 00:53:36,359
+neighbors can't mess up your
+
+1338
+00:53:33,359 --> 00:53:36,359
+calculation.
+
+1339
+00:53:38,240 --> 00:53:42,160
+If you'd like to explore these ideas
+
+1340
+00:53:40,160 --> 00:53:43,920
+further, Math Works has some excellent
+
+1341
+00:53:42,160 --> 00:53:46,079
+tutorials and examples in its
+
+1342
+00:53:43,920 --> 00:53:48,000
+documentation.
+
+1343
+00:53:46,079 --> 00:53:50,400
+This particular page walks through the
+
+1344
+00:53:48,000 --> 00:53:53,200
+relationship between linear and circular
+
+1345
+00:53:50,400 --> 00:53:55,200
+convolution in mat lab. It explains the
+
+1346
+00:53:53,200 --> 00:53:57,440
+key conditions under which the two are
+
+1347
+00:53:55,200 --> 00:53:59,839
+equivalent and shows how zero padding
+
+1348
+00:53:57,440 --> 00:54:03,119
+can be used to make circular convolution
+
+1349
+00:53:59,839 --> 00:54:05,040
+behave like linear convolution.
+
+1350
+00:54:03,119 --> 00:54:07,040
+You'll also find clear mat lab examples
+
+1351
+00:54:05,040 --> 00:54:09,119
+here. Creating vectors, padding them to
+
+1352
+00:54:07,040 --> 00:54:11,119
+the right length, applying the FFT,
+
+1353
+00:54:09,119 --> 00:54:13,280
+multiplying in the frequency domain, and
+
+1354
+00:54:11,119 --> 00:54:16,160
+using the inverse FFT to get back to the
+
+1355
+00:54:13,280 --> 00:54:18,000
+time domain.
+
+1356
+00:54:16,160 --> 00:54:19,920
+So if you want to reinforce what we've
+
+1357
+00:54:18,000 --> 00:54:24,920
+just covered or see it implemented step
+
+1358
+00:54:19,920 --> 00:54:24,920
+by step, this is a great place to start.
+
+1359
+00:54:26,400 --> 00:54:32,559
+Our second example is spectral analysis.
+
+1360
+00:54:29,839 --> 00:54:35,599
+Here we use an important relationship 1
+
+1361
+00:54:32,559 --> 00:54:39,599
+/ capital n is equal to delta t
+
+1362
+00:54:35,599 --> 00:54:41,599
+multiplied by delta new. In words, delta
+
+1363
+00:54:39,599 --> 00:54:44,240
+t is the sampling interval in the time
+
+1364
+00:54:41,599 --> 00:54:47,200
+domain and delta new, sometimes called
+
+1365
+00:54:44,240 --> 00:54:50,240
+deltau, is the spacing between frequency
+
+1366
+00:54:47,200 --> 00:54:52,000
+samples in the forier domain.
+
+1367
+00:54:50,240 --> 00:54:53,920
+What this tells us is that if we keep
+
+1368
+00:54:52,000 --> 00:54:55,920
+delta t fixed and the total number of
+
+1369
+00:54:53,920 --> 00:54:59,280
+samples n fixed, then our frequency
+
+1370
+00:54:55,920 --> 00:55:01,200
+spacing delta new is also fixed.
+
+1371
+00:54:59,280 --> 00:55:02,640
+That means if a signal contains two
+
+1372
+00:55:01,200 --> 00:55:04,559
+frequencies that are very close
+
+1373
+00:55:02,640 --> 00:55:07,760
+together, the spectrum may not have
+
+1374
+00:55:04,559 --> 00:55:09,440
+enough resolution to separate them.
+
+1375
+00:55:07,760 --> 00:55:11,839
+One way to improve the resolution is
+
+1376
+00:55:09,440 --> 00:55:13,760
+called zero padding.
+
+1377
+00:55:11,839 --> 00:55:15,920
+This means we add zeros to the end of
+
+1378
+00:55:13,760 --> 00:55:18,240
+the time domain signal which increases
+
+1379
+00:55:15,920 --> 00:55:20,240
+the total number of samples n.
+
+1380
+00:55:18,240 --> 00:55:22,800
+Increasing n makes the spacing in the
+
+1381
+00:55:20,240 --> 00:55:24,960
+frequency domain delta new smaller
+
+1382
+00:55:22,800 --> 00:55:27,680
+giving us a finer frequency grid and
+
+1383
+00:55:24,960 --> 00:55:29,599
+better spectral resolution.
+
+1384
+00:55:27,680 --> 00:55:32,079
+In this mat lab example, we create a
+
+1385
+00:55:29,599 --> 00:55:34,720
+signal by adding two sinosoids. The
+
+1386
+00:55:32,079 --> 00:55:38,480
+first term is the cosine of 2 *<unk> *
+
+1387
+00:55:34,720 --> 00:55:42,240
+100 * t. The second term is the s of 2 *
+
+1388
+00:55:38,480 --> 00:55:44,960
+pi * 2002 2.5 * t.
+
+1389
+00:55:42,240 --> 00:55:46,640
+We sample t from 0 to 1 second in steps
+
+1390
+00:55:44,960 --> 00:55:49,040
+of 0.001
+
+1391
+00:55:46,640 --> 00:55:51,920
+seconds, which corresponds to a sampling
+
+1392
+00:55:49,040 --> 00:55:54,160
+frequency of 1 kohz. Without zero
+
+1393
+00:55:51,920 --> 00:55:56,319
+padding, the frequency step size may be
+
+1394
+00:55:54,160 --> 00:56:00,559
+too large to clearly separate the peaks
+
+1395
+00:55:56,319 --> 00:56:04,400
+at 100 htz and 102.5 hertz. With zero
+
+1396
+00:56:00,559 --> 00:56:05,839
+padding, the peaks become distinct.
+
+1397
+00:56:04,400 --> 00:56:07,520
+If you want the full mat lab
+
+1398
+00:56:05,839 --> 00:56:11,240
+walkthrough, you can follow the link at
+
+1399
+00:56:07,520 --> 00:56:11,240
+the bottom of the slide.
+
+1400
+00:56:12,720 --> 00:56:15,920
+Now let's see what happens when we
+
+1401
+00:56:14,160 --> 00:56:18,319
+perform the forier transform without
+
+1402
+00:56:15,920 --> 00:56:20,720
+using zero padding.
+
+1403
+00:56:18,319 --> 00:56:23,359
+We take our signal X and compute its
+
+1404
+00:56:20,720 --> 00:56:25,040
+discrete forier transform using the FFT
+
+1405
+00:56:23,359 --> 00:56:26,880
+function.
+
+1406
+00:56:25,040 --> 00:56:28,559
+We keep only the first half of the
+
+1407
+00:56:26,880 --> 00:56:30,160
+spectrum because for a real valued
+
+1408
+00:56:28,559 --> 00:56:32,240
+signal, the second half is just the
+
+1409
+00:56:30,160 --> 00:56:34,240
+mirror image.
+
+1410
+00:56:32,240 --> 00:56:36,400
+Then we normalize by dividing by the
+
+1411
+00:56:34,240 --> 00:56:39,040
+length of X and scale the amplitudes
+
+1412
+00:56:36,400 --> 00:56:41,359
+appropriately. The frequency axis is
+
+1413
+00:56:39,040 --> 00:56:43,040
+calculated from 0 to half the sampling
+
+1414
+00:56:41,359 --> 00:56:44,960
+rate in steps of the frequency
+
+1415
+00:56:43,040 --> 00:56:47,280
+resolution.
+
+1416
+00:56:44,960 --> 00:56:49,520
+On the plot, you see two peaks in blue.
+
+1417
+00:56:47,280 --> 00:56:51,200
+The first peak is at exactly 100 hertz.
+
+1418
+00:56:49,520 --> 00:56:53,920
+That one is well captured because it
+
+1419
+00:56:51,200 --> 00:56:56,160
+matches the frequency grid.
+
+1420
+00:56:53,920 --> 00:56:59,200
+The second component, however, is at
+
+1421
+00:56:56,160 --> 00:57:01,920
+102.5 hertz, which does not align neatly
+
+1422
+00:56:59,200 --> 00:57:04,079
+with the frequency samples.
+
+1423
+00:57:01,920 --> 00:57:06,079
+As a result, the peak is lower than it
+
+1424
+00:57:04,079 --> 00:57:08,720
+should be. You can see that it only
+
+1425
+00:57:06,079 --> 00:57:11,040
+reaches about half of its true amplitude
+
+1426
+00:57:08,720 --> 00:57:12,880
+and it spreads into nearby frequency
+
+1427
+00:57:11,040 --> 00:57:14,799
+bins.
+
+1428
+00:57:12,880 --> 00:57:16,960
+This illustrates the limitation of the
+
+1429
+00:57:14,799 --> 00:57:20,359
+frequency resolution when we don't use
+
+1430
+00:57:16,960 --> 00:57:20,359
+zero padding.
+
+1431
+00:57:21,839 --> 00:57:25,359
+Now let's see what happens when we use
+
+1432
+00:57:23,359 --> 00:57:27,520
+zero padding.
+
+1433
+00:57:25,359 --> 00:57:30,000
+We take our original signal and extend
+
+1434
+00:57:27,520 --> 00:57:32,799
+it in the time domain by adding a large
+
+1435
+00:57:30,000 --> 00:57:34,400
+number of zeros at the end.
+
+1436
+00:57:32,799 --> 00:57:36,160
+This does not change the actual
+
+1437
+00:57:34,400 --> 00:57:39,200
+information in the signal, but it does
+
+1438
+00:57:36,160 --> 00:57:41,440
+increase the total number of samples.
+
+1439
+00:57:39,200 --> 00:57:43,440
+When we compute the forier transform of
+
+1440
+00:57:41,440 --> 00:57:45,119
+this longer sequence, the frequency
+
+1441
+00:57:43,440 --> 00:57:47,760
+spacing between the points in the
+
+1442
+00:57:45,119 --> 00:57:49,520
+spectrum becomes smaller.
+
+1443
+00:57:47,760 --> 00:57:51,440
+This means we get a finer frequency
+
+1444
+00:57:49,520 --> 00:57:53,920
+grid, more points between zero and the
+
+1445
+00:57:51,440 --> 00:57:56,000
+Nyquist frequency.
+
+1446
+00:57:53,920 --> 00:57:58,319
+As a result, when we plot the spectrum,
+
+1447
+00:57:56,000 --> 00:58:01,520
+both peaks, the one at 100 htz and the
+
+1448
+00:57:58,319 --> 00:58:03,839
+one at 102.5 htz are now represented
+
+1449
+00:58:01,520 --> 00:58:05,520
+much more accurately.
+
+1450
+00:58:03,839 --> 00:58:07,280
+You can see that their amplitudes are
+
+1451
+00:58:05,520 --> 00:58:09,040
+correctly estimated and the peaks are
+
+1452
+00:58:07,280 --> 00:58:11,280
+sharper.
+
+1453
+00:58:09,040 --> 00:58:13,280
+So, zero padding is a simple but
+
+1454
+00:58:11,280 --> 00:58:15,680
+powerful trick for improving the visual
+
+1455
+00:58:13,280 --> 00:58:17,200
+resolution of your spectrum. It doesn't
+
+1456
+00:58:15,680 --> 00:58:18,960
+actually add new information, but it
+
+1457
+00:58:17,200 --> 00:58:22,200
+lets you see the frequency components
+
+1458
+00:58:18,960 --> 00:58:22,200
+more clearly.
+
+1459
+00:58:23,760 --> 00:58:27,839
+Before we wrap up, I want to highlight
+
+1460
+00:58:25,599 --> 00:58:30,160
+something that often feels like magic in
+
+1461
+00:58:27,839 --> 00:58:32,480
+signal processing.
+
+1462
+00:58:30,160 --> 00:58:35,359
+A signal cannot be both time limited and
+
+1463
+00:58:32,480 --> 00:58:37,680
+band limited at the same time.
+
+1464
+00:58:35,359 --> 00:58:39,599
+If a signal is strictly limited in time,
+
+1465
+00:58:37,680 --> 00:58:41,920
+meaning it exists only within a certain
+
+1466
+00:58:39,599 --> 00:58:44,559
+interval, its frequency spectrum will
+
+1467
+00:58:41,920 --> 00:58:46,559
+stretch infinitely. And if a signal is
+
+1468
+00:58:44,559 --> 00:58:48,559
+strictly limited in frequency, meaning
+
+1469
+00:58:46,559 --> 00:58:50,799
+it contains only a finite range of
+
+1470
+00:58:48,559 --> 00:58:53,520
+frequencies, then it must extend
+
+1471
+00:58:50,799 --> 00:58:55,599
+infinitely in time.
+
+1472
+00:58:53,520 --> 00:58:57,920
+In practice, we often work with signals
+
+1473
+00:58:55,599 --> 00:59:00,960
+that are approximately timelmited and
+
+1474
+00:58:57,920 --> 00:59:02,799
+approximately band limited.
+
+1475
+00:59:00,960 --> 00:59:04,799
+This approximation along with clever
+
+1476
+00:59:02,799 --> 00:59:06,880
+techniques like sampling, zero padding,
+
+1477
+00:59:04,799 --> 00:59:09,680
+and windowing allows us to do what might
+
+1478
+00:59:06,880 --> 00:59:11,359
+seem impossible, turning the impossible
+
+1479
+00:59:09,680 --> 00:59:13,440
+into something that works perfectly well
+
+1480
+00:59:11,359 --> 00:59:15,359
+for our needs.
+
+1481
+00:59:13,440 --> 00:59:19,240
+That's the kind of magic you see every
+
+1482
+00:59:15,359 --> 00:59:19,240
+day in signal processing.
+
+1483
+00:59:20,880 --> 00:59:24,160
+Now, let's step back and look at the big
+
+1484
+00:59:22,480 --> 00:59:26,079
+picture.
+
+1485
+00:59:24,160 --> 00:59:27,760
+Everything we've discussed so far seems
+
+1486
+00:59:26,079 --> 00:59:30,880
+to work perfectly, but there's an
+
+1487
+00:59:27,760 --> 00:59:34,319
+important approximation hidden here. We
+
+1488
+00:59:30,880 --> 00:59:36,559
+often say if a signal is finite in time,
+
+1489
+00:59:34,319 --> 00:59:39,440
+meaning it has a limited duration, then
+
+1490
+00:59:36,559 --> 00:59:41,839
+its furier spectrum is also limited to a
+
+1491
+00:59:39,440 --> 00:59:45,119
+finite interval.
+
+1492
+00:59:41,839 --> 00:59:47,440
+In reality, that's not strictly true.
+
+1493
+00:59:45,119 --> 00:59:49,680
+If a signal is perfectly finite in the
+
+1494
+00:59:47,440 --> 00:59:52,160
+time domain, its spectrum will actually
+
+1495
+00:59:49,680 --> 00:59:53,760
+extend infinitely. It will get smaller
+
+1496
+00:59:52,160 --> 00:59:57,839
+and smaller as you move away from the
+
+1497
+00:59:53,760 --> 00:59:59,359
+center, but it never truly stops.
+
+1498
+00:59:57,839 --> 01:00:02,640
+You might argue that if we take the
+
+1499
+00:59:59,359 --> 01:00:04,640
+frequency range from minus w to plus w
+
+1500
+01:00:02,640 --> 01:00:06,799
+and make w large enough, the parts
+
+1501
+01:00:04,640 --> 01:00:09,040
+outside this range become so small that
+
+1502
+01:00:06,799 --> 01:00:10,880
+they can be ignored.
+
+1503
+01:00:09,040 --> 01:00:13,520
+And yes, in practical engineering we
+
+1504
+01:00:10,880 --> 01:00:15,760
+often do that. But from a mathematical
+
+1505
+01:00:13,520 --> 01:00:18,400
+point of view, we have to be careful.
+
+1506
+01:00:15,760 --> 01:00:20,480
+Why?
+
+1507
+01:00:18,400 --> 01:00:22,480
+Because when we discretize the spectrum
+
+1508
+01:00:20,480 --> 01:00:26,079
+is periodically repeated, we get
+
+1509
+01:00:22,480 --> 01:00:28,480
+infinitely many copies of it. Even if a
+
+1510
+01:00:26,079 --> 01:00:30,799
+single copy has very small values far
+
+1511
+01:00:28,480 --> 01:00:34,319
+away from the center, those small values
+
+1512
+01:00:30,799 --> 01:00:36,880
+from every copy can add up. The further
+
+1513
+01:00:34,319 --> 01:00:38,799
+away a copy is, the less it contributes.
+
+1514
+01:00:36,880 --> 01:00:40,799
+But since there are infinitely many of
+
+1515
+01:00:38,799 --> 01:00:42,319
+them, the sum of all those tiny
+
+1516
+01:00:40,799 --> 01:00:44,160
+contributions might still be
+
+1517
+01:00:42,319 --> 01:00:46,000
+significant.
+
+1518
+01:00:44,160 --> 01:00:48,079
+This is why convergence is not always
+
+1519
+01:00:46,000 --> 01:00:49,359
+guaranteed and why mathematical rigor is
+
+1520
+01:00:48,079 --> 01:00:52,359
+important when making these
+
+1521
+01:00:49,359 --> 01:00:52,359
+approximations.
+
+1522
+01:00:54,319 --> 01:00:59,839
+Let me give you a simple example to show
+
+1523
+01:00:56,160 --> 01:01:01,760
+why getting smaller isn't always enough.
+
+1524
+01:00:59,839 --> 01:01:04,559
+Imagine a curve where the height at any
+
+1525
+01:01:01,760 --> 01:01:07,200
+point is equal to 1 / the position along
+
+1526
+01:01:04,559 --> 01:01:08,960
+the horizontal axis.
+
+1527
+01:01:07,200 --> 01:01:11,040
+As you move farther to the right, the
+
+1528
+01:01:08,960 --> 01:01:12,960
+values get smaller and smaller. For
+
+1529
+01:01:11,040 --> 01:01:15,119
+example, at position one, the value is
+
+1530
+01:01:12,960 --> 01:01:17,200
+one. At position two, it's 1/2. At
+
+1531
+01:01:15,119 --> 01:01:20,960
+position 3, it's 1/3. At position 4,
+
+1532
+01:01:17,200 --> 01:01:23,359
+it's 1/4. And so on.
+
+1533
+01:01:20,960 --> 01:01:25,200
+You might think these numbers are tiny.
+
+1534
+01:01:23,359 --> 01:01:27,119
+If we keep adding them, the total should
+
+1535
+01:01:25,200 --> 01:01:29,119
+stay small.
+
+1536
+01:01:27,119 --> 01:01:31,440
+But here's the surprising fact. Even if
+
+1537
+01:01:29,119 --> 01:01:33,440
+you start far out like at 1 over 1
+
+1538
+01:01:31,440 --> 01:01:35,920
+million and then keep adding 1 over 2
+
+1539
+01:01:33,440 --> 01:01:39,040
+million, 1 over 3 million and so on, the
+
+1540
+01:01:35,920 --> 01:01:40,720
+total will still grow without limit.
+
+1541
+01:01:39,040 --> 01:01:42,880
+In other words, an infinite number of
+
+1542
+01:01:40,720 --> 01:01:45,440
+tiny contributions can still add up to
+
+1543
+01:01:42,880 --> 01:01:47,680
+something infinitely large. And this is
+
+1544
+01:01:45,440 --> 01:01:50,319
+exactly the kind of situation we face in
+
+1545
+01:01:47,680 --> 01:01:52,640
+fur analysis. Very small contributions
+
+1546
+01:01:50,319 --> 01:01:54,400
+from infinitely many frequency copies
+
+1547
+01:01:52,640 --> 01:01:57,400
+can still combine into something
+
+1548
+01:01:54,400 --> 01:01:57,400
+significant.
+
+1549
+01:01:58,960 --> 01:02:03,040
+This idea connects to the famous wheat
+
+1550
+01:02:01,119 --> 01:02:06,720
+and chessboard problem which is a
+
+1551
+01:02:03,040 --> 01:02:09,520
+classic example of exponential growth.
+
+1552
+01:02:06,720 --> 01:02:11,359
+Imagine a chessboard with 64 squares. On
+
+1553
+01:02:09,520 --> 01:02:13,680
+the first square you place one grain of
+
+1554
+01:02:11,359 --> 01:02:15,680
+wheat. On the next square you double it
+
+1555
+01:02:13,680 --> 01:02:17,520
+two grains.
+
+1556
+01:02:15,680 --> 01:02:21,599
+On the third square you double it again
+
+1557
+01:02:17,520 --> 01:02:23,359
+four grains. Then 8 1632 and so on. By
+
+1558
+01:02:21,599 --> 01:02:24,799
+the time you fill all the squares, the
+
+1559
+01:02:23,359 --> 01:02:27,520
+total number of grains becomes
+
+1560
+01:02:24,799 --> 01:02:30,480
+unimaginably large, enough to cover the
+
+1561
+01:02:27,520 --> 01:02:32,400
+earth with a thick layer of wheat.
+
+1562
+01:02:30,480 --> 01:02:36,160
+This illustrates how quickly exponential
+
+1563
+01:02:32,400 --> 01:02:38,240
+growth can get out of control.
+
+1564
+01:02:36,160 --> 01:02:40,319
+Now, in our forier problem, for our
+
+1565
+01:02:38,240 --> 01:02:43,119
+approximation trick to work, the
+
+1566
+01:02:40,319 --> 01:02:45,599
+leftover terms, those tiny contributions
+
+1567
+01:02:43,119 --> 01:02:47,760
+from far away frequencies must shrink
+
+1568
+01:02:45,599 --> 01:02:49,839
+faster than one divided by the position
+
+1569
+01:02:47,760 --> 01:02:51,520
+number. That means the function must be
+
+1570
+01:02:49,839 --> 01:02:53,839
+smooth enough so that its spectrum
+
+1571
+01:02:51,520 --> 01:02:55,920
+decays quickly.
+
+1572
+01:02:53,839 --> 01:02:58,319
+In fact, for most practical functions,
+
+1573
+01:02:55,920 --> 01:03:00,960
+after some pre-processing and smoothing,
+
+1574
+01:02:58,319 --> 01:03:03,520
+the decay is even faster, often like one
+
+1575
+01:03:00,960 --> 01:03:05,200
+divided by the position number squared.
+
+1576
+01:03:03,520 --> 01:03:07,040
+And in that case, adding up all the
+
+1577
+01:03:05,200 --> 01:03:09,280
+small contributions still gives you a
+
+1578
+01:03:07,040 --> 01:03:12,760
+small total. This is what allows our
+
+1579
+01:03:09,280 --> 01:03:12,760
+approach to work.
+
+1580
+01:03:14,000 --> 01:03:17,760
+So at this point we have completed the
+
+1581
+01:03:15,839 --> 01:03:19,680
+main part of our discussion on forier
+
+1582
+01:03:17,760 --> 01:03:21,680
+analysis.
+
+1583
+01:03:19,680 --> 01:03:24,160
+In preparing these lectures I've drawn
+
+1584
+01:03:21,680 --> 01:03:26,079
+from multiple resources including this
+
+1585
+01:03:24,160 --> 01:03:28,559
+excellent textbook from Stanford
+
+1586
+01:03:26,079 --> 01:03:31,119
+University's course the forier transform
+
+1587
+01:03:28,559 --> 01:03:33,839
+and its applications as well as my own
+
+1588
+01:03:31,119 --> 01:03:35,520
+insights and examples.
+
+1589
+01:03:33,839 --> 01:03:37,920
+This textbook is designed for a full
+
+1590
+01:03:35,520 --> 01:03:40,000
+semester and it's quite comprehensive.
+
+1591
+01:03:37,920 --> 01:03:41,680
+My goal here has been to distill the
+
+1592
+01:03:40,000 --> 01:03:44,400
+most essential concepts for our
+
+1593
+01:03:41,680 --> 01:03:46,559
+biomedical engineering context. I've
+
+1594
+01:03:44,400 --> 01:03:48,799
+also added examples and explanations
+
+1595
+01:03:46,559 --> 01:03:51,039
+from other sources as well as my own
+
+1596
+01:03:48,799 --> 01:03:53,599
+understanding to create what I like to
+
+1597
+01:03:51,039 --> 01:03:57,880
+think of as a BME version of linear
+
+1598
+01:03:53,599 --> 01:03:57,880
+systems and forier analysis.
+
+1599
+01:03:57,920 --> 01:04:01,920
+So far, you have all the core material.
+
+1600
+01:04:00,240 --> 01:04:03,680
+In the next lecture, our teaching
+
+1601
+01:04:01,920 --> 01:04:05,359
+assistant will go over some homework
+
+1602
+01:04:03,680 --> 01:04:07,839
+problems to help reinforce your
+
+1603
+01:04:05,359 --> 01:04:09,440
+understanding and sharpen your skills.
+
+1604
+01:04:07,839 --> 01:04:12,880
+After that, we'll move on to our next
+
+1605
+01:04:09,440 --> 01:04:14,559
+major topic, network image quality.
+
+1606
+01:04:12,880 --> 01:04:16,640
+That means the most mathematically
+
+1607
+01:04:14,559 --> 01:04:20,400
+challenging part of the course, Furier
+
+1608
+01:04:16,640 --> 01:04:25,079
+analysis, is now behind us.
+
+1609
+01:04:20,400 --> 01:04:25,079
+That's all for today. Thank you.
+

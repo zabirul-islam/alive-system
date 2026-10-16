@@ -1,0 +1,19 @@
+\begin{table}[!htbp]
+\centering
+\caption{Text-path latency under concurrent load}
+\label{tab:sup_load}
+\small
+\begin{tabular}{cccccc}
+\toprule
+\textbf{Concurrent} & \textbf{p50 (s)} & \textbf{p95 (s)} & \textbf{Max (s)} & \textbf{Retrieval p50 (s)} & \textbf{Req/s} \\
+\midrule
+1 & 0.29 & 0.44 & 0.67 & 0.03 & 3.2 \\
+4 & 0.34 & 0.51 & 0.55 & 0.10 & 11.1 \\
+8 & 0.52 & 0.78 & 0.94 & 0.23 & 14.8 \\
+16 & 0.96 & 1.80 & 1.94 & 0.67 & 13.3 \\
+32 & 1.89 & 3.22 & 3.38 & 1.54 & 11.8 \\
+\bottomrule
+\end{tabular}
+\tabnotes{Retrieval plus generation, merged ALIVE model served with vLLM on one H100; 64 requests per concurrency level.
+Avatar rendering is not included.}
+\end{table}

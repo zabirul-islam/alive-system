@@ -1,0 +1,34 @@
+{
+ "Lecture_2": {
+  "asr_segments": 481,
+  "slides": 50,
+  "mean_token_overlap": 0.951,
+  "mean_abs_start_diff_s": 0.9,
+  "median_abs_start_diff_s": 0.2,
+  "share_within_10s": 1.0,
+  "share_within_30s": 1.0
+ },
+ "Lecture_13": {
+  "asr_segments": 1196,
+  "slides": 50,
+  "mean_token_overlap": 0.981,
+  "mean_abs_start_diff_s": 1.9,
+  "median_abs_start_diff_s": 0.4,
+  "share_within_10s": 1.0,
+  "share_within_30s": 1.0
+ },
+ "Lecture_19": {
+  "asr_segments": 2734,
+  "slides": 55,
+  "mean_token_overlap": 0.776,
+  "mean_abs_start_diff_s": 3.9,
+  "median_abs_start_diff_s": 3.5,
+  "share_within_10s": 0.943,
+  "share_within_30s": 0.981
+ },
+ "mean_over_lectures": {
+  "mean_token_overlap": 0.903,
+  "share_within_10s": 0.981,
+  "share_within_30s": 0.994
+ }
+}

@@ -1,0 +1,163 @@
+{
+ "Lecture_1": {
+  "slides": 50,
+  "cues": 1491,
+  "mean_cue_overlap": 0.973,
+  "slides_without_cues": 2,
+  "duration_s": 3314.44
+ },
+ "Lecture_2": {
+  "slides": 50,
+  "cues": 830,
+  "mean_cue_overlap": 0.967,
+  "slides_without_cues": 0,
+  "duration_s": 1974.48
+ },
+ "Lecture_3": {
+  "slides": 40,
+  "cues": 1255,
+  "mean_cue_overlap": 0.461,
+  "slides_without_cues": 1,
+  "duration_s": 3072.92
+ },
+ "Lecture_4": {
+  "slides": 49,
+  "cues": 1456,
+  "mean_cue_overlap": 0.961,
+  "slides_without_cues": 2,
+  "duration_s": 3550.599
+ },
+ "Lecture_5": {
+  "slides": 50,
+  "cues": 3020,
+  "mean_cue_overlap": 0.958,
+  "slides_without_cues": 0,
+  "duration_s": 7374.76
+ },
+ "Lecture_6": {
+  "slides": 42,
+  "cues": 2012,
+  "mean_cue_overlap": 0.95,
+  "slides_without_cues": 0,
+  "duration_s": 4773.56
+ },
+ "Lecture_7": {
+  "slides": 47,
+  "cues": 2449,
+  "mean_cue_overlap": 0.961,
+  "slides_without_cues": 0,
+  "duration_s": 5884.04
+ },
+ "Lecture_8": {
+  "slides": 43,
+  "cues": 1609,
+  "mean_cue_overlap": 0.961,
+  "slides_without_cues": 0,
+  "duration_s": 3865.079
+ },
+ "Lecture_9": {
+  "slides": 29,
+  "cues": 969,
+  "mean_cue_overlap": 0.971,
+  "slides_without_cues": 0,
+  "duration_s": 2271.8
+ },
+ "Lecture_10": {
+  "slides": 50,
+  "cues": 1720,
+  "mean_cue_overlap": 0.976,
+  "slides_without_cues": 0,
+  "duration_s": 4073.799
+ },
+ "Lecture_11": {
+  "slides": 64,
+  "cues": 2543,
+  "mean_cue_overlap": 0.981,
+  "slides_without_cues": 1,
+  "duration_s": 5934.76
+ },
+ "Lecture_12": {
+  "slides": 50,
+  "cues": 1960,
+  "mean_cue_overlap": 0.981,
+  "slides_without_cues": 1,
+  "duration_s": 4486.6
+ },
+ "Lecture_13": {
+  "slides": 50,
+  "cues": 1488,
+  "mean_cue_overlap": 0.956,
+  "slides_without_cues": 0,
+  "duration_s": 3535.4
+ },
+ "Lecture_14": {
+  "slides": 60,
+  "cues": 1765,
+  "mean_cue_overlap": 0.979,
+  "slides_without_cues": 0,
+  "duration_s": 4117.0
+ },
+ "Lecture_15": {
+  "slides": 30,
+  "cues": 905,
+  "mean_cue_overlap": 0.962,
+  "slides_without_cues": 0,
+  "duration_s": 2122.0
+ },
+ "Lecture_16": {
+  "slides": 55,
+  "cues": 2162,
+  "mean_cue_overlap": 0.94,
+  "slides_without_cues": 0,
+  "duration_s": 4785.159
+ },
+ "Lecture_17": {
+  "slides": 55,
+  "cues": 1917,
+  "mean_cue_overlap": 0.963,
+  "slides_without_cues": 0,
+  "duration_s": 4349.56
+ },
+ "Lecture_18": {
+  "slides": 55,
+  "cues": 1790,
+  "mean_cue_overlap": 0.961,
+  "slides_without_cues": 0,
+  "duration_s": 4279.08
+ },
+ "Lecture_19": {
+  "slides": 55,
+  "cues": 2441,
+  "mean_cue_overlap": 0.969,
+  "slides_without_cues": 0,
+  "duration_s": 5621.08
+ },
+ "Lecture_20": {
+  "slides": 55,
+  "cues": 3009,
+  "mean_cue_overlap": 0.949,
+  "slides_without_cues": 0,
+  "duration_s": 6908.92
+ },
+ "Lecture_21": {
+  "slides": 43,
+  "cues": 2581,
+  "mean_cue_overlap": 0.981,
+  "slides_without_cues": 1,
+  "duration_s": 5804.44
+ },
+ "Lecture_22": {
+  "slides": 45,
+  "cues": 1976,
+  "mean_cue_overlap": 0.97,
+  "slides_without_cues": 0,
+  "duration_s": 4353.56
+ },
+ "Lecture_23": {
+  "slides": 50,
+  "cues": 2882,
+  "mean_cue_overlap": 0.972,
+  "slides_without_cues": 0,
+  "duration_s": 6500.6
+ }
+}

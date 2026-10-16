@@ -1,0 +1,10 @@
+{
+ "cluster_key": "slide",
+ "n_items": 689,
+ "n_clusters": 88,
+ "delta": 0.0267,
+ "cluster_ci95": [
+  0.0203,
+  0.0329
+ ]
+}

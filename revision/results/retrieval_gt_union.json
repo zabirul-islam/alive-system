@@ -1,0 +1,580 @@
+[
+ {
+  "question": "What is filtered backprojection in CT?",
+  "pause_time": 795,
+  "relevant_slides": [
+   "Lecture_13__Slide27",
+   "Lecture_13__Slide28",
+   "Lecture_13__Slide29",
+   "Lecture_13__Slide30"
+  ],
+  "anchor_slide": "Lecture_13__Slide27"
+ },
+ {
+  "question": "How does the Fourier slice theorem work?",
+  "pause_time": 495,
+  "relevant_slides": [
+   "Lecture_13__Slide17",
+   "Lecture_13__Slide19",
+   "Lecture_13__Slide20",
+   "Lecture_13__Slide21",
+   "Lecture_13__Slide22",
+   "Lecture_13__Slide24",
+   "Lecture_13__Slide25"
+  ],
+  "anchor_slide": "Lecture_13__Slide17"
+ },
+ {
+  "question": "What causes streak artifacts in CT imaging?",
+  "pause_time": 975,
+  "relevant_slides": [
+   "Lecture_11__Slide33",
+   "Lecture_14__Slide39",
+   "Lecture_14__Slide43",
+   "Lecture_17__Slide25"
+  ],
+  "anchor_slide": "Lecture_11__Slide33"
+ },
+ {
+  "question": "Explain k-space in MRI acquisition",
+  "pause_time": 855,
+  "relevant_slides": [
+   "Lecture_19__Slide29",
+   "Lecture_19__Slide30",
+   "Lecture_19__Slide31",
+   "Lecture_19__Slide32",
+   "Lecture_19__Slide42"
+  ],
+  "anchor_slide": "Lecture_19__Slide29"
+ },
+ {
+  "question": "What is the role of gradient coils in MRI?",
+  "pause_time": 165,
+  "relevant_slides": [
+   "Lecture_18__Slide6",
+   "Lecture_18__Slide7",
+   "Lecture_20__Slide10",
+   "Lecture_20__Slide11",
+   "Lecture_20__Slide9"
+  ],
+  "anchor_slide": "Lecture_18__Slide6"
+ },
+ {
+  "question": "How does PET imaging detect annihilation photons?",
+  "pause_time": 525,
+  "relevant_slides": [
+   "Lecture_16__Slide18",
+   "Lecture_16__Slide19",
+   "Lecture_16__Slide37",
+   "Lecture_16__Slide52",
+   "Lecture_16__Slide53"
+  ],
+  "anchor_slide": "Lecture_16__Slide18"
+ },
+ {
+  "question": "What is the Hounsfield unit for water in CT?",
+  "pause_time": 975,
+  "relevant_slides": [
+   "Lecture_14__Slide33",
+   "Lecture_14__Slide34",
+   "Lecture_14__Slide35"
+  ],
+  "anchor_slide": "Lecture_14__Slide33"
+ },
+ {
+  "question": "Explain the convolution backprojection algorithm",
+  "pause_time": 1065,
+  "relevant_slides": [
+   "Lecture_13__Slide27",
+   "Lecture_13__Slide28",
+   "Lecture_13__Slide29",
+   "Lecture_13__Slide36",
+   "Lecture_13__Slide37",
+   "Lecture_13__Slide39",
+   "Lecture_13__Slide40",
+   "Lecture_14__Slide42"
+  ],
+  "anchor_slide": "Lecture_13__Slide36"
+ },
+ {
+  "question": "What is the difference between T1 and T2 relaxation in MRI?",
+  "pause_time": 1305,
+  "relevant_slides": [
+   "Lecture_18__Slide44",
+   "Lecture_18__Slide45",
+   "Lecture_18__Slide46",
+   "Lecture_18__Slide47",
+   "Lecture_18__Slide48",
+   "Lecture_18__Slide49"
+  ],
+  "anchor_slide": "Lecture_18__Slide44"
+ },
+ {
+  "question": "How does Radon transform relate to CT sinogram?",
+  "pause_time": 345,
+  "relevant_slides": [
+   "Lecture_13__Slide12",
+   "Lecture_13__Slide43",
+   "Lecture_15__Slide14",
+   "Lecture_15__Slide5",
+   "Lecture_15__Slide7"
+  ],
+  "anchor_slide": "Lecture_13__Slide12"
+ },
+ {
+  "question": "What is a sinogram and how is it formed in CT?",
+  "pause_time": 345,
+  "relevant_slides": [
+   "Lecture_13__Slide12",
+   "Lecture_13__Slide13",
+   "Lecture_13__Slide36",
+   "Lecture_15__Slide7"
+  ],
+  "anchor_slide": "Lecture_13__Slide12"
+ },
+ {
+  "question": "What are Hounsfield units and what do they measure?",
+  "pause_time": 975,
+  "relevant_slides": [
+   "Lecture_14__Slide33",
+   "Lecture_14__Slide34",
+   "Lecture_14__Slide35"
+  ],
+  "anchor_slide": "Lecture_14__Slide33"
+ },
+ {
+  "question": "How does the Radon transform work mathematically?",
+  "pause_time": 1095,
+  "relevant_slides": [
+   "Lecture_13__Slide12",
+   "Lecture_13__Slide34",
+   "Lecture_13__Slide42",
+   "Lecture_1__Slide37"
+  ],
+  "anchor_slide": "Lecture_1__Slide37"
+ },
+ {
+  "question": "Explain the Beer-Lambert law in X-ray imaging",
+  "pause_time": 765,
+  "relevant_slides": [
+   "Lecture_12__Slide26",
+   "Lecture_12__Slide27",
+   "Lecture_12__Slide28",
+   "Lecture_12__Slide29",
+   "Lecture_12__Slide30",
+   "Lecture_13__Slide10"
+  ],
+  "anchor_slide": "Lecture_12__Slide26"
+ },
+ {
+  "question": "What is fan beam geometry in CT scanning?",
+  "pause_time": 315,
+  "relevant_slides": [
+   "Lecture_14__Slide11",
+   "Lecture_14__Slide18",
+   "Lecture_14__Slide23",
+   "Lecture_15__Slide22",
+   "Lecture_15__Slide23",
+   "Lecture_15__Slide24"
+  ],
+  "anchor_slide": "Lecture_14__Slide11"
+ },
+ {
+  "question": "What is cone beam CT and how does it differ from fan beam?",
+  "pause_time": 525,
+  "relevant_slides": [
+   "Lecture_14__Slide18",
+   "Lecture_14__Slide19",
+   "Lecture_14__Slide20",
+   "Lecture_14__Slide23"
+  ],
+  "anchor_slide": "Lecture_14__Slide18"
+ },
+ {
+  "question": "How does helical CT scanning work?",
+  "pause_time": 315,
+  "relevant_slides": [
+   "Lecture_14__Slide11",
+   "Lecture_14__Slide12",
+   "Lecture_14__Slide13",
+   "Lecture_14__Slide14"
+  ],
+  "anchor_slide": "Lecture_14__Slide11"
+ },
+ {
+  "question": "What is iterative reconstruction in CT?",
+  "pause_time": 15,
+  "relevant_slides": [
+   "Lecture_13__Slide1",
+   "Lecture_13__Slide15",
+   "Lecture_13__Slide16",
+   "Lecture_13__Slide34",
+   "Lecture_14__Slide19"
+  ],
+  "anchor_slide": "Lecture_13__Slide1"
+ },
+ {
+  "question": "What is the ramp filter used for in CT reconstruction?",
+  "pause_time": 105,
+  "relevant_slides": [
+   "Lecture_13__Slide30",
+   "Lecture_13__Slide4"
+  ],
+  "anchor_slide": "Lecture_13__Slide4"
+ },
+ {
+  "question": "What is the Nyquist sampling theorem and why does it matter in imaging?",
+  "pause_time": 945,
+  "relevant_slides": [
+   "Lecture_19__Slide32",
+   "Lecture_7__Slide18",
+   "Lecture_7__Slide36",
+   "Lecture_8__Slide11"
+  ],
+  "anchor_slide": "Lecture_19__Slide32"
+ },
+ {
+  "question": "What is T1 relaxation time in MRI?",
+  "pause_time": 1245,
+  "relevant_slides": [
+   "Lecture_18__Slide42",
+   "Lecture_18__Slide46",
+   "Lecture_18__Slide47",
+   "Lecture_18__Slide49"
+  ],
+  "anchor_slide": "Lecture_18__Slide42"
+ },
+ {
+  "question": "What is T2 relaxation time in MRI?",
+  "pause_time": 1245,
+  "relevant_slides": [
+   "Lecture_18__Slide42",
+   "Lecture_18__Slide45",
+   "Lecture_18__Slide46",
+   "Lecture_18__Slide48",
+   "Lecture_18__Slide49",
+   "Lecture_18__Slide54"
+  ],
+  "anchor_slide": "Lecture_18__Slide42"
+ },
+ {
+  "question": "How does a spin echo sequence work in MRI?",
+  "pause_time": 1335,
+  "relevant_slides": [
+   "Lecture_18__Slide45",
+   "Lecture_18__Slide54",
+   "Lecture_18__Slide55",
+   "Lecture_19__Slide11",
+   "Lecture_19__Slide12",
+   "Lecture_19__Slide13"
+  ],
+  "anchor_slide": "Lecture_18__Slide45"
+ },
+ {
+  "question": "What is gradient echo imaging in MRI?",
+  "pause_time": 1365,
+  "relevant_slides": [
+   "Lecture_19__Slide46",
+   "Lecture_19__Slide54",
+   "Lecture_20__Slide14",
+   "Lecture_20__Slide19",
+   "Lecture_20__Slide20"
+  ],
+  "anchor_slide": "Lecture_19__Slide46"
+ },
+ {
+  "question": "What is the Larmor frequency in MRI?",
+  "pause_time": 855,
+  "relevant_slides": [
+   "Lecture_18__Slide28",
+   "Lecture_18__Slide29",
+   "Lecture_18__Slide30",
+   "Lecture_18__Slide36",
+   "Lecture_18__Slide39"
+  ],
+  "anchor_slide": "Lecture_18__Slide29"
+ },
+ {
+  "question": "What does the RF pulse do in MRI?",
+  "pause_time": 1005,
+  "relevant_slides": [
+   "Lecture_18__Slide34",
+   "Lecture_18__Slide36",
+   "Lecture_18__Slide37",
+   "Lecture_19__Slide19",
+   "Lecture_19__Slide20"
+  ],
+  "anchor_slide": "Lecture_18__Slide34"
+ },
+ {
+  "question": "How is slice selection performed in MRI?",
+  "pause_time": 435,
+  "relevant_slides": [
+   "Lecture_19__Slide15",
+   "Lecture_19__Slide18",
+   "Lecture_19__Slide19",
+   "Lecture_19__Slide20",
+   "Lecture_19__Slide21"
+  ],
+  "anchor_slide": "Lecture_19__Slide15"
+ },
+ {
+  "question": "What is frequency encoding in MRI?",
+  "pause_time": 915,
+  "relevant_slides": [
+   "Lecture_18__Slide31",
+   "Lecture_19__Slide23",
+   "Lecture_19__Slide24",
+   "Lecture_19__Slide27",
+   "Lecture_19__Slide28",
+   "Lecture_19__Slide29",
+   "Lecture_19__Slide33"
+  ],
+  "anchor_slide": "Lecture_18__Slide31"
+ },
+ {
+  "question": "What is phase encoding in MRI?",
+  "pause_time": 675,
+  "relevant_slides": [
+   "Lecture_19__Slide23",
+   "Lecture_19__Slide24",
+   "Lecture_19__Slide25",
+   "Lecture_19__Slide26",
+   "Lecture_19__Slide29",
+   "Lecture_19__Slide33"
+  ],
+  "anchor_slide": "Lecture_19__Slide23"
+ },
+ {
+  "question": "What determines the field of view in CT imaging?",
+  "pause_time": 555,
+  "relevant_slides": [
+   "Lecture_12__Slide19",
+   "Lecture_13__Slide15",
+   "Lecture_13__Slide29"
+  ],
+  "anchor_slide": "Lecture_12__Slide19"
+ },
+ {
+  "question": "What is coincidence detection in PET imaging?",
+  "pause_time": 1155,
+  "relevant_slides": [
+   "Lecture_16__Slide37",
+   "Lecture_16__Slide38",
+   "Lecture_16__Slide52",
+   "Lecture_16__Slide53",
+   "Lecture_1__Slide39"
+  ],
+  "anchor_slide": "Lecture_1__Slide39"
+ },
+ {
+  "question": "How is attenuation correction performed in PET?",
+  "pause_time": 615,
+  "relevant_slides": [
+   "Lecture_17__Slide21",
+   "Lecture_17__Slide22",
+   "Lecture_17__Slide26",
+   "Lecture_17__Slide43"
+  ],
+  "anchor_slide": "Lecture_17__Slide21"
+ },
+ {
+  "question": "What is SPECT and how does it differ from PET?",
+  "pause_time": 285,
+  "relevant_slides": [
+   "Lecture_17__Slide29",
+   "Lecture_17__Slide30",
+   "Lecture_17__Slide44",
+   "Lecture_1__Slide10",
+   "Lecture_1__Slide2",
+   "Lecture_1__Slide25"
+  ],
+  "anchor_slide": "Lecture_1__Slide10"
+ },
+ {
+  "question": "How does the piezoelectric effect work in ultrasound transducers?",
+  "pause_time": 1215,
+  "relevant_slides": [
+   "Lecture_1__Slide41",
+   "Lecture_21__Slide27",
+   "Lecture_21__Slide28",
+   "Lecture_21__Slide29"
+  ],
+  "anchor_slide": "Lecture_1__Slide41"
+ },
+ {
+  "question": "What is acoustic impedance and why does it matter in ultrasound?",
+  "pause_time": 555,
+  "relevant_slides": [
+   "Lecture_21__Slide19",
+   "Lecture_21__Slide20",
+   "Lecture_21__Slide21"
+  ],
+  "anchor_slide": "Lecture_21__Slide19"
+ },
+ {
+  "question": "What is B-mode ultrasound imaging?",
+  "pause_time": 525,
+  "relevant_slides": [
+   "Lecture_22__Slide18",
+   "Lecture_22__Slide24",
+   "Lecture_22__Slide3",
+   "Lecture_22__Slide4",
+   "Lecture_22__Slide5"
+  ],
+  "anchor_slide": "Lecture_22__Slide18"
+ },
+ {
+  "question": "How does Doppler ultrasound measure blood flow?",
+  "pause_time": 1215,
+  "relevant_slides": [
+   "Lecture_21__Slide25",
+   "Lecture_22__Slide21",
+   "Lecture_22__Slide22",
+   "Lecture_22__Slide24",
+   "Lecture_22__Slide25",
+   "Lecture_22__Slide26",
+   "Lecture_22__Slide34",
+   "Lecture_2__Slide41",
+   "Lecture_2__Slide42"
+  ],
+  "anchor_slide": "Lecture_2__Slide41"
+ },
+ {
+  "question": "What is signal-to-noise ratio in medical imaging?",
+  "pause_time": 1395,
+  "relevant_slides": [
+   "Lecture_10__Slide47",
+   "Lecture_11__Slide28",
+   "Lecture_11__Slide29"
+  ],
+  "anchor_slide": "Lecture_10__Slide47"
+ },
+ {
+  "question": "What is contrast-to-noise ratio and how is it measured?",
+  "pause_time": 825,
+  "relevant_slides": [
+   "Lecture_11__Slide28",
+   "Lecture_11__Slide29",
+   "Lecture_11__Slide3",
+   "Lecture_11__Slide32"
+  ],
+  "anchor_slide": "Lecture_11__Slide28"
+ },
+ {
+  "question": "What is the point spread function in imaging systems?",
+  "pause_time": 345,
+  "relevant_slides": [
+   "Lecture_11__Slide30",
+   "Lecture_11__Slide31",
+   "Lecture_16__Slide49",
+   "Lecture_1__Slide12"
+  ],
+  "anchor_slide": "Lecture_1__Slide12"
+ },
+ {
+  "question": "What is the modulation transfer function in imaging?",
+  "pause_time": 885,
+  "relevant_slides": [
+   "Lecture_11__Slide30",
+   "Lecture_11__Slide31"
+  ],
+  "anchor_slide": "Lecture_11__Slide30"
+ },
+ {
+  "question": "What is the partial volume effect in CT?",
+  "pause_time": 465,
+  "relevant_slides": [
+   "Lecture_14__Slide16",
+   "Lecture_14__Slide42"
+  ],
+  "anchor_slide": "Lecture_14__Slide16"
+ },
+ {
+  "question": "What causes ring artifacts in CT images?",
+  "pause_time": 1155,
+  "relevant_slides": [
+   "Lecture_14__Slide39"
+  ],
+  "anchor_slide": "Lecture_14__Slide39"
+ },
+ {
+  "question": "What are motion artifacts in CT and how are they caused?",
+  "pause_time": 1095,
+  "relevant_slides": [
+   "Lecture_12__Slide37",
+   "Lecture_14__Slide11",
+   "Lecture_14__Slide38",
+   "Lecture_14__Slide44"
+  ],
+  "anchor_slide": "Lecture_12__Slide37"
+ },
+ {
+  "question": "What is beam hardening in X-ray CT?",
+  "pause_time": 885,
+  "relevant_slides": [
+   "Lecture_12__Slide30",
+   "Lecture_12__Slide43",
+   "Lecture_14__Slide40",
+   "Lecture_14__Slide41"
+  ],
+  "anchor_slide": "Lecture_12__Slide30"
+ },
+ {
+  "question": "How is scatter correction applied in imaging?",
+  "pause_time": 1245,
+  "relevant_slides": [
+   "Lecture_11__Slide5",
+   "Lecture_12__Slide21",
+   "Lecture_12__Slide35",
+   "Lecture_12__Slide36",
+   "Lecture_17__Slide38",
+   "Lecture_17__Slide39",
+   "Lecture_1__Slide42"
+  ],
+  "anchor_slide": "Lecture_1__Slide42"
+ },
+ {
+  "question": "What is the role of a collimator in nuclear medicine imaging?",
+  "pause_time": 1155,
+  "relevant_slides": [
+   "Lecture_14__Slide27",
+   "Lecture_14__Slide28",
+   "Lecture_16__Slide40",
+   "Lecture_16__Slide41",
+   "Lecture_1__Slide39"
+  ],
+  "anchor_slide": "Lecture_1__Slide39"
+ },
+ {
+  "question": "How does an X-ray tube generate X-rays?",
+  "pause_time": 435,
+  "relevant_slides": [
+   "Lecture_12__Slide15",
+   "Lecture_12__Slide16",
+   "Lecture_12__Slide17"
+  ],
+  "anchor_slide": "Lecture_12__Slide15"
+ },
+ {
+  "question": "What is the photoelectric effect in X-ray imaging?",
+  "pause_time": 495,
+  "relevant_slides": [
+   "Lecture_12__Slide17",
+   "Lecture_12__Slide22",
+   "Lecture_12__Slide23",
+   "Lecture_12__Slide24"
+  ],
+  "anchor_slide": "Lecture_12__Slide17"
+ },
+ {
+  "question": "What is Compton scattering and how does it affect image quality?",
+  "pause_time": 675,
+  "relevant_slides": [
+   "Lecture_12__Slide23",
+   "Lecture_12__Slide24",
+   "Lecture_12__Slide25"
+  ],
+  "anchor_slide": "Lecture_12__Slide23"
+ }
+]

@@ -1,0 +1,129 @@
+{
+ "n_questions": 50,
+ "invalid_entries": {},
+ "empty_annotator2": 0,
+ "relevant_per_q": {
+  "annotator1": 2.84,
+  "annotator2": 3.56
+ },
+ "mean_jaccard": 0.464,
+ "mean_dice": 0.573,
+ "share_any_overlap": 0.86,
+ "kappa_lecture_universe": 0.559,
+ "kappa_items": 4343,
+ "ndcg1_annotator2": {
+  "semantic": {
+   "during": 0.62,
+   "lag1": 0.62,
+   "lag3": 0.62,
+   "lag5": 0.62,
+   "random": 0.62
+  },
+  "semantic_local": {
+   "during": 0.5,
+   "lag1": 0.5,
+   "lag3": 0.5,
+   "lag5": 0.5,
+   "random": 0.5
+  },
+  "timestamp_only": {
+   "during": 0.568,
+   "lag1": 0.432,
+   "lag3": 0.296,
+   "lag5": 0.228,
+   "random": 0.064
+  },
+  "hybrid_local_cv": {
+   "during": 0.62,
+   "lag1": 0.62,
+   "lag3": 0.62,
+   "lag5": 0.62,
+   "random": 0.62
+  }
+ },
+ "cv_lambdas_annotator2": [
+  0,
+  0,
+  0,
+  0,
+  0
+ ],
+ "ndcg1_intersection": {
+  "semantic": {
+   "during": 0.28,
+   "lag1": 0.28,
+   "lag3": 0.28,
+   "lag5": 0.28,
+   "random": 0.28
+  },
+  "semantic_local": {
+   "during": 0.4,
+   "lag1": 0.4,
+   "lag3": 0.4,
+   "lag5": 0.4,
+   "random": 0.4
+  },
+  "timestamp_only": {
+   "during": 0.696,
+   "lag1": 0.42,
+   "lag3": 0.208,
+   "lag5": 0.124,
+   "random": 0.036
+  },
+  "hybrid_local_cv": {
+   "during": 0.7,
+   "lag1": 0.652,
+   "lag3": 0.456,
+   "lag5": 0.324,
+   "random": 0.112
+  }
+ },
+ "cv_lambdas_intersection": [
+  0.05,
+  0.05,
+  0.05,
+  0.05,
+  0.05
+ ],
+ "ndcg1_union": {
+  "semantic": {
+   "during": 0.64,
+   "lag1": 0.64,
+   "lag3": 0.64,
+   "lag5": 0.64,
+   "random": 0.64
+  },
+  "semantic_local": {
+   "during": 0.6,
+   "lag1": 0.6,
+   "lag3": 0.6,
+   "lag5": 0.6,
+   "random": 0.6
+  },
+  "timestamp_only": {
+   "during": 0.964,
+   "lag1": 0.584,
+   "lag3": 0.308,
+   "lag5": 0.236,
+   "random": 0.068
+  },
+  "hybrid_local_cv": {
+   "during": 0.932,
+   "lag1": 0.872,
+   "lag3": 0.652,
+   "lag5": 0.496,
+   "random": 0.164
+  }
+ },
+ "cv_lambdas_union": [
+  0.05,
+  0.05,
+  0.05,
+  0.05,
+  0.05
+ ],
+ "empty_sets_filled_with_anchor": {
+  "annotator2": 0,
+  "intersection": 7
+ }
+}

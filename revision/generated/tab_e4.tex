@@ -1,0 +1,38 @@
+\begin{table}[!htbp]
+\centering
+\caption{Cross-segment questions (E4)}
+\label{tab:sup_e4}
+\small
+\begin{tabular}{lccccc}
+\toprule
+\textbf{Measure} & \textbf{Base} & \textbf{Base-L} & \textbf{ALIVE} & \textbf{ALIVE $-$ Base} & \textbf{ALIVE $-$ Base-L} \\
+\midrule
+\multicolumn{6}{l}{\textit{Eq.~1 context}} \\
+Words & 46 & 32 & 37 & & \\
+BERTScore P & 0.717 & 0.719 & 0.706 & $-0.011$ [-0.024, +0.001] & $-0.013$ [-0.025, -0.001] \\
+BERTScore R & 0.626 & 0.596 & 0.597 & $-0.029$ [-0.040, -0.018] & $+0.001$ [-0.010, +0.013] \\
+BERTScore F1 & 0.667 & 0.651 & 0.646 & $-0.021$ [-0.032, -0.010] & $-0.004$ [-0.015, +0.007] \\
+GPT-4o F & 4.37 & 4.32 & 4.38 & $+0.02$ ($p_H$=1.000) & $+0.07$ ($p_H$=1.000) \\
+GPT-4o A & 4.10 & 3.98 & 4.13 & $+0.03$ ($p_H$=1.000) & $+0.15$ ($p_H$=1.000) \\
+GPT-4o errors (\%) & 38 & 37 & 32 & McNemar 0.523 & McNemar 0.648 \\
+Claude F & 4.07 & 4.15 & 4.20 & $+0.13$ ($p_H$=1.000) & $+0.05$ ($p_H$=1.000) \\
+Claude A & 3.25 & 3.27 & 3.33 & $+0.08$ ($p_H$=1.000) & $+0.07$ ($p_H$=1.000) \\
+Claude errors (\%) & 52 & 48 & 52 & McNemar 1.000 & McNemar 0.824 \\
+\multicolumn{6}{l}{\textit{Semantic top-4}} \\
+Words & 47 & 33 & 39 & & \\
+BERTScore P & 0.707 & 0.724 & 0.703 & $-0.004$ [-0.017, +0.008] & $-0.021$ [-0.033, -0.009] \\
+BERTScore R & 0.618 & 0.603 & 0.595 & $-0.023$ [-0.033, -0.012] & $-0.008$ [-0.018, +0.002] \\
+BERTScore F1 & 0.659 & 0.657 & 0.644 & $-0.015$ [-0.025, -0.005] & $-0.013$ [-0.023, -0.004] \\
+GPT-4o F & 4.28 & 4.27 & 4.18 & $-0.10$ ($p_H$=1.000) & $-0.08$ ($p_H$=1.000) \\
+GPT-4o A & 4.17 & 4.05 & 3.98 & $-0.18$ ($p_H$=1.000) & $-0.07$ ($p_H$=1.000) \\
+GPT-4o errors (\%) & 45 & 45 & 50 & McNemar 0.607 & McNemar 0.648 \\
+Claude F & 3.88 & 4.17 & 3.92 & $+0.03$ ($p_H$=1.000) & $-0.25$ ($p_H$=0.965) \\
+Claude A & 3.30 & 3.42 & 3.25 & $-0.05$ ($p_H$=1.000) & $-0.17$ ($p_H$=1.000) \\
+Claude errors (\%) & 58 & 45 & 60 & McNemar 1.000 & McNemar 0.064 \\
+\bottomrule
+\end{tabular}
+\tabnotes{60 questions; reference answers average 80 words. Base-L = Base with the length instruction of E2. The judges scored
+each answer against its two source slides (F factuality, A agreement with the reference). $\Delta$ with bootstrap 95\% CI;
+$p_H$ = Wilcoxon, Holm-adjusted within judge over all E4 contrasts. The BERTScore precision/recall split is a post hoc
+description of the length effect.}
+\end{table}

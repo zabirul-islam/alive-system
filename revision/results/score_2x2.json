@@ -1,0 +1,200 @@
+{
+ "n": 508,
+ "cells": {
+  "base|lecture": {
+   "bertscore_f1": 0.7379,
+   "rouge1": 0.4944,
+   "rouge2": 0.3047,
+   "rougeL": 0.4218,
+   "nli_entail": 0.3839,
+   "nli_contra": 0.0787,
+   "numeric_err": 0.002,
+   "words": 33.5984
+  },
+  "base|retrieved": {
+   "bertscore_f1": 0.7443,
+   "rouge1": 0.5034,
+   "rouge2": 0.3149,
+   "rougeL": 0.4312,
+   "nli_entail": 0.2992,
+   "nli_contra": 0.063,
+   "numeric_err": 0.0,
+   "words": 33.061
+  },
+  "alive|lecture": {
+   "bertscore_f1": 0.7684,
+   "rouge1": 0.5451,
+   "rouge2": 0.3495,
+   "rougeL": 0.4754,
+   "nli_entail": 0.3346,
+   "nli_contra": 0.0689,
+   "numeric_err": 0.0,
+   "words": 27.2205
+  },
+  "alive|retrieved": {
+   "bertscore_f1": 0.7646,
+   "rouge1": 0.538,
+   "rouge2": 0.3448,
+   "rougeL": 0.4692,
+   "nli_entail": 0.2894,
+   "nli_contra": 0.061,
+   "numeric_err": 0.0,
+   "words": 27.7815
+  }
+ },
+ "contrasts": {
+  "model_effect|lecture": {
+   "bertscore_f1": {
+    "delta": 0.0305,
+    "ci95": [
+     0.0236,
+     0.0378
+    ],
+    "p_wilcoxon": 5.515147324858507e-17
+   },
+   "rougeL": {
+    "delta": 0.0536,
+    "ci95": [
+     0.0391,
+     0.0686
+    ],
+    "p_wilcoxon": 9.551765591705983e-14
+   },
+   "nli_entail": {
+    "delta": -0.0492,
+    "ci95": [
+     -0.0846,
+     -0.0138
+    ],
+    "p_wilcoxon": 0.0066953135387511995
+   }
+  },
+  "model_effect|retrieved": {
+   "bertscore_f1": {
+    "delta": 0.0204,
+    "ci95": [
+     0.0133,
+     0.0274
+    ],
+    "p_wilcoxon": 9.987687066281836e-11
+   },
+   "rougeL": {
+    "delta": 0.0379,
+    "ci95": [
+     0.0242,
+     0.0519
+    ],
+    "p_wilcoxon": 3.7383667094816665e-08
+   },
+   "nli_entail": {
+    "delta": -0.0098,
+    "ci95": [
+     -0.0472,
+     0.0256
+    ],
+    "p_wilcoxon": 0.6079588921749991
+   }
+  },
+  "context_effect|base": {
+   "bertscore_f1": {
+    "delta": 0.0064,
+    "ci95": [
+     -0.0001,
+     0.0129
+    ],
+    "p_wilcoxon": 0.06605952978134155
+   },
+   "rougeL": {
+    "delta": 0.0095,
+    "ci95": [
+     -0.0034,
+     0.023
+    ],
+    "p_wilcoxon": 0.08869257386392546
+   },
+   "nli_entail": {
+    "delta": -0.0846,
+    "ci95": [
+     -0.126,
+     -0.0413
+    ],
+    "p_wilcoxon": 8.087120717644449e-05
+   }
+  },
+  "context_effect|alive": {
+   "bertscore_f1": {
+    "delta": -0.0038,
+    "ci95": [
+     -0.0108,
+     0.0035
+    ],
+    "p_wilcoxon": 0.12870071828365326
+   },
+   "rougeL": {
+    "delta": -0.0062,
+    "ci95": [
+     -0.0218,
+     0.0089
+    ],
+    "p_wilcoxon": 0.1551607582291773
+   },
+   "nli_entail": {
+    "delta": -0.0453,
+    "ci95": [
+     -0.0886,
+     -0.002
+    ],
+    "p_wilcoxon": 0.03347406510913347
+   }
+  }
+ },
+ "interaction": {
+  "bertscore_f1": {
+   "delta": -0.0102,
+   "ci95": [
+    -0.0187,
+    -0.002
+   ]
+  },
+  "rougeL": {
+   "delta": -0.0157,
+   "ci95": [
+    -0.0325,
+    -0.0
+   ]
+  },
+  "nli_entail": {
+   "delta": 0.0394,
+   "ci95": [
+    -0.0059,
+    0.0827
+   ]
+  }
+ },
+ "reproduction_exact_match": {
+  "base|lecture": 0.8051,
+  "alive|lecture": 0.8622,
+  "base|retrieved": 0.8681
+ },
+ "prompt_tokens_match_original_rag": 1.0,
+ "by_difficulty_bertscore": {
+  "basic": {
+   "base|lecture": 0.7472,
+   "base|retrieved": 0.7703,
+   "alive|lecture": 0.7741,
+   "alive|retrieved": 0.784
+  },
+  "intermediate": {
+   "base|lecture": 0.7417,
+   "base|retrieved": 0.7389,
+   "alive|lecture": 0.765,
+   "alive|retrieved": 0.7642
+  },
+  "advanced": {
+   "base|lecture": 0.7295,
+   "base|retrieved": 0.737,
+   "alive|lecture": 0.769,
+   "alive|retrieved": 0.7556
+  }
+ }
+}

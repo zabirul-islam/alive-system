@@ -1,0 +1,3620 @@
+1
+00:00:01,680 --> 00:00:06,560
+Hello everyone and welcome back.
+
+2
+00:00:04,560 --> 00:00:08,880
+Today we will give the last mat lab
+
+3
+00:00:06,560 --> 00:00:11,920
+lecture to explore how it can be used to
+
+4
+00:00:08,880 --> 00:00:14,960
+demonstrate CT image reconstruction that
+
+5
+00:00:11,920 --> 00:00:16,880
+you've been learning in this course.
+
+6
+00:00:14,960 --> 00:00:20,480
+The image you see here is an example
+
+7
+00:00:16,880 --> 00:00:22,320
+from G's Revolution CT. This technology
+
+8
+00:00:20,480 --> 00:00:25,199
+allows us to capture extremely
+
+9
+00:00:22,320 --> 00:00:27,359
+highresolution images of the human body.
+
+10
+00:00:25,199 --> 00:00:29,119
+In this case, you can see a detailed 3D
+
+11
+00:00:27,359 --> 00:00:31,439
+view of the skull, including the blood
+
+12
+00:00:29,119 --> 00:00:33,440
+vessels, arteries, veins, and even tiny
+
+13
+00:00:31,439 --> 00:00:35,120
+capillaries.
+
+14
+00:00:33,440 --> 00:00:36,880
+If you're curious, the link at the
+
+15
+00:00:35,120 --> 00:00:39,520
+bottom of the slide will take you to the
+
+16
+00:00:36,880 --> 00:00:41,600
+website where this example came from.
+
+17
+00:00:39,520 --> 00:00:43,920
+They have several other fascinating
+
+18
+00:00:41,600 --> 00:00:46,320
+images that show how CT technology is
+
+19
+00:00:43,920 --> 00:00:48,559
+evolving to provide ever sharper and
+
+20
+00:00:46,320 --> 00:00:50,160
+more detailed views inside the human
+
+21
+00:00:48,559 --> 00:00:51,920
+body.
+
+22
+00:00:50,160 --> 00:00:53,760
+These advances are not just technical
+
+23
+00:00:51,920 --> 00:00:56,480
+achievements. They are vital for
+
+24
+00:00:53,760 --> 00:00:58,399
+clinical use, helping doctors diagnose
+
+25
+00:00:56,480 --> 00:01:01,199
+and treat patients with much greater
+
+26
+00:00:58,399 --> 00:01:03,199
+precision.
+
+27
+00:01:01,199 --> 00:01:05,040
+As we go through this lecture, I'll also
+
+28
+00:01:03,199 --> 00:01:06,880
+remind you that all the mat lab code
+
+29
+00:01:05,040 --> 00:01:09,439
+examples we'll be using are available on
+
+30
+00:01:06,880 --> 00:01:11,520
+the LMS. If you'd like to follow along
+
+31
+00:01:09,439 --> 00:01:14,920
+or try them yourself later, you'll find
+
+32
+00:01:11,520 --> 00:01:14,920
+everything there.
+
+33
+00:01:16,320 --> 00:01:21,119
+Let's take a quick look at our course
+
+34
+00:01:18,159 --> 00:01:22,560
+schedule to see where we stand.
+
+35
+00:01:21,119 --> 00:01:24,640
+As you can see, we've been moving
+
+36
+00:01:22,560 --> 00:01:26,640
+steadily through the topics starting
+
+37
+00:01:24,640 --> 00:01:28,880
+with the basics like introduction,
+
+38
+00:01:26,640 --> 00:01:31,040
+systems and fora series and then
+
+39
+00:01:28,880 --> 00:01:33,119
+building up to signal processing and mat
+
+40
+00:01:31,040 --> 00:01:34,880
+lab practice.
+
+41
+00:01:33,119 --> 00:01:37,920
+Currently we are on track with the
+
+42
+00:01:34,880 --> 00:01:39,360
+section on computed tomography or CT.
+
+43
+00:01:37,920 --> 00:01:41,200
+This means you already have the
+
+44
+00:01:39,360 --> 00:01:43,119
+mathematical and signal processing
+
+45
+00:01:41,200 --> 00:01:45,759
+foundation and now we are applying it
+
+46
+00:01:43,119 --> 00:01:48,240
+directly to medical imaging.
+
+47
+00:01:45,759 --> 00:01:50,960
+So yes, we are on schedule and today's
+
+48
+00:01:48,240 --> 00:01:55,399
+focus on mat lab and CT fits exactly
+
+49
+00:01:50,960 --> 00:01:55,399
+into the larger flow of the course.
+
+50
+00:01:56,880 --> 00:02:01,280
+Now before we dive into today's
+
+51
+00:01:58,479 --> 00:02:02,799
+material, just a quick reminder,
+
+52
+00:02:01,280 --> 00:02:04,960
+if you'd like to follow along with the
+
+53
+00:02:02,799 --> 00:02:07,040
+examples, please make sure you have mat
+
+54
+00:02:04,960 --> 00:02:09,200
+lab installed along with the signal
+
+55
+00:02:07,040 --> 00:02:11,760
+processing toolbox and the image
+
+56
+00:02:09,200 --> 00:02:13,920
+processing toolbox. These are essential
+
+57
+00:02:11,760 --> 00:02:15,520
+for running the code.
+
+58
+00:02:13,920 --> 00:02:17,599
+If you haven't set this up yet, don't
+
+59
+00:02:15,520 --> 00:02:20,160
+worry. It's simple. Just download the
+
+60
+00:02:17,599 --> 00:02:22,239
+zip file I've posted on LMS, extract all
+
+61
+00:02:20,160 --> 00:02:24,560
+the files, and place them into your mat
+
+62
+00:02:22,239 --> 00:02:26,480
+lab folder. Once that's done, you'll be
+
+63
+00:02:24,560 --> 00:02:28,480
+ready to run the scripts either as we go
+
+64
+00:02:26,480 --> 00:02:31,680
+through them in class or later on your
+
+65
+00:02:28,480 --> 00:02:33,440
+own time at home.
+
+66
+00:02:31,680 --> 00:02:37,879
+All right, with that setup in place,
+
+67
+00:02:33,440 --> 00:02:37,879
+let's move on to the theory of CT.
+
+68
+00:02:39,440 --> 00:02:44,400
+Now, let's step into the theory of CT.
+
+69
+00:02:42,560 --> 00:02:46,560
+What I'll give you here is a general
+
+70
+00:02:44,400 --> 00:02:49,920
+overview, much of which should feel like
+
+71
+00:02:46,560 --> 00:02:53,440
+a review from our earlier classes.
+
+72
+00:02:49,920 --> 00:02:55,120
+The basic idea is this. CT uses X-ray
+
+73
+00:02:53,440 --> 00:02:57,680
+projections taken from many different
+
+74
+00:02:55,120 --> 00:02:59,680
+angles around the body.
+
+75
+00:02:57,680 --> 00:03:01,840
+As the X-rays pass through, they are
+
+76
+00:02:59,680 --> 00:03:03,360
+attenuated. That means they are weakened
+
+77
+00:03:01,840 --> 00:03:05,760
+depending on the different properties of
+
+78
+00:03:03,360 --> 00:03:07,920
+the tissues they pass through. Dense
+
+79
+00:03:05,760 --> 00:03:10,879
+tissues like bone attenuate more while
+
+80
+00:03:07,920 --> 00:03:12,720
+soft tissues attenuate less.
+
+81
+00:03:10,879 --> 00:03:14,879
+By collecting all these projections from
+
+82
+00:03:12,720 --> 00:03:16,640
+multiple views, we build up enough
+
+83
+00:03:14,879 --> 00:03:18,879
+information to start reconstructing
+
+84
+00:03:16,640 --> 00:03:22,920
+what's inside the body. That's the
+
+85
+00:03:18,879 --> 00:03:22,920
+foundation of computed tomography.
+
+86
+00:03:24,560 --> 00:03:29,200
+So, let's look a little closer at the
+
+87
+00:03:26,400 --> 00:03:30,879
+general theory of CT.
+
+88
+00:03:29,200 --> 00:03:32,799
+When X-rays pass through the body,
+
+89
+00:03:30,879 --> 00:03:35,280
+different tissues attenuate the beam in
+
+90
+00:03:32,799 --> 00:03:37,519
+different ways. For example, bone blocks
+
+91
+00:03:35,280 --> 00:03:39,840
+attenuate X-rays much more strongly than
+
+92
+00:03:37,519 --> 00:03:41,440
+muscle or soft tissue. This difference
+
+93
+00:03:39,840 --> 00:03:44,400
+is exactly what gives us useful
+
+94
+00:03:41,440 --> 00:03:46,159
+information.
+
+95
+00:03:44,400 --> 00:03:48,080
+Now the challenge is that each X-ray
+
+96
+00:03:46,159 --> 00:03:50,080
+image we take is really just a 2D
+
+97
+00:03:48,080 --> 00:03:52,640
+projection. You can see that in the
+
+98
+00:03:50,080 --> 00:03:54,959
+picture on the left. If we only had this
+
+99
+00:03:52,640 --> 00:03:56,879
+single projection, we would miss most of
+
+100
+00:03:54,959 --> 00:03:59,760
+the information about what lies behind
+
+101
+00:03:56,879 --> 00:04:02,879
+or to the side of the structures.
+
+102
+00:03:59,760 --> 00:04:04,560
+So what do we do? We take projections
+
+103
+00:04:02,879 --> 00:04:06,640
+from many different angles like the
+
+104
+00:04:04,560 --> 00:04:08,319
+images you see in the middle. Each
+
+105
+00:04:06,640 --> 00:04:10,319
+projection adds a different piece of
+
+106
+00:04:08,319 --> 00:04:12,480
+information.
+
+107
+00:04:10,319 --> 00:04:14,239
+Then comes the key step. We solve what's
+
+108
+00:04:12,480 --> 00:04:16,160
+called an inverse problem.
+
+109
+00:04:14,239 --> 00:04:18,799
+Mathematically, this is done using the
+
+110
+00:04:16,160 --> 00:04:20,639
+radon transform and its inverse. By
+
+111
+00:04:18,799 --> 00:04:23,199
+combining all of those projections
+
+112
+00:04:20,639 --> 00:04:25,280
+through the inverse radon transform, we
+
+113
+00:04:23,199 --> 00:04:27,520
+can reconstruct a detailed image of the
+
+114
+00:04:25,280 --> 00:04:29,440
+body's interior.
+
+115
+00:04:27,520 --> 00:04:31,360
+That's what you see on the right, a 3D
+
+116
+00:04:29,440 --> 00:04:32,800
+CT reconstruction where bones and
+
+117
+00:04:31,360 --> 00:04:34,639
+tissues are highlighted in different
+
+118
+00:04:32,800 --> 00:04:36,720
+colors.
+
+119
+00:04:34,639 --> 00:04:39,040
+In this class to keep things simpler, we
+
+120
+00:04:36,720 --> 00:04:41,280
+will mostly work with 2D imaging cases
+
+121
+00:04:39,040 --> 00:04:43,600
+when applying the radon transform in mat
+
+122
+00:04:41,280 --> 00:04:46,160
+lab. But remember the same principle
+
+123
+00:04:43,600 --> 00:04:49,160
+extends to full 3DCT in clinical
+
+124
+00:04:46,160 --> 00:04:49,160
+practice.
+
+125
+00:04:50,800 --> 00:04:54,960
+Now let's talk about the resolution of
+
+126
+00:04:52,560 --> 00:04:57,040
+CT reconstruction.
+
+127
+00:04:54,960 --> 00:04:58,880
+Two key factors determine how sharp or
+
+128
+00:04:57,040 --> 00:05:01,280
+detailed your reconstructed image will
+
+129
+00:04:58,880 --> 00:05:02,960
+be.
+
+130
+00:05:01,280 --> 00:05:05,040
+First the number of rays or the number
+
+131
+00:05:02,960 --> 00:05:07,520
+of X-rays passing through the object at
+
+132
+00:05:05,040 --> 00:05:10,320
+each angle. This directly affects the
+
+133
+00:05:07,520 --> 00:05:12,400
+radial component of spatial resolution.
+
+134
+00:05:10,320 --> 00:05:14,639
+That is how finely we can distinguish
+
+135
+00:05:12,400 --> 00:05:16,560
+details along a line from the center
+
+136
+00:05:14,639 --> 00:05:18,160
+outward.
+
+137
+00:05:16,560 --> 00:05:19,600
+Second, the number of views or the
+
+138
+00:05:18,160 --> 00:05:21,919
+number of different angles is often
+
+139
+00:05:19,600 --> 00:05:24,080
+denoted by theta. This controls the
+
+140
+00:05:21,919 --> 00:05:26,160
+circumferential component of resolution.
+
+141
+00:05:24,080 --> 00:05:28,639
+How well we can distinguish details as
+
+142
+00:05:26,160 --> 00:05:31,120
+we go around the circle.
+
+143
+00:05:28,639 --> 00:05:33,120
+On the cartoon CT slice shown here, you
+
+144
+00:05:31,120 --> 00:05:35,360
+can see both components. The radial
+
+145
+00:05:33,120 --> 00:05:37,280
+resolution going outward from the center
+
+146
+00:05:35,360 --> 00:05:39,840
+and the circumferential resolution
+
+147
+00:05:37,280 --> 00:05:42,080
+wrapping around the image.
+
+148
+00:05:39,840 --> 00:05:43,840
+So to summarize, the more rays you use
+
+149
+00:05:42,080 --> 00:05:45,199
+and the more views you collect, the
+
+150
+00:05:43,840 --> 00:05:47,680
+higher the resolution of your
+
+151
+00:05:45,199 --> 00:05:49,680
+reconstruction. On the other hand, using
+
+152
+00:05:47,680 --> 00:05:54,120
+fewer rays or fewer views leads to
+
+153
+00:05:49,680 --> 00:05:54,120
+blurrier images with less detail.
+
+154
+00:05:55,600 --> 00:05:58,960
+Now let's talk about the radon
+
+155
+00:05:57,199 --> 00:06:01,280
+transform.
+
+156
+00:05:58,960 --> 00:06:03,759
+The radon transform is essentially a way
+
+157
+00:06:01,280 --> 00:06:07,120
+to represent X-ray projection data and
+
+158
+00:06:03,759 --> 00:06:09,440
+the result is something called a synog.
+
+159
+00:06:07,120 --> 00:06:11,600
+A synog is just an image that shows how
+
+160
+00:06:09,440 --> 00:06:13,520
+the projections vary as we rotate around
+
+161
+00:06:11,600 --> 00:06:15,199
+the object.
+
+162
+00:06:13,520 --> 00:06:16,880
+This representation also tells us
+
+163
+00:06:15,199 --> 00:06:19,360
+something about the characteristics of
+
+164
+00:06:16,880 --> 00:06:21,120
+the sample. For example, objects that
+
+165
+00:06:19,360 --> 00:06:22,800
+are closer to the center of the field of
+
+166
+00:06:21,120 --> 00:06:25,440
+view show up as regions of higher
+
+167
+00:06:22,800 --> 00:06:26,960
+amplitude in the synog.
+
+168
+00:06:25,440 --> 00:06:29,520
+Here you can see the mathematical
+
+169
+00:06:26,960 --> 00:06:31,360
+definition of the radon transform. Don't
+
+170
+00:06:29,520 --> 00:06:33,120
+worry about memorizing the equation.
+
+171
+00:06:31,360 --> 00:06:35,440
+What matters is understanding that it
+
+172
+00:06:33,120 --> 00:06:37,440
+describes how the function f of x and y
+
+173
+00:06:35,440 --> 00:06:40,800
+our object is projected along different
+
+174
+00:06:37,440 --> 00:06:42,880
+angles which we denote by theta.
+
+175
+00:06:40,800 --> 00:06:45,280
+On the left you see the same setup we
+
+176
+00:06:42,880 --> 00:06:47,840
+discussed earlier with xrays passing
+
+177
+00:06:45,280 --> 00:06:51,039
+through the object at angle theta. And
+
+178
+00:06:47,840 --> 00:06:52,880
+on the right you see an example syog.
+
+179
+00:06:51,039 --> 00:06:54,720
+Notice the bright wavy line that
+
+180
+00:06:52,880 --> 00:06:57,440
+corresponds to the yellow circular
+
+181
+00:06:54,720 --> 00:06:59,360
+object in the field of view.
+
+182
+00:06:57,440 --> 00:07:01,520
+Because it's closer to the center, its
+
+183
+00:06:59,360 --> 00:07:04,080
+contribution to the synog has a higher
+
+184
+00:07:01,520 --> 00:07:06,479
+amplitude and it traces this curve as
+
+185
+00:07:04,080 --> 00:07:08,160
+the angle changes.
+
+186
+00:07:06,479 --> 00:07:10,000
+So the cyoggram is the bridge between
+
+187
+00:07:08,160 --> 00:07:12,000
+the raw projection data we collect and
+
+188
+00:07:10,000 --> 00:07:15,000
+the reconstructed CT image we want to
+
+189
+00:07:12,000 --> 00:07:15,000
+build.
+
+190
+00:07:16,560 --> 00:07:20,400
+So far we've looked at the radon
+
+191
+00:07:18,160 --> 00:07:22,800
+transform. But to actually reconstruct
+
+192
+00:07:20,400 --> 00:07:25,039
+an image, we also need the inverse radon
+
+193
+00:07:22,800 --> 00:07:28,160
+transform. This process relies on
+
+194
+00:07:25,039 --> 00:07:30,800
+something called the fier slice theorem.
+
+195
+00:07:28,160 --> 00:07:32,400
+Here's the idea in simpler terms. If we
+
+196
+00:07:30,800 --> 00:07:34,319
+take the one-dimensional forier
+
+197
+00:07:32,400 --> 00:07:36,400
+transform of a radon transform
+
+198
+00:07:34,319 --> 00:07:38,639
+projection profile at a specific angle
+
+199
+00:07:36,400 --> 00:07:40,560
+fi, that result is the same as taking
+
+200
+00:07:38,639 --> 00:07:42,400
+the two-dimensional forier transform of
+
+201
+00:07:40,560 --> 00:07:45,039
+the object and looking along a line at
+
+202
+00:07:42,400 --> 00:07:46,560
+that same angle fi.
+
+203
+00:07:45,039 --> 00:07:48,560
+That's powerful because it means each
+
+204
+00:07:46,560 --> 00:07:51,440
+projection we acquire gives us a slice
+
+205
+00:07:48,560 --> 00:07:53,759
+or a line through the object's 2D forier
+
+206
+00:07:51,440 --> 00:07:55,919
+transform. When we combine all these
+
+207
+00:07:53,759 --> 00:07:57,759
+slices from projections taken at many
+
+208
+00:07:55,919 --> 00:08:00,240
+different angles, we can fill in the
+
+209
+00:07:57,759 --> 00:08:02,000
+complete 2D forier transform of the
+
+210
+00:08:00,240 --> 00:08:04,479
+object.
+
+211
+00:08:02,000 --> 00:08:06,560
+And once we have the full 2D forier
+
+212
+00:08:04,479 --> 00:08:09,120
+transform, we can simply apply the
+
+213
+00:08:06,560 --> 00:08:12,479
+inverse two-dimensional forier transform
+
+214
+00:08:09,120 --> 00:08:14,400
+to reconstruct the original image.
+
+215
+00:08:12,479 --> 00:08:16,960
+The diagram here shows this step by
+
+216
+00:08:14,400 --> 00:08:19,599
+step. Each projection corresponds to one
+
+217
+00:08:16,960 --> 00:08:20,960
+line in forier space. Change the angle
+
+218
+00:08:19,599 --> 00:08:22,639
+and you get another line and then
+
+219
+00:08:20,960 --> 00:08:24,400
+another.
+
+220
+00:08:22,639 --> 00:08:26,160
+As we add up all these lines at
+
+221
+00:08:24,400 --> 00:08:28,960
+different angles, the forier space is
+
+222
+00:08:26,160 --> 00:08:31,199
+gradually filled. Finally, applying the
+
+223
+00:08:28,960 --> 00:08:36,039
+inverse forier transform brings us back
+
+224
+00:08:31,199 --> 00:08:36,039
+to a reconstructed image in real space.
+
+225
+00:08:37,519 --> 00:08:41,599
+The next key idea is back projection,
+
+226
+00:08:40,080 --> 00:08:44,880
+which is the standard method for
+
+227
+00:08:41,599 --> 00:08:46,800
+reconstructing CT slices.
+
+228
+00:08:44,880 --> 00:08:48,880
+Here's how it works. We start with the
+
+229
+00:08:46,800 --> 00:08:51,360
+synog, which contains all the projection
+
+230
+00:08:48,880 --> 00:08:53,760
+data. For each projection, we take its
+
+231
+00:08:51,360 --> 00:08:55,680
+information and back project it. That
+
+232
+00:08:53,760 --> 00:08:57,519
+means we spread that projection back
+
+233
+00:08:55,680 --> 00:08:59,920
+across the image space at the angle
+
+234
+00:08:57,519 --> 00:09:02,000
+where it was acquired.
+
+235
+00:08:59,920 --> 00:09:04,240
+Let's look at this cartoon example.
+
+236
+00:09:02,000 --> 00:09:07,120
+Imagine we have a large oval and inside
+
+237
+00:09:04,240 --> 00:09:09,920
+it are two smaller red ovals. If we take
+
+238
+00:09:07,120 --> 00:09:12,000
+a projection from the top down, the syog
+
+239
+00:09:09,920 --> 00:09:14,959
+shows two bright spots that correspond
+
+240
+00:09:12,000 --> 00:09:16,560
+to those red ovals. When we back project
+
+241
+00:09:14,959 --> 00:09:19,760
+this data, we get a blurry
+
+242
+00:09:16,560 --> 00:09:22,160
+reconstruction along that one angle.
+
+243
+00:09:19,760 --> 00:09:24,240
+Now let's do the same from a side view.
+
+244
+00:09:22,160 --> 00:09:26,320
+Again, the synogram shows two high
+
+245
+00:09:24,240 --> 00:09:28,320
+amplitude areas. And when we back
+
+246
+00:09:26,320 --> 00:09:30,399
+project that projection, we get another
+
+247
+00:09:28,320 --> 00:09:32,800
+blurry reconstruction, but this time
+
+248
+00:09:30,399 --> 00:09:34,160
+along the side angle.
+
+249
+00:09:32,800 --> 00:09:36,560
+At this point, we have two back
+
+250
+00:09:34,160 --> 00:09:38,880
+projections. When we combine them, the
+
+251
+00:09:36,560 --> 00:09:41,120
+overlap starts to suggest the locations
+
+252
+00:09:38,880 --> 00:09:43,360
+of the two smaller ovals inside the
+
+253
+00:09:41,120 --> 00:09:45,440
+larger one. Of course, with only two
+
+254
+00:09:43,360 --> 00:09:47,120
+projections, the result is quite rough.
+
+255
+00:09:45,440 --> 00:09:48,959
+In this case, it looks more like two
+
+256
+00:09:47,120 --> 00:09:50,800
+squares.
+
+257
+00:09:48,959 --> 00:09:53,040
+But as we add more and more projections
+
+258
+00:09:50,800 --> 00:09:55,120
+from many different angles, the combined
+
+259
+00:09:53,040 --> 00:09:57,519
+back projections gradually approximate
+
+260
+00:09:55,120 --> 00:09:59,200
+the true shapes. With enough views, the
+
+261
+00:09:57,519 --> 00:10:02,920
+reconstruction recovers the original
+
+262
+00:09:59,200 --> 00:10:02,920
+sample very accurately.
+
+263
+00:10:04,560 --> 00:10:08,080
+Now let's move from simple back
+
+264
+00:10:06,240 --> 00:10:10,399
+projection to filtered back projection
+
+265
+00:10:08,080 --> 00:10:12,399
+or FBP.
+
+266
+00:10:10,399 --> 00:10:14,079
+As we saw in the last example, back
+
+267
+00:10:12,399 --> 00:10:16,959
+projection is the standard way of
+
+268
+00:10:14,079 --> 00:10:19,680
+reconstructing CT slices. We take the
+
+269
+00:10:16,959 --> 00:10:21,200
+synog back project each view and combine
+
+270
+00:10:19,680 --> 00:10:23,440
+them.
+
+271
+00:10:21,200 --> 00:10:25,440
+But here's the problem. If we simply use
+
+272
+00:10:23,440 --> 00:10:27,920
+unfiltered back projection, the
+
+273
+00:10:25,440 --> 00:10:29,760
+resulting image often looks blurry.
+
+274
+00:10:27,920 --> 00:10:32,959
+That's because the projections overlap
+
+275
+00:10:29,760 --> 00:10:35,040
+in a way that smears out the details.
+
+276
+00:10:32,959 --> 00:10:37,839
+To fix this, we apply a filter in the
+
+277
+00:10:35,040 --> 00:10:39,760
+syog space before back projecting.
+
+278
+00:10:37,839 --> 00:10:41,519
+Filtering helps sharpen the edges and
+
+279
+00:10:39,760 --> 00:10:43,920
+preserve the fine details that would
+
+280
+00:10:41,519 --> 00:10:46,320
+otherwise be lost.
+
+281
+00:10:43,920 --> 00:10:47,839
+Look at the images here. In the top row,
+
+282
+00:10:46,320 --> 00:10:50,000
+we have a synogram and its back
+
+283
+00:10:47,839 --> 00:10:52,399
+projected image. Notice how the back
+
+284
+00:10:50,000 --> 00:10:56,000
+projection produces just a fuzzy grayish
+
+285
+00:10:52,399 --> 00:10:58,079
+blob with poorly defined boundaries.
+
+286
+00:10:56,000 --> 00:10:59,839
+Now, in the bottom row, the synogram has
+
+287
+00:10:58,079 --> 00:11:01,440
+first been filtered. After
+
+288
+00:10:59,839 --> 00:11:02,880
+reconstruction, the image is much
+
+289
+00:11:01,440 --> 00:11:05,120
+clearer. You can actually see the
+
+290
+00:11:02,880 --> 00:11:07,279
+circular structure with sharp edges and
+
+291
+00:11:05,120 --> 00:11:10,240
+even a smaller circle inside it, which
+
+292
+00:11:07,279 --> 00:11:12,320
+could represent something like a tumor.
+
+293
+00:11:10,240 --> 00:11:14,079
+On the right side, you see examples of
+
+294
+00:11:12,320 --> 00:11:16,720
+different filters that can be applied
+
+295
+00:11:14,079 --> 00:11:19,519
+such as the Ramlac filter, the Sheplogan
+
+296
+00:11:16,720 --> 00:11:21,360
+filter, and the Hamming filter.
+
+297
+00:11:19,519 --> 00:11:23,839
+Each of these adjust the frequency
+
+298
+00:11:21,360 --> 00:11:25,760
+content of the syog differently, but
+
+299
+00:11:23,839 --> 00:11:28,079
+they all serve the same purpose to
+
+300
+00:11:25,760 --> 00:11:30,880
+enhance contrast and reduce blurring in
+
+301
+00:11:28,079 --> 00:11:33,279
+the final reconstructed image.
+
+302
+00:11:30,880 --> 00:11:35,360
+So in summary, filtered back projection
+
+303
+00:11:33,279 --> 00:11:37,680
+is one of the most widely used methods
+
+304
+00:11:35,360 --> 00:11:39,680
+in CT because it gives us images that
+
+305
+00:11:37,680 --> 00:11:43,160
+are both accurate and sharp enough for
+
+306
+00:11:39,680 --> 00:11:43,160
+clinical use.
+
+307
+00:11:44,640 --> 00:11:48,399
+Here's something pretty cool to look at.
+
+308
+00:11:46,480 --> 00:11:50,240
+This is filtered back projection in
+
+309
+00:11:48,399 --> 00:11:52,000
+progress.
+
+310
+00:11:50,240 --> 00:11:54,800
+What you're seeing here starts with the
+
+311
+00:11:52,000 --> 00:11:56,560
+original synog. Then as the algorithm
+
+312
+00:11:54,800 --> 00:11:58,079
+processes each view, the back
+
+313
+00:11:56,560 --> 00:12:00,560
+projections are gradually added
+
+314
+00:11:58,079 --> 00:12:02,560
+together. Step by step, the image begins
+
+315
+00:12:00,560 --> 00:12:03,760
+to take shape.
+
+316
+00:12:02,560 --> 00:12:06,320
+It's almost like watching the
+
+317
+00:12:03,760 --> 00:12:08,240
+reconstruction unfold in real time. As
+
+318
+00:12:06,320 --> 00:12:10,240
+more and more views are included, the
+
+319
+00:12:08,240 --> 00:12:12,480
+overlapping lines come together and the
+
+320
+00:12:10,240 --> 00:12:15,760
+original phantom or the sample image we
+
+321
+00:12:12,480 --> 00:12:18,320
+started with slowly reappears.
+
+322
+00:12:15,760 --> 00:12:20,720
+This gives you a visual sense of how CT
+
+323
+00:12:18,320 --> 00:12:22,320
+actually builds up an image, not from a
+
+324
+00:12:20,720 --> 00:12:24,480
+single snapshot, but from many
+
+325
+00:12:22,320 --> 00:12:27,800
+projections combined through filtered
+
+326
+00:12:24,480 --> 00:12:27,800
+back projection.
+
+327
+00:12:29,440 --> 00:12:33,839
+Now, how do we use mat lab to
+
+328
+00:12:31,040 --> 00:12:35,839
+demonstrate these CT principles? Mat Lab
+
+329
+00:12:33,839 --> 00:12:38,880
+gives us two distinct simulation paths,
+
+330
+00:12:35,839 --> 00:12:41,680
+parallel beam CT and fan beam CT. We'll
+
+331
+00:12:38,880 --> 00:12:43,440
+explore both step by step.
+
+332
+00:12:41,680 --> 00:12:45,440
+For our demonstrations, we'll work with
+
+333
+00:12:43,440 --> 00:12:47,680
+three simple phantoms that is test
+
+334
+00:12:45,440 --> 00:12:49,600
+images used to evaluate reconstruction
+
+335
+00:12:47,680 --> 00:12:51,360
+methods.
+
+336
+00:12:49,600 --> 00:12:53,440
+Square and square phantom, a small
+
+337
+00:12:51,360 --> 00:12:55,519
+bright square centered inside a larger
+
+338
+00:12:53,440 --> 00:12:57,680
+dark square.
+
+339
+00:12:55,519 --> 00:12:59,600
+Circle phantom with a nodule, a large
+
+340
+00:12:57,680 --> 00:13:01,360
+gray circle with a small bright circle
+
+341
+00:12:59,600 --> 00:13:03,519
+near the edge. Think of that dot as a
+
+342
+00:13:01,360 --> 00:13:05,600
+mock tumor.
+
+343
+00:13:03,519 --> 00:13:07,839
+Sheplogan phantom, a standard test
+
+344
+00:13:05,600 --> 00:13:10,240
+object that comes with mat lab. It's
+
+345
+00:13:07,839 --> 00:13:12,720
+widely used in our field so researchers
+
+346
+00:13:10,240 --> 00:13:14,959
+can compare results fairly. If two
+
+347
+00:13:12,720 --> 00:13:16,959
+groups reconstruct the same Shep Logan
+
+348
+00:13:14,959 --> 00:13:18,800
+phantom, their images are directly
+
+349
+00:13:16,959 --> 00:13:20,880
+comparable.
+
+350
+00:13:18,800 --> 00:13:23,040
+We'll first apply parallel beam tools
+
+351
+00:13:20,880 --> 00:13:24,800
+and then switch to fan beam tools so you
+
+352
+00:13:23,040 --> 00:13:28,040
+can see how the algorithms behave on the
+
+353
+00:13:24,800 --> 00:13:28,040
+same phantoms.
+
+354
+00:13:29,680 --> 00:13:35,120
+Let's begin with parallel beam CT
+
+355
+00:13:32,880 --> 00:13:37,440
+in mat lab. The main tool for simulating
+
+356
+00:13:35,120 --> 00:13:39,600
+this is the radon transform function
+
+357
+00:13:37,440 --> 00:13:42,000
+simply called raidon. This function
+
+358
+00:13:39,600 --> 00:13:43,760
+takes an image our phantom and generates
+
+359
+00:13:42,000 --> 00:13:46,320
+its parallel beam projections at
+
+360
+00:13:43,760 --> 00:13:48,720
+different rotation angles.
+
+361
+00:13:46,320 --> 00:13:50,720
+In a parallel beam setup, the X-ray
+
+362
+00:13:48,720 --> 00:13:53,040
+beams are arranged so that they travel
+
+363
+00:13:50,720 --> 00:13:54,480
+in perfectly parallel lines as they pass
+
+364
+00:13:53,040 --> 00:13:57,120
+through the object and reach the
+
+365
+00:13:54,480 --> 00:13:59,199
+detector. Each projection corresponds to
+
+366
+00:13:57,120 --> 00:14:02,320
+summing the values of the image pixels
+
+367
+00:13:59,199 --> 00:14:04,480
+along those parallel paths.
+
+368
+00:14:02,320 --> 00:14:06,639
+So when you hear me say parallel beam
+
+369
+00:14:04,480 --> 00:14:09,120
+CT, think of it as collecting straight
+
+370
+00:14:06,639 --> 00:14:11,120
+evenly spaced rays rotating around the
+
+371
+00:14:09,120 --> 00:14:14,240
+object and storing all of that
+
+372
+00:14:11,120 --> 00:14:18,440
+information in a synog. Mat Lab's radon
+
+373
+00:14:14,240 --> 00:14:18,440
+function gives us exactly that.
+
+374
+00:14:19,839 --> 00:14:23,839
+Now let's go deeper into how Mat Lab's
+
+375
+00:14:21,839 --> 00:14:25,519
+radon function works for parallel beam
+
+376
+00:14:23,839 --> 00:14:27,519
+CT.
+
+377
+00:14:25,519 --> 00:14:30,320
+Think of the simulated beams as rays
+
+378
+00:14:27,519 --> 00:14:32,240
+spaced one pixel apart. These beams are
+
+379
+00:14:30,320 --> 00:14:34,160
+projected from the source, travel in
+
+380
+00:14:32,240 --> 00:14:36,560
+straight parallel lines, pass through
+
+381
+00:14:34,160 --> 00:14:38,800
+the object, and arrive at the detector
+
+382
+00:14:36,560 --> 00:14:40,639
+on the other side.
+
+383
+00:14:38,800 --> 00:14:42,720
+In practice, both the beams and the
+
+384
+00:14:40,639 --> 00:14:44,880
+detector array rotate together around
+
+385
+00:14:42,720 --> 00:14:46,639
+the center of the image. The amount of
+
+386
+00:14:44,880 --> 00:14:48,639
+rotation is controlled by the angle
+
+387
+00:14:46,639 --> 00:14:50,639
+theta which we provide as an input to
+
+388
+00:14:48,639 --> 00:14:52,560
+the function. So by sweeping through
+
+389
+00:14:50,639 --> 00:14:54,880
+many angles, we gather projections from
+
+390
+00:14:52,560 --> 00:14:57,279
+all around the object.
+
+391
+00:14:54,880 --> 00:15:00,800
+The mat lab function looks like this.
+
+392
+00:14:57,279 --> 00:15:03,760
+rxp= rate and i theta. Here's what each
+
+393
+00:15:00,800 --> 00:15:05,760
+part means. R is the result. It contains
+
+394
+00:15:03,760 --> 00:15:08,399
+the projection values essentially the
+
+395
+00:15:05,760 --> 00:15:10,480
+amplitudes of the rays.
+
+396
+00:15:08,399 --> 00:15:12,720
+XP gives the detector positions if you
+
+397
+00:15:10,480 --> 00:15:15,279
+need to keep track of them. I is simply
+
+398
+00:15:12,720 --> 00:15:16,959
+your input image or phantom. Theta is
+
+399
+00:15:15,279 --> 00:15:19,440
+the set of rotation angles you want to
+
+400
+00:15:16,959 --> 00:15:21,360
+use.
+
+401
+00:15:19,440 --> 00:15:22,880
+So in one line of code, mat lab takes
+
+402
+00:15:21,360 --> 00:15:24,480
+your image and simulates what the
+
+403
+00:15:22,880 --> 00:15:28,600
+parallel beam projections would look
+
+404
+00:15:24,480 --> 00:15:28,600
+like at the specified angles.
+
+405
+00:15:30,079 --> 00:15:34,880
+Let's look at our first mat lab example
+
+406
+00:15:32,079 --> 00:15:36,720
+for parallel beam CT.
+
+407
+00:15:34,880 --> 00:15:39,920
+If you've downloaded the materials, the
+
+408
+00:15:36,720 --> 00:15:41,680
+code is called ex1 parallel.m
+
+409
+00:15:39,920 --> 00:15:43,440
+you can try running it now or later on
+
+410
+00:15:41,680 --> 00:15:45,440
+your own.
+
+411
+00:15:43,440 --> 00:15:48,000
+Inside the script at line five, there's
+
+412
+00:15:45,440 --> 00:15:50,240
+a variable called p type. By changing
+
+413
+00:15:48,000 --> 00:15:52,320
+the p type to 1, two, or three, you can
+
+414
+00:15:50,240 --> 00:15:54,240
+switch between the three phantoms. The
+
+415
+00:15:52,320 --> 00:15:57,759
+square, the circle with a small circle
+
+416
+00:15:54,240 --> 00:15:59,199
+inside, or the shepogan phantom.
+
+417
+00:15:57,759 --> 00:16:01,120
+Here's what happens when you run the
+
+418
+00:15:59,199 --> 00:16:02,800
+code. On the left, you see the image
+
+419
+00:16:01,120 --> 00:16:05,440
+domain. In this case, just a simple
+
+420
+00:16:02,800 --> 00:16:07,120
+white square. As the red arrow rotates,
+
+421
+00:16:05,440 --> 00:16:09,600
+it represents the projection angle,
+
+422
+00:16:07,120 --> 00:16:12,800
+which we call theta. Each angle
+
+423
+00:16:09,600 --> 00:16:15,519
+contributes new data to the synog.
+
+424
+00:16:12,800 --> 00:16:17,279
+On the right, you see the synog domain.
+
+425
+00:16:15,519 --> 00:16:19,759
+Notice how information is gradually
+
+426
+00:16:17,279 --> 00:16:21,920
+added as theta changes. For the square,
+
+427
+00:16:19,759 --> 00:16:24,639
+the synog has a symmetric crisscrossing
+
+428
+00:16:21,920 --> 00:16:26,720
+pattern.
+
+429
+00:16:24,639 --> 00:16:28,800
+If you switch to the second phantom, the
+
+430
+00:16:26,720 --> 00:16:31,440
+large circle with a small white dot, the
+
+431
+00:16:28,800 --> 00:16:33,680
+synog looks different. The small dot
+
+432
+00:16:31,440 --> 00:16:35,680
+produces a wavy curve in the syog
+
+433
+00:16:33,680 --> 00:16:40,079
+because the detector gets closer to and
+
+434
+00:16:35,680 --> 00:16:42,320
+farther from the dot as it rotates.
+
+435
+00:16:40,079 --> 00:16:45,120
+Finally, with the Sheplogan phantom, the
+
+436
+00:16:42,320 --> 00:16:47,040
+synog becomes much more complex. There
+
+437
+00:16:45,120 --> 00:16:48,880
+are many structures inside that phantom
+
+438
+00:16:47,040 --> 00:16:50,639
+and each one leaves its signature on the
+
+439
+00:16:48,880 --> 00:16:52,800
+synog.
+
+440
+00:16:50,639 --> 00:16:55,040
+This complexity is much closer to what
+
+441
+00:16:52,800 --> 00:16:57,440
+you would see in a real CT scan of the
+
+442
+00:16:55,040 --> 00:16:59,360
+human brain where multiple tissues and
+
+443
+00:16:57,440 --> 00:17:01,199
+structures contribute overlapping
+
+444
+00:16:59,360 --> 00:17:03,120
+patterns.
+
+445
+00:17:01,199 --> 00:17:04,720
+So the synogram is really just another
+
+446
+00:17:03,120 --> 00:17:09,000
+way of saying here's how the object
+
+447
+00:17:04,720 --> 00:17:09,000
+looks from every possible angle.
+
+448
+00:17:10,400 --> 00:17:14,799
+Now let's try a simple experiment with
+
+449
+00:17:12,079 --> 00:17:17,039
+the code in the script. There's a
+
+450
+00:17:14,799 --> 00:17:19,039
+parameter called the theta step. This
+
+451
+00:17:17,039 --> 00:17:21,760
+sets how finely we sample the rotation
+
+452
+00:17:19,039 --> 00:17:24,880
+angles. For example, if the step is one,
+
+453
+00:17:21,760 --> 00:17:27,919
+mat lab computes projections at 0 1 2 3
+
+454
+00:17:24,880 --> 00:17:29,840
+degrees and so on all the way to 180.
+
+455
+00:17:27,919 --> 00:17:33,360
+But if we change the step to five, then
+
+456
+00:17:29,840 --> 00:17:35,039
+mat lab only samples at 0 5 10 15° and
+
+457
+00:17:33,360 --> 00:17:36,559
+so on.
+
+458
+00:17:35,039 --> 00:17:40,000
+Here's what happens when we make that
+
+459
+00:17:36,559 --> 00:17:41,440
+change. The synog becomes much coarser.
+
+460
+00:17:40,000 --> 00:17:43,840
+You can see it here for the square
+
+461
+00:17:41,440 --> 00:17:46,000
+phantom. Instead of smooth continuous
+
+462
+00:17:43,840 --> 00:17:47,520
+curves, the centagram looks blocky
+
+463
+00:17:46,000 --> 00:17:50,080
+because we've skipped over many
+
+464
+00:17:47,520 --> 00:17:54,000
+intermediate angles.
+
+465
+00:17:50,080 --> 00:17:56,559
+What does this mean for reconstruction?
+
+466
+00:17:54,000 --> 00:17:58,400
+It means lower resolution. If we try to
+
+467
+00:17:56,559 --> 00:18:00,640
+reconstruct an image from this synogram,
+
+468
+00:17:58,400 --> 00:18:02,400
+the result will appear streaky or blocky
+
+469
+00:18:00,640 --> 00:18:06,480
+because we don't have enough angular
+
+470
+00:18:02,400 --> 00:18:08,320
+information to fill in the details.
+
+471
+00:18:06,480 --> 00:18:10,160
+So the takeaway is to get a high
+
+472
+00:18:08,320 --> 00:18:12,080
+resolution reconstruction we want a
+
+473
+00:18:10,160 --> 00:18:14,799
+small theta step which gives us many
+
+474
+00:18:12,080 --> 00:18:17,200
+angular views. Fewer angles make the
+
+475
+00:18:14,799 --> 00:18:20,200
+computation faster but the image quality
+
+476
+00:18:17,200 --> 00:18:20,200
+suffers.
+
+477
+00:18:21,840 --> 00:18:26,000
+Now let's see what happens if we change
+
+478
+00:18:23,360 --> 00:18:28,080
+the maximum theta value.
+
+479
+00:18:26,000 --> 00:18:31,919
+Previously we collected projections from
+
+480
+00:18:28,080 --> 00:18:35,520
+zero all the way up to 180°. But what if
+
+481
+00:18:31,919 --> 00:18:37,280
+we stop early, say at just 45°?
+
+482
+00:18:35,520 --> 00:18:39,280
+When we do that, the synogram is
+
+483
+00:18:37,280 --> 00:18:41,280
+essentially truncated. Instead of
+
+484
+00:18:39,280 --> 00:18:43,280
+showing information from a full half
+
+485
+00:18:41,280 --> 00:18:45,440
+circle of projections, it only covers a
+
+486
+00:18:43,280 --> 00:18:47,280
+small portion of the angles. In other
+
+487
+00:18:45,440 --> 00:18:49,039
+words, we've only scanned part of the
+
+488
+00:18:47,280 --> 00:18:53,080
+sample.
+
+489
+00:18:49,039 --> 00:18:53,080
+What does that mean for reconstruction?
+
+490
+00:18:53,200 --> 00:18:58,400
+If we only gather projections from 0 to
+
+491
+00:18:55,760 --> 00:19:00,000
+45°, then when we try to reconstruct the
+
+492
+00:18:58,400 --> 00:19:01,919
+image, we're missing most of the
+
+493
+00:19:00,000 --> 00:19:03,840
+information. the result will be
+
+494
+00:19:01,919 --> 00:19:06,080
+incomplete and inaccurate because the
+
+495
+00:19:03,840 --> 00:19:08,320
+algorithm never saw the object from the
+
+496
+00:19:06,080 --> 00:19:10,240
+other directions.
+
+497
+00:19:08,320 --> 00:19:12,000
+So limiting the maximum theta is like
+
+498
+00:19:10,240 --> 00:19:14,000
+taking photos of a sculpture but only
+
+499
+00:19:12,000 --> 00:19:16,320
+from one side. You lose the complete
+
+500
+00:19:14,000 --> 00:19:18,080
+picture. To get a full and accurate
+
+501
+00:19:16,320 --> 00:19:22,360
+reconstruction, we need projections
+
+502
+00:19:18,080 --> 00:19:22,360
+across the whole angular range.
+
+503
+00:19:24,000 --> 00:19:28,240
+So far we've seen how to use the forward
+
+504
+00:19:26,000 --> 00:19:30,400
+radon transform with mat lab's radon
+
+505
+00:19:28,240 --> 00:19:32,080
+function. But to actually reconstruct an
+
+506
+00:19:30,400 --> 00:19:33,679
+image we need the inverse radon
+
+507
+00:19:32,080 --> 00:19:36,960
+transform which in mat lab is
+
+508
+00:19:33,679 --> 00:19:39,039
+implemented as the function iodon.
+
+509
+00:19:36,960 --> 00:19:41,360
+This function performs back projection
+
+510
+00:19:39,039 --> 00:19:43,360
+for parallel beam synograms and it can
+
+511
+00:19:41,360 --> 00:19:45,360
+also carry out filtered back projection
+
+512
+00:19:43,360 --> 00:19:47,919
+if we choose.
+
+513
+00:19:45,360 --> 00:19:51,120
+Here's the format of the function. I=
+
+514
+00:19:47,919 --> 00:19:53,760
+iraen r theta inter filter. I is the
+
+515
+00:19:51,120 --> 00:19:55,919
+reconstructed image the output we want.
+
+516
+00:19:53,760 --> 00:19:58,320
+R is the synogram the input data we've
+
+517
+00:19:55,919 --> 00:20:00,480
+collected. Theta is the set of rotation
+
+518
+00:19:58,320 --> 00:20:02,640
+angles used.
+
+519
+00:20:00,480 --> 00:20:04,559
+Interp is the interpolation method. This
+
+520
+00:20:02,640 --> 00:20:06,960
+tells mat lab how to fill in values
+
+521
+00:20:04,559 --> 00:20:08,640
+between samples. The filter is the
+
+522
+00:20:06,960 --> 00:20:10,640
+filter we want to apply for filtered
+
+523
+00:20:08,640 --> 00:20:12,640
+back projection.
+
+524
+00:20:10,640 --> 00:20:14,720
+The last two arguments interpolation and
+
+525
+00:20:12,640 --> 00:20:17,039
+filter are optional. That means you
+
+526
+00:20:14,720 --> 00:20:19,120
+could just write I raid and r theta to
+
+527
+00:20:17,039 --> 00:20:20,960
+perform simple unfiltered back
+
+528
+00:20:19,120 --> 00:20:22,640
+projection.
+
+529
+00:20:20,960 --> 00:20:25,039
+But if you include a filter such as
+
+530
+00:20:22,640 --> 00:20:27,200
+Ramlock or Shep Logan, Mat Lab will
+
+531
+00:20:25,039 --> 00:20:29,440
+automatically implement filtered back
+
+532
+00:20:27,200 --> 00:20:32,640
+projection giving you a sharper and more
+
+533
+00:20:29,440 --> 00:20:34,640
+accurate image.
+
+534
+00:20:32,640 --> 00:20:36,880
+So in short, Radon simulates the
+
+535
+00:20:34,640 --> 00:20:39,120
+projections while Iridon reconstructs
+
+536
+00:20:36,880 --> 00:20:41,280
+the image from those projections.
+
+537
+00:20:39,120 --> 00:20:45,240
+Together they form the foundation of CT
+
+538
+00:20:41,280 --> 00:20:45,240
+simulation in mat lab.
+
+539
+00:20:46,480 --> 00:20:50,880
+Let's walk through example two, parallel
+
+540
+00:20:48,480 --> 00:20:53,039
+beam back projection.
+
+541
+00:20:50,880 --> 00:20:54,880
+The code for this is called ex2
+
+542
+00:20:53,039 --> 00:20:57,600
+parallelback.mm.
+
+543
+00:20:54,880 --> 00:21:00,080
+Inside the script, line 32 runs a normal
+
+544
+00:20:57,600 --> 00:21:03,840
+back projection with no filter and line
+
+545
+00:21:00,080 --> 00:21:05,600
+35 applies a filtered back projection.
+
+546
+00:21:03,840 --> 00:21:08,400
+In this case, I've included the Hamming
+
+547
+00:21:05,600 --> 00:21:10,000
+filter as an example. But mat lab also
+
+548
+00:21:08,400 --> 00:21:13,039
+supports other filter types such as
+
+549
+00:21:10,000 --> 00:21:14,799
+Ramlock, Shep Logan, Cosine, and HAN.
+
+550
+00:21:13,039 --> 00:21:16,720
+You can even design your own filter and
+
+551
+00:21:14,799 --> 00:21:19,600
+add it as an input if you want to
+
+552
+00:21:16,720 --> 00:21:22,000
+experiment.
+
+553
+00:21:19,600 --> 00:21:23,679
+Now, let's compare the results. On the
+
+554
+00:21:22,000 --> 00:21:25,840
+left, you see the reconstruction of a
+
+555
+00:21:23,679 --> 00:21:28,320
+simple white square using unfiltered
+
+556
+00:21:25,840 --> 00:21:30,000
+back projection. Notice how the image
+
+557
+00:21:28,320 --> 00:21:32,159
+shows streaks in a kind of cross
+
+558
+00:21:30,000 --> 00:21:36,320
+pattern. That's the artifact caused by
+
+559
+00:21:32,159 --> 00:21:37,919
+overlapping unfiltered projections.
+
+560
+00:21:36,320 --> 00:21:40,400
+On the right, you see the result with
+
+561
+00:21:37,919 --> 00:21:42,559
+filtered back projection. The square is
+
+562
+00:21:40,400 --> 00:21:44,880
+much cleaner with sharper edges and less
+
+563
+00:21:42,559 --> 00:21:46,640
+background noise. The filter removes the
+
+564
+00:21:44,880 --> 00:21:48,400
+smearing and helps reveal the actual
+
+565
+00:21:46,640 --> 00:21:50,320
+structure.
+
+566
+00:21:48,400 --> 00:21:52,480
+If you change the phantom, such as using
+
+567
+00:21:50,320 --> 00:21:54,240
+the Shep Logan Phantom, you may notice
+
+568
+00:21:52,480 --> 00:21:56,559
+that different filters give slightly
+
+569
+00:21:54,240 --> 00:21:58,480
+different results. Some filters are
+
+570
+00:21:56,559 --> 00:22:01,840
+better for enhancing edges, while others
+
+571
+00:21:58,480 --> 00:22:03,760
+help reduce blurriness or noise.
+
+572
+00:22:01,840 --> 00:22:06,080
+This is why in practice, the choice of
+
+573
+00:22:03,760 --> 00:22:08,799
+filter depends on what details are most
+
+574
+00:22:06,080 --> 00:22:10,880
+important for your application.
+
+575
+00:22:08,799 --> 00:22:13,120
+So, this example shows us the power of
+
+576
+00:22:10,880 --> 00:22:15,039
+filtering. Without it, back projection
+
+577
+00:22:13,120 --> 00:22:17,120
+images can be full of artifacts. But
+
+578
+00:22:15,039 --> 00:22:21,240
+with it, we get reconstructions that are
+
+579
+00:22:17,120 --> 00:22:21,240
+much more useful and accurate.
+
+580
+00:22:22,799 --> 00:22:26,640
+Now, let's take a closer look at how
+
+581
+00:22:24,480 --> 00:22:29,520
+changing the maximum theta or the theta
+
+582
+00:22:26,640 --> 00:22:32,080
+step affects reconstruction.
+
+583
+00:22:29,520 --> 00:22:36,559
+By default, our code uses a maximum
+
+584
+00:22:32,080 --> 00:22:40,880
+theta of 180° and a step size of 1°. But
+
+585
+00:22:36,559 --> 00:22:42,720
+what happens if we adjust those values?
+
+586
+00:22:40,880 --> 00:22:46,159
+On the left, you see the case where max
+
+587
+00:22:42,720 --> 00:22:47,760
+theta is 180 and the step is five. Here,
+
+588
+00:22:46,159 --> 00:22:49,280
+we're still covering the full range of
+
+589
+00:22:47,760 --> 00:22:51,200
+angles, but we're sampling them more
+
+590
+00:22:49,280 --> 00:22:53,360
+coarsely.
+
+591
+00:22:51,200 --> 00:22:55,520
+As a result, the back projected image
+
+592
+00:22:53,360 --> 00:22:57,360
+shows more artifacts. Notice the
+
+593
+00:22:55,520 --> 00:22:59,600
+diagonal streaks in the unfiltered
+
+594
+00:22:57,360 --> 00:23:01,440
+image. Filtering helps reduce some of
+
+595
+00:22:59,600 --> 00:23:04,960
+these, but the square edges are still
+
+596
+00:23:01,440 --> 00:23:06,880
+less crisp compared to the default case.
+
+597
+00:23:04,960 --> 00:23:09,840
+On the right, we have max theta reduced
+
+598
+00:23:06,880 --> 00:23:11,360
+to 90° with a step of one. Now, the
+
+599
+00:23:09,840 --> 00:23:12,880
+issue is different. We've cut the
+
+600
+00:23:11,360 --> 00:23:15,360
+angular range in half, so the
+
+601
+00:23:12,880 --> 00:23:17,360
+reconstruction is incomplete. The square
+
+602
+00:23:15,360 --> 00:23:19,600
+looks more rounded at the edges, and you
+
+603
+00:23:17,360 --> 00:23:21,280
+see stronger cross-like artifacts in the
+
+604
+00:23:19,600 --> 00:23:23,840
+background.
+
+605
+00:23:21,280 --> 00:23:26,000
+So, here's the key takeaway. Increasing
+
+606
+00:23:23,840 --> 00:23:29,440
+the step size, fewer sampled angles,
+
+607
+00:23:26,000 --> 00:23:31,520
+makes the reconstructions less defined.
+
+608
+00:23:29,440 --> 00:23:33,679
+Reducing the maximum angle, smaller
+
+609
+00:23:31,520 --> 00:23:36,480
+angular coverage lowers resolution and
+
+610
+00:23:33,679 --> 00:23:38,559
+produces incomplete images.
+
+611
+00:23:36,480 --> 00:23:40,960
+In real CT scanning, both of these
+
+612
+00:23:38,559 --> 00:23:43,039
+parameters matter. More angles mean
+
+613
+00:23:40,960 --> 00:23:45,760
+better images, but also more computation
+
+614
+00:23:43,039 --> 00:23:50,280
+and radiation dose. Fewer angles save
+
+615
+00:23:45,760 --> 00:23:50,280
+time and dose, but reduce quality.
+
+616
+00:23:52,000 --> 00:23:56,000
+Now, let's turn to the second type of CT
+
+617
+00:23:54,240 --> 00:23:58,799
+geometry that Mat Lab can simulate,
+
+618
+00:23:56,000 --> 00:24:01,280
+which is fan beam CT.
+
+619
+00:23:58,799 --> 00:24:03,840
+Unlike parallel beam CT where all the
+
+620
+00:24:01,280 --> 00:24:06,799
+X-ray beams are perfectly parallel, in
+
+621
+00:24:03,840 --> 00:24:09,120
+fan beam CT, the rays spread out from a
+
+622
+00:24:06,799 --> 00:24:12,080
+single source point forming a fan shape
+
+623
+00:24:09,120 --> 00:24:14,720
+as they pass through the object.
+
+624
+00:24:12,080 --> 00:24:16,960
+This setup is much closer to how real CT
+
+625
+00:24:14,720 --> 00:24:18,720
+scanners work today because the source
+
+626
+00:24:16,960 --> 00:24:21,440
+rotates around the patient while the
+
+627
+00:24:18,720 --> 00:24:23,520
+rays diverge outward.
+
+628
+00:24:21,440 --> 00:24:25,520
+As I mentioned in class, fan beam
+
+629
+00:24:23,520 --> 00:24:27,440
+geometry introduces some additional
+
+630
+00:24:25,520 --> 00:24:29,600
+considerations compared to the parallel
+
+631
+00:24:27,440 --> 00:24:32,480
+beam case, but it also gives us more
+
+632
+00:24:29,600 --> 00:24:34,559
+realistic simulations. Mat Lab provides
+
+633
+00:24:32,480 --> 00:24:36,159
+dedicated functions to handle fan beam
+
+634
+00:24:34,559 --> 00:24:39,159
+CT, which we'll look at in the next
+
+635
+00:24:36,159 --> 00:24:39,159
+slides.
+
+636
+00:24:40,720 --> 00:24:44,559
+Now, let's look at Mat Lab's fan beam
+
+637
+00:24:42,799 --> 00:24:46,559
+function.
+
+638
+00:24:44,559 --> 00:24:49,120
+In this geometry, the X-rays don't
+
+639
+00:24:46,559 --> 00:24:51,120
+travel in parallel lines like before.
+
+640
+00:24:49,120 --> 00:24:52,720
+Instead, they spread out in a fan shape
+
+641
+00:24:51,120 --> 00:24:55,200
+from a single point called the beam
+
+642
+00:24:52,720 --> 00:24:57,440
+vertex. You can see that illustrated
+
+643
+00:24:55,200 --> 00:25:00,000
+here. The source is at the top and the
+
+644
+00:24:57,440 --> 00:25:01,760
+rays diverge outward passing through the
+
+645
+00:25:00,000 --> 00:25:03,279
+sample.
+
+646
+00:25:01,760 --> 00:25:05,200
+On the opposite side, we have the
+
+647
+00:25:03,279 --> 00:25:07,919
+detector array that records how much of
+
+648
+00:25:05,200 --> 00:25:09,520
+the X-rays make it through.
+
+649
+00:25:07,919 --> 00:25:11,760
+There's also an important parameter here
+
+650
+00:25:09,520 --> 00:25:13,679
+called D. This is the distance from the
+
+651
+00:25:11,760 --> 00:25:16,240
+fan beam vertex, that is the source
+
+652
+00:25:13,679 --> 00:25:19,120
+position, to the center of rotation of
+
+653
+00:25:16,240 --> 00:25:20,720
+the sample.
+
+654
+00:25:19,120 --> 00:25:22,720
+For something simple like a square
+
+655
+00:25:20,720 --> 00:25:25,440
+phantom, D might just be the length of
+
+656
+00:25:22,720 --> 00:25:27,200
+the diagonal. For a human body, D would
+
+657
+00:25:25,440 --> 00:25:29,440
+be the distance from the source to the
+
+658
+00:25:27,200 --> 00:25:31,840
+center of the patient.
+
+659
+00:25:29,440 --> 00:25:33,840
+As in parallel beam CT, both the source
+
+660
+00:25:31,840 --> 00:25:35,440
+and detector rotate together around the
+
+661
+00:25:33,840 --> 00:25:38,080
+object at different angles, which we
+
+662
+00:25:35,440 --> 00:25:40,080
+denote by theta. By sweeping through all
+
+663
+00:25:38,080 --> 00:25:41,520
+these angles, we collect the fan beam
+
+664
+00:25:40,080 --> 00:25:43,600
+projection data needed for
+
+665
+00:25:41,520 --> 00:25:45,840
+reconstruction.
+
+666
+00:25:43,600 --> 00:25:47,919
+So the fan beam function in mat lab
+
+667
+00:25:45,840 --> 00:25:49,600
+allows us to simulate this geometry
+
+668
+00:25:47,919 --> 00:25:54,279
+directly bringing us closer to how
+
+669
+00:25:49,600 --> 00:25:54,279
+modern CT scanners actually operate.
+
+670
+00:25:55,840 --> 00:26:00,640
+Now let's look at the fan beam function
+
+671
+00:25:57,679 --> 00:26:02,720
+in mat lab in more detail.
+
+672
+00:26:00,640 --> 00:26:05,360
+This function calculates projection data
+
+673
+00:26:02,720 --> 00:26:07,760
+for a specified fan beam geometry.
+
+674
+00:26:05,360 --> 00:26:10,320
+Unlike the parallel beam case here the
+
+675
+00:26:07,760 --> 00:26:13,279
+rotation angles are fixed from 0 to
+
+676
+00:26:10,320 --> 00:26:15,039
+360°.
+
+677
+00:26:13,279 --> 00:26:17,919
+That means you can't restrict the scan
+
+678
+00:26:15,039 --> 00:26:20,799
+to only half a circle like 0 to 180 or
+
+679
+00:26:17,919 --> 00:26:23,760
+just 0 to 45. The fan beam function
+
+680
+00:26:20,799 --> 00:26:26,559
+always assumes a full rotation.
+
+681
+00:26:23,760 --> 00:26:29,279
+Here's what the function looks like. F1
+
+682
+00:26:26,559 --> 00:26:32,640
+sensor POS1 fan rot angles one equals
+
+683
+00:26:29,279 --> 00:26:34,159
+fan beam PD fan sensor spacing desensor
+
+684
+00:26:32,640 --> 00:26:36,480
+1.
+
+685
+00:26:34,159 --> 00:26:38,799
+Let's break it down.
+
+686
+00:26:36,480 --> 00:26:41,360
+F1 is the fan beam projection data. The
+
+687
+00:26:38,799 --> 00:26:43,600
+main output you need. Sensor pause one
+
+688
+00:26:41,360 --> 00:26:45,600
+gives the positions of the detectors.
+
+689
+00:26:43,600 --> 00:26:48,640
+Fan rot angles one lists the rotation
+
+690
+00:26:45,600 --> 00:26:51,039
+angles used. P is your input image or
+
+691
+00:26:48,640 --> 00:26:53,200
+phantom. D is the distance from the
+
+692
+00:26:51,039 --> 00:26:55,200
+source vertex to the object's center of
+
+693
+00:26:53,200 --> 00:26:57,520
+rotation.
+
+694
+00:26:55,200 --> 00:26:59,679
+Fan sensor spacing is a property name
+
+695
+00:26:57,520 --> 00:27:02,720
+which tells mat lab you're specifying
+
+696
+00:26:59,679 --> 00:27:06,480
+the spacing between detectors. Densor
+
+697
+00:27:02,720 --> 00:27:09,039
+one is the actual spacing value.
+
+698
+00:27:06,480 --> 00:27:10,799
+Those last two inputs are optional. You
+
+699
+00:27:09,039 --> 00:27:12,720
+can run the function with just the image
+
+700
+00:27:10,799 --> 00:27:15,039
+and the distance and mat lab will use
+
+701
+00:27:12,720 --> 00:27:16,799
+default detector spacing. But if you
+
+702
+00:27:15,039 --> 00:27:18,640
+want more control say to change the
+
+703
+00:27:16,799 --> 00:27:21,679
+resolution or field of view, you can
+
+704
+00:27:18,640 --> 00:27:23,600
+specify these additional arguments.
+
+705
+00:27:21,679 --> 00:27:26,799
+So in short, Fan Beam gives you
+
+706
+00:27:23,600 --> 00:27:29,120
+projection data over a full 360° with
+
+707
+00:27:26,799 --> 00:27:32,120
+flexibility to adjust sensor spacing if
+
+708
+00:27:29,120 --> 00:27:32,120
+needed.
+
+709
+00:27:33,520 --> 00:27:37,520
+Now that we've seen how mat lab
+
+710
+00:27:35,360 --> 00:27:39,360
+generates fan beam projections, the next
+
+711
+00:27:37,520 --> 00:27:41,840
+step is to reconstruct an image from
+
+712
+00:27:39,360 --> 00:27:43,520
+them. For that, we use the I fan beam
+
+713
+00:27:41,840 --> 00:27:45,440
+function.
+
+714
+00:27:43,520 --> 00:27:47,760
+Here's what happens under the hood. I
+
+715
+00:27:45,440 --> 00:27:49,840
+fan beam first converts the fan beam
+
+716
+00:27:47,760 --> 00:27:52,240
+data into equivalent parallel beam
+
+717
+00:27:49,840 --> 00:27:54,080
+projections. Once that's done, it
+
+718
+00:27:52,240 --> 00:27:56,159
+applies the same filtered back
+
+719
+00:27:54,080 --> 00:27:58,640
+projection algorithm we studied earlier
+
+720
+00:27:56,159 --> 00:28:01,279
+to perform the inverse radon transform
+
+721
+00:27:58,640 --> 00:28:04,159
+and reconstruct the image.
+
+722
+00:28:01,279 --> 00:28:07,279
+The function looks like this. I fan 1
+
+723
+00:28:04,159 --> 00:28:10,880
+equals I fan beam F1D fan sensor spacing
+
+724
+00:28:07,279 --> 00:28:13,840
+D sensor 1. Breaking it down, Eon 1 is
+
+725
+00:28:10,880 --> 00:28:16,080
+the reconstructed image, the output.
+
+726
+00:28:13,840 --> 00:28:18,640
+F1 is the synogram data produced by the
+
+727
+00:28:16,080 --> 00:28:22,799
+fan beam function. D is the distance
+
+728
+00:28:18,640 --> 00:28:24,799
+from the source to the object's center.
+
+729
+00:28:22,799 --> 00:28:26,720
+Fan sensor spacing is the property name
+
+730
+00:28:24,799 --> 00:28:29,600
+that tells Mat Lab you're specifying
+
+731
+00:28:26,720 --> 00:28:31,919
+detector spacing. D sensor one is the
+
+732
+00:28:29,600 --> 00:28:33,919
+actual spacing value.
+
+733
+00:28:31,919 --> 00:28:36,159
+The last two inputs are optional. You
+
+734
+00:28:33,919 --> 00:28:39,600
+can let mat lab use default spacing if
+
+735
+00:28:36,159 --> 00:28:41,840
+you don't need to adjust it.
+
+736
+00:28:39,600 --> 00:28:43,919
+So just like with parallel beam CT, we
+
+737
+00:28:41,840 --> 00:28:46,399
+have a pair of functions. Fan beam to
+
+738
+00:28:43,919 --> 00:28:48,640
+simulate the projections and if beam to
+
+739
+00:28:46,399 --> 00:28:51,200
+reconstruct the image together they
+
+740
+00:28:48,640 --> 00:28:54,919
+allow us to model fan beam CT entirely
+
+741
+00:28:51,200 --> 00:28:54,919
+within mat lab.
+
+742
+00:28:56,240 --> 00:29:00,080
+Now let's move to example three.
+
+743
+00:28:57,840 --> 00:29:03,039
+fanbeamct.
+
+744
+00:29:00,080 --> 00:29:04,799
+If you run the script ex3 fanbeam.mm,
+
+745
+00:29:03,039 --> 00:29:08,000
+you'll see how mat lab handles this
+
+746
+00:29:04,799 --> 00:29:10,799
+geometry. Inside the code at line 25,
+
+747
+00:29:08,000 --> 00:29:12,880
+there's a parameter called d.
+
+748
+00:29:10,799 --> 00:29:14,880
+By convention, d is set to be slightly
+
+749
+00:29:12,880 --> 00:29:18,399
+larger than half the diagonal length of
+
+750
+00:29:14,880 --> 00:29:20,640
+the image. Then at line 26, the d sensor
+
+751
+00:29:18,399 --> 00:29:23,840
+value is set to one, which specifies the
+
+752
+00:29:20,640 --> 00:29:25,840
+spacing between detector elements.
+
+753
+00:29:23,840 --> 00:29:28,720
+On the left, you can see the fan beam
+
+754
+00:29:25,840 --> 00:29:30,399
+syog for a simple square phantom. On the
+
+755
+00:29:28,720 --> 00:29:33,039
+right, you see the reconstruction using
+
+756
+00:29:30,399 --> 00:29:35,039
+filtered back projection.
+
+757
+00:29:33,039 --> 00:29:37,120
+The square shape is clear and
+
+758
+00:29:35,039 --> 00:29:40,000
+recognizable, but you may also notice
+
+759
+00:29:37,120 --> 00:29:41,840
+small dots or speckles near the corners.
+
+760
+00:29:40,000 --> 00:29:43,360
+These are reconstruction artifacts, and
+
+761
+00:29:41,840 --> 00:29:45,120
+if you run this code on your own
+
+762
+00:29:43,360 --> 00:29:46,880
+computer, you'll probably see them more
+
+763
+00:29:45,120 --> 00:29:49,279
+clearly.
+
+764
+00:29:46,880 --> 00:29:51,039
+For more complex phantoms, the synogram
+
+765
+00:29:49,279 --> 00:29:54,159
+looks similar to what we saw in earlier
+
+766
+00:29:51,039 --> 00:29:56,799
+examples, but extended over a full 0 to
+
+767
+00:29:54,159 --> 00:29:58,880
+360°.
+
+768
+00:29:56,799 --> 00:30:00,880
+The reconstructions in those cases often
+
+769
+00:29:58,880 --> 00:30:03,520
+show diagonal streaks or artifacts
+
+770
+00:30:00,880 --> 00:30:05,039
+around the edges. Even so, the important
+
+771
+00:30:03,520 --> 00:30:06,960
+structural information inside the
+
+772
+00:30:05,039 --> 00:30:10,399
+phantom like the outlines of shapes
+
+773
+00:30:06,960 --> 00:30:12,559
+remains fairly accurate.
+
+774
+00:30:10,399 --> 00:30:14,399
+So, Fan Beam CT and Mat Lab gives us
+
+775
+00:30:12,559 --> 00:30:16,640
+realistic results, but it also shows us
+
+776
+00:30:14,399 --> 00:30:18,240
+that no reconstruction is perfect.
+
+777
+00:30:16,640 --> 00:30:20,000
+Artifacts are always a part of the
+
+778
+00:30:18,240 --> 00:30:22,640
+process and learning how to recognize
+
+779
+00:30:20,000 --> 00:30:25,640
+and minimize them is a big part of CT
+
+780
+00:30:22,640 --> 00:30:25,640
+imaging.
+
+781
+00:30:27,279 --> 00:30:31,600
+Now let's experiment with sensor spacing
+
+782
+00:30:29,200 --> 00:30:33,679
+and fan beam CT.
+
+783
+00:30:31,600 --> 00:30:36,960
+In our code, this is the Densor value on
+
+784
+00:30:33,679 --> 00:30:40,640
+line 26. By default, we set it to one.
+
+785
+00:30:36,960 --> 00:30:44,240
+But what happens if we change it?
+
+786
+00:30:40,640 --> 00:30:46,000
+On the left, we set D sensor equals 0.5.
+
+787
+00:30:44,240 --> 00:30:48,640
+This means the detectors are closer
+
+788
+00:30:46,000 --> 00:30:50,399
+together, giving us finer sampling. The
+
+789
+00:30:48,640 --> 00:30:52,320
+result is higher resolution. You can
+
+790
+00:30:50,399 --> 00:30:54,720
+clearly see the square shape with only
+
+791
+00:30:52,320 --> 00:30:56,559
+minor artifacts.
+
+792
+00:30:54,720 --> 00:30:58,880
+In the middle, we keep the D sensor
+
+793
+00:30:56,559 --> 00:31:00,720
+equal to one, the default value. The
+
+794
+00:30:58,880 --> 00:31:02,240
+reconstruction is still decent, but not
+
+795
+00:31:00,720 --> 00:31:04,399
+quite as sharp as when we use the
+
+796
+00:31:02,240 --> 00:31:07,200
+smaller spacing.
+
+797
+00:31:04,399 --> 00:31:09,440
+On the right, we set D sensor equals 5.
+
+798
+00:31:07,200 --> 00:31:11,919
+Now, the detector spacing is wide, so we
+
+799
+00:31:09,440 --> 00:31:13,760
+lose a lot of detail. The reconstruction
+
+800
+00:31:11,919 --> 00:31:15,760
+looks blurred and distorted. The square
+
+801
+00:31:13,760 --> 00:31:18,159
+shape is almost unrecognizable, more
+
+802
+00:31:15,760 --> 00:31:20,399
+like a rounded blob.
+
+803
+00:31:18,159 --> 00:31:22,960
+So the key point here is resolution is
+
+804
+00:31:20,399 --> 00:31:25,679
+directly related to detector spacing.
+
+805
+00:31:22,960 --> 00:31:29,200
+Smaller spacing means higher resolution.
+
+806
+00:31:25,679 --> 00:31:30,960
+Larger spacing means lower resolution.
+
+807
+00:31:29,200 --> 00:31:32,559
+In practice, of course, reducing sensor
+
+808
+00:31:30,960 --> 00:31:34,720
+spacing increases data size and
+
+809
+00:31:32,559 --> 00:31:36,799
+computational load. But if the spacing
+
+810
+00:31:34,720 --> 00:31:39,120
+is too large, the resolution drops too
+
+811
+00:31:36,799 --> 00:31:40,720
+much to be useful. Finding the right
+
+812
+00:31:39,120 --> 00:31:44,399
+balance is part of designing and
+
+813
+00:31:40,720 --> 00:31:44,399
+operating a CT system.
+
+814
+00:31:46,080 --> 00:31:49,760
+Now let's test what happens when we
+
+815
+00:31:47,679 --> 00:31:51,760
+change the parameter D in our fan beam
+
+816
+00:31:49,760 --> 00:31:53,679
+simulation.
+
+817
+00:31:51,760 --> 00:31:55,519
+Remember D is the distance from the fan
+
+818
+00:31:53,679 --> 00:31:58,080
+beam source vertex to the center of the
+
+819
+00:31:55,519 --> 00:32:01,919
+object. In our code, this is set in line
+
+820
+00:31:58,080 --> 00:32:03,840
+28. The default value is 191, which is
+
+821
+00:32:01,919 --> 00:32:05,440
+roughly half the diagonal length of the
+
+822
+00:32:03,840 --> 00:32:08,080
+image.
+
+823
+00:32:05,440 --> 00:32:11,279
+Here's what happens on the left with D
+
+824
+00:32:08,080 --> 00:32:13,600
+equals 191. Default the reconstruction
+
+825
+00:32:11,279 --> 00:32:16,480
+looks good. The square phantom is sharp
+
+826
+00:32:13,600 --> 00:32:18,320
+and the resolution is reasonable.
+
+827
+00:32:16,480 --> 00:32:21,120
+In the middle, when we increase D to
+
+828
+00:32:18,320 --> 00:32:23,360
+300, the resolution decreases. The edges
+
+829
+00:32:21,120 --> 00:32:27,200
+become less clear and faint artifacts
+
+830
+00:32:23,360 --> 00:32:29,679
+start to appear in the background.
+
+831
+00:32:27,200 --> 00:32:32,080
+On the right, with D equals 500, the
+
+832
+00:32:29,679 --> 00:32:34,240
+resolution drops significantly. The
+
+833
+00:32:32,080 --> 00:32:35,919
+square no longer looks crisp. It appears
+
+834
+00:32:34,240 --> 00:32:39,200
+distorted, and the background shows
+
+835
+00:32:35,919 --> 00:32:41,919
+strong artifacts.
+
+836
+00:32:39,200 --> 00:32:43,919
+So the rule here is the farther away the
+
+837
+00:32:41,919 --> 00:32:46,640
+source is from the object, the lower the
+
+838
+00:32:43,919 --> 00:32:48,640
+reconstruction resolution.
+
+839
+00:32:46,640 --> 00:32:51,279
+This simulation is useful not only for
+
+840
+00:32:48,640 --> 00:32:53,200
+learning but also for system design. It
+
+841
+00:32:51,279 --> 00:32:54,960
+shows that if we set the source too far
+
+842
+00:32:53,200 --> 00:32:57,519
+from the patient, image resolution
+
+843
+00:32:54,960 --> 00:32:59,440
+suffers. By keeping the source object
+
+844
+00:32:57,519 --> 00:33:03,320
+distance within a good range, we can
+
+845
+00:32:59,440 --> 00:33:03,320
+achieve sharper reconstructions.
+
+846
+00:33:05,279 --> 00:33:08,720
+That wraps up our mat lab section for
+
+847
+00:33:07,120 --> 00:33:10,960
+today.
+
+848
+00:33:08,720 --> 00:33:12,480
+You'll use mat lab's radon and irritant
+
+849
+00:33:10,960 --> 00:33:14,960
+functions to work with an ellipse
+
+850
+00:33:12,480 --> 00:33:18,559
+phantom. Generate the projections, form
+
+851
+00:33:14,960 --> 00:33:20,559
+the synogram, and reconstruct the image.
+
+852
+00:33:18,559 --> 00:33:23,679
+Please make sure your submission clearly
+
+853
+00:33:20,559 --> 00:33:26,159
+shows the input ellipse image, the
+
+854
+00:33:23,679 --> 00:33:28,720
+synogram you generated, and the
+
+855
+00:33:26,159 --> 00:33:30,960
+reconstructed image. Try both unfiltered
+
+856
+00:33:28,720 --> 00:33:33,519
+and filtered back projection and note
+
+857
+00:33:30,960 --> 00:33:35,200
+which filter you used.
+
+858
+00:33:33,519 --> 00:33:37,039
+If you run into issues, double check
+
+859
+00:33:35,200 --> 00:33:39,279
+that the signal processing and image
+
+860
+00:33:37,039 --> 00:33:40,799
+processing toolboxes are installed and
+
+861
+00:33:39,279 --> 00:33:43,360
+verify your angle settings and
+
+862
+00:33:40,799 --> 00:33:45,679
+interpolation options.
+
+863
+00:33:43,360 --> 00:33:47,440
+Great work today. Next time we'll build
+
+864
+00:33:45,679 --> 00:33:49,440
+on this and discuss how to interpret
+
+865
+00:33:47,440 --> 00:33:52,440
+artifacts and improve reconstruction
+
+866
+00:33:49,440 --> 00:33:52,440
+quality.
+
+867
+00:33:54,080 --> 00:33:58,240
+And finally, let me remind you about
+
+868
+00:33:55,679 --> 00:34:00,000
+your second homework assignment
+
+869
+00:33:58,240 --> 00:34:05,840
+from the green book. Please complete
+
+870
+00:34:00,000 --> 00:34:07,760
+problems 1.14, 1.15, and 1.18.
+
+871
+00:34:05,840 --> 00:34:09,440
+In addition, there's an optional project
+
+872
+00:34:07,760 --> 00:34:11,679
+for those of you who want to take on
+
+873
+00:34:09,440 --> 00:34:14,240
+something more creative. As part of the
+
+874
+00:34:11,679 --> 00:34:16,320
+art_x initiative, you can design a
+
+875
+00:34:14,240 --> 00:34:17,839
+concept for a portable CT scanner. For
+
+876
+00:34:16,320 --> 00:34:20,159
+example, one mounted inside a
+
+877
+00:34:17,839 --> 00:34:21,760
+self-driving car or a CT scanner
+
+878
+00:34:20,159 --> 00:34:23,679
+designed for a completely novel
+
+879
+00:34:21,760 --> 00:34:25,440
+application.
+
+880
+00:34:23,679 --> 00:34:26,960
+To get inspired, I've included two
+
+881
+00:34:25,440 --> 00:34:29,440
+references here at the bottom of the
+
+882
+00:34:26,960 --> 00:34:31,919
+slide which showcase some innovative CT
+
+883
+00:34:29,440 --> 00:34:34,879
+scanner designs. These papers, including
+
+884
+00:34:31,919 --> 00:34:37,200
+some from Dr. Wong's group, may give you
+
+885
+00:34:34,879 --> 00:34:39,200
+ideas for how CT technology can be
+
+886
+00:34:37,200 --> 00:34:40,800
+adapted beyond the traditional hospital
+
+887
+00:34:39,200 --> 00:34:42,639
+setting.
+
+888
+00:34:40,800 --> 00:34:47,079
+Again, the design project is optional,
+
+889
+00:34:42,639 --> 00:34:47,079
+but the Greenbook problems are required.
+
+890
+00:34:48,560 --> 00:34:51,839
+And with that, we'll wrap up today's
+
+891
+00:34:50,159 --> 00:34:53,679
+session.
+
+892
+00:34:51,839 --> 00:34:55,760
+Thank you all for joining the class and
+
+893
+00:34:53,679 --> 00:34:58,480
+following along. We've covered a lot
+
+894
+00:34:55,760 --> 00:35:00,960
+from the basic theory of CT to the radon
+
+895
+00:34:58,480 --> 00:35:02,560
+transform back projection, filtered back
+
+896
+00:35:00,960 --> 00:35:04,480
+projection and finally mat lab
+
+897
+00:35:02,560 --> 00:35:07,200
+implementations for both parallel beam
+
+898
+00:35:04,480 --> 00:35:08,800
+and fan beam geometries.
+
+899
+00:35:07,200 --> 00:35:10,400
+Please remember to finish your homework
+
+900
+00:35:08,800 --> 00:35:12,720
+assignments and if you're interested
+
+901
+00:35:10,400 --> 00:35:14,880
+explore the optional design project for
+
+902
+00:35:12,720 --> 00:35:17,280
+something creative.
+
+903
+00:35:14,880 --> 00:35:18,800
+That's all for today. Once again, thank
+
+904
+00:35:17,280 --> 00:35:22,000
+you and I look forward to seeing you
+
+905
+00:35:18,800 --> 00:35:22,000
+next time.
+

@@ -1,0 +1,5020 @@
+1
+00:00:02,720 --> 00:00:06,560
+Welcome back. In our first lecture, we
+
+2
+00:00:05,040 --> 00:00:08,720
+introduced the concept of medical
+
+3
+00:00:06,560 --> 00:00:11,120
+imaging as a means to extend our natural
+
+4
+00:00:08,720 --> 00:00:13,840
+vision to see inside the human body,
+
+5
+00:00:11,120 --> 00:00:15,280
+guide care, and save lives. We then
+
+6
+00:00:13,840 --> 00:00:17,119
+discussed the structure of this course
+
+7
+00:00:15,280 --> 00:00:21,600
+and touched on some of the tools we'll
+
+8
+00:00:17,119 --> 00:00:23,920
+use along the way, such as mat lab.
+
+9
+00:00:21,600 --> 00:00:25,279
+Now, we're ready to take the next step.
+
+10
+00:00:23,920 --> 00:00:27,680
+Today, I start teaching on the
+
+11
+00:00:25,279 --> 00:00:28,880
+foundation of this course. This part is
+
+12
+00:00:27,680 --> 00:00:30,720
+crucial because it gives you the
+
+13
+00:00:28,880 --> 00:00:32,559
+knowledge and skills you need to truly
+
+14
+00:00:30,720 --> 00:00:35,680
+understand the medical imaging systems
+
+15
+00:00:32,559 --> 00:00:39,520
+we'll explore later on. Systems for CT,
+
+16
+00:00:35,680 --> 00:00:41,440
+MRI, PET, and more.
+
+17
+00:00:39,520 --> 00:00:43,920
+You can also think of this foundation as
+
+18
+00:00:41,440 --> 00:00:45,600
+the main framework. Once you have it,
+
+19
+00:00:43,920 --> 00:00:47,200
+you'll be ready to make sense of the
+
+20
+00:00:45,600 --> 00:00:49,039
+advanced imaging methods and
+
+21
+00:00:47,200 --> 00:00:53,879
+technologies that are transforming
+
+22
+00:00:49,039 --> 00:00:53,879
+modern healthcare. Let's get started.
+
+23
+00:00:57,280 --> 00:01:01,280
+We are right on schedule in our journey
+
+24
+00:00:59,039 --> 00:01:02,559
+through this material. If you've had a
+
+25
+00:01:01,280 --> 00:01:04,320
+chance to look over the reading
+
+26
+00:01:02,559 --> 00:01:06,240
+materials for today's lecture, that's
+
+27
+00:01:04,320 --> 00:01:08,880
+great. It will make it easier to connect
+
+28
+00:01:06,240 --> 00:01:11,119
+the ideas we cover. If not, that's fine,
+
+29
+00:01:08,880 --> 00:01:12,880
+too. I encourage you to follow along
+
+30
+00:01:11,119 --> 00:01:15,200
+closely and take time afterward to
+
+31
+00:01:12,880 --> 00:01:17,280
+review the main points. Consistently
+
+32
+00:01:15,200 --> 00:01:18,880
+reinforcing concepts as you go will help
+
+33
+00:01:17,280 --> 00:01:21,280
+you develop a stronger and more
+
+34
+00:01:18,880 --> 00:01:23,200
+intuitive grasp, especially as the
+
+35
+00:01:21,280 --> 00:01:25,840
+material becomes more mathematically
+
+36
+00:01:23,200 --> 00:01:27,439
+detailed.
+
+37
+00:01:25,840 --> 00:01:29,439
+Now that we've set the stage, let's
+
+38
+00:01:27,439 --> 00:01:31,119
+learn one of the most central ideas in
+
+39
+00:01:29,439 --> 00:01:32,799
+this foundation. What we mean by a
+
+40
+00:01:31,119 --> 00:01:34,400
+system.
+
+41
+00:01:32,799 --> 00:01:36,880
+This concept is at the heart of all
+
+42
+00:01:34,400 --> 00:01:38,720
+imaging technologies we'll study. A
+
+43
+00:01:36,880 --> 00:01:40,560
+system at its core is a set of
+
+44
+00:01:38,720 --> 00:01:43,439
+components that work together to produce
+
+45
+00:01:40,560 --> 00:01:45,360
+a specific result. In medical imaging,
+
+46
+00:01:43,439 --> 00:01:47,200
+understanding systems helps us see how
+
+47
+00:01:45,360 --> 00:01:49,439
+different parts from hardware to
+
+48
+00:01:47,200 --> 00:01:53,680
+algorithms combine to generate the
+
+49
+00:01:49,439 --> 00:01:55,200
+images we rely on in healthcare.
+
+50
+00:01:53,680 --> 00:01:57,439
+Today's lecture is designed to break
+
+51
+00:01:55,200 --> 00:01:59,840
+this down clearly. We'll begin by
+
+52
+00:01:57,439 --> 00:02:02,479
+exploring general systems and then we'll
+
+53
+00:01:59,840 --> 00:02:04,159
+narrow our focus to linear systems,
+
+54
+00:02:02,479 --> 00:02:06,719
+those that behave in predictable
+
+55
+00:02:04,159 --> 00:02:08,879
+mathematically straightforward ways.
+
+56
+00:02:06,719 --> 00:02:11,440
+These systems follow two key principles,
+
+57
+00:02:08,879 --> 00:02:12,720
+additivity and homogeneity. Together,
+
+58
+00:02:11,440 --> 00:02:14,400
+these form what's called the
+
+59
+00:02:12,720 --> 00:02:17,599
+superposition principle, which we'll
+
+60
+00:02:14,400 --> 00:02:20,239
+explore in detail.
+
+61
+00:02:17,599 --> 00:02:22,239
+Finally, we'll briefly look at nonlinear
+
+62
+00:02:20,239 --> 00:02:24,480
+systems, those that don't follow these
+
+63
+00:02:22,239 --> 00:02:26,560
+linear rules, so you can have a big
+
+64
+00:02:24,480 --> 00:02:28,959
+picture of the full range of systems and
+
+65
+00:02:26,560 --> 00:02:32,440
+put medical imaging in perspective.
+
+66
+00:02:28,959 --> 00:02:32,440
+Let's get started.
+
+67
+00:02:35,840 --> 00:02:39,440
+Now that we've introduced the idea of
+
+68
+00:02:37,680 --> 00:02:40,959
+systems, let's take a moment to connect
+
+69
+00:02:39,440 --> 00:02:43,680
+it to something you're probably more
+
+70
+00:02:40,959 --> 00:02:44,959
+familiar with. Functions.
+
+71
+00:02:43,680 --> 00:02:47,120
+A function, as you know from
+
+72
+00:02:44,959 --> 00:02:49,680
+mathematics, is a rule that links each
+
+73
+00:02:47,120 --> 00:02:51,840
+input from one set, the domain, to
+
+74
+00:02:49,680 --> 00:02:54,160
+exactly one output in another set, the
+
+75
+00:02:51,840 --> 00:02:58,319
+range. It's a clear, well-defined
+
+76
+00:02:54,160 --> 00:03:00,400
+relationship between input and output.
+
+77
+00:02:58,319 --> 00:03:02,400
+A system works in much the same way, but
+
+78
+00:03:00,400 --> 00:03:05,120
+often in a more complex and dynamic
+
+79
+00:03:02,400 --> 00:03:06,879
+context. A system takes an input,
+
+80
+00:03:05,120 --> 00:03:09,040
+processes it through a group of
+
+81
+00:03:06,879 --> 00:03:11,120
+interconnected elements, and produces an
+
+82
+00:03:09,040 --> 00:03:13,200
+output. These elements could represent
+
+83
+00:03:11,120 --> 00:03:15,280
+anything, parts of a mechanical device,
+
+84
+00:03:13,200 --> 00:03:17,519
+components of a physiological system in
+
+85
+00:03:15,280 --> 00:03:19,840
+the body or even elements of a social
+
+86
+00:03:17,519 --> 00:03:24,319
+network. What matters is that they work
+
+87
+00:03:19,840 --> 00:03:26,080
+together as a whole to produce a result.
+
+88
+00:03:24,319 --> 00:03:28,560
+Both functions and systems help us
+
+89
+00:03:26,080 --> 00:03:30,720
+describe how inputs lead to outputs. And
+
+90
+00:03:28,560 --> 00:03:32,799
+in medical imaging, defining these
+
+91
+00:03:30,720 --> 00:03:35,440
+relationships precisely is what allows
+
+92
+00:03:32,799 --> 00:03:40,159
+us to design, analyze, and improve the
+
+93
+00:03:35,440 --> 00:03:41,840
+technologies we rely on in healthcare.
+
+94
+00:03:40,159 --> 00:03:44,159
+So, as we move forward, keep this
+
+95
+00:03:41,840 --> 00:03:46,159
+comparison in mind. It's a helpful way
+
+96
+00:03:44,159 --> 00:03:48,159
+to understand how systems operate, and
+
+97
+00:03:46,159 --> 00:03:50,640
+it will give us a basis for exploring
+
+98
+00:03:48,159 --> 00:03:53,879
+both linear and nonlinear systems in
+
+99
+00:03:50,640 --> 00:03:53,879
+more depth.
+
+100
+00:03:54,400 --> 00:03:58,159
+Let's continue building on that
+
+101
+00:03:56,000 --> 00:04:00,239
+comparison between functions and systems
+
+102
+00:03:58,159 --> 00:04:02,480
+by looking at a simple example of how a
+
+103
+00:04:00,239 --> 00:04:04,319
+function works.
+
+104
+00:04:02,480 --> 00:04:06,560
+Imagine you start with a value from the
+
+105
+00:04:04,319 --> 00:04:08,720
+domain, let's say a number, and apply
+
+106
+00:04:06,560 --> 00:04:11,439
+the function. That function maps your
+
+107
+00:04:08,720 --> 00:04:13,280
+input to a specific output in the range.
+
+108
+00:04:11,439 --> 00:04:15,120
+Just like in a system, there's a clear
+
+109
+00:04:13,280 --> 00:04:18,079
+relationship between what goes in and
+
+110
+00:04:15,120 --> 00:04:20,320
+what comes out.
+
+111
+00:04:18,079 --> 00:04:22,560
+In my slides, you'll notice I use icons
+
+112
+00:04:20,320 --> 00:04:24,479
+to help highlight what's most important.
+
+113
+00:04:22,560 --> 00:04:26,400
+When you see a red diamond, that marks a
+
+114
+00:04:24,479 --> 00:04:28,960
+key point, something I really want you
+
+115
+00:04:26,400 --> 00:04:31,040
+to remember. A green disc points to
+
+116
+00:04:28,960 --> 00:04:33,120
+interesting material that's a bit beyond
+
+117
+00:04:31,040 --> 00:04:34,960
+what you absolutely need for engineering
+
+118
+00:04:33,120 --> 00:04:38,720
+purposes, but could be valuable if
+
+119
+00:04:34,960 --> 00:04:39,919
+you're curious to go deeper.
+
+120
+00:04:38,720 --> 00:04:42,560
+We're not aiming to become
+
+121
+00:04:39,919 --> 00:04:44,720
+mathematicians here, but having a solid
+
+122
+00:04:42,560 --> 00:04:46,880
+grasp of these basic ideas will help you
+
+123
+00:04:44,720 --> 00:04:48,639
+understand medical imaging systems at a
+
+124
+00:04:46,880 --> 00:04:51,639
+deeper level, and that's what we're
+
+125
+00:04:48,639 --> 00:04:51,639
+after.
+
+126
+00:04:53,199 --> 00:04:57,680
+So far, we've talked about functions as
+
+127
+00:04:55,120 --> 00:04:59,199
+mappings between inputs and outputs.
+
+128
+00:04:57,680 --> 00:05:01,759
+Let's take that a little further by
+
+129
+00:04:59,199 --> 00:05:03,919
+looking at some examples.
+
+130
+00:05:01,759 --> 00:05:06,000
+Functions come in many forms. You're
+
+131
+00:05:03,919 --> 00:05:08,000
+probably familiar with linear functions
+
+132
+00:05:06,000 --> 00:05:10,000
+where the relationship between input and
+
+133
+00:05:08,000 --> 00:05:12,000
+output is straightforward just a
+
+134
+00:05:10,000 --> 00:05:14,240
+straight line when you plot it. Then
+
+135
+00:05:12,000 --> 00:05:16,080
+there are sinosoidal functions like seen
+
+136
+00:05:14,240 --> 00:05:18,720
+as encodines which you've seen in
+
+137
+00:05:16,080 --> 00:05:20,560
+trigonometry and signal processing. And
+
+138
+00:05:18,720 --> 00:05:22,479
+if you've explored beyond the basics,
+
+139
+00:05:20,560 --> 00:05:24,080
+you might have come across more complex
+
+140
+00:05:22,479 --> 00:05:28,600
+structures like those defined
+
+141
+00:05:24,080 --> 00:05:28,600
+recursively in fractal geometry.
+
+142
+00:05:28,800 --> 00:05:32,800
+Fractals create fascinating patterns
+
+143
+00:05:30,880 --> 00:05:34,400
+that repeat at every scale. And while
+
+144
+00:05:32,800 --> 00:05:36,160
+they're not central to our work in
+
+145
+00:05:34,400 --> 00:05:38,080
+medical imaging, they're a beautiful
+
+146
+00:05:36,160 --> 00:05:41,360
+example of how functions can model
+
+147
+00:05:38,080 --> 00:05:43,120
+complexity in the world.
+
+148
+00:05:41,360 --> 00:05:44,960
+For our purposes though, you don't need
+
+149
+00:05:43,120 --> 00:05:47,520
+to go deep into fractals or other
+
+150
+00:05:44,960 --> 00:05:49,039
+advanced forms. What's most important is
+
+151
+00:05:47,520 --> 00:05:53,360
+that you feel comfortable with the idea
+
+152
+00:05:49,039 --> 00:05:55,280
+of a function and its basic properties.
+
+153
+00:05:53,360 --> 00:05:57,280
+So far, we've talked about functions and
+
+154
+00:05:55,280 --> 00:05:59,680
+how they map inputs to outputs, and
+
+155
+00:05:57,280 --> 00:06:01,440
+we've seen some familiar examples. Now
+
+156
+00:05:59,680 --> 00:06:03,280
+let's look at a mathematical tool that
+
+157
+00:06:01,440 --> 00:06:07,600
+helps us work with functions in a very
+
+158
+00:06:03,280 --> 00:06:09,520
+practical way. The tailaylor expansion.
+
+159
+00:06:07,600 --> 00:06:11,840
+The tailaylor expansion is a method for
+
+160
+00:06:09,520 --> 00:06:14,880
+approximating a smooth well-behaved
+
+161
+00:06:11,840 --> 00:06:16,880
+function using a sum of simpler terms.
+
+162
+00:06:14,880 --> 00:06:19,280
+It starts with a constant, the value of
+
+163
+00:06:16,880 --> 00:06:21,360
+the function at a specific point, then
+
+164
+00:06:19,280 --> 00:06:23,520
+adds a linear term that depends on the
+
+165
+00:06:21,360 --> 00:06:25,520
+first derivative and further a quadratic
+
+166
+00:06:23,520 --> 00:06:28,160
+term based on the second derivative and
+
+167
+00:06:25,520 --> 00:06:30,319
+so on. Each term you add improves the
+
+168
+00:06:28,160 --> 00:06:34,880
+approximation if certain conditions are
+
+169
+00:06:30,319 --> 00:06:37,039
+met to ensure that the series converges.
+
+170
+00:06:34,880 --> 00:06:39,120
+In medical imaging, we often stop at the
+
+171
+00:06:37,039 --> 00:06:41,120
+simpler terms, the constant and linear
+
+172
+00:06:39,120 --> 00:06:44,080
+parts, because they strike a good
+
+173
+00:06:41,120 --> 00:06:46,160
+balance between accuracy and efficiency.
+
+174
+00:06:44,080 --> 00:06:48,000
+This idea of building up approximations
+
+175
+00:06:46,160 --> 00:06:50,960
+using basic terms is at the heart of how
+
+176
+00:06:48,000 --> 00:06:53,039
+we model systems practically. It lets us
+
+177
+00:06:50,960 --> 00:06:55,199
+represent complex behavior in a form
+
+178
+00:06:53,039 --> 00:06:58,400
+that's manageable and useful for real
+
+179
+00:06:55,199 --> 00:06:59,919
+world applications.
+
+180
+00:06:58,400 --> 00:07:02,240
+Building on our discussion of the
+
+181
+00:06:59,919 --> 00:07:04,240
+tailaylor expansion, let's focus for a
+
+182
+00:07:02,240 --> 00:07:06,400
+moment on one of the simplest and most
+
+183
+00:07:04,240 --> 00:07:09,599
+useful forms we often work with, the
+
+184
+00:07:06,400 --> 00:07:11,759
+linear function.
+
+185
+00:07:09,599 --> 00:07:14,000
+For most practical purposes, linear
+
+186
+00:07:11,759 --> 00:07:15,599
+functions give us all we need. In one
+
+187
+00:07:14,000 --> 00:07:18,160
+dimension, this means a straight line
+
+188
+00:07:15,599 --> 00:07:20,080
+that relates input to output. In two
+
+189
+00:07:18,160 --> 00:07:22,240
+dimensions, we extend that idea to a
+
+190
+00:07:20,080 --> 00:07:24,560
+plane. And in higher dimensions, the
+
+191
+00:07:22,240 --> 00:07:26,479
+concept continues in the same way. What
+
+192
+00:07:24,560 --> 00:07:28,479
+makes linear relationships so powerful
+
+193
+00:07:26,479 --> 00:07:30,639
+is their simplicity. They're easy to
+
+194
+00:07:28,479 --> 00:07:32,479
+analyze, fast to compute, and they form
+
+195
+00:07:30,639 --> 00:07:34,240
+the backbone of much of engineering,
+
+196
+00:07:32,479 --> 00:07:36,880
+including the systems we use for medical
+
+197
+00:07:34,240 --> 00:07:39,039
+imaging.
+
+198
+00:07:36,880 --> 00:07:40,880
+By relying on linear models where
+
+199
+00:07:39,039 --> 00:07:42,960
+they're appropriate, we can create good
+
+200
+00:07:40,880 --> 00:07:45,120
+approximations that help us understand
+
+201
+00:07:42,960 --> 00:07:49,479
+design and improve imaging systems
+
+202
+00:07:45,120 --> 00:07:49,479
+without unnecessary complexity.
+
+203
+00:07:53,199 --> 00:07:57,680
+Now that we've seen how linear functions
+
+204
+00:07:55,360 --> 00:08:00,080
+provide a simple and practical way to
+
+205
+00:07:57,680 --> 00:08:02,160
+model relationships, let's extend that
+
+206
+00:08:00,080 --> 00:08:04,319
+thinking to systems. Because as
+
+207
+00:08:02,160 --> 00:08:06,800
+engineers, that's often how we see the
+
+208
+00:08:04,319 --> 00:08:08,639
+world.
+
+209
+00:08:06,800 --> 00:08:10,720
+In engineering, we use mathematical
+
+210
+00:08:08,639 --> 00:08:13,360
+operators often written as symbols like
+
+211
+00:08:10,720 --> 00:08:16,240
+L or O to represent how a system
+
+212
+00:08:13,360 --> 00:08:18,080
+transforms an input into an output. If
+
+213
+00:08:16,240 --> 00:08:20,560
+we feed in an input signal, which we
+
+214
+00:08:18,080 --> 00:08:23,199
+call V, the system applies its operator
+
+215
+00:08:20,560 --> 00:08:25,120
+and produces an output, which we call W.
+
+216
+00:08:23,199 --> 00:08:29,199
+That output shows how the system has
+
+217
+00:08:25,120 --> 00:08:31,120
+modified or processed the input.
+
+218
+00:08:29,199 --> 00:08:33,440
+These inputs and outputs can take many
+
+219
+00:08:31,120 --> 00:08:35,279
+forms. They might be signals that change
+
+220
+00:08:33,440 --> 00:08:37,440
+over time, two-dimensional images,
+
+221
+00:08:35,279 --> 00:08:39,919
+tensors, or discrete data sets like the
+
+222
+00:08:37,440 --> 00:08:41,680
+pixel values in a digital image. The
+
+223
+00:08:39,919 --> 00:08:43,680
+important thing is that the system takes
+
+224
+00:08:41,680 --> 00:08:45,519
+something in, processes it through its
+
+225
+00:08:43,680 --> 00:08:48,480
+internal mechanism, and produces
+
+226
+00:08:45,519 --> 00:08:50,160
+something out.
+
+227
+00:08:48,480 --> 00:08:52,560
+In medical imaging, this thinking
+
+228
+00:08:50,160 --> 00:08:55,279
+applies directly to devices like CT
+
+229
+00:08:52,560 --> 00:08:57,519
+scanners. The entire system transforms
+
+230
+00:08:55,279 --> 00:09:00,080
+physical signals into diagnostic images
+
+231
+00:08:57,519 --> 00:09:01,920
+that radiologists can interpret. This is
+
+232
+00:09:00,080 --> 00:09:04,000
+where engineering and mathematics come
+
+233
+00:09:01,920 --> 00:09:05,920
+together. We need the precision of
+
+234
+00:09:04,000 --> 00:09:07,920
+mathematical relationships to describe
+
+235
+00:09:05,920 --> 00:09:09,839
+what's happening inside the system. But
+
+236
+00:09:07,920 --> 00:09:12,160
+we produce images of that precision
+
+237
+00:09:09,839 --> 00:09:16,040
+using real world tomographic scanners to
+
+238
+00:09:12,160 --> 00:09:16,040
+help patients every day.
+
+239
+00:09:19,360 --> 00:09:23,279
+Now that we've introduced the idea of
+
+240
+00:09:21,120 --> 00:09:25,600
+systems and how they transform inputs
+
+241
+00:09:23,279 --> 00:09:27,360
+into outputs, next let's talk about
+
+242
+00:09:25,600 --> 00:09:31,440
+something that's essential to working
+
+243
+00:09:27,360 --> 00:09:32,959
+with any system. Measurement.
+
+244
+00:09:31,440 --> 00:09:35,120
+As engineers, measurement is where
+
+245
+00:09:32,959 --> 00:09:37,440
+everything starts. Without measurement,
+
+246
+00:09:35,120 --> 00:09:38,880
+we can't analyze or control a system.
+
+247
+00:09:37,440 --> 00:09:40,959
+It's fundamental not just to
+
+248
+00:09:38,880 --> 00:09:43,519
+engineering, but to physics as well.
+
+249
+00:09:40,959 --> 00:09:45,440
+Think about quantum mechanics. Until we
+
+250
+00:09:43,519 --> 00:09:47,200
+measure, we don't really know the state
+
+251
+00:09:45,440 --> 00:09:49,200
+of a system or the state of the system
+
+252
+00:09:47,200 --> 00:09:51,600
+is not well defined until a measurement
+
+253
+00:09:49,200 --> 00:09:53,600
+is made. This is the idea behind
+
+254
+00:09:51,600 --> 00:09:55,440
+Schroinger's famous thought experiment
+
+255
+00:09:53,600 --> 00:09:57,120
+where the cat is both alive and dead
+
+256
+00:09:55,440 --> 00:10:01,519
+until measurement collapses that
+
+257
+00:09:57,120 --> 00:10:03,360
+uncertainty into a definite outcome.
+
+258
+00:10:01,519 --> 00:10:05,360
+In practical terms, measurement often
+
+259
+00:10:03,360 --> 00:10:07,839
+involves comparing something unknown to
+
+260
+00:10:05,360 --> 00:10:10,000
+a reference. For example, when we weigh
+
+261
+00:10:07,839 --> 00:10:11,920
+an object, we place it on one side of a
+
+262
+00:10:10,000 --> 00:10:14,160
+balance and a known standard on the
+
+263
+00:10:11,920 --> 00:10:16,160
+other. If the balance is level, we know
+
+264
+00:10:14,160 --> 00:10:18,160
+their weights are equal. Or in
+
+265
+00:10:16,160 --> 00:10:20,079
+electronics, we might use a multimeter
+
+266
+00:10:18,160 --> 00:10:22,880
+to compare an unknown resistance or
+
+267
+00:10:20,079 --> 00:10:24,560
+voltage to a standard value. These tools
+
+268
+00:10:22,880 --> 00:10:27,440
+give us the precision we need to work
+
+269
+00:10:24,560 --> 00:10:28,959
+effectively.
+
+270
+00:10:27,440 --> 00:10:31,200
+And to bring it back to systems
+
+271
+00:10:28,959 --> 00:10:33,200
+thinking, consider this. Even something
+
+272
+00:10:31,200 --> 00:10:35,360
+like an instructor can be seen as a
+
+273
+00:10:33,200 --> 00:10:37,519
+system. The input is the scheduled time
+
+274
+00:10:35,360 --> 00:10:39,279
+for class. the output is the lecture.
+
+275
+00:10:37,519 --> 00:10:41,920
+But if something unexpected happens,
+
+276
+00:10:39,279 --> 00:10:43,920
+like illness, the output changes. That's
+
+277
+00:10:41,920 --> 00:10:45,680
+a reminder that a real world system can
+
+278
+00:10:43,920 --> 00:10:48,680
+have modifiers that influence how it
+
+279
+00:10:45,680 --> 00:10:48,680
+behaves.
+
+280
+00:10:52,320 --> 00:10:56,320
+After exploring how measurement is at
+
+281
+00:10:54,399 --> 00:10:58,560
+the heart of engineering and systems
+
+282
+00:10:56,320 --> 00:11:02,480
+thinking, let's bring that directly into
+
+283
+00:10:58,560 --> 00:11:04,160
+the world of medical imaging.
+
+284
+00:11:02,480 --> 00:11:06,320
+An imaging system is really a
+
+285
+00:11:04,160 --> 00:11:09,200
+specialized type of measurement system.
+
+286
+00:11:06,320 --> 00:11:11,279
+Take an MRI scanner as an example. Its
+
+287
+00:11:09,200 --> 00:11:13,680
+purpose is to measure so-called case
+
+288
+00:11:11,279 --> 00:11:16,399
+data and reconstruct a detailed image of
+
+289
+00:11:13,680 --> 00:11:18,480
+a cross-section of the body. Ideally,
+
+290
+00:11:16,399 --> 00:11:21,360
+that image would be a perfect reflection
+
+291
+00:11:18,480 --> 00:11:23,680
+of what's inside. A sharp clear point in
+
+292
+00:11:21,360 --> 00:11:27,200
+the image would correspond exactly to a
+
+293
+00:11:23,680 --> 00:11:29,200
+sharp point in the body.
+
+294
+00:11:27,200 --> 00:11:31,760
+But of course, not all systems perform
+
+295
+00:11:29,200 --> 00:11:33,920
+equally. A high-quality imaging system
+
+296
+00:11:31,760 --> 00:11:36,160
+produces images that are sharp, high in
+
+297
+00:11:33,920 --> 00:11:38,079
+contrast, and rich in detail. A
+
+298
+00:11:36,160 --> 00:11:40,079
+lowquality system, on the other hand,
+
+299
+00:11:38,079 --> 00:11:42,399
+might blur features just like how a
+
+300
+00:11:40,079 --> 00:11:45,120
+lowresolution camera gives you a softer,
+
+301
+00:11:42,399 --> 00:11:46,880
+less precise photo. This blurring isn't
+
+302
+00:11:45,120 --> 00:11:48,720
+just an inconvenience. It's actually a
+
+303
+00:11:46,880 --> 00:11:52,480
+key characteristic that tells us a lot
+
+304
+00:11:48,720 --> 00:11:54,560
+about how the system behaves.
+
+305
+00:11:52,480 --> 00:11:56,160
+So, when we think about imaging systems,
+
+306
+00:11:54,560 --> 00:11:58,079
+sensing systems, and measurement
+
+307
+00:11:56,160 --> 00:12:00,480
+systems, we can see that they're really
+
+308
+00:11:58,079 --> 00:12:02,880
+in the same family. They all take in
+
+309
+00:12:00,480 --> 00:12:04,880
+signals from the world or our bodies,
+
+310
+00:12:02,880 --> 00:12:09,079
+process these signals, and produce
+
+311
+00:12:04,880 --> 00:12:09,079
+outputs that we can use.
+
+312
+00:12:12,800 --> 00:12:17,680
+Now that we've seen how imaging systems
+
+313
+00:12:15,120 --> 00:12:20,240
+fit into the broad family of measurement
+
+314
+00:12:17,680 --> 00:12:24,639
+systems, let's look at another important
+
+315
+00:12:20,240 --> 00:12:26,800
+type of system, the control system.
+
+316
+00:12:24,639 --> 00:12:28,480
+Unlike a basic measurement system, a
+
+317
+00:12:26,800 --> 00:12:30,800
+control system doesn't stop at
+
+318
+00:12:28,480 --> 00:12:32,959
+generating an output. What makes it
+
+319
+00:12:30,800 --> 00:12:35,360
+special is that it uses that output as
+
+320
+00:12:32,959 --> 00:12:37,680
+feedback to adjust its input or its own
+
+321
+00:12:35,360 --> 00:12:39,680
+behavior. In other words, it closes the
+
+322
+00:12:37,680 --> 00:12:43,279
+loop to achieve a desired result, even
+
+323
+00:12:39,680 --> 00:12:45,120
+when conditions change.
+
+324
+00:12:43,279 --> 00:12:47,600
+A good example is a radar system
+
+325
+00:12:45,120 --> 00:12:49,680
+tracking an airplane. The radar measures
+
+326
+00:12:47,600 --> 00:12:52,000
+the plane's position and velocity and
+
+327
+00:12:49,680 --> 00:12:54,560
+uses that information to adjust its
+
+328
+00:12:52,000 --> 00:12:56,959
+direction or focus, keeping the plane in
+
+329
+00:12:54,560 --> 00:12:59,040
+view as it moves. This continuous
+
+330
+00:12:56,959 --> 00:13:03,040
+feedback helps the system stay on target
+
+331
+00:12:59,040 --> 00:13:04,720
+no matter how fast the plane moves.
+
+332
+00:13:03,040 --> 00:13:06,480
+Control systems are essential in
+
+333
+00:13:04,720 --> 00:13:08,399
+engineering whenever we need systems
+
+334
+00:13:06,480 --> 00:13:10,959
+that can adapt, correct themselves, and
+
+335
+00:13:08,399 --> 00:13:12,880
+maintain stability in real time. And
+
+336
+00:13:10,959 --> 00:13:15,360
+while we don't usually think of imaging
+
+337
+00:13:12,880 --> 00:13:17,360
+systems as control systems, these ideas
+
+338
+00:13:15,360 --> 00:13:19,440
+come together in areas like robotic
+
+339
+00:13:17,360 --> 00:13:21,040
+surgery for automated imageguided
+
+340
+00:13:19,440 --> 00:13:23,200
+interventions where feedback from
+
+341
+00:13:21,040 --> 00:13:26,200
+imaging is used to guide robotic actions
+
+342
+00:13:23,200 --> 00:13:26,200
+precisely.
+
+343
+00:13:30,000 --> 00:13:34,959
+Continuing on control systems, let's
+
+344
+00:13:31,760 --> 00:13:36,959
+comment more on robotic systems.
+
+345
+00:13:34,959 --> 00:13:39,440
+Agentic robotic systems represent a
+
+346
+00:13:36,959 --> 00:13:41,360
+cutting edge area of control systems.
+
+347
+00:13:39,440 --> 00:13:44,000
+What sets them apart is that they don't
+
+348
+00:13:41,360 --> 00:13:45,760
+just react based on feedback. They often
+
+349
+00:13:44,000 --> 00:13:48,480
+integrate a level of machine
+
+350
+00:13:45,760 --> 00:13:51,120
+intelligence and have a 3D world model
+
+351
+00:13:48,480 --> 00:13:55,120
+built in to adapt, learn, and respond to
+
+352
+00:13:51,120 --> 00:13:57,040
+changing conditions in real time.
+
+353
+00:13:55,120 --> 00:13:59,360
+You can observe robotic systems working
+
+354
+00:13:57,040 --> 00:14:01,279
+in various settings. Some assist in
+
+355
+00:13:59,360 --> 00:14:03,760
+hotels managing tasks and interacting
+
+356
+00:14:01,279 --> 00:14:06,160
+with guests. Others support caregivers
+
+357
+00:14:03,760 --> 00:14:08,320
+in nursing homes. In these cases, the
+
+358
+00:14:06,160 --> 00:14:10,480
+robots combine precise control with
+
+359
+00:14:08,320 --> 00:14:12,720
+intelligent inference, adjusting their
+
+360
+00:14:10,480 --> 00:14:14,480
+actions based on both the feedback they
+
+361
+00:14:12,720 --> 00:14:16,160
+receive from their environment and the
+
+362
+00:14:14,480 --> 00:14:19,440
+reasoning they perform according to a
+
+363
+00:14:16,160 --> 00:14:21,600
+large AI model.
+
+364
+00:14:19,440 --> 00:14:23,120
+This blend of control, adaptability, and
+
+365
+00:14:21,600 --> 00:14:25,360
+intelligence opens incredible
+
+366
+00:14:23,120 --> 00:14:27,440
+possibilities not just in industry, but
+
+367
+00:14:25,360 --> 00:14:29,519
+in healthcare as well. We're seeing
+
+368
+00:14:27,440 --> 00:14:31,279
+robotic systems used alongside medical
+
+369
+00:14:29,519 --> 00:14:33,040
+imaging to guide surgeries, deliver
+
+370
+00:14:31,279 --> 00:14:35,839
+radiotherapies, and improve patient
+
+371
+00:14:33,040 --> 00:14:35,839
+care.
+
+372
+00:14:39,600 --> 00:14:44,320
+After exploring robotic systems as
+
+373
+00:14:42,160 --> 00:14:46,480
+advanced examples of engineered control
+
+374
+00:14:44,320 --> 00:14:48,320
+systems, let's shift our focus to
+
+375
+00:14:46,480 --> 00:14:51,920
+perhaps the most remarkable natural
+
+376
+00:14:48,320 --> 00:14:54,000
+system, the human brain.
+
+377
+00:14:51,920 --> 00:14:56,000
+The brain is an incredibly complex
+
+378
+00:14:54,000 --> 00:14:58,720
+control yet intelligent system made up
+
+379
+00:14:56,000 --> 00:15:00,880
+of billions of interconnected neurons.
+
+380
+00:14:58,720 --> 00:15:02,959
+These neurons process inputs from our
+
+381
+00:15:00,880 --> 00:15:05,120
+environment. everything we see, hear,
+
+382
+00:15:02,959 --> 00:15:08,000
+and feel and generate intelligent
+
+383
+00:15:05,120 --> 00:15:10,079
+actions in response. Each neuron decides
+
+384
+00:15:08,000 --> 00:15:12,079
+whether to fire based on the signals it
+
+385
+00:15:10,079 --> 00:15:13,839
+receives, and if so, it will pass
+
+386
+00:15:12,079 --> 00:15:15,920
+electrical impulses that enable
+
+387
+00:15:13,839 --> 00:15:19,760
+functions ranging from simple reflexes
+
+388
+00:15:15,920 --> 00:15:21,839
+to sophisticated reasoning.
+
+389
+00:15:19,760 --> 00:15:23,839
+For example, such interconnected neurons
+
+390
+00:15:21,839 --> 00:15:26,000
+form the foundation of our physiological
+
+391
+00:15:23,839 --> 00:15:27,920
+system. They coordinate movement,
+
+392
+00:15:26,000 --> 00:15:30,480
+regulate vital functions, and allow us
+
+393
+00:15:27,920 --> 00:15:32,160
+to live and adapt. And when we develop
+
+394
+00:15:30,480 --> 00:15:34,240
+engineered systems, it's often the
+
+395
+00:15:32,160 --> 00:15:38,600
+brain's architecture, functions, and
+
+396
+00:15:34,240 --> 00:15:38,600
+processes that inspires us.
+
+397
+00:15:42,000 --> 00:15:46,160
+Having just discussed the brain as an
+
+398
+00:15:43,920 --> 00:15:48,079
+intelligent system, it's important to
+
+399
+00:15:46,160 --> 00:15:50,399
+step back and see how it fits into the
+
+400
+00:15:48,079 --> 00:15:52,959
+bigger picture. The human body as a
+
+401
+00:15:50,399 --> 00:15:54,880
+whole.
+
+402
+00:15:52,959 --> 00:15:57,120
+The body is an incredibly intricate
+
+403
+00:15:54,880 --> 00:15:59,279
+interconnected system. It operates
+
+404
+00:15:57,120 --> 00:16:01,279
+across multiple levels from genes and
+
+405
+00:15:59,279 --> 00:16:02,959
+cells to tissues and organs all the way
+
+406
+00:16:01,279 --> 00:16:04,480
+up to entire physiological and
+
+407
+00:16:02,959 --> 00:16:06,800
+psychological systems like the
+
+408
+00:16:04,480 --> 00:16:09,680
+circulatory, respiratory, digestive and
+
+409
+00:16:06,800 --> 00:16:11,920
+neurological systems. These systems work
+
+410
+00:16:09,680 --> 00:16:14,480
+together in harmony to sustain and enjoy
+
+411
+00:16:11,920 --> 00:16:16,480
+life.
+
+412
+00:16:14,480 --> 00:16:18,160
+When disease disrupts this balance,
+
+413
+00:16:16,480 --> 00:16:20,480
+understanding how these parts interact
+
+414
+00:16:18,160 --> 00:16:22,639
+becomes essential. That's where systems
+
+415
+00:16:20,480 --> 00:16:24,800
+biio medicine come in. These fields
+
+416
+00:16:22,639 --> 00:16:27,199
+focus on studying the body as a huge
+
+417
+00:16:24,800 --> 00:16:29,279
+network of interacting components so
+
+418
+00:16:27,199 --> 00:16:31,600
+that we can gain deeper insights into
+
+419
+00:16:29,279 --> 00:16:33,519
+health, diagnose abnormalities more
+
+420
+00:16:31,600 --> 00:16:36,320
+precisely and develop treatments more
+
+421
+00:16:33,519 --> 00:16:38,160
+effectively.
+
+422
+00:16:36,320 --> 00:16:40,079
+This systems level thinking is at the
+
+423
+00:16:38,160 --> 00:16:41,920
+heart of modern medicine and it aligns
+
+424
+00:16:40,079 --> 00:16:44,079
+perfectly with how we approach medical
+
+425
+00:16:41,920 --> 00:16:46,000
+imaging using technology to see and
+
+426
+00:16:44,079 --> 00:16:49,639
+understand these complex connections in
+
+427
+00:16:46,000 --> 00:16:49,639
+coordinated actions.
+
+428
+00:16:53,279 --> 00:16:56,800
+Let's look ahead to where this thinking
+
+429
+00:16:54,880 --> 00:16:58,160
+is leading us.
+
+430
+00:16:56,800 --> 00:16:59,920
+We're entering a time when the
+
+431
+00:16:58,160 --> 00:17:02,560
+boundaries between human systems and
+
+432
+00:16:59,920 --> 00:17:04,880
+artificial systems like robotics and AI
+
+433
+00:17:02,560 --> 00:17:06,480
+are becoming increasingly blurred.
+
+434
+00:17:04,880 --> 00:17:08,959
+Technologies such as brain machine
+
+435
+00:17:06,480 --> 00:17:10,959
+interfaces are already emerging. These
+
+436
+00:17:08,959 --> 00:17:13,520
+interfaces aim to connect the brain
+
+437
+00:17:10,959 --> 00:17:15,919
+directly with external devices, offering
+
+438
+00:17:13,520 --> 00:17:18,000
+the potential to enhance memory, improve
+
+439
+00:17:15,919 --> 00:17:20,640
+reasoning, and support other cognitive
+
+440
+00:17:18,000 --> 00:17:20,640
+functions.
+
+441
+00:17:20,799 --> 00:17:24,720
+This convergence of neuroscience and
+
+442
+00:17:22,720 --> 00:17:26,319
+artificial intelligence represents one
+
+443
+00:17:24,720 --> 00:17:28,319
+of the most exciting and profound
+
+444
+00:17:26,319 --> 00:17:31,039
+frontiers in science and engineering
+
+445
+00:17:28,319 --> 00:17:34,039
+today which is called neuroi by some
+
+446
+00:17:31,039 --> 00:17:34,039
+researchers.
+
+447
+00:17:34,640 --> 00:17:39,360
+A closely related frontier is called
+
+448
+00:17:36,559 --> 00:17:42,000
+agentic AI. Yet another related area is
+
+449
+00:17:39,360 --> 00:17:44,000
+known as embodied AI. As I once heard in
+
+450
+00:17:42,000 --> 00:17:45,919
+a talk, physics helps us understand the
+
+451
+00:17:44,000 --> 00:17:47,919
+external world but neuroscience helps us
+
+452
+00:17:45,919 --> 00:17:49,440
+understand ourselves. When we bring
+
+453
+00:17:47,919 --> 00:17:51,039
+these fields together, we're not just
+
+454
+00:17:49,440 --> 00:17:52,960
+advancing technology. We may
+
+455
+00:17:51,039 --> 00:17:56,120
+fundamentally reshape what it means to
+
+456
+00:17:52,960 --> 00:17:56,120
+be human.
+
+457
+00:17:59,520 --> 00:18:04,080
+To develop these futuristic systems, we
+
+458
+00:18:01,840 --> 00:18:05,840
+first look at linear systems. It's
+
+459
+00:18:04,080 --> 00:18:08,240
+important to understand the two key
+
+460
+00:18:05,840 --> 00:18:11,480
+properties that define them. Additivity
+
+461
+00:18:08,240 --> 00:18:11,480
+and homogeneity.
+
+462
+00:18:11,760 --> 00:18:17,120
+Let's break this down. First, additivity
+
+463
+00:18:14,880 --> 00:18:20,080
+means that if you have two inputs, let's
+
+464
+00:18:17,120 --> 00:18:22,160
+call them V1 of T and V2 of T, and you
+
+465
+00:18:20,080 --> 00:18:24,640
+apply the system operator L to their
+
+466
+00:18:22,160 --> 00:18:26,480
+sum, it's the same as applying L to each
+
+467
+00:18:24,640 --> 00:18:28,320
+input separately and then adding the
+
+468
+00:18:26,480 --> 00:18:30,400
+results.
+
+469
+00:18:28,320 --> 00:18:32,960
+Second, homogeneity means that if you
+
+470
+00:18:30,400 --> 00:18:35,280
+scale an input by some constant, say
+
+471
+00:18:32,960 --> 00:18:37,760
+alpha, the output is scaled by that same
+
+472
+00:18:35,280 --> 00:18:40,799
+constant. You can see the mathematical
+
+473
+00:18:37,760 --> 00:18:42,640
+expression here.
+
+474
+00:18:40,799 --> 00:18:45,039
+This principle is what makes linear
+
+475
+00:18:42,640 --> 00:18:47,360
+systems so powerful. They let us break
+
+476
+00:18:45,039 --> 00:18:49,200
+complex problems into simpler parts,
+
+477
+00:18:47,360 --> 00:18:51,760
+solve them individually, and then
+
+478
+00:18:49,200 --> 00:18:53,760
+combine the results. It's this property
+
+479
+00:18:51,760 --> 00:18:55,600
+that makes linear systems both elegant
+
+480
+00:18:53,760 --> 00:18:57,120
+and practical for engineering and
+
+481
+00:18:55,600 --> 00:18:59,440
+especially for medical imaging
+
+482
+00:18:57,120 --> 00:19:01,280
+applications where we need to process or
+
+483
+00:18:59,440 --> 00:19:04,320
+reconstruct signals in a predictable,
+
+484
+00:19:01,280 --> 00:19:06,000
+manageable way.
+
+485
+00:19:04,320 --> 00:19:08,080
+The bottom part shows some interesting
+
+486
+00:19:06,000 --> 00:19:10,000
+problems. An interesting property is
+
+487
+00:19:08,080 --> 00:19:12,720
+that if a system is linear, its output
+
+488
+00:19:10,000 --> 00:19:14,240
+to a zero input must be zero. Also,
+
+489
+00:19:12,720 --> 00:19:16,000
+please note that the last equation
+
+490
+00:19:14,240 --> 00:19:19,559
+demands the condition that the infinite
+
+491
+00:19:16,000 --> 00:19:19,559
+sum must converge.
+
+492
+00:19:23,280 --> 00:19:27,280
+Let's now take a closer look at the
+
+493
+00:19:24,880 --> 00:19:29,440
+first key property of linear systems,
+
+494
+00:19:27,280 --> 00:19:31,440
+additivity.
+
+495
+00:19:29,440 --> 00:19:33,360
+Additivity tells us that if we know how
+
+496
+00:19:31,440 --> 00:19:35,360
+a system responds to two individual
+
+497
+00:19:33,360 --> 00:19:37,679
+inputs, let's call them f_sub_1 and
+
+498
+00:19:35,360 --> 00:19:40,320
+f_sub_2, then we can predict the systems
+
+499
+00:19:37,679 --> 00:19:42,720
+response to their sum.
+
+500
+00:19:40,320 --> 00:19:45,200
+Specifically, if input f_sub_1 produces
+
+501
+00:19:42,720 --> 00:19:48,000
+output k1 and input f_sub_2 produces
+
+502
+00:19:45,200 --> 00:19:53,440
+output k2, then the response to f_sub_1
+
+503
+00:19:48,000 --> 00:19:54,960
+plus f_sub_2 will be simply k1 + k2.
+
+504
+00:19:53,440 --> 00:19:57,679
+This might sound straightforward, but
+
+505
+00:19:54,960 --> 00:20:00,080
+it's incredibly powerful. Additivity
+
+506
+00:19:57,679 --> 00:20:02,000
+allows us to take complex inputs, break
+
+507
+00:20:00,080 --> 00:20:04,080
+them down into simpler components,
+
+508
+00:20:02,000 --> 00:20:06,160
+analyze each part separately, and then
+
+509
+00:20:04,080 --> 00:20:08,720
+combine the results to understand the
+
+510
+00:20:06,160 --> 00:20:10,559
+whole.
+
+511
+00:20:08,720 --> 00:20:12,720
+This is one of the reasons why linear
+
+512
+00:20:10,559 --> 00:20:15,520
+systems are so widely used, especially
+
+513
+00:20:12,720 --> 00:20:17,679
+in medical imaging. It helps us handle
+
+514
+00:20:15,520 --> 00:20:22,080
+complex signals and reconstruct images
+
+515
+00:20:17,679 --> 00:20:23,679
+efficiently with precision and clarity.
+
+516
+00:20:22,080 --> 00:20:25,600
+On the slide, you'll see this
+
+517
+00:20:23,679 --> 00:20:27,600
+illustrated with the rotation operation.
+
+518
+00:20:25,600 --> 00:20:29,520
+A rotation of each of input patterns of
+
+519
+00:20:27,600 --> 00:20:31,200
+one and f_sub_2 and the same rotation of
+
+520
+00:20:29,520 --> 00:20:33,360
+the sum of f_sub_1 and f_sub_2.
+
+521
+00:20:31,200 --> 00:20:36,360
+Visualizing how this principle works in
+
+522
+00:20:33,360 --> 00:20:36,360
+practice.
+
+523
+00:20:39,919 --> 00:20:44,320
+Following on from additivity, let's now
+
+524
+00:20:42,240 --> 00:20:47,280
+turn to the second key property that
+
+525
+00:20:44,320 --> 00:20:49,919
+defines a linear system, homogeneity, or
+
+526
+00:20:47,280 --> 00:20:53,120
+what we also call the scaling property.
+
+527
+00:20:49,919 --> 00:20:56,080
+Here's how it works. If a system
+
+528
+00:20:53,120 --> 00:20:58,000
+produces an output k1 for an input f1,
+
+529
+00:20:56,080 --> 00:21:00,480
+then if we scale that input, say
+
+530
+00:20:58,000 --> 00:21:02,799
+multiply f_sub_1 by some constant factor
+
+531
+00:21:00,480 --> 00:21:05,440
+like alpha, the output should be scaled
+
+532
+00:21:02,799 --> 00:21:07,760
+by that same factor. So mathematically,
+
+533
+00:21:05,440 --> 00:21:12,000
+if the input becomes alpha * f_sub_1,
+
+534
+00:21:07,760 --> 00:21:13,840
+the output should be alpha * k1.
+
+535
+00:21:12,000 --> 00:21:16,320
+To put this in more intuitive terms,
+
+536
+00:21:13,840 --> 00:21:17,679
+imagine you have an image as your input.
+
+537
+00:21:16,320 --> 00:21:19,520
+If you double the brightness of the
+
+538
+00:21:17,679 --> 00:21:21,360
+input image, a linear system would
+
+539
+00:21:19,520 --> 00:21:23,679
+produce an output image that is also
+
+540
+00:21:21,360 --> 00:21:26,320
+twice as bright as the original one. No
+
+541
+00:21:23,679 --> 00:21:28,400
+more, no less. That's homogeneity in
+
+542
+00:21:26,320 --> 00:21:30,559
+action. When both conditions are
+
+543
+00:21:28,400 --> 00:21:34,559
+satisfied, the system obeys what we call
+
+544
+00:21:30,559 --> 00:21:37,200
+the superposition principle.
+
+545
+00:21:34,559 --> 00:21:40,480
+More specifically, if two inputs are V1
+
+546
+00:21:37,200 --> 00:21:43,039
+and V2, giving output L of V1 and L of
+
+547
+00:21:40,480 --> 00:21:46,400
+V2 respectively, then for a linearly
+
+548
+00:21:43,039 --> 00:21:48,960
+combined input alpha 1 * V1 and alpha 2
+
+549
+00:21:46,400 --> 00:21:51,679
+* V2, we must have the output expressed
+
+550
+00:21:48,960 --> 00:21:55,679
+as the sum of alpha 1 * L of V1 and
+
+551
+00:21:51,679 --> 00:21:57,760
+alpha 2 * L of V2.
+
+552
+00:21:55,679 --> 00:21:59,440
+I will use another slide later in this
+
+553
+00:21:57,760 --> 00:22:01,760
+lecture to review with you this
+
+554
+00:21:59,440 --> 00:22:03,840
+important principle.
+
+555
+00:22:01,760 --> 00:22:05,760
+The superposition principle and the set
+
+556
+00:22:03,840 --> 00:22:08,159
+of the two properties that is the
+
+557
+00:22:05,760 --> 00:22:10,240
+additivity and homogeneity can be
+
+558
+00:22:08,159 --> 00:22:11,919
+derived from each other. These two
+
+559
+00:22:10,240 --> 00:22:14,240
+properties together are equivalent to
+
+560
+00:22:11,919 --> 00:22:16,080
+the superposition principle allowing us
+
+561
+00:22:14,240 --> 00:22:18,240
+to predict linear system behaviors
+
+562
+00:22:16,080 --> 00:22:20,240
+simplify complex engineering problems
+
+563
+00:22:18,240 --> 00:22:23,880
+and design imaging technologies that are
+
+564
+00:22:20,240 --> 00:22:23,880
+accurate and reliable.
+
+565
+00:22:27,520 --> 00:22:31,520
+We've explored the two defining
+
+566
+00:22:29,200 --> 00:22:33,600
+properties of linear systems, additivity
+
+567
+00:22:31,520 --> 00:22:35,120
+and homogeneity. Let's put that
+
+568
+00:22:33,600 --> 00:22:37,600
+knowledge to the test with a few
+
+569
+00:22:35,120 --> 00:22:39,280
+examples. Here you can pause and think
+
+570
+00:22:37,600 --> 00:22:41,520
+carefully about whether each of the
+
+571
+00:22:39,280 --> 00:22:43,760
+given systems meets the criteria we've
+
+572
+00:22:41,520 --> 00:22:47,520
+discussed. These small checks help
+
+573
+00:22:43,760 --> 00:22:49,840
+reinforce your understanding.
+
+574
+00:22:47,520 --> 00:22:51,679
+Okay. Now let's discuss the answer.
+
+575
+00:22:49,840 --> 00:22:54,080
+Suppose we have a system that maps
+
+576
+00:22:51,679 --> 00:22:56,480
+positive numbers x to the square root of
+
+577
+00:22:54,080 --> 00:22:58,559
+x. At first glance, you might notice
+
+578
+00:22:56,480 --> 00:23:00,799
+that the output is zero when the input
+
+579
+00:22:58,559 --> 00:23:03,200
+is zero. That's a necessary condition
+
+580
+00:23:00,799 --> 00:23:05,679
+for linearity, but it's not enough. To
+
+581
+00:23:03,200 --> 00:23:08,240
+be truly linear, the system must satisfy
+
+582
+00:23:05,679 --> 00:23:10,880
+both additivity and homogeneity. The
+
+583
+00:23:08,240 --> 00:23:12,720
+square root function fails both tests.
+
+584
+00:23:10,880 --> 00:23:14,960
+The square root of a sum isn't the sum
+
+585
+00:23:12,720 --> 00:23:16,640
+of the square roots of the components.
+
+586
+00:23:14,960 --> 00:23:20,360
+And if you scale the input, the output
+
+587
+00:23:16,640 --> 00:23:20,360
+doesn't scale proportionally.
+
+588
+00:23:20,480 --> 00:23:23,600
+Now compare that with something like a
+
+589
+00:23:22,159 --> 00:23:25,440
+linear transformation in
+
+590
+00:23:23,600 --> 00:23:28,640
+three-dimensional space like multiplying
+
+591
+00:23:25,440 --> 00:23:30,960
+a vector by a 3 into 3 matrix. This type
+
+592
+00:23:28,640 --> 00:23:33,039
+of operation satisfies both additivity
+
+593
+00:23:30,960 --> 00:23:35,600
+and homogeneity. It follows the
+
+594
+00:23:33,039 --> 00:23:37,679
+superposition principle. Similarly,
+
+595
+00:23:35,600 --> 00:23:39,919
+mathematical operations integration and
+
+596
+00:23:37,679 --> 00:23:41,280
+differentiation both qualify as linear
+
+597
+00:23:39,919 --> 00:23:43,520
+because they respect these two
+
+598
+00:23:41,280 --> 00:23:45,280
+properties additivity and homogeneity
+
+599
+00:23:43,520 --> 00:23:48,280
+which are the necessary and sufficient
+
+600
+00:23:45,280 --> 00:23:48,280
+conditions.
+
+601
+00:23:52,000 --> 00:23:55,919
+Now that we've practiced applying the
+
+602
+00:23:53,919 --> 00:23:58,960
+definitions of linear systems through
+
+603
+00:23:55,919 --> 00:24:01,039
+checking specific examples, let's take a
+
+604
+00:23:58,960 --> 00:24:03,200
+moment to reflect on these properties at
+
+605
+00:24:01,039 --> 00:24:07,360
+a deeper level and clarify subtleties
+
+606
+00:24:03,200 --> 00:24:08,960
+out of the linear system concept.
+
+607
+00:24:07,360 --> 00:24:10,720
+Over the years, some have wondered
+
+608
+00:24:08,960 --> 00:24:13,120
+whether the definition of a linear
+
+609
+00:24:10,720 --> 00:24:15,039
+system might contain redundancy. Could
+
+610
+00:24:13,120 --> 00:24:17,120
+it be the case that additivity alone
+
+611
+00:24:15,039 --> 00:24:19,760
+implies homogeneity or the other way
+
+612
+00:24:17,120 --> 00:24:22,320
+around? It's an intriguing question
+
+613
+00:24:19,760 --> 00:24:24,480
+because at its core, it asks us to think
+
+614
+00:24:22,320 --> 00:24:26,799
+carefully about how we define the
+
+615
+00:24:24,480 --> 00:24:29,440
+systems we study and the assumptions we
+
+616
+00:24:26,799 --> 00:24:31,520
+make.
+
+617
+00:24:29,440 --> 00:24:33,520
+This kind of exploration isn't new.
+
+618
+00:24:31,520 --> 00:24:35,760
+Think of Uklid's geometry, which started
+
+619
+00:24:33,520 --> 00:24:37,520
+with five basic postulates.
+
+620
+00:24:35,760 --> 00:24:38,799
+Mathematicians have debated for
+
+621
+00:24:37,520 --> 00:24:41,200
+centuries whether all of those
+
+622
+00:24:38,799 --> 00:24:43,520
+postulates are truly independent or if
+
+623
+00:24:41,200 --> 00:24:45,679
+some could be derived from others. In
+
+624
+00:24:43,520 --> 00:24:48,000
+the same spirit, we can ask are both
+
+625
+00:24:45,679 --> 00:24:50,480
+additivity and homogeneity really
+
+626
+00:24:48,000 --> 00:24:54,720
+necessary as separate conditions or
+
+627
+00:24:50,480 --> 00:24:56,640
+could one in some cases imply the other?
+
+628
+00:24:54,720 --> 00:24:58,400
+In the next few slides, we'll explore
+
+629
+00:24:56,640 --> 00:25:00,159
+situations where these properties are
+
+630
+00:24:58,400 --> 00:25:02,559
+independent and others where they might
+
+631
+00:25:00,159 --> 00:25:04,880
+be redundant. Engaging with questions
+
+632
+00:25:02,559 --> 00:25:06,960
+like what I just asked helps us build a
+
+633
+00:25:04,880 --> 00:25:08,880
+stronger, more thoughtful foundation for
+
+634
+00:25:06,960 --> 00:25:10,799
+engineering practice, particularly when
+
+635
+00:25:08,880 --> 00:25:14,200
+we apply these ideas in fields like
+
+636
+00:25:10,799 --> 00:25:14,200
+medical imaging.
+
+637
+00:25:17,679 --> 00:25:22,159
+Since we use both additivity and
+
+638
+00:25:19,600 --> 00:25:23,679
+homogeneity to define a linear system,
+
+639
+00:25:22,159 --> 00:25:26,159
+we already imply that they are
+
+640
+00:25:23,679 --> 00:25:27,840
+independent. Now, let's look at a
+
+641
+00:25:26,159 --> 00:25:29,600
+special case where they're actually
+
+642
+00:25:27,840 --> 00:25:31,360
+equivalent when we're dealing with
+
+643
+00:25:29,600 --> 00:25:33,039
+continuous systems.
+
+644
+00:25:31,360 --> 00:25:34,640
+As you can see on this slide, we're
+
+645
+00:25:33,039 --> 00:25:38,600
+focusing on the connection between
+
+646
+00:25:34,640 --> 00:25:38,600
+additivity and homogeneity.
+
+647
+00:25:38,880 --> 00:25:43,120
+Let's break it down together. At the top
+
+648
+00:25:41,200 --> 00:25:45,039
+of the slide, you'll notice the arrows
+
+649
+00:25:43,120 --> 00:25:46,960
+that connect the two properties.
+
+650
+00:25:45,039 --> 00:25:49,360
+Additivity in the red box and
+
+651
+00:25:46,960 --> 00:25:52,000
+homogeneity in the blue box with the
+
+652
+00:25:49,360 --> 00:25:54,080
+arrows going both ways. This represents
+
+653
+00:25:52,000 --> 00:25:56,559
+the key idea. Under certain conditions
+
+654
+00:25:54,080 --> 00:25:58,880
+like continuity, one property can imply
+
+655
+00:25:56,559 --> 00:26:00,720
+the other. Now look at the yellow box to
+
+656
+00:25:58,880 --> 00:26:02,720
+support the yellow arrow. These
+
+657
+00:26:00,720 --> 00:26:06,320
+equations show how homogeneity can be
+
+658
+00:26:02,720 --> 00:26:10,720
+built up from additivity.
+
+659
+00:26:06,320 --> 00:26:12,799
+We start with f of n * x= n * fx. This
+
+660
+00:26:10,720 --> 00:26:14,799
+shows that if you apply the system to a
+
+661
+00:26:12,799 --> 00:26:18,080
+scaled input, it scales the output
+
+662
+00:26:14,799 --> 00:26:20,320
+proportionally. That's homogeneity.
+
+663
+00:26:18,080 --> 00:26:22,400
+The next line builds on that. It
+
+664
+00:26:20,320 --> 00:26:24,480
+rewrites f ofx in terms of scaled
+
+665
+00:26:22,400 --> 00:26:26,559
+components showing that f ofx behaves
+
+666
+00:26:24,480 --> 00:26:28,640
+consistently under fractional scaling
+
+667
+00:26:26,559 --> 00:26:31,120
+using integer steps and continuity to
+
+668
+00:26:28,640 --> 00:26:33,120
+bridge to real numbers.
+
+669
+00:26:31,120 --> 00:26:37,200
+The last line in the yellow box shows
+
+670
+00:26:33,120 --> 00:26:38,880
+that if f of0= f ofx plus f ofx then f
+
+671
+00:26:37,200 --> 00:26:42,080
+ofx=
+
+672
+00:26:38,880 --> 00:26:45,360
+fx. This confirms the homogeneity for a
+
+673
+00:26:42,080 --> 00:26:46,960
+real number scaler.
+
+674
+00:26:45,360 --> 00:26:49,840
+Then in the green box we see how
+
+675
+00:26:46,960 --> 00:26:53,600
+additivity emerges from homogeneity. We
+
+676
+00:26:49,840 --> 00:26:56,720
+define two inputs x1 = alpha 1 * x and
+
+677
+00:26:53,600 --> 00:26:58,240
+x2 = alpha 2 * x where x is not equal to
+
+678
+00:26:56,720 --> 00:27:02,400
+zero.
+
+679
+00:26:58,240 --> 00:27:05,440
+If we apply homogeneity f of x1 + x2 = f
+
+680
+00:27:02,400 --> 00:27:09,520
+of alpha 1 * x + alpha 2 * which is
+
+681
+00:27:05,440 --> 00:27:13,279
+equals to alpha 1 + alpha 2 * fx.
+
+682
+00:27:09,520 --> 00:27:19,360
+This equals alpha 1 * f ofx plus alpha 2
+
+683
+00:27:13,279 --> 00:27:21,520
+* f ofx which equals f ofx1 plus f ofx2.
+
+684
+00:27:19,360 --> 00:27:24,080
+This confirms that if homogeneity holds
+
+685
+00:27:21,520 --> 00:27:25,919
+we can construct additivity. So this
+
+686
+00:27:24,080 --> 00:27:27,600
+illustrates how in continuous systems
+
+687
+00:27:25,919 --> 00:27:29,760
+these two properties are indeed
+
+688
+00:27:27,600 --> 00:27:31,679
+equivalent. That is in such cases
+
+689
+00:27:29,760 --> 00:27:36,360
+additivity and homogeneity aren't
+
+690
+00:27:31,679 --> 00:27:36,360
+independent. One can imply the other.
+
+691
+00:27:39,600 --> 00:27:43,520
+In the previous slide, we explored how
+
+692
+00:27:41,679 --> 00:27:45,360
+additivity and homogeneity can be
+
+693
+00:27:43,520 --> 00:27:47,840
+equivalent under certain conditions like
+
+694
+00:27:45,360 --> 00:27:50,159
+continuity. But here we will see that
+
+695
+00:27:47,840 --> 00:27:53,039
+equivalence doesn't always hold. Let's
+
+696
+00:27:50,159 --> 00:27:54,960
+break it down.
+
+697
+00:27:53,039 --> 00:27:57,279
+This example focuses on the complex
+
+698
+00:27:54,960 --> 00:28:01,520
+conjugate operation. The system is
+
+699
+00:27:57,279 --> 00:28:03,279
+defined as f of z= z star where z= x + i
+
+700
+00:28:01,520 --> 00:28:05,200
+y.
+
+701
+00:28:03,279 --> 00:28:07,520
+Taking the conjugate of z flips the sign
+
+702
+00:28:05,200 --> 00:28:10,960
+of the imaginary part. So f of z equals
+
+703
+00:28:07,520 --> 00:28:13,200
+a minus i.
+
+704
+00:28:10,960 --> 00:28:16,559
+Let's look at additivity. First the
+
+705
+00:28:13,200 --> 00:28:20,080
+slide shows f of z1 + z2 equals the
+
+706
+00:28:16,559 --> 00:28:22,960
+conjugate of z1 plus z2 which equals z1*
+
+707
+00:28:20,080 --> 00:28:25,520
+plus z2 star and that equals f of z1
+
+708
+00:28:22,960 --> 00:28:27,360
+plus f of z2.
+
+709
+00:28:25,520 --> 00:28:29,440
+This means the system satisfies
+
+710
+00:28:27,360 --> 00:28:32,000
+additivity. The conjugate of a sum is
+
+711
+00:28:29,440 --> 00:28:35,120
+the sum of the conjugates.
+
+712
+00:28:32,000 --> 00:28:38,000
+Now consider homogeneity f of alpha z
+
+713
+00:28:35,120 --> 00:28:40,240
+equals the conjugate of alphaz.
+
+714
+00:28:38,000 --> 00:28:43,600
+For a complex scaler alpha, this equals
+
+715
+00:28:40,240 --> 00:28:46,240
+alpha* * zstar, which is not the same as
+
+716
+00:28:43,600 --> 00:28:48,559
+alpha * f of z unless alpha is purely
+
+717
+00:28:46,240 --> 00:28:51,919
+real. So homogeneity fails when the
+
+718
+00:28:48,559 --> 00:28:53,360
+scaler is complex.
+
+719
+00:28:51,919 --> 00:28:54,799
+This is a great example that
+
+720
+00:28:53,360 --> 00:28:57,600
+demonstrates why we can't assume
+
+721
+00:28:54,799 --> 00:28:59,600
+additivity implies homogeneity. We
+
+722
+00:28:57,600 --> 00:29:02,480
+really do need to verify both conditions
+
+723
+00:28:59,600 --> 00:29:04,640
+when testing for linearity.
+
+724
+00:29:02,480 --> 00:29:06,960
+Finding a counter example like this for
+
+725
+00:29:04,640 --> 00:29:08,720
+real scalers remains an open question
+
+726
+00:29:06,960 --> 00:29:10,799
+where thoughtful reasoning is still
+
+727
+00:29:08,720 --> 00:29:14,120
+welcome. If you figure it out, please
+
+728
+00:29:10,799 --> 00:29:14,120
+let me know.
+
+729
+00:29:17,360 --> 00:29:20,880
+On the previous slide, we saw how
+
+730
+00:29:18,880 --> 00:29:23,120
+additivity doesn't necessarily imply
+
+731
+00:29:20,880 --> 00:29:25,679
+homogeneity. Now let's look at the
+
+732
+00:29:23,120 --> 00:29:29,679
+reverse. A case where homogeneity holds
+
+733
+00:29:25,679 --> 00:29:32,399
+but additivity fails.
+
+734
+00:29:29,679 --> 00:29:34,799
+This slide presents a clever example. We
+
+735
+00:29:32,399 --> 00:29:40,240
+define a real valued function where f
+
+736
+00:29:34,799 --> 00:29:43,520
+ofx= m1 * x if x is rational and f ofx=
+
+737
+00:29:40,240 --> 00:29:45,440
+m2 * x if x is irrational. Where m1 and
+
+738
+00:29:43,520 --> 00:29:50,399
+m2 are rational constants and
+
+739
+00:29:45,440 --> 00:29:52,399
+importantly m1 is not equal to m2.
+
+740
+00:29:50,399 --> 00:29:54,399
+Since we're only scaling inputs by
+
+741
+00:29:52,399 --> 00:29:57,200
+rational numbers in this example, the
+
+742
+00:29:54,399 --> 00:29:59,360
+homogeneity property holds. That's
+
+743
+00:29:57,200 --> 00:30:01,120
+because multiplying by a rational scaler
+
+744
+00:29:59,360 --> 00:30:03,679
+doesn't change whether the input is
+
+745
+00:30:01,120 --> 00:30:07,039
+rational or irrational. So the function
+
+746
+00:30:03,679 --> 00:30:09,440
+scales consistently.
+
+747
+00:30:07,039 --> 00:30:12,000
+But here's how additivity breaks down.
+
+748
+00:30:09,440 --> 00:30:15,039
+If we add two irrational numbers x1 and
+
+749
+00:30:12,000 --> 00:30:16,880
+x2 whose sum happens to be rational, the
+
+750
+00:30:15,039 --> 00:30:18,640
+function behaves differently on the sum
+
+751
+00:30:16,880 --> 00:30:21,760
+compared to the sum of the individual
+
+752
+00:30:18,640 --> 00:30:21,760
+function values.
+
+753
+00:30:22,080 --> 00:30:32,240
+Specifically, we have f of x1 + x2 = m1
+
+754
+00:30:26,640 --> 00:30:36,000
+* the sum x1 + x2. But f ofx1 + f ofx2 =
+
+755
+00:30:32,240 --> 00:30:38,320
+m2 * x1 + m2 * x2.
+
+756
+00:30:36,000 --> 00:30:40,480
+And since m1 is not equal to m2, these
+
+757
+00:30:38,320 --> 00:30:42,240
+two expressions are not equal. This
+
+758
+00:30:40,480 --> 00:30:44,080
+example demonstrates clearly that
+
+759
+00:30:42,240 --> 00:30:47,080
+homogeneity doesn't guarantee
+
+760
+00:30:44,080 --> 00:30:47,080
+additivity.
+
+761
+00:30:47,120 --> 00:30:50,960
+Both properties are essential and
+
+762
+00:30:49,039 --> 00:30:53,279
+independent when defining a linear
+
+763
+00:30:50,960 --> 00:30:57,640
+system in a general case. That is both
+
+764
+00:30:53,279 --> 00:30:57,640
+the properties are indeed needed.
+
+765
+00:31:01,120 --> 00:31:05,440
+Now that we've explored examples showing
+
+766
+00:31:03,120 --> 00:31:07,760
+how additivity and homogeneity can be
+
+767
+00:31:05,440 --> 00:31:11,279
+independent or dependent, let's bring it
+
+768
+00:31:07,760 --> 00:31:13,679
+all together with a recap.
+
+769
+00:31:11,279 --> 00:31:15,919
+A linear operator is defined by a
+
+770
+00:31:13,679 --> 00:31:19,279
+criterion that combines additivity and
+
+771
+00:31:15,919 --> 00:31:21,279
+homogeneity into a single expression. An
+
+772
+00:31:19,279 --> 00:31:23,679
+operator L is called linear for a
+
+773
+00:31:21,279 --> 00:31:26,320
+particular class of inputs V and a
+
+774
+00:31:23,679 --> 00:31:28,159
+scalar in a given domain if and only if
+
+775
+00:31:26,320 --> 00:31:30,880
+it satisfies the superposition
+
+776
+00:31:28,159 --> 00:31:32,799
+principle.
+
+777
+00:31:30,880 --> 00:31:35,360
+We can express this defining property
+
+778
+00:31:32,799 --> 00:31:38,399
+with the following equation. L of alpha
+
+779
+00:31:35,360 --> 00:31:41,279
+1 * V1 of X plus alpha 2 * V2 of X
+
+780
+00:31:38,399 --> 00:31:45,279
+equals Alpha 1 * L of V1 of X plus alpha
+
+781
+00:31:41,279 --> 00:31:47,840
+2 * L of V2 of X.
+
+782
+00:31:45,279 --> 00:31:49,840
+What this means is simple but powerful.
+
+783
+00:31:47,840 --> 00:31:52,080
+If you combine two inputs and scale
+
+784
+00:31:49,840 --> 00:31:54,000
+them, applying the system operator to
+
+785
+00:31:52,080 --> 00:31:56,080
+that combination gives the same result
+
+786
+00:31:54,000 --> 00:31:58,080
+as applying the operator to each input
+
+787
+00:31:56,080 --> 00:31:59,919
+separately, scaling the outputs and
+
+788
+00:31:58,080 --> 00:32:02,159
+adding them up.
+
+789
+00:31:59,919 --> 00:32:04,640
+The predictability they offer allows us
+
+790
+00:32:02,159 --> 00:32:06,880
+to break down complex signals, analyze
+
+791
+00:32:04,640 --> 00:32:10,000
+them efficiently, apply tools like
+
+792
+00:32:06,880 --> 00:32:12,799
+forier analysis or convolution and do so
+
+793
+00:32:10,000 --> 00:32:15,200
+with confidence. And remember, as shown
+
+794
+00:32:12,799 --> 00:32:17,440
+at the bottom of the slide, a linear
+
+795
+00:32:15,200 --> 00:32:20,799
+system is simply a system described by a
+
+796
+00:32:17,440 --> 00:32:22,880
+linear operator.
+
+797
+00:32:20,799 --> 00:32:25,279
+This foundational idea paves the way for
+
+798
+00:32:22,880 --> 00:32:27,600
+everything that follows, including how
+
+799
+00:32:25,279 --> 00:32:30,399
+we approximate nonlinear systems as
+
+800
+00:32:27,600 --> 00:32:32,240
+peace-wise linear and how we build
+
+801
+00:32:30,399 --> 00:32:35,240
+advanced imaging technologies on these
+
+802
+00:32:32,240 --> 00:32:35,240
+principles.
+
+803
+00:32:38,960 --> 00:32:42,799
+Now let's explore an important
+
+804
+00:32:40,399 --> 00:32:45,440
+refinement relative linearity which is
+
+805
+00:32:42,799 --> 00:32:47,440
+not in any textbook.
+
+806
+00:32:45,440 --> 00:32:49,919
+On an earlier slide, I mentioned an
+
+807
+00:32:47,440 --> 00:32:51,840
+interesting property of a linear system.
+
+808
+00:32:49,919 --> 00:32:54,559
+That is, if a system is linear, its
+
+809
+00:32:51,840 --> 00:32:56,399
+output to a zero input must be zero.
+
+810
+00:32:54,559 --> 00:33:00,640
+However, if a function is linear, its
+
+811
+00:32:56,399 --> 00:33:02,320
+value for input x can be non zero.
+
+812
+00:33:00,640 --> 00:33:04,159
+How do we reconcile this apparent
+
+813
+00:33:02,320 --> 00:33:06,480
+discrepancy between the concept of a
+
+814
+00:33:04,159 --> 00:33:08,399
+linear system and a linear function?
+
+815
+00:33:06,480 --> 00:33:10,720
+Clearly, the inconsistency comes from
+
+816
+00:33:08,399 --> 00:33:12,720
+how we define the baseline. We can
+
+817
+00:33:10,720 --> 00:33:17,120
+resolve this by focusing on relative
+
+818
+00:33:12,720 --> 00:33:19,760
+changes rather than absolute values.
+
+819
+00:33:17,120 --> 00:33:22,080
+What do I mean? Imagine a system where
+
+820
+00:33:19,760 --> 00:33:24,080
+the input output relationship is tied to
+
+821
+00:33:22,080 --> 00:33:26,320
+a specific coordinate system or
+
+822
+00:33:24,080 --> 00:33:28,720
+reference point. Instead of looking at
+
+823
+00:33:26,320 --> 00:33:30,960
+the absolute input and output values, we
+
+824
+00:33:28,720 --> 00:33:33,440
+examine how changes in input produce
+
+825
+00:33:30,960 --> 00:33:35,600
+changes in output. This approach allows
+
+826
+00:33:33,440 --> 00:33:37,600
+us to apply linear system theory even
+
+827
+00:33:35,600 --> 00:33:40,640
+when the systems baseline isn't aligned
+
+828
+00:33:37,600 --> 00:33:42,320
+with the origin.
+
+829
+00:33:40,640 --> 00:33:44,640
+On the slide, you see this idea
+
+830
+00:33:42,320 --> 00:33:47,360
+expressed mathematically. We define
+
+831
+00:33:44,640 --> 00:33:50,960
+delta y1 of t= l applied to delta x1 of
+
+832
+00:33:47,360 --> 00:33:53,679
+t and delta y2 of t= l applied to delta
+
+833
+00:33:50,960 --> 00:33:57,279
+x2 of t. This is the system's response
+
+834
+00:33:53,679 --> 00:33:59,120
+to changes in input.
+
+835
+00:33:57,279 --> 00:34:02,159
+Then if the superposition principle
+
+836
+00:33:59,120 --> 00:34:05,679
+applies to these changes that is alpha *
+
+837
+00:34:02,159 --> 00:34:08,879
+deltay 1 of t + beta * deltay 2 of t
+
+838
+00:34:05,679 --> 00:34:12,000
+equals l applied to alpha delta x1 of t
+
+839
+00:34:08,879 --> 00:34:14,079
+plus beta delta x2 of t. We call the
+
+840
+00:34:12,000 --> 00:34:16,240
+system linear.
+
+841
+00:34:14,079 --> 00:34:19,119
+This shows that by focusing on relative
+
+842
+00:34:16,240 --> 00:34:21,040
+changes the system behaves linearly even
+
+843
+00:34:19,119 --> 00:34:22,960
+if the original absolute function looked
+
+844
+00:34:21,040 --> 00:34:25,839
+nonlinear because of an offset or
+
+845
+00:34:22,960 --> 00:34:27,679
+intercept.
+
+846
+00:34:25,839 --> 00:34:30,320
+This concept is especially useful in
+
+847
+00:34:27,679 --> 00:34:32,240
+medical imaging where systems often
+
+848
+00:34:30,320 --> 00:34:34,639
+operate around a baseline or reference
+
+849
+00:34:32,240 --> 00:34:36,159
+signal and what matters most is the
+
+850
+00:34:34,639 --> 00:34:39,159
+change we're trying to detect or
+
+851
+00:34:36,159 --> 00:34:39,159
+measure.
+
+852
+00:34:42,560 --> 00:34:46,240
+Now that we've explored abstract
+
+853
+00:34:44,240 --> 00:34:48,320
+concepts like linear operators and
+
+854
+00:34:46,240 --> 00:34:50,399
+relative linearity, let's ground that
+
+855
+00:34:48,320 --> 00:34:53,119
+understanding with a familiar real world
+
+856
+00:34:50,399 --> 00:34:55,119
+example, the resistor.
+
+857
+00:34:53,119 --> 00:34:57,520
+This slide shows the classic voltage
+
+858
+00:34:55,119 --> 00:35:01,599
+current or V1 relationship for a
+
+859
+00:34:57,520 --> 00:35:05,119
+resistor referred to as Ohm's law.
+
+860
+00:35:01,599 --> 00:35:07,200
+You can see the simple equation V= IIR
+
+861
+00:35:05,119 --> 00:35:09,280
+where V is voltage, I is current, and R
+
+862
+00:35:07,200 --> 00:35:13,440
+is resistance.
+
+863
+00:35:09,280 --> 00:35:15,280
+If we rearrange that, we get I= V / R.
+
+864
+00:35:13,440 --> 00:35:17,680
+What's important here is that this is a
+
+865
+00:35:15,280 --> 00:35:19,200
+linear relationship.
+
+866
+00:35:17,680 --> 00:35:21,760
+If we double the current through the
+
+867
+00:35:19,200 --> 00:35:23,440
+resistor, the voltage doubles too.
+
+868
+00:35:21,760 --> 00:35:25,920
+Similarly, if we double the voltage, the
+
+869
+00:35:23,440 --> 00:35:27,520
+current doubles. The proportionality is
+
+870
+00:35:25,920 --> 00:35:31,200
+direct and consistent. This is a
+
+871
+00:35:27,520 --> 00:35:33,040
+hallmark of a linear system.
+
+872
+00:35:31,200 --> 00:35:34,960
+And as shown on the slide, no matter
+
+873
+00:35:33,040 --> 00:35:36,800
+which form of the equation we use,
+
+874
+00:35:34,960 --> 00:35:38,960
+whether voltage as a function of current
+
+875
+00:35:36,800 --> 00:35:42,320
+or current as a function of voltage, the
+
+876
+00:35:38,960 --> 00:35:44,160
+linearity remains clear. This simple V1
+
+877
+00:35:42,320 --> 00:35:47,960
+relationship is a perfect example of
+
+878
+00:35:44,160 --> 00:35:47,960
+linearity in action.
+
+879
+00:35:51,440 --> 00:35:55,280
+Let's now explore another essential
+
+880
+00:35:53,280 --> 00:35:57,440
+electrical component, the capacitor,
+
+881
+00:35:55,280 --> 00:35:59,920
+which is also a linear system.
+
+882
+00:35:57,440 --> 00:36:02,800
+Capacitors are widely used in imaging
+
+883
+00:35:59,920 --> 00:36:05,119
+equipment from ultrasound devices to MRI
+
+884
+00:36:02,800 --> 00:36:09,680
+systems because of their ability to
+
+885
+00:36:05,119 --> 00:36:11,760
+store and release electrical energy.
+
+886
+00:36:09,680 --> 00:36:14,480
+On this slide, we see a diagram of a
+
+887
+00:36:11,760 --> 00:36:16,960
+capacitor. It consists of two conductive
+
+888
+00:36:14,480 --> 00:36:19,839
+plates labeled as plate A and plate B
+
+889
+00:36:16,960 --> 00:36:21,520
+separated by a dialectric material. We
+
+890
+00:36:19,839 --> 00:36:24,079
+see that this structure combines
+
+891
+00:36:21,520 --> 00:36:26,800
+multiple mini capacitors into one unit
+
+892
+00:36:24,079 --> 00:36:28,720
+which increases the overall capacitance.
+
+893
+00:36:26,800 --> 00:36:30,720
+This kind of design is common in medical
+
+894
+00:36:28,720 --> 00:36:34,400
+imaging hardware where compact reliable
+
+895
+00:36:30,720 --> 00:36:36,320
+energy storage is vital.
+
+896
+00:36:34,400 --> 00:36:38,960
+Now let's focus on the voltage current
+
+897
+00:36:36,320 --> 00:36:40,800
+or Vy relationship that defines how a
+
+898
+00:36:38,960 --> 00:36:42,960
+capacitor behaves in an electrical
+
+899
+00:36:40,800 --> 00:36:45,040
+circuit. We have the mathematical
+
+900
+00:36:42,960 --> 00:36:47,200
+expression for this relationship showing
+
+901
+00:36:45,040 --> 00:36:49,280
+that the voltage across the capacitor
+
+902
+00:36:47,200 --> 00:36:52,320
+depends on the integral of the current
+
+903
+00:36:49,280 --> 00:36:54,240
+over time. In simple terms, the voltage
+
+904
+00:36:52,320 --> 00:36:56,240
+builds up as current flows into the
+
+905
+00:36:54,240 --> 00:36:59,119
+capacitor and accumulates electrical
+
+906
+00:36:56,240 --> 00:37:00,720
+charges.
+
+907
+00:36:59,119 --> 00:37:02,800
+Conversely, the current through the
+
+908
+00:37:00,720 --> 00:37:05,599
+capacitor is proportional to how quickly
+
+909
+00:37:02,800 --> 00:37:07,280
+the voltage changes over time. This
+
+910
+00:37:05,599 --> 00:37:08,880
+characteristic makes capacitors
+
+911
+00:37:07,280 --> 00:37:13,280
+essential for shaping and filtering
+
+912
+00:37:08,880 --> 00:37:15,440
+signals in medical imaging devices.
+
+913
+00:37:13,280 --> 00:37:17,359
+For example, capacitors help stabilize
+
+914
+00:37:15,440 --> 00:37:19,200
+power supplies and smooth out analog
+
+915
+00:37:17,359 --> 00:37:21,920
+signals before they are converted into
+
+916
+00:37:19,200 --> 00:37:24,560
+digital data in imaging systems like CT
+
+917
+00:37:21,920 --> 00:37:26,320
+or MRI scanners. They are one of the
+
+918
+00:37:24,560 --> 00:37:28,480
+many components that ensure medical
+
+919
+00:37:26,320 --> 00:37:30,480
+imaging equipment operates well,
+
+920
+00:37:28,480 --> 00:37:34,280
+supporting the reliable capture of
+
+921
+00:37:30,480 --> 00:37:34,280
+diagnostic images.
+
+922
+00:37:37,920 --> 00:37:42,000
+Let's now turn our attention to another
+
+923
+00:37:39,839 --> 00:37:44,000
+key electrical component, the inductor,
+
+924
+00:37:42,000 --> 00:37:46,640
+which can also be modeled as a linear
+
+925
+00:37:44,000 --> 00:37:48,960
+system.
+
+926
+00:37:46,640 --> 00:37:50,800
+We see a diagram of an inductor, which
+
+927
+00:37:48,960 --> 00:37:52,720
+is made of a coiled wire that generates
+
+928
+00:37:50,800 --> 00:37:54,960
+a magnetic field when current flows
+
+929
+00:37:52,720 --> 00:37:57,040
+through it. The magnetic field lines
+
+930
+00:37:54,960 --> 00:37:58,720
+shown here represent how energy is
+
+931
+00:37:57,040 --> 00:38:01,440
+stored in the magnetic field of the
+
+932
+00:37:58,720 --> 00:38:03,200
+inductor.
+
+933
+00:38:01,440 --> 00:38:05,280
+When it comes to the voltage current
+
+934
+00:38:03,200 --> 00:38:07,520
+relationship, the inductor behaves a
+
+935
+00:38:05,280 --> 00:38:09,440
+little differently from the capacitor.
+
+936
+00:38:07,520 --> 00:38:11,280
+We see on the slide that the voltage
+
+937
+00:38:09,440 --> 00:38:13,040
+across the inductor depends on how
+
+938
+00:38:11,280 --> 00:38:15,760
+quickly the current is changing over
+
+939
+00:38:13,040 --> 00:38:17,839
+time. This means that inductors resist
+
+940
+00:38:15,760 --> 00:38:22,560
+sudden changes in current, helping
+
+941
+00:38:17,839 --> 00:38:24,480
+smooth and stabilize electrical signals.
+
+942
+00:38:22,560 --> 00:38:26,160
+Conversely, we also see that the current
+
+943
+00:38:24,480 --> 00:38:29,040
+through the inductor depends on the
+
+944
+00:38:26,160 --> 00:38:31,280
+integral of the voltage over time. So as
+
+945
+00:38:29,040 --> 00:38:32,960
+voltage is applied the current builds up
+
+946
+00:38:31,280 --> 00:38:35,920
+gradually rather than changing
+
+947
+00:38:32,960 --> 00:38:38,160
+instantly.
+
+948
+00:38:35,920 --> 00:38:40,480
+This behavior makes inductors valuable
+
+949
+00:38:38,160 --> 00:38:43,119
+in medical imaging systems for filtering
+
+950
+00:38:40,480 --> 00:38:45,200
+signals and for managing electromagnetic
+
+951
+00:38:43,119 --> 00:38:47,920
+interference especially in sensitive
+
+952
+00:38:45,200 --> 00:38:50,400
+equipment like MRI machines. Together
+
+953
+00:38:47,920 --> 00:38:52,720
+with capacitors, inductors help ensure
+
+954
+00:38:50,400 --> 00:38:56,599
+that imaging devices produce critical
+
+955
+00:38:52,720 --> 00:38:56,599
+diagnostic information.
+
+956
+00:39:00,160 --> 00:39:04,240
+As we unwrap the foundation of medical
+
+957
+00:39:02,240 --> 00:39:06,560
+imaging, let's look at an important
+
+958
+00:39:04,240 --> 00:39:08,720
+concept that helps explain how imaging
+
+959
+00:39:06,560 --> 00:39:12,480
+systems work reliably. The shift
+
+960
+00:39:08,720 --> 00:39:14,079
+invariant linear system.
+
+961
+00:39:12,480 --> 00:39:16,720
+We see on this slide that a shift
+
+962
+00:39:14,079 --> 00:39:18,640
+invariant system has a special property.
+
+963
+00:39:16,720 --> 00:39:21,119
+If the input signal shifts in time, the
+
+964
+00:39:18,640 --> 00:39:22,800
+output shifts in the same way. In simple
+
+965
+00:39:21,119 --> 00:39:25,040
+terms, the systems response is
+
+966
+00:39:22,800 --> 00:39:27,280
+predictable in a simplistic way. No
+
+967
+00:39:25,040 --> 00:39:31,640
+matter when or where the input happens,
+
+968
+00:39:27,280 --> 00:39:31,640
+the output will occur correspondingly.
+
+969
+00:39:31,920 --> 00:39:35,760
+For example, imagine I take a picture of
+
+970
+00:39:34,079 --> 00:39:38,480
+you here in this room and then I take
+
+971
+00:39:35,760 --> 00:39:40,400
+your picture again in my office. If my
+
+972
+00:39:38,480 --> 00:39:42,800
+camera is shift invariant, your image
+
+973
+00:39:40,400 --> 00:39:44,960
+should look the same in both cases. The
+
+974
+00:39:42,800 --> 00:39:47,440
+system responds consistently even though
+
+975
+00:39:44,960 --> 00:39:49,200
+your location is shifted. This kind of
+
+976
+00:39:47,440 --> 00:39:51,760
+stability is essential for medical
+
+977
+00:39:49,200 --> 00:39:53,839
+imaging systems where we want clear,
+
+978
+00:39:51,760 --> 00:39:55,680
+reliable results. whether we're imaging
+
+979
+00:39:53,839 --> 00:39:58,480
+a patient in this or that imaging
+
+980
+00:39:55,680 --> 00:40:00,320
+center.
+
+981
+00:39:58,480 --> 00:40:02,560
+Mathematically speaking, when the input
+
+982
+00:40:00,320 --> 00:40:05,920
+signal is V of T, the system produces an
+
+983
+00:40:02,560 --> 00:40:08,560
+output W of T. And when the input shifts
+
+984
+00:40:05,920 --> 00:40:10,960
+to V of T minus T tow, the output shifts
+
+985
+00:40:08,560 --> 00:40:13,839
+in the same way becoming W of T minus
+
+986
+00:40:10,960 --> 00:40:15,599
+Tao.
+
+987
+00:40:13,839 --> 00:40:17,920
+This property supports the mathematical
+
+988
+00:40:15,599 --> 00:40:20,000
+tools we'll use like convolution and
+
+989
+00:40:17,920 --> 00:40:22,160
+furier analysis which are key to
+
+990
+00:40:20,000 --> 00:40:26,599
+understanding how images are formed and
+
+991
+00:40:22,160 --> 00:40:26,599
+processed in modern medical imaging.
+
+992
+00:40:30,240 --> 00:40:34,160
+Continuing from our discussion of shift
+
+993
+00:40:32,320 --> 00:40:37,760
+in variance, let's look at another way
+
+994
+00:40:34,160 --> 00:40:39,680
+to think about this important concept.
+
+995
+00:40:37,760 --> 00:40:42,000
+Imagine dropping a stone into a still
+
+996
+00:40:39,680 --> 00:40:44,400
+pond. ripples spread out from the point
+
+997
+00:40:42,000 --> 00:40:46,320
+where the stone lands. Now, if you drop
+
+998
+00:40:44,400 --> 00:40:48,800
+another stone at a different spot, what
+
+999
+00:40:46,320 --> 00:40:50,640
+happens? We see the same ripple pattern,
+
+1000
+00:40:48,800 --> 00:40:52,400
+but this time it's simply shifted to
+
+1001
+00:40:50,640 --> 00:40:55,359
+match the new location where the second
+
+1002
+00:40:52,400 --> 00:40:57,359
+stone landed. The system, the pond in
+
+1003
+00:40:55,359 --> 00:41:01,920
+this case, responds in the consistent
+
+1004
+00:40:57,359 --> 00:41:03,839
+way corresponding to where the input is.
+
+1005
+00:41:01,920 --> 00:41:06,319
+This is a great way to visualize spatial
+
+1006
+00:41:03,839 --> 00:41:08,640
+invariance in a system. Just like with
+
+1007
+00:41:06,319 --> 00:41:10,640
+those ripples, a shift invariant linear
+
+1008
+00:41:08,640 --> 00:41:13,280
+system in medical imaging ensures that
+
+1009
+00:41:10,640 --> 00:41:16,079
+the systems response stays consistent
+
+1010
+00:41:13,280 --> 00:41:18,240
+when the input changes position. This
+
+1011
+00:41:16,079 --> 00:41:20,319
+property helps imaging systems deliver
+
+1012
+00:41:18,240 --> 00:41:21,839
+repeatable and easily interpretable
+
+1013
+00:41:20,319 --> 00:41:23,520
+results, whether we're scanning
+
+1014
+00:41:21,839 --> 00:41:27,880
+different parts of the body or dealing
+
+1015
+00:41:23,520 --> 00:41:27,880
+with shifts in the patient's position.
+
+1016
+00:41:28,400 --> 00:41:31,400
+Continuing
+
+1017
+00:41:31,920 --> 00:41:35,680
+our exploration of shift invariant
+
+1018
+00:41:33,839 --> 00:41:40,079
+systems, let's look at another example
+
+1019
+00:41:35,680 --> 00:41:42,000
+showing how this idea applies over time.
+
+1020
+00:41:40,079 --> 00:41:44,160
+Like our earlier example with spatial
+
+1021
+00:41:42,000 --> 00:41:45,599
+invariance, think of a music player.
+
+1022
+00:41:44,160 --> 00:41:47,359
+Whether you play your favorite song
+
+1023
+00:41:45,599 --> 00:41:49,359
+today, next week, or even a month from
+
+1024
+00:41:47,359 --> 00:41:51,440
+now, the melody and rhythm sound the
+
+1025
+00:41:49,359 --> 00:41:53,280
+same. The system, the music player,
+
+1026
+00:41:51,440 --> 00:41:56,640
+produces the same output just at a
+
+1027
+00:41:53,280 --> 00:41:58,480
+different point in time.
+
+1028
+00:41:56,640 --> 00:42:00,240
+This consistency is what we call shift
+
+1029
+00:41:58,480 --> 00:42:02,880
+invariance in the time domain or
+
+1030
+00:42:00,240 --> 00:42:04,640
+temporal invariance or time invariance.
+
+1031
+00:42:02,880 --> 00:42:06,960
+The system's response doesn't depend on
+
+1032
+00:42:04,640 --> 00:42:08,880
+when the input occurs. Instead, it
+
+1033
+00:42:06,960 --> 00:42:12,280
+remains predictable and reproducible
+
+1034
+00:42:08,880 --> 00:42:12,280
+over time.
+
+1035
+00:42:15,599 --> 00:42:19,839
+As a review of the shift in variability
+
+1036
+00:42:17,760 --> 00:42:22,560
+concept, let us summarize this property
+
+1037
+00:42:19,839 --> 00:42:24,720
+mathematically and visually.
+
+1038
+00:42:22,560 --> 00:42:26,960
+Mathematically shift invariance means
+
+1039
+00:42:24,720 --> 00:42:29,520
+that if the input shifts by some amount
+
+1040
+00:42:26,960 --> 00:42:31,520
+let's say by a distance or time value A,
+
+1041
+00:42:29,520 --> 00:42:33,760
+then the output shifts by exactly the
+
+1042
+00:42:31,520 --> 00:42:35,680
+same amount.
+
+1043
+00:42:33,760 --> 00:42:38,160
+We can visualize this clearly on the
+
+1044
+00:42:35,680 --> 00:42:40,000
+slide. The top example shows an input
+
+1045
+00:42:38,160 --> 00:42:42,319
+signal applied to the system and then
+
+1046
+00:42:40,000 --> 00:42:44,880
+the system produces a certain output.
+
+1047
+00:42:42,319 --> 00:42:47,119
+When that input shifts shown as f of X
+
+1048
+00:42:44,880 --> 00:42:50,640
+minus A, the output shifts in the same
+
+1049
+00:42:47,119 --> 00:42:52,480
+way becoming G of X - A. the systems
+
+1050
+00:42:50,640 --> 00:42:56,240
+operation stays consistent no matter
+
+1051
+00:42:52,480 --> 00:42:58,079
+where or when the input occurs.
+
+1052
+00:42:56,240 --> 00:42:59,599
+As mentioned earlier, this property is
+
+1053
+00:42:58,079 --> 00:43:01,599
+desirable and helps ensure that our
+
+1054
+00:42:59,599 --> 00:43:03,359
+imaging systems respond in a highly
+
+1055
+00:43:01,599 --> 00:43:05,040
+reproducible fashion whether we're
+
+1056
+00:43:03,359 --> 00:43:09,240
+scanning different parts of the body or
+
+1057
+00:43:05,040 --> 00:43:09,240
+performing scans at different times.
+
+1058
+00:43:12,880 --> 00:43:17,040
+Let's finish our discussion on linear
+
+1059
+00:43:14,720 --> 00:43:19,280
+systems by touching briefly on nonlinear
+
+1060
+00:43:17,040 --> 00:43:21,680
+systems. You'll notice the green button
+
+1061
+00:43:19,280 --> 00:43:23,920
+on this slide. This signals that this
+
+1062
+00:43:21,680 --> 00:43:28,000
+topic is good to know but not required
+
+1063
+00:43:23,920 --> 00:43:30,079
+in the exams of this course.
+
+1064
+00:43:28,000 --> 00:43:32,560
+Nonlinear science is a highly complex
+
+1065
+00:43:30,079 --> 00:43:34,640
+field. Unlike linear systems where
+
+1066
+00:43:32,560 --> 00:43:36,640
+solutions can often be relatively easily
+
+1067
+00:43:34,640 --> 00:43:39,040
+found through analytic or numerical
+
+1068
+00:43:36,640 --> 00:43:42,160
+calculations, nonlinear equations are
+
+1069
+00:43:39,040 --> 00:43:44,160
+typically much harder to solve.
+
+1070
+00:43:42,160 --> 00:43:46,880
+In many cases, it's impossible to find
+
+1071
+00:43:44,160 --> 00:43:49,040
+exact solutions. But thanks to modern
+
+1072
+00:43:46,880 --> 00:43:51,119
+computing, we can break these equations
+
+1073
+00:43:49,040 --> 00:43:53,599
+down into smaller parts and solve them
+
+1074
+00:43:51,119 --> 00:43:58,000
+numerically, even if it sometimes takes
+
+1075
+00:43:53,599 --> 00:43:59,839
+significant computing power to do so.
+
+1076
+00:43:58,000 --> 00:44:01,680
+What makes nonlinear systems
+
+1077
+00:43:59,839 --> 00:44:03,280
+particularly fascinating is that they
+
+1078
+00:44:01,680 --> 00:44:05,760
+can produce surprising, often
+
+1079
+00:44:03,280 --> 00:44:09,920
+counterintuitive behaviors. We give
+
+1080
+00:44:05,760 --> 00:44:11,920
+examples here like chaos, solits
+
+1081
+00:44:09,920 --> 00:44:14,960
+or events that seem unpredictable or
+
+1082
+00:44:11,920 --> 00:44:16,960
+puzzling at first glance. And naturally,
+
+1083
+00:44:14,960 --> 00:44:19,119
+anything that challenges our intuition
+
+1084
+00:44:16,960 --> 00:44:22,119
+tends to spark curiosity and deeper
+
+1085
+00:44:19,119 --> 00:44:22,119
+investigation.
+
+1086
+00:44:26,160 --> 00:44:31,440
+One famous example of a nonlinear system
+
+1087
+00:44:28,720 --> 00:44:33,040
+that we give here is the logistic map.
+
+1088
+00:44:31,440 --> 00:44:35,119
+This is a simple but powerful
+
+1089
+00:44:33,040 --> 00:44:37,119
+mathematical model that helps explain
+
+1090
+00:44:35,119 --> 00:44:41,119
+how a population such as a group of
+
+1091
+00:44:37,119 --> 00:44:42,720
+rabbits can change over time.
+
+1092
+00:44:41,119 --> 00:44:45,280
+Let's take a look at the equation on
+
+1093
+00:44:42,720 --> 00:44:47,440
+this slide. It shows that the population
+
+1094
+00:44:45,280 --> 00:44:49,839
+at the next step depends on two things.
+
+1095
+00:44:47,440 --> 00:44:52,480
+The population at the current step and a
+
+1096
+00:44:49,839 --> 00:44:53,839
+growth rate factor R. At the first
+
+1097
+00:44:52,480 --> 00:44:56,079
+glance, the equation looks
+
+1098
+00:44:53,839 --> 00:44:58,079
+straightforward. But because it includes
+
+1099
+00:44:56,079 --> 00:45:00,720
+a nonlinear term, the population
+
+1100
+00:44:58,079 --> 00:45:02,480
+multiplied by 1 minus the population,
+
+1101
+00:45:00,720 --> 00:45:04,400
+the systems behavior can change
+
+1102
+00:45:02,480 --> 00:45:06,960
+dramatically depending on the value of
+
+1103
+00:45:04,400 --> 00:45:09,119
+R.
+
+1104
+00:45:06,960 --> 00:45:11,440
+When the population is small, growth is
+
+1105
+00:45:09,119 --> 00:45:13,280
+nearly linear and predictable. But as
+
+1106
+00:45:11,440 --> 00:45:15,119
+the population grows and starts to
+
+1107
+00:45:13,280 --> 00:45:17,520
+approach the full capability of its
+
+1108
+00:45:15,119 --> 00:45:20,560
+environment, growth slows down since
+
+1109
+00:45:17,520 --> 00:45:22,319
+resources become scarce.
+
+1110
+00:45:20,560 --> 00:45:25,200
+As a result, the population may
+
+1111
+00:45:22,319 --> 00:45:27,599
+stabilize or decline. This simple model
+
+1112
+00:45:25,200 --> 00:45:30,240
+reflects how nature regulates itself and
+
+1113
+00:45:27,599 --> 00:45:32,640
+how complex patterns like stability or
+
+1114
+00:45:30,240 --> 00:45:36,440
+even chaos can emerge from such a simple
+
+1115
+00:45:32,640 --> 00:45:36,440
+nonlinear system.
+
+1116
+00:45:40,079 --> 00:45:44,240
+How could the logistic map reveal
+
+1117
+00:45:41,920 --> 00:45:46,160
+something truly fascinating? Let me
+
+1118
+00:45:44,240 --> 00:45:48,880
+explain further to understand so-called
+
+1119
+00:45:46,160 --> 00:45:50,319
+chaotic behaviors. We give this example
+
+1120
+00:45:48,880 --> 00:45:52,720
+where the population's growth is
+
+1121
+00:45:50,319 --> 00:45:54,720
+simulated in mat lab. The code on the
+
+1122
+00:45:52,720 --> 00:45:56,720
+left sets up the calculation and on the
+
+1123
+00:45:54,720 --> 00:46:00,880
+right we observe the results plotted in
+
+1124
+00:45:56,720 --> 00:46:02,800
+what's called a bifurcation diagram.
+
+1125
+00:46:00,880 --> 00:46:04,640
+What's remarkable is how the systems
+
+1126
+00:46:02,800 --> 00:46:07,599
+behavior changes as the growth rate
+
+1127
+00:46:04,640 --> 00:46:09,599
+increases along the horizontal axis. At
+
+1128
+00:46:07,599 --> 00:46:11,920
+low growth rates, the population,
+
+1129
+00:46:09,599 --> 00:46:15,599
+represented by the vertical axis,
+
+1130
+00:46:11,920 --> 00:46:17,920
+settles into a single stable value.
+
+1131
+00:46:15,599 --> 00:46:20,160
+As the growth rate rises, the population
+
+1132
+00:46:17,920 --> 00:46:22,720
+begins to oscillate between two values,
+
+1133
+00:46:20,160 --> 00:46:24,160
+then four, then many. Eventually, it
+
+1134
+00:46:22,720 --> 00:46:26,560
+enters a state where the behavior
+
+1135
+00:46:24,160 --> 00:46:30,400
+appears random and unpredictable. This
+
+1136
+00:46:26,560 --> 00:46:32,000
+is what we call chaotic behavior.
+
+1137
+00:46:30,400 --> 00:46:34,560
+It's important to note that this is
+
+1138
+00:46:32,000 --> 00:46:36,480
+chaos in a mathematical sense. The
+
+1139
+00:46:34,560 --> 00:46:39,119
+system is fully deterministic. Its
+
+1140
+00:46:36,480 --> 00:46:40,720
+behavior is governed by precise rules.
+
+1141
+00:46:39,119 --> 00:46:42,880
+But because it is so sensitive to
+
+1142
+00:46:40,720 --> 00:46:44,640
+initial conditions, small changes at the
+
+1143
+00:46:42,880 --> 00:46:47,119
+start can lead to dramatically different
+
+1144
+00:46:44,640 --> 00:46:48,720
+outcomes. This example shows the same
+
+1145
+00:46:47,119 --> 00:46:50,480
+principle that helps explain why
+
+1146
+00:46:48,720 --> 00:46:53,480
+long-term weather forecasts can be
+
+1147
+00:46:50,480 --> 00:46:53,480
+unreliable.
+
+1148
+00:46:53,520 --> 00:46:57,599
+While this idea doesn't directly tie to
+
+1149
+00:46:55,520 --> 00:46:59,440
+quantum mechanics, it reminds us that
+
+1150
+00:46:57,599 --> 00:47:01,359
+even in systems ruled by clear
+
+1151
+00:46:59,440 --> 00:47:06,200
+equations, the results can seem random
+
+1152
+00:47:01,359 --> 00:47:06,200
+when nonlinear dynamics are involved.
+
+1153
+00:47:09,680 --> 00:47:13,280
+Let me give you another fascinating
+
+1154
+00:47:11,280 --> 00:47:15,920
+example of a nonlinear system, the
+
+1155
+00:47:13,280 --> 00:47:17,599
+biological neuron. We can see here how a
+
+1156
+00:47:15,920 --> 00:47:20,560
+neuron collects signals through its
+
+1157
+00:47:17,599 --> 00:47:22,400
+branches called dendrites.
+
+1158
+00:47:20,560 --> 00:47:25,200
+These inputs are processed by the cell
+
+1159
+00:47:22,400 --> 00:47:27,040
+body or soma. Small signals on their own
+
+1160
+00:47:25,200 --> 00:47:29,119
+have no effect on the cell status. But
+
+1161
+00:47:27,040 --> 00:47:31,599
+when the combined inputs reach a certain
+
+1162
+00:47:29,119 --> 00:47:33,599
+threshold, the neuron fires. The
+
+1163
+00:47:31,599 --> 00:47:35,599
+activated neuron sends an electrical
+
+1164
+00:47:33,599 --> 00:47:37,200
+impulse down the axon, ultimately
+
+1165
+00:47:35,599 --> 00:47:39,520
+reaching the syninnapse where it
+
+1166
+00:47:37,200 --> 00:47:41,359
+communicates with the next cell. This
+
+1167
+00:47:39,520 --> 00:47:43,359
+thresholding behavior helps the nervous
+
+1168
+00:47:41,359 --> 00:47:47,040
+system filter out noise and respond only
+
+1169
+00:47:43,359 --> 00:47:49,280
+to meaningful stimuli.
+
+1170
+00:47:47,040 --> 00:47:51,599
+Just below the cartoon of a biological
+
+1171
+00:47:49,280 --> 00:47:53,839
+neuron, we see how a biological neuron
+
+1172
+00:47:51,599 --> 00:47:56,319
+is mathematically modeled using an
+
+1173
+00:47:53,839 --> 00:47:58,640
+artificial neuron. Here the inputs are
+
+1174
+00:47:56,319 --> 00:48:00,480
+linearly combined into a weighted sum.
+
+1175
+00:47:58,640 --> 00:48:03,480
+That's the linear part of the artificial
+
+1176
+00:48:00,480 --> 00:48:03,480
+neuron.
+
+1177
+00:48:03,520 --> 00:48:07,280
+Then this sum is passed through a
+
+1178
+00:48:05,119 --> 00:48:09,520
+nonlinear transformation that decides
+
+1179
+00:48:07,280 --> 00:48:11,200
+whether the neuron should fire. This
+
+1180
+00:48:09,520 --> 00:48:12,800
+simple structure forms the basic
+
+1181
+00:48:11,200 --> 00:48:15,119
+building block of artificial neural
+
+1182
+00:48:12,800 --> 00:48:16,880
+networks which are widely used in modern
+
+1183
+00:48:15,119 --> 00:48:18,800
+artificial intelligence research and
+
+1184
+00:48:16,880 --> 00:48:20,720
+increasingly in medical imaging tasks
+
+1185
+00:48:18,800 --> 00:48:23,720
+like image classification and image
+
+1186
+00:48:20,720 --> 00:48:23,720
+reconstruction.
+
+1187
+00:48:27,599 --> 00:48:31,920
+Let's take a look at what happens when
+
+1188
+00:48:29,200 --> 00:48:33,680
+we connect artificial neurons in layers.
+
+1189
+00:48:31,920 --> 00:48:36,160
+When we do this, we create a neural
+
+1190
+00:48:33,680 --> 00:48:37,920
+network. And when we stack many of these
+
+1191
+00:48:36,160 --> 00:48:40,559
+layers together, we build what's called
+
+1192
+00:48:37,920 --> 00:48:42,559
+a deep neural network or DNN. This
+
+1193
+00:48:40,559 --> 00:48:44,240
+structure forms the foundation of modern
+
+1194
+00:48:42,559 --> 00:48:47,920
+deep learning, the mainstream field of
+
+1195
+00:48:44,240 --> 00:48:50,160
+AI and machine learning.
+
+1196
+00:48:47,920 --> 00:48:52,720
+Here we observe how deep neural networks
+
+1197
+00:48:50,160 --> 00:48:54,480
+learn in a hierarchical way. We see in
+
+1198
+00:48:52,720 --> 00:48:56,000
+the diagram that the lower layers are
+
+1199
+00:48:54,480 --> 00:48:58,240
+responsible for detecting simple
+
+1200
+00:48:56,000 --> 00:49:00,800
+features, things like edges, corners, or
+
+1201
+00:48:58,240 --> 00:49:02,559
+basic textures. As we move deeper into
+
+1202
+00:49:00,800 --> 00:49:04,559
+the network, the layers begin to
+
+1203
+00:49:02,559 --> 00:49:06,720
+recognize more complex patterns like
+
+1204
+00:49:04,559 --> 00:49:09,520
+parts of faces and finally an entire
+
+1205
+00:49:06,720 --> 00:49:11,599
+face.
+
+1206
+00:49:09,520 --> 00:49:14,079
+This layered learning allows deep neural
+
+1207
+00:49:11,599 --> 00:49:15,920
+networks to solve real world problems.
+
+1208
+00:49:14,079 --> 00:49:17,839
+Today, they are used in technologies
+
+1209
+00:49:15,920 --> 00:49:20,240
+ranging from facial recognition to
+
+1210
+00:49:17,839 --> 00:49:22,559
+self-driving cars and increasingly in
+
+1211
+00:49:20,240 --> 00:49:24,559
+medical imaging. For example, detect
+
+1212
+00:49:22,559 --> 00:49:28,480
+subtle clinical features that might not
+
+1213
+00:49:24,559 --> 00:49:30,160
+be obvious to the human eye.
+
+1214
+00:49:28,480 --> 00:49:32,720
+It's a powerful example of how
+
+1215
+00:49:30,160 --> 00:49:34,800
+integrating artificial neurons as basic
+
+1216
+00:49:32,720 --> 00:49:36,880
+computing elements can help us tackle
+
+1217
+00:49:34,800 --> 00:49:40,920
+challenges that were once thought to be
+
+1218
+00:49:36,880 --> 00:49:40,920
+beyond the reach of computers.
+
+1219
+00:49:44,559 --> 00:49:47,440
+As we wrap up this lecture, let me
+
+1220
+00:49:46,160 --> 00:49:49,119
+encourage those of you who are
+
+1221
+00:49:47,440 --> 00:49:51,520
+particularly motivated to consider
+
+1222
+00:49:49,119 --> 00:49:53,359
+pursuing a class project. This would be
+
+1223
+00:49:51,520 --> 00:49:54,880
+in addition to the exams and homework
+
+1224
+00:49:53,359 --> 00:49:56,960
+assignments that are integral part of
+
+1225
+00:49:54,880 --> 00:49:58,800
+the course.
+
+1226
+00:49:56,960 --> 00:50:01,680
+for potential class projects. Let me
+
+1227
+00:49:58,800 --> 00:50:03,599
+suggest an exciting direction.
+
+1228
+00:50:01,680 --> 00:50:05,680
+Combining machine learning with medical
+
+1229
+00:50:03,599 --> 00:50:10,079
+imaging, a fast growing area that offers
+
+1230
+00:50:05,680 --> 00:50:11,920
+incredible opportunities for innovation.
+
+1231
+00:50:10,079 --> 00:50:13,839
+If you're curious about this topic, I
+
+1232
+00:50:11,920 --> 00:50:15,760
+recommend reading my perspective article
+
+1233
+00:50:13,839 --> 00:50:18,240
+shown on the slide, which is the first
+
+1234
+00:50:15,760 --> 00:50:21,200
+road map for the emerging field of AI
+
+1235
+00:50:18,240 --> 00:50:24,000
+based tomographic imaging. It discusses
+
+1236
+00:50:21,200 --> 00:50:26,400
+how AI, deep learning, and tomographic
+
+1237
+00:50:24,000 --> 00:50:28,800
+imaging can come together to create new
+
+1238
+00:50:26,400 --> 00:50:31,200
+algorithms for image reconstruction and
+
+1239
+00:50:28,800 --> 00:50:33,200
+analysis.
+
+1240
+00:50:31,200 --> 00:50:34,960
+This is an area where breakthroughs are
+
+1241
+00:50:33,200 --> 00:50:37,280
+happening and your project could be a
+
+1242
+00:50:34,960 --> 00:50:39,200
+chance to do cuttingedge medical imaging
+
+1243
+00:50:37,280 --> 00:50:42,920
+research and potentially produce
+
+1244
+00:50:39,200 --> 00:50:42,920
+publishable results.
+
+1245
+00:50:46,559 --> 00:50:50,800
+If a project doesn't interest you,
+
+1246
+00:50:48,480 --> 00:50:53,119
+that's perfectly fine. You can focus on
+
+1247
+00:50:50,800 --> 00:50:55,359
+the regular course materials, including
+
+1248
+00:50:53,119 --> 00:50:57,760
+lectures, homework, assignments, and
+
+1249
+00:50:55,359 --> 00:50:59,839
+exams. I'll upload today's homework
+
+1250
+00:50:57,760 --> 00:51:02,559
+assignment to our LMS system for you to
+
+1251
+00:50:59,839 --> 00:51:04,400
+download.
+
+1252
+00:51:02,559 --> 00:51:06,880
+Please submit your solutions within one
+
+1253
+00:51:04,400 --> 00:51:09,280
+week. After the deadline, we'll post the
+
+1254
+00:51:06,880 --> 00:51:12,920
+answers for your review. Thank you for
+
+1255
+00:51:09,280 --> 00:51:12,920
+your attention today.
+

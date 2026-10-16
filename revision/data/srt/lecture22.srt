@@ -1,0 +1,7904 @@
+1
+00:00:01,600 --> 00:00:05,040
+Last time we explained to you the
+
+2
+00:00:03,280 --> 00:00:07,120
+physical and mathematical principles for
+
+3
+00:00:05,040 --> 00:00:09,360
+ultrasound imaging.
+
+4
+00:00:07,120 --> 00:00:11,440
+In this lecture we will be more specific
+
+5
+00:00:09,360 --> 00:00:13,679
+about how we can form different kinds of
+
+6
+00:00:11,440 --> 00:00:15,599
+ultrasound images.
+
+7
+00:00:13,679 --> 00:00:17,760
+We're moving from principles to practice
+
+8
+00:00:15,599 --> 00:00:19,279
+how we send sound, receive echoes and
+
+9
+00:00:17,760 --> 00:00:24,119
+turn those echoes into the different
+
+10
+00:00:19,279 --> 00:00:24,119
+image types for various clinical tasks.
+
+11
+00:00:25,519 --> 00:00:30,160
+I feel quite good today. Moving into the
+
+12
+00:00:27,760 --> 00:00:31,840
+second part of ultrasound imaging. After
+
+13
+00:00:30,160 --> 00:00:34,320
+this lecture, we'll teach the last
+
+14
+00:00:31,840 --> 00:00:36,000
+imaging modality, optical imaging, in
+
+15
+00:00:34,320 --> 00:00:37,760
+one lecture.
+
+16
+00:00:36,000 --> 00:00:39,760
+Now, we'll follow the green textbook
+
+17
+00:00:37,760 --> 00:00:41,520
+fairly closely. I strongly recommend
+
+18
+00:00:39,760 --> 00:00:45,040
+that you read the chapter on ultrasound
+
+19
+00:00:41,520 --> 00:00:46,719
+imaging. It's about 23 pages long. If
+
+20
+00:00:45,040 --> 00:00:48,640
+you read through the chapter carefully,
+
+21
+00:00:46,719 --> 00:00:50,719
+you'll have a very good understanding of
+
+22
+00:00:48,640 --> 00:00:52,800
+everything we're covering. I encourage
+
+23
+00:00:50,719 --> 00:00:54,480
+you again to review or re-review that
+
+24
+00:00:52,800 --> 00:00:58,079
+chapter because it will really help you
+
+25
+00:00:54,480 --> 00:00:58,079
+master today's lecture.
+
+26
+00:00:59,760 --> 00:01:04,080
+So here I'm explaining the key points
+
+27
+00:01:02,079 --> 00:01:06,240
+the way I think helps you summarize what
+
+28
+00:01:04,080 --> 00:01:08,240
+really matters. But remember, you still
+
+29
+00:01:06,240 --> 00:01:09,840
+need to read the textbook. It's not that
+
+30
+00:01:08,240 --> 00:01:12,479
+you can just sit back, listen to my
+
+31
+00:01:09,840 --> 00:01:13,840
+talk, and skip the reading.
+
+32
+00:01:12,479 --> 00:01:15,760
+No, you really have to read the
+
+33
+00:01:13,840 --> 00:01:18,000
+textbook. That's how you build a good
+
+34
+00:01:15,760 --> 00:01:19,439
+memory and a solid foundation. Two
+
+35
+00:01:18,000 --> 00:01:21,119
+ultrasound imaging lectures in a
+
+36
+00:01:19,439 --> 00:01:23,119
+classroom is not enough if you only
+
+37
+00:01:21,119 --> 00:01:24,799
+listen passively.
+
+38
+00:01:23,119 --> 00:01:26,720
+What I'm giving you here is a general
+
+39
+00:01:24,799 --> 00:01:29,119
+yet quick description of ultrasound
+
+40
+00:01:26,720 --> 00:01:31,439
+imaging methods and specifically how we
+
+41
+00:01:29,119 --> 00:01:34,079
+actually form images.
+
+42
+00:01:31,439 --> 00:01:36,560
+Now this topic can be divided into two
+
+43
+00:01:34,079 --> 00:01:38,560
+main parts. The first part is about
+
+44
+00:01:36,560 --> 00:01:40,479
+imaging modes. We'll talk about
+
+45
+00:01:38,560 --> 00:01:43,680
+different types of ultrasound imaging
+
+46
+00:01:40,479 --> 00:01:46,079
+modes. Basically a mode, B mode, C mode,
+
+47
+00:01:43,680 --> 00:01:50,000
+and M mode. Sometimes also called I
+
+48
+00:01:46,079 --> 00:01:52,079
+mode. What do these mean?
+
+49
+00:01:50,000 --> 00:01:53,759
+Each mode represents a different way of
+
+50
+00:01:52,079 --> 00:01:56,079
+collecting and displaying ultrasound
+
+51
+00:01:53,759 --> 00:01:57,920
+data. There are multiple ideas behind
+
+52
+00:01:56,079 --> 00:01:59,840
+them. And one very important concept
+
+53
+00:01:57,920 --> 00:02:01,920
+that the textbook doesn't explain in
+
+54
+00:01:59,840 --> 00:02:04,960
+detail, but I believe you really need to
+
+55
+00:02:01,920 --> 00:02:06,640
+know is called Hygen's principle.
+
+56
+00:02:04,960 --> 00:02:08,800
+I checked the pronunciation. It's
+
+57
+00:02:06,640 --> 00:02:11,280
+Hygens's principle. This is a very
+
+58
+00:02:08,800 --> 00:02:12,879
+important physical idea.
+
+59
+00:02:11,280 --> 00:02:14,560
+Understanding this principle will give
+
+60
+00:02:12,879 --> 00:02:16,560
+you a much deeper grasp of how
+
+61
+00:02:14,560 --> 00:02:18,800
+arraybased scanning and beam forming
+
+62
+00:02:16,560 --> 00:02:20,640
+work. It shows how you can focus
+
+63
+00:02:18,800 --> 00:02:22,720
+ultrasound beams at different depths and
+
+64
+00:02:20,640 --> 00:02:24,959
+times, giving you tremendous flexibility
+
+65
+00:02:22,720 --> 00:02:26,720
+in image formation.
+
+66
+00:02:24,959 --> 00:02:29,200
+In the second part, we'll move on to
+
+67
+00:02:26,720 --> 00:02:31,680
+Doppler imaging. This part deals with
+
+68
+00:02:29,200 --> 00:02:33,599
+dynamic image formation. It allows us to
+
+69
+00:02:31,680 --> 00:02:35,920
+measure both the speed and the direction
+
+70
+00:02:33,599 --> 00:02:38,640
+of motion such as blood flow in vessels
+
+71
+00:02:35,920 --> 00:02:40,640
+or motion of the heart chambers.
+
+72
+00:02:38,640 --> 00:02:42,400
+Doppler imaging can be implemented in
+
+73
+00:02:40,640 --> 00:02:44,160
+several ways. You can use continuous
+
+74
+00:02:42,400 --> 00:02:46,319
+ultrasound waves or you can send out
+
+75
+00:02:44,160 --> 00:02:48,640
+sequences of pulses. It's a very
+
+76
+00:02:46,319 --> 00:02:50,879
+important imaging mode.
+
+77
+00:02:48,640 --> 00:02:52,959
+We'll also discuss echo correlation and
+
+78
+00:02:50,879 --> 00:02:54,720
+color Doppler. All these topics are
+
+79
+00:02:52,959 --> 00:02:56,480
+explained clearly in the textbook. So,
+
+80
+00:02:54,720 --> 00:02:59,120
+please read that section carefully to
+
+81
+00:02:56,480 --> 00:03:00,800
+strengthen your understanding.
+
+82
+00:02:59,120 --> 00:03:02,800
+Finally, we'll look briefly at image
+
+83
+00:03:00,800 --> 00:03:04,239
+artifacts and at some new things. This
+
+84
+00:03:02,800 --> 00:03:06,400
+last part is more for fun and
+
+85
+00:03:04,239 --> 00:03:09,200
+inspiration. We won't go into all the
+
+86
+00:03:06,400 --> 00:03:10,959
+advanced new ideas in detail.
+
+87
+00:03:09,200 --> 00:03:12,879
+The first three parts, the imaging
+
+88
+00:03:10,959 --> 00:03:15,120
+modes, Hygen's principle, and Doppler
+
+89
+00:03:12,879 --> 00:03:17,360
+imaging are what you'll be tested on. So
+
+90
+00:03:15,120 --> 00:03:20,840
+let's begin by asking what exactly is
+
+91
+00:03:17,360 --> 00:03:20,840
+the A mode.
+
+92
+00:03:23,040 --> 00:03:27,599
+Let us talk about different ultrasound
+
+93
+00:03:24,879 --> 00:03:30,080
+imaging modes. First the A mode imaging
+
+94
+00:03:27,599 --> 00:03:33,040
+a means amplitude. And we have a few
+
+95
+00:03:30,080 --> 00:03:34,799
+movies to show you. Wait for a while
+
+96
+00:03:33,040 --> 00:03:36,400
+because when I show movies I need to
+
+97
+00:03:34,799 --> 00:03:38,480
+quit this mode and change things a
+
+98
+00:03:36,400 --> 00:03:40,400
+little bit. It's not so easy. But let me
+
+99
+00:03:38,480 --> 00:03:43,120
+first give you the rough ideas about
+
+100
+00:03:40,400 --> 00:03:45,040
+different ultrasound imaging modes. A
+
+101
+00:03:43,120 --> 00:03:47,040
+for amplitude.
+
+102
+00:03:45,040 --> 00:03:49,120
+You send a pulse. Send a pulse into
+
+103
+00:03:47,040 --> 00:03:50,879
+biological tissue. The pulse will
+
+104
+00:03:49,120 --> 00:03:52,879
+propagate into the tissue after the
+
+105
+00:03:50,879 --> 00:03:56,239
+machine layer I accidentally introduced
+
+106
+00:03:52,879 --> 00:03:58,000
+to you last time. The idea is that the
+
+107
+00:03:56,239 --> 00:03:59,680
+ultrasound energy comes into the body
+
+108
+00:03:58,000 --> 00:04:01,680
+and hits certain scatterers or
+
+109
+00:03:59,680 --> 00:04:04,000
+boundaries and part of the energy will
+
+110
+00:04:01,680 --> 00:04:05,920
+be reflected. So it keeps coming back.
+
+111
+00:04:04,000 --> 00:04:08,239
+You have internal structures. Acoustic
+
+112
+00:04:05,920 --> 00:04:11,040
+states can introduce inhomogeneity. They
+
+113
+00:04:08,239 --> 00:04:13,120
+keep reflecting energy back.
+
+114
+00:04:11,040 --> 00:04:15,280
+As the main energy goes into biological
+
+115
+00:04:13,120 --> 00:04:18,000
+tissue, the ultrasound energy intensity
+
+116
+00:04:15,280 --> 00:04:19,919
+or flux will weaken and weaken. Partial
+
+117
+00:04:18,000 --> 00:04:21,600
+energy comes back while the wave goes
+
+118
+00:04:19,919 --> 00:04:23,680
+deeper.
+
+119
+00:04:21,600 --> 00:04:25,759
+The energy is also subject to scattering
+
+120
+00:04:23,680 --> 00:04:28,479
+and absorption.
+
+121
+00:04:25,759 --> 00:04:30,400
+So this is a complicated process, but
+
+122
+00:04:28,479 --> 00:04:32,639
+basically you have energy that keeps
+
+123
+00:04:30,400 --> 00:04:34,479
+going and keeps sending echoes back.
+
+124
+00:04:32,639 --> 00:04:37,360
+This will be shown graphically in a
+
+125
+00:04:34,479 --> 00:04:39,600
+video I will show you in a moment.
+
+126
+00:04:37,360 --> 00:04:41,759
+This is not like X-ray or gamma imaging
+
+127
+00:04:39,600 --> 00:04:43,840
+where the beam goes through them. With
+
+128
+00:04:41,759 --> 00:04:46,479
+ultrasound imaging, most likely it goes
+
+129
+00:04:43,840 --> 00:04:49,280
+on a round trip. You send energy in and
+
+130
+00:04:46,479 --> 00:04:51,680
+it comes back at different times.
+
+131
+00:04:49,280 --> 00:04:54,400
+Two times distance equals speed times
+
+132
+00:04:51,680 --> 00:04:56,080
+time. So 2x distance sex time. And
+
+133
+00:04:54,400 --> 00:04:58,160
+remember CT can be different for
+
+134
+00:04:56,080 --> 00:05:00,479
+different tissues. Anyway, this is one
+
+135
+00:04:58,160 --> 00:05:04,280
+thing and I owe you that movie videotape
+
+136
+00:05:00,479 --> 00:05:04,280
+coming in just a moment.
+
+137
+00:05:05,440 --> 00:05:10,160
+Now let's move on to the second one. B
+
+138
+00:05:07,520 --> 00:05:12,800
+mode. B stands for brightness. That's
+
+139
+00:05:10,160 --> 00:05:15,600
+the key word to remember here. Bode is a
+
+140
+00:05:12,800 --> 00:05:17,600
+very powerful imaging technique.
+
+141
+00:05:15,600 --> 00:05:19,840
+You can think of it as an extension of A
+
+142
+00:05:17,600 --> 00:05:22,000
+mode. Instead of a single amplitude
+
+143
+00:05:19,840 --> 00:05:25,280
+trace, you're now using multiple A mode
+
+144
+00:05:22,000 --> 00:05:27,840
+scans to create a two-dimensional image.
+
+145
+00:05:25,280 --> 00:05:30,320
+Here's how it works. In A mode, you send
+
+146
+00:05:27,840 --> 00:05:32,160
+one ultrasound pulse into the tissue and
+
+147
+00:05:30,320 --> 00:05:34,560
+receive echoes from a single line of
+
+148
+00:05:32,160 --> 00:05:37,600
+depth. In B mode, you repeat that
+
+149
+00:05:34,560 --> 00:05:40,000
+process at many different positions.
+
+150
+00:05:37,600 --> 00:05:42,080
+You scan line by line. One A mode here,
+
+151
+00:05:40,000 --> 00:05:43,840
+another next to it, and so on. By
+
+152
+00:05:42,080 --> 00:05:45,840
+combining all these one-dimensional
+
+153
+00:05:43,840 --> 00:05:48,400
+signals, you form a two-dimensional
+
+154
+00:05:45,840 --> 00:05:50,560
+image that shows amplitude or intensity
+
+155
+00:05:48,400 --> 00:05:52,639
+as brightness.
+
+156
+00:05:50,560 --> 00:05:54,240
+So, what you finally get is a picture,
+
+157
+00:05:52,639 --> 00:05:56,000
+an intensity map of the internal
+
+158
+00:05:54,240 --> 00:05:57,840
+structures.
+
+159
+00:05:56,000 --> 00:05:59,919
+You're not limited to scanning straight
+
+160
+00:05:57,840 --> 00:06:02,080
+parallel lines either. Just like in
+
+161
+00:05:59,919 --> 00:06:04,080
+X-ray CT, you can use a fan beam
+
+162
+00:06:02,080 --> 00:06:06,000
+geometry. Instead of sending one beam
+
+163
+00:06:04,080 --> 00:06:09,199
+directly forward, the transducer sweeps
+
+164
+00:06:06,000 --> 00:06:10,960
+across an angle covering a larger area.
+
+165
+00:06:09,199 --> 00:06:13,280
+This sweeping motion allows you to
+
+166
+00:06:10,960 --> 00:06:15,120
+reconstruct a full cross-sectional view
+
+167
+00:06:13,280 --> 00:06:16,720
+of the tissue. I'll show you another
+
+168
+00:06:15,120 --> 00:06:19,600
+short movie clip to give you a better
+
+169
+00:06:16,720 --> 00:06:21,680
+visual sense of this process.
+
+170
+00:06:19,600 --> 00:06:24,479
+Now, let's look at the movies. First,
+
+171
+00:06:21,680 --> 00:06:26,479
+you see the A mode here. Look carefully.
+
+172
+00:06:24,479 --> 00:06:28,240
+The pulse on the right is the ultrasound
+
+173
+00:06:26,479 --> 00:06:30,400
+wave being transmitted into the
+
+174
+00:06:28,240 --> 00:06:32,479
+biological tissue.
+
+175
+00:06:30,400 --> 00:06:34,240
+The blue dots represent back scattered
+
+176
+00:06:32,479 --> 00:06:36,800
+echoes, reflections from different
+
+177
+00:06:34,240 --> 00:06:38,880
+structures inside the tissue.
+
+178
+00:06:36,800 --> 00:06:41,120
+Notice that the same transducer both
+
+179
+00:06:38,880 --> 00:06:43,120
+sends and receives the signal. So when
+
+180
+00:06:41,120 --> 00:06:46,160
+the pulse goes out, the transducer then
+
+181
+00:06:43,120 --> 00:06:48,160
+listens for the returning echoes.
+
+182
+00:06:46,160 --> 00:06:50,160
+Let's play that again. Watch the blue
+
+183
+00:06:48,160 --> 00:06:52,560
+dots. Those are the echoes. You can see
+
+184
+00:06:50,160 --> 00:06:54,639
+how they appear as small reflections.
+
+185
+00:06:52,560 --> 00:06:56,319
+The tail of the pulse gets weaker as it
+
+186
+00:06:54,639 --> 00:06:58,720
+travels deeper. That's where you receive
+
+187
+00:06:56,319 --> 00:07:00,800
+the last few echoes. This gives you a
+
+188
+00:06:58,720 --> 00:07:03,440
+one-dimensional signal profile, which is
+
+189
+00:07:00,800 --> 00:07:05,520
+what we call a mode.
+
+190
+00:07:03,440 --> 00:07:07,360
+Now look at the next one. This is B mode
+
+191
+00:07:05,520 --> 00:07:10,000
+scanning. Each line in the image
+
+192
+00:07:07,360 --> 00:07:12,240
+corresponds to one A mode scan. When you
+
+193
+00:07:10,000 --> 00:07:14,080
+stack many A mode scans side by side,
+
+194
+00:07:12,240 --> 00:07:15,599
+you form a two-dimensional brightness
+
+195
+00:07:14,080 --> 00:07:18,000
+image.
+
+196
+00:07:15,599 --> 00:07:20,000
+This example shows a phantom scan. You
+
+197
+00:07:18,000 --> 00:07:23,280
+can see the B mode image is not as
+
+198
+00:07:20,000 --> 00:07:25,039
+crystal clear as a CT or MRI image.
+
+199
+00:07:23,280 --> 00:07:27,039
+There are speckles, some noise, and
+
+200
+00:07:25,039 --> 00:07:28,639
+scattering effects, but you can still
+
+201
+00:07:27,039 --> 00:07:30,240
+recognize the major anatomical
+
+202
+00:07:28,639 --> 00:07:32,000
+structures.
+
+203
+00:07:30,240 --> 00:07:34,080
+Ultrasound transducers are cost
+
+204
+00:07:32,000 --> 00:07:35,919
+effective, small, and compact. That's
+
+205
+00:07:34,080 --> 00:07:37,680
+one of their biggest advantages. They
+
+206
+00:07:35,919 --> 00:07:40,240
+can operate at high speed, producing
+
+207
+00:07:37,680 --> 00:07:42,080
+real-time imaging. That's Bode scanning.
+
+208
+00:07:40,240 --> 00:07:45,720
+Simple, efficient, and very practical
+
+209
+00:07:42,080 --> 00:07:45,720
+for clinical use.
+
+210
+00:07:47,039 --> 00:07:51,599
+All right, let's move on. So, we've
+
+211
+00:07:49,280 --> 00:07:54,080
+talked about A mode and B mode. Now, we
+
+212
+00:07:51,599 --> 00:07:56,720
+come to the next one, M mode. The letter
+
+213
+00:07:54,080 --> 00:07:58,960
+M stands for motion.
+
+214
+00:07:56,720 --> 00:08:01,199
+M mode is very similar to A mode, but
+
+215
+00:07:58,960 --> 00:08:02,960
+with one important difference. In A
+
+216
+00:08:01,199 --> 00:08:06,240
+mode, you send a pulse and get one
+
+217
+00:08:02,960 --> 00:08:09,360
+amplitude profile at one point in time.
+
+218
+00:08:06,240 --> 00:08:11,120
+In B mode, you scan across space, one A
+
+219
+00:08:09,360 --> 00:08:12,960
+mode line after another. So the
+
+220
+00:08:11,120 --> 00:08:15,520
+difference between two A mode profiles
+
+221
+00:08:12,960 --> 00:08:16,960
+represents a change in spatial location.
+
+222
+00:08:15,520 --> 00:08:20,240
+You're scanning across different
+
+223
+00:08:16,960 --> 00:08:22,479
+positions or angles to build an image.
+
+224
+00:08:20,240 --> 00:08:24,560
+In M mode, however, you stay at the same
+
+225
+00:08:22,479 --> 00:08:26,639
+location, the same angle, and you
+
+226
+00:08:24,560 --> 00:08:29,199
+repeatedly collect ultrasound signals
+
+227
+00:08:26,639 --> 00:08:32,320
+over time. So instead of scanning across
+
+228
+00:08:29,199 --> 00:08:34,000
+space, you're scanning across time.
+
+229
+00:08:32,320 --> 00:08:35,839
+What changes here are the internal
+
+230
+00:08:34,000 --> 00:08:38,719
+structures that move, like the walls of
+
+231
+00:08:35,839 --> 00:08:40,719
+a vessel or a heart chamber.
+
+232
+00:08:38,719 --> 00:08:42,479
+For example, imagine selecting a region
+
+233
+00:08:40,719 --> 00:08:44,480
+of interest, such as part of the heart
+
+234
+00:08:42,479 --> 00:08:46,560
+wall. As the heartbeats, that wall
+
+235
+00:08:44,480 --> 00:08:48,320
+expands and contracts. Even though the
+
+236
+00:08:46,560 --> 00:08:50,160
+probe stays fixed, the echoes you
+
+237
+00:08:48,320 --> 00:08:53,040
+receive from that region change over
+
+238
+00:08:50,160 --> 00:08:54,880
+time. Each A mode measurement gives you
+
+239
+00:08:53,040 --> 00:08:56,880
+a one-dimensional profile, but now
+
+240
+00:08:54,880 --> 00:08:59,120
+because of motion, those profiles vary
+
+241
+00:08:56,880 --> 00:09:01,120
+with every pulse. Sometimes the wall
+
+242
+00:08:59,120 --> 00:09:04,000
+moves closer to the transducer, other
+
+243
+00:09:01,120 --> 00:09:05,760
+times it moves away. If you keep
+
+244
+00:09:04,000 --> 00:09:08,000
+recording these signals, you can build a
+
+245
+00:09:05,760 --> 00:09:10,160
+motion profile. You can still display it
+
+246
+00:09:08,000 --> 00:09:12,240
+as a two-dimensional image. The vertical
+
+247
+00:09:10,160 --> 00:09:14,640
+axis represents depth just like a
+
+248
+00:09:12,240 --> 00:09:16,800
+typical a mode and the horizontal axis
+
+249
+00:09:14,640 --> 00:09:18,560
+represents time.
+
+250
+00:09:16,800 --> 00:09:20,800
+The result is a real-time record of
+
+251
+00:09:18,560 --> 00:09:23,920
+motion. This is what we call motion mode
+
+252
+00:09:20,800 --> 00:09:25,600
+or M mode. It's especially useful for
+
+253
+00:09:23,920 --> 00:09:27,360
+studying moving organs such as the
+
+254
+00:09:25,600 --> 00:09:29,600
+beating heart where you can visualize
+
+255
+00:09:27,360 --> 00:09:34,040
+the rhythmic motion of cardiac walls and
+
+256
+00:09:29,600 --> 00:09:34,040
+other dynamic structures over time.
+
+257
+00:09:35,200 --> 00:09:40,160
+So the last one and I would say is C
+
+258
+00:09:37,519 --> 00:09:42,160
+modeold C for coronal image. You know
+
+259
+00:09:40,160 --> 00:09:44,480
+three-dimensionally if you cut a patient
+
+260
+00:09:42,160 --> 00:09:47,200
+with a virtual plane this way we usually
+
+261
+00:09:44,480 --> 00:09:49,200
+call that the transverse plane.
+
+262
+00:09:47,200 --> 00:09:51,440
+If you cut the patient this way you call
+
+263
+00:09:49,200 --> 00:09:53,360
+it sagittal. But if you cut the patient
+
+264
+00:09:51,440 --> 00:09:55,040
+this way think I am facing you and you
+
+265
+00:09:53,360 --> 00:09:58,080
+cut like this. That is called the
+
+266
+00:09:55,040 --> 00:10:00,720
+coronal image. So you have three views.
+
+267
+00:09:58,080 --> 00:10:02,320
+I will show some images.
+
+268
+00:10:00,720 --> 00:10:04,320
+You do a mode imaging along this
+
+269
+00:10:02,320 --> 00:10:06,160
+direction. You have all the information
+
+270
+00:10:04,320 --> 00:10:08,240
+and the spatial dimension along this
+
+271
+00:10:06,160 --> 00:10:10,320
+direction is your coordinate system just
+
+272
+00:10:08,240 --> 00:10:12,399
+one axis.
+
+273
+00:10:10,320 --> 00:10:14,079
+But you can do some echogated imaging.
+
+274
+00:10:12,399 --> 00:10:15,760
+You send the pulse in that direction.
+
+275
+00:10:14,079 --> 00:10:17,760
+You wait a certain amount of time. Then
+
+276
+00:10:15,760 --> 00:10:20,240
+you see within a small time window if
+
+277
+00:10:17,760 --> 00:10:23,279
+the echo comes back given the delay time
+
+278
+00:10:20,240 --> 00:10:25,519
+you really target a specific depth.
+
+279
+00:10:23,279 --> 00:10:27,440
+So from this one line you roughly
+
+280
+00:10:25,519 --> 00:10:29,279
+calculate the ultrasound goes a round
+
+281
+00:10:27,440 --> 00:10:31,600
+trip from the transducer to the plane
+
+282
+00:10:29,279 --> 00:10:34,240
+and back. Suppose this roundtrip time is
+
+283
+00:10:31,600 --> 00:10:36,560
+for example 100 micros. Let's say 100
+
+284
+00:10:34,240 --> 00:10:39,600
+milliseconds in my example. You only see
+
+285
+00:10:36,560 --> 00:10:42,000
+the amplitude at 100 microsconds.
+
+286
+00:10:39,600 --> 00:10:44,399
+That is the roundrip echo time. The echo
+
+287
+00:10:42,000 --> 00:10:46,720
+goes here hits the plane comes back. So
+
+288
+00:10:44,399 --> 00:10:49,200
+100 micros
+
+289
+00:10:46,720 --> 00:10:51,600
+this 100 microscond sample is reported
+
+290
+00:10:49,200 --> 00:10:53,519
+as your pixel value. Then on this
+
+291
+00:10:51,600 --> 00:10:56,800
+two-dimensional coronal plane, you keep
+
+292
+00:10:53,519 --> 00:10:58,560
+scanning line by line, pixel by pixel.
+
+293
+00:10:56,800 --> 00:11:01,120
+You make sure the roundtrip time is
+
+294
+00:10:58,560 --> 00:11:03,279
+targeted to that depth position. You put
+
+295
+00:11:01,120 --> 00:11:05,920
+all these amplitude values together and
+
+296
+00:11:03,279 --> 00:11:08,640
+you form a two-dimensional image. That
+
+297
+00:11:05,920 --> 00:11:10,480
+is the so-called coronal image.
+
+298
+00:11:08,640 --> 00:11:12,399
+Here is an example. You have a hand
+
+299
+00:11:10,480 --> 00:11:14,640
+here. You put the ultrasound into the
+
+300
+00:11:12,399 --> 00:11:16,720
+hand and you record the echoes. With all
+
+301
+00:11:14,640 --> 00:11:18,560
+the timing coordinated right, you form
+
+302
+00:11:16,720 --> 00:11:20,800
+an internal image that cuts through the
+
+303
+00:11:18,560 --> 00:11:22,480
+hand. You can see certain pieces of
+
+304
+00:11:20,800 --> 00:11:24,079
+bone.
+
+305
+00:11:22,480 --> 00:11:26,240
+There is some terminology I just
+
+306
+00:11:24,079 --> 00:11:27,920
+learned. Metacarpals. These light blue
+
+307
+00:11:26,240 --> 00:11:30,320
+bones. You can see these light blue
+
+308
+00:11:27,920 --> 00:11:32,480
+bones. The transducer is operated in C
+
+309
+00:11:30,320 --> 00:11:35,279
+mode. Here there are some good ideas.
+
+310
+00:11:32,480 --> 00:11:36,959
+Details are in this article.
+
+311
+00:11:35,279 --> 00:11:39,200
+You have the image. The image is really
+
+312
+00:11:36,959 --> 00:11:41,440
+formed here. Then the image in a pixel
+
+313
+00:11:39,200 --> 00:11:44,240
+here is reflected by a halfsed mirror
+
+314
+00:11:41,440 --> 00:11:46,079
+and viewed by the reader or doctor.
+
+315
+00:11:44,240 --> 00:11:48,320
+Through this half-sed mirror, you see
+
+316
+00:11:46,079 --> 00:11:50,160
+the patient's body and the image you see
+
+317
+00:11:48,320 --> 00:11:52,640
+is really superimposed onto the
+
+318
+00:11:50,160 --> 00:11:54,320
+patient's internal structure.
+
+319
+00:11:52,640 --> 00:11:56,079
+It gives you the illusion that you see
+
+320
+00:11:54,320 --> 00:11:58,000
+into the patient directly. You see the
+
+321
+00:11:56,079 --> 00:11:59,839
+beating heart and you can maybe use this
+
+322
+00:11:58,000 --> 00:12:02,800
+as guidance to put the catheter there,
+
+323
+00:11:59,839 --> 00:12:04,880
+make a blood vessel open wider.
+
+324
+00:12:02,800 --> 00:12:06,880
+This is a good idea. It kind of works
+
+325
+00:12:04,880 --> 00:12:08,639
+with augmented reality things and it's a
+
+326
+00:12:06,880 --> 00:12:10,399
+good idea.
+
+327
+00:12:08,639 --> 00:12:12,800
+But the C mode has nothing to do with
+
+328
+00:12:10,399 --> 00:12:14,959
+this viewer. Code can be understood only
+
+329
+00:12:12,800 --> 00:12:17,040
+with this subfigure. So that's the idea
+
+330
+00:12:14,959 --> 00:12:19,120
+and ultrasound imaging so far is
+
+331
+00:12:17,040 --> 00:12:21,920
+straightforward. I have explained to you
+
+332
+00:12:19,120 --> 00:12:23,839
+A B C M. So you see later a word you
+
+333
+00:12:21,920 --> 00:12:26,240
+need to remember.
+
+334
+00:12:23,839 --> 00:12:28,000
+Okay, this is a single crystalbased
+
+335
+00:12:26,240 --> 00:12:30,880
+transducer that can be used to do all
+
+336
+00:12:28,000 --> 00:12:33,040
+these kinds of things. But when you want
+
+337
+00:12:30,880 --> 00:12:35,360
+to form two-dimensional images, you need
+
+338
+00:12:33,040 --> 00:12:38,560
+an easy scan or you need to do multiple
+
+339
+00:12:35,360 --> 00:12:40,560
+times. So you have a time dimension.
+
+340
+00:12:38,560 --> 00:12:42,399
+With the time dimension with a single
+
+341
+00:12:40,560 --> 00:12:44,639
+transducer, you can still form
+
+342
+00:12:42,399 --> 00:12:46,480
+two-dimensional images. Certainly, this
+
+343
+00:12:44,639 --> 00:12:48,560
+is quite a lot like pencil beam X-ray
+
+344
+00:12:46,480 --> 00:12:50,320
+imaging. In the first generation, you
+
+345
+00:12:48,560 --> 00:12:52,959
+have a pencil beam of X-rays and a
+
+346
+00:12:50,320 --> 00:12:56,360
+single detector. You can do a scan that
+
+347
+00:12:52,959 --> 00:12:56,360
+is very inefficient.
+
+348
+00:12:57,920 --> 00:13:02,160
+So that's why we say we have to use
+
+349
+00:12:59,760 --> 00:13:03,760
+ultrasound transducer arrays. This will
+
+350
+00:13:02,160 --> 00:13:06,000
+allow you to do parallel data
+
+351
+00:13:03,760 --> 00:13:08,320
+acquisition. Parallel data acquisition
+
+352
+00:13:06,000 --> 00:13:10,720
+is always desirable.
+
+353
+00:13:08,320 --> 00:13:12,800
+And in the case of clinical I said chyal
+
+354
+00:13:10,720 --> 00:13:14,880
+scenarios faster imaging speed will
+
+355
+00:13:12,800 --> 00:13:18,800
+reduce most artifacts and improve the
+
+356
+00:13:14,880 --> 00:13:20,639
+report. So a lot of good points to make.
+
+357
+00:13:18,800 --> 00:13:23,279
+There are many types of ultrasound
+
+358
+00:13:20,639 --> 00:13:25,360
+transducers. You have a linear array.
+
+359
+00:13:23,279 --> 00:13:28,160
+You can use it in different ways. You
+
+360
+00:13:25,360 --> 00:13:31,120
+have this linear phased array
+
+361
+00:13:28,160 --> 00:13:32,720
+and there is a 1.5D array. So this is a
+
+362
+00:13:31,120 --> 00:13:34,959
+one-dimensional array but you have
+
+363
+00:13:32,720 --> 00:13:37,040
+several one-dimensional rows. The number
+
+364
+00:13:34,959 --> 00:13:39,279
+is not too big. If the number is very
+
+365
+00:13:37,040 --> 00:13:43,040
+big, so the X and Y directions are kind
+
+366
+00:13:39,279 --> 00:13:45,360
+of symmetric, you have a truly 2D array.
+
+367
+00:13:43,040 --> 00:13:47,600
+Phased means each ultrasound pixel, each
+
+368
+00:13:45,360 --> 00:13:49,519
+element does not fire in the same way.
+
+369
+00:13:47,600 --> 00:13:51,760
+Each pixel you can think of as a source,
+
+370
+00:13:49,519 --> 00:13:54,000
+as a vibrator. You can make a single
+
+371
+00:13:51,760 --> 00:13:55,920
+piso electric material vibrate in the
+
+372
+00:13:54,000 --> 00:13:57,600
+way you want.
+
+373
+00:13:55,920 --> 00:13:59,360
+You can control the vibration with
+
+374
+00:13:57,600 --> 00:14:01,440
+electrical signals through the so-called
+
+375
+00:13:59,360 --> 00:14:02,959
+pazo electric effect, the reaction
+
+376
+00:14:01,440 --> 00:14:04,959
+plane.
+
+377
+00:14:02,959 --> 00:14:08,639
+And once we have a two-dimensional array
+
+378
+00:14:04,959 --> 00:14:10,399
+or a 1.5D or 1D array, each pixel, each
+
+379
+00:14:08,639 --> 00:14:12,000
+transducer can be individually
+
+380
+00:14:10,399 --> 00:14:13,760
+controlled
+
+381
+00:14:12,000 --> 00:14:16,000
+with that individual control, we can
+
+382
+00:14:13,760 --> 00:14:19,040
+freeze computer. Let me see how to deal
+
+383
+00:14:16,000 --> 00:14:20,639
+with it. Let me close the program.
+
+384
+00:14:19,040 --> 00:14:22,880
+I will actually play a little bit with
+
+385
+00:14:20,639 --> 00:14:27,720
+this. These are the reasons I think a
+
+386
+00:14:22,880 --> 00:14:27,720
+computer problem. This is the tool.
+
+387
+00:14:29,199 --> 00:14:34,000
+Okay, think about a linear array. A
+
+388
+00:14:31,440 --> 00:14:37,279
+linear array is to put multiple po
+
+389
+00:14:34,000 --> 00:14:38,959
+electric transducers along a line. So
+
+390
+00:14:37,279 --> 00:14:41,279
+you have multiple elements and you can
+
+391
+00:14:38,959 --> 00:14:43,680
+selectively make a subset of transducers
+
+392
+00:14:41,279 --> 00:14:45,920
+on. This is the light. This subset is
+
+393
+00:14:43,680 --> 00:14:48,240
+selected in this case. These elements
+
+394
+00:14:45,920 --> 00:14:50,160
+are selected. You use these three as
+
+395
+00:14:48,240 --> 00:14:53,120
+your ultrasound sources. So this beam
+
+396
+00:14:50,160 --> 00:14:54,880
+will go down the road this way. You do
+
+397
+00:14:53,120 --> 00:14:57,199
+scanning as if this were just a single
+
+398
+00:14:54,880 --> 00:14:59,199
+transducer aperture. Then you can define
+
+399
+00:14:57,199 --> 00:15:01,040
+the next line. You just group elements
+
+400
+00:14:59,199 --> 00:15:03,279
+differently. Then you have a neighboring
+
+401
+00:15:01,040 --> 00:15:05,120
+line line two sending ultrasound waves
+
+402
+00:15:03,279 --> 00:15:06,639
+downward.
+
+403
+00:15:05,120 --> 00:15:09,040
+Okay.
+
+404
+00:15:06,639 --> 00:15:10,880
+Next instant you generate line three. So
+
+405
+00:15:09,040 --> 00:15:12,720
+you have a line of PZO electric
+
+406
+00:15:10,880 --> 00:15:14,880
+elements. The elements remain but each
+
+407
+00:15:12,720 --> 00:15:16,480
+time the first second you use this part.
+
+408
+00:15:14,880 --> 00:15:19,360
+The second second you use the second
+
+409
+00:15:16,480 --> 00:15:21,519
+group. You keep doing this.
+
+410
+00:15:19,360 --> 00:15:23,920
+The physical effect is that you send one
+
+411
+00:15:21,519 --> 00:15:25,680
+beam here. Next you send another beam.
+
+412
+00:15:23,920 --> 00:15:28,240
+You keep doing a mode scanning along
+
+413
+00:15:25,680 --> 00:15:30,560
+many lines. But you do the beam scanning
+
+414
+00:15:28,240 --> 00:15:32,800
+to form a B mode image not by manually
+
+415
+00:15:30,560 --> 00:15:35,600
+changing location or angle. You do it
+
+416
+00:15:32,800 --> 00:15:37,600
+mechanically or electronically.
+
+417
+00:15:35,600 --> 00:15:39,279
+This is very convenient. You have a
+
+418
+00:15:37,600 --> 00:15:41,440
+reform. So you use the acoustic
+
+419
+00:15:39,279 --> 00:15:43,839
+transducer array and you can perform
+
+420
+00:15:41,440 --> 00:15:46,160
+scanning easily. And not only scanning,
+
+421
+00:15:43,839 --> 00:15:48,160
+you can also do beam forming. A lot of
+
+422
+00:15:46,160 --> 00:15:52,839
+flexibility.
+
+423
+00:15:48,160 --> 00:15:52,839
+So here I would like to explain to you.
+
+424
+00:15:54,000 --> 00:15:58,560
+So the very famous Hygen's principle,
+
+425
+00:15:56,320 --> 00:16:00,399
+this slide is to guide the idea. Once
+
+426
+00:15:58,560 --> 00:16:02,639
+you have this idea clear, the different
+
+427
+00:16:00,399 --> 00:16:04,480
+schemes for ultrasound scanning and beam
+
+428
+00:16:02,639 --> 00:16:06,480
+forming with an array type ultrasound
+
+429
+00:16:04,480 --> 00:16:09,600
+transducer will become very clear to
+
+430
+00:16:06,480 --> 00:16:11,920
+you. The so-called Hygen's principle
+
+431
+00:16:09,600 --> 00:16:13,920
+basically says if you have a source,
+
+432
+00:16:11,920 --> 00:16:15,600
+just a simple example, if you have a
+
+433
+00:16:13,920 --> 00:16:17,920
+point source, it will generate a
+
+434
+00:16:15,600 --> 00:16:20,000
+spherical wave. The wave will keep
+
+435
+00:16:17,920 --> 00:16:22,399
+moving out and at a certain time you
+
+436
+00:16:20,000 --> 00:16:24,480
+have a wave front here.
+
+437
+00:16:22,399 --> 00:16:26,079
+Think of the ultrasound wave. You have
+
+438
+00:16:24,480 --> 00:16:28,000
+compressions and you have rare
+
+439
+00:16:26,079 --> 00:16:30,000
+refractions.
+
+440
+00:16:28,000 --> 00:16:32,079
+That boundary is the wavefront. The
+
+441
+00:16:30,000 --> 00:16:33,839
+principle suggests that if you decompose
+
+442
+00:16:32,079 --> 00:16:35,600
+the current wavefront into small
+
+443
+00:16:33,839 --> 00:16:37,680
+elements, you get a small element here,
+
+444
+00:16:35,600 --> 00:16:39,360
+a small element there, multiple small
+
+445
+00:16:37,680 --> 00:16:41,600
+elements.
+
+446
+00:16:39,360 --> 00:16:43,600
+Because the wavefield keeps vibrating
+
+447
+00:16:41,600 --> 00:16:45,839
+like an ultrasound wave, the small
+
+448
+00:16:43,600 --> 00:16:47,839
+volume element keeps getting smaller and
+
+449
+00:16:45,839 --> 00:16:49,759
+bigger. oscillating around a nominal
+
+450
+00:16:47,839 --> 00:16:53,040
+volume. The pressure keeps changing
+
+451
+00:16:49,759 --> 00:16:54,720
+following a simple sinosoidal curve.
+
+452
+00:16:53,040 --> 00:16:57,279
+By this reasoning, if you view things
+
+453
+00:16:54,720 --> 00:16:58,959
+individually, you isolate a small voxil.
+
+454
+00:16:57,279 --> 00:17:02,880
+You see the voxil keep changing,
+
+455
+00:16:58,959 --> 00:17:05,439
+vibrating, oscillating. You can think,
+
+456
+00:17:02,880 --> 00:17:07,520
+okay, this voxil is a single small
+
+457
+00:17:05,439 --> 00:17:09,839
+secondary ultrasound source or for
+
+458
+00:17:07,520 --> 00:17:12,000
+electromagnetic waves, a small secondary
+
+459
+00:17:09,839 --> 00:17:14,079
+source. Treat that element as a source
+
+460
+00:17:12,000 --> 00:17:17,039
+and ask, how do we predict or calculate
+
+461
+00:17:14,079 --> 00:17:18,880
+the next wavefront?
+
+462
+00:17:17,039 --> 00:17:20,400
+One way is to solve the original wave
+
+463
+00:17:18,880 --> 00:17:22,720
+equation and follow the whole
+
+464
+00:17:20,400 --> 00:17:24,720
+propagation process.
+
+465
+00:17:22,720 --> 00:17:27,039
+The other way, the Hygen's way, is to
+
+466
+00:17:24,720 --> 00:17:29,120
+forget the original source and say at a
+
+467
+00:17:27,039 --> 00:17:31,919
+given time, the current wavefront shown
+
+468
+00:17:29,120 --> 00:17:34,480
+here, A to A prime, can be decomposed
+
+469
+00:17:31,919 --> 00:17:36,640
+into many small segments.
+
+470
+00:17:34,480 --> 00:17:38,720
+Each individual segment is regarded as a
+
+471
+00:17:36,640 --> 00:17:40,559
+secondary small source. Each small
+
+472
+00:17:38,720 --> 00:17:42,720
+source keeps changing and each small
+
+473
+00:17:40,559 --> 00:17:44,160
+source generates its own small spherical
+
+474
+00:17:42,720 --> 00:17:46,160
+wave.
+
+475
+00:17:44,160 --> 00:17:48,240
+The next wavefront is the superposition
+
+476
+00:17:46,160 --> 00:17:49,840
+of all those secondary spherical waves
+
+477
+00:17:48,240 --> 00:17:51,440
+added together forming the new
+
+478
+00:17:49,840 --> 00:17:53,520
+wavefront.
+
+479
+00:17:51,440 --> 00:17:55,600
+So this is Hygen's principle. The
+
+480
+00:17:53,520 --> 00:17:57,600
+current wavefront is decomposed into
+
+481
+00:17:55,600 --> 00:17:59,520
+numerous small sources and the next
+
+482
+00:17:57,600 --> 00:18:01,840
+wavefront is computed from all these
+
+483
+00:17:59,520 --> 00:18:03,919
+secondary sources.
+
+484
+00:18:01,840 --> 00:18:05,919
+In words we say any current point on a
+
+485
+00:18:03,919 --> 00:18:08,080
+wavefront is a new source, a secondary
+
+486
+00:18:05,919 --> 00:18:10,160
+source and all such new secondary
+
+487
+00:18:08,080 --> 00:18:12,240
+sources collectively determine the
+
+488
+00:18:10,160 --> 00:18:14,160
+future wavefront.
+
+489
+00:18:12,240 --> 00:18:15,760
+All the subsequently generated waves
+
+490
+00:18:14,160 --> 00:18:20,200
+added together will form the next
+
+491
+00:18:15,760 --> 00:18:20,200
+wavefront. That is the idea.
+
+492
+00:18:21,600 --> 00:18:25,280
+Looking at this picture, you think this
+
+493
+00:18:23,280 --> 00:18:27,600
+is a current wavefront. You have
+
+494
+00:18:25,280 --> 00:18:29,440
+multiple small secondary sources here.
+
+495
+00:18:27,600 --> 00:18:31,440
+Each source forms a small secondary
+
+496
+00:18:29,440 --> 00:18:33,280
+spherical wave.
+
+497
+00:18:31,440 --> 00:18:35,120
+These waves together, the envelope
+
+498
+00:18:33,280 --> 00:18:37,200
+formed by all these secondary spherical
+
+499
+00:18:35,120 --> 00:18:38,960
+waves added together form the next
+
+500
+00:18:37,200 --> 00:18:41,280
+wavefront.
+
+501
+00:18:38,960 --> 00:18:43,200
+In this first case, the next wavefront
+
+502
+00:18:41,280 --> 00:18:45,039
+has the same shape as the previous or
+
+503
+00:18:43,200 --> 00:18:47,120
+current wavefront. So, a spherical
+
+504
+00:18:45,039 --> 00:18:50,720
+wavefront propagates as a spherical
+
+505
+00:18:47,120 --> 00:18:52,559
+wavefront. That looks right. If you have
+
+506
+00:18:50,720 --> 00:18:54,640
+a plane wave propagating forward, the
+
+507
+00:18:52,559 --> 00:18:57,919
+plane wavefront can also be decomposed
+
+508
+00:18:54,640 --> 00:19:00,880
+into sources A, B, C, D, and so on. Each
+
+509
+00:18:57,919 --> 00:19:03,280
+is a secondary spherical wave.
+
+510
+00:19:00,880 --> 00:19:05,760
+Again, the envelope of all these small
+
+511
+00:19:03,280 --> 00:19:08,080
+spherical waves forms a plane, which is
+
+512
+00:19:05,760 --> 00:19:09,919
+a new wavefront parallel to your current
+
+513
+00:19:08,080 --> 00:19:12,400
+wavefront, parallel to the previous
+
+514
+00:19:09,919 --> 00:19:14,720
+wavefront. That illustrates how a plane
+
+515
+00:19:12,400 --> 00:19:17,440
+wave propagates along one direction, the
+
+516
+00:19:14,720 --> 00:19:19,520
+direction of beam propagation.
+
+517
+00:19:17,440 --> 00:19:21,520
+Now, if you have a small aperture, the
+
+518
+00:19:19,520 --> 00:19:23,440
+plane wave goes down to the opening.
+
+519
+00:19:21,520 --> 00:19:25,280
+Because you have multiple yellow sources
+
+520
+00:19:23,440 --> 00:19:27,360
+across that aperture and each yellow
+
+521
+00:19:25,280 --> 00:19:29,679
+source is treated as an individual point
+
+522
+00:19:27,360 --> 00:19:31,840
+source vibrating out sound or light. You
+
+523
+00:19:29,679 --> 00:19:33,919
+observe defraction,
+
+524
+00:19:31,840 --> 00:19:35,600
+the light or sound will no longer go
+
+525
+00:19:33,919 --> 00:19:39,039
+perfectly straight. It will bend around
+
+526
+00:19:35,600 --> 00:19:40,720
+the edges, turn around so to speak. If
+
+527
+00:19:39,039 --> 00:19:42,799
+you have two slits, the waves from the
+
+528
+00:19:40,720 --> 00:19:44,960
+two openings will interfere due to phase
+
+529
+00:19:42,799 --> 00:19:46,960
+differences. At some points, the two
+
+530
+00:19:44,960 --> 00:19:48,320
+spherical waves, one from here and one
+
+531
+00:19:46,960 --> 00:19:50,000
+from the other opening, will add
+
+532
+00:19:48,320 --> 00:19:51,840
+constructively. At other points, they
+
+533
+00:19:50,000 --> 00:19:53,760
+will cancel. If you place a screen
+
+534
+00:19:51,840 --> 00:19:56,320
+there, you will observe bright and dark
+
+535
+00:19:53,760 --> 00:19:58,160
+strips. This is interference. The
+
+536
+00:19:56,320 --> 00:20:00,559
+reflection, the refraction, and many old
+
+537
+00:19:58,160 --> 00:20:02,640
+optical or ultrasonic phenomena can be
+
+538
+00:20:00,559 --> 00:20:04,880
+explained similarly. You have a plane
+
+539
+00:20:02,640 --> 00:20:06,960
+wave here. The wave is incident at a
+
+540
+00:20:04,880 --> 00:20:09,200
+surface. At the surface, you again treat
+
+541
+00:20:06,960 --> 00:20:11,280
+it with Huygens's sources. Depending on
+
+542
+00:20:09,200 --> 00:20:13,280
+the location, this point is hit earlier
+
+543
+00:20:11,280 --> 00:20:15,440
+and its secondary spherical wave is
+
+544
+00:20:13,280 --> 00:20:17,760
+generated in this direction. That point
+
+545
+00:20:15,440 --> 00:20:20,000
+is hit later and its spherical wave has
+
+546
+00:20:17,760 --> 00:20:22,000
+a smaller extent. The envelope will be
+
+547
+00:20:20,000 --> 00:20:23,760
+defined by straight lines like plane
+
+548
+00:20:22,000 --> 00:20:25,840
+fronts depending on the speed of sound
+
+549
+00:20:23,760 --> 00:20:28,159
+or light in the two media. The relative
+
+550
+00:20:25,840 --> 00:20:30,480
+speed in the two media. You will see the
+
+551
+00:20:28,159 --> 00:20:32,320
+transmitted beam change direction. The
+
+552
+00:20:30,480 --> 00:20:34,320
+direction change is determined by the
+
+553
+00:20:32,320 --> 00:20:36,640
+relative speeds of the wave in the first
+
+554
+00:20:34,320 --> 00:20:41,080
+and second medium. This explains a lot
+
+555
+00:20:36,640 --> 00:20:41,080
+of wave phenomena. Very cool.
+
+556
+00:20:41,280 --> 00:20:45,200
+Now let's look at this example. An
+
+557
+00:20:43,120 --> 00:20:47,679
+ultrasonic transducer array shown here
+
+558
+00:20:45,200 --> 00:20:49,360
+inside the blue box. If you have a beam
+
+559
+00:20:47,679 --> 00:20:51,679
+that is focused toward a certain
+
+560
+00:20:49,360 --> 00:20:53,600
+direction, it shines in a specific mode
+
+561
+00:20:51,679 --> 00:20:56,240
+and you will have a wavefront forming
+
+562
+00:20:53,600 --> 00:20:58,080
+within that blue region.
+
+563
+00:20:56,240 --> 00:20:59,840
+So what happens to the wave?
+
+564
+00:20:58,080 --> 00:21:02,080
+Essentially, it behaves as if that
+
+565
+00:20:59,840 --> 00:21:04,240
+entire front of energy is moving outward
+
+566
+00:21:02,080 --> 00:21:05,919
+through the medium.
+
+567
+00:21:04,240 --> 00:21:07,679
+But here, instead of a continuous
+
+568
+00:21:05,919 --> 00:21:09,840
+wavefront, we use a two-dimensional
+
+569
+00:21:07,679 --> 00:21:12,240
+acoustic transducer to recreate that
+
+570
+00:21:09,840 --> 00:21:13,679
+same wave behavior.
+
+571
+00:21:12,240 --> 00:21:15,520
+In other words, we can replace the
+
+572
+00:21:13,679 --> 00:21:18,799
+natural wavefront with this 2D
+
+573
+00:21:15,520 --> 00:21:20,960
+transducer array. By doing so, we can
+
+574
+00:21:18,799 --> 00:21:23,039
+electronically control each element in
+
+575
+00:21:20,960 --> 00:21:24,880
+the array to operate exactly the way the
+
+576
+00:21:23,039 --> 00:21:27,200
+original wavefront would. This means
+
+577
+00:21:24,880 --> 00:21:29,520
+that the two-dimensional transducer can
+
+578
+00:21:27,200 --> 00:21:32,559
+emulate the same effect as the real wave
+
+579
+00:21:29,520 --> 00:21:34,559
+field. With this approach, we can do the
+
+580
+00:21:32,559 --> 00:21:36,240
+same kinds of operations, focusing,
+
+581
+00:21:34,559 --> 00:21:38,640
+scanning, and steering the beam with
+
+582
+00:21:36,240 --> 00:21:40,400
+great flexibility.
+
+583
+00:21:38,640 --> 00:21:42,240
+As long as each individual transducer
+
+584
+00:21:40,400 --> 00:21:44,640
+element is driven properly, the array
+
+585
+00:21:42,240 --> 00:21:46,320
+can reproduce the correct wave behavior.
+
+586
+00:21:44,640 --> 00:21:48,159
+This is how we visualize and control
+
+587
+00:21:46,320 --> 00:21:51,799
+wave propagation in a precise
+
+588
+00:21:48,159 --> 00:21:51,799
+programmable way.
+
+589
+00:21:53,039 --> 00:21:57,360
+Let me make this clearer using a linear
+
+590
+00:21:55,039 --> 00:21:59,120
+phased array example. If you fire all
+
+591
+00:21:57,360 --> 00:22:01,120
+the pulses at the same time, all the
+
+592
+00:21:59,120 --> 00:22:02,720
+elements are activated together and the
+
+593
+00:22:01,120 --> 00:22:04,799
+ultrasound beam travels straight ahead
+
+594
+00:22:02,720 --> 00:22:06,720
+in one direction.
+
+595
+00:22:04,799 --> 00:22:08,960
+However, if you adjust the timing
+
+596
+00:22:06,720 --> 00:22:10,880
+slightly, you can shape the beam. For
+
+597
+00:22:08,960 --> 00:22:12,720
+instance, if you fire elements one and
+
+598
+00:22:10,880 --> 00:22:15,039
+five a little earlier, as shown on the
+
+599
+00:22:12,720 --> 00:22:17,120
+time axis here, where this point is time
+
+600
+00:22:15,039 --> 00:22:19,280
+zero, and then fire the others with
+
+601
+00:22:17,120 --> 00:22:22,320
+slight delays, you create different wave
+
+602
+00:22:19,280 --> 00:22:24,159
+fronts that add up. At first, two
+
+603
+00:22:22,320 --> 00:22:26,559
+spherical waves are generated from
+
+604
+00:22:24,159 --> 00:22:28,640
+elements one and five. Then, a bit
+
+605
+00:22:26,559 --> 00:22:30,799
+later, elements two and four emit their
+
+606
+00:22:28,640 --> 00:22:33,600
+waves, and finally, the central element
+
+607
+00:22:30,799 --> 00:22:35,600
+fires last. When all these small
+
+608
+00:22:33,600 --> 00:22:37,840
+wavelets combine, they form a curved
+
+609
+00:22:35,600 --> 00:22:39,760
+wavefront producing a focused ultrasound
+
+610
+00:22:37,840 --> 00:22:42,880
+field downward with the focal spot
+
+611
+00:22:39,760 --> 00:22:44,880
+located here. Now, the distance of this
+
+612
+00:22:42,880 --> 00:22:46,799
+focus, how deep it forms from the
+
+613
+00:22:44,880 --> 00:22:48,480
+transducer surface, depends on the
+
+614
+00:22:46,799 --> 00:22:50,559
+relative time delays between the
+
+615
+00:22:48,480 --> 00:22:52,480
+elements. If you apply the delay more
+
+616
+00:22:50,559 --> 00:22:54,000
+gradually, the focus will form more
+
+617
+00:22:52,480 --> 00:22:56,000
+deeply.
+
+618
+00:22:54,000 --> 00:22:58,240
+By changing the delay pattern, you can
+
+619
+00:22:56,000 --> 00:23:00,320
+also tilt the beam to the lefthand side
+
+620
+00:22:58,240 --> 00:23:02,799
+or the right hand side by linearly
+
+621
+00:23:00,320 --> 00:23:04,640
+shifting the delay across elements. This
+
+622
+00:23:02,799 --> 00:23:07,360
+gives you complete flexibility in how
+
+623
+00:23:04,640 --> 00:23:09,200
+you steer and focus the beam.
+
+624
+00:23:07,360 --> 00:23:11,440
+The essential idea here follows
+
+625
+00:23:09,200 --> 00:23:13,679
+Huygens's principle. Each element acts
+
+626
+00:23:11,440 --> 00:23:15,760
+as an individual source, generating its
+
+627
+00:23:13,679 --> 00:23:17,360
+own waveform with a controlled relative
+
+628
+00:23:15,760 --> 00:23:19,520
+phase.
+
+629
+00:23:17,360 --> 00:23:21,600
+By adjusting the phase and timing, you
+
+630
+00:23:19,520 --> 00:23:24,000
+can create different acoustic or optical
+
+631
+00:23:21,600 --> 00:23:25,919
+effects. This is how beam steering and
+
+632
+00:23:24,000 --> 00:23:29,240
+dynamic focusing are achieved in a
+
+633
+00:23:25,919 --> 00:23:29,240
+phased array.
+
+634
+00:23:30,559 --> 00:23:34,080
+Now this is a phased array and you can
+
+635
+00:23:32,559 --> 00:23:36,240
+extend the same concept to the
+
+636
+00:23:34,080 --> 00:23:37,919
+two-dimensional case. Instead of having
+
+637
+00:23:36,240 --> 00:23:41,840
+one line of elements, you now have a
+
+638
+00:23:37,919 --> 00:23:44,159
+grid, a 2D array of transducer elements.
+
+639
+00:23:41,840 --> 00:23:46,320
+By controlling the phase and timing in
+
+640
+00:23:44,159 --> 00:23:48,480
+two dimensions, you can purposely focus
+
+641
+00:23:46,320 --> 00:23:51,039
+along the principal axis. Or you can
+
+642
+00:23:48,480 --> 00:23:54,320
+steer the beam left, right, up, or down,
+
+643
+00:23:51,039 --> 00:23:56,240
+even in a circular pattern if you wish.
+
+644
+00:23:54,320 --> 00:23:58,240
+This allows for electronic focusing and
+
+645
+00:23:56,240 --> 00:24:00,240
+beam steering in both dimensions, giving
+
+646
+00:23:58,240 --> 00:24:03,440
+you precise control over the acoustic
+
+647
+00:24:00,240 --> 00:24:05,440
+field. So in summary, the 2D phased
+
+648
+00:24:03,440 --> 00:24:07,200
+array operates the same way as the 1D
+
+649
+00:24:05,440 --> 00:24:08,720
+version, but adds another level of
+
+650
+00:24:07,200 --> 00:24:11,039
+control.
+
+651
+00:24:08,720 --> 00:24:12,880
+It enables full 3D imaging capabilities,
+
+652
+00:24:11,039 --> 00:24:16,440
+higher flexibility, and more advanced
+
+653
+00:24:12,880 --> 00:24:16,440
+ultrasound applications.
+
+654
+00:24:18,000 --> 00:24:22,400
+Now let's look at the annular array. You
+
+655
+00:24:20,640 --> 00:24:24,159
+can make the ultrasound beam radially
+
+656
+00:24:22,400 --> 00:24:26,799
+symmetric or what we sometimes call
+
+657
+00:24:24,159 --> 00:24:28,640
+recirculately symmetric.
+
+658
+00:24:26,799 --> 00:24:30,480
+Basically you can design a circular
+
+659
+00:24:28,640 --> 00:24:32,960
+symmetric arrangement of polectric
+
+660
+00:24:30,480 --> 00:24:35,039
+elements like the one shown here. With
+
+661
+00:24:32,960 --> 00:24:37,039
+this type of array, you cannot do
+
+662
+00:24:35,039 --> 00:24:39,120
+circular scanning because it's already
+
+663
+00:24:37,039 --> 00:24:41,679
+circularly symmetric. But you can focus
+
+664
+00:24:39,120 --> 00:24:43,360
+along the principal direction.
+
+665
+00:24:41,679 --> 00:24:45,840
+The advantage is that you can control
+
+666
+00:24:43,360 --> 00:24:48,000
+the focal distance very easily. You can
+
+667
+00:24:45,840 --> 00:24:50,000
+make the focus point closer or farther
+
+668
+00:24:48,000 --> 00:24:52,559
+depending on the time delay and how you
+
+669
+00:24:50,000 --> 00:24:54,559
+drive those circular rings.
+
+670
+00:24:52,559 --> 00:24:56,880
+So you can adjust the focal distance to
+
+671
+00:24:54,559 --> 00:24:58,960
+be small or large. That's something you
+
+672
+00:24:56,880 --> 00:25:01,960
+can easily do with this annular array
+
+673
+00:24:58,960 --> 00:25:01,960
+structure.
+
+674
+00:25:03,279 --> 00:25:07,679
+So the beam forming idea is that you
+
+675
+00:25:05,279 --> 00:25:09,840
+introduce time delays across the array.
+
+676
+00:25:07,679 --> 00:25:12,159
+Imagine you have scatterers located at
+
+677
+00:25:09,840 --> 00:25:14,640
+different positions labeled E1, E2, and
+
+678
+00:25:12,159 --> 00:25:16,400
+E3. These are the echoes or signals you
+
+679
+00:25:14,640 --> 00:25:17,919
+receive from different points inside the
+
+680
+00:25:16,400 --> 00:25:19,760
+tissue.
+
+681
+00:25:17,919 --> 00:25:21,440
+On the receiver side, you receive all
+
+682
+00:25:19,760 --> 00:25:23,600
+these signals and keep guiding or
+
+683
+00:25:21,440 --> 00:25:25,520
+aligning them properly. If you add those
+
+684
+00:25:23,600 --> 00:25:27,520
+signals together, but with individual
+
+685
+00:25:25,520 --> 00:25:29,919
+delays, as shown here, you can make them
+
+686
+00:25:27,520 --> 00:25:32,159
+sum coherently. The tall bars in the
+
+687
+00:25:29,919 --> 00:25:34,000
+diagram indicate a larger time delay.
+
+688
+00:25:32,159 --> 00:25:35,840
+Different modulations of these delays
+
+689
+00:25:34,000 --> 00:25:37,360
+determine which echo signal you want to
+
+690
+00:25:35,840 --> 00:25:39,600
+detect.
+
+691
+00:25:37,360 --> 00:25:41,360
+At this location, the phase difference
+
+692
+00:25:39,600 --> 00:25:43,360
+between the central element and the
+
+693
+00:25:41,360 --> 00:25:45,840
+peripheral elements will be large. So
+
+694
+00:25:43,360 --> 00:25:47,520
+the relative delay will be large too.
+
+695
+00:25:45,840 --> 00:25:50,799
+You take the signal from the central
+
+696
+00:25:47,520 --> 00:25:52,799
+channel and keep it. Then you take the
+
+697
+00:25:50,799 --> 00:25:54,880
+signal from the outer element. It takes
+
+698
+00:25:52,799 --> 00:25:56,960
+a longer time for the echo to reach that
+
+699
+00:25:54,880 --> 00:25:59,200
+peripheral element. That longer time
+
+700
+00:25:56,960 --> 00:26:01,200
+becomes the time delay.
+
+701
+00:25:59,200 --> 00:26:03,600
+You add all the signals together, each
+
+702
+00:26:01,200 --> 00:26:05,279
+with its own individualized time delay.
+
+703
+00:26:03,600 --> 00:26:07,200
+When the time delays are properly
+
+704
+00:26:05,279 --> 00:26:09,200
+distributed like this, and you add the
+
+705
+00:26:07,200 --> 00:26:12,640
+five signals together, you form a strong
+
+706
+00:26:09,200 --> 00:26:14,640
+echo, for example, for echo one. But if
+
+707
+00:26:12,640 --> 00:26:16,799
+you use a uniform time delay for all,
+
+708
+00:26:14,640 --> 00:26:18,960
+you are focusing to infinity. That's a
+
+709
+00:26:16,799 --> 00:26:20,559
+remote point. So by changing the
+
+710
+00:26:18,960 --> 00:26:22,320
+distribution of time delays, you can
+
+711
+00:26:20,559 --> 00:26:24,000
+guide coherent echoes at different
+
+712
+00:26:22,320 --> 00:26:26,320
+depths.
+
+713
+00:26:24,000 --> 00:26:28,159
+This is the basic beam forming idea. And
+
+714
+00:26:26,320 --> 00:26:30,080
+of course, scanning and beam forming can
+
+715
+00:26:28,159 --> 00:26:34,600
+be combined to achieve the best image
+
+716
+00:26:30,080 --> 00:26:34,600
+quality and overall performance.
+
+717
+00:26:36,320 --> 00:26:40,240
+Now, let me just copy this figure to
+
+718
+00:26:38,000 --> 00:26:43,200
+help explain the idea. This shows a
+
+719
+00:26:40,240 --> 00:26:45,360
+one-dimensional ultrasound array. If you
+
+720
+00:26:43,200 --> 00:26:47,760
+use just this group of transducers, you
+
+721
+00:26:45,360 --> 00:26:50,080
+can certainly do beam forming. You
+
+722
+00:26:47,760 --> 00:26:51,760
+perform focusing in this way based on
+
+723
+00:26:50,080 --> 00:26:53,279
+the relative time delays across
+
+724
+00:26:51,760 --> 00:26:55,039
+elements.
+
+725
+00:26:53,279 --> 00:26:56,960
+You can adjust the focus at a certain
+
+726
+00:26:55,039 --> 00:26:58,880
+depth from the transducer surface to the
+
+727
+00:26:56,960 --> 00:27:01,120
+focal plane and make the focus spot
+
+728
+00:26:58,880 --> 00:27:03,440
+here. You receive signals mainly from
+
+729
+00:27:01,120 --> 00:27:06,159
+this region of interest. Then this group
+
+730
+00:27:03,440 --> 00:27:08,159
+of signals can be moved laterally
+
+731
+00:27:06,159 --> 00:27:10,080
+from left to right. You perform scanning
+
+732
+00:27:08,159 --> 00:27:12,159
+line by line. So you get information
+
+733
+00:27:10,080 --> 00:27:14,159
+along each line. When you repeat this
+
+734
+00:27:12,159 --> 00:27:17,360
+line by line process, you effectively
+
+735
+00:27:14,159 --> 00:27:19,760
+build up a two-dimensional image.
+
+736
+00:27:17,360 --> 00:27:21,360
+So in summary, with beam forming, you
+
+737
+00:27:19,760 --> 00:27:23,200
+control how the echoes are added
+
+738
+00:27:21,360 --> 00:27:25,440
+together in time. And with scanning, you
+
+739
+00:27:23,200 --> 00:27:27,120
+move the beam position across the field.
+
+740
+00:27:25,440 --> 00:27:31,240
+Together, they form the foundation of
+
+741
+00:27:27,120 --> 00:27:31,240
+modern ultrasound imaging.
+
+742
+00:27:32,640 --> 00:27:36,320
+Now, let's connect the ideas we
+
+743
+00:27:34,320 --> 00:27:38,080
+discussed earlier. You can sweep the
+
+744
+00:27:36,320 --> 00:27:40,080
+ultrasound beam from left to right. And
+
+745
+00:27:38,080 --> 00:27:41,840
+when you perform ultrasound imaging, you
+
+746
+00:27:40,080 --> 00:27:44,720
+can use this sweeping approach to create
+
+747
+00:27:41,840 --> 00:27:47,120
+what we call compound imaging.
+
+748
+00:27:44,720 --> 00:27:49,039
+Using a phased array transducer, you can
+
+749
+00:27:47,120 --> 00:27:51,279
+steer the ultrasound beams toward the
+
+750
+00:27:49,039 --> 00:27:53,360
+left side. Collect multiple image lines,
+
+751
+00:27:51,279 --> 00:27:55,520
+each one similar to an A mode line, and
+
+752
+00:27:53,360 --> 00:27:57,919
+combine them to form a B mode image over
+
+753
+00:27:55,520 --> 00:28:00,000
+the region of interest.
+
+754
+00:27:57,919 --> 00:28:01,679
+Then you slightly change the beam angle,
+
+755
+00:28:00,000 --> 00:28:03,120
+and sweep across again, this time
+
+756
+00:28:01,679 --> 00:28:06,480
+pointing the beams toward the right
+
+757
+00:28:03,120 --> 00:28:08,799
+side. What you get are multiple images
+
+758
+00:28:06,480 --> 00:28:10,559
+of the same region, each captured from a
+
+759
+00:28:08,799 --> 00:28:12,720
+different angle.
+
+760
+00:28:10,559 --> 00:28:14,720
+When you combine or add these images
+
+761
+00:28:12,720 --> 00:28:17,120
+together, you average the results across
+
+762
+00:28:14,720 --> 00:28:19,279
+those angles. The benefit is that the
+
+763
+00:28:17,120 --> 00:28:21,520
+underlying structures like the organs or
+
+764
+00:28:19,279 --> 00:28:23,200
+tissues stay consistent across frames,
+
+765
+00:28:21,520 --> 00:28:25,120
+but the speckle noise and random
+
+766
+00:28:23,200 --> 00:28:26,880
+scattering patterns vary from one angle
+
+767
+00:28:25,120 --> 00:28:29,039
+to another.
+
+768
+00:28:26,880 --> 00:28:30,960
+When you sum them together, the random
+
+769
+00:28:29,039 --> 00:28:33,039
+noise cancels out while the consistent
+
+770
+00:28:30,960 --> 00:28:34,799
+features are reinforced, giving you a
+
+771
+00:28:33,039 --> 00:28:37,120
+much smoother, clearer image with
+
+772
+00:28:34,799 --> 00:28:38,960
+reduced artifacts.
+
+773
+00:28:37,120 --> 00:28:41,039
+So this is what we call compound
+
+774
+00:28:38,960 --> 00:28:43,039
+imaging. It's essentially a noise
+
+775
+00:28:41,039 --> 00:28:44,720
+reduction technique achieved by imaging
+
+776
+00:28:43,039 --> 00:28:46,480
+the same region from multiple
+
+777
+00:28:44,720 --> 00:28:48,159
+directions.
+
+778
+00:28:46,480 --> 00:28:50,320
+The figure here shows how the image
+
+779
+00:28:48,159 --> 00:28:52,399
+looks smoother with far fewer speckles
+
+780
+00:28:50,320 --> 00:28:54,399
+compared to a single acquisition. This
+
+781
+00:28:52,399 --> 00:28:57,679
+method is similar in principle to noise
+
+782
+00:28:54,399 --> 00:28:59,919
+averaging or multi-angle integration.
+
+783
+00:28:57,679 --> 00:29:02,320
+In short, this is another powerful way
+
+784
+00:28:59,919 --> 00:29:04,559
+to perform ultrasound imaging, whether A
+
+785
+00:29:02,320 --> 00:29:06,799
+mode, B mode, or C mode based on
+
+786
+00:29:04,559 --> 00:29:10,240
+Huygens's principle and the use of one
+
+787
+00:29:06,799 --> 00:29:12,640
+or two-dimensional transducer arrays.
+
+788
+00:29:10,240 --> 00:29:15,200
+You can scan, focus, and form images in
+
+789
+00:29:12,640 --> 00:29:17,120
+many flexible ways. So, read the green
+
+790
+00:29:15,200 --> 00:29:19,200
+textbook carefully and make sure you
+
+791
+00:29:17,120 --> 00:29:20,799
+understand these imaging principles.
+
+792
+00:29:19,200 --> 00:29:23,799
+That completes the first part of this
+
+793
+00:29:20,799 --> 00:29:23,799
+lecture.
+
+794
+00:29:25,200 --> 00:29:29,520
+The second part of this lecture focuses
+
+795
+00:29:27,200 --> 00:29:31,679
+on dynamic imaging, particularly on how
+
+796
+00:29:29,520 --> 00:29:34,320
+we measure motion such as blood flow
+
+797
+00:29:31,679 --> 00:29:37,279
+velocity or heart wall movement. To do
+
+798
+00:29:34,320 --> 00:29:40,240
+this, we rely on the Doppler effect.
+
+799
+00:29:37,279 --> 00:29:42,240
+So, what exactly is the Doppler effect?
+
+800
+00:29:40,240 --> 00:29:44,159
+It's a physical principle that describes
+
+801
+00:29:42,240 --> 00:29:46,399
+how the observed frequency of a wave
+
+802
+00:29:44,159 --> 00:29:49,360
+changes when there is relative motion
+
+803
+00:29:46,399 --> 00:29:51,679
+between the source and the observer.
+
+804
+00:29:49,360 --> 00:29:53,840
+In ultrasound, this effect allows us to
+
+805
+00:29:51,679 --> 00:29:58,279
+calculate how fast and in what direction
+
+806
+00:29:53,840 --> 00:29:58,279
+blood is moving inside the body.
+
+807
+00:29:59,520 --> 00:30:03,360
+Here's a simple cartoon that helps you
+
+808
+00:30:01,360 --> 00:30:04,960
+visualize the concept. You've probably
+
+809
+00:30:03,360 --> 00:30:07,120
+experienced the Doppler effect in
+
+810
+00:30:04,960 --> 00:30:09,279
+everyday life. Imagine you're standing
+
+811
+00:30:07,120 --> 00:30:11,039
+at a train station.
+
+812
+00:30:09,279 --> 00:30:13,120
+When the train comes toward you, the
+
+813
+00:30:11,039 --> 00:30:15,120
+pitch of its whistle sounds higher. When
+
+814
+00:30:13,120 --> 00:30:16,720
+the train moves away, the pitch sounds
+
+815
+00:30:15,120 --> 00:30:18,480
+lower.
+
+816
+00:30:16,720 --> 00:30:20,640
+The same thing happens with the siren of
+
+817
+00:30:18,480 --> 00:30:22,159
+a police car. When the car is moving
+
+818
+00:30:20,640 --> 00:30:23,600
+toward you, the sound waves are
+
+819
+00:30:22,159 --> 00:30:26,720
+compressed, giving you a higher
+
+820
+00:30:23,600 --> 00:30:28,240
+frequency or a sharper tone. When the
+
+821
+00:30:26,720 --> 00:30:29,840
+car moves away, the sound waves are
+
+822
+00:30:28,240 --> 00:30:31,520
+stretched and you perceive a lower
+
+823
+00:30:29,840 --> 00:30:33,360
+frequency.
+
+824
+00:30:31,520 --> 00:30:34,880
+In other words, the perceived frequency
+
+825
+00:30:33,360 --> 00:30:36,880
+depends directly on the relative
+
+826
+00:30:34,880 --> 00:30:38,720
+velocity between the sound source and
+
+827
+00:30:36,880 --> 00:30:40,880
+the observer.
+
+828
+00:30:38,720 --> 00:30:42,720
+This change in frequency with motion is
+
+829
+00:30:40,880 --> 00:30:44,320
+the Doppler effect and it forms the
+
+830
+00:30:42,720 --> 00:30:46,159
+physical foundation for Doppler
+
+831
+00:30:44,320 --> 00:30:48,320
+ultrasound imaging where we measure
+
+832
+00:30:46,159 --> 00:30:51,559
+blood flow speed and direction inside
+
+833
+00:30:48,320 --> 00:30:51,559
+the body.
+
+834
+00:30:52,799 --> 00:30:56,880
+Now in your textbook you have this
+
+835
+00:30:54,640 --> 00:30:59,120
+diagram that shows how the Doppler shift
+
+836
+00:30:56,880 --> 00:31:01,039
+occurs in flowing blood. Here we are
+
+837
+00:30:59,120 --> 00:31:03,440
+looking at a small vessel with red blood
+
+838
+00:31:01,039 --> 00:31:05,679
+cells moving inside.
+
+839
+00:31:03,440 --> 00:31:07,679
+The transducer sends ultrasound energy
+
+840
+00:31:05,679 --> 00:31:10,080
+toward the blood vessel wall or directly
+
+841
+00:31:07,679 --> 00:31:12,000
+into the bloodstream. The wall or the
+
+842
+00:31:10,080 --> 00:31:13,520
+moving red blood cells reflect the
+
+843
+00:31:12,000 --> 00:31:15,279
+ultrasound energy back to the
+
+844
+00:31:13,520 --> 00:31:16,960
+transducer.
+
+845
+00:31:15,279 --> 00:31:18,720
+If the wall or blood cells were
+
+846
+00:31:16,960 --> 00:31:20,799
+perfectly stationary, the reflected
+
+847
+00:31:18,720 --> 00:31:23,440
+frequency would be exactly the same as
+
+848
+00:31:20,799 --> 00:31:25,360
+the incident frequency.
+
+849
+00:31:23,440 --> 00:31:27,440
+However, since these scatterers are
+
+850
+00:31:25,360 --> 00:31:30,000
+moving, the reflected frequency becomes
+
+851
+00:31:27,440 --> 00:31:32,080
+slightly different. The vertical
+
+852
+00:31:30,000 --> 00:31:34,880
+component of the velocity represented
+
+853
+00:31:32,080 --> 00:31:36,880
+here as v cos the is what contributes to
+
+854
+00:31:34,880 --> 00:31:38,559
+this difference. This component
+
+855
+00:31:36,880 --> 00:31:41,600
+corresponds to the velocity of motion
+
+856
+00:31:38,559 --> 00:31:43,120
+along the ultrasound beam direction.
+
+857
+00:31:41,600 --> 00:31:45,519
+The small difference between the
+
+858
+00:31:43,120 --> 00:31:47,600
+transmitted and received frequencies is
+
+859
+00:31:45,519 --> 00:31:50,159
+what we call the Doppler frequency
+
+860
+00:31:47,600 --> 00:31:52,000
+shift. This effect is universal. It
+
+861
+00:31:50,159 --> 00:31:55,200
+appears not only in ultrasound but also
+
+862
+00:31:52,000 --> 00:31:57,200
+in optical and electromagnetic waves.
+
+863
+00:31:55,200 --> 00:31:59,200
+The Doppler shift tells us how motion
+
+864
+00:31:57,200 --> 00:32:01,120
+changes the observed frequency and that
+
+865
+00:31:59,200 --> 00:32:04,760
+is the basis for Doppler imaging in
+
+866
+00:32:01,120 --> 00:32:04,760
+medical ultrasound.
+
+867
+00:32:06,159 --> 00:32:10,799
+Here is the key paragraph from your
+
+868
+00:32:08,000 --> 00:32:13,200
+textbook. The diagram is reduced in size
+
+869
+00:32:10,799 --> 00:32:15,519
+but the principle remains the same. You
+
+870
+00:32:13,200 --> 00:32:17,600
+have motion, an incident frequency and a
+
+871
+00:32:15,519 --> 00:32:19,840
+reflected frequency.
+
+872
+00:32:17,600 --> 00:32:21,840
+The derivation goes as follows. The
+
+873
+00:32:19,840 --> 00:32:24,640
+frequency reflected by the moving blood
+
+874
+00:32:21,840 --> 00:32:26,559
+cell or boundary is given by equation
+
+875
+00:32:24,640 --> 00:32:28,640
+340.
+
+876
+00:32:26,559 --> 00:32:31,200
+Here C is the speed of sound in the
+
+877
+00:32:28,640 --> 00:32:33,120
+tissue. V is the blood flow velocity. Th
+
+878
+00:32:31,200 --> 00:32:34,799
+is the angle between the beam and the
+
+879
+00:32:33,120 --> 00:32:38,080
+direction of motion. And the whole term
+
+880
+00:32:34,799 --> 00:32:40,720
+is divided by L the wavelength.
+
+881
+00:32:38,080 --> 00:32:42,480
+Now how do we derive this?
+
+882
+00:32:40,720 --> 00:32:44,480
+The idea is straightforward. The
+
+883
+00:32:42,480 --> 00:32:47,279
+wavelength times the frequency gives you
+
+884
+00:32:44,480 --> 00:32:49,600
+the speed of the soundwave. meaning ca
+
+885
+00:32:47,279 --> 00:32:52,080
+FXL.
+
+886
+00:32:49,600 --> 00:32:53,679
+The term voa represents the velocity
+
+887
+00:32:52,080 --> 00:32:56,159
+component of motion in the direction of
+
+888
+00:32:53,679 --> 00:32:58,480
+the beam. Together these describe the
+
+889
+00:32:56,159 --> 00:33:00,880
+relative velocity between the transducer
+
+890
+00:32:58,480 --> 00:33:02,799
+and the moving target.
+
+891
+00:33:00,880 --> 00:33:05,760
+The incident frequency of the ultrasound
+
+892
+00:33:02,799 --> 00:33:08,000
+is denoted fi which equals c divided by
+
+893
+00:33:05,760 --> 00:33:10,080
+l. The difference between the incident
+
+894
+00:33:08,000 --> 00:33:12,720
+frequency and the reflected frequency is
+
+895
+00:33:10,080 --> 00:33:14,559
+shown in the last equation.
+
+896
+00:33:12,720 --> 00:33:16,720
+This frequency difference called the
+
+897
+00:33:14,559 --> 00:33:18,720
+Doppler frequency shift allows you to
+
+898
+00:33:16,720 --> 00:33:21,279
+calculate the velocity component along
+
+899
+00:33:18,720 --> 00:33:23,440
+the beam direction. So from the measured
+
+900
+00:33:21,279 --> 00:33:25,679
+shift, you can infer how fast the blood
+
+901
+00:33:23,440 --> 00:33:27,760
+or tissue is moving toward or away from
+
+902
+00:33:25,679 --> 00:33:29,440
+the transducer.
+
+903
+00:33:27,760 --> 00:33:31,279
+This may not be immediately clear from
+
+904
+00:33:29,440 --> 00:33:33,360
+the formulas. So let's use a simple
+
+905
+00:33:31,279 --> 00:33:36,760
+cartoon to understand why this Doppler
+
+906
+00:33:33,360 --> 00:33:36,760
+shift happens.
+
+907
+00:33:38,240 --> 00:33:42,000
+So you think, look at this. The
+
+908
+00:33:40,000 --> 00:33:43,840
+transducer sends out ultrasound waves at
+
+909
+00:33:42,000 --> 00:33:46,480
+the speed of C toward a stationary
+
+910
+00:33:43,840 --> 00:33:48,960
+object. In this case, the speed C equals
+
+911
+00:33:46,480 --> 00:33:50,960
+frequency time wavelength.
+
+912
+00:33:48,960 --> 00:33:53,679
+The wavelength is basically how far the
+
+913
+00:33:50,960 --> 00:33:56,159
+wave moves during one vibration. And how
+
+914
+00:33:53,679 --> 00:33:58,640
+many times do you vibrate?
+
+915
+00:33:56,159 --> 00:34:01,679
+That's the frequency. So frequency time
+
+916
+00:33:58,640 --> 00:34:03,440
+wavelength equals the speed C.
+
+917
+00:34:01,679 --> 00:34:05,679
+Now in one unit of time in this
+
+918
+00:34:03,440 --> 00:34:07,760
+stationary case, you see four pulses. I
+
+919
+00:34:05,679 --> 00:34:09,760
+should make that plural. Four pulses are
+
+920
+00:34:07,760 --> 00:34:11,919
+sent into the object.
+
+921
+00:34:09,760 --> 00:34:13,839
+This is the reference situation. This
+
+922
+00:34:11,919 --> 00:34:16,000
+simple example gives you the baseline
+
+923
+00:34:13,839 --> 00:34:18,079
+idea and I just drew more examples to
+
+924
+00:34:16,000 --> 00:34:20,639
+make it clearer.
+
+925
+00:34:18,079 --> 00:34:22,639
+Now think about the moving situation. I
+
+926
+00:34:20,639 --> 00:34:25,119
+say when the object is moving, you will
+
+927
+00:34:22,639 --> 00:34:27,119
+see the apparent frequency change. How
+
+928
+00:34:25,119 --> 00:34:28,960
+does that happen?
+
+929
+00:34:27,119 --> 00:34:30,800
+Think about this. Let's say this same
+
+930
+00:34:28,960 --> 00:34:32,960
+stationary object now starts a steady
+
+931
+00:34:30,800 --> 00:34:34,960
+motion toward the transducer. This is
+
+932
+00:34:32,960 --> 00:34:36,960
+just for simplicity. In fact, the
+
+933
+00:34:34,960 --> 00:34:39,520
+object's motion is also at a certain
+
+934
+00:34:36,960 --> 00:34:42,240
+velocity denoted V. and the sound itself
+
+935
+00:34:39,520 --> 00:34:44,320
+travels with velocity C.
+
+936
+00:34:42,240 --> 00:34:46,960
+So in one unit of time the sound will
+
+937
+00:34:44,320 --> 00:34:49,440
+travel a distance C. In that same unit
+
+938
+00:34:46,960 --> 00:34:51,200
+time you have four pulses sent into the
+
+939
+00:34:49,440 --> 00:34:53,440
+object.
+
+940
+00:34:51,200 --> 00:34:56,159
+But now in the second case the object is
+
+941
+00:34:53,440 --> 00:34:58,160
+moving also with velocity V. So within
+
+942
+00:34:56,159 --> 00:35:00,640
+that same unit time the moving object
+
+943
+00:34:58,160 --> 00:35:02,320
+will cover a certain distance because it
+
+944
+00:35:00,640 --> 00:35:04,000
+covers that distance. If it was
+
+945
+00:35:02,320 --> 00:35:05,839
+stationary it would have received four
+
+946
+00:35:04,000 --> 00:35:07,440
+pulses.
+
+947
+00:35:05,839 --> 00:35:09,440
+But now since it moves toward the
+
+948
+00:35:07,440 --> 00:35:11,359
+transducer, those four pulses that were
+
+949
+00:35:09,440 --> 00:35:14,400
+still traveling through space are caught
+
+950
+00:35:11,359 --> 00:35:16,320
+or eaten up by the moving object.
+
+951
+00:35:14,400 --> 00:35:18,480
+So this object will intercept not just
+
+952
+00:35:16,320 --> 00:35:20,000
+the original four pulses, but also an
+
+953
+00:35:18,480 --> 00:35:22,240
+additional four pulses that were on
+
+954
+00:35:20,000 --> 00:35:24,400
+their way. Altogether, you now have
+
+955
+00:35:22,240 --> 00:35:26,880
+eight pulses entering the object in one
+
+956
+00:35:24,400 --> 00:35:29,200
+unit of time. Let's assume the object is
+
+957
+00:35:26,880 --> 00:35:31,119
+a perfect reflector.
+
+958
+00:35:29,200 --> 00:35:32,800
+In the first case, when the object is
+
+959
+00:35:31,119 --> 00:35:34,800
+stationary, you have four pulses
+
+960
+00:35:32,800 --> 00:35:38,000
+entering and it will reflect four pulses
+
+961
+00:35:34,800 --> 00:35:40,000
+within that unit time. So you receive
+
+962
+00:35:38,000 --> 00:35:41,760
+four reflected pulses and that gives you
+
+963
+00:35:40,000 --> 00:35:44,400
+the same frequency as the transmitted
+
+964
+00:35:41,760 --> 00:35:46,320
+one. No frequency change. The object
+
+965
+00:35:44,400 --> 00:35:49,359
+vibrates four times and you see four
+
+966
+00:35:46,320 --> 00:35:51,280
+reflected waves per unit time.
+
+967
+00:35:49,359 --> 00:35:53,359
+But in the second case, when the object
+
+968
+00:35:51,280 --> 00:35:55,680
+is moving toward the transducer, it
+
+969
+00:35:53,359 --> 00:35:58,000
+takes eight pulses within the same time
+
+970
+00:35:55,680 --> 00:35:59,599
+period. If it is a perfect reflector,
+
+971
+00:35:58,000 --> 00:36:02,880
+those eight pulses are now reflected
+
+972
+00:35:59,599 --> 00:36:04,960
+back within one unit of time. So the
+
+973
+00:36:02,880 --> 00:36:06,960
+reflected signal contains eight pulses
+
+974
+00:36:04,960 --> 00:36:09,359
+per unit time, meaning the reflected
+
+975
+00:36:06,960 --> 00:36:11,440
+frequency is doubled.
+
+976
+00:36:09,359 --> 00:36:13,520
+This is how a moving object changes the
+
+977
+00:36:11,440 --> 00:36:15,440
+reflected frequency. You get a signal
+
+978
+00:36:13,520 --> 00:36:16,640
+reflected back with a higher frequency.
+
+979
+00:36:15,440 --> 00:36:18,320
+And the difference between the
+
+980
+00:36:16,640 --> 00:36:20,640
+stationary and moving cases is the
+
+981
+00:36:18,320 --> 00:36:22,800
+Doppler effect.
+
+982
+00:36:20,640 --> 00:36:24,560
+So this is the idea. Think about this
+
+983
+00:36:22,800 --> 00:36:26,640
+simple diagram and then review the
+
+984
+00:36:24,560 --> 00:36:28,160
+equations again. If you consider the
+
+985
+00:36:26,640 --> 00:36:29,839
+connection between this cartoon and
+
+986
+00:36:28,160 --> 00:36:31,599
+those equations, you'll gain a much
+
+987
+00:36:29,839 --> 00:36:33,119
+better understanding of the formula,
+
+988
+00:36:31,599 --> 00:36:35,599
+especially the one involving the
+
+989
+00:36:33,119 --> 00:36:37,119
+velocity component.
+
+990
+00:36:35,599 --> 00:36:38,720
+Only the portion of the velocity
+
+991
+00:36:37,119 --> 00:36:40,640
+component along the beam direction
+
+992
+00:36:38,720 --> 00:36:42,480
+contributes to the observed frequency
+
+993
+00:36:40,640 --> 00:36:44,160
+shift, which is the measurable carrying
+
+994
+00:36:42,480 --> 00:36:46,240
+frequency.
+
+995
+00:36:44,160 --> 00:36:48,640
+The incident frequency is the
+
+996
+00:36:46,240 --> 00:36:50,960
+transmitted one and the frequency shift,
+
+997
+00:36:48,640 --> 00:36:53,119
+the Doppler shift, is their difference.
+
+998
+00:36:50,960 --> 00:36:55,839
+This normalization factor is simply the
+
+999
+00:36:53,119 --> 00:36:57,599
+speed of sound C.
+
+1000
+00:36:55,839 --> 00:36:59,440
+Think of it this way. Half of the
+
+1001
+00:36:57,599 --> 00:37:01,599
+transmitted power goes out, then it
+
+1002
+00:36:59,440 --> 00:37:03,920
+returns after reflection. That's the
+
+1003
+00:37:01,599 --> 00:37:06,320
+essence of the Doppler imaging process.
+
+1004
+00:37:03,920 --> 00:37:08,240
+Doppler imaging is a crucial part of the
+
+1005
+00:37:06,320 --> 00:37:10,480
+ultrasound chapter. And to truly
+
+1006
+00:37:08,240 --> 00:37:12,240
+understand it, the key is to grasp this
+
+1007
+00:37:10,480 --> 00:37:13,920
+formula.
+
+1008
+00:37:12,240 --> 00:37:15,599
+Following the derivation might not be
+
+1009
+00:37:13,920 --> 00:37:17,760
+entirely clear at first, but with the
+
+1010
+00:37:15,599 --> 00:37:19,680
+cartoon analogy, you can visualize how
+
+1011
+00:37:17,760 --> 00:37:21,520
+the Doppler frequency shift is
+
+1012
+00:37:19,680 --> 00:37:23,200
+generated.
+
+1013
+00:37:21,520 --> 00:37:25,520
+The same idea applies across all
+
+1014
+00:37:23,200 --> 00:37:27,520
+situations. So follow these formulas
+
+1015
+00:37:25,520 --> 00:37:29,280
+systematically.
+
+1016
+00:37:27,520 --> 00:37:30,960
+Then you'll see what's going on. Why
+
+1017
+00:37:29,280 --> 00:37:32,800
+there's a connection between the Doppler
+
+1018
+00:37:30,960 --> 00:37:34,480
+frequency shift and the velocity
+
+1019
+00:37:32,800 --> 00:37:37,280
+component that you're measuring along
+
+1020
+00:37:34,480 --> 00:37:39,119
+the ultrasound beam direction.
+
+1021
+00:37:37,280 --> 00:37:42,160
+If the motion is parallel to the beam,
+
+1022
+00:37:39,119 --> 00:37:44,079
+the Doppler shift is at its maximum.
+
+1023
+00:37:42,160 --> 00:37:46,160
+If the motion is perpendicular to the
+
+1024
+00:37:44,079 --> 00:37:48,240
+beam, you cannot measure it. You can
+
+1025
+00:37:46,160 --> 00:37:50,720
+only measure the Doppler frequency shift
+
+1026
+00:37:48,240 --> 00:37:52,880
+along the beam direction.
+
+1027
+00:37:50,720 --> 00:37:54,320
+This is a simple idea but it gives you a
+
+1028
+00:37:52,880 --> 00:37:57,640
+very good understanding of what's
+
+1029
+00:37:54,320 --> 00:37:57,640
+happening physically.
+
+1030
+00:37:59,280 --> 00:38:03,119
+Now let's talk about how Doppler imaging
+
+1031
+00:38:01,119 --> 00:38:05,920
+is actually performed. You can use a
+
+1032
+00:38:03,119 --> 00:38:08,320
+continuous wave CW method where you keep
+
+1033
+00:38:05,920 --> 00:38:10,960
+sending ultrasound waves continuously or
+
+1034
+00:38:08,320 --> 00:38:13,680
+a pulseed wave PW method where you send
+
+1035
+00:38:10,960 --> 00:38:16,240
+one pulse at a time a train of pulses to
+
+1036
+00:38:13,680 --> 00:38:17,839
+measure the Doppler information.
+
+1037
+00:38:16,240 --> 00:38:19,760
+Another important technique is
+
+1038
+00:38:17,839 --> 00:38:21,680
+echoorrelation where you send one
+
+1039
+00:38:19,760 --> 00:38:23,520
+signal, receive it back, then send
+
+1040
+00:38:21,680 --> 00:38:25,680
+another signal and again receive it
+
+1041
+00:38:23,520 --> 00:38:27,440
+back. By comparing the relative phase
+
+1042
+00:38:25,680 --> 00:38:29,599
+changes through correlation, you can
+
+1043
+00:38:27,440 --> 00:38:31,200
+detect motion.
+
+1044
+00:38:29,599 --> 00:38:33,200
+Correlation tells you how much one
+
+1045
+00:38:31,200 --> 00:38:35,440
+signal matches another. In the
+
+1046
+00:38:33,200 --> 00:38:37,760
+foundation part, we mentioned the Kchi
+
+1047
+00:38:35,440 --> 00:38:39,839
+Schwartz inequality which states that if
+
+1048
+00:38:37,760 --> 00:38:41,839
+two waveforms are perfectly correlated,
+
+1049
+00:38:39,839 --> 00:38:44,000
+they represent the same event at a
+
+1050
+00:38:41,839 --> 00:38:45,520
+specific location.
+
+1051
+00:38:44,000 --> 00:38:47,200
+When the reflector moves, the
+
+1052
+00:38:45,520 --> 00:38:48,800
+correlation pattern shifts, which
+
+1053
+00:38:47,200 --> 00:38:51,839
+reveals how much the object has
+
+1054
+00:38:48,800 --> 00:38:53,760
+displaced between the two measurements.
+
+1055
+00:38:51,839 --> 00:38:56,160
+You can also combine Doppler imaging
+
+1056
+00:38:53,760 --> 00:38:58,480
+with Bode imaging. The B mode provides
+
+1057
+00:38:56,160 --> 00:39:01,200
+an anatomical background, essentially a
+
+1058
+00:38:58,480 --> 00:39:03,280
+grayscale structural image.
+
+1059
+00:39:01,200 --> 00:39:05,680
+If you have multiple two-dimensional
+
+1060
+00:39:03,280 --> 00:39:08,160
+BODE slices, you can reconstruct a
+
+1061
+00:39:05,680 --> 00:39:10,160
+three-dimensional ultrasound volume. On
+
+1062
+00:39:08,160 --> 00:39:11,760
+top of this anatomical structure, you
+
+1063
+00:39:10,160 --> 00:39:13,359
+can superimpose the velocity
+
+1064
+00:39:11,760 --> 00:39:15,200
+distribution obtained from Doppler
+
+1065
+00:39:13,359 --> 00:39:17,200
+measurements.
+
+1066
+00:39:15,200 --> 00:39:19,839
+Velocity is a vector quantity, meaning
+
+1067
+00:39:17,200 --> 00:39:22,079
+it has both amplitude and direction. You
+
+1068
+00:39:19,839 --> 00:39:24,480
+can visualize these vectors using color
+
+1069
+00:39:22,079 --> 00:39:26,480
+coding. For example, motion in one
+
+1070
+00:39:24,480 --> 00:39:28,079
+direction may appear in red, motion in
+
+1071
+00:39:26,480 --> 00:39:29,760
+the opposite direction may appear in
+
+1072
+00:39:28,079 --> 00:39:32,640
+green, and another perpendicular
+
+1073
+00:39:29,760 --> 00:39:34,720
+direction may be shown in blue. The
+
+1074
+00:39:32,640 --> 00:39:36,800
+color intensity represents the velocity
+
+1075
+00:39:34,720 --> 00:39:38,720
+amplitude. With this color flow
+
+1076
+00:39:36,800 --> 00:39:40,560
+encoding, you can visualize the complete
+
+1077
+00:39:38,720 --> 00:39:42,720
+velocity field superimposed on the
+
+1078
+00:39:40,560 --> 00:39:44,960
+anatomical image. This combined
+
+1079
+00:39:42,720 --> 00:39:48,000
+visualization structural plus velocity
+
+1080
+00:39:44,960 --> 00:39:49,680
+is the essence of Doppler imaging.
+
+1081
+00:39:48,000 --> 00:39:53,720
+Now let's go step by step to see how
+
+1082
+00:39:49,680 --> 00:39:53,720
+each method works in practice.
+
+1083
+00:39:55,040 --> 00:39:58,720
+These concepts are quite straightforward
+
+1084
+00:39:56,880 --> 00:40:00,480
+and it's good to know them as part of
+
+1085
+00:39:58,720 --> 00:40:02,720
+your general understanding. In
+
+1086
+00:40:00,480 --> 00:40:05,200
+continuous wave Doppler, the transducer
+
+1087
+00:40:02,720 --> 00:40:07,520
+is divided into two separate parts. one
+
+1088
+00:40:05,200 --> 00:40:09,200
+part for transmission and the other for
+
+1089
+00:40:07,520 --> 00:40:11,200
+reception.
+
+1090
+00:40:09,200 --> 00:40:12,880
+The transmitting part continuously sends
+
+1091
+00:40:11,200 --> 00:40:14,560
+ultrasound waves toward the region of
+
+1092
+00:40:12,880 --> 00:40:16,320
+interest while the receiving part
+
+1093
+00:40:14,560 --> 00:40:18,160
+continuously collects the reflected
+
+1094
+00:40:16,320 --> 00:40:20,240
+signals.
+
+1095
+00:40:18,160 --> 00:40:22,400
+So you have a single transducer housing
+
+1096
+00:40:20,240 --> 00:40:24,079
+two elements. One is always sending and
+
+1097
+00:40:22,400 --> 00:40:25,760
+the other is always listening. The
+
+1098
+00:40:24,079 --> 00:40:27,359
+signal that is sent out has a fixed
+
+1099
+00:40:25,760 --> 00:40:29,200
+transmission frequency while the
+
+1100
+00:40:27,359 --> 00:40:30,640
+reflected signal may have a slightly
+
+1101
+00:40:29,200 --> 00:40:33,680
+different frequency because of the
+
+1102
+00:40:30,640 --> 00:40:35,359
+Doppler shift caused by motion.
+
+1103
+00:40:33,680 --> 00:40:37,599
+What you send and what you receive
+
+1104
+00:40:35,359 --> 00:40:39,119
+differ slightly in frequency and that
+
+1105
+00:40:37,599 --> 00:40:40,960
+difference directly relates to the
+
+1106
+00:40:39,119 --> 00:40:42,640
+motion along the ultrasound beam
+
+1107
+00:40:40,960 --> 00:40:44,400
+direction.
+
+1108
+00:40:42,640 --> 00:40:47,280
+The region of interest is where the
+
+1109
+00:40:44,400 --> 00:40:49,200
+transmitted and received beams overlap.
+
+1110
+00:40:47,280 --> 00:40:50,960
+This overlapping region is the sensitive
+
+1111
+00:40:49,200 --> 00:40:52,640
+zone from which the Doppler signals are
+
+1112
+00:40:50,960 --> 00:40:54,560
+detected.
+
+1113
+00:40:52,640 --> 00:40:56,640
+If the reflection occurs outside that
+
+1114
+00:40:54,560 --> 00:40:58,400
+overlap, the signal will not be received
+
+1115
+00:40:56,640 --> 00:41:00,560
+effectively.
+
+1116
+00:40:58,400 --> 00:41:02,560
+In summary, continuous wave Doppler
+
+1117
+00:41:00,560 --> 00:41:04,880
+requires two separate elements, one for
+
+1118
+00:41:02,560 --> 00:41:06,720
+emission and one for detection because a
+
+1119
+00:41:04,880 --> 00:41:09,920
+single element cannot transmit and
+
+1120
+00:41:06,720 --> 00:41:12,560
+receive continuously at the same time.
+
+1121
+00:41:09,920 --> 00:41:14,400
+So CW Doppler uses continuous waves for
+
+1122
+00:41:12,560 --> 00:41:15,920
+both sending and receiving providing
+
+1123
+00:41:14,400 --> 00:41:20,119
+constant velocity measurement but
+
+1124
+00:41:15,920 --> 00:41:20,119
+without specific depth localization.
+
+1125
+00:41:21,920 --> 00:41:25,599
+Now let's take a closer look at what
+
+1126
+00:41:23,599 --> 00:41:27,599
+actually happens to the signal. You have
+
+1127
+00:41:25,599 --> 00:41:29,599
+one signal going in and another signal
+
+1128
+00:41:27,599 --> 00:41:31,680
+coming out. The input signal is
+
+1129
+00:41:29,599 --> 00:41:34,000
+transmitted at a certain frequency which
+
+1130
+00:41:31,680 --> 00:41:36,160
+we call FI while the receive signal
+
+1131
+00:41:34,000 --> 00:41:38,720
+includes a small Doppler frequency shift
+
+1132
+00:41:36,160 --> 00:41:40,720
+noted as delta F.
+
+1133
+00:41:38,720 --> 00:41:44,160
+So the frequency of the returning signal
+
+1134
+00:41:40,720 --> 00:41:46,240
+becomes FI plus delta F. This delta F
+
+1135
+00:41:44,160 --> 00:41:47,920
+can be either positive or negative
+
+1136
+00:41:46,240 --> 00:41:49,920
+depending on whether the target is
+
+1137
+00:41:47,920 --> 00:41:51,839
+moving toward or away from the
+
+1138
+00:41:49,920 --> 00:41:54,000
+transducer.
+
+1139
+00:41:51,839 --> 00:41:56,319
+Using digital signal processing, we can
+
+1140
+00:41:54,000 --> 00:41:58,240
+compare these two signals. The received
+
+1141
+00:41:56,319 --> 00:42:00,560
+signal is multiplied by the reference
+
+1142
+00:41:58,240 --> 00:42:02,560
+signal generated by the transmitter. And
+
+1143
+00:42:00,560 --> 00:42:04,240
+this multiplication is performed by a
+
+1144
+00:42:02,560 --> 00:42:07,599
+circuit called a mixer, which
+
+1145
+00:42:04,240 --> 00:42:09,440
+effectively combines the two signals.
+
+1146
+00:42:07,599 --> 00:42:11,200
+Mathematically, this creates two
+
+1147
+00:42:09,440 --> 00:42:13,359
+components. One at a very high
+
+1148
+00:42:11,200 --> 00:42:15,760
+frequency, which is the sum of the two,
+
+1149
+00:42:13,359 --> 00:42:17,680
+and one at a much lower frequency, which
+
+1150
+00:42:15,760 --> 00:42:20,319
+is their difference.
+
+1151
+00:42:17,680 --> 00:42:22,079
+Since the transmitted frequency fi is in
+
+1152
+00:42:20,319 --> 00:42:24,720
+the high ultrasound range and the
+
+1153
+00:42:22,079 --> 00:42:26,960
+Doppler shift delta F is quite small, we
+
+1154
+00:42:24,720 --> 00:42:28,720
+use a low pass filter to remove the high
+
+1155
+00:42:26,960 --> 00:42:30,640
+frequency component and keep only the
+
+1156
+00:42:28,720 --> 00:42:32,800
+low frequency term that carries the
+
+1157
+00:42:30,640 --> 00:42:34,640
+Doppler information.
+
+1158
+00:42:32,800 --> 00:42:38,000
+After filtering the output signal is
+
+1159
+00:42:34,640 --> 00:42:40,880
+proportional to a / 2 * cosine of 2 pi *
+
+1160
+00:42:38,000 --> 00:42:42,640
+delta f * t where a is the amplitude of
+
+1161
+00:42:40,880 --> 00:42:44,640
+the signal.
+
+1162
+00:42:42,640 --> 00:42:46,480
+This low-frequency signal represents the
+
+1163
+00:42:44,640 --> 00:42:48,560
+Doppler shift itself and allows us to
+
+1164
+00:42:46,480 --> 00:42:52,400
+estimate the velocity V using the
+
+1165
+00:42:48,560 --> 00:42:57,520
+formula you saw earlier. Delta F= 2 * FI
+
+1166
+00:42:52,400 --> 00:42:59,760
+* V * cosine theta / C. So by measuring
+
+1167
+00:42:57,520 --> 00:43:01,680
+delta F, we can determine how fast the
+
+1168
+00:42:59,760 --> 00:43:04,160
+object is moving along the ultrasound
+
+1169
+00:43:01,680 --> 00:43:06,319
+beam direction. However, remember that
+
+1170
+00:43:04,160 --> 00:43:08,560
+continuous wave Doppler does not provide
+
+1171
+00:43:06,319 --> 00:43:10,720
+depth information.
+
+1172
+00:43:08,560 --> 00:43:12,560
+It tells you the velocity but not the
+
+1173
+00:43:10,720 --> 00:43:14,560
+exact location of the moving target
+
+1174
+00:43:12,560 --> 00:43:16,800
+because the transducer is transmitting
+
+1175
+00:43:14,560 --> 00:43:19,359
+and receiving continuously along the
+
+1176
+00:43:16,800 --> 00:43:21,520
+entire beam path. So continuous wave
+
+1177
+00:43:19,359 --> 00:43:25,160
+Doppler gives accurate velocity data but
+
+1178
+00:43:21,520 --> 00:43:25,160
+without depth resolution.
+
+1179
+00:43:26,640 --> 00:43:31,040
+The second mode we use is called pulseed
+
+1180
+00:43:28,800 --> 00:43:33,599
+wave Doppler. In this mode we do not
+
+1181
+00:43:31,040 --> 00:43:35,760
+send ultrasound continuously.
+
+1182
+00:43:33,599 --> 00:43:38,079
+Instead, we transmit a series of short
+
+1183
+00:43:35,760 --> 00:43:40,560
+pulses almost like delta functions
+
+1184
+00:43:38,079 --> 00:43:42,400
+separated in time. It's not exactly a
+
+1185
+00:43:40,560 --> 00:43:44,160
+delta function, but it's very narrow in
+
+1186
+00:43:42,400 --> 00:43:46,400
+duration.
+
+1187
+00:43:44,160 --> 00:43:48,240
+So, at time one, you send out the first
+
+1188
+00:43:46,400 --> 00:43:50,640
+pulse into the tissue along the time
+
+1189
+00:43:48,240 --> 00:43:52,400
+axis. Then, after receiving the echo
+
+1190
+00:43:50,640 --> 00:43:55,359
+back, at time two, you send out the
+
+1191
+00:43:52,400 --> 00:43:57,280
+second pulse, and so on. Each pulse
+
+1192
+00:43:55,359 --> 00:43:58,800
+travels into the tissue, reflects from
+
+1193
+00:43:57,280 --> 00:44:01,119
+structures, and returns to the
+
+1194
+00:43:58,800 --> 00:44:03,040
+transducer. The process repeats again
+
+1195
+00:44:01,119 --> 00:44:04,880
+and again, one pulse at a time, to
+
+1196
+00:44:03,040 --> 00:44:08,760
+measure motion and flow at specific
+
+1197
+00:44:04,880 --> 00:44:08,760
+depths within the body.
+
+1198
+00:44:10,079 --> 00:44:14,079
+Now, I've included here two images from
+
+1199
+00:44:12,240 --> 00:44:16,400
+another textbook that show this more
+
+1200
+00:44:14,079 --> 00:44:18,319
+graphically. You can see how the pulses
+
+1201
+00:44:16,400 --> 00:44:20,640
+are sent one after another into the
+
+1202
+00:44:18,319 --> 00:44:22,319
+biological tissue.
+
+1203
+00:44:20,640 --> 00:44:24,640
+Between each transmitted pulse, there is
+
+1204
+00:44:22,319 --> 00:44:26,880
+a fixed time delay. That time interval
+
+1205
+00:44:24,640 --> 00:44:28,560
+is the pulse repetition period and the
+
+1206
+00:44:26,880 --> 00:44:30,960
+inverse of that is called the pulse
+
+1207
+00:44:28,560 --> 00:44:32,560
+repetition frequency.
+
+1208
+00:44:30,960 --> 00:44:34,720
+This repetition rate is an important
+
+1209
+00:44:32,560 --> 00:44:36,800
+parameter because it determines how deep
+
+1210
+00:44:34,720 --> 00:44:39,440
+your ultrasound can penetrate and how
+
+1211
+00:44:36,800 --> 00:44:41,359
+fast you can sample motion.
+
+1212
+00:44:39,440 --> 00:44:43,280
+Each pulse travels into the tissue and
+
+1213
+00:44:41,359 --> 00:44:45,040
+produces echoes that return at different
+
+1214
+00:44:43,280 --> 00:44:47,280
+times depending on the depth of the
+
+1215
+00:44:45,040 --> 00:44:49,200
+reflecting structure.
+
+1216
+00:44:47,280 --> 00:44:52,000
+These returning echoes, let's call them
+
+1217
+00:44:49,200 --> 00:44:53,760
+echo 1, echo 2, echo3, come from
+
+1218
+00:44:52,000 --> 00:44:56,800
+slightly different layers or scattering
+
+1219
+00:44:53,760 --> 00:44:58,880
+surfaces inside the tissue. If there is
+
+1220
+00:44:56,800 --> 00:45:02,079
+no motion, the interval between
+
+1221
+00:44:58,880 --> 00:45:04,000
+successive echoes remains the same. But
+
+1222
+00:45:02,079 --> 00:45:06,000
+if there is motion uh for instance,
+
+1223
+00:45:04,000 --> 00:45:08,400
+blood flowing or tissue moving, that
+
+1224
+00:45:06,000 --> 00:45:10,000
+spacing changes slightly. By measuring
+
+1225
+00:45:08,400 --> 00:45:13,359
+the change in the timing or phase of
+
+1226
+00:45:10,000 --> 00:45:15,200
+these echoes, we can estimate velocity.
+
+1227
+00:45:13,359 --> 00:45:17,440
+In pulse wave Doppler, we can also
+
+1228
+00:45:15,200 --> 00:45:20,000
+target a specific depth, often referred
+
+1229
+00:45:17,440 --> 00:45:21,760
+to as the gate depth. This means we can
+
+1230
+00:45:20,000 --> 00:45:24,880
+focus the measurement on a particular
+
+1231
+00:45:21,760 --> 00:45:27,040
+region of interest within the body. The
+
+1232
+00:45:24,880 --> 00:45:29,839
+operator can adjust this gate, make it
+
+1233
+00:45:27,040 --> 00:45:31,920
+deeper, shallower, wider, or narrower to
+
+1234
+00:45:29,839 --> 00:45:33,920
+control the resolution and sensitivity
+
+1235
+00:45:31,920 --> 00:45:36,079
+of the measurement.
+
+1236
+00:45:33,920 --> 00:45:37,920
+By analyzing how the returned echoes
+
+1237
+00:45:36,079 --> 00:45:39,839
+shift over time, we can extract
+
+1238
+00:45:37,920 --> 00:45:43,800
+information about both motion and flow
+
+1239
+00:45:39,839 --> 00:45:43,800
+at that specific location.
+
+1240
+00:45:45,440 --> 00:45:49,760
+Let's imagine we send a pulse to a
+
+1241
+00:45:47,280 --> 00:45:52,079
+stationary target, say a student sitting
+
+1242
+00:45:49,760 --> 00:45:55,119
+still. The pulse travels to that target
+
+1243
+00:45:52,079 --> 00:45:57,040
+and comes back after a certain time.
+
+1244
+00:45:55,119 --> 00:45:58,560
+Suppose it takes exactly 100
+
+1245
+00:45:57,040 --> 00:46:01,760
+milliseconds for the sound to make the
+
+1246
+00:45:58,560 --> 00:46:04,079
+round trip. If we send a second pulse
+
+1247
+00:46:01,760 --> 00:46:05,920
+after 1 second, that second echo will
+
+1248
+00:46:04,079 --> 00:46:07,760
+return at the same delay, 100
+
+1249
+00:46:05,920 --> 00:46:10,079
+milliseconds, if the target hasn't
+
+1250
+00:46:07,760 --> 00:46:12,960
+moved. Both echoes will look identical
+
+1251
+00:46:10,079 --> 00:46:14,880
+because the distance hasn't changed.
+
+1252
+00:46:12,960 --> 00:46:16,880
+But now if that student moves slightly
+
+1253
+00:46:14,880 --> 00:46:18,560
+toward us, the second echo will arrive a
+
+1254
+00:46:16,880 --> 00:46:20,079
+bit earlier. The return time becomes
+
+1255
+00:46:18,560 --> 00:46:21,760
+shorter.
+
+1256
+00:46:20,079 --> 00:46:23,920
+The peak of the echo signal shifts
+
+1257
+00:46:21,760 --> 00:46:25,839
+forward in time. This small timing
+
+1258
+00:46:23,920 --> 00:46:28,880
+change or phase shift tells us that
+
+1259
+00:46:25,839 --> 00:46:30,720
+motion has occurred. If the target moves
+
+1260
+00:46:28,880 --> 00:46:32,480
+rhythmically, for example, the surface
+
+1261
+00:46:30,720 --> 00:46:34,400
+is oscillating, the measured signal
+
+1262
+00:46:32,480 --> 00:46:36,720
+amplitude will fluctuate up and down
+
+1263
+00:46:34,400 --> 00:46:38,960
+around the average line.
+
+1264
+00:46:36,720 --> 00:46:41,119
+We record this oscillating signal over
+
+1265
+00:46:38,960 --> 00:46:43,440
+time and then perform a forier transform
+
+1266
+00:46:41,119 --> 00:46:45,680
+on it. This mathematical operation
+
+1267
+00:46:43,440 --> 00:46:48,560
+converts the time domain signal into a
+
+1268
+00:46:45,680 --> 00:46:50,079
+frequency domain representation.
+
+1269
+00:46:48,560 --> 00:46:51,839
+The resulting frequency shift
+
+1270
+00:46:50,079 --> 00:46:54,079
+corresponds to the Doppler frequency
+
+1271
+00:46:51,839 --> 00:46:56,480
+which reflects the motion or velocity of
+
+1272
+00:46:54,079 --> 00:46:58,400
+the surface or fluid.
+
+1273
+00:46:56,480 --> 00:47:01,119
+Usually the motion is not perfectly
+
+1274
+00:46:58,400 --> 00:47:03,440
+uniform but has some periodic pattern.
+
+1275
+00:47:01,119 --> 00:47:07,440
+By analyzing these Doppler frequencies,
+
+1276
+00:47:03,440 --> 00:47:09,680
+we can quantify that motion precisely.
+
+1277
+00:47:07,440 --> 00:47:12,079
+So this is the basic idea behind pulseed
+
+1278
+00:47:09,680 --> 00:47:14,079
+wave Doppler. It's slightly more complex
+
+1279
+00:47:12,079 --> 00:47:16,160
+than continuous wave Doppler, but it has
+
+1280
+00:47:14,079 --> 00:47:19,200
+a major advantage. It allows us to
+
+1281
+00:47:16,160 --> 00:47:20,560
+measure motion at a specific depth.
+
+1282
+00:47:19,200 --> 00:47:22,560
+We'll look at some examples and
+
+1283
+00:47:20,560 --> 00:47:26,119
+waveforms shortly to illustrate how this
+
+1284
+00:47:22,560 --> 00:47:26,119
+works in practice.
+
+1285
+00:47:27,599 --> 00:47:31,440
+Now let's talk about the pulse wave
+
+1286
+00:47:29,280 --> 00:47:34,079
+Doppler mode. In this method, we don't
+
+1287
+00:47:31,440 --> 00:47:36,079
+use a continuous wave.
+
+1288
+00:47:34,079 --> 00:47:38,319
+Instead, we send out short separated
+
+1289
+00:47:36,079 --> 00:47:40,800
+pulses, each one acting somewhat like a
+
+1290
+00:47:38,319 --> 00:47:42,480
+delta function. It's not exactly a delta
+
+1291
+00:47:40,800 --> 00:47:44,000
+function, but it behaves like one in
+
+1292
+00:47:42,480 --> 00:47:46,160
+time.
+
+1293
+00:47:44,000 --> 00:47:48,240
+So, at time one, you send out a pulse
+
+1294
+00:47:46,160 --> 00:47:50,880
+into the tissue and after a short delay,
+
+1295
+00:47:48,240 --> 00:47:52,720
+you receive the echo back. Then at time
+
+1296
+00:47:50,880 --> 00:47:55,440
+two, you send the next pulse and again,
+
+1297
+00:47:52,720 --> 00:47:57,280
+you wait for the return signal.
+
+1298
+00:47:55,440 --> 00:48:00,000
+You keep sending these pulses one after
+
+1299
+00:47:57,280 --> 00:48:01,839
+another in sequence. Each pulse travels
+
+1300
+00:48:00,000 --> 00:48:03,599
+into the tissue, interacts with the
+
+1301
+00:48:01,839 --> 00:48:05,520
+structures, and returns as a back
+
+1302
+00:48:03,599 --> 00:48:07,839
+scattered echo.
+
+1303
+00:48:05,520 --> 00:48:09,280
+The transducer then captures this echo
+
+1304
+00:48:07,839 --> 00:48:11,280
+signal, allowing you to measure
+
+1305
+00:48:09,280 --> 00:48:15,319
+reflections from specific depths, what
+
+1306
+00:48:11,280 --> 00:48:15,319
+we call the range gate.
+
+1307
+00:48:16,560 --> 00:48:20,960
+And I pause the wave and I have two more
+
+1308
+00:48:18,640 --> 00:48:22,960
+ways to show you. So, let me just show
+
+1309
+00:48:20,960 --> 00:48:25,200
+you again. I hope the computer will not
+
+1310
+00:48:22,960 --> 00:48:27,440
+mess up, but I think good for you to see
+
+1311
+00:48:25,200 --> 00:48:30,800
+two more ways here.
+
+1312
+00:48:27,440 --> 00:48:32,559
+Just try. Okay. Okay. Try to pause the
+
+1313
+00:48:30,800 --> 00:48:35,839
+state, which means the reflector or
+
+1314
+00:48:32,559 --> 00:48:37,440
+surface does not have a Let's go a
+
+1315
+00:48:35,839 --> 00:48:39,520
+little deeper into how the pulse wave
+
+1316
+00:48:37,440 --> 00:48:41,599
+behaves. Imagine you're sending a
+
+1317
+00:48:39,520 --> 00:48:44,079
+sequence of pulses toward a target that
+
+1318
+00:48:41,599 --> 00:48:46,640
+is not moving. You send one pulse, two
+
+1319
+00:48:44,079 --> 00:48:48,480
+pulses, three pulses. Each time the echo
+
+1320
+00:48:46,640 --> 00:48:50,000
+returns with the same amplitude and
+
+1321
+00:48:48,480 --> 00:48:52,160
+phase.
+
+1322
+00:48:50,000 --> 00:48:54,400
+If you line up all these received echoes
+
+1323
+00:48:52,160 --> 00:48:56,960
+at the same gated time instant, they all
+
+1324
+00:48:54,400 --> 00:48:58,640
+align perfectly. the phase remains
+
+1325
+00:48:56,960 --> 00:49:00,480
+constant, meaning the surface is
+
+1326
+00:48:58,640 --> 00:49:02,720
+stationary.
+
+1327
+00:49:00,480 --> 00:49:04,480
+Now, let's imagine a different case, one
+
+1328
+00:49:02,720 --> 00:49:06,559
+where the reflector is moving or
+
+1329
+00:49:04,480 --> 00:49:08,079
+oscillating back and forth. In that
+
+1330
+00:49:06,559 --> 00:49:09,599
+case, when you line up the received
+
+1331
+00:49:08,079 --> 00:49:11,680
+echoes, you'll notice that their
+
+1332
+00:49:09,599 --> 00:49:15,280
+amplitudes and phases change from pulse
+
+1333
+00:49:11,680 --> 00:49:17,040
+to pulse. At a fixed gated time instant,
+
+1334
+00:49:15,280 --> 00:49:19,119
+the amplitude might be high for the
+
+1335
+00:49:17,040 --> 00:49:21,760
+first echo, lower for the second, and
+
+1336
+00:49:19,119 --> 00:49:23,599
+different again for the third.
+
+1337
+00:49:21,760 --> 00:49:25,760
+When you plot those amplitude values
+
+1338
+00:49:23,599 --> 00:49:27,839
+sequentially, they form a sinosoidal
+
+1339
+00:49:25,760 --> 00:49:30,160
+curve representing a cyclic or
+
+1340
+00:49:27,839 --> 00:49:31,920
+oscillating motion.
+
+1341
+00:49:30,160 --> 00:49:34,079
+If the target moves in a steady
+
+1342
+00:49:31,920 --> 00:49:36,079
+direction, say a uniform motion instead
+
+1343
+00:49:34,079 --> 00:49:38,240
+of an oscillation, the resulting signal
+
+1344
+00:49:36,079 --> 00:49:40,880
+will not be sinosoidal, but rather a
+
+1345
+00:49:38,240 --> 00:49:43,440
+linear change over time.
+
+1346
+00:49:40,880 --> 00:49:45,760
+So each echo provides a single sample
+
+1347
+00:49:43,440 --> 00:49:48,079
+data point from a given location. And by
+
+1348
+00:49:45,760 --> 00:49:50,160
+analyzing how those points evolve over a
+
+1349
+00:49:48,079 --> 00:49:52,160
+train of pulses, you can determine the
+
+1350
+00:49:50,160 --> 00:49:54,480
+relative motion of the scatterer or
+
+1351
+00:49:52,160 --> 00:49:56,240
+reflecting surface.
+
+1352
+00:49:54,480 --> 00:49:57,520
+In your textbook, you'll find several
+
+1353
+00:49:56,240 --> 00:49:59,520
+formulas that describe this
+
+1354
+00:49:57,520 --> 00:50:01,599
+mathematically, but the key idea is
+
+1355
+00:49:59,520 --> 00:50:04,079
+quite straightforward.
+
+1356
+00:50:01,599 --> 00:50:06,720
+The pulse wave mode works by collecting
+
+1357
+00:50:04,079 --> 00:50:09,359
+one data point from each returning echo
+
+1358
+00:50:06,720 --> 00:50:11,280
+at a fixed range. If there is no motion,
+
+1359
+00:50:09,359 --> 00:50:13,839
+the points stay constant. If there is
+
+1360
+00:50:11,280 --> 00:50:15,359
+motion, the points vary in amplitude or
+
+1361
+00:50:13,839 --> 00:50:17,520
+phase.
+
+1362
+00:50:15,359 --> 00:50:19,280
+By examining those variations, we can
+
+1363
+00:50:17,520 --> 00:50:20,880
+determine relative motion, which can
+
+1364
+00:50:19,280 --> 00:50:24,160
+then be related back to Doppler
+
+1365
+00:50:20,880 --> 00:50:26,240
+frequency and ultimately to velocity.
+
+1366
+00:50:24,160 --> 00:50:28,079
+However, if the object moves too fast,
+
+1367
+00:50:26,240 --> 00:50:30,400
+the returning echoes can overlap or
+
+1368
+00:50:28,079 --> 00:50:32,240
+become aliased, causing artifacts in the
+
+1369
+00:50:30,400 --> 00:50:36,280
+signal. This is one of the limits of the
+
+1370
+00:50:32,240 --> 00:50:36,280
+pulsewave Doppler technique.
+
+1371
+00:50:37,760 --> 00:50:41,280
+Now, let's look at another approach, the
+
+1372
+00:50:39,760 --> 00:50:43,599
+correlation method, which is quite
+
+1373
+00:50:41,280 --> 00:50:45,760
+intuitive. You start with a transducer
+
+1374
+00:50:43,599 --> 00:50:48,160
+that sends out a pulse of ultrasound and
+
+1375
+00:50:45,760 --> 00:50:51,040
+records the entire back scattered signal
+
+1376
+00:50:48,160 --> 00:50:52,880
+as a function of time.
+
+1377
+00:50:51,040 --> 00:50:55,040
+That gives you a complete waveform, not
+
+1378
+00:50:52,880 --> 00:50:57,040
+just a single data point. Then you send
+
+1379
+00:50:55,040 --> 00:50:59,200
+a second pulse and again you record the
+
+1380
+00:50:57,040 --> 00:51:01,359
+returned signal. By the time the second
+
+1381
+00:50:59,200 --> 00:51:03,680
+pulse arrives, the scatterers such as
+
+1382
+00:51:01,359 --> 00:51:06,720
+red blood cells will have moved slightly
+
+1383
+00:51:03,680 --> 00:51:08,559
+compared to their original positions.
+
+1384
+00:51:06,720 --> 00:51:09,920
+To find out how much motion occurred, we
+
+1385
+00:51:08,559 --> 00:51:12,000
+compare the two signals using
+
+1386
+00:51:09,920 --> 00:51:13,839
+correlation. You look for the time delay
+
+1387
+00:51:12,000 --> 00:51:15,839
+denoted as toao where the two signals
+
+1388
+00:51:13,839 --> 00:51:17,680
+are most similar.
+
+1389
+00:51:15,839 --> 00:51:19,280
+This time delay tells you how far the
+
+1390
+00:51:17,680 --> 00:51:21,119
+scatterers have moved between the two
+
+1391
+00:51:19,280 --> 00:51:23,200
+measurements.
+
+1392
+00:51:21,119 --> 00:51:25,280
+When you multiply that toao by the sound
+
+1393
+00:51:23,200 --> 00:51:27,920
+speed along the beam direction, you get
+
+1394
+00:51:25,280 --> 00:51:29,680
+the relative displacement. From that you
+
+1395
+00:51:27,920 --> 00:51:31,359
+can calculate the velocity or even
+
+1396
+00:51:29,680 --> 00:51:32,880
+derive the Doppler frequency if you
+
+1397
+00:51:31,359 --> 00:51:34,880
+prefer.
+
+1398
+00:51:32,880 --> 00:51:37,040
+So this is the basic idea behind the
+
+1399
+00:51:34,880 --> 00:51:39,280
+correlation method. It's simple but very
+
+1400
+00:51:37,040 --> 00:51:41,359
+effective. By comparing the returning
+
+1401
+00:51:39,280 --> 00:51:43,200
+waveforms over time, we can accurately
+
+1402
+00:51:41,359 --> 00:51:45,520
+measure how fast and in what direction
+
+1403
+00:51:43,200 --> 00:51:47,839
+the blood or tissue is moving. This is
+
+1404
+00:51:45,520 --> 00:51:52,200
+often used alongside Doppler analysis to
+
+1405
+00:51:47,839 --> 00:51:52,200
+enhance motion estimation accuracy.
+
+1406
+00:51:52,720 --> 00:51:56,319
+Now, this slide shows how the Doppler
+
+1407
+00:51:54,720 --> 00:51:58,400
+effect can be used to measure and
+
+1408
+00:51:56,319 --> 00:51:59,920
+visualize velocity.
+
+1409
+00:51:58,400 --> 00:52:01,760
+The Doppler information can be
+
+1410
+00:51:59,920 --> 00:52:03,599
+superimposed directly on the B mode
+
+1411
+00:52:01,760 --> 00:52:05,760
+image. The B mode gives you the
+
+1412
+00:52:03,599 --> 00:52:07,440
+anatomical structure. For example, you
+
+1413
+00:52:05,760 --> 00:52:10,480
+can clearly see a large blood vessel
+
+1414
+00:52:07,440 --> 00:52:12,079
+here. Once you have that anatomical
+
+1415
+00:52:10,480 --> 00:52:15,520
+background, you can add the velocity
+
+1416
+00:52:12,079 --> 00:52:17,599
+field on top of it using color coding.
+
+1417
+00:52:15,520 --> 00:52:20,240
+In color Doppler imaging, the motion is
+
+1418
+00:52:17,599 --> 00:52:22,559
+encoded using colors, typically the RGB
+
+1419
+00:52:20,240 --> 00:52:24,559
+scheme. Motion toward the transducer is
+
+1420
+00:52:22,559 --> 00:52:27,520
+displayed in red, while motion away from
+
+1421
+00:52:24,559 --> 00:52:29,680
+the transducer is shown in blue.
+
+1422
+00:52:27,520 --> 00:52:31,599
+Sometimes a green component is used to
+
+1423
+00:52:29,680 --> 00:52:33,280
+indicate the variance of the signal.
+
+1424
+00:52:31,599 --> 00:52:36,400
+That is how much fluctuation or
+
+1425
+00:52:33,280 --> 00:52:38,480
+turbulence there is in the flow. If the
+
+1426
+00:52:36,400 --> 00:52:40,559
+blood flow is smooth and uniform, you
+
+1427
+00:52:38,480 --> 00:52:42,640
+won't see much green at all. But if the
+
+1428
+00:52:40,559 --> 00:52:44,400
+flow becomes turbulent or irregular,
+
+1429
+00:52:42,640 --> 00:52:45,920
+you'll see more green appearing in the
+
+1430
+00:52:44,400 --> 00:52:47,920
+image.
+
+1431
+00:52:45,920 --> 00:52:50,079
+This color map gives a one-dimensional
+
+1432
+00:52:47,920 --> 00:52:52,400
+view of motion only along the direction
+
+1433
+00:52:50,079 --> 00:52:54,480
+of the ultrasound beam. It doesn't tell
+
+1434
+00:52:52,400 --> 00:52:56,480
+you about lateral movement, but it's
+
+1435
+00:52:54,480 --> 00:52:58,000
+very effective for examining flow in
+
+1436
+00:52:56,480 --> 00:53:00,079
+vessels.
+
+1437
+00:52:58,000 --> 00:53:02,400
+In more advanced cases, you can apply a
+
+1438
+00:53:00,079 --> 00:53:04,480
+FIA transform to the Doppler signal to
+
+1439
+00:53:02,400 --> 00:53:06,400
+obtain the velocity distribution because
+
+1440
+00:53:04,480 --> 00:53:08,079
+the motion is not always at a single
+
+1441
+00:53:06,400 --> 00:53:10,160
+frequency.
+
+1442
+00:53:08,079 --> 00:53:12,480
+Blood flow, for instance, has multiple
+
+1443
+00:53:10,160 --> 00:53:14,960
+velocity components due to pulsation and
+
+1444
+00:53:12,480 --> 00:53:16,960
+vessel geometry. So, color Doppler
+
+1445
+00:53:14,960 --> 00:53:18,800
+provides a dynamic intuitive way to
+
+1446
+00:53:16,960 --> 00:53:23,480
+visualize those variations on top of
+
+1447
+00:53:18,800 --> 00:53:23,480
+anatomical images. Here
+
+1448
+00:53:24,000 --> 00:53:28,640
+we move to spectral Doppler imaging as
+
+1449
+00:53:25,920 --> 00:53:30,400
+shown in figure 323 from your textbook.
+
+1450
+00:53:28,640 --> 00:53:31,839
+This method provides more detailed
+
+1451
+00:53:30,400 --> 00:53:34,559
+information about the range of
+
+1452
+00:53:31,839 --> 00:53:36,240
+velocities within a vessel.
+
+1453
+00:53:34,559 --> 00:53:38,559
+You can see how the signal amplitude
+
+1454
+00:53:36,240 --> 00:53:40,640
+varies over the cardiac cycle during
+
+1455
+00:53:38,559 --> 00:53:43,920
+systol when the heart contracts and
+
+1456
+00:53:40,640 --> 00:53:46,000
+diastol when it relaxes. During systol
+
+1457
+00:53:43,920 --> 00:53:48,240
+the flow velocity is higher which shifts
+
+1458
+00:53:46,000 --> 00:53:50,559
+the doppler frequency upward. During
+
+1459
+00:53:48,240 --> 00:53:53,200
+diastol the flow slows down. So the
+
+1460
+00:53:50,559 --> 00:53:55,200
+Doppler shift becomes smaller.
+
+1461
+00:53:53,200 --> 00:53:57,200
+The result is a spectrum showing how
+
+1462
+00:53:55,200 --> 00:53:59,760
+signal amplitude changes with Doppler
+
+1463
+00:53:57,200 --> 00:54:01,280
+frequency over time. Each vertical line
+
+1464
+00:53:59,760 --> 00:54:03,040
+in the display represents the
+
+1465
+00:54:01,280 --> 00:54:05,920
+distribution of frequencies or
+
+1466
+00:54:03,040 --> 00:54:07,920
+velocities at a given instant.
+
+1467
+00:54:05,920 --> 00:54:10,000
+When plotted together, this forms the
+
+1468
+00:54:07,920 --> 00:54:12,480
+spectral waveform which you often see in
+
+1469
+00:54:10,000 --> 00:54:14,480
+clinical Doppler displays. By analyzing
+
+1470
+00:54:12,480 --> 00:54:16,400
+these patterns, clinicians can assess
+
+1471
+00:54:14,480 --> 00:54:19,680
+blood flow speed, direction, and
+
+1472
+00:54:16,400 --> 00:54:21,920
+uniformity through the cardiac cycle.
+
+1473
+00:54:19,680 --> 00:54:24,079
+So to summarize, Doppler imaging
+
+1474
+00:54:21,920 --> 00:54:25,839
+includes several complimentary modes.
+
+1475
+00:54:24,079 --> 00:54:28,079
+Continuous wave, pulseed wave and
+
+1476
+00:54:25,839 --> 00:54:30,319
+correlation methods along with color and
+
+1477
+00:54:28,079 --> 00:54:32,000
+spectral Doppler.
+
+1478
+00:54:30,319 --> 00:54:34,400
+Continuous and pulse modes measure
+
+1479
+00:54:32,000 --> 00:54:36,240
+velocity. Color Doppler visualizes it
+
+1480
+00:54:34,400 --> 00:54:38,559
+and spectral Doppler reveals its
+
+1481
+00:54:36,240 --> 00:54:40,319
+frequency content. Together they provide
+
+1482
+00:54:38,559 --> 00:54:42,720
+a comprehensive view of motion and flow
+
+1483
+00:54:40,319 --> 00:54:45,720
+in ultrasound imaging anatomically and
+
+1484
+00:54:42,720 --> 00:54:45,720
+dynamically.
+
+1485
+00:54:47,359 --> 00:54:51,359
+Finally, let's talk briefly about
+
+1486
+00:54:49,119 --> 00:54:53,520
+ultrasound image artifacts. Like any
+
+1487
+00:54:51,359 --> 00:54:55,760
+imaging modality, ultrasound is not
+
+1488
+00:54:53,520 --> 00:54:58,079
+perfect and various artifacts can appear
+
+1489
+00:54:55,760 --> 00:55:00,880
+due to limitations in the system or the
+
+1490
+00:54:58,079 --> 00:55:02,240
+physics of sound propagation.
+
+1491
+00:55:00,880 --> 00:55:04,720
+These artifacts may come from
+
+1492
+00:55:02,240 --> 00:55:07,040
+reflection, refraction, attenuation or
+
+1493
+00:55:04,720 --> 00:55:09,280
+motion. Some are simply distortions
+
+1494
+00:55:07,040 --> 00:55:11,119
+while others can mimic real anatomical
+
+1495
+00:55:09,280 --> 00:55:12,880
+structures.
+
+1496
+00:55:11,119 --> 00:55:15,040
+Understanding and recognizing these
+
+1497
+00:55:12,880 --> 00:55:16,960
+artifacts is extremely important because
+
+1498
+00:55:15,040 --> 00:55:18,480
+they can affect how you interpret the
+
+1499
+00:55:16,960 --> 00:55:20,000
+image.
+
+1500
+00:55:18,480 --> 00:55:22,079
+We'll look at examples of these
+
+1501
+00:55:20,000 --> 00:55:24,160
+artifacts and discuss what causes them
+
+1502
+00:55:22,079 --> 00:55:28,760
+and how they can sometimes even be used
+
+1503
+00:55:24,160 --> 00:55:28,760
+advantageously in image interpretation.
+
+1504
+00:55:30,640 --> 00:55:34,400
+Now let's talk about time gain
+
+1505
+00:55:32,319 --> 00:55:36,319
+compensation. When we deal with very
+
+1506
+00:55:34,400 --> 00:55:38,079
+high frequency ultrasound ultrasound
+
+1507
+00:55:36,319 --> 00:55:41,760
+signals in the megahertz range, the
+
+1508
+00:55:38,079 --> 00:55:43,680
+signal amplitude can be extremely small.
+
+1509
+00:55:41,760 --> 00:55:46,319
+If we simply record the raw signal
+
+1510
+00:55:43,680 --> 00:55:48,079
+amplitude or intensity as it is without
+
+1511
+00:55:46,319 --> 00:55:50,319
+doing any correction, you'll find that
+
+1512
+00:55:48,079 --> 00:55:52,240
+the deeper features inside the tissue
+
+1513
+00:55:50,319 --> 00:55:54,079
+appear much weaker than the ones near
+
+1514
+00:55:52,240 --> 00:55:56,160
+the surface.
+
+1515
+00:55:54,079 --> 00:55:58,400
+This happens because of attenuation and
+
+1516
+00:55:56,160 --> 00:56:00,240
+wave scattering. As the ultrasound wave
+
+1517
+00:55:58,400 --> 00:56:02,480
+travels deeper, part of the energy is
+
+1518
+00:56:00,240 --> 00:56:04,640
+absorbed and part of it is scattered in
+
+1519
+00:56:02,480 --> 00:56:06,720
+different directions.
+
+1520
+00:56:04,640 --> 00:56:09,119
+Both effects cause the returning signal,
+
+1521
+00:56:06,720 --> 00:56:11,680
+the echo, to decay exponentially with
+
+1522
+00:56:09,119 --> 00:56:13,839
+depth. Near the surface, the reflected
+
+1523
+00:56:11,680 --> 00:56:15,680
+wave is strong, but as you move deeper,
+
+1524
+00:56:13,839 --> 00:56:18,160
+the signal strength drops off very
+
+1525
+00:56:15,680 --> 00:56:20,240
+quickly. The decay roughly follows an
+
+1526
+00:56:18,160 --> 00:56:22,079
+exponential curve.
+
+1527
+00:56:20,240 --> 00:56:24,240
+To correct for this loss, we apply
+
+1528
+00:56:22,079 --> 00:56:27,040
+what's called time gain compensation or
+
+1529
+00:56:24,240 --> 00:56:29,280
+TGC. The idea is simple. As the echo
+
+1530
+00:56:27,040 --> 00:56:31,280
+arrives later in time, which corresponds
+
+1531
+00:56:29,280 --> 00:56:33,920
+to greater depth, you gradually increase
+
+1532
+00:56:31,280 --> 00:56:36,400
+the amplification factor.
+
+1533
+00:56:33,920 --> 00:56:38,079
+In other words, you boost the gain as a
+
+1534
+00:56:36,400 --> 00:56:40,400
+function of depth to counteract the
+
+1535
+00:56:38,079 --> 00:56:42,319
+exponential decay. The amplification
+
+1536
+00:56:40,400 --> 00:56:44,480
+curve roughly follows the opposite shape
+
+1537
+00:56:42,319 --> 00:56:46,240
+of the attenuation curve. When you
+
+1538
+00:56:44,480 --> 00:56:47,920
+multiply the received signal by this
+
+1539
+00:56:46,240 --> 00:56:49,520
+depth dependent gain, the resulting
+
+1540
+00:56:47,920 --> 00:56:51,200
+image becomes more uniform in
+
+1541
+00:56:49,520 --> 00:56:53,200
+brightness.
+
+1542
+00:56:51,200 --> 00:56:54,799
+This compensation makes the ultrasound
+
+1543
+00:56:53,200 --> 00:56:57,839
+image look much better and more
+
+1544
+00:56:54,799 --> 00:56:59,520
+interpretable. Without it, the deeper
+
+1545
+00:56:57,839 --> 00:57:01,200
+regions would appear dark and faint,
+
+1546
+00:56:59,520 --> 00:57:03,760
+while the shallow regions would look
+
+1547
+00:57:01,200 --> 00:57:05,920
+overly bright. With TGC, you recover a
+
+1548
+00:57:03,760 --> 00:57:08,079
+more balanced image.
+
+1549
+00:57:05,920 --> 00:57:10,000
+However, remember that this correction
+
+1550
+00:57:08,079 --> 00:57:12,240
+is based on assumptions about tissue
+
+1551
+00:57:10,000 --> 00:57:14,480
+homogeneity. It works well when the
+
+1552
+00:57:12,240 --> 00:57:16,720
+tissue properties are roughly uniform.
+
+1553
+00:57:14,480 --> 00:57:18,960
+In real biological tissue, conditions
+
+1554
+00:57:16,720 --> 00:57:22,319
+are not perfectly homogeneous. So, the
+
+1555
+00:57:18,960 --> 00:57:24,240
+quantitative accuracy is not perfect.
+
+1556
+00:57:22,319 --> 00:57:26,240
+It's similar to what happens in CT
+
+1557
+00:57:24,240 --> 00:57:28,400
+imaging when we apply beam hardening
+
+1558
+00:57:26,240 --> 00:57:31,200
+correction. We can reduce the artifacts,
+
+1559
+00:57:28,400 --> 00:57:33,280
+but it's never a perfect fix.
+
+1560
+00:57:31,200 --> 00:57:35,119
+So keep in mind that in ultrasound,
+
+1561
+00:57:33,280 --> 00:57:36,559
+different echo times correspond to
+
+1562
+00:57:35,119 --> 00:57:38,640
+different depths, and the deeper the
+
+1563
+00:57:36,559 --> 00:57:40,799
+echo, the stronger the amplification you
+
+1564
+00:57:38,640 --> 00:57:44,359
+need to apply. That's the principle of
+
+1565
+00:57:40,799 --> 00:57:44,359
+time gain compensation.
+
+1566
+00:57:46,160 --> 00:57:49,520
+Now let's talk about the next type of
+
+1567
+00:57:47,760 --> 00:57:51,680
+artifact, which is caused by what we
+
+1568
+00:57:49,520 --> 00:57:53,839
+call side lobes.
+
+1569
+00:57:51,680 --> 00:57:55,680
+In ultrasound imaging, no matter how you
+
+1570
+00:57:53,839 --> 00:57:57,520
+modulate the transducer elements,
+
+1571
+00:57:55,680 --> 00:57:59,440
+whether you use a one-dimensional or a
+
+1572
+00:57:57,520 --> 00:58:01,440
+two-dimensional array or even a single
+
+1573
+00:57:59,440 --> 00:58:04,240
+transducer, you can never create a
+
+1574
+00:58:01,440 --> 00:58:06,240
+perfectly straight narrow beam.
+
+1575
+00:58:04,240 --> 00:58:08,240
+Each transducer element generates a
+
+1576
+00:58:06,240 --> 00:58:10,160
+spherical wave. And when these waves
+
+1577
+00:58:08,240 --> 00:58:12,319
+combine through interference, they form
+
+1578
+00:58:10,160 --> 00:58:14,319
+one strong main beam along the principal
+
+1579
+00:58:12,319 --> 00:58:17,359
+direction plus several weaker beams on
+
+1580
+00:58:14,319 --> 00:58:19,119
+the sides. These are the side lobes.
+
+1581
+00:58:17,359 --> 00:58:21,200
+Physically, this happens because we're
+
+1582
+00:58:19,119 --> 00:58:23,599
+dealing with waves and waves naturally
+
+1583
+00:58:21,200 --> 00:58:25,920
+spread out. Even if we adjust the phase
+
+1584
+00:58:23,599 --> 00:58:28,400
+and amplitude across the array, we can't
+
+1585
+00:58:25,920 --> 00:58:31,680
+perfectly confine all the energy into a
+
+1586
+00:58:28,400 --> 00:58:33,280
+single pencil thin line. The best we can
+
+1587
+00:58:31,680 --> 00:58:35,280
+achieve is a main lobe with high
+
+1588
+00:58:33,280 --> 00:58:38,000
+intensity surrounded by smaller side
+
+1589
+00:58:35,280 --> 00:58:40,160
+loes with lower intensity.
+
+1590
+00:58:38,000 --> 00:58:41,760
+If you've studied forier analysis, this
+
+1591
+00:58:40,160 --> 00:58:43,920
+is similar to what happens when you
+
+1592
+00:58:41,760 --> 00:58:46,480
+approximate a sharp function. You always
+
+1593
+00:58:43,920 --> 00:58:48,079
+get some rippling known as ringing. Here
+
+1594
+00:58:46,480 --> 00:58:51,200
+the same principle applies to the
+
+1595
+00:58:48,079 --> 00:58:52,960
+ultrasound beam. Now these side lobes
+
+1596
+00:58:51,200 --> 00:58:55,119
+can create misleading signals in the
+
+1597
+00:58:52,960 --> 00:58:57,200
+image. For example, if you're scanning a
+
+1598
+00:58:55,119 --> 00:58:59,280
+region with a single bright reflector,
+
+1599
+00:58:57,200 --> 00:59:01,359
+the main lobe gives a strong echo at the
+
+1600
+00:58:59,280 --> 00:59:03,119
+correct location.
+
+1601
+00:59:01,359 --> 00:59:04,960
+But the side lobes can also pick up
+
+1602
+00:59:03,119 --> 00:59:07,119
+reflections from off-axis points which
+
+1603
+00:59:04,960 --> 00:59:09,119
+then appear as false echoes in the image
+
+1604
+00:59:07,119 --> 00:59:10,960
+often as smaller or dimmer copies of the
+
+1605
+00:59:09,119 --> 00:59:12,799
+real structure.
+
+1606
+00:59:10,960 --> 00:59:14,720
+So you might see multiple bright spots
+
+1607
+00:59:12,799 --> 00:59:16,799
+even though only one real reflector
+
+1608
+00:59:14,720 --> 00:59:19,040
+exists. In clinical practice,
+
+1609
+00:59:16,799 --> 00:59:21,119
+recognizing this artifact is essential.
+
+1610
+00:59:19,040 --> 00:59:23,280
+You may move the transducer slightly to
+
+1611
+00:59:21,119 --> 00:59:25,520
+confirm which echo is genuine and which
+
+1612
+00:59:23,280 --> 00:59:27,760
+is an artifact.
+
+1613
+00:59:25,520 --> 00:59:29,520
+Another related effect is reverberation
+
+1614
+00:59:27,760 --> 00:59:31,200
+which happens when echoes bounce back
+
+1615
+00:59:29,520 --> 00:59:33,680
+and forth between two reflective
+
+1616
+00:59:31,200 --> 00:59:35,839
+surfaces such as tissue layers or an air
+
+1617
+00:59:33,680 --> 00:59:37,920
+tissue interface.
+
+1618
+00:59:35,839 --> 00:59:39,839
+These multiple reflections cause several
+
+1619
+00:59:37,920 --> 00:59:41,920
+delayed echoes to appear on the image
+
+1620
+00:59:39,839 --> 00:59:43,680
+even though only one actual surface
+
+1621
+00:59:41,920 --> 00:59:46,079
+exists.
+
+1622
+00:59:43,680 --> 00:59:48,079
+They appear as repeated evenly spaced
+
+1623
+00:59:46,079 --> 00:59:50,000
+lines decreasing in intensity with
+
+1624
+00:59:48,079 --> 00:59:52,000
+depth. You can see examples of these
+
+1625
+00:59:50,000 --> 00:59:54,400
+side lobe patterns and reverberation
+
+1626
+00:59:52,000 --> 00:59:56,160
+artifacts in the slide images here.
+
+1627
+00:59:54,400 --> 00:59:57,920
+Understanding them helps you identify
+
+1628
+00:59:56,160 --> 00:59:59,760
+what's real and what's simply an effect
+
+1629
+00:59:57,920 --> 01:00:02,760
+of wave interference and multiple
+
+1630
+00:59:59,760 --> 01:00:02,760
+reflection.
+
+1631
+01:00:04,240 --> 01:00:08,400
+Let's continue with more examples of
+
+1632
+01:00:06,000 --> 01:00:10,480
+ultrasound artifacts. One common type is
+
+1633
+01:00:08,400 --> 01:00:13,040
+caused by multiple reflections between
+
+1634
+01:00:10,480 --> 01:00:16,079
+layers. Imagine sending one ultrasound
+
+1635
+01:00:13,040 --> 01:00:17,839
+pulse into a structure like the lung.
+
+1636
+01:00:16,079 --> 01:00:20,319
+The wave first reflects from the top
+
+1637
+01:00:17,839 --> 01:00:22,160
+surface, giving you the first echo. Some
+
+1638
+01:00:20,319 --> 01:00:24,960
+energy penetrates deeper, hits the
+
+1639
+01:00:22,160 --> 01:00:26,880
+bottom surface, and reflects.
+
+1640
+01:00:24,960 --> 01:00:28,720
+But on its way, that echo may bounce
+
+1641
+01:00:26,880 --> 01:00:31,440
+again from the top surface and return
+
+1642
+01:00:28,720 --> 01:00:33,359
+once more to the transducer.
+
+1643
+01:00:31,440 --> 01:00:35,520
+As a result, even though you sent only
+
+1644
+01:00:33,359 --> 01:00:37,599
+one pulse, you detect several echoes
+
+1645
+01:00:35,520 --> 01:00:39,839
+arriving at different times. This
+
+1646
+01:00:37,599 --> 01:00:41,680
+produces a sequence of repeated bands on
+
+1647
+01:00:39,839 --> 01:00:44,160
+the image, very similar to hearing
+
+1648
+01:00:41,680 --> 01:00:46,799
+multiple hellos echoing in a mountain
+
+1649
+01:00:44,160 --> 01:00:48,799
+valley after shouting once.
+
+1650
+01:00:46,799 --> 01:00:50,880
+Another important artifact is acoustic
+
+1651
+01:00:48,799 --> 01:00:53,040
+shadowing. This occurs when a dense
+
+1652
+01:00:50,880 --> 01:00:55,040
+object, for instance, a gallstone or
+
+1653
+01:00:53,040 --> 01:00:57,839
+kidney stone, strongly reflects or
+
+1654
+01:00:55,040 --> 01:00:59,680
+absorbs the ultrasound energy.
+
+1655
+01:00:57,839 --> 01:01:01,440
+Because the wave cannot penetrate beyond
+
+1656
+01:00:59,680 --> 01:01:04,400
+it. There's no signal coming from the
+
+1657
+01:01:01,440 --> 01:01:07,200
+tissue behind the object. On the image,
+
+1658
+01:01:04,400 --> 01:01:08,960
+this appears as a dark region or shadow
+
+1659
+01:01:07,200 --> 01:01:11,200
+extending below the bright reflective
+
+1660
+01:01:08,960 --> 01:01:12,799
+surface. You can clearly see this in the
+
+1661
+01:01:11,200 --> 01:01:15,280
+figure on the right where the shadow
+
+1662
+01:01:12,799 --> 01:01:17,280
+forms behind a gallstone.
+
+1663
+01:01:15,280 --> 01:01:19,680
+In the images on this slide, you can see
+
+1664
+01:01:17,280 --> 01:01:21,760
+both types of artifacts. Reverberation
+
+1665
+01:01:19,680 --> 01:01:24,000
+lines appearing as repeated echoes and
+
+1666
+01:01:21,760 --> 01:01:26,559
+acoustic shadowing creating dark regions
+
+1667
+01:01:24,000 --> 01:01:28,400
+behind dense materials.
+
+1668
+01:01:26,559 --> 01:01:30,720
+Recognizing these patterns is essential
+
+1669
+01:01:28,400 --> 01:01:32,880
+for accurate diagnosis. They're not
+
+1670
+01:01:30,720 --> 01:01:34,720
+always errors. Sometimes they actually
+
+1671
+01:01:32,880 --> 01:01:36,720
+help identify the nature of the
+
+1672
+01:01:34,720 --> 01:01:38,240
+structure. For example, confirming the
+
+1673
+01:01:36,720 --> 01:01:39,839
+presence of a stone or a metallic
+
+1674
+01:01:38,240 --> 01:01:41,599
+implant.
+
+1675
+01:01:39,839 --> 01:01:43,680
+But conceptually, you should always
+
+1676
+01:01:41,599 --> 01:01:45,440
+understand how these artifacts form and
+
+1677
+01:01:43,680 --> 01:01:48,839
+what they tell you about the ultrasound
+
+1678
+01:01:45,440 --> 01:01:48,839
+tissue interaction.
+
+1679
+01:01:50,559 --> 01:01:54,240
+Now in the last part of this lecture,
+
+1680
+01:01:52,480 --> 01:01:56,799
+let's take a look at a few interesting
+
+1681
+01:01:54,240 --> 01:01:58,480
+new ideas in ultrasound imaging. We
+
+1682
+01:01:56,799 --> 01:02:00,480
+won't go deep into equations or
+
+1683
+01:01:58,480 --> 01:02:02,160
+technical details. Here I just want to
+
+1684
+01:02:00,480 --> 01:02:03,760
+give you a brief overview of some of the
+
+1685
+01:02:02,160 --> 01:02:07,559
+most exciting developments happening
+
+1686
+01:02:03,760 --> 01:02:07,559
+right now in this field.
+
+1687
+01:02:08,880 --> 01:02:13,280
+We have a faculty member, Professor
+
+1688
+01:02:10,799 --> 01:02:15,200
+Pinkyan, who has done excellent work in
+
+1689
+01:02:13,280 --> 01:02:17,680
+collaboration with Phillips, a leading
+
+1690
+01:02:15,200 --> 01:02:19,440
+medical imaging company.
+
+1691
+01:02:17,680 --> 01:02:21,680
+Their research focuses on combining
+
+1692
+01:02:19,440 --> 01:02:24,480
+ultrasound and MRI imaging for prostate
+
+1693
+01:02:21,680 --> 01:02:26,480
+cancer surgery. The idea is to use MRI
+
+1694
+01:02:24,480 --> 01:02:28,640
+before the operation and ultrasound
+
+1695
+01:02:26,480 --> 01:02:30,400
+during the operation so you can merge or
+
+1696
+01:02:28,640 --> 01:02:32,640
+fuse the information from both
+
+1697
+01:02:30,400 --> 01:02:35,359
+modalities.
+
+1698
+01:02:32,640 --> 01:02:37,359
+MRI imaging provides excellent spatial
+
+1699
+01:02:35,359 --> 01:02:39,520
+resolution and sensitivity. It can
+
+1700
+01:02:37,359 --> 01:02:41,200
+clearly show anatomical and biological
+
+1701
+01:02:39,520 --> 01:02:44,240
+details which makes it ideal for
+
+1702
+01:02:41,200 --> 01:02:46,559
+locating the tumor before surgery.
+
+1703
+01:02:44,240 --> 01:02:48,480
+However, MRI scanners are very expensive
+
+1704
+01:02:46,559 --> 01:02:50,640
+and not cost-effective for real-time
+
+1705
+01:02:48,480 --> 01:02:52,480
+surgical use. They also have slow
+
+1706
+01:02:50,640 --> 01:02:54,720
+temporal resolution, meaning it takes
+
+1707
+01:02:52,480 --> 01:02:56,720
+time to acquire the image. On the other
+
+1708
+01:02:54,720 --> 01:02:58,880
+hand, ultrasound imaging is fast,
+
+1709
+01:02:56,720 --> 01:03:00,799
+inexpensive, and easy to use in real
+
+1710
+01:02:58,880 --> 01:03:03,920
+time, but its spatial resolution and
+
+1711
+01:03:00,799 --> 01:03:06,079
+sensitivity are not as high.
+
+1712
+01:03:03,920 --> 01:03:08,720
+By combining the two, surgeons can
+
+1713
+01:03:06,079 --> 01:03:10,799
+perform pre-operative MRI imaging to
+
+1714
+01:03:08,720 --> 01:03:13,359
+identify the problem and then during the
+
+1715
+01:03:10,799 --> 01:03:15,200
+operation use ultrasound as real-time
+
+1716
+01:03:13,359 --> 01:03:17,039
+guidance
+
+1717
+01:03:15,200 --> 01:03:19,119
+through image registration or fusion.
+
+1718
+01:03:17,039 --> 01:03:21,680
+The live ultrasound image can be aligned
+
+1719
+01:03:19,119 --> 01:03:23,359
+with the pre-operative MRI. This allows
+
+1720
+01:03:21,680 --> 01:03:25,520
+the surgeon to visualize the tumor
+
+1721
+01:03:23,359 --> 01:03:28,079
+location with both high spatial detail
+
+1722
+01:03:25,520 --> 01:03:30,559
+and real-time feedback. The fusion
+
+1723
+01:03:28,079 --> 01:03:32,240
+system developed by Dr. Jan's group has
+
+1724
+01:03:30,559 --> 01:03:35,640
+produced very promising results in
+
+1725
+01:03:32,240 --> 01:03:35,640
+clinical trials.
+
+1726
+01:03:37,119 --> 01:03:40,559
+Now, if you look at the images here,
+
+1727
+01:03:38,960 --> 01:03:43,039
+you'll see what happens if the image
+
+1728
+01:03:40,559 --> 01:03:44,880
+registration between ultrasound and MRI
+
+1729
+01:03:43,039 --> 01:03:46,720
+is not done properly. The structures
+
+1730
+01:03:44,880 --> 01:03:49,680
+won't line up and the surgeon can't
+
+1731
+01:03:46,720 --> 01:03:51,520
+accurately target the tumor. Without
+
+1732
+01:03:49,680 --> 01:03:54,559
+good alignment, it's impossible to rely
+
+1733
+01:03:51,520 --> 01:03:57,280
+on the fused images for surgery.
+
+1734
+01:03:54,559 --> 01:03:58,960
+To solve this, Dr. Yan's team developed
+
+1735
+01:03:57,280 --> 01:04:01,119
+machine learning algorithms to
+
+1736
+01:03:58,960 --> 01:04:03,359
+automatically register ultrasound and
+
+1737
+01:04:01,119 --> 01:04:05,359
+MRI images.
+
+1738
+01:04:03,359 --> 01:04:07,200
+Using these intelligent registration
+
+1739
+01:04:05,359 --> 01:04:09,839
+techniques, the alignment quality
+
+1740
+01:04:07,200 --> 01:04:11,680
+improves dramatically. For example, in
+
+1741
+01:04:09,839 --> 01:04:14,640
+their results, the similarity index
+
+1742
+01:04:11,680 --> 01:04:16,400
+increases from about 0.24 to nearly
+
+1743
+01:04:14,640 --> 01:04:18,720
+0.99.
+
+1744
+01:04:16,400 --> 01:04:20,720
+That's a huge improvement.
+
+1745
+01:04:18,720 --> 01:04:22,559
+With this level of precision, surgeons
+
+1746
+01:04:20,720 --> 01:04:24,240
+gain much higher confidence during the
+
+1747
+01:04:22,559 --> 01:04:25,839
+procedure, leading to better surgical
+
+1748
+01:04:24,240 --> 01:04:27,760
+outcomes.
+
+1749
+01:04:25,839 --> 01:04:30,160
+So this hybrid imaging approach
+
+1750
+01:04:27,760 --> 01:04:32,240
+combining MRI's high spatial resolution
+
+1751
+01:04:30,160 --> 01:04:34,160
+with ultrasound's real-time imaging
+
+1752
+01:04:32,240 --> 01:04:36,720
+capability represents a powerful
+
+1753
+01:04:34,160 --> 01:04:39,119
+direction for imageguided surgery. It's
+
+1754
+01:04:36,720 --> 01:04:40,960
+a very active research area with many
+
+1755
+01:04:39,119 --> 01:04:42,960
+exciting developments and a strong
+
+1756
+01:04:40,960 --> 01:04:44,640
+clinical impact.
+
+1757
+01:04:42,960 --> 01:04:46,559
+Next we'll look at another hybrid
+
+1758
+01:04:44,640 --> 01:04:50,280
+direction combining ultrasound imaging
+
+1759
+01:04:46,559 --> 01:04:50,280
+with optical imaging.
+
+1760
+01:04:51,599 --> 01:04:56,000
+In the next lecture, we'll move into
+
+1761
+01:04:53,599 --> 01:04:58,160
+optical imaging. But before that, let's
+
+1762
+01:04:56,000 --> 01:05:00,319
+look at how ultrasound and optical
+
+1763
+01:04:58,160 --> 01:05:02,319
+imaging can be combined to create a
+
+1764
+01:05:00,319 --> 01:05:05,119
+powerful new imaging technique known as
+
+1765
+01:05:02,319 --> 01:05:06,960
+photo acoustic tomography. The idea is
+
+1766
+01:05:05,119 --> 01:05:08,559
+shown here.
+
+1767
+01:05:06,960 --> 01:05:10,799
+Imagine you inject an animal with
+
+1768
+01:05:08,559 --> 01:05:12,480
+contrast agents, in this case graphine
+
+1769
+01:05:10,799 --> 01:05:14,079
+based microbubbles. Once these
+
+1770
+01:05:12,480 --> 01:05:15,839
+microbubbles are introduced, they
+
+1771
+01:05:14,079 --> 01:05:17,680
+enhance the ultrasound signal because
+
+1772
+01:05:15,839 --> 01:05:20,400
+the presence of microbubbles makes
+
+1773
+01:05:17,680 --> 01:05:22,160
+acoustic reflection stronger.
+
+1774
+01:05:20,400 --> 01:05:24,240
+Now, graphine has an interesting
+
+1775
+01:05:22,160 --> 01:05:26,480
+property. It can absorb light energy and
+
+1776
+01:05:24,240 --> 01:05:28,720
+convert it into heat.
+
+1777
+01:05:26,480 --> 01:05:30,720
+So, when you shine near infrared light
+
+1778
+01:05:28,720 --> 01:05:32,720
+pulses onto the tissue, the graphine
+
+1779
+01:05:30,720 --> 01:05:35,200
+microbubbles absorb the light and heat
+
+1780
+01:05:32,720 --> 01:05:37,359
+up slightly. This heating causes a tiny
+
+1781
+01:05:35,200 --> 01:05:39,359
+thermal expansion. The microbubbles
+
+1782
+01:05:37,359 --> 01:05:41,280
+expand and contract in response to the
+
+1783
+01:05:39,359 --> 01:05:43,280
+pulse laser.
+
+1784
+01:05:41,280 --> 01:05:45,599
+Each laser pulse causes a brief
+
+1785
+01:05:43,280 --> 01:05:47,520
+expansion followed by cooling and this
+
+1786
+01:05:45,599 --> 01:05:50,000
+mechanical vibration generates an
+
+1787
+01:05:47,520 --> 01:05:52,079
+acoustic wave much like a sound pulse.
+
+1788
+01:05:50,000 --> 01:05:55,200
+These acoustic waves are then detected
+
+1789
+01:05:52,079 --> 01:05:57,280
+by an ultrasound transducer.
+
+1790
+01:05:55,200 --> 01:06:00,319
+So you can think of the process as a
+
+1791
+01:05:57,280 --> 01:06:02,720
+chain. Near infrared excitation leads to
+
+1792
+01:06:00,319 --> 01:06:04,720
+graphine absorption which causes heating
+
+1793
+01:06:02,720 --> 01:06:06,880
+and thermal expansion generating
+
+1794
+01:06:04,720 --> 01:06:09,280
+acoustic waves that are picked up by an
+
+1795
+01:06:06,880 --> 01:06:10,799
+ultrasonic detector. From these signals,
+
+1796
+01:06:09,280 --> 01:06:12,720
+you can construct an image for
+
+1797
+01:06:10,799 --> 01:06:14,720
+diagnosis.
+
+1798
+01:06:12,720 --> 01:06:16,799
+The advantage is that the contrast is
+
+1799
+01:06:14,720 --> 01:06:18,799
+introduced optically while the detection
+
+1800
+01:06:16,799 --> 01:06:22,319
+is done acoustically, giving both
+
+1801
+01:06:18,799 --> 01:06:24,319
+sensitivity and depth penetration.
+
+1802
+01:06:22,319 --> 01:06:25,680
+In addition, some of these microbubbles
+
+1803
+01:06:24,319 --> 01:06:28,160
+can be used for therapeutic
+
+1804
+01:06:25,680 --> 01:06:30,079
+applications, for example, targeted drug
+
+1805
+01:06:28,160 --> 01:06:31,680
+delivery. There's a lot of exciting
+
+1806
+01:06:30,079 --> 01:06:33,520
+research happening in this area
+
+1807
+01:06:31,680 --> 01:06:36,240
+exploring both diagnostic and
+
+1808
+01:06:33,520 --> 01:06:38,960
+therapeutic uses.
+
+1809
+01:06:36,240 --> 01:06:41,200
+Here
+
+1810
+01:06:38,960 --> 01:06:43,200
+you see some examples of photo acoustic
+
+1811
+01:06:41,200 --> 01:06:45,280
+tomography from professor Lihong Wang
+
+1812
+01:06:43,200 --> 01:06:47,039
+who made pioneering contributions to
+
+1813
+01:06:45,280 --> 01:06:48,960
+this field.
+
+1814
+01:06:47,039 --> 01:06:50,960
+This imaging method can be applied at
+
+1815
+01:06:48,960 --> 01:06:52,720
+multiple scales from single cells and
+
+1816
+01:06:50,960 --> 01:06:54,880
+small biological structures to whole
+
+1817
+01:06:52,720 --> 01:06:56,720
+animals and even human patients. The
+
+1818
+01:06:54,880 --> 01:06:58,960
+remarkable thing is that it combines the
+
+1819
+01:06:56,720 --> 01:07:00,559
+strengths of both optical and ultrasound
+
+1820
+01:06:58,960 --> 01:07:02,400
+imaging.
+
+1821
+01:07:00,559 --> 01:07:04,240
+Purely optical imaging provides
+
+1822
+01:07:02,400 --> 01:07:06,160
+excellent contrast but limited
+
+1823
+01:07:04,240 --> 01:07:08,400
+penetration depth. The light scatters
+
+1824
+01:07:06,160 --> 01:07:10,079
+too easily. So you can only see shallow
+
+1825
+01:07:08,400 --> 01:07:12,000
+structures.
+
+1826
+01:07:10,079 --> 01:07:13,599
+Ultrasound on the other hand penetrates
+
+1827
+01:07:12,000 --> 01:07:15,599
+much deeper and gives good spatial
+
+1828
+01:07:13,599 --> 01:07:17,280
+resolution. But the contrast is not as
+
+1829
+01:07:15,599 --> 01:07:19,599
+strong because it depends mainly on
+
+1830
+01:07:17,280 --> 01:07:21,359
+acoustic properties.
+
+1831
+01:07:19,599 --> 01:07:23,599
+When you combine the two in photo
+
+1832
+01:07:21,359 --> 01:07:26,240
+acoustic imaging, you get the best of
+
+1833
+01:07:23,599 --> 01:07:29,119
+both worlds. Strong optical contrast and
+
+1834
+01:07:26,240 --> 01:07:31,440
+deeper acoustic penetration.
+
+1835
+01:07:29,119 --> 01:07:33,680
+This hybrid approach allows researchers
+
+1836
+01:07:31,440 --> 01:07:36,559
+to visualize structures ranging from
+
+1837
+01:07:33,680 --> 01:07:38,400
+microvasculare to organ level features,
+
+1838
+01:07:36,559 --> 01:07:40,480
+making it a powerful tool for both
+
+1839
+01:07:38,400 --> 01:07:42,559
+biological research and clinical
+
+1840
+01:07:40,480 --> 01:07:44,400
+applications.
+
+1841
+01:07:42,559 --> 01:07:46,880
+It's a perfect example of how
+
+1842
+01:07:44,400 --> 01:07:51,319
+multimodality imaging can overcome the
+
+1843
+01:07:46,880 --> 01:07:51,319
+limitations of individual techniques.
+
+1844
+01:07:52,799 --> 01:07:56,640
+Finally, here's something still
+
+1845
+01:07:54,400 --> 01:07:58,240
+speculative, an iPhone based ultrasound
+
+1846
+01:07:56,640 --> 01:07:59,839
+imager.
+
+1847
+01:07:58,240 --> 01:08:02,000
+With this device, we could turn an
+
+1848
+01:07:59,839 --> 01:08:04,240
+iPhone into a miniature ultrasound
+
+1849
+01:08:02,000 --> 01:08:06,240
+device. Imagine using your phone not
+
+1850
+01:08:04,240 --> 01:08:08,880
+just as a communication tool, but as a
+
+1851
+01:08:06,240 --> 01:08:10,960
+health monitoring instrument.
+
+1852
+01:08:08,880 --> 01:08:13,280
+For example, we might use the phone
+
+1853
+01:08:10,960 --> 01:08:14,960
+screen or back surface as a transducer
+
+1854
+01:08:13,280 --> 01:08:17,520
+array to measure things like blood
+
+1855
+01:08:14,960 --> 01:08:19,199
+velocity, blood pressure, or even blood
+
+1856
+01:08:17,520 --> 01:08:21,359
+sugar.
+
+1857
+01:08:19,199 --> 01:08:22,880
+Let's consider blood pressure first.
+
+1858
+01:08:21,359 --> 01:08:24,719
+Traditionally, blood pressure is
+
+1859
+01:08:22,880 --> 01:08:26,880
+measured with a cuff that compresses the
+
+1860
+01:08:24,719 --> 01:08:29,520
+vessel. But perhaps we could use Doppler
+
+1861
+01:08:26,880 --> 01:08:31,520
+ultrasound principles instead.
+
+1862
+01:08:29,520 --> 01:08:33,359
+When blood flows through a vessel, the
+
+1863
+01:08:31,520 --> 01:08:35,440
+pressure from the heartbeat changes both
+
+1864
+01:08:33,359 --> 01:08:38,560
+the velocity and the cross-sectional
+
+1865
+01:08:35,440 --> 01:08:40,799
+area of the vessel. When the pressure is
+
+1866
+01:08:38,560 --> 01:08:43,199
+high, the vessel expands. When it's low,
+
+1867
+01:08:40,799 --> 01:08:45,520
+the vessel contracts. The velocity of
+
+1868
+01:08:43,199 --> 01:08:47,600
+blood flow also changes accordingly and
+
+1869
+01:08:45,520 --> 01:08:49,759
+can be measured. The shape of vessels
+
+1870
+01:08:47,600 --> 01:08:52,159
+can be measured as well.
+
+1871
+01:08:49,759 --> 01:08:54,319
+If we could measure both the velocity
+
+1872
+01:08:52,159 --> 01:08:56,560
+through the Doppler shift and the vessel
+
+1873
+01:08:54,319 --> 01:08:58,480
+wall motion by detecting the relative
+
+1874
+01:08:56,560 --> 01:09:00,880
+distance between the top and bottom
+
+1875
+01:08:58,480 --> 01:09:03,199
+surfaces, then with proper calibration
+
+1876
+01:09:00,880 --> 01:09:05,279
+and machine learning, we might estimate
+
+1877
+01:09:03,199 --> 01:09:08,400
+blood pressure accurately just by
+
+1878
+01:09:05,279 --> 01:09:09,839
+placing the iPhone over the skin. Over
+
+1879
+01:09:08,400 --> 01:09:11,679
+time, the system could learn your
+
+1880
+01:09:09,839 --> 01:09:13,199
+personal profile and give real-time
+
+1881
+01:09:11,679 --> 01:09:15,679
+blood pressure readings without the
+
+1882
+01:09:13,199 --> 01:09:17,600
+discomfort of a cuff. The same principle
+
+1883
+01:09:15,679 --> 01:09:19,520
+could even be extended to use an optical
+
+1884
+01:09:17,600 --> 01:09:21,920
+sensor for measuring blood sugar related
+
+1885
+01:09:19,520 --> 01:09:23,920
+signals by analyzing light interactions
+
+1886
+01:09:21,920 --> 01:09:25,920
+with tissue.
+
+1887
+01:09:23,920 --> 01:09:28,400
+These ideas are still premature, but
+
+1888
+01:09:25,920 --> 01:09:30,400
+with advances in materials, transducers,
+
+1889
+01:09:28,400 --> 01:09:33,799
+and sensors, they may become realistic
+
+1890
+01:09:30,400 --> 01:09:33,799
+in the future.
+
+1891
+01:09:35,120 --> 01:09:38,640
+All right, so this is the last slide for
+
+1892
+01:09:36,880 --> 01:09:40,159
+today. I'm not going to give you any
+
+1893
+01:09:38,640 --> 01:09:41,679
+regular homework, but it's a good time
+
+1894
+01:09:40,159 --> 01:09:43,679
+for you to start reviewing or
+
+1895
+01:09:41,679 --> 01:09:46,799
+re-reviewing the ultrasound chapter.
+
+1896
+01:09:43,679 --> 01:09:48,719
+what I usually call the green chapter.
+
+1897
+01:09:46,799 --> 01:09:50,560
+For my classroom teaching, I want to
+
+1898
+01:09:48,719 --> 01:09:52,880
+take a moment to share a few thoughts
+
+1899
+01:09:50,560 --> 01:09:54,719
+about how traditional classroom learning
+
+1900
+01:09:52,880 --> 01:09:56,320
+compares with what we're trying to do
+
+1901
+01:09:54,719 --> 01:09:57,840
+here.
+
+1902
+01:09:56,320 --> 01:09:59,840
+Traditional teaching is often about
+
+1903
+01:09:57,840 --> 01:10:01,520
+knowledge transfer. In other words,
+
+1904
+01:09:59,840 --> 01:10:03,600
+you're given a bunch of information,
+
+1905
+01:10:01,520 --> 01:10:05,600
+formulas, numbers, and rules, and you're
+
+1906
+01:10:03,600 --> 01:10:08,320
+expected to become familiar with what
+
+1907
+01:10:05,600 --> 01:10:10,000
+other people have already done.
+
+1908
+01:10:08,320 --> 01:10:11,840
+You learn the steps, you can repeat
+
+1909
+01:10:10,000 --> 01:10:13,679
+them, you can reproduce the same
+
+1910
+01:10:11,840 --> 01:10:15,679
+results, and you can memorize the
+
+1911
+01:10:13,679 --> 01:10:18,080
+equations. There's nothing wrong with
+
+1912
+01:10:15,679 --> 01:10:21,280
+that. It's still a good foundation. But
+
+1913
+01:10:18,080 --> 01:10:22,719
+our goal goes a bit beyond that. What I
+
+1914
+01:10:21,280 --> 01:10:24,960
+really want is to inspire you to have
+
+1915
+01:10:22,719 --> 01:10:26,480
+new ideas. To reach that point, you have
+
+1916
+01:10:24,960 --> 01:10:28,719
+to truly understand what's going on
+
+1917
+01:10:26,480 --> 01:10:30,960
+beneath the surface. For example, when
+
+1918
+01:10:28,719 --> 01:10:32,560
+we studied the Doppler system earlier, I
+
+1919
+01:10:30,960 --> 01:10:34,320
+didn't just want you to memorize the
+
+1920
+01:10:32,560 --> 01:10:36,159
+formula.
+
+1921
+01:10:34,320 --> 01:10:38,000
+I wanted you to see the reasoning behind
+
+1922
+01:10:36,159 --> 01:10:40,000
+it to connect the physics to what you
+
+1923
+01:10:38,000 --> 01:10:42,719
+actually observe. That's the kind of
+
+1924
+01:10:40,000 --> 01:10:45,120
+understanding that helps you innovate.
+
+1925
+01:10:42,719 --> 01:10:47,280
+We encourage you not to simply copy what
+
+1926
+01:10:45,120 --> 01:10:49,199
+others are doing. Don't just see a
+
+1927
+01:10:47,280 --> 01:10:51,199
+bridge someone has built and make the
+
+1928
+01:10:49,199 --> 01:10:54,320
+same bridge again. Instead, learn how to
+
+1929
+01:10:51,199 --> 01:10:56,640
+design your own. You need to create to
+
+1930
+01:10:54,320 --> 01:10:58,960
+innovate to generate something new.
+
+1931
+01:10:56,640 --> 01:11:00,640
+That's far more important.
+
+1932
+01:10:58,960 --> 01:11:02,640
+Now, when I talk about reviewing, we
+
+1933
+01:11:00,640 --> 01:11:04,800
+still use a closed book or closed form
+
+1934
+01:11:02,640 --> 01:11:07,520
+style of study. You can use the book,
+
+1935
+01:11:04,800 --> 01:11:09,040
+the slides, and the solutions.
+
+1936
+01:11:07,520 --> 01:11:11,040
+Even if you don't understand every
+
+1937
+01:11:09,040 --> 01:11:12,960
+detail right away, I want you to read
+
+1938
+01:11:11,040 --> 01:11:14,960
+through the green chapter, learn the
+
+1939
+01:11:12,960 --> 01:11:16,480
+concepts, understand the examples, and
+
+1940
+01:11:14,960 --> 01:11:18,159
+become familiar with the existing
+
+1941
+01:11:16,480 --> 01:11:19,840
+answers.
+
+1942
+01:11:18,159 --> 01:11:21,440
+At the same time, try to think hard
+
+1943
+01:11:19,840 --> 01:11:23,440
+where you can improve or add new
+
+1944
+01:11:21,440 --> 01:11:25,280
+functionality such as iPhone based
+
+1945
+01:11:23,440 --> 01:11:27,520
+possibilities.
+
+1946
+01:11:25,280 --> 01:11:30,320
+You need to think beyond memorization.
+
+1947
+01:11:27,520 --> 01:11:32,080
+Think about problem identification.
+
+1948
+01:11:30,320 --> 01:11:33,760
+When you review the material, try to
+
+1949
+01:11:32,080 --> 01:11:36,080
+notice how pioneers and earlier
+
+1950
+01:11:33,760 --> 01:11:38,080
+researchers identified their problems.
+
+1951
+01:11:36,080 --> 01:11:41,040
+How did they get their ideas? How did
+
+1952
+01:11:38,080 --> 01:11:42,960
+they use the tools available to them?
+
+1953
+01:11:41,040 --> 01:11:44,880
+Even if the textbook doesn't directly
+
+1954
+01:11:42,960 --> 01:11:47,120
+give you an answer, you can always look
+
+1955
+01:11:44,880 --> 01:11:49,120
+for more. Use Google Scholar, use Web of
+
+1956
+01:11:47,120 --> 01:11:52,000
+Science, explore the literature, and ask
+
+1957
+01:11:49,120 --> 01:11:53,840
+chat GPT and other AI models. Learn to
+
+1958
+01:11:52,000 --> 01:11:55,760
+find what you need and to solve problems
+
+1959
+01:11:53,840 --> 01:11:58,080
+independently.
+
+1960
+01:11:55,760 --> 01:11:59,600
+And finally, motivation matters. The
+
+1961
+01:11:58,080 --> 01:12:01,840
+traditional way of teaching doesn't
+
+1962
+01:11:59,600 --> 01:12:04,080
+always emphasize new ideas or encourage
+
+1963
+01:12:01,840 --> 01:12:07,199
+creativity. But in real research,
+
+1964
+01:12:04,080 --> 01:12:09,600
+motivation drives discovery.
+
+1965
+01:12:07,199 --> 01:12:11,440
+That's what I want to underline. So when
+
+1966
+01:12:09,600 --> 01:12:13,440
+you review and study, don't just focus
+
+1967
+01:12:11,440 --> 01:12:15,600
+on memorizing the content. Look for the
+
+1968
+01:12:13,440 --> 01:12:17,600
+underlying meaning behind it. Try to
+
+1969
+01:12:15,600 --> 01:12:20,480
+understand the ideas, the motivation,
+
+1970
+01:12:17,600 --> 01:12:22,719
+and the reasoning that led to them.
+
+1971
+01:12:20,480 --> 01:12:24,480
+So anyway, that's all for today. Take
+
+1972
+01:12:22,719 --> 01:12:26,239
+some time to reflect, review the green
+
+1973
+01:12:24,480 --> 01:12:27,679
+chapter, and start thinking creatively
+
+1974
+01:12:26,239 --> 01:12:29,679
+about how you can connect what you've
+
+1975
+01:12:27,679 --> 01:12:33,560
+learned to new ideas. That's how
+
+1976
+01:12:29,679 --> 01:12:33,560
+innovation really begins.
+

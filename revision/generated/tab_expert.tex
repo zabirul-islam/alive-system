@@ -1,0 +1,37 @@
+\begin{table}[!htbp]
+\centering
+\caption{Expert review of 100 test items}
+\label{tab:sup_expert}
+\small
+\begin{tabular}{lcc}
+\toprule
+\textbf{Judgment} & \textbf{Raw agreement} & \textbf{Cohen's $\kappa$} \\
+\midrule
+Question answerable from lecture & 88\% & 0.21 \\
+Reference correct (P counted as N) & 75\% & 0.33 \\
+Context supports reference & 79\% & 0.28 \\
+Correctness of Base answer & 72\% & 0.34 \\
+Correctness of ALIVE answer & 74\% & 0.30 \\
+Preference & 62\% & 0.27 \\
+\bottomrule
+\end{tabular}
+\par\medskip
+\footnotesize
+\setlength{\tabcolsep}{3.5pt}
+\begin{tabular}{lccccccc}
+\toprule
+\textbf{Items} & $\boldsymbol{n}$ & \textbf{Correctness} & $\boldsymbol{p}$ & \textbf{Incorrect (\%)} & \textbf{Clarity} & $\boldsymbol{p}$ & \textbf{Preference} \\
+ & & \textbf{Base / ALIVE} & & \textbf{Base / ALIVE} & \textbf{Base / ALIVE} & & \textbf{r1; r2} \\
+\midrule
+All items & 100 & 0.81 / 0.84 & 0.130 & 13.0 / 10.5 & 4.37 / 4.40 & 0.677 & 20/13/67; 18/20/62 \\
+Evidence-supported$^\dagger$ & 65 & 0.92 / 0.97 & 0.025 & 6.9 / 0.0 & 4.67 / 4.75 & 0.370 & 13/6/46; 9/12/44 \\
+Reference accepted as Y or P & 78 & 0.89 / 0.94 & 0.035 & 6.4 / 1.9 & 4.56 / 4.65 & 0.319 & 17/9/52; 14/15/49 \\
+\bottomrule
+\end{tabular}
+\tabnotes{Two external raters, lecture-restricted condition. Upper table: agreement between the raters. Lower table: Base vs.\
+ALIVE. Correctness is scored correct 1, partial 0.5, incorrect 0 and averaged over raters ($p$ = Wilcoxon); Incorrect = share of
+judgments rating the answer incorrect; Preference = ALIVE/Base/tie counts for rater 1; rater 2. Reference labels: rater 1 Y/P/N
+66/18/16, rater 2 Y/N 89/11; both raters accepted 65\% of the references, at least one
+rejected 22\%, and both rejected 5\%. $^\dagger$Both raters marked the question answerable, the
+reference correct (Y), and the context supportive.}
+\end{table}

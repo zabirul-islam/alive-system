@@ -43,6 +43,11 @@ github/
     └── reproducibility.md   seeds, package versions, expected outputs
 ```
 
+## Revision materials (IEEE TLT, TLT-2026-05-0547)
+
+The scripts, per-example outputs, human ratings, and relevance labels behind the
+revised manuscript and its supplementary material are in [`revision/`](revision/README.md).
+
 ## Pipeline at a glance
 
 1. `backend/alive_scripts/data_pipeline/generate_qa.py` walks the

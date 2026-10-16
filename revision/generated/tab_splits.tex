@@ -1,0 +1,33 @@
+\begin{table}[!htbp]
+\centering
+\caption{Generalization beyond the pair-level split}
+\label{tab:sup_splits}
+\footnotesize
+\setlength{\tabcolsep}{3pt}
+\begin{tabular}{lcccccc}
+\toprule
+\textbf{Condition} & $\boldsymbol{n}$ & \textbf{Base BS-F1} & \textbf{Adapted BS-F1} & \textbf{$\Delta$ BS-F1 [95\% CI]} & \textbf{$\Delta$ ROUGE-L [95\% CI]} & \textbf{$\Delta$ NLI$^\dagger$} \\
+\midrule
+Original split$^*$, all & 508 & 0.737 & 0.768 & +0.031 [+0.024, +0.039] & +0.054 [+0.040, +0.069] & --- \\
+Original split$^*$, cos$<$0.90 & 413 & 0.738 & 0.767 & +0.029 [+0.021, +0.037] & +0.048 [+0.032, +0.064] & --- \\
+Original split$^*$, cos$<$0.80 & 263 & 0.738 & 0.761 & +0.023 [+0.013, +0.033] & +0.028 [+0.009, +0.048] & --- \\
+Original split$^*$, cos$\geq$0.90 & 95 & 0.735 & 0.776 & +0.041 [+0.026, +0.057] & +0.083 [+0.051, +0.116] & --- \\
+Slide-grouped (best val.), all & 689 & 0.731 & 0.758 & +0.027 [+0.021, +0.032] & +0.044 [+0.033, +0.054] & -0.061 \\
+Slide-grouped (best val.), cos$<$0.90 & 622 & 0.731 & 0.758 & +0.027 [+0.021, +0.033] & +0.045 [+0.034, +0.056] & --- \\
+Lecture-held-out (best val.), all & 1241 & 0.731 & 0.756 & +0.025 [+0.021, +0.029] & +0.036 [+0.028, +0.044] & -0.068 \\
+Lecture-held-out (best val.), cos$<$0.90 & 1201 & 0.730 & 0.756 & +0.026 [+0.022, +0.030] & +0.037 [+0.029, +0.045] & --- \\
+Slide-grouped (final ckpt.), all & 689 & 0.731 & 0.754 & +0.024 [+0.018, +0.029] & +0.027 [+0.016, +0.038] & -0.065 \\
+Slide-grouped (final ckpt.), cos$<$0.90 & 622 & 0.731 & 0.754 & +0.023 [+0.017, +0.029] & +0.025 [+0.013, +0.036] & --- \\
+Lecture-held-out (final ckpt.), all & 1241 & 0.731 & 0.754 & +0.022 [+0.019, +0.027] & +0.029 [+0.020, +0.037] & -0.067 \\
+Lecture-held-out (final ckpt.), cos$<$0.90 & 1201 & 0.730 & 0.753 & +0.023 [+0.018, +0.027] & +0.028 [+0.020, +0.037] & --- \\
+\bottomrule
+\end{tabular}
+\tabnotes{Context is lecture-restricted throughout. cos is the cosine similarity (all-mpnet-base-v2) between a test question and
+its nearest training question. Slide-grouped split: 4039/479/689 training/validation/test
+pairs, with no inferred slide shared between the sets (text from the same generating passage may be shared). Lecture-held-out
+split: lectures 5, 13, 14, 16, 20 held out (1241 test pairs). Retrained adapters use the
+deployed recipe unchanged. $^*$Original-split rows use the originally submitted predictions (Base 0.737), not the regenerated run
+of Table~\ref{tab:sup_2x2}. $^\dagger$Segment-aware NLI entailment (any 1,024-character context window), all test items.
+Cluster bootstrap of the BS-F1 $\Delta$: slide-grouped, resampling 88 slides, [+0.020, +0.033]; lecture-held-out,
+per lecture: Lecture 5 +0.023; Lecture 13 +0.017; Lecture 14 +0.031; Lecture 16 +0.026; Lecture 20 +0.028.}
+\end{table}

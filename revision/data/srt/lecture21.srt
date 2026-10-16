@@ -1,0 +1,10324 @@
+1
+00:00:01,760 --> 00:00:04,880
+Today we're beginning a very unique
+
+2
+00:00:03,280 --> 00:00:06,960
+chapter in this course focusing on
+
+3
+00:00:04,880 --> 00:00:08,800
+ultrasound imaging. This is exciting
+
+4
+00:00:06,960 --> 00:00:10,800
+because ultrasound is rather cost
+
+5
+00:00:08,800 --> 00:00:12,480
+effective and becomes increasingly more
+
+6
+00:00:10,800 --> 00:00:14,719
+important due to hardware improvements
+
+7
+00:00:12,480 --> 00:00:16,640
+and AI techniques.
+
+8
+00:00:14,719 --> 00:00:18,240
+In this lecture, we'll go through the
+
+9
+00:00:16,640 --> 00:00:20,320
+fundamental principles behind
+
+10
+00:00:18,240 --> 00:00:22,160
+ultrasound, what it is, how it works,
+
+11
+00:00:20,320 --> 00:00:23,840
+and how it behaves in biological
+
+12
+00:00:22,160 --> 00:00:25,920
+tissues.
+
+13
+00:00:23,840 --> 00:00:28,160
+Then in the next lecture we'll move on
+
+14
+00:00:25,920 --> 00:00:30,400
+to ultrasound imaging modes. How the
+
+15
+00:00:28,160 --> 00:00:32,399
+system collects, processes and displays
+
+16
+00:00:30,400 --> 00:00:33,840
+data. So today is all about
+
+17
+00:00:32,399 --> 00:00:36,000
+understanding the principles, the
+
+18
+00:00:33,840 --> 00:00:40,120
+physics and the key ideas that make
+
+19
+00:00:36,000 --> 00:00:40,120
+ultrasound imaging possible.
+
+20
+00:00:41,680 --> 00:00:44,800
+Today we're beginning a very unique
+
+21
+00:00:43,200 --> 00:00:46,879
+chapter in this course focusing on
+
+22
+00:00:44,800 --> 00:00:48,399
+ultrasound imaging. This is exciting
+
+23
+00:00:46,879 --> 00:00:50,480
+because ultrasound is rather
+
+24
+00:00:48,399 --> 00:00:51,920
+cost-effective and becomes increasingly
+
+25
+00:00:50,480 --> 00:00:54,640
+more important due to hardware
+
+26
+00:00:51,920 --> 00:00:56,559
+improvements and AI techniques.
+
+27
+00:00:54,640 --> 00:00:58,160
+In this lecture, we'll go through the
+
+28
+00:00:56,559 --> 00:01:00,239
+fundamental principles behind
+
+29
+00:00:58,160 --> 00:01:02,079
+ultrasound. What it is, how it works,
+
+30
+00:01:00,239 --> 00:01:03,760
+and how it behaves in biological
+
+31
+00:01:02,079 --> 00:01:05,840
+tissues.
+
+32
+00:01:03,760 --> 00:01:08,000
+Then in the next lecture, we'll move on
+
+33
+00:01:05,840 --> 00:01:10,320
+to ultrasound imaging modes, how the
+
+34
+00:01:08,000 --> 00:01:12,320
+system collects, processes, and displays
+
+35
+00:01:10,320 --> 00:01:13,760
+data. So today is all about
+
+36
+00:01:12,320 --> 00:01:15,920
+understanding the principles, the
+
+37
+00:01:13,760 --> 00:01:20,040
+physics and the key ideas that make
+
+38
+00:01:15,920 --> 00:01:20,040
+ultrasound imaging possible.
+
+39
+00:01:21,439 --> 00:01:26,799
+In this lecture, our main focus is on
+
+40
+00:01:23,600 --> 00:01:28,560
+the physical principles of ultrasound.
+
+41
+00:01:26,799 --> 00:01:30,400
+We'll start by understanding what an
+
+42
+00:01:28,560 --> 00:01:32,079
+ultrasound wave really is, how it's
+
+43
+00:01:30,400 --> 00:01:34,240
+generated, how it travels through
+
+44
+00:01:32,079 --> 00:01:36,320
+biological tissue, and how it interacts
+
+45
+00:01:34,240 --> 00:01:38,400
+with different types of materials inside
+
+46
+00:01:36,320 --> 00:01:41,360
+the body. These are the physical
+
+47
+00:01:38,400 --> 00:01:43,040
+foundations of ultrasound imaging.
+
+48
+00:01:41,360 --> 00:01:45,280
+Then we'll shift to the engineering
+
+49
+00:01:43,040 --> 00:01:47,520
+aspects. How we actually generate and
+
+50
+00:01:45,280 --> 00:01:49,439
+detect these waves using an ultrasound
+
+51
+00:01:47,520 --> 00:01:50,799
+transducer.
+
+52
+00:01:49,439 --> 00:01:53,040
+You'll hear me mention the term
+
+53
+00:01:50,799 --> 00:01:55,439
+transducer a lot today. The word
+
+54
+00:01:53,040 --> 00:01:57,840
+transduction means converting one form
+
+55
+00:01:55,439 --> 00:01:59,680
+of energy into another. In our case, the
+
+56
+00:01:57,840 --> 00:02:01,520
+transducer converts electrical energy
+
+57
+00:01:59,680 --> 00:02:04,640
+into mechanical vibration to generate
+
+58
+00:02:01,520 --> 00:02:06,320
+the ultrasound wave. When the reflected
+
+59
+00:02:04,640 --> 00:02:08,160
+wave comes back, the same device
+
+60
+00:02:06,320 --> 00:02:10,319
+converts the mechanical vibration back
+
+61
+00:02:08,160 --> 00:02:12,560
+into electrical signals. So, it's a
+
+62
+00:02:10,319 --> 00:02:14,959
+two-way process. We transmit and receive
+
+63
+00:02:12,560 --> 00:02:17,440
+using the same component.
+
+64
+00:02:14,959 --> 00:02:19,520
+We'll look at both single unit and array
+
+65
+00:02:17,440 --> 00:02:21,760
+based transducers. And we'll talk about
+
+66
+00:02:19,520 --> 00:02:24,640
+different types of resolution specific
+
+67
+00:02:21,760 --> 00:02:27,920
+to ultrasound, axial resolution, lateral
+
+68
+00:02:24,640 --> 00:02:29,840
+resolution, and spatial resolution.
+
+69
+00:02:27,920 --> 00:02:32,800
+Each of these determines how finely we
+
+70
+00:02:29,840 --> 00:02:34,959
+can distinguish structures in an image.
+
+71
+00:02:32,800 --> 00:02:37,360
+We'll also talk about imaging contrast,
+
+72
+00:02:34,959 --> 00:02:39,360
+which is very important for ultrasound.
+
+73
+00:02:37,360 --> 00:02:41,040
+You'll learn about natural contrast as
+
+74
+00:02:39,360 --> 00:02:43,519
+well as how we can enhance contrast
+
+75
+00:02:41,040 --> 00:02:45,280
+using microbubbles.
+
+76
+00:02:43,519 --> 00:02:47,920
+Microbubbles are a very clever and
+
+77
+00:02:45,280 --> 00:02:49,519
+modern idea. Tiny gas bubbles injected
+
+78
+00:02:47,920 --> 00:02:52,000
+into the bloodstream to improve
+
+79
+00:02:49,519 --> 00:02:53,840
+visibility in ultrasound. They're not
+
+80
+00:02:52,000 --> 00:02:55,840
+discussed much in your textbook, but
+
+81
+00:02:53,840 --> 00:02:58,080
+I'll expand on them to give you a sense
+
+82
+00:02:55,840 --> 00:02:59,680
+of current developments in ultrasound
+
+83
+00:02:58,080 --> 00:03:01,840
+imaging.
+
+84
+00:02:59,680 --> 00:03:04,239
+So, this is our outline for today. And
+
+85
+00:03:01,840 --> 00:03:06,080
+as always, for every imaging modality we
+
+86
+00:03:04,239 --> 00:03:08,319
+study, pay close attention to the
+
+87
+00:03:06,080 --> 00:03:11,200
+outline. It tells you exactly what to
+
+88
+00:03:08,319 --> 00:03:14,000
+focus on. Try to understand each of
+
+89
+00:03:11,200 --> 00:03:16,080
+these key ideas clearly, the wave, the
+
+90
+00:03:14,000 --> 00:03:18,319
+transducer, the resolution, and the
+
+91
+00:03:16,080 --> 00:03:20,239
+contrast because together they form the
+
+92
+00:03:18,319 --> 00:03:24,040
+foundation for everything that follows
+
+93
+00:03:20,239 --> 00:03:24,040
+in ultrasound imaging.
+
+94
+00:03:25,680 --> 00:03:29,680
+Okay. Now, let's talk about medical
+
+95
+00:03:27,519 --> 00:03:32,799
+imaging again, focusing on the five
+
+96
+00:03:29,680 --> 00:03:34,319
+major modalities we've been studying.
+
+97
+00:03:32,799 --> 00:03:37,200
+We've already gone through X-ray
+
+98
+00:03:34,319 --> 00:03:39,120
+imaging, nuclear imaging, and MRI, the
+
+99
+00:03:37,200 --> 00:03:40,720
+three big ones. The next one is
+
+100
+00:03:39,120 --> 00:03:42,879
+ultrasound. And after that, we'll finish
+
+101
+00:03:40,720 --> 00:03:45,280
+with optical imaging, which as you'll
+
+102
+00:03:42,879 --> 00:03:46,879
+see later, is also very unique and quite
+
+103
+00:03:45,280 --> 00:03:48,959
+powerful.
+
+104
+00:03:46,879 --> 00:03:51,440
+Ultrasound imaging has several clear
+
+105
+00:03:48,959 --> 00:03:53,519
+advantages. First, it involves no
+
+106
+00:03:51,440 --> 00:03:55,599
+ionizing radiation. That's very
+
+107
+00:03:53,519 --> 00:03:57,680
+important because unlike X-rays or gamma
+
+108
+00:03:55,599 --> 00:04:01,040
+rays, ultrasound uses mechanical sound
+
+109
+00:03:57,680 --> 00:04:03,360
+waves, not electromagnetic radiation.
+
+110
+00:04:01,040 --> 00:04:06,799
+So there's no risk of DNA damage and no
+
+111
+00:04:03,360 --> 00:04:08,640
+concern about radiation induced cancer.
+
+112
+00:04:06,799 --> 00:04:11,040
+Another major strength is speed.
+
+113
+00:04:08,640 --> 00:04:12,720
+Ultrasound provides images in real time.
+
+114
+00:04:11,040 --> 00:04:15,680
+You can literally move the probe and
+
+115
+00:04:12,720 --> 00:04:18,239
+watch the image update instantly.
+
+116
+00:04:15,680 --> 00:04:19,919
+The transducer or ultrasound probe can
+
+117
+00:04:18,239 --> 00:04:22,160
+be gently moved across the body. For
+
+118
+00:04:19,919 --> 00:04:24,240
+example, over the abdomen to monitor a
+
+119
+00:04:22,160 --> 00:04:26,479
+baby during pregnancy or over the chest
+
+120
+00:04:24,240 --> 00:04:28,400
+to examine cardiac function. It's a
+
+121
+00:04:26,479 --> 00:04:29,919
+quick, flexible, and lowcost imaging
+
+122
+00:04:28,400 --> 00:04:32,240
+modality.
+
+123
+00:04:29,919 --> 00:04:34,479
+Of course, like every imaging method,
+
+124
+00:04:32,240 --> 00:04:37,520
+ultrasound has its limitations. One
+
+125
+00:04:34,479 --> 00:04:39,600
+limitation is the penetration depth. It
+
+126
+00:04:37,520 --> 00:04:42,160
+can't go very deep into the body,
+
+127
+00:04:39,600 --> 00:04:44,800
+especially through hard tissue or bone.
+
+128
+00:04:42,160 --> 00:04:47,600
+X-ray imaging, in contrast, is excellent
+
+129
+00:04:44,800 --> 00:04:49,600
+for bone tissue or tissue air interfaces
+
+130
+00:04:47,600 --> 00:04:51,680
+like lungs or bones because those
+
+131
+00:04:49,600 --> 00:04:54,080
+materials have very different densities
+
+132
+00:04:51,680 --> 00:04:56,320
+and attenuate X-rays differently.
+
+133
+00:04:54,080 --> 00:04:58,639
+Ultrasound on the other hand depends on
+
+134
+00:04:56,320 --> 00:05:01,440
+acoustic impedance which determines how
+
+135
+00:04:58,639 --> 00:05:02,960
+sound travels through a material.
+
+136
+00:05:01,440 --> 00:05:05,199
+When there's a large mismatch in
+
+137
+00:05:02,960 --> 00:05:07,199
+impedance such as between air and bone,
+
+138
+00:05:05,199 --> 00:05:10,000
+most of the ultrasound energy reflects
+
+139
+00:05:07,199 --> 00:05:11,840
+back instead of penetrating.
+
+140
+00:05:10,000 --> 00:05:15,039
+That's why it's difficult to image
+
+141
+00:05:11,840 --> 00:05:16,720
+structures behind the lungs or skull.
+
+142
+00:05:15,039 --> 00:05:18,639
+To get a clear image of the heart, for
+
+143
+00:05:16,720 --> 00:05:20,720
+example, you have to find an acoustic
+
+144
+00:05:18,639 --> 00:05:22,639
+window between the ribs, an area where
+
+145
+00:05:20,720 --> 00:05:24,479
+sound can travel through soft tissue
+
+146
+00:05:22,639 --> 00:05:26,400
+effectively.
+
+147
+00:05:24,479 --> 00:05:28,639
+Ultrasound imaging mainly works on the
+
+148
+00:05:26,400 --> 00:05:30,639
+principle of reflection and scattering.
+
+149
+00:05:28,639 --> 00:05:32,639
+The system sends out sound waves. Those
+
+150
+00:05:30,639 --> 00:05:34,639
+waves hit structures inside the body,
+
+151
+00:05:32,639 --> 00:05:36,639
+tissue boundaries, organs, or small
+
+152
+00:05:34,639 --> 00:05:38,880
+particles, and the echoes are detected
+
+153
+00:05:36,639 --> 00:05:40,560
+to form an image.
+
+154
+00:05:38,880 --> 00:05:42,479
+There are also transmissionbased
+
+155
+00:05:40,560 --> 00:05:44,960
+ultrasound methods, but those are less
+
+156
+00:05:42,479 --> 00:05:47,280
+common in clinical imaging.
+
+157
+00:05:44,960 --> 00:05:49,600
+Beyond diagnosis, ultrasound is used for
+
+158
+00:05:47,280 --> 00:05:51,759
+imageguided procedures such as biopsies
+
+159
+00:05:49,600 --> 00:05:53,840
+and minimally invasive surgeries where
+
+160
+00:05:51,759 --> 00:05:56,720
+live ultrasound images can be registered
+
+161
+00:05:53,840 --> 00:05:59,039
+with prior CT or MRI scans to help guide
+
+162
+00:05:56,720 --> 00:06:01,280
+the doctor precisely.
+
+163
+00:05:59,039 --> 00:06:03,680
+And in recent years, ultrasound has even
+
+164
+00:06:01,280 --> 00:06:05,759
+found a role in neurom modulation using
+
+165
+00:06:03,680 --> 00:06:07,680
+focused ultrasound to stimulate neural
+
+166
+00:06:05,759 --> 00:06:09,039
+tissue potentially helping to treat
+
+167
+00:06:07,680 --> 00:06:11,440
+conditions like depression or
+
+168
+00:06:09,039 --> 00:06:13,759
+Parkinson's disease.
+
+169
+00:06:11,440 --> 00:06:15,919
+This is a very exciting and emerging
+
+170
+00:06:13,759 --> 00:06:20,120
+field showing that ultrasound is far
+
+171
+00:06:15,919 --> 00:06:20,120
+more than just an imaging tool.
+
+172
+00:06:21,280 --> 00:06:24,960
+Now I know DARPA has funded huge
+
+173
+00:06:23,120 --> 00:06:27,360
+research programs in this new frontier
+
+174
+00:06:24,960 --> 00:06:28,800
+of ultrasound technology.
+
+175
+00:06:27,360 --> 00:06:31,120
+It's important to remember that
+
+176
+00:06:28,800 --> 00:06:33,039
+ultrasound is not an electromagnetic
+
+177
+00:06:31,120 --> 00:06:35,199
+wave. This makes it fundamentally
+
+178
+00:06:33,039 --> 00:06:37,680
+different from X-ray, CT, nuclear
+
+179
+00:06:35,199 --> 00:06:40,800
+imaging or MRI.
+
+180
+00:06:37,680 --> 00:06:42,639
+MRI for example uses radio frequency RF
+
+181
+00:06:40,800 --> 00:06:44,639
+signals which are simply alternating
+
+182
+00:06:42,639 --> 00:06:47,120
+magnetic fields still part of the
+
+183
+00:06:44,639 --> 00:06:49,520
+electromagnetic spectrum. X-ray and
+
+184
+00:06:47,120 --> 00:06:51,759
+nuclear imaging use high energy photons
+
+185
+00:06:49,520 --> 00:06:54,639
+X-rays and gamma rays which can behave
+
+186
+00:06:51,759 --> 00:06:56,479
+like both waves and particles.
+
+187
+00:06:54,639 --> 00:06:58,400
+All of those imaging types relate to
+
+188
+00:06:56,479 --> 00:07:00,800
+Maxwell's equations if we describe them
+
+189
+00:06:58,400 --> 00:07:03,520
+as waves or to Boltzman's equations if
+
+190
+00:07:00,800 --> 00:07:05,520
+we describe them as particles.
+
+191
+00:07:03,520 --> 00:07:08,160
+But ultrasound is different. It's a
+
+192
+00:07:05,520 --> 00:07:09,840
+mechanical wave, not electromagnetic. It
+
+193
+00:07:08,160 --> 00:07:11,840
+physically vibrates particles in a
+
+194
+00:07:09,840 --> 00:07:14,240
+medium, air, water, or biological
+
+195
+00:07:11,840 --> 00:07:17,120
+tissue. That's why it needs a medium to
+
+196
+00:07:14,240 --> 00:07:18,720
+travel. It can't move through a vacuum.
+
+197
+00:07:17,120 --> 00:07:20,720
+As you can see in this frequency chart,
+
+198
+00:07:18,720 --> 00:07:23,280
+the audible range for humans is roughly
+
+199
+00:07:20,720 --> 00:07:25,120
+from 20 Hz to 20 kHz. That's what you
+
+200
+00:07:23,280 --> 00:07:27,440
+and I can hear, like my speaking voice
+
+201
+00:07:25,120 --> 00:07:29,680
+or birds singing. Ultrasound goes far
+
+202
+00:07:27,440 --> 00:07:32,560
+beyond that, starting from around 20 kHz
+
+203
+00:07:29,680 --> 00:07:34,639
+and reaching into the megahertz range.
+
+204
+00:07:32,560 --> 00:07:37,280
+In medical imaging, typical frequencies
+
+205
+00:07:34,639 --> 00:07:39,120
+are between two mens and 20 mens
+
+206
+00:07:37,280 --> 00:07:41,039
+depending on the application. Lower
+
+207
+00:07:39,120 --> 00:07:42,960
+frequencies penetrate deeper but give
+
+208
+00:07:41,039 --> 00:07:45,199
+lower resolution. Higher frequencies
+
+209
+00:07:42,960 --> 00:07:47,440
+provide sharper images but can't go as
+
+210
+00:07:45,199 --> 00:07:49,440
+deep. Industrial and destructive testing
+
+211
+00:07:47,440 --> 00:07:51,280
+ultrasounds can reach up to hundreds of
+
+212
+00:07:49,440 --> 00:07:53,360
+megahertz.
+
+213
+00:07:51,280 --> 00:07:55,680
+So unlike the sound waves we can hear,
+
+214
+00:07:53,360 --> 00:07:58,080
+these ultrasound waves are way too high
+
+215
+00:07:55,680 --> 00:08:00,080
+frequency for our ears.
+
+216
+00:07:58,080 --> 00:08:01,919
+And with very high power focused
+
+217
+00:08:00,080 --> 00:08:04,080
+ultrasound, we can actually go beyond
+
+218
+00:08:01,919 --> 00:08:06,400
+imaging. We can cut or heat tissue like
+
+219
+00:08:04,080 --> 00:08:08,240
+a kind of ultrasound knife. It's used in
+
+220
+00:08:06,400 --> 00:08:10,400
+certain treatments to destroy tumors or
+
+221
+00:08:08,240 --> 00:08:12,479
+cauterized tissue.
+
+222
+00:08:10,400 --> 00:08:14,960
+But in this lecture, our focus remains
+
+223
+00:08:12,479 --> 00:08:16,960
+on diagnostic ultrasound imaging.
+
+224
+00:08:14,960 --> 00:08:19,280
+Understanding how these mechanical waves
+
+225
+00:08:16,960 --> 00:08:23,080
+are formed, transmitted, and received to
+
+226
+00:08:19,280 --> 00:08:23,080
+create medical images.
+
+227
+00:08:24,400 --> 00:08:28,080
+Now let's look at this picture which
+
+228
+00:08:26,319 --> 00:08:30,319
+illustrates a classic experiment that
+
+229
+00:08:28,080 --> 00:08:31,919
+helps us understand what sound really
+
+230
+00:08:30,319 --> 00:08:33,760
+is.
+
+231
+00:08:31,919 --> 00:08:35,599
+This is Robert Bole's experiment. One of
+
+232
+00:08:33,760 --> 00:08:38,959
+the earliest demonstrations of how sound
+
+233
+00:08:35,599 --> 00:08:40,959
+needs a medium to travel. So imagine
+
+234
+00:08:38,959 --> 00:08:42,800
+this setup. We have a ringing alarm
+
+235
+00:08:40,959 --> 00:08:46,000
+clock placed inside a large glass
+
+236
+00:08:42,800 --> 00:08:47,839
+chamber with a valve on top. At first
+
+237
+00:08:46,000 --> 00:08:49,360
+the clock is ringing and you can clearly
+
+238
+00:08:47,839 --> 00:08:51,760
+hear the sound through the air inside
+
+239
+00:08:49,360 --> 00:08:53,440
+the container. Then we connect a vacuum
+
+240
+00:08:51,760 --> 00:08:56,320
+pump and start to remove the air from
+
+241
+00:08:53,440 --> 00:08:57,920
+the chamber. As the air is pumped out,
+
+242
+00:08:56,320 --> 00:08:59,839
+the sound of the clock becomes weaker
+
+243
+00:08:57,920 --> 00:09:02,000
+and weaker until eventually you can
+
+244
+00:08:59,839 --> 00:09:03,920
+hardly hear anything at all. The clock
+
+245
+00:09:02,000 --> 00:09:05,600
+is still ringing, but with almost no air
+
+246
+00:09:03,920 --> 00:09:08,399
+inside the chamber, there's nothing to
+
+247
+00:09:05,600 --> 00:09:10,320
+carry the sound waves to your ears.
+
+248
+00:09:08,399 --> 00:09:12,000
+Then when you open the valve and let air
+
+249
+00:09:10,320 --> 00:09:14,480
+rush back into the chamber, the sound
+
+250
+00:09:12,000 --> 00:09:16,160
+suddenly becomes loud again.
+
+251
+00:09:14,480 --> 00:09:18,240
+This simple experiment beautifully
+
+252
+00:09:16,160 --> 00:09:20,959
+demonstrates that sound waves require a
+
+253
+00:09:18,240 --> 00:09:23,440
+medium such as air, water or tissue to
+
+254
+00:09:20,959 --> 00:09:25,279
+propagate. Unlike light or X-rays which
+
+255
+00:09:23,440 --> 00:09:28,160
+can travel through a vacuum, mechanical
+
+256
+00:09:25,279 --> 00:09:30,240
+waves cannot.
+
+257
+00:09:28,160 --> 00:09:32,080
+So in ultrasound imaging, the same
+
+258
+00:09:30,240 --> 00:09:33,680
+principle applies. The sound waves
+
+259
+00:09:32,080 --> 00:09:35,600
+travel through biological tissue,
+
+260
+00:09:33,680 --> 00:09:38,560
+reflecting and scattering as they go,
+
+261
+00:09:35,600 --> 00:09:41,200
+allowing us to measure and form images.
+
+262
+00:09:38,560 --> 00:09:43,519
+Without a proper medium, say if there's
+
+263
+00:09:41,200 --> 00:09:45,279
+air between the transducer and the skin,
+
+264
+00:09:43,519 --> 00:09:47,680
+no ultrasound signal would be
+
+265
+00:09:45,279 --> 00:09:49,600
+transmitted effectively.
+
+266
+00:09:47,680 --> 00:09:51,760
+That's why, as you'll see later, we
+
+267
+00:09:49,600 --> 00:09:53,760
+always use ultrasound gel to eliminate
+
+268
+00:09:51,760 --> 00:09:58,440
+air gaps and ensure good acoustic
+
+269
+00:09:53,760 --> 00:09:58,440
+coupling between the probe and the body.
+
+270
+00:09:59,680 --> 00:10:05,680
+Now, let's take a closer look at what an
+
+271
+00:10:01,839 --> 00:10:08,399
+ultrasound wave actually is.
+
+272
+00:10:05,680 --> 00:10:10,320
+Here the medium whether air, water or
+
+273
+00:10:08,399 --> 00:10:12,480
+biological tissue is made up of
+
+274
+00:10:10,320 --> 00:10:14,720
+countless tiny molecules. When a
+
+275
+00:10:12,480 --> 00:10:16,800
+transducer or some vibrating source
+
+276
+00:10:14,720 --> 00:10:18,720
+starts pushing on those molecules, it
+
+277
+00:10:16,800 --> 00:10:21,760
+moves them back and forth along one
+
+278
+00:10:18,720 --> 00:10:23,920
+direction, say the Z-axis.
+
+279
+00:10:21,760 --> 00:10:26,000
+When the transducer pushes the molecules
+
+280
+00:10:23,920 --> 00:10:28,399
+forward, they become compressed and when
+
+281
+00:10:26,000 --> 00:10:30,320
+it pulls back, they spread apart. This
+
+282
+00:10:28,399 --> 00:10:32,880
+alternating process of compression and
+
+283
+00:10:30,320 --> 00:10:35,519
+rarifaction creates a longitudinal wave
+
+284
+00:10:32,880 --> 00:10:37,600
+that travels through the medium.
+
+285
+00:10:35,519 --> 00:10:39,760
+If you look carefully at the top figure,
+
+286
+00:10:37,600 --> 00:10:41,360
+the denser areas represent compressions
+
+287
+00:10:39,760 --> 00:10:43,519
+where molecules are packed tightly
+
+288
+00:10:41,360 --> 00:10:45,839
+together and pressure is high. The
+
+289
+00:10:43,519 --> 00:10:47,680
+lighter areas show rare actions where
+
+290
+00:10:45,839 --> 00:10:50,800
+the molecules are spread apart and the
+
+291
+00:10:47,680 --> 00:10:52,800
+pressure is lower.
+
+292
+00:10:50,800 --> 00:10:54,800
+Now, something very interesting happens
+
+293
+00:10:52,800 --> 00:10:56,800
+here. The wave itself travels forward,
+
+294
+00:10:54,800 --> 00:10:58,720
+but the individual molecules don't
+
+295
+00:10:56,800 --> 00:11:00,880
+actually move along with it. Each
+
+296
+00:10:58,720 --> 00:11:02,880
+molecule simply vibrates back and forth
+
+297
+00:11:00,880 --> 00:11:04,399
+around its equilibrium position. It
+
+298
+00:11:02,880 --> 00:11:07,120
+oscillates, but it doesn't go anywhere
+
+299
+00:11:04,399 --> 00:11:09,440
+overall.
+
+300
+00:11:07,120 --> 00:11:11,279
+So, the sound wave is really a transfer
+
+301
+00:11:09,440 --> 00:11:13,680
+of energy through the medium, not a
+
+302
+00:11:11,279 --> 00:11:15,279
+transfer of matter. The wave moves, but
+
+303
+00:11:13,680 --> 00:11:18,079
+the particles stay roughly where they
+
+304
+00:11:15,279 --> 00:11:20,000
+are, just vibrating locally.
+
+305
+00:11:18,079 --> 00:11:21,760
+That's an essential idea to keep in mind
+
+306
+00:11:20,000 --> 00:11:23,839
+when we talk about how ultrasound
+
+307
+00:11:21,760 --> 00:11:25,600
+propagates through tissue. The energy
+
+308
+00:11:23,839 --> 00:11:28,600
+travels forward, not the molecules
+
+309
+00:11:25,600 --> 00:11:28,600
+themselves.
+
+310
+00:11:30,079 --> 00:11:34,320
+Now that we know what a wave looks like,
+
+311
+00:11:31,920 --> 00:11:36,480
+let's think about how a wave is formed.
+
+312
+00:11:34,320 --> 00:11:40,480
+This is a really fundamental question.
+
+313
+00:11:36,480 --> 00:11:42,079
+Uh what makes a wave a wave?
+
+314
+00:11:40,480 --> 00:11:43,760
+To understand this, we need to bring
+
+315
+00:11:42,079 --> 00:11:46,480
+together three important physical
+
+316
+00:11:43,760 --> 00:11:48,240
+principles.
+
+317
+00:11:46,480 --> 00:11:50,399
+First, the conservation of mass, which
+
+318
+00:11:48,240 --> 00:11:52,240
+tells us that mass cannot be created or
+
+319
+00:11:50,399 --> 00:11:54,480
+destroyed. It must remain constant
+
+320
+00:11:52,240 --> 00:11:56,720
+within the system.
+
+321
+00:11:54,480 --> 00:11:58,880
+Second, there's the relationship between
+
+322
+00:11:56,720 --> 00:12:00,800
+pressure and volume. When you squeeze
+
+323
+00:11:58,880 --> 00:12:03,440
+something, the pressure inside changes
+
+324
+00:12:00,800 --> 00:12:05,440
+in a predictable way. And third, we have
+
+325
+00:12:03,440 --> 00:12:07,920
+Newton's second law, which relates force
+
+326
+00:12:05,440 --> 00:12:09,920
+to mass and acceleration.
+
+327
+00:12:07,920 --> 00:12:11,600
+If you imagine a perfectly rigid body
+
+328
+00:12:09,920 --> 00:12:13,760
+and you push on one end, the entire
+
+329
+00:12:11,600 --> 00:12:15,440
+object moves together as one piece.
+
+330
+00:12:13,760 --> 00:12:18,079
+There's no wave because nothing inside
+
+331
+00:12:15,440 --> 00:12:19,920
+deforms or compresses.
+
+332
+00:12:18,079 --> 00:12:22,240
+But in real materials, there's some
+
+333
+00:12:19,920 --> 00:12:24,800
+elasticity. things can compress slightly
+
+334
+00:12:22,240 --> 00:12:26,639
+and bounce back. That elasticity allows
+
+335
+00:12:24,800 --> 00:12:28,320
+small disturbances to propagate as
+
+336
+00:12:26,639 --> 00:12:30,560
+waves.
+
+337
+00:12:28,320 --> 00:12:32,399
+So when you push on a small region, it
+
+338
+00:12:30,560 --> 00:12:34,000
+compresses and transmits that force to
+
+339
+00:12:32,399 --> 00:12:36,240
+its neighbors, setting off a chain
+
+340
+00:12:34,000 --> 00:12:38,560
+reaction that moves through the medium.
+
+341
+00:12:36,240 --> 00:12:39,839
+The result is a wave.
+
+342
+00:12:38,560 --> 00:12:42,000
+Now, if we were talking about
+
+343
+00:12:39,839 --> 00:12:43,600
+electromagnetic waves such as light or
+
+344
+00:12:42,000 --> 00:12:46,160
+X-rays, we'd describe them using
+
+345
+00:12:43,600 --> 00:12:48,560
+Maxwell's equations.
+
+346
+00:12:46,160 --> 00:12:50,480
+For mechanical waves like ultrasound, we
+
+347
+00:12:48,560 --> 00:12:52,560
+instead rely on these three mechanical
+
+348
+00:12:50,480 --> 00:12:54,160
+principles. Conservation of mass, the
+
+349
+00:12:52,560 --> 00:12:57,519
+pressure volume relationship, and
+
+350
+00:12:54,160 --> 00:12:59,519
+Newton's second law. In more advanced
+
+351
+00:12:57,519 --> 00:13:01,519
+graduate level courses, we can actually
+
+352
+00:12:59,519 --> 00:13:04,880
+derive the full wave equation from these
+
+353
+00:13:01,519 --> 00:13:06,720
+laws step by step. But for now, the key
+
+354
+00:13:04,880 --> 00:13:08,880
+point is understanding the intuition.
+
+355
+00:13:06,720 --> 00:13:10,560
+Waves exist because a local disturbance
+
+356
+00:13:08,880 --> 00:13:12,399
+in pressure or motion creates a
+
+357
+00:13:10,560 --> 00:13:14,480
+self-sustaining pattern that propagates
+
+358
+00:13:12,399 --> 00:13:16,800
+through the medium.
+
+359
+00:13:14,480 --> 00:13:19,200
+And for me personally, this is the fun
+
+360
+00:13:16,800 --> 00:13:21,279
+part. Not just using formulas, but
+
+361
+00:13:19,200 --> 00:13:23,360
+really understanding why these waves
+
+362
+00:13:21,279 --> 00:13:25,040
+behave the way they do. Once you grasp
+
+363
+00:13:23,360 --> 00:13:28,160
+these core principles, you can always
+
+364
+00:13:25,040 --> 00:13:30,000
+work out the details later. The details
+
+365
+00:13:28,160 --> 00:13:32,240
+may change from one problem to another,
+
+366
+00:13:30,000 --> 00:13:34,639
+but the underlying physics stays the
+
+367
+00:13:32,240 --> 00:13:36,399
+same. That's what gives you real insight
+
+368
+00:13:34,639 --> 00:13:39,519
+and the ability to think beyond just
+
+369
+00:13:36,399 --> 00:13:41,839
+using a device as a black box.
+
+370
+00:13:39,519 --> 00:13:43,440
+So now with this foundation, let's look
+
+371
+00:13:41,839 --> 00:13:46,920
+specifically at how we form an
+
+372
+00:13:43,440 --> 00:13:46,920
+ultrasound wave.
+
+373
+00:13:48,480 --> 00:13:52,639
+All right. So how exactly do we form an
+
+374
+00:13:50,320 --> 00:13:54,639
+ultrasound wave? Let's break this down
+
+375
+00:13:52,639 --> 00:13:56,720
+step by step.
+
+376
+00:13:54,639 --> 00:13:58,480
+Think about how ordinary sound travels
+
+377
+00:13:56,720 --> 00:14:00,320
+through air. You can hear my voice
+
+378
+00:13:58,480 --> 00:14:02,480
+because the sound waves or pressure
+
+379
+00:14:00,320 --> 00:14:05,519
+waves travel from me to you through the
+
+380
+00:14:02,480 --> 00:14:07,600
+air. Now imagine replacing the air with
+
+381
+00:14:05,519 --> 00:14:10,959
+water molecules or even biological
+
+382
+00:14:07,600 --> 00:14:12,880
+tissue. The same principle applies.
+
+383
+00:14:10,959 --> 00:14:15,120
+Let's picture a small volume element or
+
+384
+00:14:12,880 --> 00:14:17,279
+what we might call a voxil inside that
+
+385
+00:14:15,120 --> 00:14:19,279
+material. Under normal conditions, that
+
+386
+00:14:17,279 --> 00:14:21,920
+voxil is in equilibrium. It has a
+
+387
+00:14:19,279 --> 00:14:24,160
+certain pressure, volume, and position.
+
+388
+00:14:21,920 --> 00:14:25,920
+Nothing's changing.
+
+389
+00:14:24,160 --> 00:14:28,079
+But now suppose we push on one side of
+
+390
+00:14:25,920 --> 00:14:30,079
+that element toward the right. This
+
+391
+00:14:28,079 --> 00:14:32,880
+causes a displacement denoted by the
+
+392
+00:14:30,079 --> 00:14:34,959
+lowercase letter W. When we push it, the
+
+393
+00:14:32,880 --> 00:14:36,560
+volume of that little element decreases
+
+394
+00:14:34,959 --> 00:14:39,040
+because the particles are squeezed
+
+395
+00:14:36,560 --> 00:14:40,800
+closer together. According
+
+396
+00:14:39,040 --> 00:14:42,639
+to the conservation of mass, the total
+
+397
+00:14:40,800 --> 00:14:44,880
+amount of material inside that voxil
+
+398
+00:14:42,639 --> 00:14:47,199
+stays the same, but the pressure inside
+
+399
+00:14:44,880 --> 00:14:49,120
+increases. That higher pressure creates
+
+400
+00:14:47,199 --> 00:14:52,160
+a net force on neighboring elements
+
+401
+00:14:49,120 --> 00:14:53,760
+pushing them forward. By Newton's second
+
+402
+00:14:52,160 --> 00:14:56,240
+law, the net force generates
+
+403
+00:14:53,760 --> 00:14:58,160
+acceleration which we call a. The
+
+404
+00:14:56,240 --> 00:15:00,399
+acceleration then changes the velocity
+
+405
+00:14:58,160 --> 00:15:02,639
+denoted by u. And as the velocity builds
+
+406
+00:15:00,399 --> 00:15:04,160
+up, the displacement w also changes
+
+407
+00:15:02,639 --> 00:15:06,480
+further.
+
+408
+00:15:04,160 --> 00:15:09,680
+So you can see that these quantities
+
+409
+00:15:06,480 --> 00:15:12,720
+displacement W, velocity U, acceleration
+
+410
+00:15:09,680 --> 00:15:14,639
+A, pressure P, and volume V are all
+
+411
+00:15:12,720 --> 00:15:16,720
+linked together. They interact
+
+412
+00:15:14,639 --> 00:15:18,880
+continuously as the disturbance moves
+
+413
+00:15:16,720 --> 00:15:20,800
+through the medium.
+
+414
+00:15:18,880 --> 00:15:22,880
+This is not like pushing a rigid stick
+
+415
+00:15:20,800 --> 00:15:25,120
+where moving one end instantly moves the
+
+416
+00:15:22,880 --> 00:15:26,800
+other. In a rigid body, everything moves
+
+417
+00:15:25,120 --> 00:15:29,440
+together.
+
+418
+00:15:26,800 --> 00:15:31,839
+But in an elastic medium, local motion
+
+419
+00:15:29,440 --> 00:15:34,160
+depends on these dynamic relationships.
+
+420
+00:15:31,839 --> 00:15:37,440
+One region moves affects the next and
+
+421
+00:15:34,160 --> 00:15:39,839
+that disturbance travels as a wave.
+
+422
+00:15:37,440 --> 00:15:42,000
+So an ultrasound wave forms because of
+
+423
+00:15:39,839 --> 00:15:44,320
+this ongoing interplay between pressure,
+
+424
+00:15:42,000 --> 00:15:46,079
+volume and motion.
+
+425
+00:15:44,320 --> 00:15:48,240
+Push a little, the volume shrinks,
+
+426
+00:15:46,079 --> 00:15:50,079
+pressure rises, acceleration increases,
+
+427
+00:15:48,240 --> 00:15:51,600
+and that disturbance keeps propagating
+
+428
+00:15:50,079 --> 00:15:55,079
+through the material. And that's your
+
+429
+00:15:51,600 --> 00:15:55,079
+ultrasound wave.
+
+430
+00:15:56,320 --> 00:16:01,600
+Now, let's take a closer look at how
+
+431
+00:15:58,320 --> 00:16:03,920
+these relationships actually work.
+
+432
+00:16:01,600 --> 00:16:06,160
+When we push on one side of the medium,
+
+433
+00:16:03,920 --> 00:16:09,279
+for example, this piston here, we create
+
+434
+00:16:06,160 --> 00:16:11,920
+a velocity which we call U.
+
+435
+00:16:09,279 --> 00:16:14,079
+The displacement denoted as W shows how
+
+436
+00:16:11,920 --> 00:16:16,000
+far the boundary moves. In a simple
+
+437
+00:16:14,079 --> 00:16:18,480
+case, displacement is proportional to
+
+438
+00:16:16,000 --> 00:16:21,920
+velocity time time. Mathematically, we
+
+439
+00:16:18,480 --> 00:16:24,320
+write this as W= U * T.
+
+440
+00:16:21,920 --> 00:16:26,000
+That's a linear relationship, meaning if
+
+441
+00:16:24,320 --> 00:16:27,920
+you double the velocity, the
+
+442
+00:16:26,000 --> 00:16:29,519
+displacement doubles in the same time
+
+443
+00:16:27,920 --> 00:16:31,040
+period.
+
+444
+00:16:29,519 --> 00:16:32,639
+But on the other side of the same
+
+445
+00:16:31,040 --> 00:16:34,399
+element, the motion doesn't happen
+
+446
+00:16:32,639 --> 00:16:36,240
+immediately.
+
+447
+00:16:34,399 --> 00:16:38,079
+The molecules there need time to respond
+
+448
+00:16:36,240 --> 00:16:40,320
+and that brings in acceleration which we
+
+449
+00:16:38,079 --> 00:16:42,160
+represent as a the displacement caused
+
+450
+00:16:40,320 --> 00:16:45,440
+by acceleration is a second order
+
+451
+00:16:42,160 --> 00:16:50,160
+relationship expressed as W = 1/2 * a *
+
+452
+00:16:45,440 --> 00:16:53,600
+T ^2. So the first one W= U * T is
+
+453
+00:16:50,160 --> 00:16:56,160
+linear and the second one W = 1/2 a T ^2
+
+454
+00:16:53,600 --> 00:16:58,000
+is quadratic in time.
+
+455
+00:16:56,160 --> 00:17:00,000
+This means when you push on one side of
+
+456
+00:16:58,000 --> 00:17:01,920
+a small tissue element, that side moves
+
+457
+00:17:00,000 --> 00:17:04,000
+first while the far side lags behind
+
+458
+00:17:01,920 --> 00:17:05,679
+slightly. Because of this delay, the
+
+459
+00:17:04,000 --> 00:17:08,480
+material between them becomes compressed
+
+460
+00:17:05,679 --> 00:17:09,919
+and pressure increases.
+
+461
+00:17:08,480 --> 00:17:12,400
+This process isn't perfectly
+
+462
+00:17:09,919 --> 00:17:14,480
+synchronized. One side moves first, then
+
+463
+00:17:12,400 --> 00:17:16,480
+the other side catches up. That's why we
+
+464
+00:17:14,480 --> 00:17:18,240
+get a pressure increment. The delay in
+
+465
+00:17:16,480 --> 00:17:21,199
+motion creates compression and that's
+
+466
+00:17:18,240 --> 00:17:23,039
+how the ultrasound wave starts to form.
+
+467
+00:17:21,199 --> 00:17:25,039
+So putting it all together, the
+
+468
+00:17:23,039 --> 00:17:27,120
+combination of displacement, velocity
+
+469
+00:17:25,039 --> 00:17:29,039
+and acceleration together with changes
+
+470
+00:17:27,120 --> 00:17:31,120
+in pressure and volume gives us the
+
+471
+00:17:29,039 --> 00:17:34,120
+basic mechanism of wave formation in
+
+472
+00:17:31,120 --> 00:17:34,120
+tissue.
+
+473
+00:17:35,440 --> 00:17:38,960
+Once we start driving one side of the
+
+474
+00:17:37,280 --> 00:17:40,880
+material, continuously pushing and
+
+475
+00:17:38,960 --> 00:17:42,880
+pulling, the wave begins to propagate
+
+476
+00:17:40,880 --> 00:17:44,960
+through the medium.
+
+477
+00:17:42,880 --> 00:17:46,799
+Each small element of the tissue
+
+478
+00:17:44,960 --> 00:17:48,960
+responds a little later than the one
+
+479
+00:17:46,799 --> 00:17:50,799
+before it. So if you look along the
+
+480
+00:17:48,960 --> 00:17:52,320
+depth of the tissue, every point is
+
+481
+00:17:50,799 --> 00:17:55,039
+moving up and down in the same pattern,
+
+482
+00:17:52,320 --> 00:17:57,520
+but with a small phase delay.
+
+483
+00:17:55,039 --> 00:17:59,760
+That delay is what makes the wave travel
+
+484
+00:17:57,520 --> 00:18:01,440
+forward. You still see the same waveform
+
+485
+00:17:59,760 --> 00:18:03,280
+shape, but each point along the medium
+
+486
+00:18:01,440 --> 00:18:05,440
+is slightly out of sync, slightly
+
+487
+00:18:03,280 --> 00:18:07,360
+shifted in phase.
+
+488
+00:18:05,440 --> 00:18:09,120
+That's what we call wave propagation.
+
+489
+00:18:07,360 --> 00:18:11,039
+The motion is passed from one particle
+
+490
+00:18:09,120 --> 00:18:12,960
+to the next, not instantaneously, but
+
+491
+00:18:11,039 --> 00:18:14,799
+through a sequence of tiny delayed
+
+492
+00:18:12,960 --> 00:18:16,799
+reactions.
+
+493
+00:18:14,799 --> 00:18:18,720
+If the material were completely rigid,
+
+494
+00:18:16,799 --> 00:18:20,320
+like a solid stick, every part would
+
+495
+00:18:18,720 --> 00:18:22,880
+move together at once and there would be
+
+496
+00:18:20,320 --> 00:18:25,200
+no wave. But because biological tissue
+
+497
+00:18:22,880 --> 00:18:27,280
+is elastic, parts of it move at slightly
+
+498
+00:18:25,200 --> 00:18:30,480
+different times. And that's exactly what
+
+499
+00:18:27,280 --> 00:18:32,640
+allows the wave to form and travel.
+
+500
+00:18:30,480 --> 00:18:35,360
+Mathematically, if we focus on one
+
+501
+00:18:32,640 --> 00:18:37,679
+physical quantity, say displacement W or
+
+502
+00:18:35,360 --> 00:18:40,240
+pressure P and express all the other
+
+503
+00:18:37,679 --> 00:18:42,640
+variables like acceleration and velocity
+
+504
+00:18:40,240 --> 00:18:44,799
+in terms of that single variable, we can
+
+505
+00:18:42,640 --> 00:18:47,039
+combine them into a single second order
+
+506
+00:18:44,799 --> 00:18:48,960
+differential equation.
+
+507
+00:18:47,039 --> 00:18:50,960
+That equation is called the wave
+
+508
+00:18:48,960 --> 00:18:52,880
+equation and it beautifully describes
+
+509
+00:18:50,960 --> 00:18:55,440
+how the disturbance moves through the
+
+510
+00:18:52,880 --> 00:18:58,440
+medium as a function of both space and
+
+511
+00:18:55,440 --> 00:18:58,440
+time.
+
+512
+00:18:59,840 --> 00:19:03,440
+All right. Now, we've arrived at one of
+
+513
+00:19:01,520 --> 00:19:06,000
+the most elegant equations in all of
+
+514
+00:19:03,440 --> 00:19:08,080
+physics. The wave equation. In one
+
+515
+00:19:06,000 --> 00:19:11,600
+dimension, it looks like this. Partial
+
+516
+00:19:08,080 --> 00:19:16,400
+square w over partial z^ 2 = 1 / c ^ 2 *
+
+517
+00:19:11,600 --> 00:19:18,559
+partial w / partial t ^ 2.
+
+518
+00:19:16,400 --> 00:19:20,480
+So, what does that mean?
+
+519
+00:19:18,559 --> 00:19:23,520
+It means that the second derivative of
+
+520
+00:19:20,480 --> 00:19:26,080
+displacement w with respect to space zed
+
+521
+00:19:23,520 --> 00:19:29,840
+is equal to 1 / c ^ 2 * the second
+
+522
+00:19:26,080 --> 00:19:31,840
+derivative of w with respect to time t.
+
+523
+00:19:29,840 --> 00:19:33,840
+In plain words, the way the wave changes
+
+524
+00:19:31,840 --> 00:19:36,400
+in space is directly linked to how it
+
+525
+00:19:33,840 --> 00:19:39,200
+changes in time. Space and time are tied
+
+526
+00:19:36,400 --> 00:19:41,200
+together through this relationship.
+
+527
+00:19:39,200 --> 00:19:43,760
+You can even think of it conceptually as
+
+528
+00:19:41,200 --> 00:19:46,480
+space equals time. Not literally, but in
+
+529
+00:19:43,760 --> 00:19:48,559
+a second derivative sense. This symmetry
+
+530
+00:19:46,480 --> 00:19:51,200
+is what gives rise to those beautiful
+
+531
+00:19:48,559 --> 00:19:53,760
+smooth repeating sinosoidal waves we see
+
+532
+00:19:51,200 --> 00:19:55,600
+in sound or vibration.
+
+533
+00:19:53,760 --> 00:19:58,320
+Now let's talk about the speed of sound
+
+534
+00:19:55,600 --> 00:20:00,400
+denoted by C. C depends on two key
+
+535
+00:19:58,320 --> 00:20:02,799
+material properties. Density which we
+
+536
+00:20:00,400 --> 00:20:04,320
+call and compressibility which we call
+
+537
+00:20:02,799 --> 00:20:06,080
+kappa.
+
+538
+00:20:04,320 --> 00:20:09,600
+The relationship is given by this
+
+539
+00:20:06,080 --> 00:20:13,280
+equation C= 1 / the square root of
+
+540
+00:20:09,600 --> 00:20:15,760
+copper * AO. Here ro written as the
+
+541
+00:20:13,280 --> 00:20:18,320
+Greek letter R represents the density of
+
+542
+00:20:15,760 --> 00:20:21,039
+the tissue and kappa the Greek letter
+
+543
+00:20:18,320 --> 00:20:23,440
+key represents compressibility which is
+
+544
+00:20:21,039 --> 00:20:25,840
+actually the inverse of the bulk modulus
+
+545
+00:20:23,440 --> 00:20:27,360
+or in other words how stiff the material
+
+546
+00:20:25,840 --> 00:20:29,360
+is.
+
+547
+00:20:27,360 --> 00:20:31,200
+Now here's the interesting part. The
+
+548
+00:20:29,360 --> 00:20:32,799
+stiffer the tissue, the smaller the
+
+549
+00:20:31,200 --> 00:20:34,559
+compressibility. And when
+
+550
+00:20:32,799 --> 00:20:36,640
+compressibility is small, the wave
+
+551
+00:20:34,559 --> 00:20:38,799
+travels faster.
+
+552
+00:20:36,640 --> 00:20:41,840
+So, in biological tissues, sound
+
+553
+00:20:38,799 --> 00:20:43,840
+typically moves at about 1500 m/s.
+
+554
+00:20:41,840 --> 00:20:45,760
+That's roughly the speed in soft tissue
+
+555
+00:20:43,840 --> 00:20:47,840
+or water.
+
+556
+00:20:45,760 --> 00:20:51,039
+But in bone, which is much stiffer, the
+
+557
+00:20:47,840 --> 00:20:52,559
+speed can reach around 4,000 m/s. And
+
+558
+00:20:51,039 --> 00:20:54,159
+clinically, this becomes quite
+
+559
+00:20:52,559 --> 00:20:56,559
+important.
+
+560
+00:20:54,159 --> 00:20:59,039
+For example, a malignant tumor tends to
+
+561
+00:20:56,559 --> 00:21:01,200
+be harder than normal tissue. That means
+
+562
+00:20:59,039 --> 00:21:03,280
+sound travels faster through it. So in
+
+563
+00:21:01,200 --> 00:21:05,039
+ultrasound elastography we can actually
+
+564
+00:21:03,280 --> 00:21:07,280
+measure that difference in speed to
+
+565
+00:21:05,039 --> 00:21:10,559
+assess tissue stiffness and that helps
+
+566
+00:21:07,280 --> 00:21:12,720
+identify abnormalities like tumors.
+
+567
+00:21:10,559 --> 00:21:14,880
+So this simple equation the wave
+
+568
+00:21:12,720 --> 00:21:16,799
+equation doesn't just tell us how sound
+
+569
+00:21:14,880 --> 00:21:18,640
+moves it also connects directly to the
+
+570
+00:21:16,799 --> 00:21:20,480
+mechanical properties of the body its
+
+571
+00:21:18,640 --> 00:21:22,559
+density its stiffness and its
+
+572
+00:21:20,480 --> 00:21:27,000
+elasticity. That's the physical
+
+573
+00:21:22,559 --> 00:21:27,000
+foundation of how ultrasound works.
+
+574
+00:21:28,240 --> 00:21:32,240
+Now, I want to mention two important
+
+575
+00:21:30,000 --> 00:21:34,640
+types of mechanical waves. The so-called
+
+576
+00:21:32,240 --> 00:21:38,080
+Pwave and Swave, also known as
+
+577
+00:21:34,640 --> 00:21:40,159
+longitudinal and transverse waves.
+
+578
+00:21:38,080 --> 00:21:41,679
+Remember what we discussed earlier? When
+
+579
+00:21:40,159 --> 00:21:43,280
+you push a volume of air in one
+
+580
+00:21:41,679 --> 00:21:45,360
+direction and then release it, the
+
+581
+00:21:43,280 --> 00:21:47,760
+molecules move back and forth along that
+
+582
+00:21:45,360 --> 00:21:50,240
+same line. This back and forth motion
+
+583
+00:21:47,760 --> 00:21:52,320
+produces a longitudinal wave where
+
+584
+00:21:50,240 --> 00:21:53,919
+regions of compression and rarifaction
+
+585
+00:21:52,320 --> 00:21:55,360
+travel in the same direction as the
+
+586
+00:21:53,919 --> 00:21:57,520
+wave.
+
+587
+00:21:55,360 --> 00:22:00,080
+That's what we call a Pwave or pressure
+
+588
+00:21:57,520 --> 00:22:02,320
+wave in ultrasound. This is the type of
+
+589
+00:22:00,080 --> 00:22:06,000
+wave we use, the longitudinal wave
+
+590
+00:22:02,320 --> 00:22:07,919
+traveling through soft tissue.
+
+591
+00:22:06,000 --> 00:22:09,760
+Now, if we compare that to a transverse
+
+592
+00:22:07,919 --> 00:22:11,679
+wave, the vibration direction is
+
+593
+00:22:09,760 --> 00:22:13,600
+completely different. Instead of moving
+
+594
+00:22:11,679 --> 00:22:15,360
+along the same line, the oscillation
+
+595
+00:22:13,600 --> 00:22:16,960
+happens perpendicular to the wave's
+
+596
+00:22:15,360 --> 00:22:18,880
+direction.
+
+597
+00:22:16,960 --> 00:22:21,120
+So, if the wave moves horizontally, the
+
+598
+00:22:18,880 --> 00:22:22,400
+vibration is up and down. This is
+
+599
+00:22:21,120 --> 00:22:24,480
+exactly what happens with
+
+600
+00:22:22,400 --> 00:22:26,559
+electromagnetic waves like light or
+
+601
+00:22:24,480 --> 00:22:28,559
+radio waves. Their electric and magnetic
+
+602
+00:22:26,559 --> 00:22:31,200
+fields vibrate at right angles to the
+
+603
+00:22:28,559 --> 00:22:33,679
+direction the wave is moving.
+
+604
+00:22:31,200 --> 00:22:35,840
+So to summarize, in a longitudinal wave
+
+605
+00:22:33,679 --> 00:22:38,000
+the vibration and propagation directions
+
+606
+00:22:35,840 --> 00:22:40,080
+are the same while in a transverse wave
+
+607
+00:22:38,000 --> 00:22:42,080
+they are orthogonal. Both are just
+
+608
+00:22:40,080 --> 00:22:44,720
+different ways energy can propagate
+
+609
+00:22:42,080 --> 00:22:46,960
+through a medium.
+
+610
+00:22:44,720 --> 00:22:49,039
+Here
+
+611
+00:22:46,960 --> 00:22:50,799
+again we see how a longitudinal wave
+
+612
+00:22:49,039 --> 00:22:52,240
+behaves in ultrasound. The sound
+
+613
+00:22:50,799 --> 00:22:55,440
+originates from a source like a
+
+614
+00:22:52,240 --> 00:22:57,440
+vibrating tuning fork. In fact, in the
+
+615
+00:22:55,440 --> 00:22:59,919
+old days, doctors would use a tuning
+
+616
+00:22:57,440 --> 00:23:01,440
+fork to test hearing. By striking it and
+
+617
+00:22:59,919 --> 00:23:03,440
+moving it near the ear, they could tell
+
+618
+00:23:01,440 --> 00:23:06,320
+if the patient could sense sound through
+
+619
+00:23:03,440 --> 00:23:08,159
+air or through bone conduction.
+
+620
+00:23:06,320 --> 00:23:10,080
+That tuning fork generates a
+
+621
+00:23:08,159 --> 00:23:12,080
+longitudinal sound wave where the
+
+622
+00:23:10,080 --> 00:23:15,280
+compressions and rarifactions travel
+
+623
+00:23:12,080 --> 00:23:17,440
+along the direction of vibration.
+
+624
+00:23:15,280 --> 00:23:19,760
+Now both longitudinal and transverse
+
+625
+00:23:17,440 --> 00:23:21,760
+waves have some key characteristics.
+
+626
+00:23:19,760 --> 00:23:23,280
+They each have a wavelength which is the
+
+627
+00:23:21,760 --> 00:23:25,679
+distance between two corresponding
+
+628
+00:23:23,280 --> 00:23:28,640
+points like from one peak to the next or
+
+629
+00:23:25,679 --> 00:23:30,720
+from one compression to the next.
+
+630
+00:23:28,640 --> 00:23:32,240
+That's the spatial period of the wave.
+
+631
+00:23:30,720 --> 00:23:34,000
+They also have amplitude which
+
+632
+00:23:32,240 --> 00:23:35,679
+represents how strong the wave is and
+
+633
+00:23:34,000 --> 00:23:37,200
+the height of a peak or the depth of a
+
+634
+00:23:35,679 --> 00:23:39,039
+trough.
+
+635
+00:23:37,200 --> 00:23:41,120
+If you look at the shape of these waves,
+
+636
+00:23:39,039 --> 00:23:43,520
+you'll notice they form a sinosoidal
+
+637
+00:23:41,120 --> 00:23:45,760
+pattern. This is not a coincidence.
+
+638
+00:23:43,520 --> 00:23:47,600
+Sinosoidal waves naturally arise when
+
+639
+00:23:45,760 --> 00:23:51,440
+solving the wave equation whether it's
+
+640
+00:23:47,600 --> 00:23:53,440
+for mechanical or electromagnetic waves.
+
+641
+00:23:51,440 --> 00:23:56,080
+Mathematically they are fundamental
+
+642
+00:23:53,440 --> 00:23:59,120
+solutions and in fur analysis we use
+
+643
+00:23:56,080 --> 00:24:00,960
+cinosidal components signs and coins as
+
+644
+00:23:59,120 --> 00:24:03,760
+building blocks to represent all kinds
+
+645
+00:24:00,960 --> 00:24:05,679
+of signals. So in a way every complex
+
+646
+00:24:03,760 --> 00:24:08,640
+sound or image signal can be broken down
+
+647
+00:24:05,679 --> 00:24:10,559
+into a sum of simple sine waves.
+
+648
+00:24:08,640 --> 00:24:12,480
+Finally, remember that the speed of
+
+649
+00:24:10,559 --> 00:24:15,360
+sound is directly connected to the wave
+
+650
+00:24:12,480 --> 00:24:17,520
+equation. The constant you see there 1 /
+
+651
+00:24:15,360 --> 00:24:21,159
+c ^ 2 represents how the wave travels
+
+652
+00:24:17,520 --> 00:24:21,159
+through a given medium.
+
+653
+00:24:22,559 --> 00:24:27,120
+So when we solve the wave equation, we
+
+654
+00:24:24,720 --> 00:24:29,600
+find that the constant C represents the
+
+655
+00:24:27,120 --> 00:24:31,679
+speed of sound in the medium.
+
+656
+00:24:29,600 --> 00:24:33,919
+And this speed depends entirely on the
+
+657
+00:24:31,679 --> 00:24:36,240
+material properties, how dense and how
+
+658
+00:24:33,919 --> 00:24:37,919
+stiff the material is. For example,
+
+659
+00:24:36,240 --> 00:24:41,200
+sound waves travel very differently in
+
+660
+00:24:37,919 --> 00:24:42,960
+air, in steel, or in biological tissue.
+
+661
+00:24:41,200 --> 00:24:45,279
+If we look at this table, we can see
+
+662
+00:24:42,960 --> 00:24:49,679
+that the speed of sound in air is around
+
+663
+00:24:45,279 --> 00:24:53,679
+330 m/s. In lung tissue, about 600 m/s,
+
+664
+00:24:49,679 --> 00:24:58,400
+in fat, about 1450 m/s, and in soft
+
+665
+00:24:53,679 --> 00:25:00,559
+tissue around, 1540 m/s.
+
+666
+00:24:58,400 --> 00:25:04,240
+Water is very similar to soft tissue,
+
+667
+00:25:00,559 --> 00:25:06,480
+around 1,280 m/s, which is why we often
+
+668
+00:25:04,240 --> 00:25:08,880
+use water-based gels in ultrasound
+
+669
+00:25:06,480 --> 00:25:12,559
+coupling. In muscle, the speed is a bit
+
+670
+00:25:08,880 --> 00:25:16,320
+higher, about 1,600 m/s. And in bone, it
+
+671
+00:25:12,559 --> 00:25:18,480
+reaches as high as 4,000 m/s.
+
+672
+00:25:16,320 --> 00:25:20,480
+So, the denser and stiffer the material,
+
+673
+00:25:18,480 --> 00:25:22,320
+the faster the sound travels through it.
+
+674
+00:25:20,480 --> 00:25:24,400
+But within the same medium, like soft
+
+675
+00:25:22,320 --> 00:25:27,039
+tissue, the speed stays constant. It's a
+
+676
+00:25:24,400 --> 00:25:28,880
+property of the material itself.
+
+677
+00:25:27,039 --> 00:25:31,039
+What we can vary is the frequency of
+
+678
+00:25:28,880 --> 00:25:33,279
+vibration. When we increase frequency,
+
+679
+00:25:31,039 --> 00:25:34,799
+the wavelength becomes shorter. So
+
+680
+00:25:33,279 --> 00:25:36,640
+higher frequency means shorter
+
+681
+00:25:34,799 --> 00:25:38,720
+wavelength and lower frequency means
+
+682
+00:25:36,640 --> 00:25:40,799
+longer wavelength.
+
+683
+00:25:38,720 --> 00:25:43,120
+This relationship between frequency and
+
+684
+00:25:40,799 --> 00:25:44,960
+wavelength is fundamental in ultrasound
+
+685
+00:25:43,120 --> 00:25:49,799
+physics. It helps determine both
+
+686
+00:25:44,960 --> 00:25:49,799
+resolution and penetration in imaging.
+
+687
+00:25:50,080 --> 00:25:53,919
+Now, it's nice for you to know this. As
+
+688
+00:25:51,919 --> 00:25:55,679
+we look deeper into how a soundwave
+
+689
+00:25:53,919 --> 00:25:57,919
+propagates, we can see that when the
+
+690
+00:25:55,679 --> 00:25:59,279
+wave travels into a field, energy is
+
+691
+00:25:57,919 --> 00:26:00,880
+actually being carried through the
+
+692
+00:25:59,279 --> 00:26:02,480
+medium.
+
+693
+00:26:00,880 --> 00:26:04,400
+Earlier we talked about the wave
+
+694
+00:26:02,480 --> 00:26:06,159
+equation in terms of displacement. And
+
+695
+00:26:04,400 --> 00:26:08,240
+if you take the first derivative of
+
+696
+00:26:06,159 --> 00:26:10,400
+displacement with respect to time, you
+
+697
+00:26:08,240 --> 00:26:14,320
+get velocity. That's what's shown here
+
+698
+00:26:10,400 --> 00:26:16,480
+in this equation. U= dw over dt.
+
+699
+00:26:14,320 --> 00:26:19,760
+A typical value for UZ, the particle
+
+700
+00:26:16,480 --> 00:26:21,760
+velocity, is around 1 to 10 cm/s, which
+
+701
+00:26:19,760 --> 00:26:23,279
+is much smaller than the speed of sound
+
+702
+00:26:21,760 --> 00:26:25,120
+C.
+
+703
+00:26:23,279 --> 00:26:27,440
+So that's something to remember. The
+
+704
+00:26:25,120 --> 00:26:29,360
+medium's particles move slowly, even
+
+705
+00:26:27,440 --> 00:26:32,159
+though the sound wave itself travels
+
+706
+00:26:29,360 --> 00:26:34,400
+fast. Now, because the sound wave is
+
+707
+00:26:32,159 --> 00:26:36,640
+propagating, it also introduces pressure
+
+708
+00:26:34,400 --> 00:26:39,200
+into the field. That pressure at a given
+
+709
+00:26:36,640 --> 00:26:42,159
+point can be computed as shown here. P=
+
+710
+00:26:39,200 --> 00:26:43,679
+row * C * U Z. It's a very
+
+711
+00:26:42,159 --> 00:26:45,600
+straightforward relationship. The
+
+712
+00:26:43,679 --> 00:26:47,520
+pressure is proportional to the density
+
+713
+00:26:45,600 --> 00:26:49,760
+of the medium, the sound speed and the
+
+714
+00:26:47,520 --> 00:26:51,679
+particle velocity.
+
+715
+00:26:49,760 --> 00:26:53,520
+Since the wave equation can be solved
+
+716
+00:26:51,679 --> 00:26:55,360
+and as I explained before both the
+
+717
+00:26:53,520 --> 00:26:57,600
+pressure and the velocity take on
+
+718
+00:26:55,360 --> 00:26:59,919
+sinosoidal waveforms, we can represent
+
+719
+00:26:57,600 --> 00:27:02,960
+each of them using an oscillating form
+
+720
+00:26:59,919 --> 00:27:08,720
+exponential or cinosidal like this. P of
+
+721
+00:27:02,960 --> 00:27:12,640
+t= p e to the j omega t and u z of t= u
+
+722
+00:27:08,720 --> 00:27:15,120
+e to the j omega t. So now you have both
+
+723
+00:27:12,640 --> 00:27:18,559
+quantities pressure and velocity in a
+
+724
+00:27:15,120 --> 00:27:21,120
+cinosidal oscillation form. From here we
+
+725
+00:27:18,559 --> 00:27:23,039
+can define intensity represented by I.
+
+726
+00:27:21,120 --> 00:27:25,360
+The average intensity over a period
+
+727
+00:27:23,039 --> 00:27:29,279
+capital T is defined as the product of P
+
+728
+00:27:25,360 --> 00:27:31,520
+and U averaged over time.
+
+729
+00:27:29,279 --> 00:27:34,240
+Now let's think about this physically.
+
+730
+00:27:31,520 --> 00:27:36,400
+Pressure P has the unit of force per
+
+731
+00:27:34,240 --> 00:27:39,760
+unit area. So you can think of it as
+
+732
+00:27:36,400 --> 00:27:41,760
+force distributed across a surface.
+
+733
+00:27:39,760 --> 00:27:45,120
+If you apply a force to move something
+
+734
+00:27:41,760 --> 00:27:47,440
+over a certain distance, that's work.
+
+735
+00:27:45,120 --> 00:27:49,600
+So this is essentially the work you did.
+
+736
+00:27:47,440 --> 00:27:51,679
+But notice that in this case, we're not
+
+737
+00:27:49,600 --> 00:27:53,840
+talking about displacement or distance
+
+738
+00:27:51,679 --> 00:27:55,360
+directly. U is the rate of change of
+
+739
+00:27:53,840 --> 00:27:57,360
+displacement or in other words,
+
+740
+00:27:55,360 --> 00:27:58,960
+velocity.
+
+741
+00:27:57,360 --> 00:28:00,799
+That means we're really talking about
+
+742
+00:27:58,960 --> 00:28:03,600
+the rate at which work is done. And the
+
+743
+00:28:00,799 --> 00:28:05,840
+rate of doing work is power.
+
+744
+00:28:03,600 --> 00:28:08,240
+So if you multiply pressure, which is
+
+745
+00:28:05,840 --> 00:28:10,559
+force per area, by velocity, which is
+
+746
+00:28:08,240 --> 00:28:12,960
+displacement over time, what you get is
+
+747
+00:28:10,559 --> 00:28:15,600
+power per unit area. And that's exactly
+
+748
+00:28:12,960 --> 00:28:18,000
+what intensity represents. It's how much
+
+749
+00:28:15,600 --> 00:28:20,000
+power or energy per unit time is
+
+750
+00:28:18,000 --> 00:28:23,120
+transmitted through a certain area in
+
+751
+00:28:20,000 --> 00:28:25,039
+the medium. So putting it all together,
+
+752
+00:28:23,120 --> 00:28:27,919
+pressure P corresponds to force per
+
+753
+00:28:25,039 --> 00:28:31,200
+area. Velocity U is displacement per
+
+754
+00:28:27,919 --> 00:28:33,679
+time. multiply them together P * U and
+
+755
+00:28:31,200 --> 00:28:36,480
+you get work per time per area or power
+
+756
+00:28:33,679 --> 00:28:38,399
+density which we call intensity. That's
+
+757
+00:28:36,480 --> 00:28:40,960
+how these three physical quantities
+
+758
+00:28:38,399 --> 00:28:42,799
+velocity, pressure and intensity are all
+
+759
+00:28:40,960 --> 00:28:44,559
+linked. And even though these can be
+
+760
+00:28:42,799 --> 00:28:46,480
+derived from the wave equation here,
+
+761
+00:28:44,559 --> 00:28:50,840
+we're just focusing on their basic
+
+762
+00:28:46,480 --> 00:28:50,840
+definitions and physical meanings.
+
+763
+00:28:51,360 --> 00:28:55,520
+So now you understand how we measure
+
+764
+00:28:53,360 --> 00:28:57,919
+intensity and how energy propagates
+
+765
+00:28:55,520 --> 00:28:59,760
+through a medium. As the ultrasound wave
+
+766
+00:28:57,919 --> 00:29:02,559
+travels through tissue, it doesn't stay
+
+767
+00:28:59,760 --> 00:29:04,480
+constant. It gets attenuated.
+
+768
+00:29:02,559 --> 00:29:06,799
+That means the amplitude decreases
+
+769
+00:29:04,480 --> 00:29:09,600
+gradually and the intensity drops as the
+
+770
+00:29:06,799 --> 00:29:12,399
+wave penetrates deeper. Later, we'll see
+
+771
+00:29:09,600 --> 00:29:14,480
+that the amplitude or intensity decays
+
+772
+00:29:12,399 --> 00:29:17,679
+exponentially with depth, very similar
+
+773
+00:29:14,480 --> 00:29:19,679
+to Beer's law in optical physics.
+
+774
+00:29:17,679 --> 00:29:21,840
+Because of this, we often use relative
+
+775
+00:29:19,679 --> 00:29:24,960
+intensity and relative power to describe
+
+776
+00:29:21,840 --> 00:29:27,360
+how intensity changes with distance.
+
+777
+00:29:24,960 --> 00:29:29,760
+And since these values can vary across a
+
+778
+00:29:27,360 --> 00:29:31,440
+huge range, sometimes millions of times
+
+779
+00:29:29,760 --> 00:29:33,520
+between the incident pulse and the
+
+780
+00:29:31,440 --> 00:29:36,960
+reflected echo, it's much easier to
+
+781
+00:29:33,520 --> 00:29:39,360
+express them on a logarithmic scale.
+
+782
+00:29:36,960 --> 00:29:41,600
+This is where the decibel or dB scale
+
+783
+00:29:39,360 --> 00:29:44,720
+comes in. It compresses large ratios
+
+784
+00:29:41,600 --> 00:29:46,559
+into smaller, more manageable numbers.
+
+785
+00:29:44,720 --> 00:29:48,720
+So instead of dealing with enormous
+
+786
+00:29:46,559 --> 00:29:50,640
+values, we talk about relative changes
+
+787
+00:29:48,720 --> 00:29:52,799
+in decb.
+
+788
+00:29:50,640 --> 00:29:55,360
+For ultrasound, pressure intensity is
+
+789
+00:29:52,799 --> 00:29:57,679
+expressed in decb. The unit of pressure
+
+790
+00:29:55,360 --> 00:30:00,480
+is the pascal which is 1 Newton per
+
+791
+00:29:57,679 --> 00:30:02,880
+square meter. The atmospheric pressure
+
+792
+00:30:00,480 --> 00:30:04,799
+is about 0.1 mega pascal while
+
+793
+00:30:02,880 --> 00:30:07,760
+diagnostic ultrasound can have a peak
+
+794
+00:30:04,799 --> 00:30:09,840
+pressure of around 1 mega pascal.
+
+795
+00:30:07,760 --> 00:30:13,279
+Now we describe relative intensity using
+
+796
+00:30:09,840 --> 00:30:15,039
+the formula 10 log of I2 over I1. This
+
+797
+00:30:13,279 --> 00:30:17,120
+represents the change in intensity
+
+798
+00:30:15,039 --> 00:30:19,760
+between two points. If you're dealing
+
+799
+00:30:17,120 --> 00:30:22,159
+with power, however, we use 20 log of P2
+
+800
+00:30:19,760 --> 00:30:24,640
+over P1 because power is proportional to
+
+801
+00:30:22,159 --> 00:30:26,880
+the square of amplitude.
+
+802
+00:30:24,640 --> 00:30:28,720
+Let me explain that part carefully. In
+
+803
+00:30:26,880 --> 00:30:32,880
+circuit theory, we know that power
+
+804
+00:30:28,720 --> 00:30:36,159
+equals resistance * current 2 P= R * I^
+
+805
+00:30:32,880 --> 00:30:37,840
+2. The same idea applies here. Since
+
+806
+00:30:36,159 --> 00:30:39,840
+power is proportional to amplitude
+
+807
+00:30:37,840 --> 00:30:42,320
+squar, we need a factor of 2 in the
+
+808
+00:30:39,840 --> 00:30:46,000
+logarithmic expression. That's why for
+
+809
+00:30:42,320 --> 00:30:48,720
+power, we multiply by 20 instead of 10.
+
+810
+00:30:46,000 --> 00:30:50,640
+So in summary, no when we talk about
+
+811
+00:30:48,720 --> 00:30:52,559
+intensity we use 10 log because
+
+812
+00:30:50,640 --> 00:30:55,279
+intensity is directly proportional to
+
+813
+00:30:52,559 --> 00:30:57,120
+energy flow. When we talk about power we
+
+814
+00:30:55,279 --> 00:30:59,440
+use 20 log because it depends on
+
+815
+00:30:57,120 --> 00:31:01,840
+amplitude squared.
+
+816
+00:30:59,440 --> 00:31:05,200
+A 10 dB change corresponds to a factor
+
+817
+00:31:01,840 --> 00:31:07,360
+of 10 change in intensity. A 20dB change
+
+818
+00:31:05,200 --> 00:31:09,200
+corresponds to a factor of 100 change in
+
+819
+00:31:07,360 --> 00:31:11,520
+intensity.
+
+820
+00:31:09,200 --> 00:31:13,440
+This logarithmic relationship is used
+
+821
+00:31:11,520 --> 00:31:15,840
+throughout ultrasound physics because it
+
+822
+00:31:13,440 --> 00:31:18,240
+helps us describe very large variations
+
+823
+00:31:15,840 --> 00:31:21,799
+in intensity and power in a compact
+
+824
+00:31:18,240 --> 00:31:21,799
+practical way.
+
+825
+00:31:23,039 --> 00:31:26,960
+So now let's do a quick review and apply
+
+826
+00:31:25,039 --> 00:31:28,640
+what we just learned. We'll look at how
+
+827
+00:31:26,960 --> 00:31:31,679
+to calculate remaining intensity and
+
+828
+00:31:28,640 --> 00:31:33,679
+half value thickness for ultrasound.
+
+829
+00:31:31,679 --> 00:31:36,559
+For the first example, we start with a
+
+830
+00:31:33,679 --> 00:31:39,760
+100 matt ultrasound pulse that loses 30
+
+831
+00:31:36,559 --> 00:31:43,120
+dB as it travels through tissue.
+
+832
+00:31:39,760 --> 00:31:45,600
+Using the formula -30 dB= 10 log of I2
+
+833
+00:31:43,120 --> 00:31:49,919
+over 100 m, we can solve for I2.
+
+834
+00:31:45,600 --> 00:31:53,840
+Rearranging, we get I2 = 10 ^ of -3 *
+
+835
+00:31:49,919 --> 00:31:56,320
+100 m, which equals 0.1 mwatt. So after
+
+836
+00:31:53,840 --> 00:31:59,039
+losing 30 dB, the intensity is reduced
+
+837
+00:31:56,320 --> 00:32:01,039
+by a factor of 1,000.
+
+838
+00:31:59,039 --> 00:32:03,120
+Now let's look at the second example.
+
+839
+00:32:01,039 --> 00:32:04,640
+The half value thickness. This
+
+840
+00:32:03,120 --> 00:32:07,919
+represents the depth at which the
+
+841
+00:32:04,640 --> 00:32:11,360
+ultrasound intensity drops by 50%. That
+
+842
+00:32:07,919 --> 00:32:13,440
+means I2 over I1= 0.5.
+
+843
+00:32:11,360 --> 00:32:17,919
+Using the decibel formula again we get
+
+844
+00:32:13,440 --> 00:32:19,919
+10 log of 0.5= -3 dB. So when the
+
+845
+00:32:17,919 --> 00:32:23,120
+intensity is reduced by half, it
+
+846
+00:32:19,919 --> 00:32:25,200
+corresponds to a 3 decel change.
+
+847
+00:32:23,120 --> 00:32:27,519
+This concept is very similar to what we
+
+848
+00:32:25,200 --> 00:32:30,240
+use in X-ray or gammaray imaging where
+
+849
+00:32:27,519 --> 00:32:32,480
+we also talk about a half value layer.
+
+850
+00:32:30,240 --> 00:32:35,440
+It tells us how deep the wave can travel
+
+851
+00:32:32,480 --> 00:32:37,600
+before its intensity is halved.
+
+852
+00:32:35,440 --> 00:32:39,760
+In ultrasound, this is just a convenient
+
+853
+00:32:37,600 --> 00:32:42,159
+way to express relative changes using
+
+854
+00:32:39,760 --> 00:32:44,320
+logarithms. There's no physical constant
+
+855
+00:32:42,159 --> 00:32:46,880
+behind it. It's simply a mathematical
+
+856
+00:32:44,320 --> 00:32:48,799
+convenience. The decibel scale helps us
+
+857
+00:32:46,880 --> 00:32:50,880
+describe very large or very small
+
+858
+00:32:48,799 --> 00:32:53,840
+intensity ratios in a practical and
+
+859
+00:32:50,880 --> 00:32:53,840
+readable way.
+
+860
+00:32:55,679 --> 00:32:59,600
+Okay, now we'll talk about acoustic
+
+861
+00:32:57,200 --> 00:33:01,279
+impedance. This concept is actually not
+
+862
+00:32:59,600 --> 00:33:03,519
+dramatically different from what we've
+
+863
+00:33:01,279 --> 00:33:04,799
+already learned in electrical circuits.
+
+864
+00:33:03,519 --> 00:33:07,519
+Remember when we studied circuit
+
+865
+00:33:04,799 --> 00:33:09,440
+analysis,
+
+866
+00:33:07,519 --> 00:33:11,760
+we defined resistance as the ratio
+
+867
+00:33:09,440 --> 00:33:14,000
+between voltage and current. Later we
+
+868
+00:33:11,760 --> 00:33:16,320
+introduced impetence which included the
+
+869
+00:33:14,000 --> 00:33:18,559
+effects of capacitance and inductance
+
+870
+00:33:16,320 --> 00:33:20,240
+and again it was defined as voltage over
+
+871
+00:33:18,559 --> 00:33:22,320
+current.
+
+872
+00:33:20,240 --> 00:33:24,240
+The only difference was that in general
+
+873
+00:33:22,320 --> 00:33:26,159
+impedance can have a phase shift. So
+
+874
+00:33:24,240 --> 00:33:28,000
+it's expressed as a complex number
+
+875
+00:33:26,159 --> 00:33:30,240
+meaning that both voltage and current
+
+876
+00:33:28,000 --> 00:33:31,679
+can be complex or we can simply describe
+
+877
+00:33:30,240 --> 00:33:33,360
+them in terms of their phase
+
+878
+00:33:31,679 --> 00:33:35,039
+relationship.
+
+879
+00:33:33,360 --> 00:33:37,279
+Now think about this analogy in the
+
+880
+00:33:35,039 --> 00:33:39,919
+context of ultrasound. In an electrical
+
+881
+00:33:37,279 --> 00:33:41,360
+circuit voltage is the driving force the
+
+882
+00:33:39,919 --> 00:33:43,919
+potential difference that pushes
+
+883
+00:33:41,360 --> 00:33:45,760
+electrons through the conductor.
+
+884
+00:33:43,919 --> 00:33:48,320
+In ultrasound the driving force is
+
+885
+00:33:45,760 --> 00:33:50,080
+pressure P. The mechanical wave you push
+
+886
+00:33:48,320 --> 00:33:52,799
+into the medium. That's the pressure
+
+887
+00:33:50,080 --> 00:33:54,559
+wave. So just as voltage drives electron
+
+888
+00:33:52,799 --> 00:33:57,679
+motion, pressure drives the particle
+
+889
+00:33:54,559 --> 00:33:59,120
+motion in the tissue. In an electrical
+
+890
+00:33:57,679 --> 00:34:01,440
+circuit, current is the flow of
+
+891
+00:33:59,120 --> 00:34:03,200
+electrons. But in ultrasound, no
+
+892
+00:34:01,440 --> 00:34:05,360
+electrons are flowing. Instead, the
+
+893
+00:34:03,200 --> 00:34:07,360
+medium's molecules, air molecules, or
+
+894
+00:34:05,360 --> 00:34:09,839
+soft tissue molecules move back and
+
+895
+00:34:07,360 --> 00:34:11,760
+forth along one direction.
+
+896
+00:34:09,839 --> 00:34:13,919
+At any given location, they have an
+
+897
+00:34:11,760 --> 00:34:16,399
+instantaneous velocity, which we call
+
+898
+00:34:13,919 --> 00:34:18,480
+uz. So at each point in space, the
+
+899
+00:34:16,399 --> 00:34:21,040
+particles have an instantaneous velocity
+
+900
+00:34:18,480 --> 00:34:23,359
+that's changing with time.
+
+901
+00:34:21,040 --> 00:34:25,359
+Both P and U keep changing with time.
+
+902
+00:34:23,359 --> 00:34:28,000
+But when we solve the wave equation, we
+
+903
+00:34:25,359 --> 00:34:30,000
+find something very interesting.
+
+904
+00:34:28,000 --> 00:34:32,079
+It's beyond the scope of this lecture to
+
+905
+00:34:30,000 --> 00:34:34,000
+show the full derivation. But the result
+
+906
+00:34:32,079 --> 00:34:37,280
+is that the ratio between pressure and
+
+907
+00:34:34,000 --> 00:34:39,280
+velocity P over U is constant at any
+
+908
+00:34:37,280 --> 00:34:41,440
+given location. Even though both
+
+909
+00:34:39,280 --> 00:34:43,520
+pressure and velocity oscillate as the
+
+910
+00:34:41,440 --> 00:34:45,679
+wave propagates, their ratio remains
+
+911
+00:34:43,520 --> 00:34:48,079
+constant in amplitude. Because this
+
+912
+00:34:45,679 --> 00:34:50,000
+ratio stays constant, we can define it
+
+913
+00:34:48,079 --> 00:34:51,599
+as a characteristic property of the
+
+914
+00:34:50,000 --> 00:34:53,119
+medium.
+
+915
+00:34:51,599 --> 00:34:56,079
+This constant ratio is what we call
+
+916
+00:34:53,119 --> 00:34:58,079
+acoustic impedance denoted by Z. If the
+
+917
+00:34:56,079 --> 00:35:00,240
+ratio kept changing, it would depend on
+
+918
+00:34:58,079 --> 00:35:02,079
+position or time and we couldn't define
+
+919
+00:35:00,240 --> 00:35:03,839
+it as an intrinsic property of the
+
+920
+00:35:02,079 --> 00:35:05,200
+material.
+
+921
+00:35:03,839 --> 00:35:06,800
+But because it's stable and
+
+922
+00:35:05,200 --> 00:35:08,720
+characteristic, it gives us something
+
+923
+00:35:06,800 --> 00:35:11,839
+meaningful, a property that tells us how
+
+924
+00:35:08,720 --> 00:35:13,440
+the medium resists the passage of sound.
+
+925
+00:35:11,839 --> 00:35:15,440
+Acoustic impedance is extremely
+
+926
+00:35:13,440 --> 00:35:17,520
+important in ultrasound imaging. When we
+
+927
+00:35:15,440 --> 00:35:19,440
+use an ultrasound transducer, we have to
+
+928
+00:35:17,520 --> 00:35:21,440
+make sure that the acoustic impedance of
+
+929
+00:35:19,440 --> 00:35:23,520
+the transducer matches the acoustic
+
+930
+00:35:21,440 --> 00:35:26,160
+impedance of the tissue we're imaging.
+
+931
+00:35:23,520 --> 00:35:28,079
+For example, the abdomen.
+
+932
+00:35:26,160 --> 00:35:30,000
+If there's a big mismatch between them,
+
+933
+00:35:28,079 --> 00:35:31,920
+the energy cannot enter the body
+
+934
+00:35:30,000 --> 00:35:34,560
+effectively and you can't collect the
+
+935
+00:35:31,920 --> 00:35:36,480
+echo signals efficiently. That's why we
+
+936
+00:35:34,560 --> 00:35:37,760
+use ultrasound gel. It acts as a
+
+937
+00:35:36,480 --> 00:35:39,599
+coupling layer that bridges the
+
+938
+00:35:37,760 --> 00:35:42,720
+impedance gap between the probe and the
+
+939
+00:35:39,599 --> 00:35:44,800
+skin. So to define it heristically,
+
+940
+00:35:42,720 --> 00:35:46,880
+acoustic impedance is like voltage over
+
+941
+00:35:44,800 --> 00:35:49,839
+current in an electrical system. Here
+
+942
+00:35:46,880 --> 00:35:52,000
+it's pressure over particle velocity.
+
+943
+00:35:49,839 --> 00:35:53,839
+We can show this mathematically though I
+
+944
+00:35:52,000 --> 00:35:56,000
+won't go through the full derivation.
+
+945
+00:35:53,839 --> 00:35:58,160
+Now by solving the mechanical wave
+
+946
+00:35:56,000 --> 00:36:00,160
+equation we can prove that Z is constant
+
+947
+00:35:58,160 --> 00:36:02,480
+and depends only on the material's
+
+948
+00:36:00,160 --> 00:36:06,960
+intrinsic properties specifically
+
+949
+00:36:02,480 --> 00:36:09,440
+density RH and sound speed C.
+
+950
+00:36:06,960 --> 00:36:12,480
+Mathematically we can write this as Z=
+
+951
+00:36:09,440 --> 00:36:14,880
+RO * C. And we know that the sound speed
+
+952
+00:36:12,480 --> 00:36:17,760
+C can be expressed as 1 over the square
+
+953
+00:36:14,880 --> 00:36:19,839
+root of RH * kappa where kappa is the
+
+954
+00:36:17,760 --> 00:36:22,160
+compressibility.
+
+955
+00:36:19,839 --> 00:36:25,200
+So substituting that into the equation
+
+956
+00:36:22,160 --> 00:36:28,480
+we get Z= RH over the square roo<unk> of
+
+957
+00:36:25,200 --> 00:36:31,520
+RAO * kappa which simplifies to Z= the
+
+958
+00:36:28,480 --> 00:36:33,440
+square roo<unk> of IO over kappa.
+
+959
+00:36:31,520 --> 00:36:35,200
+This shows that acoustic impedance
+
+960
+00:36:33,440 --> 00:36:37,599
+depends on both density and
+
+961
+00:36:35,200 --> 00:36:41,400
+compressibility and it is a fundamental
+
+962
+00:36:37,599 --> 00:36:41,400
+property of the material.
+
+963
+00:36:41,760 --> 00:36:46,720
+Now once we have this equation Z equals
+
+964
+00:36:44,160 --> 00:36:48,240
+the square root of RHO over kappa we can
+
+965
+00:36:46,720 --> 00:36:49,680
+calculate or measure the acoustic
+
+966
+00:36:48,240 --> 00:36:52,640
+impedance for different types of
+
+967
+00:36:49,680 --> 00:36:54,240
+biological tissues. Equation 3.8 and the
+
+968
+00:36:52,640 --> 00:36:57,200
+table shown here give you typical
+
+969
+00:36:54,240 --> 00:36:59,119
+values. If you look at the numbers you
+
+970
+00:36:57,200 --> 00:37:01,599
+can get a feeling for how impedance and
+
+971
+00:36:59,119 --> 00:37:04,079
+sound speed vary across materials. In
+
+972
+00:37:01,599 --> 00:37:06,480
+air the sound speed is only about 330
+
+973
+00:37:04,079 --> 00:37:08,240
+m/s because air is very light and
+
+974
+00:37:06,480 --> 00:37:10,400
+compressible.
+
+975
+00:37:08,240 --> 00:37:12,640
+In biological tissues like the kidney or
+
+976
+00:37:10,400 --> 00:37:16,640
+liver, the sound speed is much higher.
+
+977
+00:37:12,640 --> 00:37:18,400
+So around 5,000 drum 60 to 1,70 m/s
+
+978
+00:37:16,640 --> 00:37:20,480
+because these materials are denser and
+
+979
+00:37:18,400 --> 00:37:22,560
+less compressible.
+
+980
+00:37:20,480 --> 00:37:24,640
+Now if you ask where sound travels the
+
+981
+00:37:22,560 --> 00:37:26,880
+fastest inside the human body, the
+
+982
+00:37:24,640 --> 00:37:29,760
+answer is bone because bone is the
+
+983
+00:37:26,880 --> 00:37:32,800
+densest and stiffest material we have.
+
+984
+00:37:29,760 --> 00:37:35,280
+The table shows a speed of about 3,500
+
+985
+00:37:32,800 --> 00:37:37,839
+m/s in bone, which is several times
+
+986
+00:37:35,280 --> 00:37:39,680
+faster than in soft tissue.
+
+987
+00:37:37,839 --> 00:37:41,920
+These are just typical examples of
+
+988
+00:37:39,680 --> 00:37:43,839
+tissue acoustic properties, but they are
+
+989
+00:37:41,920 --> 00:37:46,160
+extremely important for understanding
+
+990
+00:37:43,839 --> 00:37:48,400
+how ultrasound interacts with different
+
+991
+00:37:46,160 --> 00:37:50,720
+parts of the body.
+
+992
+00:37:48,400 --> 00:37:52,800
+The speed of sound, the density, and the
+
+993
+00:37:50,720 --> 00:37:55,119
+impedance all influence how much of the
+
+994
+00:37:52,800 --> 00:37:59,160
+soundwave is transmitted, reflected, or
+
+995
+00:37:55,119 --> 00:37:59,160
+absorbed at tissue boundaries.
+
+996
+00:38:00,640 --> 00:38:04,720
+So next, let's talk about ultrasound
+
+997
+00:38:02,480 --> 00:38:06,480
+tissue interaction. Earlier we mentioned
+
+998
+00:38:04,720 --> 00:38:08,880
+how different imaging modalities
+
+999
+00:38:06,480 --> 00:38:10,880
+interact with biological tissues. For
+
+1000
+00:38:08,880 --> 00:38:12,480
+example, X-ray and CT involve
+
+1001
+00:38:10,880 --> 00:38:15,440
+attenuation and scattering while
+
+1002
+00:38:12,480 --> 00:38:17,920
+gammaray imaging behaves similarly.
+
+1003
+00:38:15,440 --> 00:38:20,240
+In MRI, we talk about T1 and T2
+
+1004
+00:38:17,920 --> 00:38:22,720
+relaxation parameters to describe energy
+
+1005
+00:38:20,240 --> 00:38:25,119
+interactions within tissues.
+
+1006
+00:38:22,720 --> 00:38:26,720
+For ultrasound, the same basic idea
+
+1007
+00:38:25,119 --> 00:38:28,560
+applies. It's all about energy
+
+1008
+00:38:26,720 --> 00:38:31,119
+propagation and how that energy
+
+1009
+00:38:28,560 --> 00:38:33,040
+interacts with biological structures.
+
+1010
+00:38:31,119 --> 00:38:34,720
+The first major effect we talk about is
+
+1011
+00:38:33,040 --> 00:38:36,880
+reflection.
+
+1012
+00:38:34,720 --> 00:38:38,320
+When a soundwave hits a boundary where
+
+1013
+00:38:36,880 --> 00:38:40,480
+there is a difference in acoustic
+
+1014
+00:38:38,320 --> 00:38:42,880
+impedance, for example, between air and
+
+1015
+00:38:40,480 --> 00:38:45,119
+tissue or between bone and tissue, some
+
+1016
+00:38:42,880 --> 00:38:46,960
+of the energy is reflected. That's what
+
+1017
+00:38:45,119 --> 00:38:49,119
+creates the echoes we use to form
+
+1018
+00:38:46,960 --> 00:38:51,119
+ultrasound images.
+
+1019
+00:38:49,119 --> 00:38:53,119
+Reflection happens because of impedance
+
+1020
+00:38:51,119 --> 00:38:55,119
+mismatch. If the impedance difference is
+
+1021
+00:38:53,119 --> 00:38:57,119
+large, reflection is strong. If the
+
+1022
+00:38:55,119 --> 00:39:00,400
+impedances are well matched, reflection
+
+1023
+00:38:57,119 --> 00:39:02,160
+is weak and more energy passes through.
+
+1024
+00:39:00,400 --> 00:39:03,760
+Now with X-rays and gamma rays,
+
+1025
+00:39:02,160 --> 00:39:05,599
+reflection is not really an issue
+
+1026
+00:39:03,760 --> 00:39:07,680
+because their wavelengths are extremely
+
+1027
+00:39:05,599 --> 00:39:09,680
+short and the photons are so energetic
+
+1028
+00:39:07,680 --> 00:39:11,520
+that they mostly pass straight through.
+
+1029
+00:39:09,680 --> 00:39:13,440
+In ultrasound, however, the wavelength
+
+1030
+00:39:11,520 --> 00:39:15,200
+is much larger. So reflection becomes
+
+1031
+00:39:13,440 --> 00:39:17,359
+significant.
+
+1032
+00:39:15,200 --> 00:39:19,040
+So remember this simple rule, reflection
+
+1033
+00:39:17,359 --> 00:39:20,720
+at a boundary means a change in
+
+1034
+00:39:19,040 --> 00:39:23,040
+direction.
+
+1035
+00:39:20,720 --> 00:39:24,880
+The second effect is scattering. When
+
+1036
+00:39:23,040 --> 00:39:26,960
+ultrasound waves travel through tissue,
+
+1037
+00:39:24,880 --> 00:39:29,599
+they encounter many small structures,
+
+1038
+00:39:26,960 --> 00:39:32,880
+cells, organels, connective fibers that
+
+1039
+00:39:29,599 --> 00:39:34,800
+scatter energy in different directions.
+
+1040
+00:39:32,880 --> 00:39:36,640
+So instead of traveling as a narrow
+
+1041
+00:39:34,800 --> 00:39:38,800
+beam, the energy spreads out or
+
+1042
+00:39:36,640 --> 00:39:41,280
+diffuses. You can think of this like
+
+1043
+00:39:38,800 --> 00:39:43,119
+Compton scattering in X-rays. Energy is
+
+1044
+00:39:41,280 --> 00:39:45,280
+diffused and the propagation direction
+
+1045
+00:39:43,119 --> 00:39:47,520
+changes randomly.
+
+1046
+00:39:45,280 --> 00:39:50,320
+The third effect is absorption, which
+
+1047
+00:39:47,520 --> 00:39:51,920
+converts mechanical energy into heat. In
+
+1048
+00:39:50,320 --> 00:39:53,920
+the case of X-rays, this corresponds to
+
+1049
+00:39:51,920 --> 00:39:56,560
+the photoelectric effect where photon
+
+1050
+00:39:53,920 --> 00:39:58,640
+energy is absorbed completely.
+
+1051
+00:39:56,560 --> 00:40:00,880
+For ultrasound, as the wave passes
+
+1052
+00:39:58,640 --> 00:40:02,880
+through tissue, the molecules oscillate
+
+1053
+00:40:00,880 --> 00:40:04,800
+back and forth and because of internal
+
+1054
+00:40:02,880 --> 00:40:07,440
+friction, some of the mechanical energy
+
+1055
+00:40:04,800 --> 00:40:09,359
+is lost as heat. This leads to
+
+1056
+00:40:07,440 --> 00:40:12,000
+attenuation, which is the overall
+
+1057
+00:40:09,359 --> 00:40:13,920
+reduction in intensity. Attenuation
+
+1058
+00:40:12,000 --> 00:40:15,839
+happens because energy is both absorbed
+
+1059
+00:40:13,920 --> 00:40:18,079
+and scattered away.
+
+1060
+00:40:15,839 --> 00:40:20,240
+the wave's amplitude becomes smaller,
+
+1061
+00:40:18,079 --> 00:40:22,480
+its pressure decreases, and the particle
+
+1062
+00:40:20,240 --> 00:40:25,920
+displacements become weaker as it moves
+
+1063
+00:40:22,480 --> 00:40:27,599
+deeper. If we look at figure 3.3, it
+
+1064
+00:40:25,920 --> 00:40:29,200
+illustrates how the beam behaves when it
+
+1065
+00:40:27,599 --> 00:40:32,480
+meets a boundary between two materials
+
+1066
+00:40:29,200 --> 00:40:34,480
+with impedances Z1 and Z2. If the wave
+
+1067
+00:40:32,480 --> 00:40:36,480
+hits perpendicularly, part of it is
+
+1068
+00:40:34,480 --> 00:40:38,000
+reflected back and part is transmitted
+
+1069
+00:40:36,480 --> 00:40:39,839
+forward.
+
+1070
+00:40:38,000 --> 00:40:41,920
+In more general cases where the wave
+
+1071
+00:40:39,839 --> 00:40:44,160
+hits the surface at an angle, we define
+
+1072
+00:40:41,920 --> 00:40:46,320
+the incident angle theta I, the
+
+1073
+00:40:44,160 --> 00:40:49,359
+reflected angle theta r, and the
+
+1074
+00:40:46,320 --> 00:40:51,440
+transmitted angle theta t.
+
+1075
+00:40:49,359 --> 00:40:53,200
+The incident angle equals the reflected
+
+1076
+00:40:51,440 --> 00:40:54,720
+angle, but the transmission angle can
+
+1077
+00:40:53,200 --> 00:40:56,400
+differ depending on the material
+
+1078
+00:40:54,720 --> 00:40:58,319
+properties.
+
+1079
+00:40:56,400 --> 00:41:00,480
+The energy divides between reflection
+
+1080
+00:40:58,319 --> 00:41:03,440
+and transmission. And the total energy
+
+1081
+00:41:00,480 --> 00:41:05,440
+always equals the incident energy. The
+
+1082
+00:41:03,440 --> 00:41:07,119
+ratios of reflected to transmitted
+
+1083
+00:41:05,440 --> 00:41:09,040
+energy can be expressed in terms of
+
+1084
+00:41:07,119 --> 00:41:10,960
+pressure amplitude and when you square
+
+1085
+00:41:09,040 --> 00:41:13,359
+those amplitudes you get the intensity
+
+1086
+00:41:10,960 --> 00:41:15,599
+ratios. These ratios depend on the
+
+1087
+00:41:13,359 --> 00:41:17,920
+acoustic impedance values of the two
+
+1088
+00:41:15,599 --> 00:41:20,240
+materials Z1 and Z2 as well as the
+
+1089
+00:41:17,920 --> 00:41:23,040
+angles of incidence and transmission. If
+
+1090
+00:41:20,240 --> 00:41:24,960
+Z1 equals Z2, meaning the materials are
+
+1091
+00:41:23,040 --> 00:41:26,880
+identical, there will be no reflection
+
+1092
+00:41:24,960 --> 00:41:29,040
+at all and all the energy will pass
+
+1093
+00:41:26,880 --> 00:41:31,040
+straight through. But if the impedances
+
+1094
+00:41:29,040 --> 00:41:32,800
+are very different, for example, if one
+
+1095
+00:41:31,040 --> 00:41:34,960
+of them is close to zero, then the
+
+1096
+00:41:32,800 --> 00:41:36,880
+reflection coefficient becomes one.
+
+1097
+00:41:34,960 --> 00:41:39,440
+Meaning all the energy is reflected
+
+1098
+00:41:36,880 --> 00:41:41,760
+back. That's why impedance matching is
+
+1099
+00:41:39,440 --> 00:41:43,680
+so important in ultrasound imaging. It
+
+1100
+00:41:41,760 --> 00:41:45,359
+ensures that most of the sound energy
+
+1101
+00:41:43,680 --> 00:41:47,760
+enters the body instead of being
+
+1102
+00:41:45,359 --> 00:41:49,839
+reflected away at the surface. So in
+
+1103
+00:41:47,760 --> 00:41:52,319
+summary, ultrasound tissue interaction
+
+1104
+00:41:49,839 --> 00:41:54,720
+involves five main effects. Reflection,
+
+1105
+00:41:52,319 --> 00:41:57,119
+refraction, scattering, absorption, and
+
+1106
+00:41:54,720 --> 00:41:59,200
+attenuation. Together these determine
+
+1107
+00:41:57,119 --> 00:42:01,440
+how the ultrasound wave propagates, how
+
+1108
+00:41:59,200 --> 00:42:04,760
+it loses energy and how we detect it for
+
+1109
+00:42:01,440 --> 00:42:04,760
+image formation.
+
+1110
+00:42:05,440 --> 00:42:09,520
+All right, as I mentioned before, the
+
+1111
+00:42:07,440 --> 00:42:11,359
+intensity of the acoustic wave and
+
+1112
+00:42:09,520 --> 00:42:13,520
+likewise the pressure amplitude
+
+1113
+00:42:11,359 --> 00:42:15,599
+decreases as you go deeper and deeper
+
+1114
+00:42:13,520 --> 00:42:17,520
+into the medium.
+
+1115
+00:42:15,599 --> 00:42:19,200
+And the reason both intensity and
+
+1116
+00:42:17,520 --> 00:42:22,160
+pressure amplitude become smaller and
+
+1117
+00:42:19,200 --> 00:42:24,319
+smaller is due to attenuation.
+
+1118
+00:42:22,160 --> 00:42:26,400
+Now why do we have attenuation? Because
+
+1119
+00:42:24,319 --> 00:42:28,160
+we have two main effects, absorption and
+
+1120
+00:42:26,400 --> 00:42:30,319
+scattering. Some of the energy is
+
+1121
+00:42:28,160 --> 00:42:32,720
+absorbed and turned into heat while some
+
+1122
+00:42:30,319 --> 00:42:34,480
+is scattered redirected into other
+
+1123
+00:42:32,720 --> 00:42:36,319
+directions.
+
+1124
+00:42:34,480 --> 00:42:38,319
+Along the main beam direction, the
+
+1125
+00:42:36,319 --> 00:42:41,440
+intensity keeps getting smaller and the
+
+1126
+00:42:38,319 --> 00:42:43,359
+pressure amplitude also decreases.
+
+1127
+00:42:41,440 --> 00:42:45,520
+This is not a strange concept to us.
+
+1128
+00:42:43,359 --> 00:42:47,839
+We've seen exponential decay many times
+
+1129
+00:42:45,520 --> 00:42:49,760
+before. In nuclear imaging, in X-ray
+
+1130
+00:42:47,839 --> 00:42:51,200
+imaging, exponential decay appears
+
+1131
+00:42:49,760 --> 00:42:52,960
+everywhere. It's a very common
+
+1132
+00:42:51,200 --> 00:42:55,520
+phenomenon.
+
+1133
+00:42:52,960 --> 00:42:57,440
+And every time we see exponential decay,
+
+1134
+00:42:55,520 --> 00:42:59,599
+we can use it to understand how strongly
+
+1135
+00:42:57,440 --> 00:43:02,000
+our target interacts with the probing
+
+1136
+00:42:59,599 --> 00:43:04,000
+beam. Based on the attenuation rate, we
+
+1137
+00:43:02,000 --> 00:43:06,000
+can tell how dense or how light certain
+
+1138
+00:43:04,000 --> 00:43:07,839
+tissues are.
+
+1139
+00:43:06,000 --> 00:43:10,560
+That's really the imaging mechanism.
+
+1140
+00:43:07,839 --> 00:43:12,800
+Attenuation gives us contrast.
+
+1141
+00:43:10,560 --> 00:43:14,720
+Now, the same logic applies here as with
+
+1142
+00:43:12,800 --> 00:43:17,040
+X-rays. You don't want something that
+
+1143
+00:43:14,720 --> 00:43:18,880
+absorbs energy too quickly. If all the
+
+1144
+00:43:17,040 --> 00:43:20,720
+X-rays or all the ultrasound are
+
+1145
+00:43:18,880 --> 00:43:23,280
+absorbed by the body, then the detector
+
+1146
+00:43:20,720 --> 00:43:25,040
+sees nothing. every photon or every bit
+
+1147
+00:43:23,280 --> 00:43:27,680
+of energy gets eaten up and no
+
+1148
+00:43:25,040 --> 00:43:29,040
+information is carried out. But on the
+
+1149
+00:43:27,680 --> 00:43:30,960
+other hand, you also don't want the
+
+1150
+00:43:29,040 --> 00:43:33,359
+ultrasound beam to pass through the body
+
+1151
+00:43:30,960 --> 00:43:35,359
+without any attenuation. If everything
+
+1152
+00:43:33,359 --> 00:43:37,440
+goes through unchanged, again, you get
+
+1153
+00:43:35,359 --> 00:43:39,280
+no information.
+
+1154
+00:43:37,440 --> 00:43:41,119
+The ideal situation is somewhere in
+
+1155
+00:43:39,280 --> 00:43:43,440
+between. You want about half the energy
+
+1156
+00:43:41,119 --> 00:43:45,520
+absorbed and half transmitted. Not
+
+1157
+00:43:43,440 --> 00:43:47,839
+exactly 50/50 in every case, but roughly
+
+1158
+00:43:45,520 --> 00:43:50,319
+half. That balance gives you the maximum
+
+1159
+00:43:47,839 --> 00:43:53,119
+contrast and allows you to reconstruct a
+
+1160
+00:43:50,319 --> 00:43:55,040
+meaningful tomographic image.
+
+1161
+00:43:53,119 --> 00:43:57,680
+Now I often make this analogy with
+
+1162
+00:43:55,040 --> 00:43:59,359
+exams. When I give you an examination, I
+
+1163
+00:43:57,680 --> 00:44:04,160
+try to set it up so that the class
+
+1164
+00:43:59,359 --> 00:44:06,160
+average is around 50%. Why?
+
+1165
+00:44:04,160 --> 00:44:08,000
+Because that gives me the best spread. I
+
+1166
+00:44:06,160 --> 00:44:10,160
+can see which questions are tricky and
+
+1167
+00:44:08,000 --> 00:44:11,760
+which ones you can solve easily. It
+
+1168
+00:44:10,160 --> 00:44:13,839
+allows me to judge relative performance
+
+1169
+00:44:11,760 --> 00:44:15,839
+much more clearly.
+
+1170
+00:44:13,839 --> 00:44:18,480
+So don't worry if your average score
+
+1171
+00:44:15,839 --> 00:44:20,319
+isn't high. I purposely don't aim for a
+
+1172
+00:44:18,480 --> 00:44:22,400
+high average because it gives me better
+
+1173
+00:44:20,319 --> 00:44:24,720
+information about the class as a whole.
+
+1174
+00:44:22,400 --> 00:44:27,040
+And in the end, your final letter grades
+
+1175
+00:44:24,720 --> 00:44:28,319
+A, B, or C are assigned consistently
+
+1176
+00:44:27,040 --> 00:44:30,400
+with the overall performance
+
+1177
+00:44:28,319 --> 00:44:32,000
+distribution. So nobody's unfairly
+
+1178
+00:44:30,400 --> 00:44:33,520
+graded.
+
+1179
+00:44:32,000 --> 00:44:36,160
+Coming back to imaging, the same
+
+1180
+00:44:33,520 --> 00:44:38,240
+principle applies. The attenuation curve
+
+1181
+00:44:36,160 --> 00:44:40,640
+gives us the contrast we need, not too
+
+1182
+00:44:38,240 --> 00:44:42,480
+much, not too little. And in ultrasound,
+
+1183
+00:44:40,640 --> 00:44:44,480
+we often use two equivalent forms to
+
+1184
+00:44:42,480 --> 00:44:46,560
+describe it. M, the attenuation
+
+1185
+00:44:44,480 --> 00:44:49,839
+coefficient for intensity, and A, the
+
+1186
+00:44:46,560 --> 00:44:51,760
+attenuation coefficient for pressure.
+
+1187
+00:44:49,839 --> 00:44:54,000
+These are just two different ways to
+
+1188
+00:44:51,760 --> 00:44:56,560
+express the same exponential decay
+
+1189
+00:44:54,000 --> 00:44:59,800
+behavior. On a decibel scale, m and a
+
+1190
+00:44:56,560 --> 00:44:59,800
+become interchangeable.
+
+1191
+00:45:01,599 --> 00:45:05,599
+Now, let's talk about how attenuation
+
+1192
+00:45:03,359 --> 00:45:08,000
+depends on frequency.
+
+1193
+00:45:05,599 --> 00:45:10,640
+Here the coefficient a is proportional
+
+1194
+00:45:08,000 --> 00:45:12,880
+to a constant which we call a kn and
+
+1195
+00:45:10,640 --> 00:45:14,880
+it's also proportional to frequency.
+
+1196
+00:45:12,880 --> 00:45:20,079
+Mathematically we often write this as
+
+1197
+00:45:14,880 --> 00:45:22,560
+alpha of f= alpha * f to the power of b.
+
+1198
+00:45:20,079 --> 00:45:24,480
+For diagnostic ultrasound the value of b
+
+1199
+00:45:22,560 --> 00:45:26,960
+is about one which means the
+
+1200
+00:45:24,480 --> 00:45:28,880
+relationship is almost linear. In other
+
+1201
+00:45:26,960 --> 00:45:32,000
+words as the frequency increases
+
+1202
+00:45:28,880 --> 00:45:33,920
+attenuation increases linearly.
+
+1203
+00:45:32,000 --> 00:45:36,000
+So higher frequency means stronger
+
+1204
+00:45:33,920 --> 00:45:38,160
+attenuation. And that makes perfect
+
+1205
+00:45:36,000 --> 00:45:40,079
+sense physically. Think about it. When
+
+1206
+00:45:38,160 --> 00:45:42,960
+you vibrate molecules more frequently,
+
+1207
+00:45:40,079 --> 00:45:44,960
+they move back and forth faster.
+
+1208
+00:45:42,960 --> 00:45:46,880
+Faster motion means more friction inside
+
+1209
+00:45:44,960 --> 00:45:49,520
+the tissue and that friction converts
+
+1210
+00:45:46,880 --> 00:45:51,680
+energy into heat. So higher frequency
+
+1211
+00:45:49,520 --> 00:45:53,839
+means you lose energy faster. The wave
+
+1212
+00:45:51,680 --> 00:45:55,440
+decays in intensity and amplitude more
+
+1213
+00:45:53,839 --> 00:45:57,839
+quickly.
+
+1214
+00:45:55,440 --> 00:45:59,520
+In simple terms, higher frequency equals
+
+1215
+00:45:57,839 --> 00:46:01,200
+higher energy loss equals less
+
+1216
+00:45:59,520 --> 00:46:03,119
+penetration.
+
+1217
+00:46:01,200 --> 00:46:05,920
+Now for different types of materials the
+
+1218
+00:46:03,119 --> 00:46:07,599
+constant a not is different.
+
+1219
+00:46:05,920 --> 00:46:09,760
+If you look at the table on the slide
+
+1220
+00:46:07,599 --> 00:46:11,839
+you'll see that fat has a smaller a not
+
+1221
+00:46:09,760 --> 00:46:13,839
+value while liver is a little higher.
+
+1222
+00:46:11,839 --> 00:46:15,920
+Cardiac muscle is higher still and bone
+
+1223
+00:46:13,839 --> 00:46:18,720
+has a very large value meaning sound
+
+1224
+00:46:15,920 --> 00:46:20,319
+doesn't penetrate bone very well. You
+
+1225
+00:46:18,720 --> 00:46:22,000
+can use these numbers to get a sense of
+
+1226
+00:46:20,319 --> 00:46:24,880
+how attenuation works in different
+
+1227
+00:46:22,000 --> 00:46:26,640
+tissues. For example let's take fat at 5
+
+1228
+00:46:24,880 --> 00:46:30,000
+MHz.
+
+1229
+00:46:26,640 --> 00:46:34,400
+You can calculate attenuation as 5 MHz *
+
+1230
+00:46:30,000 --> 00:46:38,160
+0.63 dB per cm per MHz which equals
+
+1231
+00:46:34,400 --> 00:46:41,760
+about 3.15 dB per cm.
+
+1232
+00:46:38,160 --> 00:46:44,400
+After traveling 4 cm that's 12.6 dB of
+
+1233
+00:46:41,760 --> 00:46:48,640
+attenuation. The relative amplitude of
+
+1234
+00:46:44,400 --> 00:46:53,520
+the wave becomes 10 to the power of -2.6
+
+1235
+00:46:48,640 --> 00:46:55,920
+/ 20 which is about 0.234.
+
+1236
+00:46:53,520 --> 00:46:58,079
+So as frequency increases, attenuation
+
+1237
+00:46:55,920 --> 00:46:59,680
+increases. That's why in medical
+
+1238
+00:46:58,079 --> 00:47:01,359
+ultrasound, we always have to make a
+
+1239
+00:46:59,680 --> 00:47:03,200
+trade-off. High frequency gives you
+
+1240
+00:47:01,359 --> 00:47:05,280
+better resolution but less depth. While
+
+1241
+00:47:03,200 --> 00:47:07,680
+low frequency penetrates deeper but
+
+1242
+00:47:05,280 --> 00:47:09,760
+gives you lower resolution.
+
+1243
+00:47:07,680 --> 00:47:12,079
+The takeaway is simple and important.
+
+1244
+00:47:09,760 --> 00:47:16,839
+Higher frequency, larger attenuation
+
+1245
+00:47:12,079 --> 00:47:16,839
+coefficient, less penetration depth.
+
+1246
+00:47:18,079 --> 00:47:21,920
+Now let's talk about some practical
+
+1247
+00:47:19,760 --> 00:47:23,839
+implications of reflection coefficients.
+
+1248
+00:47:21,920 --> 00:47:26,079
+This is really an extension of what I
+
+1249
+00:47:23,839 --> 00:47:28,079
+already mentioned earlier.
+
+1250
+00:47:26,079 --> 00:47:30,079
+You cannot penetrate ribs or air bubbles
+
+1251
+00:47:28,079 --> 00:47:31,920
+easily because their acoustic impedances
+
+1252
+00:47:30,079 --> 00:47:35,040
+are very different from those of soft
+
+1253
+00:47:31,920 --> 00:47:37,119
+tissue. When there's a large mismatch in
+
+1254
+00:47:35,040 --> 00:47:39,280
+impedance, most of the ultrasound energy
+
+1255
+00:47:37,119 --> 00:47:40,800
+is reflected and very little gets
+
+1256
+00:47:39,280 --> 00:47:42,880
+through.
+
+1257
+00:47:40,800 --> 00:47:44,960
+Also, if you try to do brain imaging in
+
+1258
+00:47:42,880 --> 00:47:47,040
+vivo, the skull will reflect almost all
+
+1259
+00:47:44,960 --> 00:47:48,880
+of the ultrasound. That's why we don't
+
+1260
+00:47:47,040 --> 00:47:51,680
+use ultrasound to image the brain the
+
+1261
+00:47:48,880 --> 00:47:53,520
+same way we use CT or MRI. The bone
+
+1262
+00:47:51,680 --> 00:47:55,520
+tissue boundary is such a strong
+
+1263
+00:47:53,520 --> 00:47:57,200
+reflector that almost no energy gets
+
+1264
+00:47:55,520 --> 00:47:59,200
+inside.
+
+1265
+00:47:57,200 --> 00:48:01,280
+Even inside the brain, gray matter and
+
+1266
+00:47:59,200 --> 00:48:03,520
+white matter are acoustically very
+
+1267
+00:48:01,280 --> 00:48:05,359
+uniform. In a uniform medium, the
+
+1268
+00:48:03,520 --> 00:48:07,119
+ultrasound wave passes straight through
+
+1269
+00:48:05,359 --> 00:48:09,359
+without much change. Kind of like a
+
+1270
+00:48:07,119 --> 00:48:10,720
+transparent window,
+
+1271
+00:48:09,359 --> 00:48:12,960
+but that also means you don't get
+
+1272
+00:48:10,720 --> 00:48:15,520
+contrast. It's like when everyone in the
+
+1273
+00:48:12,960 --> 00:48:17,440
+class scores a perfect 100. I can't tell
+
+1274
+00:48:15,520 --> 00:48:20,240
+who is better because everyone looks the
+
+1275
+00:48:17,440 --> 00:48:22,160
+same. On the other extreme, if you have
+
+1276
+00:48:20,240 --> 00:48:24,000
+a strong mismatch and for example at a
+
+1277
+00:48:22,160 --> 00:48:26,079
+tissue bone interface, the ultrasound
+
+1278
+00:48:24,000 --> 00:48:28,319
+wave cannot penetrate at all. Everything
+
+1279
+00:48:26,079 --> 00:48:30,319
+is reflected. That's like an exam where
+
+1280
+00:48:28,319 --> 00:48:33,200
+everyone scores zero. Again, I can't
+
+1281
+00:48:30,319 --> 00:48:35,520
+tell who's better. So, what we really
+
+1282
+00:48:33,200 --> 00:48:37,680
+need is a good balance, a useful imaging
+
+1283
+00:48:35,520 --> 00:48:39,520
+window. In practice, this means finding
+
+1284
+00:48:37,680 --> 00:48:41,760
+acoustic windows that allow sound to
+
+1285
+00:48:39,520 --> 00:48:43,680
+enter effectively.
+
+1286
+00:48:41,760 --> 00:48:45,440
+For instance, when imaging the heart, we
+
+1287
+00:48:43,680 --> 00:48:47,200
+position the probe around the ribs to
+
+1288
+00:48:45,440 --> 00:48:49,040
+find a small gap where the sound can
+
+1289
+00:48:47,200 --> 00:48:51,280
+pass through.
+
+1290
+00:48:49,040 --> 00:48:53,119
+We also make sure to use ultrasound gel
+
+1291
+00:48:51,280 --> 00:48:54,559
+between the transducer and the skin
+
+1292
+00:48:53,119 --> 00:48:56,400
+because that gel helps match the
+
+1293
+00:48:54,559 --> 00:48:58,559
+impedance between the probe and the
+
+1294
+00:48:56,400 --> 00:49:00,640
+tissue. Without it, the air gap would
+
+1295
+00:48:58,559 --> 00:49:03,599
+cause almost total reflection and no
+
+1296
+00:49:00,640 --> 00:49:05,440
+signal would enter the body. So the key
+
+1297
+00:49:03,599 --> 00:49:07,440
+idea is this reflection depends on
+
+1298
+00:49:05,440 --> 00:49:09,760
+impedance mismatch. If there's too
+
+1299
+00:49:07,440 --> 00:49:12,000
+little mismatch, there's no contrast.
+
+1300
+00:49:09,760 --> 00:49:13,520
+Everything looks uniform. But if the
+
+1301
+00:49:12,000 --> 00:49:15,839
+mismatch is too large, nothing
+
+1302
+00:49:13,520 --> 00:49:18,880
+penetrates. You can't see anything. The
+
+1303
+00:49:15,839 --> 00:49:20,480
+useful imaging window lies in between.
+
+1304
+00:49:18,880 --> 00:49:22,000
+This is something I've mentioned before
+
+1305
+00:49:20,480 --> 00:49:23,920
+and you can read through the bullet
+
+1306
+00:49:22,000 --> 00:49:26,880
+points on the slide to reinforce the
+
+1307
+00:49:23,920 --> 00:49:28,480
+idea. The goal is always the same. Find
+
+1308
+00:49:26,880 --> 00:49:30,079
+the right balance between reflection and
+
+1309
+00:49:28,480 --> 00:49:33,079
+transmission to get good imaging
+
+1310
+00:49:30,079 --> 00:49:33,079
+quality.
+
+1311
+00:49:34,480 --> 00:49:37,119
+All right. Now, let's talk about
+
+1312
+00:49:35,839 --> 00:49:39,920
+something quite interesting. The
+
+1313
+00:49:37,119 --> 00:49:41,839
+biological effects of ultrasound.
+
+1314
+00:49:39,920 --> 00:49:43,520
+When we introduce ultrasound energy into
+
+1315
+00:49:41,839 --> 00:49:44,960
+the body, it can lead to two kinds of
+
+1316
+00:49:43,520 --> 00:49:47,119
+effects. thermal effects and
+
+1317
+00:49:44,960 --> 00:49:48,640
+non-therrmal effects.
+
+1318
+00:49:47,119 --> 00:49:50,160
+I've already mentioned the thermal
+
+1319
+00:49:48,640 --> 00:49:52,240
+effects earlier, but let's quickly
+
+1320
+00:49:50,160 --> 00:49:54,000
+recall them. When ultrasound travels
+
+1321
+00:49:52,240 --> 00:49:57,040
+through tissue, part of its mechanical
+
+1322
+00:49:54,000 --> 00:49:58,559
+energy gets converted into heat.
+
+1323
+00:49:57,040 --> 00:50:00,640
+This heating can cause several
+
+1324
+00:49:58,559 --> 00:50:02,000
+physiological changes. For instance, it
+
+1325
+00:50:00,640 --> 00:50:04,160
+can increase collagen tissue
+
+1326
+00:50:02,000 --> 00:50:06,079
+extensibility which makes soft tissues
+
+1327
+00:50:04,160 --> 00:50:07,760
+more flexible.
+
+1328
+00:50:06,079 --> 00:50:09,440
+It can also increase blood flow which
+
+1329
+00:50:07,760 --> 00:50:11,599
+improves circulation and oxygen
+
+1330
+00:50:09,440 --> 00:50:13,599
+delivery. In addition, it can increase
+
+1331
+00:50:11,599 --> 00:50:16,000
+nerve conduction velocity, meaning that
+
+1332
+00:50:13,599 --> 00:50:17,599
+nerve impulses travel faster. This
+
+1333
+00:50:16,000 --> 00:50:19,599
+effect can also raise the pain
+
+1334
+00:50:17,599 --> 00:50:22,480
+threshold, allowing patients to tolerate
+
+1335
+00:50:19,599 --> 00:50:24,720
+more discomfort during therapy.
+
+1336
+00:50:22,480 --> 00:50:26,640
+Moreover, heating can enhance enzyatic
+
+1337
+00:50:24,720 --> 00:50:28,720
+activity. Many enzymes in the body
+
+1338
+00:50:26,640 --> 00:50:31,280
+function more efficiently at slightly
+
+1339
+00:50:28,720 --> 00:50:33,119
+elevated temperatures. And finally,
+
+1340
+00:50:31,280 --> 00:50:35,280
+ultrasound heating can help decrease
+
+1341
+00:50:33,119 --> 00:50:37,440
+muscle spasm, relaxing the tissue and
+
+1342
+00:50:35,280 --> 00:50:38,960
+improving mobility.
+
+1343
+00:50:37,440 --> 00:50:41,040
+Now in addition to these thermal
+
+1344
+00:50:38,960 --> 00:50:42,800
+effects, ultrasound also causes
+
+1345
+00:50:41,040 --> 00:50:45,119
+non-therrmal effects and these are
+
+1346
+00:50:42,800 --> 00:50:47,119
+especially fascinating.
+
+1347
+00:50:45,119 --> 00:50:48,960
+Non-thermal effects are not caused by
+
+1348
+00:50:47,119 --> 00:50:51,119
+heating. Instead, they result from
+
+1349
+00:50:48,960 --> 00:50:52,640
+mechanical interaction with the tissue.
+
+1350
+00:50:51,119 --> 00:50:55,280
+The actual pressure waves and
+
+1351
+00:50:52,640 --> 00:50:57,359
+oscillations in the medium.
+
+1352
+00:50:55,280 --> 00:50:59,359
+For example, ultrasound can increase
+
+1353
+00:50:57,359 --> 00:51:01,119
+cell membrane permeability, allowing
+
+1354
+00:50:59,359 --> 00:51:02,800
+molecules to move in and out of cells
+
+1355
+00:51:01,119 --> 00:51:04,319
+more easily.
+
+1356
+00:51:02,800 --> 00:51:06,000
+It can also increase vascular
+
+1357
+00:51:04,319 --> 00:51:08,000
+permeability which means that blood
+
+1358
+00:51:06,000 --> 00:51:09,920
+vessels become slightly more leaky
+
+1359
+00:51:08,000 --> 00:51:12,000
+allowing nutrients or drugs to diffuse
+
+1360
+00:51:09,920 --> 00:51:13,839
+through more effectively. Both of these
+
+1361
+00:51:12,000 --> 00:51:16,720
+effects are very useful in therapeutic
+
+1362
+00:51:13,839 --> 00:51:18,800
+and drug delivery applications.
+
+1363
+00:51:16,720 --> 00:51:20,880
+Ultrasound can also increase local blood
+
+1364
+00:51:18,800 --> 00:51:23,680
+flow without significant heating helping
+
+1365
+00:51:20,880 --> 00:51:26,000
+tissue repair and regeneration.
+
+1366
+00:51:23,680 --> 00:51:27,920
+It can assist in the reduction of edema
+
+1367
+00:51:26,000 --> 00:51:29,760
+which is the accumulation of fluid in
+
+1368
+00:51:27,920 --> 00:51:32,880
+tissues and that makes it very useful
+
+1369
+00:51:29,760 --> 00:51:34,720
+for treating inflammation or swelling.
+
+1370
+00:51:32,880 --> 00:51:36,960
+One of the most remarkable non-thermal
+
+1371
+00:51:34,720 --> 00:51:38,960
+effects is something called cavitation.
+
+1372
+00:51:36,960 --> 00:51:41,440
+Cavitation refers to the formation and
+
+1373
+00:51:38,960 --> 00:51:44,400
+oscillation of tiny bubbles, microscopic
+
+1374
+00:51:41,440 --> 00:51:46,720
+gas pockets in the tissue fluid.
+
+1375
+00:51:44,400 --> 00:51:48,800
+At certain frequencies and intensities,
+
+1376
+00:51:46,720 --> 00:51:51,040
+these bubbles can oscillate and even
+
+1377
+00:51:48,800 --> 00:51:53,200
+collapse, releasing bursts of mechanical
+
+1378
+00:51:51,040 --> 00:51:54,960
+energy that can affect nearby cells or
+
+1379
+00:51:53,200 --> 00:51:56,720
+molecules.
+
+1380
+00:51:54,960 --> 00:51:58,480
+As shown in the figure on this slide,
+
+1381
+00:51:56,720 --> 00:52:00,559
+you can see different frequency ranges
+
+1382
+00:51:58,480 --> 00:52:02,559
+where ultrasound is applied from very
+
+1383
+00:52:00,559 --> 00:52:04,800
+low frequencies used in physiootherapy
+
+1384
+00:52:02,559 --> 00:52:07,040
+to higher frequencies used in imaging,
+
+1385
+00:52:04,800 --> 00:52:09,440
+Doppler studies, and even lithotripsy
+
+1386
+00:52:07,040 --> 00:52:11,359
+for breaking kidney stones.
+
+1387
+00:52:09,440 --> 00:52:13,440
+The likelihood of cavitation increases
+
+1388
+00:52:11,359 --> 00:52:15,599
+with lower frequency and higher acoustic
+
+1389
+00:52:13,440 --> 00:52:17,599
+pressure. However, for standard medical
+
+1390
+00:52:15,599 --> 00:52:19,680
+diagnostic ultrasound, which operates
+
+1391
+00:52:17,599 --> 00:52:21,839
+between about 3 and 20 megahertz,
+
+1392
+00:52:19,680 --> 00:52:24,880
+cavitation is highly unlikely. So, it's
+
+1393
+00:52:21,839 --> 00:52:26,880
+very safe. Also, notice the lower
+
+1394
+00:52:24,880 --> 00:52:29,040
+figure. It shows how ultrasound can
+
+1395
+00:52:26,880 --> 00:52:30,880
+enhance drug delivery. The red curve
+
+1396
+00:52:29,040 --> 00:52:32,640
+shows a larger uptake of drug when
+
+1397
+00:52:30,880 --> 00:52:34,559
+ultrasound is applied compared to the
+
+1398
+00:52:32,640 --> 00:52:36,800
+blue curve which shows little uptake
+
+1399
+00:52:34,559 --> 00:52:38,640
+without ultrasound.
+
+1400
+00:52:36,800 --> 00:52:40,640
+This demonstrates how ultrasound can
+
+1401
+00:52:38,640 --> 00:52:42,640
+help drugs penetrate biological barriers
+
+1402
+00:52:40,640 --> 00:52:45,200
+more effectively.
+
+1403
+00:52:42,640 --> 00:52:47,359
+So in summary, ultrasound has both
+
+1404
+00:52:45,200 --> 00:52:48,960
+thermal and non-therrmal effects and
+
+1405
+00:52:47,359 --> 00:52:52,640
+both can be used for different
+
+1406
+00:52:48,960 --> 00:52:54,880
+therapeutic and diagnostic purposes.
+
+1407
+00:52:52,640 --> 00:52:57,680
+The non-therrmal effects like increased
+
+1408
+00:52:54,880 --> 00:52:59,760
+permeability and cavitation open up some
+
+1409
+00:52:57,680 --> 00:53:01,760
+exciting possibilities such as
+
+1410
+00:52:59,760 --> 00:53:04,079
+ultrasound mediated drug delivery and
+
+1411
+00:53:01,760 --> 00:53:06,079
+neurological stimulation. These are
+
+1412
+00:53:04,079 --> 00:53:09,079
+emerging areas of research and clinical
+
+1413
+00:53:06,079 --> 00:53:09,079
+application.
+
+1414
+00:53:10,640 --> 00:53:14,319
+Now, let's shift gears a little bit. Up
+
+1415
+00:53:12,880 --> 00:53:16,160
+to this point, we've been focusing
+
+1416
+00:53:14,319 --> 00:53:18,240
+mainly on the physics of ultrasound, the
+
+1417
+00:53:16,160 --> 00:53:20,480
+wave equation, acoustic impedance, and
+
+1418
+00:53:18,240 --> 00:53:23,200
+sound tissue interactions. We've covered
+
+1419
+00:53:20,480 --> 00:53:25,599
+how ultrasound propagates, how energy is
+
+1420
+00:53:23,200 --> 00:53:28,160
+absorbed or reflected, and how contrast
+
+1421
+00:53:25,599 --> 00:53:29,839
+is generated in imaging.
+
+1422
+00:53:28,160 --> 00:53:31,920
+But now we're moving into a different
+
+1423
+00:53:29,839 --> 00:53:34,400
+section, a more engineering oriented
+
+1424
+00:53:31,920 --> 00:53:36,480
+discussion. These next few slides focus
+
+1425
+00:53:34,400 --> 00:53:38,480
+on the ultrasound scanner or sometimes
+
+1426
+00:53:36,480 --> 00:53:40,800
+we call it the ultrasound probe or
+
+1427
+00:53:38,480 --> 00:53:43,119
+transducer. All these terms basically
+
+1428
+00:53:40,800 --> 00:53:45,119
+refer to the same device.
+
+1429
+00:53:43,119 --> 00:53:47,119
+So in this next part we'll first talk
+
+1430
+00:53:45,119 --> 00:53:48,880
+about the single ultrasound unit and
+
+1431
+00:53:47,119 --> 00:53:50,960
+then how multiple such units are
+
+1432
+00:53:48,880 --> 00:53:53,040
+combined to form arrays either linear
+
+1433
+00:53:50,960 --> 00:53:55,040
+arrays for one-dimensional scanning or
+
+1434
+00:53:53,040 --> 00:53:56,720
+two-dimensional arrays for volutric
+
+1435
+00:53:55,040 --> 00:53:58,720
+imaging.
+
+1436
+00:53:56,720 --> 00:54:00,640
+This is actually quite similar to how a
+
+1437
+00:53:58,720 --> 00:54:02,480
+CT scanner is organized. You have
+
+1438
+00:54:00,640 --> 00:54:04,400
+multiple detectors arranged in a
+
+1439
+00:54:02,480 --> 00:54:06,720
+specific pattern to collect information
+
+1440
+00:54:04,400 --> 00:54:09,040
+from different angles.
+
+1441
+00:54:06,720 --> 00:54:10,880
+We'll also talk about image resolution,
+
+1442
+00:54:09,040 --> 00:54:12,880
+contrast, and microbubbles, which are
+
+1443
+00:54:10,880 --> 00:54:15,200
+tiny gas filled spheres used as
+
+1444
+00:54:12,880 --> 00:54:17,119
+ultrasound contrast agents. These help
+
+1445
+00:54:15,200 --> 00:54:20,240
+us visualize blood flow and enhance
+
+1446
+00:54:17,119 --> 00:54:23,960
+tissue contrast in medical imaging. So
+
+1447
+00:54:20,240 --> 00:54:23,960
+again just to summarize
+
+1448
+00:54:24,480 --> 00:54:28,720
+the first part of this lecture covered
+
+1449
+00:54:26,480 --> 00:54:30,400
+the physical foundations while this next
+
+1450
+00:54:28,720 --> 00:54:32,160
+part is all about the engineering
+
+1451
+00:54:30,400 --> 00:54:34,800
+principles of the ultrasound scanner
+
+1452
+00:54:32,160 --> 00:54:38,920
+itself how it's built how it operates
+
+1453
+00:54:34,800 --> 00:54:38,920
+and how it detects signals.
+
+1454
+00:54:40,640 --> 00:54:45,599
+So how do we actually generate
+
+1455
+00:54:42,640 --> 00:54:47,599
+ultrasound waves?
+
+1456
+00:54:45,599 --> 00:54:49,440
+Earlier I mentioned that if you push and
+
+1457
+00:54:47,599 --> 00:54:51,280
+pull repeatedly like stretching and
+
+1458
+00:54:49,440 --> 00:54:54,319
+compressing a spring or vibrating a
+
+1459
+00:54:51,280 --> 00:54:56,160
+rope, you can generate waves.
+
+1460
+00:54:54,319 --> 00:54:58,319
+Those are good heristic examples to
+
+1461
+00:54:56,160 --> 00:55:00,079
+understand the idea. But for medical
+
+1462
+00:54:58,319 --> 00:55:02,319
+ultrasound, we need something that can
+
+1463
+00:55:00,079 --> 00:55:05,440
+vibrate millions of times per second,
+
+1464
+00:55:02,319 --> 00:55:07,280
+far beyond what we can do by hand. So we
+
+1465
+00:55:05,440 --> 00:55:09,599
+use a physical mechanism called the
+
+1466
+00:55:07,280 --> 00:55:11,520
+polectric effect.
+
+1467
+00:55:09,599 --> 00:55:13,680
+The ptoelectric effect is truly
+
+1468
+00:55:11,520 --> 00:55:15,760
+fundamental to ultrasound imaging. It's
+
+1469
+00:55:13,680 --> 00:55:18,000
+the enabling technology behind both the
+
+1470
+00:55:15,760 --> 00:55:20,480
+generation and detection of ultrasound
+
+1471
+00:55:18,000 --> 00:55:22,319
+waves. In fact, this phenomenon was so
+
+1472
+00:55:20,480 --> 00:55:25,280
+important that it earned recognition at
+
+1473
+00:55:22,319 --> 00:55:27,119
+the Nobel Prize level. Now, the PZ
+
+1474
+00:55:25,280 --> 00:55:29,040
+electric effect works in two directions
+
+1475
+00:55:27,119 --> 00:55:31,040
+which we call the direct effect and the
+
+1476
+00:55:29,040 --> 00:55:33,520
+reverse effect.
+
+1477
+00:55:31,040 --> 00:55:36,319
+Let's start with the direct effect. When
+
+1478
+00:55:33,520 --> 00:55:39,119
+sound vibrations, that is pressure waves
+
+1479
+00:55:36,319 --> 00:55:41,440
+hit a ptoric crystal, the alternating
+
+1480
+00:55:39,119 --> 00:55:43,119
+pressure causes the crystal to deform
+
+1481
+00:55:41,440 --> 00:55:45,440
+mechanically.
+
+1482
+00:55:43,119 --> 00:55:47,680
+As the pressure oscillates from positive
+
+1483
+00:55:45,440 --> 00:55:49,920
+to negative, the crystal expands and
+
+1484
+00:55:47,680 --> 00:55:51,680
+contracts slightly. This mechanical
+
+1485
+00:55:49,920 --> 00:55:54,079
+deformation generates an electrical
+
+1486
+00:55:51,680 --> 00:55:56,079
+potential across its surfaces. In other
+
+1487
+00:55:54,079 --> 00:55:58,559
+words, mechanical energy, the sound
+
+1488
+00:55:56,079 --> 00:56:00,240
+vibration is converted into electrical
+
+1489
+00:55:58,559 --> 00:56:02,319
+energy.
+
+1490
+00:56:00,240 --> 00:56:04,720
+This is how the ultrasound echo signal
+
+1491
+00:56:02,319 --> 00:56:06,319
+is detected by the transducer and turned
+
+1492
+00:56:04,720 --> 00:56:08,240
+into an electrical signal for
+
+1493
+00:56:06,319 --> 00:56:10,319
+processing.
+
+1494
+00:56:08,240 --> 00:56:12,640
+Now, the reverse effect works the other
+
+1495
+00:56:10,319 --> 00:56:14,880
+way around. When we apply a voltage
+
+1496
+00:56:12,640 --> 00:56:17,680
+across the PZO electric crystal, it
+
+1497
+00:56:14,880 --> 00:56:19,920
+causes the crystal to deform to change
+
+1498
+00:56:17,680 --> 00:56:21,839
+shape. When the voltage alternates
+
+1499
+00:56:19,920 --> 00:56:24,000
+positive, then negative then positive
+
+1500
+00:56:21,839 --> 00:56:25,599
+again, the crystal vibrates back and
+
+1501
+00:56:24,000 --> 00:56:27,599
+forth.
+
+1502
+00:56:25,599 --> 00:56:29,760
+If that electrical signal has a
+
+1503
+00:56:27,599 --> 00:56:32,160
+frequency in the ultrasound range, those
+
+1504
+00:56:29,760 --> 00:56:35,359
+vibrations produce ultrasound waves that
+
+1505
+00:56:32,160 --> 00:56:37,119
+propagate into the surrounding medium.
+
+1506
+00:56:35,359 --> 00:56:39,200
+So you can see that the same pole
+
+1507
+00:56:37,119 --> 00:56:41,359
+electric element can do both jobs. It
+
+1508
+00:56:39,200 --> 00:56:44,000
+can generate ultrasound waves and also
+
+1509
+00:56:41,359 --> 00:56:45,839
+detect the returning echoes.
+
+1510
+00:56:44,000 --> 00:56:48,079
+Here's how it all fits together. When
+
+1511
+00:56:45,839 --> 00:56:50,319
+you send a sinosoidal electrical signal
+
+1512
+00:56:48,079 --> 00:56:52,160
+to the crystal, it vibrates and emits an
+
+1513
+00:56:50,319 --> 00:56:55,040
+ultrasound wave that travels into the
+
+1514
+00:56:52,160 --> 00:56:56,400
+body. The wave reflects from tissue
+
+1515
+00:56:55,040 --> 00:56:58,559
+boundaries and returns to the
+
+1516
+00:56:56,400 --> 00:57:00,720
+transducer. Those returning pressure
+
+1517
+00:56:58,559 --> 00:57:02,720
+waves deform the crystal again, and the
+
+1518
+00:57:00,720 --> 00:57:04,960
+deformation creates an electrical signal
+
+1519
+00:57:02,720 --> 00:57:06,480
+that can be measured.
+
+1520
+00:57:04,960 --> 00:57:08,480
+That's why we call it a two-way
+
+1521
+00:57:06,480 --> 00:57:10,319
+transduction process. It goes from
+
+1522
+00:57:08,480 --> 00:57:12,000
+electrical energy to mechanical energy
+
+1523
+00:57:10,319 --> 00:57:14,079
+when we transmit and back from
+
+1524
+00:57:12,000 --> 00:57:16,799
+mechanical to electrical energy when we
+
+1525
+00:57:14,079 --> 00:57:19,040
+receive. This process the PZO electric
+
+1526
+00:57:16,799 --> 00:57:21,280
+effect is the heart of every ultrasound
+
+1527
+00:57:19,040 --> 00:57:23,440
+transducer. It allows the probe to both
+
+1528
+00:57:21,280 --> 00:57:26,480
+send and receive sound waves enabling us
+
+1529
+00:57:23,440 --> 00:57:28,640
+to form detailed medical images. So when
+
+1530
+00:57:26,480 --> 00:57:31,200
+you see the term PZO electric ceramics
+
+1531
+00:57:28,640 --> 00:57:33,280
+or PZO electric crystals, just remember
+
+1532
+00:57:31,200 --> 00:57:35,359
+that's what's inside every ultrasound
+
+1533
+00:57:33,280 --> 00:57:37,119
+probe. converting electrical energy to
+
+1534
+00:57:35,359 --> 00:57:39,839
+sound and sound back to electrical
+
+1535
+00:57:37,119 --> 00:57:41,839
+energy millions of times every second.
+
+1536
+00:57:39,839 --> 00:57:45,720
+And that's the essence of how ultrasound
+
+1537
+00:57:41,839 --> 00:57:45,720
+imaging becomes possible.
+
+1538
+00:57:46,319 --> 00:57:51,200
+You might wonder why does the po
+
+1539
+00:57:48,400 --> 00:57:53,599
+electric effect actually happen?
+
+1540
+00:57:51,200 --> 00:57:55,920
+What's going on inside the material that
+
+1541
+00:57:53,599 --> 00:57:59,200
+allows it to generate electricity when
+
+1542
+00:57:55,920 --> 00:58:01,119
+we apply pressure?
+
+1543
+00:57:59,200 --> 00:58:04,240
+This little cartoon or infographic
+
+1544
+00:58:01,119 --> 00:58:06,559
+explains it beautifully. Imagine you
+
+1545
+00:58:04,240 --> 00:58:09,119
+have a crystal structure such as quartz
+
+1546
+00:58:06,559 --> 00:58:11,520
+that is in perfect static balance both
+
+1547
+00:58:09,119 --> 00:58:13,200
+mechanically and electrically. In its no
+
+1548
+00:58:11,520 --> 00:58:16,160
+stress state, the positive and negative
+
+1549
+00:58:13,200 --> 00:58:18,480
+charges are arranged symmetrically.
+
+1550
+00:58:16,160 --> 00:58:20,720
+The positive charges usually from the
+
+1551
+00:58:18,480 --> 00:58:22,720
+silicon atoms and the negative charges
+
+1552
+00:58:20,720 --> 00:58:24,880
+from the oxygen atoms balance one
+
+1553
+00:58:22,720 --> 00:58:27,040
+another out. So the overall crystal is
+
+1554
+00:58:24,880 --> 00:58:28,960
+electrically neutral. There is no net
+
+1555
+00:58:27,040 --> 00:58:31,680
+polarization, no voltage across the
+
+1556
+00:58:28,960 --> 00:58:34,000
+surfaces.
+
+1557
+00:58:31,680 --> 00:58:35,599
+Now let's apply a horizontal tension.
+
+1558
+00:58:34,000 --> 00:58:37,920
+We're stretching the crystal, pulling
+
+1559
+00:58:35,599 --> 00:58:40,480
+its sides apart. The crystal is stable
+
+1560
+00:58:37,920 --> 00:58:42,640
+but elastic so it deforms slightly. When
+
+1561
+00:58:40,480 --> 00:58:44,880
+that happens, the charge centers shift.
+
+1562
+00:58:42,640 --> 00:58:47,839
+The positive charges move upward and the
+
+1563
+00:58:44,880 --> 00:58:49,680
+negative charges move downward.
+
+1564
+00:58:47,839 --> 00:58:51,920
+That means the top surface becomes
+
+1565
+00:58:49,680 --> 00:58:53,920
+slightly positive and the bottom surface
+
+1566
+00:58:51,920 --> 00:58:55,680
+becomes slightly negative. In other
+
+1567
+00:58:53,920 --> 00:58:57,520
+words, the mechanical strain has
+
+1568
+00:58:55,680 --> 00:59:00,480
+produced an electrical potential
+
+1569
+00:58:57,520 --> 00:59:02,640
+difference between the two surfaces.
+
+1570
+00:59:00,480 --> 00:59:04,960
+Now imagine the opposite, a compression
+
+1571
+00:59:02,640 --> 00:59:06,799
+instead of tension. When we compress the
+
+1572
+00:59:04,960 --> 00:59:09,680
+crystal, we push those atoms closer
+
+1573
+00:59:06,799 --> 00:59:11,599
+together, but in the opposite direction.
+
+1574
+00:59:09,680 --> 00:59:13,520
+The negative charges are forced upward
+
+1575
+00:59:11,599 --> 00:59:15,839
+and the positive charges are pushed
+
+1576
+00:59:13,520 --> 00:59:18,000
+downward. Now the top surface becomes
+
+1577
+00:59:15,839 --> 00:59:19,760
+negative and the bottom surface becomes
+
+1578
+00:59:18,000 --> 00:59:21,599
+positive.
+
+1579
+00:59:19,760 --> 00:59:23,440
+This alternation between tension and
+
+1580
+00:59:21,599 --> 00:59:25,520
+compression causes repeated charge
+
+1581
+00:59:23,440 --> 00:59:27,520
+separation which is what generates an
+
+1582
+00:59:25,520 --> 00:59:30,240
+alternating voltage when the material is
+
+1583
+00:59:27,520 --> 00:59:32,160
+vibrated continuously.
+
+1584
+00:59:30,240 --> 00:59:33,920
+So what you see in this diagram the
+
+1585
+00:59:32,160 --> 00:59:36,240
+shift of positive and negative charge
+
+1586
+00:59:33,920 --> 00:59:38,480
+centers is the fundamental reason behind
+
+1587
+00:59:36,240 --> 00:59:39,839
+the pzoelectric effect. Mechanical
+
+1588
+00:59:38,480 --> 00:59:41,839
+deformation creates electrical
+
+1589
+00:59:39,839 --> 00:59:45,200
+polarization and electrical excitation
+
+1590
+00:59:41,839 --> 00:59:47,040
+can in turn create mechanical motion.
+
+1591
+00:59:45,200 --> 00:59:49,440
+This is the microscopic picture that
+
+1592
+00:59:47,040 --> 00:59:51,440
+explains how pzoelectric crystals act as
+
+1593
+00:59:49,440 --> 00:59:53,520
+transducers converting mechanical
+
+1594
+00:59:51,440 --> 00:59:55,839
+vibration into electrical energy and
+
+1595
+00:59:53,520 --> 00:59:58,079
+back again. It's this static electric
+
+1596
+00:59:55,839 --> 01:00:00,000
+imbalance produced by strain that forms
+
+1597
+00:59:58,079 --> 01:00:03,000
+the very foundation of ultrasound
+
+1598
+01:00:00,000 --> 01:00:03,000
+imaging.
+
+1599
+01:00:04,400 --> 01:00:08,799
+Now let's take a look at the single
+
+1600
+01:00:06,480 --> 01:00:11,040
+crystal transducer which is one of the
+
+1601
+01:00:08,799 --> 01:00:13,520
+simplest yet most important components
+
+1602
+01:00:11,040 --> 01:00:15,200
+in ultrasound systems.
+
+1603
+01:00:13,520 --> 01:00:17,200
+If you look at the diagram from your
+
+1604
+01:00:15,200 --> 01:00:19,280
+textbook, you can see all the key parts
+
+1605
+01:00:17,200 --> 01:00:21,440
+clearly labeled. At the heart of the
+
+1606
+01:00:19,280 --> 01:00:23,119
+transducer is the PZO electric crystal.
+
+1607
+01:00:21,440 --> 01:00:26,400
+The active element that generates and
+
+1608
+01:00:23,119 --> 01:00:28,079
+receives ultrasound waves. On one side
+
+1609
+01:00:26,400 --> 01:00:29,920
+there is a matching layer which I
+
+1610
+01:00:28,079 --> 01:00:31,839
+mentioned earlier is used to match the
+
+1611
+01:00:29,920 --> 01:00:34,240
+acoustic impedance of the crystal to
+
+1612
+01:00:31,839 --> 01:00:36,160
+that of the tissue. Without this layer
+
+1613
+01:00:34,240 --> 01:00:38,000
+much of the energy would be reflected at
+
+1614
+01:00:36,160 --> 01:00:40,319
+the interface and very little sound
+
+1615
+01:00:38,000 --> 01:00:42,400
+would enter the body.
+
+1616
+01:00:40,319 --> 01:00:44,559
+Behind the crystal you'll see a damping
+
+1617
+01:00:42,400 --> 01:00:46,799
+material. This is essential because it
+
+1618
+01:00:44,559 --> 01:00:48,960
+absorbs unwanted echoes and stops the
+
+1619
+01:00:46,799 --> 01:00:50,720
+crystal from ringing after each pulse.
+
+1620
+01:00:48,960 --> 01:00:52,160
+The damping material ensures that the
+
+1621
+01:00:50,720 --> 01:00:54,000
+emitted pulse is short and well-
+
+1622
+01:00:52,160 --> 01:00:56,480
+definfined, giving us better axial
+
+1623
+01:00:54,000 --> 01:00:57,920
+resolution in the image.
+
+1624
+01:00:56,480 --> 01:01:00,000
+Surrounding everything, there's an
+
+1625
+01:00:57,920 --> 01:01:02,079
+acoustic insulator or backing which
+
+1626
+01:01:00,000 --> 01:01:04,000
+directs the ultrasound wave forward into
+
+1627
+01:01:02,079 --> 01:01:06,799
+the tissue rather than allowing it to
+
+1628
+01:01:04,000 --> 01:01:08,960
+leak backward into the housing.
+
+1629
+01:01:06,799 --> 01:01:10,400
+There's also a conducting wire or
+
+1630
+01:01:08,960 --> 01:01:12,079
+contact lead which connects to the
+
+1631
+01:01:10,400 --> 01:01:14,000
+electrical circuitry allowing us to
+
+1632
+01:01:12,079 --> 01:01:17,040
+apply voltage across the crystal and
+
+1633
+01:01:14,000 --> 01:01:19,200
+receive electrical signals from it. All
+
+1634
+01:01:17,040 --> 01:01:21,359
+of these components, the crystal, the
+
+1635
+01:01:19,200 --> 01:01:23,839
+matching layer, the damping material,
+
+1636
+01:01:21,359 --> 01:01:26,240
+and the insulator are enclosed in a
+
+1637
+01:01:23,839 --> 01:01:28,559
+metal or plastic housing, often with an
+
+1638
+01:01:26,240 --> 01:01:30,000
+ergonomic handle. Together, they form
+
+1639
+01:01:28,559 --> 01:01:31,839
+what we call a single element
+
+1640
+01:01:30,000 --> 01:01:34,079
+transducer.
+
+1641
+01:01:31,839 --> 01:01:37,200
+Mathematically, this crystal has a
+
+1642
+01:01:34,079 --> 01:01:39,520
+natural resonant frequency denoted as f0
+
+1643
+01:01:37,200 --> 01:01:41,839
+given by the formula of 0 equals the
+
+1644
+01:01:39,520 --> 01:01:44,240
+speed of sound in the crystal divided by
+
+1645
+01:01:41,839 --> 01:01:47,280
+twice its thickness.
+
+1646
+01:01:44,240 --> 01:01:49,920
+In other words, f0 equals crystal over
+
+1647
+01:01:47,280 --> 01:01:52,000
+2d.
+
+1648
+01:01:49,920 --> 01:01:53,920
+So the frequency of the ultrasound wave
+
+1649
+01:01:52,000 --> 01:01:55,839
+is determined by how fast sound travels
+
+1650
+01:01:53,920 --> 01:01:58,079
+in the crystal and how thick the crystal
+
+1651
+01:01:55,839 --> 01:01:59,839
+is. A thinner crystal produces higher
+
+1652
+01:01:58,079 --> 01:02:02,880
+frequency sound, while a thicker one
+
+1653
+01:01:59,839 --> 01:02:04,480
+produces lower frequency sound.
+
+1654
+01:02:02,880 --> 01:02:06,240
+This simple relationship between
+
+1655
+01:02:04,480 --> 01:02:08,400
+frequency, sound speed, and crystal
+
+1656
+01:02:06,240 --> 01:02:09,839
+thickness is fundamental to designing
+
+1657
+01:02:08,400 --> 01:02:12,400
+ultrasound probes for different
+
+1658
+01:02:09,839 --> 01:02:14,400
+applications. Highfrequency probes which
+
+1659
+01:02:12,400 --> 01:02:16,400
+give better resolution use very thin
+
+1660
+01:02:14,400 --> 01:02:19,760
+crystals while low frequency probes
+
+1661
+01:02:16,400 --> 01:02:22,160
+which penetrate deeper use thicker ones.
+
+1662
+01:02:19,760 --> 01:02:24,240
+So this diagram gives you the complete
+
+1663
+01:02:22,160 --> 01:02:26,400
+picture from physical design to
+
+1664
+01:02:24,240 --> 01:02:29,960
+mathematical principle of a single
+
+1665
+01:02:26,400 --> 01:02:29,960
+crystal transducer.
+
+1666
+01:02:31,599 --> 01:02:35,839
+Now once you put that single crystal
+
+1667
+01:02:33,520 --> 01:02:38,400
+transducer inside a handheld housing,
+
+1668
+01:02:35,839 --> 01:02:40,960
+you get what we commonly call a probe or
+
+1669
+01:02:38,400 --> 01:02:42,960
+a transducer head.
+
+1670
+01:02:40,960 --> 01:02:44,960
+You simply place this probe on top of
+
+1671
+01:02:42,960 --> 01:02:46,799
+the area you want to examine. It could
+
+1672
+01:02:44,960 --> 01:02:49,040
+be the chest, the abdomen, the breast,
+
+1673
+01:02:46,799 --> 01:02:51,200
+an arm, or any other part of the body
+
+1674
+01:02:49,040 --> 01:02:52,799
+depending on what you are imaging. These
+
+1675
+01:02:51,200 --> 01:02:56,079
+probes are used for a variety of
+
+1676
+01:02:52,799 --> 01:02:57,920
+diagnostic and therapeutic purposes.
+
+1677
+01:02:56,079 --> 01:02:59,599
+On this slide, you can see several
+
+1678
+01:02:57,920 --> 01:03:01,839
+examples of commercial ultrasound
+
+1679
+01:02:59,599 --> 01:03:03,680
+probes. Each one is designed for a
+
+1680
+01:03:01,839 --> 01:03:05,760
+different purpose. Some are curved for
+
+1681
+01:03:03,680 --> 01:03:08,640
+abdominal imaging, some are linear for
+
+1682
+01:03:05,760 --> 01:03:10,880
+vascular or muscularkeeletal scans, and
+
+1683
+01:03:08,640 --> 01:03:13,359
+others are very small for intra cavitary
+
+1684
+01:03:10,880 --> 01:03:14,880
+or opthalmic use.
+
+1685
+01:03:13,359 --> 01:03:16,880
+Now, I'd like to share a more
+
+1686
+01:03:14,880 --> 01:03:20,000
+forward-looking idea, something I've
+
+1687
+01:03:16,880 --> 01:03:22,160
+been thinking about for quite a while. I
+
+1688
+01:03:20,000 --> 01:03:24,640
+believe that in the future, our everyday
+
+1689
+01:03:22,160 --> 01:03:26,880
+devices, maybe even the iPhone, could
+
+1690
+01:03:24,640 --> 01:03:30,240
+incorporate this kind of po electric
+
+1691
+01:03:26,880 --> 01:03:32,240
+technology directly into the screen.
+
+1692
+01:03:30,240 --> 01:03:34,400
+Just imagine that the phone's surface
+
+1693
+01:03:32,240 --> 01:03:37,200
+could act as a two-dimensional acoustic
+
+1694
+01:03:34,400 --> 01:03:39,039
+transducer array. Each tiny pixel on the
+
+1695
+01:03:37,200 --> 01:03:41,440
+screen could both generate and receive
+
+1696
+01:03:39,039 --> 01:03:43,599
+ultrasound signals. That means you could
+
+1697
+01:03:41,440 --> 01:03:45,520
+in principle perform a quick body scan
+
+1698
+01:03:43,599 --> 01:03:48,319
+right at home, maybe before going to
+
+1699
+01:03:45,520 --> 01:03:50,400
+bed. You could place the phone on your
+
+1700
+01:03:48,319 --> 01:03:52,319
+skin and the device would automatically
+
+1701
+01:03:50,400 --> 01:03:54,880
+send out ultrasound waves, collect the
+
+1702
+01:03:52,319 --> 01:03:58,079
+echoes, and the AI software inside would
+
+1703
+01:03:54,880 --> 01:04:00,319
+analyze the data for you. It might tell
+
+1704
+01:03:58,079 --> 01:04:01,920
+you everything looks fine or you may
+
+1705
+01:04:00,319 --> 01:04:03,359
+want to check this area further. It
+
+1706
+01:04:01,920 --> 01:04:05,119
+could even show you which parts of the
+
+1707
+01:04:03,359 --> 01:04:06,640
+body were already scanned and which ones
+
+1708
+01:04:05,119 --> 01:04:09,119
+weren't.
+
+1709
+01:04:06,640 --> 01:04:11,039
+By combining PZO electric technology,
+
+1710
+01:04:09,119 --> 01:04:12,799
+machine learning and digital signal
+
+1711
+01:04:11,039 --> 01:04:14,720
+processing, we could one day make
+
+1712
+01:04:12,799 --> 01:04:16,799
+personal professional level imaging
+
+1713
+01:04:14,720 --> 01:04:18,559
+accessible to everyone right from their
+
+1714
+01:04:16,799 --> 01:04:20,319
+own phone.
+
+1715
+01:04:18,559 --> 01:04:22,640
+This might sound futuristic, but
+
+1716
+01:04:20,319 --> 01:04:24,640
+remember all great innovations start as
+
+1717
+01:04:22,640 --> 01:04:26,720
+ideas and this one could truly
+
+1718
+01:04:24,640 --> 01:04:29,039
+revolutionize preventive healthcare by
+
+1719
+01:04:26,720 --> 01:04:33,079
+bringing ultrasound diagnostics into the
+
+1720
+01:04:29,039 --> 01:04:33,079
+hands of ordinary people.
+
+1721
+01:04:34,319 --> 01:04:38,480
+So now let's imagine what the damping
+
+1722
+01:04:36,160 --> 01:04:41,599
+effect really means and more importantly
+
+1723
+01:04:38,480 --> 01:04:43,599
+why we need it in ultrasound imaging.
+
+1724
+01:04:41,599 --> 01:04:45,920
+Think about how an ultrasound pulse is
+
+1725
+01:04:43,599 --> 01:04:47,520
+sent into the body. Most of the time
+
+1726
+01:04:45,920 --> 01:04:49,680
+ultrasound imaging doesn't use a
+
+1727
+01:04:47,520 --> 01:04:52,319
+continuous wave. Instead, it operates in
+
+1728
+01:04:49,680 --> 01:04:54,240
+what we call a pulseed mode.
+
+1729
+01:04:52,319 --> 01:04:56,240
+You send out a pulse, it travels into
+
+1730
+01:04:54,240 --> 01:04:57,760
+the body, reflects from different tissue
+
+1731
+01:04:56,240 --> 01:05:00,400
+layers, and then comes back to the
+
+1732
+01:04:57,760 --> 01:05:02,480
+transducer as an echo.
+
+1733
+01:05:00,400 --> 01:05:04,240
+This pulse approach is extremely useful
+
+1734
+01:05:02,480 --> 01:05:06,640
+because it allows us to measure both
+
+1735
+01:05:04,240 --> 01:05:09,680
+depth and velocity. That is how deep a
+
+1736
+01:05:06,640 --> 01:05:11,359
+structure is and how fast it's moving.
+
+1737
+01:05:09,680 --> 01:05:13,520
+Now let's say you apply a short
+
+1738
+01:05:11,359 --> 01:05:15,599
+electrical signal to the PZO electric
+
+1739
+01:05:13,520 --> 01:05:17,920
+crystal. It vibrates for a moment and
+
+1740
+01:05:15,599 --> 01:05:20,799
+produces a burst of ultrasound waves.
+
+1741
+01:05:17,920 --> 01:05:22,720
+Then you stop the input signal.
+
+1742
+01:05:20,799 --> 01:05:24,559
+Ideally, the crystal should also stop
+
+1743
+01:05:22,720 --> 01:05:26,240
+vibrating immediately, just like
+
+1744
+01:05:24,559 --> 01:05:28,720
+striking a bell and having it stop
+
+1745
+01:05:26,240 --> 01:05:30,480
+ringing right away. But in reality, if
+
+1746
+01:05:28,720 --> 01:05:32,480
+there's no damping, the crystal keeps
+
+1747
+01:05:30,480 --> 01:05:34,799
+vibrating for quite a while after the
+
+1748
+01:05:32,480 --> 01:05:37,599
+excitation stops. Almost like a bouncing
+
+1749
+01:05:34,799 --> 01:05:39,760
+ball that never settles down. If there's
+
+1750
+01:05:37,599 --> 01:05:42,160
+no damping, no internal friction, the
+
+1751
+01:05:39,760 --> 01:05:44,079
+ball keeps bouncing up and down forever.
+
+1752
+01:05:42,160 --> 01:05:46,319
+That's exactly what would happen to your
+
+1753
+01:05:44,079 --> 01:05:49,200
+transducer. It would continue ringing,
+
+1754
+01:05:46,319 --> 01:05:50,880
+creating a long drawn out pulse. But we
+
+1755
+01:05:49,200 --> 01:05:53,119
+don't want that because a long pulse
+
+1756
+01:05:50,880 --> 01:05:56,319
+means poor resolution. The returning
+
+1757
+01:05:53,119 --> 01:05:58,319
+echoes overlap and you lose clarity. Now
+
+1758
+01:05:56,319 --> 01:06:00,880
+if the transducer is placed in a medium
+
+1759
+01:05:58,319 --> 01:06:03,280
+with some friction like air or fluid,
+
+1760
+01:06:00,880 --> 01:06:05,359
+those vibrations die out faster. The
+
+1761
+01:06:03,280 --> 01:06:07,680
+amplitude drops quickly and you get a
+
+1762
+01:06:05,359 --> 01:06:10,160
+much shorter pulse. This reduction in
+
+1763
+01:06:07,680 --> 01:06:12,079
+vibration amplitude is called damping.
+
+1764
+01:06:10,160 --> 01:06:13,760
+So when we apply a damping material
+
+1765
+01:06:12,079 --> 01:06:16,319
+behind the crystal, it acts like
+
+1766
+01:06:13,760 --> 01:06:18,240
+friction for the vibrating transducer.
+
+1767
+01:06:16,319 --> 01:06:20,480
+It absorbs the leftover energy,
+
+1768
+01:06:18,240 --> 01:06:21,839
+preventing it from ringing too long. In
+
+1769
+01:06:20,480 --> 01:06:23,920
+the time domain, that means the
+
+1770
+01:06:21,839 --> 01:06:26,240
+vibration decays faster, giving us a
+
+1771
+01:06:23,920 --> 01:06:28,480
+short, clean pulse. In the frequency
+
+1772
+01:06:26,240 --> 01:06:30,480
+domain, the pulse now covers a wider
+
+1773
+01:06:28,480 --> 01:06:32,559
+range of frequencies. In other words, a
+
+1774
+01:06:30,480 --> 01:06:35,359
+broader bandwidth with a lower amplitude
+
+1775
+01:06:32,559 --> 01:06:37,680
+peak. Without damping, you have a narrow
+
+1776
+01:06:35,359 --> 01:06:39,520
+and tall frequency spectrum. That's a
+
+1777
+01:06:37,680 --> 01:06:41,920
+very sharp resonance around the central
+
+1778
+01:06:39,520 --> 01:06:44,240
+frequency. With damping, the spectrum is
+
+1779
+01:06:41,920 --> 01:06:46,240
+broader and flatter. The amplitude is
+
+1780
+01:06:44,240 --> 01:06:48,640
+smaller, but the bandwidth is much
+
+1781
+01:06:46,240 --> 01:06:50,960
+wider, which is exactly what we want for
+
+1782
+01:06:48,640 --> 01:06:53,119
+imaging. We define this relationship
+
+1783
+01:06:50,960 --> 01:06:56,160
+using something called the Q factor or
+
+1784
+01:06:53,119 --> 01:06:58,160
+the quality factor. Mathematically Q= 2
+
+1785
+01:06:56,160 --> 01:07:02,319
+pi * the central frequency divided by
+
+1786
+01:06:58,160 --> 01:07:05,039
+the bandwidth. So Q= 2PF0 divided by BW.
+
+1787
+01:07:02,319 --> 01:07:07,760
+A high Q system means low damping, long
+
+1788
+01:07:05,039 --> 01:07:10,000
+vibration, narrow frequency range. A low
+
+1789
+01:07:07,760 --> 01:07:12,480
+Q system means strong damping, short
+
+1790
+01:07:10,000 --> 01:07:14,240
+vibration, wide frequency range. For
+
+1791
+01:07:12,480 --> 01:07:16,319
+diagnostic ultrasound, we actually
+
+1792
+01:07:14,240 --> 01:07:18,640
+prefer low Q systems because we want
+
+1793
+01:07:16,319 --> 01:07:20,960
+short pulses and broad bandwidths.
+
+1794
+01:07:18,640 --> 01:07:22,960
+Typically the Q factor is around one or
+
+1795
+01:07:20,960 --> 01:07:24,880
+two which provides an ideal balance
+
+1796
+01:07:22,960 --> 01:07:27,520
+between good axial resolution and
+
+1797
+01:07:24,880 --> 01:07:29,280
+manageable signal strength. So damping
+
+1798
+01:07:27,520 --> 01:07:31,599
+is what makes our ultrasound pulses
+
+1799
+01:07:29,280 --> 01:07:34,599
+short, our echo sharp and our images
+
+1800
+01:07:31,599 --> 01:07:34,599
+clear.
+
+1801
+01:07:34,960 --> 01:07:38,960
+Now that we understand damping, let's
+
+1802
+01:07:36,880 --> 01:07:41,839
+move on to another important component,
+
+1803
+01:07:38,960 --> 01:07:43,520
+the matching layer. You can see from
+
+1804
+01:07:41,839 --> 01:07:45,520
+this slide that the transducer structure
+
+1805
+01:07:43,520 --> 01:07:47,839
+includes this special layer right in
+
+1806
+01:07:45,520 --> 01:07:49,760
+front of the polectric crystal. And this
+
+1807
+01:07:47,839 --> 01:07:51,839
+layer is absolutely essential for
+
+1808
+01:07:49,760 --> 01:07:54,240
+getting ultrasound energy efficiently
+
+1809
+01:07:51,839 --> 01:07:56,160
+into the body. Let me start with a quick
+
+1810
+01:07:54,240 --> 01:07:58,000
+personal story.
+
+1811
+01:07:56,160 --> 01:07:59,920
+I once mentioned that I had a kidney
+
+1812
+01:07:58,000 --> 01:08:01,680
+stone and when you go for an ultrasound
+
+1813
+01:07:59,920 --> 01:08:04,799
+scan like that, you'll notice the doctor
+
+1814
+01:08:01,680 --> 01:08:06,880
+always applies a gel on the skin. The
+
+1815
+01:08:04,799 --> 01:08:09,760
+gel is completely harmless and painless.
+
+1816
+01:08:06,880 --> 01:08:11,599
+Though yes, it can feel a little messy.
+
+1817
+01:08:09,760 --> 01:08:13,119
+But that gel is doing something very
+
+1818
+01:08:11,599 --> 01:08:15,440
+important. Now, it's not just for
+
+1819
+01:08:13,119 --> 01:08:17,040
+comfort or for better contact. It
+
+1820
+01:08:15,440 --> 01:08:19,199
+actually helps solve what we call a
+
+1821
+01:08:17,040 --> 01:08:21,759
+matching problem.
+
+1822
+01:08:19,199 --> 01:08:23,759
+Here's why. The PZO electric material
+
+1823
+01:08:21,759 --> 01:08:26,239
+inside the transducer, usually something
+
+1824
+01:08:23,759 --> 01:08:28,080
+like PZT, that stands for lead zirconate
+
+1825
+01:08:26,239 --> 01:08:30,400
+titanet, has a very high acoustic
+
+1826
+01:08:28,080 --> 01:08:32,319
+impedance, which we call ZP or Z
+
+1827
+01:08:30,400 --> 01:08:34,239
+transducer.
+
+1828
+01:08:32,319 --> 01:08:36,239
+The human skin, on the other hand, has a
+
+1829
+01:08:34,239 --> 01:08:38,319
+much lower acoustic impedance, which we
+
+1830
+01:08:36,239 --> 01:08:40,159
+call Z skin. And between the two
+
+1831
+01:08:38,319 --> 01:08:42,080
+surfaces, there are often tiny air
+
+1832
+01:08:40,159 --> 01:08:44,640
+bubbles because the skin isn't perfectly
+
+1833
+01:08:42,080 --> 01:08:46,640
+smooth.
+
+1834
+01:08:44,640 --> 01:08:48,480
+Now, whenever two materials with very
+
+1835
+01:08:46,640 --> 01:08:50,400
+different acoustic impedances are in
+
+1836
+01:08:48,480 --> 01:08:52,080
+contact, most of the ultrasound energy
+
+1837
+01:08:50,400 --> 01:08:53,839
+reflects back instead of transmitting
+
+1838
+01:08:52,080 --> 01:08:56,080
+forward.
+
+1839
+01:08:53,839 --> 01:08:58,080
+So, the ultrasound wave generated by the
+
+1840
+01:08:56,080 --> 01:09:00,080
+crystal would mostly bounce back at the
+
+1841
+01:08:58,080 --> 01:09:02,799
+surface. Kind of like shouting into a
+
+1842
+01:09:00,080 --> 01:09:04,880
+canyon and hearing your echo. That's bad
+
+1843
+01:09:02,799 --> 01:09:08,319
+for imaging because very little energy
+
+1844
+01:09:04,880 --> 01:09:10,560
+actually enters the body.
+
+1845
+01:09:08,319 --> 01:09:12,799
+So, what do we do?
+
+1846
+01:09:10,560 --> 01:09:14,719
+We introduce a matching layer, a thin
+
+1847
+01:09:12,799 --> 01:09:17,120
+material layer whose acoustic impedance
+
+1848
+01:09:14,719 --> 01:09:18,880
+lies between those two values. This
+
+1849
+01:09:17,120 --> 01:09:20,799
+layer acts as a bridge, transferring
+
+1850
+01:09:18,880 --> 01:09:23,359
+acoustic energy more efficiently from
+
+1851
+01:09:20,799 --> 01:09:26,640
+the transducer into the skin. Here's how
+
+1852
+01:09:23,359 --> 01:09:28,480
+it works. The vibration from the crystal
+
+1853
+01:09:26,640 --> 01:09:30,000
+first transfers its energy into the
+
+1854
+01:09:28,480 --> 01:09:32,640
+matching layer and then from the
+
+1855
+01:09:30,000 --> 01:09:34,799
+matching layer into the skin.
+
+1856
+01:09:32,640 --> 01:09:36,880
+So instead of one big impedance jump, we
+
+1857
+01:09:34,799 --> 01:09:38,640
+now have two smaller steps from crystal
+
+1858
+01:09:36,880 --> 01:09:40,560
+to matching layer and from matching
+
+1859
+01:09:38,640 --> 01:09:42,400
+layer to skin.
+
+1860
+01:09:40,560 --> 01:09:44,319
+Mathematically, the amount of energy
+
+1861
+01:09:42,400 --> 01:09:46,480
+that gets transmitted from one medium
+
+1862
+01:09:44,319 --> 01:09:48,880
+into another depends on their respective
+
+1863
+01:09:46,480 --> 01:09:50,799
+acoustic impedances. The transmitted
+
+1864
+01:09:48,880 --> 01:09:52,480
+intensity between two media is
+
+1865
+01:09:50,799 --> 01:09:54,560
+proportional to the product of their
+
+1866
+01:09:52,480 --> 01:09:56,560
+impedances divided by the square of
+
+1867
+01:09:54,560 --> 01:09:58,640
+their sum that's shown in the equation
+
+1868
+01:09:56,560 --> 01:10:00,719
+on the slide.
+
+1869
+01:09:58,640 --> 01:10:02,320
+To optimize this transmission, we choose
+
+1870
+01:10:00,719 --> 01:10:04,560
+the impedance of the matching layer
+
+1871
+01:10:02,320 --> 01:10:06,719
+carefully. The ideal acoustic impedance
+
+1872
+01:10:04,560 --> 01:10:08,239
+of the matching layer, which we call ZM,
+
+1873
+01:10:06,719 --> 01:10:10,719
+is the geometric mean of the two
+
+1874
+01:10:08,239 --> 01:10:12,800
+adjacent impedances.
+
+1875
+01:10:10,719 --> 01:10:15,920
+So, we say ZM equals the square root of
+
+1876
+01:10:12,800 --> 01:10:18,400
+Z transducer multiplied by Zkin. Again,
+
+1877
+01:10:15,920 --> 01:10:21,199
+that's ZM equals the square root of Z
+
+1878
+01:10:18,400 --> 01:10:23,280
+transducer time Z skin.
+
+1879
+01:10:21,199 --> 01:10:25,600
+This relationship minimizes reflection
+
+1880
+01:10:23,280 --> 01:10:27,600
+and maximizes transmission, allowing
+
+1881
+01:10:25,600 --> 01:10:29,840
+most of the ultrasound energy to enter
+
+1882
+01:10:27,600 --> 01:10:32,239
+the body and come back to the transducer
+
+1883
+01:10:29,840 --> 01:10:34,239
+as echoes. That's why every ultrasound
+
+1884
+01:10:32,239 --> 01:10:36,320
+probe has a matching layer built in. And
+
+1885
+01:10:34,239 --> 01:10:38,159
+that's also why we always use gel on the
+
+1886
+01:10:36,320 --> 01:10:40,000
+skin. The gel acts as an acoustic
+
+1887
+01:10:38,159 --> 01:10:42,080
+coupling medium that functions as part
+
+1888
+01:10:40,000 --> 01:10:44,080
+of the matching layer system. And by the
+
+1889
+01:10:42,080 --> 01:10:46,159
+way, as you can see on the slide, this
+
+1890
+01:10:44,080 --> 01:10:48,480
+topic might appear in your homework, so
+
+1891
+01:10:46,159 --> 01:10:50,400
+make sure you remember it. To summarize,
+
+1892
+01:10:48,480 --> 01:10:52,159
+without the matching layer, most of the
+
+1893
+01:10:50,400 --> 01:10:54,480
+ultrasound energy would just reflect at
+
+1894
+01:10:52,159 --> 01:10:56,400
+the skin surface. With the matching
+
+1895
+01:10:54,480 --> 01:10:58,480
+layer and with the gel acting as a
+
+1896
+01:10:56,400 --> 01:11:00,800
+coupling medium, the energy is
+
+1897
+01:10:58,480 --> 01:11:02,800
+transmitted efficiently first from the
+
+1898
+01:11:00,800 --> 01:11:05,360
+crystal to the gel, then from the gel to
+
+1899
+01:11:02,800 --> 01:11:07,199
+the body. This ensures stronger echoes,
+
+1900
+01:11:05,360 --> 01:11:10,679
+clearer signals, and higher quality
+
+1901
+01:11:07,199 --> 01:11:10,679
+ultrasound images.
+
+1902
+01:11:11,040 --> 01:11:14,400
+Now, let's take a closer look at
+
+1903
+01:11:12,560 --> 01:11:16,960
+something very familiar in every
+
+1904
+01:11:14,400 --> 01:11:18,560
+ultrasound exam, the ultrasound gel.
+
+1905
+01:11:16,960 --> 01:11:20,239
+You've probably seen this many times
+
+1906
+01:11:18,560 --> 01:11:22,239
+during a scan, whether it's for the
+
+1907
+01:11:20,239 --> 01:11:23,920
+abdomen, the heart, or during pregnancy
+
+1908
+01:11:22,239 --> 01:11:25,920
+imaging.
+
+1909
+01:11:23,920 --> 01:11:27,760
+The synenographer or the doctor squeezes
+
+1910
+01:11:25,920 --> 01:11:29,440
+out some gel and spreads it on the
+
+1911
+01:11:27,760 --> 01:11:32,000
+patient's skin before placing the
+
+1912
+01:11:29,440 --> 01:11:34,080
+transducer on top. It may seem simple,
+
+1913
+01:11:32,000 --> 01:11:36,800
+but it actually plays a crucial physical
+
+1914
+01:11:34,080 --> 01:11:38,719
+role in ultrasound imaging.
+
+1915
+01:11:36,800 --> 01:11:40,719
+Remember, we just discussed the matching
+
+1916
+01:11:38,719 --> 01:11:42,480
+layer, that thin layer designed to help
+
+1917
+01:11:40,719 --> 01:11:45,679
+ultrasound energy travel efficiently
+
+1918
+01:11:42,480 --> 01:11:47,760
+from the transducer into the body.
+
+1919
+01:11:45,679 --> 01:11:50,239
+Well, the ultrasound gel is part of that
+
+1920
+01:11:47,760 --> 01:11:52,080
+same idea. It acts as an acoustic
+
+1921
+01:11:50,239 --> 01:11:54,159
+coupling medium, helping to eliminate
+
+1922
+01:11:52,080 --> 01:11:57,040
+the air gap between the transducer and
+
+1923
+01:11:54,159 --> 01:11:58,880
+the skin. Without the gel, there would
+
+1924
+01:11:57,040 --> 01:12:00,880
+be a very thin layer of air between the
+
+1925
+01:11:58,880 --> 01:12:02,960
+probe and the body surface. And that's a
+
+1926
+01:12:00,880 --> 01:12:05,360
+serious problem.
+
+1927
+01:12:02,960 --> 01:12:07,360
+Why? Because air has an extremely low
+
+1928
+01:12:05,360 --> 01:12:09,679
+acoustic impedance, much lower than
+
+1929
+01:12:07,360 --> 01:12:12,080
+either the PZO electric crystal or human
+
+1930
+01:12:09,679 --> 01:12:14,239
+tissue. When an ultrasound wave tries to
+
+1931
+01:12:12,080 --> 01:12:16,719
+go from the crystal into air, almost all
+
+1932
+01:12:14,239 --> 01:12:19,360
+of the energy reflects.
+
+1933
+01:12:16,719 --> 01:12:21,360
+In fact, more than 99% of the signal
+
+1934
+01:12:19,360 --> 01:12:23,120
+would be lost.
+
+1935
+01:12:21,360 --> 01:12:25,040
+So, the ultrasound beam would never
+
+1936
+01:12:23,120 --> 01:12:28,320
+enter the body. You'd see nothing but
+
+1937
+01:12:25,040 --> 01:12:30,560
+noise on the screen. The gel solves this
+
+1938
+01:12:28,320 --> 01:12:32,320
+problem beautifully. It has an acoustic
+
+1939
+01:12:30,560 --> 01:12:34,320
+impedance value that lies roughly
+
+1940
+01:12:32,320 --> 01:12:36,000
+between the impedance of the transducer
+
+1941
+01:12:34,320 --> 01:12:39,199
+surface and that of the skin, just like
+
+1942
+01:12:36,000 --> 01:12:41,440
+a matching layer. When the gel fills in
+
+1943
+01:12:39,199 --> 01:12:43,199
+the microscopic irregularities on the
+
+1944
+01:12:41,440 --> 01:12:45,520
+skin and removes any trapped air
+
+1945
+01:12:43,199 --> 01:12:47,199
+bubbles, it creates a smooth continuous
+
+1946
+01:12:45,520 --> 01:12:49,280
+path for the sound waves to travel
+
+1947
+01:12:47,199 --> 01:12:51,120
+through. That means more ultrasound
+
+1948
+01:12:49,280 --> 01:12:53,280
+energy gets transmitted into the body
+
+1949
+01:12:51,120 --> 01:12:54,960
+and stronger echoes come back to the
+
+1950
+01:12:53,280 --> 01:12:56,880
+transducer.
+
+1951
+01:12:54,960 --> 01:12:59,360
+So in simple terms, the gel makes sure
+
+1952
+01:12:56,880 --> 01:13:01,520
+there's no air, only sound transmission.
+
+1953
+01:12:59,360 --> 01:13:03,440
+It improves image quality dramatically,
+
+1954
+01:13:01,520 --> 01:13:05,440
+ensuring clear boundaries and accurate
+
+1955
+01:13:03,440 --> 01:13:07,600
+echo measurements.
+
+1956
+01:13:05,440 --> 01:13:09,360
+It also helps the probe glide smoothly
+
+1957
+01:13:07,600 --> 01:13:12,560
+across the skin, which is important for
+
+1958
+01:13:09,360 --> 01:13:14,400
+maintaining good contact during a scan.
+
+1959
+01:13:12,560 --> 01:13:16,400
+And practically speaking, the gel is
+
+1960
+01:13:14,400 --> 01:13:18,960
+made of a water-based polymer that's
+
+1961
+01:13:16,400 --> 01:13:21,440
+safe, non-toxic, and easily cleaned off
+
+1962
+01:13:18,960 --> 01:13:23,280
+after the exam. Some gels are even
+
+1963
+01:13:21,440 --> 01:13:25,280
+warmed up before use to make the patient
+
+1964
+01:13:23,280 --> 01:13:26,960
+more comfortable.
+
+1965
+01:13:25,280 --> 01:13:29,199
+But whether it's warm or cold, the gel
+
+1966
+01:13:26,960 --> 01:13:30,719
+is essential. Without it, even the best
+
+1967
+01:13:29,199 --> 01:13:32,960
+transducer couldn't produce a good
+
+1968
+01:13:30,719 --> 01:13:35,440
+image. So the next time you see that
+
+1969
+01:13:32,960 --> 01:13:37,199
+ultrasound gel being
+
+1970
+01:13:35,440 --> 01:13:38,960
+applied, remember it's not just for
+
+1971
+01:13:37,199 --> 01:13:41,360
+comfort. It's a critical part of the
+
+1972
+01:13:38,960 --> 01:13:43,120
+acoustic system. It's what allows the
+
+1973
+01:13:41,360 --> 01:13:45,280
+ultrasound energy to move efficiently
+
+1974
+01:13:43,120 --> 01:13:46,960
+from the transducer through the skin and
+
+1975
+01:13:45,280 --> 01:13:51,159
+into the body, giving us clear,
+
+1976
+01:13:46,960 --> 01:13:51,159
+highquality medical images.
+
+1977
+01:13:52,719 --> 01:13:56,400
+So this is your homework. And here we
+
+1978
+01:13:54,560 --> 01:13:58,880
+start to look at what modern ultrasound
+
+1979
+01:13:56,400 --> 01:14:00,960
+transducers actually look like inside.
+
+1980
+01:13:58,880 --> 01:14:03,040
+In most modern ultrasound systems, the
+
+1981
+01:14:00,960 --> 01:14:04,719
+transducers are not just a single pole
+
+1982
+01:14:03,040 --> 01:14:06,320
+electric element like we saw earlier.
+
+1983
+01:14:04,719 --> 01:14:07,840
+They're made up of arrays of elements,
+
+1984
+01:14:06,320 --> 01:14:09,679
+either one-dimensional or
+
+1985
+01:14:07,840 --> 01:14:12,159
+two-dimensional.
+
+1986
+01:14:09,679 --> 01:14:14,239
+The image you see here is a schematic of
+
+1987
+01:14:12,159 --> 01:14:16,239
+a one-dimensional linear array
+
+1988
+01:14:14,239 --> 01:14:19,199
+transducer, which is very common in
+
+1989
+01:14:16,239 --> 01:14:21,840
+medical ultrasound imaging.
+
+1990
+01:14:19,199 --> 01:14:24,320
+You can see that each PZO element is one
+
+1991
+01:14:21,840 --> 01:14:26,320
+tiny rectangular piece of PZO electric
+
+1992
+01:14:24,320 --> 01:14:28,159
+material. Beneath these elements, we
+
+1993
+01:14:26,320 --> 01:14:30,719
+have the electrodes which are used to
+
+1994
+01:14:28,159 --> 01:14:32,480
+apply oscillating sinosoidal electrical
+
+1995
+01:14:30,719 --> 01:14:34,880
+signals.
+
+1996
+01:14:32,480 --> 01:14:36,719
+These electrical signals cause the PZO
+
+1997
+01:14:34,880 --> 01:14:38,960
+elements to vibrate and generate
+
+1998
+01:14:36,719 --> 01:14:40,880
+ultrasound waves. And when echoes return
+
+1999
+01:14:38,960 --> 01:14:42,800
+from the body, those same elements work
+
+2000
+01:14:40,880 --> 01:14:47,360
+in reverse, converting mechanical
+
+2001
+01:14:42,800 --> 01:14:49,600
+vibration back into electrical signals.
+
+2002
+01:14:47,360 --> 01:14:51,840
+Now, above these poelectric elements,
+
+2003
+01:14:49,600 --> 01:14:53,760
+you can see matching layers. Sometimes
+
+2004
+01:14:51,840 --> 01:14:55,760
+there are two, a first and a second
+
+2005
+01:14:53,760 --> 01:14:57,840
+matching layer. These are just like what
+
+2006
+01:14:55,760 --> 01:14:59,679
+we discussed earlier. They help transfer
+
+2007
+01:14:57,840 --> 01:15:01,600
+ultrasound energy more efficiently into
+
+2008
+01:14:59,679 --> 01:15:03,520
+the body by gradually matching the
+
+2009
+01:15:01,600 --> 01:15:05,520
+acoustic impedance between the crystal
+
+2010
+01:15:03,520 --> 01:15:07,360
+and the skin.
+
+2011
+01:15:05,520 --> 01:15:09,120
+The entire system is connected to a
+
+2012
+01:15:07,360 --> 01:15:11,440
+custom-designed flexible circuit that
+
+2013
+01:15:09,120 --> 01:15:13,280
+allows precise timing and control for
+
+2014
+01:15:11,440 --> 01:15:16,000
+each element, enabling electronic
+
+2015
+01:15:13,280 --> 01:15:18,320
+focusing and beam steering.
+
+2016
+01:15:16,000 --> 01:15:20,800
+Behind the PZO elements is the backing
+
+2017
+01:15:18,320 --> 01:15:23,120
+layer which provides damping. It absorbs
+
+2018
+01:15:20,800 --> 01:15:25,840
+unwanted vibrations so that each pulse
+
+2019
+01:15:23,120 --> 01:15:28,080
+is short and clean. This improves axial
+
+2020
+01:15:25,840 --> 01:15:29,840
+resolution by preventing long ringing of
+
+2021
+01:15:28,080 --> 01:15:31,840
+the crystal.
+
+2022
+01:15:29,840 --> 01:15:33,840
+So when everything is working together,
+
+2023
+01:15:31,840 --> 01:15:35,440
+the electrode, the matching layers, the
+
+2024
+01:15:33,840 --> 01:15:37,199
+gel and the backing layer, the
+
+2025
+01:15:35,440 --> 01:15:39,360
+ultrasound energy is efficiently
+
+2026
+01:15:37,199 --> 01:15:42,239
+transmitted into the body and the echoes
+
+2027
+01:15:39,360 --> 01:15:43,840
+return through the same path. In
+
+2028
+01:15:42,239 --> 01:15:45,520
+essence, you have a system that is
+
+2029
+01:15:43,840 --> 01:15:47,840
+symmetrically optimized for both
+
+2030
+01:15:45,520 --> 01:15:49,520
+transmission and reception. The signal
+
+2031
+01:15:47,840 --> 01:15:51,120
+path forward is carefully matched and
+
+2032
+01:15:49,520 --> 01:15:52,960
+the reverse path follows the same
+
+2033
+01:15:51,120 --> 01:15:54,960
+principle leading to a higher signal to
+
+2034
+01:15:52,960 --> 01:15:57,960
+noise ratio and better overall image
+
+2035
+01:15:54,960 --> 01:15:57,960
+quality.
+
+2036
+01:15:59,440 --> 01:16:03,280
+Now let's talk about the trade-off
+
+2037
+01:16:01,040 --> 01:16:05,520
+between resolution and penetration in
+
+2038
+01:16:03,280 --> 01:16:07,199
+ultrasound imaging. This is a very
+
+2039
+01:16:05,520 --> 01:16:08,719
+important concept that determines how
+
+2040
+01:16:07,199 --> 01:16:11,360
+clearly you can see structures at
+
+2041
+01:16:08,719 --> 01:16:13,360
+different depths inside the body.
+
+2042
+01:16:11,360 --> 01:16:14,880
+If you want to get higher resolution,
+
+2043
+01:16:13,360 --> 01:16:17,760
+generally you need to increase the
+
+2044
+01:16:14,880 --> 01:16:19,440
+frequency of your ultrasound wave.
+
+2045
+01:16:17,760 --> 01:16:21,120
+Higher frequency means a shorter
+
+2046
+01:16:19,440 --> 01:16:23,040
+wavelength and that allows you to
+
+2047
+01:16:21,120 --> 01:16:25,280
+distinguish smaller structures. That's
+
+2048
+01:16:23,040 --> 01:16:27,679
+why highfrequency ultrasound is used for
+
+2049
+01:16:25,280 --> 01:16:29,600
+imaging shallow organs like the thyroid
+
+2050
+01:16:27,679 --> 01:16:31,199
+or the eye.
+
+2051
+01:16:29,600 --> 01:16:33,520
+However, there's a price you pay for
+
+2052
+01:16:31,199 --> 01:16:35,520
+this. Higher frequency sound waves are
+
+2053
+01:16:33,520 --> 01:16:37,360
+attenuated much faster as they travel
+
+2054
+01:16:35,520 --> 01:16:39,679
+through tissue. Remember that the
+
+2055
+01:16:37,360 --> 01:16:42,000
+attenuation coefficient alpha is
+
+2056
+01:16:39,679 --> 01:16:45,360
+proportional to frequency. We can say
+
+2057
+01:16:42,000 --> 01:16:47,840
+alpha is proportional to f.
+
+2058
+01:16:45,360 --> 01:16:49,840
+So as frequency increases, attenuation
+
+2059
+01:16:47,840 --> 01:16:52,159
+also increases. That means the
+
+2060
+01:16:49,840 --> 01:16:54,320
+ultrasound wave loses energy faster and
+
+2061
+01:16:52,159 --> 01:16:57,360
+it can't penetrate as deeply into the
+
+2062
+01:16:54,320 --> 01:16:59,760
+body. In contrast, a lower frequency
+
+2063
+01:16:57,360 --> 01:17:02,159
+transducer can send energy much deeper,
+
+2064
+01:16:59,760 --> 01:17:05,120
+but it comes with lower resolution. For
+
+2065
+01:17:02,159 --> 01:17:07,040
+example, a 12 MHz transducer provides
+
+2066
+01:17:05,120 --> 01:17:10,480
+excellent resolution but can't reach
+
+2067
+01:17:07,040 --> 01:17:13,120
+very deep, maybe just a few cm.
+
+2068
+01:17:10,480 --> 01:17:14,960
+On the other hand, a 3 MHz transducer
+
+2069
+01:17:13,120 --> 01:17:17,520
+can reach much deeper into the abdomen,
+
+2070
+01:17:14,960 --> 01:17:19,840
+but the image will be coarser.
+
+2071
+01:17:17,520 --> 01:17:22,159
+So, in practice, we always balance these
+
+2072
+01:17:19,840 --> 01:17:23,760
+two factors. You choose your transducer
+
+2073
+01:17:22,159 --> 01:17:25,920
+frequency based on the target you want
+
+2074
+01:17:23,760 --> 01:17:27,840
+to image. High frequency for fine detail
+
+2075
+01:17:25,920 --> 01:17:30,000
+near the surface and low frequency for
+
+2076
+01:17:27,840 --> 01:17:31,760
+deeper penetration. This is one of the
+
+2077
+01:17:30,000 --> 01:17:35,320
+most fundamental trade-offs in
+
+2078
+01:17:31,760 --> 01:17:35,320
+ultrasound imaging.
+
+2079
+01:17:36,719 --> 01:17:40,560
+Now, let's move on to beam geometry,
+
+2080
+01:17:38,719 --> 01:17:42,800
+which gives us a deeper understanding of
+
+2081
+01:17:40,560 --> 01:17:44,880
+how ultrasound beams behave as they
+
+2082
+01:17:42,800 --> 01:17:46,880
+propagate through space. This figure
+
+2083
+01:17:44,880 --> 01:17:50,320
+from your textbook shows the beam shape
+
+2084
+01:17:46,880 --> 01:17:52,560
+produced by a single crystal transducer.
+
+2085
+01:17:50,320 --> 01:17:56,159
+When the transducer vibrates, it sends
+
+2086
+01:17:52,560 --> 01:17:58,400
+energy downward in a conicle shape. The
+
+2087
+01:17:56,159 --> 01:18:00,320
+region closest to the transducer is
+
+2088
+01:17:58,400 --> 01:18:02,000
+called the near field. And beyond a
+
+2089
+01:18:00,320 --> 01:18:04,320
+certain point called the near field
+
+2090
+01:18:02,000 --> 01:18:07,600
+boundary, the beam starts to diverge
+
+2091
+01:18:04,320 --> 01:18:09,520
+entering what we call the far field. In
+
+2092
+01:18:07,600 --> 01:18:11,199
+the near field, the beam diameter is
+
+2093
+01:18:09,520 --> 01:18:13,199
+roughly the same as the transducer's
+
+2094
+01:18:11,199 --> 01:18:15,679
+aperture. So if the transducer has a
+
+2095
+01:18:13,199 --> 01:18:18,960
+diameter a, the beam width is about the
+
+2096
+01:18:15,679 --> 01:18:20,800
+same. But after the near field boundary,
+
+2097
+01:18:18,960 --> 01:18:23,520
+the beam starts to spread out or
+
+2098
+01:18:20,800 --> 01:18:25,440
+diverge. This divergence angle which we
+
+2099
+01:18:23,520 --> 01:18:27,600
+call theta is determined by the
+
+2100
+01:18:25,440 --> 01:18:30,159
+wavelength lambda and the transducer
+
+2101
+01:18:27,600 --> 01:18:32,000
+aperture A. It's given approximately by
+
+2102
+01:18:30,159 --> 01:18:35,360
+the equation
+
+2103
+01:18:32,000 --> 01:18:38,480
+theta equals ar sign of 0.61 * lambda
+
+2104
+01:18:35,360 --> 01:18:40,239
+divided by A. This relationship shows
+
+2105
+01:18:38,480 --> 01:18:42,560
+that smaller apertures or larger
+
+2106
+01:18:40,239 --> 01:18:45,199
+wavelengths give wider beams meaning
+
+2107
+01:18:42,560 --> 01:18:47,600
+poorer lateral resolution.
+
+2108
+01:18:45,199 --> 01:18:50,320
+Now within any cross-section of the beam
+
+2109
+01:18:47,600 --> 01:18:52,080
+the intensity isn't uniform along the
+
+2110
+01:18:50,320 --> 01:18:53,840
+central axis. the signal is strongest
+
+2111
+01:18:52,080 --> 01:18:56,239
+and as you move away to the sides, the
+
+2112
+01:18:53,840 --> 01:18:58,320
+intensity decreases.
+
+2113
+01:18:56,239 --> 01:19:00,480
+The intensity profile across the beam
+
+2114
+01:18:58,320 --> 01:19:02,239
+can often be approximated by a Gaussian
+
+2115
+01:19:00,480 --> 01:19:05,440
+distribution, meaning it has a peak at
+
+2116
+01:19:02,239 --> 01:19:07,440
+the center and falls off symmetrically.
+
+2117
+01:19:05,440 --> 01:19:09,199
+To describe this beam width, we use a
+
+2118
+01:19:07,440 --> 01:19:12,000
+quantity called full width at half
+
+2119
+01:19:09,199 --> 01:19:13,280
+maximum or FWM, which literally means
+
+2120
+01:19:12,000 --> 01:19:15,120
+the width of the beam where the
+
+2121
+01:19:13,280 --> 01:19:18,960
+intensity drops to half of its peak
+
+2122
+01:19:15,120 --> 01:19:22,640
+value. For a Gaussian profile, the FWHM
+
+2123
+01:19:18,960 --> 01:19:24,480
+is approximately 2.36* sigma where sigma
+
+2124
+01:19:22,640 --> 01:19:28,480
+is the standard deviation of the
+
+2125
+01:19:24,480 --> 01:19:31,920
+Gaussian. Mathematically, we write it as
+
+2126
+01:19:28,480 --> 01:19:34,640
+FWHM= 2 * the square roo<unk> of 2 * the
+
+2127
+01:19:31,920 --> 01:19:38,560
+natural log of 2 multiplied by sigma
+
+2128
+01:19:34,640 --> 01:19:40,000
+approximately equal to 2.36 sigma.
+
+2129
+01:19:38,560 --> 01:19:41,920
+This measurement gives us a good
+
+2130
+01:19:40,000 --> 01:19:44,400
+estimate of the lateral resolution of
+
+2131
+01:19:41,920 --> 01:19:46,719
+the ultrasound beam. The narrower the
+
+2132
+01:19:44,400 --> 01:19:48,480
+beam, the better the lateral resolution,
+
+2133
+01:19:46,719 --> 01:19:50,880
+meaning you can distinguish two nearby
+
+2134
+01:19:48,480 --> 01:19:53,520
+structures more clearly.
+
+2135
+01:19:50,880 --> 01:19:55,920
+So, beam geometry, frequency, aperture
+
+2136
+01:19:53,520 --> 01:19:58,159
+size, and attenuation. All these factors
+
+2137
+01:19:55,920 --> 01:20:02,520
+together define how sharp and how deep
+
+2138
+01:19:58,159 --> 01:20:02,520
+your ultrasound image will be.
+
+2139
+01:20:03,760 --> 01:20:08,239
+Now, this slide explains the concept of
+
+2140
+01:20:06,080 --> 01:20:10,159
+lateral resolution, sometimes called
+
+2141
+01:20:08,239 --> 01:20:12,080
+crossbeam resolution, and it's
+
+2142
+01:20:10,159 --> 01:20:13,840
+illustrated again by a figure from your
+
+2143
+01:20:12,080 --> 01:20:15,440
+textbook.
+
+2144
+01:20:13,840 --> 01:20:17,440
+Remember earlier we talked about the
+
+2145
+01:20:15,440 --> 01:20:19,440
+beam profile and how it has a certain
+
+2146
+01:20:17,440 --> 01:20:24,000
+width which we describe using the full
+
+2147
+01:20:19,440 --> 01:20:26,000
+width at half maximum or FWHM.
+
+2148
+01:20:24,000 --> 01:20:27,520
+Ideally we want this width to be as
+
+2149
+01:20:26,000 --> 01:20:29,280
+small as possible because that
+
+2150
+01:20:27,520 --> 01:20:32,640
+determines how well we can distinguish
+
+2151
+01:20:29,280 --> 01:20:34,560
+two objects that are side by side. If
+
+2152
+01:20:32,640 --> 01:20:36,560
+two scatterers in the body, say two
+
+2153
+01:20:34,560 --> 01:20:38,320
+small reflecting points are separated by
+
+2154
+01:20:36,560 --> 01:20:40,159
+a distance smaller than the beam width,
+
+2155
+01:20:38,320 --> 01:20:42,239
+their echoes will overlap when received
+
+2156
+01:20:40,159 --> 01:20:44,320
+by the transducer.
+
+2157
+01:20:42,239 --> 01:20:46,320
+When that happens, the signals blend and
+
+2158
+01:20:44,320 --> 01:20:48,080
+we can't tell them apart. That's what
+
+2159
+01:20:46,320 --> 01:20:50,239
+you see on the right side of the figure.
+
+2160
+01:20:48,080 --> 01:20:53,520
+The two curves merge into one and the
+
+2161
+01:20:50,239 --> 01:20:55,440
+system records them as a single echo.
+
+2162
+01:20:53,520 --> 01:20:57,280
+On the other hand, if the two scatterers
+
+2163
+01:20:55,440 --> 01:20:59,280
+are separated by a distance greater than
+
+2164
+01:20:57,280 --> 01:21:01,280
+the beam width, specifically greater
+
+2165
+01:20:59,280 --> 01:21:02,960
+than the full width at half maximum,
+
+2166
+01:21:01,280 --> 01:21:06,400
+then the two echoes appear as two
+
+2167
+01:21:02,960 --> 01:21:09,600
+distinct peaks. That's what we want.
+
+2168
+01:21:06,400 --> 01:21:11,120
+So the smaller the FWHM, the better your
+
+2169
+01:21:09,600 --> 01:21:14,320
+lateral resolution because you can
+
+2170
+01:21:11,120 --> 01:21:16,640
+separate two adjacent points in space.
+
+2171
+01:21:14,320 --> 01:21:18,719
+So in summary, lateral resolution is
+
+2172
+01:21:16,640 --> 01:21:20,480
+determined primarily by the beam width.
+
+2173
+01:21:18,719 --> 01:21:23,280
+Narrow beams resolve closely spaced
+
+2174
+01:21:20,480 --> 01:21:25,440
+objects. Wide beams cause overlap. This
+
+2175
+01:21:23,280 --> 01:21:27,600
+concept applies directly to your image
+
+2176
+01:21:25,440 --> 01:21:31,960
+sharpness, particularly in the direction
+
+2177
+01:21:27,600 --> 01:21:31,960
+perpendicular to the beam path.
+
+2178
+01:21:33,120 --> 01:21:37,040
+Now let's move on to ultrasound focusing
+
+2179
+01:21:35,280 --> 01:21:39,360
+which is another crucial concept for
+
+2180
+01:21:37,040 --> 01:21:41,120
+improving lateral resolution. You can
+
+2181
+01:21:39,360 --> 01:21:43,760
+think of this just like focusing light
+
+2182
+01:21:41,120 --> 01:21:45,760
+through a lens in photography.
+
+2183
+01:21:43,760 --> 01:21:47,679
+The figure here from your textbook shows
+
+2184
+01:21:45,760 --> 01:21:49,440
+three cases. Strong focusing, weak
+
+2185
+01:21:47,679 --> 01:21:52,719
+focusing, and a reference to how the
+
+2186
+01:21:49,440 --> 01:21:55,360
+focal plane and focal distance change.
+
+2187
+01:21:52,719 --> 01:21:57,600
+If we have a single crystal transducer,
+
+2188
+01:21:55,360 --> 01:21:59,600
+often shaped like a disc, it can have a
+
+2189
+01:21:57,600 --> 01:22:01,840
+concave surface, meaning it curves
+
+2190
+01:21:59,600 --> 01:22:03,920
+inward. The curvature acts like an
+
+2191
+01:22:01,840 --> 01:22:07,199
+optical lens, helping to converge the
+
+2192
+01:22:03,920 --> 01:22:09,199
+ultrasound beam to a smaller focal spot.
+
+2193
+01:22:07,199 --> 01:22:11,199
+When the curvature is stronger, the beam
+
+2194
+01:22:09,199 --> 01:22:14,480
+converges faster, giving us a shorter
+
+2195
+01:22:11,199 --> 01:22:16,639
+focal distance and a tighter focus.
+
+2196
+01:22:14,480 --> 01:22:18,400
+That means at that focal point, you have
+
+2197
+01:22:16,639 --> 01:22:20,239
+very high resolution. The beam is
+
+2198
+01:22:18,400 --> 01:22:22,639
+extremely narrow and you can separate
+
+2199
+01:22:20,239 --> 01:22:24,480
+fine structures clearly. However, beyond
+
+2200
+01:22:22,639 --> 01:22:26,480
+that focal plane, the beam quickly
+
+2201
+01:22:24,480 --> 01:22:28,560
+diverges again and the resolution
+
+2202
+01:22:26,480 --> 01:22:30,400
+deteriorates.
+
+2203
+01:22:28,560 --> 01:22:32,880
+If the transducer surface is only
+
+2204
+01:22:30,400 --> 01:22:34,800
+slightly curved, the focusing is weaker.
+
+2205
+01:22:32,880 --> 01:22:38,480
+The focal distance becomes longer and
+
+2206
+01:22:34,800 --> 01:22:40,719
+the beam stays more uniform downstream.
+
+2207
+01:22:38,480 --> 01:22:42,639
+The resolution isn't as sharp at the
+
+2208
+01:22:40,719 --> 01:22:44,880
+focal point, but it's more consistent
+
+2209
+01:22:42,639 --> 01:22:46,719
+along the depth of field. So, there's
+
+2210
+01:22:44,880 --> 01:22:48,560
+always a trade-off. Strong focusing
+
+2211
+01:22:46,719 --> 01:22:50,400
+gives you very high resolution over a
+
+2212
+01:22:48,560 --> 01:22:52,400
+small region, while weak focusing gives
+
+2213
+01:22:50,400 --> 01:22:53,920
+you moderate resolution over a wider
+
+2214
+01:22:52,400 --> 01:22:56,480
+range.
+
+2215
+01:22:53,920 --> 01:22:58,719
+Now in both optics and acoustics we use
+
+2216
+01:22:56,480 --> 01:23:01,440
+a quantity called the f number or f
+
+2217
+01:22:58,719 --> 01:23:03,280
+ratio to describe focusing strength. The
+
+2218
+01:23:01,440 --> 01:23:05,199
+f number is defined as the radius of
+
+2219
+01:23:03,280 --> 01:23:06,880
+curvature divided by twice the aperture
+
+2220
+01:23:05,199 --> 01:23:12,320
+radius.
+
+2221
+01:23:06,880 --> 01:23:14,400
+Mathematically that's f= r / 2 a. Here r
+
+2222
+01:23:12,320 --> 01:23:17,440
+is the radius of curvature and a is the
+
+2223
+01:23:14,400 --> 01:23:19,760
+aperture radius. So a smaller r or a
+
+2224
+01:23:17,440 --> 01:23:21,920
+larger aperture a gives you a smaller f
+
+2225
+01:23:19,760 --> 01:23:23,840
+number meaning stronger focusing.
+
+2226
+01:23:21,920 --> 01:23:27,120
+Conversely, a large f number corresponds
+
+2227
+01:23:23,840 --> 01:23:29,120
+to weaker focusing.
+
+2228
+01:23:27,120 --> 01:23:31,520
+So, what we're really describing here is
+
+2229
+01:23:29,120 --> 01:23:33,679
+how lateral resolution changes as a
+
+2230
+01:23:31,520 --> 01:23:35,679
+function of focusing strength and
+
+2231
+01:23:33,679 --> 01:23:37,840
+imaging depth.
+
+2232
+01:23:35,679 --> 01:23:39,440
+When you design an ultrasound system,
+
+2233
+01:23:37,840 --> 01:23:41,760
+you must decide whether you want a
+
+2234
+01:23:39,440 --> 01:23:44,000
+narrow beam with strong focusing or a
+
+2235
+01:23:41,760 --> 01:23:45,920
+broader, more uniform beam with weaker
+
+2236
+01:23:44,000 --> 01:23:48,920
+focusing depending on your imaging
+
+2237
+01:23:45,920 --> 01:23:48,920
+application.
+
+2238
+01:23:50,400 --> 01:23:55,600
+After lateral resolution, sidebyside
+
+2239
+01:23:52,880 --> 01:23:57,760
+detail, axial or longitudinal resolution
+
+2240
+01:23:55,600 --> 01:24:00,800
+is how well ultrasound distinguishes two
+
+2241
+01:23:57,760 --> 01:24:03,760
+points along the beam's path. Ultrasound
+
+2242
+01:24:00,800 --> 01:24:06,080
+uses short pulses, not continuous waves.
+
+2243
+01:24:03,760 --> 01:24:08,239
+Damping shortens the pulse, so echoes
+
+2244
+01:24:06,080 --> 01:24:10,960
+from nearby boundaries are separated in
+
+2245
+01:24:08,239 --> 01:24:12,960
+time, improving resolution.
+
+2246
+01:24:10,960 --> 01:24:15,040
+If boundaries are too close or the pulse
+
+2247
+01:24:12,960 --> 01:24:17,840
+is too long, their echoes overlap and
+
+2248
+01:24:15,040 --> 01:24:19,920
+blur into one reflection. Thus, axial
+
+2249
+01:24:17,840 --> 01:24:21,840
+resolution is the minimum separable
+
+2250
+01:24:19,920 --> 01:24:24,159
+distance along the beam and depends
+
+2251
+01:24:21,840 --> 01:24:27,040
+mainly on pulse duration. Shorter is
+
+2252
+01:24:24,159 --> 01:24:29,679
+better and the speed of sound.
+
+2253
+01:24:27,040 --> 01:24:32,639
+Axial resolution equals 1/2* pulse
+
+2254
+01:24:29,679 --> 01:24:35,280
+duration times the speed of sound. If
+
+2255
+01:24:32,639 --> 01:24:38,719
+you want variable names spoken, AR
+
+2256
+01:24:35,280 --> 01:24:42,159
+equals 1/2 * * C, where TOAO is pulse
+
+2257
+01:24:38,719 --> 01:24:44,320
+duration and C is the speed of sound.
+
+2258
+01:24:42,159 --> 01:24:46,239
+Now, picture this in your mind. You send
+
+2259
+01:24:44,320 --> 01:24:47,920
+out a pulse. It has a certain length
+
+2260
+01:24:46,239 --> 01:24:49,440
+from the front which we call the leading
+
+2261
+01:24:47,920 --> 01:24:51,679
+edge to the back which we call the
+
+2262
+01:24:49,440 --> 01:24:53,600
+trailing edge. This whole pulse moves
+
+2263
+01:24:51,679 --> 01:24:55,760
+through the tissue.
+
+2264
+01:24:53,600 --> 01:24:58,480
+As it moves, it hits boundaries. Let's
+
+2265
+01:24:55,760 --> 01:25:00,080
+call them surface A and surface B. The
+
+2266
+01:24:58,480 --> 01:25:02,320
+leading edge of the pulse reaches
+
+2267
+01:25:00,080 --> 01:25:04,480
+surface A first and reflects back while
+
+2268
+01:25:02,320 --> 01:25:06,080
+the trailing part continues forward.
+
+2269
+01:25:04,480 --> 01:25:08,239
+Some portion of the pulse keeps going
+
+2270
+01:25:06,080 --> 01:25:10,320
+and hits surface B and then that part
+
+2271
+01:25:08,239 --> 01:25:12,480
+reflects back too.
+
+2272
+01:25:10,320 --> 01:25:14,239
+So the leading edge reflects first and a
+
+2273
+01:25:12,480 --> 01:25:16,080
+moment later the trailing edge and the
+
+2274
+01:25:14,239 --> 01:25:18,239
+transmitted component reach the second
+
+2275
+01:25:16,080 --> 01:25:20,480
+boundary. The reflected waves from
+
+2276
+01:25:18,239 --> 01:25:22,880
+surface A and surface B both travel back
+
+2277
+01:25:20,480 --> 01:25:25,120
+toward the transducer.
+
+2278
+01:25:22,880 --> 01:25:26,880
+Now if these two boundaries are so close
+
+2279
+01:25:25,120 --> 01:25:28,639
+that the time difference between those
+
+2280
+01:25:26,880 --> 01:25:31,040
+reflections is shorter than the pulse
+
+2281
+01:25:28,639 --> 01:25:33,360
+duration, the two echoes overlap and we
+
+2282
+01:25:31,040 --> 01:25:35,199
+cannot tell them apart.
+
+2283
+01:25:33,360 --> 01:25:37,120
+But if the separation is large enough
+
+2284
+01:25:35,199 --> 01:25:39,120
+that the roundtrip time between them is
+
+2285
+01:25:37,120 --> 01:25:41,679
+longer than half the pulse duration, we
+
+2286
+01:25:39,120 --> 01:25:43,840
+can distinguish the two.
+
+2287
+01:25:41,679 --> 01:25:45,840
+That's exactly how we define axial
+
+2288
+01:25:43,840 --> 01:25:48,400
+resolution. It's the distance between
+
+2289
+01:25:45,840 --> 01:25:50,880
+surface A and surface B that produces
+
+2290
+01:25:48,400 --> 01:25:54,560
+two distinguishable echoes. In symbols,
+
+2291
+01:25:50,880 --> 01:25:57,040
+we can write it as delta X= 1/2* pulse
+
+2292
+01:25:54,560 --> 01:25:59,440
+duration time C.
+
+2293
+01:25:57,040 --> 01:26:03,760
+Let me read that again in a smooth way.
+
+2294
+01:25:59,440 --> 01:26:05,679
+Delta X= 1/2* pulse duration time C.
+
+2295
+01:26:03,760 --> 01:26:07,840
+The 1/2 factor is there because the
+
+2296
+01:26:05,679 --> 01:26:09,840
+sound wave travels a round trip out to
+
+2297
+01:26:07,840 --> 01:26:11,840
+the boundary and then back. So only half
+
+2298
+01:26:09,840 --> 01:26:13,679
+of that total distance corresponds to
+
+2299
+01:26:11,840 --> 01:26:15,440
+the actual separation between two
+
+2300
+01:26:13,679 --> 01:26:17,600
+reflectors.
+
+2301
+01:26:15,440 --> 01:26:19,600
+Axial resolution can feel tricky at
+
+2302
+01:26:17,600 --> 01:26:22,000
+first, but here's the picture in one go.
+
+2303
+01:26:19,600 --> 01:26:24,000
+Ultrasound uses short sound pulses, not
+
+2304
+01:26:22,000 --> 01:26:25,920
+continuous waves, and damping shortens
+
+2305
+01:26:24,000 --> 01:26:28,000
+those pulses so the leading and trailing
+
+2306
+01:26:25,920 --> 01:26:30,000
+edges sit closer together. When a pulse
+
+2307
+01:26:28,000 --> 01:26:32,000
+goes out, reflects from tissue and
+
+2308
+01:26:30,000 --> 01:26:33,760
+returns as an echo, the time between
+
+2309
+01:26:32,000 --> 01:26:35,679
+transmission and reception lets us
+
+2310
+01:26:33,760 --> 01:26:37,920
+compute the roundtrip distance and
+
+2311
+01:26:35,679 --> 01:26:39,600
+sending successive pulses repeats this
+
+2312
+01:26:37,920 --> 01:26:41,679
+process.
+
+2313
+01:26:39,600 --> 01:26:44,480
+If the pulse is short, echoes from two
+
+2314
+01:26:41,679 --> 01:26:46,239
+reflectors A and B are well separated in
+
+2315
+01:26:44,480 --> 01:26:48,159
+time. So we can distinguish the two
+
+2316
+01:26:46,239 --> 01:26:49,920
+boundaries. If the pulse is long or the
+
+2317
+01:26:48,159 --> 01:26:53,120
+boundaries are too close, the echoes
+
+2318
+01:26:49,920 --> 01:26:55,440
+overlap and we lose that distinction.
+
+2319
+01:26:53,120 --> 01:26:57,679
+That's why system design emphasizes
+
+2320
+01:26:55,440 --> 01:26:59,520
+strong damping to shorten the pulse,
+
+2321
+01:26:57,679 --> 01:27:02,639
+increase temporal separation of echoes,
+
+2322
+01:26:59,520 --> 01:27:04,960
+and sharpen axial resolution.
+
+2323
+01:27:02,639 --> 01:27:07,280
+In essence, axial resolution is the
+
+2324
+01:27:04,960 --> 01:27:09,520
+minimum distance between two boundaries
+
+2325
+01:27:07,280 --> 01:27:11,440
+along the beam path that can be resolved
+
+2326
+01:27:09,520 --> 01:27:13,840
+separately and it depends mainly on
+
+2327
+01:27:11,440 --> 01:27:15,679
+pulse duration and the speed of sound in
+
+2328
+01:27:13,840 --> 01:27:17,679
+tissue. The shorter the pulse and the
+
+2329
+01:27:15,679 --> 01:27:19,760
+slower the sound, the finer the detail
+
+2330
+01:27:17,679 --> 01:27:21,840
+along that axis.
+
+2331
+01:27:19,760 --> 01:27:23,840
+So just review this figure carefully
+
+2332
+01:27:21,840 --> 01:27:26,239
+yourself. Once you visualize how the
+
+2333
+01:27:23,840 --> 01:27:28,320
+pulse moves forward, hit surface A, then
+
+2334
+01:27:26,239 --> 01:27:31,520
+surface B and the echoes return, the
+
+2335
+01:27:28,320 --> 01:27:33,679
+logic becomes crystal clear. We now have
+
+2336
+01:27:31,520 --> 01:27:35,520
+both key ideas of spatial resolution,
+
+2337
+01:27:33,679 --> 01:27:37,760
+lateral resolution, and axial
+
+2338
+01:27:35,520 --> 01:27:39,600
+resolution. And next, we'll move on to
+
+2339
+01:27:37,760 --> 01:27:41,600
+discuss how all this affects image
+
+2340
+01:27:39,600 --> 01:27:43,280
+contrast, which determines how clearly
+
+2341
+01:27:41,600 --> 01:27:46,280
+structures appear on the ultrasound
+
+2342
+01:27:43,280 --> 01:27:46,280
+image.
+
+2343
+01:27:47,840 --> 01:27:52,400
+Now let's talk about image contrast in
+
+2344
+01:27:49,840 --> 01:27:54,400
+ultrasound imaging. The term contrast
+
+2345
+01:27:52,400 --> 01:27:56,719
+here simply refers to how different
+
+2346
+01:27:54,400 --> 01:27:58,560
+tissues appear relative to one another
+
+2347
+01:27:56,719 --> 01:28:00,159
+based on the strength of the returning
+
+2348
+01:27:58,560 --> 01:28:02,320
+echoes.
+
+2349
+01:28:00,159 --> 01:28:03,920
+In ultrasound, acoustic waves interact
+
+2350
+01:28:02,320 --> 01:28:05,520
+with different tissues in different ways
+
+2351
+01:28:03,920 --> 01:28:07,440
+and that's why we see some areas
+
+2352
+01:28:05,520 --> 01:28:10,719
+appearing brighter and others darker on
+
+2353
+01:28:07,440 --> 01:28:12,639
+the screen. We use the prefixes hyper
+
+2354
+01:28:10,719 --> 01:28:15,520
+and hypo to describe this difference in
+
+2355
+01:28:12,639 --> 01:28:17,440
+the scattering amplitude of echoes.
+
+2356
+01:28:15,520 --> 01:28:19,280
+When a tissue produces echoes that have
+
+2357
+01:28:17,440 --> 01:28:21,679
+a higher scattering amplitude than the
+
+2358
+01:28:19,280 --> 01:28:23,360
+average, we call it hyperacoic. That
+
+2359
+01:28:21,679 --> 01:28:25,199
+means the reflected signal is stronger
+
+2360
+01:28:23,360 --> 01:28:28,159
+than normal and it shows up as a bright
+
+2361
+01:28:25,199 --> 01:28:30,159
+region on the ultrasound image.
+
+2362
+01:28:28,159 --> 01:28:32,239
+Conversely, when the tissue has a lower
+
+2363
+01:28:30,159 --> 01:28:34,719
+scattering amplitude than average, we
+
+2364
+01:28:32,239 --> 01:28:36,560
+call it hypocoic. In that case, the
+
+2365
+01:28:34,719 --> 01:28:39,199
+reflected signal is weaker and it
+
+2366
+01:28:36,560 --> 01:28:41,120
+appears darker on the image.
+
+2367
+01:28:39,199 --> 01:28:43,600
+These variations in brightness from
+
+2368
+01:28:41,120 --> 01:28:45,360
+hypercoic to hypocoic are what give us
+
+2369
+01:28:43,600 --> 01:28:46,960
+contrast.
+
+2370
+01:28:45,360 --> 01:28:49,360
+They allow us to distinguish one
+
+2371
+01:28:46,960 --> 01:28:51,280
+structure from another. For example, on
+
+2372
+01:28:49,360 --> 01:28:53,600
+the ultrasound image shown here, you can
+
+2373
+01:28:51,280 --> 01:28:55,679
+see how the liver, renal sinus fat,
+
+2374
+01:28:53,600 --> 01:28:57,199
+renal pyramids, and fluid fil bowel
+
+2375
+01:28:55,679 --> 01:28:59,280
+loops all appear with different
+
+2376
+01:28:57,199 --> 01:29:01,440
+brightness levels.
+
+2377
+01:28:59,280 --> 01:29:03,920
+The renal sinus fat appears bright
+
+2378
+01:29:01,440 --> 01:29:06,480
+because it is hypercoic. It reflects
+
+2379
+01:29:03,920 --> 01:29:08,400
+ultrasound strongly. The renal pyramids
+
+2380
+01:29:06,480 --> 01:29:10,560
+or fluid-filled bowel loops appear
+
+2381
+01:29:08,400 --> 01:29:12,880
+darker because they are hypoacoic. They
+
+2382
+01:29:10,560 --> 01:29:15,040
+scatter less energy.
+
+2383
+01:29:12,880 --> 01:29:17,360
+Some tissues like the liver or renal
+
+2384
+01:29:15,040 --> 01:29:19,360
+cortex tend to have uniform mid-level
+
+2385
+01:29:17,360 --> 01:29:22,719
+echogenicity, meaning they reflect
+
+2386
+01:29:19,360 --> 01:29:24,719
+ultrasound in a moderate consistent way.
+
+2387
+01:29:22,719 --> 01:29:26,800
+Others like the anterior surface of the
+
+2388
+01:29:24,719 --> 01:29:28,800
+liver or the anterior surface of the
+
+2389
+01:29:26,800 --> 01:29:32,960
+kidney are more reflective, showing
+
+2390
+01:29:28,800 --> 01:29:35,600
+distinct bright boundaries on the image.
+
+2391
+01:29:32,960 --> 01:29:37,600
+So in summary, the way ultrasound waves
+
+2392
+01:29:35,600 --> 01:29:39,760
+interact with various tissues determines
+
+2393
+01:29:37,600 --> 01:29:41,920
+the level of brightness on the image.
+
+2394
+01:29:39,760 --> 01:29:44,719
+Hyperaccoic areas are brighter and
+
+2395
+01:29:41,920 --> 01:29:46,880
+correspond to stronger scatterers.
+
+2396
+01:29:44,719 --> 01:29:49,280
+Hypocoic areas are darker and correspond
+
+2397
+01:29:46,880 --> 01:29:51,360
+to weaker scatterers. This difference in
+
+2398
+01:29:49,280 --> 01:29:54,239
+signal amplitude is the foundation of
+
+2399
+01:29:51,360 --> 01:29:56,560
+contrast in ultrasound imaging.
+
+2400
+01:29:54,239 --> 01:29:58,960
+However, sometimes a natural contrast
+
+2401
+01:29:56,560 --> 01:30:01,520
+between tissues is not sufficient to
+
+2402
+01:29:58,960 --> 01:30:03,920
+clearly separate structures or identify
+
+2403
+01:30:01,520 --> 01:30:06,159
+pathology. In such cases, we use
+
+2404
+01:30:03,920 --> 01:30:07,840
+contrast agents to improve visibility.
+
+2405
+01:30:06,159 --> 01:30:10,000
+One of the most effective types of
+
+2406
+01:30:07,840 --> 01:30:12,159
+contrast agents in ultrasound imaging is
+
+2407
+01:30:10,000 --> 01:30:14,239
+the microbubble.
+
+2408
+01:30:12,159 --> 01:30:16,880
+These microbubbles, typically ranging
+
+2409
+01:30:14,239 --> 01:30:18,480
+from 2 to 5 micrometers in diameter, are
+
+2410
+01:30:16,880 --> 01:30:21,120
+introduced into the bloodstream to
+
+2411
+01:30:18,480 --> 01:30:23,440
+enhance contrast. They act as additional
+
+2412
+01:30:21,120 --> 01:30:25,440
+reflective surfaces that increase back
+
+2413
+01:30:23,440 --> 01:30:28,480
+scattering, especially in regions where
+
+2414
+01:30:25,440 --> 01:30:30,880
+the natural contrast is weak.
+
+2415
+01:30:28,480 --> 01:30:32,880
+By introducing microbubbles, we can
+
+2416
+01:30:30,880 --> 01:30:35,120
+significantly improve the visualization
+
+2417
+01:30:32,880 --> 01:30:37,600
+of internal structures, making it easier
+
+2418
+01:30:35,120 --> 01:30:39,679
+to detect lesions, tumors, or subtle
+
+2419
+01:30:37,600 --> 01:30:41,520
+tissue changes.
+
+2420
+01:30:39,679 --> 01:30:43,760
+This approach is particularly useful in
+
+2421
+01:30:41,520 --> 01:30:47,960
+clinical cases where precise imaging is
+
+2422
+01:30:43,760 --> 01:30:47,960
+needed to make accurate diagnosis.
+
+2423
+01:30:49,679 --> 01:30:53,120
+Let's look more closely at these
+
+2424
+01:30:51,199 --> 01:30:55,840
+microbubbles and how they work as
+
+2425
+01:30:53,120 --> 01:30:58,320
+ultrasound contrast agents.
+
+2426
+01:30:55,840 --> 01:31:00,719
+Microbubbles are very small, typically 2
+
+2427
+01:30:58,320 --> 01:31:02,880
+to 5 micrometers in diameter, and are
+
+2428
+01:31:00,719 --> 01:31:05,280
+encapsulated by a shell made of either
+
+2429
+01:31:02,880 --> 01:31:07,040
+albumin or a lipid layer. This shell
+
+2430
+01:31:05,280 --> 01:31:08,480
+makes them stable enough to circulate
+
+2431
+01:31:07,040 --> 01:31:10,800
+through the bloodstream without
+
+2432
+01:31:08,480 --> 01:31:12,719
+immediately collapsing.
+
+2433
+01:31:10,800 --> 01:31:14,719
+Their stability can be further enhanced
+
+2434
+01:31:12,719 --> 01:31:16,800
+by filling them with a high molecular
+
+2435
+01:31:14,719 --> 01:31:19,440
+weight gas, which diffuses out more
+
+2436
+01:31:16,800 --> 01:31:21,600
+slowly than regular air.
+
+2437
+01:31:19,440 --> 01:31:23,679
+These microbubbles are produced outside
+
+2438
+01:31:21,600 --> 01:31:26,000
+the human body and then introduced into
+
+2439
+01:31:23,679 --> 01:31:28,320
+the bloodstream through an intravenous
+
+2440
+01:31:26,000 --> 01:31:31,520
+injection. Once inside the bloodstream,
+
+2441
+01:31:28,320 --> 01:31:33,360
+they interact with ultrasound waves.
+
+2442
+01:31:31,520 --> 01:31:35,199
+When the ultrasound beam hits them, the
+
+2443
+01:31:33,360 --> 01:31:37,040
+microbubbles start to oscillate. They
+
+2444
+01:31:35,199 --> 01:31:39,920
+expand and contract in sync with the
+
+2445
+01:31:37,040 --> 01:31:41,600
+pressure variations of the sound wave.
+
+2446
+01:31:39,920 --> 01:31:42,960
+Because the interface between the gas
+
+2447
+01:31:41,600 --> 01:31:45,199
+inside the bubble and the surrounding
+
+2448
+01:31:42,960 --> 01:31:47,440
+liquid is not acoustically transparent,
+
+2449
+01:31:45,199 --> 01:31:49,679
+a strong reflection occurs. This makes
+
+2450
+01:31:47,440 --> 01:31:52,800
+microbubbles act as powerful scatterers,
+
+2451
+01:31:49,679 --> 01:31:55,199
+producing bright, well-defined echoes.
+
+2452
+01:31:52,800 --> 01:31:57,280
+As a result, microvasculare and even
+
+2453
+01:31:55,199 --> 01:31:59,360
+small blood vessels become visible on
+
+2454
+01:31:57,280 --> 01:32:02,560
+ultrasound images, greatly improving the
+
+2455
+01:31:59,360 --> 01:32:04,560
+detection of blood flow and perfusion.
+
+2456
+01:32:02,560 --> 01:32:06,960
+Moreover, these microbubbles can be
+
+2457
+01:32:04,560 --> 01:32:09,440
+customized. Scientists can modify the
+
+2458
+01:32:06,960 --> 01:32:10,719
+shell using polymers or special coatings
+
+2459
+01:32:09,440 --> 01:32:13,520
+that allow the surface to be
+
+2460
+01:32:10,719 --> 01:32:15,679
+functionalized with antibodies.
+
+2461
+01:32:13,520 --> 01:32:18,080
+When certain antibodies are attached,
+
+2462
+01:32:15,679 --> 01:32:20,560
+the microbubbles can specifically bind
+
+2463
+01:32:18,080 --> 01:32:23,760
+to biological targets, for example,
+
+2464
+01:32:20,560 --> 01:32:25,679
+tumor cells or inflammatory markers.
+
+2465
+01:32:23,760 --> 01:32:28,159
+When that happens, the microbubbles
+
+2466
+01:32:25,679 --> 01:32:30,000
+accumulate around those target regions.
+
+2467
+01:32:28,159 --> 01:32:32,080
+On the ultrasound image, those regions
+
+2468
+01:32:30,000 --> 01:32:34,239
+appear as bright localized signals,
+
+2469
+01:32:32,080 --> 01:32:37,120
+making it possible to identify molecular
+
+2470
+01:32:34,239 --> 01:32:39,440
+features, not just structural ones.
+
+2471
+01:32:37,120 --> 01:32:41,440
+In other words, microbubbles transform
+
+2472
+01:32:39,440 --> 01:32:43,920
+ultrasound from a purely anatomical
+
+2473
+01:32:41,440 --> 01:32:47,360
+imaging modality into a molecular and
+
+2474
+01:32:43,920 --> 01:32:49,600
+cellular imaging tool. So when you see
+
+2475
+01:32:47,360 --> 01:32:51,440
+very bright clustered signals after
+
+2476
+01:32:49,600 --> 01:32:53,040
+microbubble injection, it often
+
+2477
+01:32:51,440 --> 01:32:56,719
+indicates the presence of something
+
+2478
+01:32:53,040 --> 01:32:58,400
+biologically distinct such as a tumor.
+
+2479
+01:32:56,719 --> 01:33:00,400
+This development marks a major
+
+2480
+01:32:58,400 --> 01:33:02,320
+advancement in medical ultrasound,
+
+2481
+01:33:00,400 --> 01:33:06,360
+extending it from traditional imaging
+
+2482
+01:33:02,320 --> 01:33:06,360
+into targeted diagnostics.
+
+2483
+01:33:08,080 --> 01:33:12,239
+Now let's move one step further using
+
+2484
+01:33:10,159 --> 01:33:14,480
+microbubbles not just for imaging but
+
+2485
+01:33:12,239 --> 01:33:16,239
+also for therapy.
+
+2486
+01:33:14,480 --> 01:33:18,800
+This concept is known as acoustically
+
+2487
+01:33:16,239 --> 01:33:21,120
+enabled drug delivery. The idea is both
+
+2488
+01:33:18,800 --> 01:33:22,960
+simple and powerful. Suppose we inject a
+
+2489
+01:33:21,120 --> 01:33:24,480
+drug together with microbubbles into the
+
+2490
+01:33:22,960 --> 01:33:26,400
+bloodstream.
+
+2491
+01:33:24,480 --> 01:33:28,000
+These microbubbles circulate throughout
+
+2492
+01:33:26,400 --> 01:33:30,800
+the body including through the small
+
+2493
+01:33:28,000 --> 01:33:32,159
+vessels or microvasculare around a tumor
+
+2494
+01:33:30,800 --> 01:33:34,080
+site.
+
+2495
+01:33:32,159 --> 01:33:36,560
+When we know the approximate location of
+
+2496
+01:33:34,080 --> 01:33:39,120
+a tumor, we can focus ultrasound waves
+
+2497
+01:33:36,560 --> 01:33:41,440
+precisely on that region. The ultrasound
+
+2498
+01:33:39,120 --> 01:33:43,679
+energy tuned to the right amplitude and
+
+2499
+01:33:41,440 --> 01:33:46,800
+frequency causes the microbubbles in
+
+2500
+01:33:43,679 --> 01:33:48,880
+that area to oscillate vigorously.
+
+2501
+01:33:46,800 --> 01:33:51,040
+If we increase the energy slightly, the
+
+2502
+01:33:48,880 --> 01:33:53,040
+bubbles rupture or collapse, releasing
+
+2503
+01:33:51,040 --> 01:33:54,639
+their drug payload right at the target
+
+2504
+01:33:53,040 --> 01:33:56,480
+site.
+
+2505
+01:33:54,639 --> 01:33:58,480
+This process delivers the medication
+
+2506
+01:33:56,480 --> 01:34:00,239
+directly to the tumor, minimizing side
+
+2507
+01:33:58,480 --> 01:34:02,480
+effects and maximizing treatment
+
+2508
+01:34:00,239 --> 01:34:04,400
+effectiveness. It's like having millions
+
+2509
+01:34:02,480 --> 01:34:06,080
+of tiny delivery capsules that release
+
+2510
+01:34:04,400 --> 01:34:08,880
+the drug only when and where an
+
+2511
+01:34:06,080 --> 01:34:10,800
+ultrasound activates them. This
+
+2512
+01:34:08,880 --> 01:34:12,639
+technique opens the door to an entirely
+
+2513
+01:34:10,800 --> 01:34:15,199
+new field known as theronostics,
+
+2514
+01:34:12,639 --> 01:34:17,199
+combining therapy and diagnostics. With
+
+2515
+01:34:15,199 --> 01:34:18,800
+this approach, ultrasound imaging can
+
+2516
+01:34:17,199 --> 01:34:20,800
+both visualize and treat disease
+
+2517
+01:34:18,800 --> 01:34:22,639
+simultaneously.
+
+2518
+01:34:20,800 --> 01:34:24,320
+The precision and non-invasiveness of
+
+2519
+01:34:22,639 --> 01:34:26,320
+this method make it an extremely
+
+2520
+01:34:24,320 --> 01:34:28,159
+promising direction for the future,
+
+2521
+01:34:26,320 --> 01:34:30,800
+particularly for treating cancers and
+
+2522
+01:34:28,159 --> 01:34:33,280
+other localized diseases.
+
+2523
+01:34:30,800 --> 01:34:35,520
+So using ultrasound and microbubbles
+
+2524
+01:34:33,280 --> 01:34:37,600
+together, we can not only image internal
+
+2525
+01:34:35,520 --> 01:34:40,080
+structures in great detail, but also
+
+2526
+01:34:37,600 --> 01:34:42,480
+control drug delivery dynamically by
+
+2527
+01:34:40,080 --> 01:34:44,239
+sound waves themselves.
+
+2528
+01:34:42,480 --> 01:34:46,159
+This is an exciting frontier in
+
+2529
+01:34:44,239 --> 01:34:49,159
+biomedical engineering and medical
+
+2530
+01:34:46,159 --> 01:34:49,159
+imaging.
+
+2531
+01:34:50,719 --> 01:34:54,159
+All right, let's wrap up today's
+
+2532
+01:34:52,080 --> 01:34:55,760
+lecture. As we conclude, I'd like to
+
+2533
+01:34:54,159 --> 01:34:57,920
+give you the homework assignment for
+
+2534
+01:34:55,760 --> 01:34:59,840
+ultrasound eye.
+
+2535
+01:34:57,920 --> 01:35:01,679
+You'll be working on two related
+
+2536
+01:34:59,840 --> 01:35:03,679
+problems, both designed to reinforce
+
+2537
+01:35:01,679 --> 01:35:05,600
+your understanding of the transducer and
+
+2538
+01:35:03,679 --> 01:35:07,600
+matching layer concepts we discussed
+
+2539
+01:35:05,600 --> 01:35:09,120
+earlier. Please refer to your green
+
+2540
+01:35:07,600 --> 01:35:11,040
+textbook for additional details and
+
+2541
+01:35:09,120 --> 01:35:14,000
+supporting equations. It's not difficult
+
+2542
+01:35:11,040 --> 01:35:16,960
+and I'm confident you can handle it. The
+
+2543
+01:35:14,000 --> 01:35:18,960
+first problem number 3.5 asks you to
+
+2544
+01:35:16,960 --> 01:35:21,120
+plot the transmitted frequency spectrum
+
+2545
+01:35:18,960 --> 01:35:24,000
+of an ultrasound beam from a transducer
+
+2546
+01:35:21,120 --> 01:35:25,920
+operating at a central frequency of 1.5
+
+2547
+01:35:24,000 --> 01:35:28,080
+megahertz.
+
+2548
+01:35:25,920 --> 01:35:29,760
+Assume that the transducer is damped and
+
+2549
+01:35:28,080 --> 01:35:31,360
+then repeat the plot for the beam
+
+2550
+01:35:29,760 --> 01:35:33,120
+returning to the transducer after
+
+2551
+01:35:31,360 --> 01:35:35,760
+passing through tissue and being back
+
+2552
+01:35:33,120 --> 01:35:38,880
+scattered.
+
+2553
+01:35:35,760 --> 01:35:40,880
+The second problem number 3.6 focuses on
+
+2554
+01:35:38,880 --> 01:35:42,880
+the concept of the matching layer which
+
+2555
+01:35:40,880 --> 01:35:45,760
+is one of the most important topics we
+
+2556
+01:35:42,880 --> 01:35:47,679
+covered today. The question is to
+
+2557
+01:35:45,760 --> 01:35:49,679
+improve the efficiency of a given
+
+2558
+01:35:47,679 --> 01:35:52,000
+transducer the amount of energy
+
+2559
+01:35:49,679 --> 01:35:54,560
+reflected by the skin directly under the
+
+2560
+01:35:52,000 --> 01:35:57,280
+transducer must be minimized. A layer of
+
+2561
+01:35:54,560 --> 01:35:59,360
+material with an acoustic impedance ZML
+
+2562
+01:35:57,280 --> 01:36:00,880
+is placed between the transducer and the
+
+2563
+01:35:59,360 --> 01:36:02,960
+skin.
+
+2564
+01:36:00,880 --> 01:36:05,600
+If the acoustic impedance of the skin is
+
+2565
+01:36:02,960 --> 01:36:07,840
+denoted by ZS and that of the transducer
+
+2566
+01:36:05,600 --> 01:36:10,000
+crystal is denoted by ZC, show
+
+2567
+01:36:07,840 --> 01:36:11,760
+mathematically that the value of ZML
+
+2568
+01:36:10,000 --> 01:36:14,480
+that minimizes the energy of the
+
+2569
+01:36:11,760 --> 01:36:19,960
+reflected wave is given by ZML equals
+
+2570
+01:36:14,480 --> 01:36:19,960
+the square root of ZC multiplied by ZS.
+
+2571
+01:36:22,400 --> 01:36:25,840
+We'll continue our discussion next time
+
+2572
+01:36:24,159 --> 01:36:28,080
+where we'll wrap up our study of
+
+2573
+01:36:25,840 --> 01:36:30,159
+ultrasound imaging.
+
+2574
+01:36:28,080 --> 01:36:31,840
+Remember, the matching layer is crucial
+
+2575
+01:36:30,159 --> 01:36:33,520
+both conceptually and practically
+
+2576
+01:36:31,840 --> 01:36:35,520
+because it determines how efficiently
+
+2577
+01:36:33,520 --> 01:36:37,679
+energy moves from the transducer into
+
+2578
+01:36:35,520 --> 01:36:39,520
+the body. Understanding it deeply will
+
+2579
+01:36:37,679 --> 01:36:41,440
+also help you as we move toward more
+
+2580
+01:36:39,520 --> 01:36:44,440
+advanced imaging systems in the upcoming
+
+2581
+01:36:41,440 --> 01:36:44,440
+lectures.
+

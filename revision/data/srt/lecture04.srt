@@ -1,0 +1,5824 @@
+1
+00:00:00,640 --> 00:00:04,000
+Hi, today we move on to our fourth
+
+2
+00:00:02,320 --> 00:00:06,160
+lecture where our focus will be on
+
+3
+00:00:04,000 --> 00:00:08,240
+convolution.
+
+4
+00:00:06,160 --> 00:00:10,559
+This is a direct continuation of our
+
+5
+00:00:08,240 --> 00:00:13,280
+recent discussion on systems especially
+
+6
+00:00:10,559 --> 00:00:15,440
+linear systems that are shift invariant.
+
+7
+00:00:13,280 --> 00:00:18,560
+Two foundational concepts we began
+
+8
+00:00:15,440 --> 00:00:20,480
+unpacking in the previous lecture.
+
+9
+00:00:18,560 --> 00:00:22,560
+Understanding convolution will allow us
+
+10
+00:00:20,480 --> 00:00:24,400
+to model how these systems respond to
+
+11
+00:00:22,560 --> 00:00:26,560
+different types of input. And it's a
+
+12
+00:00:24,400 --> 00:00:28,560
+concept that shows up across many areas
+
+13
+00:00:26,560 --> 00:00:31,439
+in engineering, physics, and especially
+
+14
+00:00:28,560 --> 00:00:31,439
+medical imaging.
+
+15
+00:00:33,440 --> 00:00:37,760
+We are right on schedule in our journey
+
+16
+00:00:35,440 --> 00:00:39,120
+through this material.
+
+17
+00:00:37,760 --> 00:00:40,800
+If you've already gone through the
+
+18
+00:00:39,120 --> 00:00:42,719
+reading materials for today, that's
+
+19
+00:00:40,800 --> 00:00:45,120
+excellent. It will help you link the
+
+20
+00:00:42,719 --> 00:00:47,440
+concepts more quickly. If you haven't,
+
+21
+00:00:45,120 --> 00:00:49,120
+that's okay. Just stay engaged during
+
+22
+00:00:47,440 --> 00:00:51,200
+the lecture and review the key points
+
+23
+00:00:49,120 --> 00:00:53,199
+afterward. Building this habit of
+
+24
+00:00:51,200 --> 00:00:54,800
+revisiting ideas will strengthen your
+
+25
+00:00:53,199 --> 00:00:59,079
+understanding, especially as we move
+
+26
+00:00:54,800 --> 00:00:59,079
+into more math heavy topics.
+
+27
+00:01:00,640 --> 00:01:04,239
+As we step into the topic of
+
+28
+00:01:02,239 --> 00:01:06,640
+convolution, let's outline what we'll be
+
+29
+00:01:04,239 --> 00:01:08,640
+exploring today. We will begin by
+
+30
+00:01:06,640 --> 00:01:10,479
+revisiting shift invariant linear
+
+31
+00:01:08,640 --> 00:01:12,720
+systems, grounding ourselves in a
+
+32
+00:01:10,479 --> 00:01:14,080
+concept we touched on earlier. Then
+
+33
+00:01:12,720 --> 00:01:16,240
+we'll move into two important
+
+34
+00:01:14,080 --> 00:01:19,520
+formulations of convolution. Continuous
+
+35
+00:01:16,240 --> 00:01:21,040
+convolution and discrete convolution.
+
+36
+00:01:19,520 --> 00:01:23,280
+Each of them plays a crucial role
+
+37
+00:01:21,040 --> 00:01:25,280
+depending on the context. continuous for
+
+38
+00:01:23,280 --> 00:01:27,439
+signals that evolve smoothly over time
+
+39
+00:01:25,280 --> 00:01:30,720
+or space and discrete for digital
+
+40
+00:01:27,439 --> 00:01:32,720
+signals and images.
+
+41
+00:01:30,720 --> 00:01:34,479
+Through this lecture, we'll examine both
+
+42
+00:01:32,720 --> 00:01:36,400
+perspectives and their practical
+
+43
+00:01:34,479 --> 00:01:38,240
+implications. Dot. By the end of the
+
+44
+00:01:36,400 --> 00:01:40,079
+course, you'll not only understand how
+
+45
+00:01:38,240 --> 00:01:41,840
+convolution works, you'll also
+
+46
+00:01:40,079 --> 00:01:44,240
+appreciate why it matters in system
+
+47
+00:01:41,840 --> 00:01:48,360
+analysis, image reconstruction, and the
+
+48
+00:01:44,240 --> 00:01:48,360
+broader field of medical imaging.
+
+49
+00:01:49,920 --> 00:01:54,479
+Let's refresh our picture of a linear
+
+50
+00:01:52,000 --> 00:01:56,880
+shift invariant system. Imagine dropping
+
+51
+00:01:54,479 --> 00:01:58,719
+a pebble into a still pond. No matter
+
+52
+00:01:56,880 --> 00:02:00,640
+where the pebble lands, the ripples that
+
+53
+00:01:58,719 --> 00:02:03,119
+form spread out in the same circular
+
+54
+00:02:00,640 --> 00:02:05,040
+pattern. This uniformity where the
+
+55
+00:02:03,119 --> 00:02:07,439
+systems response doesn't change based on
+
+56
+00:02:05,040 --> 00:02:09,840
+where the input occurs is what we call
+
+57
+00:02:07,439 --> 00:02:11,920
+shift in variance.
+
+58
+00:02:09,840 --> 00:02:13,680
+Now relate this to medical imaging.
+
+59
+00:02:11,920 --> 00:02:15,680
+Suppose you undergo a scan at one
+
+60
+00:02:13,680 --> 00:02:18,000
+hospital today and another hospital next
+
+61
+00:02:15,680 --> 00:02:19,760
+week. If your physiological condition
+
+62
+00:02:18,000 --> 00:02:21,680
+hasn't changed, you'd expect the scans
+
+63
+00:02:19,760 --> 00:02:23,120
+to look the same. That's shift and
+
+64
+00:02:21,680 --> 00:02:26,319
+variance in action. It ensures
+
+65
+00:02:23,120 --> 00:02:29,040
+reliability across time and space.
+
+66
+00:02:26,319 --> 00:02:31,920
+Next, we have linearity. It has two key
+
+67
+00:02:29,040 --> 00:02:34,319
+components. Additivity. If two features
+
+68
+00:02:31,920 --> 00:02:36,080
+exist, like two separate tumors, the
+
+69
+00:02:34,319 --> 00:02:39,040
+system should show the combination of
+
+70
+00:02:36,080 --> 00:02:40,800
+both clearly. Homogeneity. If a feature
+
+71
+00:02:39,040 --> 00:02:42,239
+changes in intensity, like a tumor
+
+72
+00:02:40,800 --> 00:02:44,480
+growing larger, the imaging should
+
+73
+00:02:42,239 --> 00:02:46,480
+reflect that change proportionally.
+
+74
+00:02:44,480 --> 00:02:48,720
+Together, these properties form what's
+
+75
+00:02:46,480 --> 00:02:50,959
+known as the superposition principle,
+
+76
+00:02:48,720 --> 00:02:54,640
+the foundation for much of modern system
+
+77
+00:02:50,959 --> 00:02:56,640
+analysis, including medical imaging.
+
+78
+00:02:54,640 --> 00:02:59,120
+So, as we move ahead, keep the ripple
+
+79
+00:02:56,640 --> 00:03:01,200
+analogy in mind. It's a simple yet
+
+80
+00:02:59,120 --> 00:03:03,519
+powerful way to visualize how linear
+
+81
+00:03:01,200 --> 00:03:05,040
+shift invariant systems behave
+
+82
+00:03:03,519 --> 00:03:08,040
+consistently, predictably, and
+
+83
+00:03:05,040 --> 00:03:08,040
+truthfully.
+
+84
+00:03:09,680 --> 00:03:13,920
+To understand convolution deeply, let's
+
+85
+00:03:12,080 --> 00:03:15,760
+frame it through a familiar story from
+
+86
+00:03:13,920 --> 00:03:17,840
+physics.
+
+87
+00:03:15,760 --> 00:03:20,000
+You might recall the idea sometimes
+
+88
+00:03:17,840 --> 00:03:22,080
+attributed to Newton that the universe
+
+89
+00:03:20,000 --> 00:03:24,159
+began with a single impulse, a sort of
+
+90
+00:03:22,080 --> 00:03:26,640
+divine kick that set everything into
+
+91
+00:03:24,159 --> 00:03:28,159
+motion. Whether metaphor or mechanics,
+
+92
+00:03:26,640 --> 00:03:30,159
+this idea captures something
+
+93
+00:03:28,159 --> 00:03:32,319
+fundamental.
+
+94
+00:03:30,159 --> 00:03:34,560
+In physics, we often model this idea of
+
+95
+00:03:32,319 --> 00:03:36,720
+an initial force as an impulse, a very
+
+96
+00:03:34,560 --> 00:03:38,959
+short burst of energy that sets a system
+
+97
+00:03:36,720 --> 00:03:41,200
+into motion. For instance, think of
+
+98
+00:03:38,959 --> 00:03:43,280
+hitting a golf ball with a club. That
+
+99
+00:03:41,200 --> 00:03:44,959
+brief push is an impulse, and the ball's
+
+100
+00:03:43,280 --> 00:03:47,959
+subsequent motion is the system's
+
+101
+00:03:44,959 --> 00:03:47,959
+response.
+
+102
+00:03:49,599 --> 00:03:53,360
+Let's take a closer look at what that
+
+103
+00:03:51,280 --> 00:03:55,040
+impulse does.
+
+104
+00:03:53,360 --> 00:03:56,799
+When you strike a stationary object,
+
+105
+00:03:55,040 --> 00:03:58,560
+like a golf ball, the force you apply
+
+106
+00:03:56,799 --> 00:04:00,959
+doesn't last long. It's concentrated
+
+107
+00:03:58,560 --> 00:04:03,120
+over a short time. But that momentary
+
+108
+00:04:00,959 --> 00:04:05,200
+push has a lasting effect. It changes
+
+109
+00:04:03,120 --> 00:04:07,840
+the ball's velocity and sets it into
+
+110
+00:04:05,200 --> 00:04:09,680
+motion.
+
+111
+00:04:07,840 --> 00:04:11,920
+This simple interaction captures an
+
+112
+00:04:09,680 --> 00:04:13,680
+essential principle. An impulse causes
+
+113
+00:04:11,920 --> 00:04:15,920
+change.
+
+114
+00:04:13,680 --> 00:04:18,000
+In the context of system analysis, we're
+
+115
+00:04:15,920 --> 00:04:20,880
+interested in how a system responds over
+
+116
+00:04:18,000 --> 00:04:22,960
+time after receiving an impulse. That
+
+117
+00:04:20,880 --> 00:04:24,720
+response, often called the impulse
+
+118
+00:04:22,960 --> 00:04:27,280
+response, tells us how the system
+
+119
+00:04:24,720 --> 00:04:29,440
+behaves dynamically. Once we know the
+
+120
+00:04:27,280 --> 00:04:31,600
+impulse response, we can use convolution
+
+121
+00:04:29,440 --> 00:04:35,720
+to determine the systems output for any
+
+122
+00:04:31,600 --> 00:04:35,720
+more complex input signal.
+
+123
+00:04:37,199 --> 00:04:41,199
+Let's look at how impulse relates to
+
+124
+00:04:39,040 --> 00:04:43,840
+momentum, a key concept in both physics
+
+125
+00:04:41,199 --> 00:04:45,759
+and system analysis.
+
+126
+00:04:43,840 --> 00:04:48,880
+Momentum, as you may recall, is simply
+
+127
+00:04:45,759 --> 00:04:50,960
+mass multiplied by velocity.
+
+128
+00:04:48,880 --> 00:04:53,520
+So, if an object is at rest, it has zero
+
+129
+00:04:50,960 --> 00:04:55,280
+momentum. When you apply a force over a
+
+130
+00:04:53,520 --> 00:04:57,199
+period of time, say when you hit a
+
+131
+00:04:55,280 --> 00:05:00,000
+tennis ball with a racket, the object
+
+132
+00:04:57,199 --> 00:05:02,560
+gains velocity. That change in velocity
+
+133
+00:05:00,000 --> 00:05:05,280
+reflects a change in momentum.
+
+134
+00:05:02,560 --> 00:05:07,440
+Now, here's the essential link. Impulse
+
+135
+00:05:05,280 --> 00:05:09,600
+is defined as force multiplied by the
+
+136
+00:05:07,440 --> 00:05:11,600
+time over which it acts. We start with
+
+137
+00:05:09,600 --> 00:05:14,080
+Newton's second law, which tells us
+
+138
+00:05:11,600 --> 00:05:16,880
+force equals mass time acceleration or
+
+139
+00:05:14,080 --> 00:05:18,800
+simply F= ma.
+
+140
+00:05:16,880 --> 00:05:20,800
+Now, acceleration is defined as the
+
+141
+00:05:18,800 --> 00:05:23,680
+change in velocity divided by the change
+
+142
+00:05:20,800 --> 00:05:25,680
+in time. So, we write a= delta v over
+
+143
+00:05:23,680 --> 00:05:27,759
+delta t.
+
+144
+00:05:25,680 --> 00:05:32,479
+If we substitute that into Newton's law,
+
+145
+00:05:27,759 --> 00:05:34,160
+we get f * delta t= m * delta v.
+
+146
+00:05:32,479 --> 00:05:37,440
+This equation shows us something
+
+147
+00:05:34,160 --> 00:05:40,000
+powerful. Impulse, that's force times.
+
+148
+00:05:37,440 --> 00:05:41,840
+Time equals the change in momentum. It
+
+149
+00:05:40,000 --> 00:05:43,840
+tells us that impulse causes the change
+
+150
+00:05:41,840 --> 00:05:45,919
+in momentum.
+
+151
+00:05:43,840 --> 00:05:48,479
+It's the way to model how mechanical
+
+152
+00:05:45,919 --> 00:05:50,800
+systems respond to external inputs. And
+
+153
+00:05:48,479 --> 00:05:54,759
+the idea applies to other input output
+
+154
+00:05:50,800 --> 00:05:54,759
+relationships as well.
+
+155
+00:05:56,080 --> 00:06:00,000
+Building on what we just discussed here,
+
+156
+00:05:57,919 --> 00:06:02,000
+we observe something quite elegant. The
+
+157
+00:06:00,000 --> 00:06:04,080
+shape of the force curve, whether it's a
+
+158
+00:06:02,000 --> 00:06:06,160
+tall, narrow spike or a wide, shallow
+
+159
+00:06:04,080 --> 00:06:08,560
+push, doesn't actually matter when it
+
+160
+00:06:06,160 --> 00:06:10,720
+comes to total impulse. What truly
+
+161
+00:06:08,560 --> 00:06:12,479
+matters is the area under the force time
+
+162
+00:06:10,720 --> 00:06:14,479
+curve.
+
+163
+00:06:12,479 --> 00:06:16,960
+This area represents the cumulative
+
+164
+00:06:14,479 --> 00:06:18,880
+effect of the force. So a small force
+
+165
+00:06:16,960 --> 00:06:20,639
+applied over a long duration can have
+
+166
+00:06:18,880 --> 00:06:23,199
+the same impulse as a large force
+
+167
+00:06:20,639 --> 00:06:25,039
+applied for a short time.
+
+168
+00:06:23,199 --> 00:06:26,880
+In system terms, different kinds of
+
+169
+00:06:25,039 --> 00:06:29,360
+inputs can result in the same response
+
+170
+00:06:26,880 --> 00:06:31,199
+if their total impact, the area, is
+
+171
+00:06:29,360 --> 00:06:33,360
+identical.
+
+172
+00:06:31,199 --> 00:06:35,039
+This idea is central to convolution.
+
+173
+00:06:33,360 --> 00:06:37,280
+We're not just tracking individual
+
+174
+00:06:35,039 --> 00:06:41,080
+values, but the accumulated effect of an
+
+175
+00:06:37,280 --> 00:06:41,080
+input across time.
+
+176
+00:06:42,639 --> 00:06:47,360
+Now, let's extend that idea.
+
+177
+00:06:45,600 --> 00:06:49,520
+Impulse isn't limited to rectangular
+
+178
+00:06:47,360 --> 00:06:51,680
+shapes. We can see in this graph that
+
+179
+00:06:49,520 --> 00:06:54,080
+different Gaussian curves, whether wide
+
+180
+00:06:51,680 --> 00:06:57,039
+or narrow, flat or sharp, can all serve
+
+181
+00:06:54,080 --> 00:06:58,880
+as impulsike inputs.
+
+182
+00:06:57,039 --> 00:07:01,440
+What matters is the area under each
+
+183
+00:06:58,880 --> 00:07:02,960
+curve. This area represents the total
+
+184
+00:07:01,440 --> 00:07:05,840
+impulse delivered by the force
+
+185
+00:07:02,960 --> 00:07:07,759
+regardless of how the function looks.
+
+186
+00:07:05,840 --> 00:07:10,800
+As long as that area remains the same,
+
+187
+00:07:07,759 --> 00:07:12,800
+the impact on the system is the same.
+
+188
+00:07:10,800 --> 00:07:15,039
+This insight is critical in both physics
+
+189
+00:07:12,800 --> 00:07:17,280
+and engineering. We often abstract away
+
+190
+00:07:15,039 --> 00:07:19,520
+the exact shape of a signal and focus
+
+191
+00:07:17,280 --> 00:07:22,520
+instead on its integrated effect, the
+
+192
+00:07:19,520 --> 00:07:22,520
+impulse.
+
+193
+00:07:24,240 --> 00:07:28,080
+This brings us to an important
+
+194
+00:07:25,759 --> 00:07:30,400
+mathematical idea, the limiting process,
+
+195
+00:07:28,080 --> 00:07:32,240
+which gives us a way to model an ideal
+
+196
+00:07:30,400 --> 00:07:34,160
+impulse.
+
+197
+00:07:32,240 --> 00:07:36,720
+Let's define a simple function. We'll
+
+198
+00:07:34,160 --> 00:07:41,120
+call it dao of t.
+
+199
+00:07:36,720 --> 00:07:43,360
+It's equal to 1 / 2 to when t is between
+
+200
+00:07:41,120 --> 00:07:45,759
+minus toao and toao. and it's equal to
+
+201
+00:07:43,360 --> 00:07:49,120
+zero everywhere else.
+
+202
+00:07:45,759 --> 00:07:50,960
+So again d to of t equals 1 / 2 to if t
+
+203
+00:07:49,120 --> 00:07:55,360
+is greater than minus to and less than
+
+204
+00:07:50,960 --> 00:07:57,599
+toao otherwise it's zero.
+
+205
+00:07:55,360 --> 00:07:59,680
+Now as tao gets smaller and smaller this
+
+206
+00:07:57,599 --> 00:08:02,000
+function becomes taller and narrower but
+
+207
+00:07:59,680 --> 00:08:03,680
+the area under the curve remains exactly
+
+208
+00:08:02,000 --> 00:08:05,759
+one.
+
+209
+00:08:03,680 --> 00:08:08,000
+That's the key.
+
+210
+00:08:05,759 --> 00:08:10,319
+As we shrink the width to zero and the
+
+211
+00:08:08,000 --> 00:08:13,039
+height grows without bound, we approach
+
+212
+00:08:10,319 --> 00:08:16,479
+the direct delta function mathematically
+
+213
+00:08:13,039 --> 00:08:18,720
+comma. We say the limit of d to of t as
+
+214
+00:08:16,479 --> 00:08:21,360
+toao approaches zero is zero everywhere
+
+215
+00:08:18,720 --> 00:08:23,360
+except at t equals z. And at the same
+
+216
+00:08:21,360 --> 00:08:27,680
+time, the limit of the area under the
+
+217
+00:08:23,360 --> 00:08:29,360
+curve capital 1 of toao is equal to 1.
+
+218
+00:08:27,680 --> 00:08:31,440
+In other words, the delta function is
+
+219
+00:08:29,360 --> 00:08:34,560
+infinitely narrow, infinitely tall, and
+
+220
+00:08:31,440 --> 00:08:36,240
+yet has a finite area of one.
+
+221
+00:08:34,560 --> 00:08:38,719
+This makes it a perfect tool for
+
+222
+00:08:36,240 --> 00:08:40,800
+modeling ideal impulses, especially when
+
+223
+00:08:38,719 --> 00:08:43,440
+we need to represent quick concentrated
+
+224
+00:08:40,800 --> 00:08:45,519
+energy or a sharp event in time. And
+
+225
+00:08:43,440 --> 00:08:47,440
+this idea will become central as we move
+
+226
+00:08:45,519 --> 00:08:49,200
+into our discussion of convolution,
+
+227
+00:08:47,440 --> 00:08:50,880
+where impulse responses help us
+
+228
+00:08:49,200 --> 00:08:54,680
+understand how systems behave in
+
+229
+00:08:50,880 --> 00:08:54,680
+response to various inputs.
+
+230
+00:08:56,399 --> 00:09:00,320
+Let's take a moment to reflect on why
+
+231
+00:08:58,240 --> 00:09:02,720
+the limiting process is essential when
+
+232
+00:09:00,320 --> 00:09:04,959
+defining an impulse.
+
+233
+00:09:02,720 --> 00:09:07,120
+You might wonder if we already know an
+
+234
+00:09:04,959 --> 00:09:09,440
+impulse gives us the desired effect like
+
+235
+00:09:07,120 --> 00:09:11,120
+setting a golf ball in motion, why go
+
+236
+00:09:09,440 --> 00:09:14,120
+through the trouble of idealizing it
+
+237
+00:09:11,120 --> 00:09:14,120
+mathematically?
+
+238
+00:09:14,240 --> 00:09:19,120
+The reason lies in precision.
+
+239
+00:09:16,959 --> 00:09:21,360
+By applying the limiting process, we
+
+240
+00:09:19,120 --> 00:09:23,360
+create a perfect universal model of an
+
+241
+00:09:21,360 --> 00:09:26,800
+impulse. One that's as rigorous as the
+
+242
+00:09:23,360 --> 00:09:28,720
+definition of a derivative in calculus.
+
+243
+00:09:26,800 --> 00:09:30,720
+Think of how we define a derivative. we
+
+244
+00:09:28,720 --> 00:09:32,959
+take a small change and by letting that
+
+245
+00:09:30,720 --> 00:09:34,880
+change approach zero we achieve an exact
+
+246
+00:09:32,959 --> 00:09:38,959
+result. We're doing something similar
+
+247
+00:09:34,880 --> 00:09:40,800
+here with the drack delta function.
+
+248
+00:09:38,959 --> 00:09:43,920
+Now regarding the shape of the delta
+
+249
+00:09:40,800 --> 00:09:45,920
+function does it matter?
+
+250
+00:09:43,920 --> 00:09:48,000
+In fact no
+
+251
+00:09:45,920 --> 00:09:50,080
+what matters is the area under the curve
+
+252
+00:09:48,000 --> 00:09:51,920
+not how the curve looks. It's like
+
+253
+00:09:50,080 --> 00:09:54,480
+receiving payment whether it comes in
+
+254
+00:09:51,920 --> 00:09:57,760
+one sum or in smaller installments. The
+
+255
+00:09:54,480 --> 00:09:59,680
+total value is what counts.
+
+256
+00:09:57,760 --> 00:10:01,680
+Interestingly, if you start worrying
+
+257
+00:09:59,680 --> 00:10:04,160
+about the exact shape without measuring
+
+258
+00:10:01,680 --> 00:10:05,839
+it, you're in uncertain territory.
+
+259
+00:10:04,160 --> 00:10:07,920
+Without measurement, all shapes are
+
+260
+00:10:05,839 --> 00:10:10,480
+possible. A bit like the probabilistic
+
+261
+00:10:07,920 --> 00:10:12,320
+world of quantum mechanics. Only when we
+
+262
+00:10:10,480 --> 00:10:14,160
+observe or measure do we know what's
+
+263
+00:10:12,320 --> 00:10:16,000
+truly there.
+
+264
+00:10:14,160 --> 00:10:18,160
+This connection offers a fascinating
+
+265
+00:10:16,000 --> 00:10:22,279
+lens on how we idealize and model
+
+266
+00:10:18,160 --> 00:10:22,279
+impulses in system theory.
+
+267
+00:10:23,680 --> 00:10:27,760
+Let's take a deeper look at the durac
+
+268
+00:10:25,519 --> 00:10:32,000
+delta function. One of the most powerful
+
+269
+00:10:27,760 --> 00:10:33,920
+concepts in system analysis,
+
+270
+00:10:32,000 --> 00:10:35,920
+the delta function is what we call a
+
+271
+00:10:33,920 --> 00:10:38,640
+generalized function or in mathematical
+
+272
+00:10:35,920 --> 00:10:40,640
+terms a distribution. It helps us model
+
+273
+00:10:38,640 --> 00:10:42,720
+a perfect impulse, something that
+
+274
+00:10:40,640 --> 00:10:45,040
+delivers a concentrated effect at a
+
+275
+00:10:42,720 --> 00:10:46,399
+single moment in time.
+
+276
+00:10:45,040 --> 00:10:48,240
+Now, here's how we describe it
+
+277
+00:10:46,399 --> 00:10:50,640
+mathematically.
+
+278
+00:10:48,240 --> 00:10:53,040
+We say that delta of t minus t kn equals
+
+279
+00:10:50,640 --> 00:10:55,920
+zero for all values of t not equal to t
+
+280
+00:10:53,040 --> 00:10:57,760
+kn. And when we integrate this delta
+
+281
+00:10:55,920 --> 00:11:00,160
+function from minus infinity to
+
+282
+00:10:57,760 --> 00:11:02,880
+infinity, the result is 1 dot. What does
+
+283
+00:11:00,160 --> 00:11:05,040
+that mean?
+
+284
+00:11:02,880 --> 00:11:07,120
+It means the function is zero everywhere
+
+285
+00:11:05,040 --> 00:11:10,240
+except at one specific point in time,
+
+286
+00:11:07,120 --> 00:11:12,240
+which we call t. At that single point,
+
+287
+00:11:10,240 --> 00:11:15,120
+it has an infinitely sharp spike, but
+
+288
+00:11:12,240 --> 00:11:18,240
+the area under the spike is exactly one.
+
+289
+00:11:15,120 --> 00:11:20,480
+That area is what we call the impulse.
+
+290
+00:11:18,240 --> 00:11:22,959
+So even though we can't see or draw the
+
+291
+00:11:20,480 --> 00:11:26,079
+spike perfectly, we know that its total
+
+292
+00:11:22,959 --> 00:11:28,160
+effect, the impulse is one. That's what
+
+293
+00:11:26,079 --> 00:11:31,839
+matters. The effect is important, but
+
+294
+00:11:28,160 --> 00:11:33,760
+the exact shape doesn't matter.
+
+295
+00:11:31,839 --> 00:11:35,680
+Now let's shift to the discrete version
+
+296
+00:11:33,760 --> 00:11:38,079
+of the delta function. Something we use
+
+297
+00:11:35,680 --> 00:11:40,640
+in digital systems dot. We define delta
+
+298
+00:11:38,079 --> 00:11:43,200
+of n like this. It equals one when n is
+
+299
+00:11:40,640 --> 00:11:45,360
+zero and it equals zero for all other
+
+300
+00:11:43,200 --> 00:11:47,200
+values of n.
+
+301
+00:11:45,360 --> 00:11:49,760
+In other words, this function is zero
+
+302
+00:11:47,200 --> 00:11:51,920
+everywhere except at n equals z where it
+
+303
+00:11:49,760 --> 00:11:54,480
+has a value of one dot at quote s a
+
+304
+00:11:51,920 --> 00:11:57,920
+single pulse like a quick tap at a
+
+305
+00:11:54,480 --> 00:12:00,160
+specific point in time.
+
+306
+00:11:57,920 --> 00:12:02,320
+We can also shift this pulse. For
+
+307
+00:12:00,160 --> 00:12:05,760
+example, delta of n minus 2 just moves
+
+308
+00:12:02,320 --> 00:12:08,240
+the pulse to position n= 2.
+
+309
+00:12:05,760 --> 00:12:10,160
+This simple pulse is incredibly useful.
+
+310
+00:12:08,240 --> 00:12:12,160
+It forms the building block for discrete
+
+311
+00:12:10,160 --> 00:12:14,880
+time convolution, which we'll talk about
+
+312
+00:12:12,160 --> 00:12:16,959
+next.
+
+313
+00:12:14,880 --> 00:12:18,880
+So both the continuous and discrete
+
+314
+00:12:16,959 --> 00:12:21,600
+versions of the delta function help us
+
+315
+00:12:18,880 --> 00:12:23,279
+analyze how systems respond to input
+
+316
+00:12:21,600 --> 00:12:27,560
+whether we're dealing with real world
+
+317
+00:12:23,279 --> 00:12:27,560
+signals or digital data.
+
+318
+00:12:29,120 --> 00:12:33,680
+Before we explore how the delta function
+
+319
+00:12:31,440 --> 00:12:36,399
+models sampling, let's take a quick look
+
+320
+00:12:33,680 --> 00:12:39,200
+at the integral mean value theorem, a
+
+321
+00:12:36,399 --> 00:12:41,600
+fundamental concept from calculus.
+
+322
+00:12:39,200 --> 00:12:44,079
+Imagine we have a continuous function
+
+323
+00:12:41,600 --> 00:12:46,880
+plotted over the interval from A to B.
+
+324
+00:12:44,079 --> 00:12:49,760
+The area under the curve shaded in green
+
+325
+00:12:46,880 --> 00:12:52,880
+on the slide is found by integrating the
+
+326
+00:12:49,760 --> 00:12:54,959
+function from A to B.
+
+327
+00:12:52,880 --> 00:12:57,200
+Now, here's what the mean value theorem
+
+328
+00:12:54,959 --> 00:12:59,680
+says. Somewhere between A and B, there's
+
+329
+00:12:57,200 --> 00:13:01,279
+at least one point, which we'll call C,
+
+330
+00:12:59,680 --> 00:13:04,079
+where the height of the function at that
+
+331
+00:13:01,279 --> 00:13:06,160
+point f of C multiplied by the width of
+
+332
+00:13:04,079 --> 00:13:08,560
+the interval gives you the same area as
+
+333
+00:13:06,160 --> 00:13:10,480
+the one under the curve.
+
+334
+00:13:08,560 --> 00:13:12,480
+It's like finding a rectangle with the
+
+335
+00:13:10,480 --> 00:13:14,399
+same base and the same area. It
+
+336
+00:13:12,480 --> 00:13:18,079
+represents the average value of the
+
+337
+00:13:14,399 --> 00:13:20,639
+function across the interval.
+
+338
+00:13:18,079 --> 00:13:22,399
+This concept of average value over a
+
+339
+00:13:20,639 --> 00:13:24,480
+short interval will help us understand
+
+340
+00:13:22,399 --> 00:13:29,240
+how the delta function works when it
+
+341
+00:13:24,480 --> 00:13:29,240
+comes to sampling a continuous function.
+
+342
+00:13:30,800 --> 00:13:34,720
+Let's now connect this idea directly to
+
+343
+00:13:32,880 --> 00:13:38,240
+the delta function and its role in
+
+344
+00:13:34,720 --> 00:13:40,880
+sampling. Imagine you have a continuous
+
+345
+00:13:38,240 --> 00:13:43,120
+function. Let's call it f of t. Now if
+
+346
+00:13:40,880 --> 00:13:45,920
+you multiply this function by a shifted
+
+347
+00:13:43,120 --> 00:13:47,839
+delta function, specifically delta of t
+
+348
+00:13:45,920 --> 00:13:50,720
+minus t kn, and then integrate,
+
+349
+00:13:47,839 --> 00:13:52,639
+something powerful happens.
+
+350
+00:13:50,720 --> 00:13:54,959
+You end up extracting the value of f at
+
+351
+00:13:52,639 --> 00:13:58,959
+t. In other words, the delta function
+
+352
+00:13:54,959 --> 00:14:00,880
+acts like a perfect sampling tool.
+
+353
+00:13:58,959 --> 00:14:03,279
+Mathematically, this is shown through a
+
+354
+00:14:00,880 --> 00:14:05,360
+limiting process. As the width of the
+
+355
+00:14:03,279 --> 00:14:07,519
+delta function shrinks towards zero, its
+
+356
+00:14:05,360 --> 00:14:10,720
+height increases, but the total area
+
+357
+00:14:07,519 --> 00:14:12,800
+remains one. That's key.
+
+358
+00:14:10,720 --> 00:14:15,199
+Inside this narrow window around a knot,
+
+359
+00:14:12,800 --> 00:14:17,360
+the function f is essentially flat. And
+
+360
+00:14:15,199 --> 00:14:18,800
+using the mean value theorem, we know
+
+361
+00:14:17,360 --> 00:14:20,880
+there must be some point where the
+
+362
+00:14:18,800 --> 00:14:23,440
+function's value equals the average over
+
+363
+00:14:20,880 --> 00:14:25,680
+that interval.
+
+364
+00:14:23,440 --> 00:14:28,399
+As the window becomes infinite decimally
+
+365
+00:14:25,680 --> 00:14:32,000
+small, that point converges exactly to t
+
+366
+00:14:28,399 --> 00:14:34,160
+dot. So what do we get?
+
+367
+00:14:32,000 --> 00:14:37,920
+The integral from minus infinity to
+
+368
+00:14:34,160 --> 00:14:41,440
+infinity of delta of t minus t * f of t
+
+369
+00:14:37,920 --> 00:14:43,120
+dt equals f of t kn.
+
+370
+00:14:41,440 --> 00:14:45,600
+This is called the sampling property of
+
+371
+00:14:43,120 --> 00:14:47,680
+the delta function. It's as if the delta
+
+372
+00:14:45,600 --> 00:14:50,959
+function reaches into the function and
+
+373
+00:14:47,680 --> 00:14:53,199
+pulls out the value at a single point.
+
+374
+00:14:50,959 --> 00:14:55,199
+Even more fascinatingly, we can actually
+
+375
+00:14:53,199 --> 00:14:57,680
+rebuild any continuous function using
+
+376
+00:14:55,199 --> 00:14:59,760
+this idea. By stacking many delta
+
+377
+00:14:57,680 --> 00:15:01,839
+functions across time, each weighted by
+
+378
+00:14:59,760 --> 00:15:04,880
+the function's value at that point, we
+
+379
+00:15:01,839 --> 00:15:06,720
+can reconstruct the entire function.
+
+380
+00:15:04,880 --> 00:15:09,440
+Think of it like slicing the function
+
+381
+00:15:06,720 --> 00:15:11,199
+into tiny pieces. Each slice tells us
+
+382
+00:15:09,440 --> 00:15:12,880
+something. And when you add them all
+
+383
+00:15:11,199 --> 00:15:15,880
+together, you get the full picture.
+
+384
+00:15:12,880 --> 00:15:15,880
+Again,
+
+385
+00:15:17,360 --> 00:15:22,160
+let's now think about how this idea
+
+386
+00:15:19,120 --> 00:15:24,320
+translates to the discrete case.
+
+387
+00:15:22,160 --> 00:15:26,320
+You can visualize a discrete function as
+
+388
+00:15:24,320 --> 00:15:29,040
+a collection of rectangular bars,
+
+389
+00:15:26,320 --> 00:15:31,760
+sometimes called gate functions. These
+
+390
+00:15:29,040 --> 00:15:34,240
+bars represent values at specific evenly
+
+391
+00:15:31,760 --> 00:15:36,959
+spaced points like sampling a continuous
+
+392
+00:15:34,240 --> 00:15:38,639
+function at fixed intervals.
+
+393
+00:15:36,959 --> 00:15:41,279
+Here you can see the mathematical
+
+394
+00:15:38,639 --> 00:15:43,120
+expression in this slide.
+
+395
+00:15:41,279 --> 00:15:44,800
+This function is defined peacewise as
+
+396
+00:15:43,120 --> 00:15:47,519
+follows.
+
+397
+00:15:44,800 --> 00:15:50,000
+It equals 0 when the absolute value of t
+
+398
+00:15:47,519 --> 00:15:52,720
+is greater than 1/2. It equals 1/2 when
+
+399
+00:15:50,000 --> 00:15:54,720
+the absolute value of t is exactly 1/2.
+
+400
+00:15:52,720 --> 00:15:58,480
+And it equals 1 when the absolute value
+
+401
+00:15:54,720 --> 00:16:00,480
+of t is less than 1/2.
+
+402
+00:15:58,480 --> 00:16:02,880
+In other words, the rectangular function
+
+403
+00:16:00,480 --> 00:16:05,519
+is centered at zero, has a total width
+
+404
+00:16:02,880 --> 00:16:08,959
+of one, and represents a simple finite
+
+405
+00:16:05,519 --> 00:16:10,639
+pulse like a short on signal.
+
+406
+00:16:08,959 --> 00:16:12,720
+At the bottom of the slide, we define
+
+407
+00:16:10,639 --> 00:16:15,040
+the discrete delta function written as
+
+408
+00:16:12,720 --> 00:16:17,279
+delta of n.
+
+409
+00:16:15,040 --> 00:16:19,199
+It equals one when n is zero and zero
+
+410
+00:16:17,279 --> 00:16:21,519
+otherwise.
+
+411
+00:16:19,199 --> 00:16:24,560
+So delta of n is a single spike located
+
+412
+00:16:21,519 --> 00:16:28,399
+at n equals z. If we shift it like delta
+
+413
+00:16:24,560 --> 00:16:30,399
+of n minus 2, the spike moves to n= 2.
+
+414
+00:16:28,399 --> 00:16:32,240
+This function serves as the discrete
+
+415
+00:16:30,399 --> 00:16:34,560
+version of the continuous delta
+
+416
+00:16:32,240 --> 00:16:36,639
+function. By shifting and scaling these
+
+417
+00:16:34,560 --> 00:16:39,040
+unit impulses, we can represent any
+
+418
+00:16:36,639 --> 00:16:41,360
+discrete signal as a sum of these basic
+
+419
+00:16:39,040 --> 00:16:44,839
+components, just like reconstructing a
+
+420
+00:16:41,360 --> 00:16:44,839
+picture with pixels.
+
+421
+00:16:46,480 --> 00:16:51,839
+Here you can see the idea visually.
+
+422
+00:16:49,680 --> 00:16:54,480
+Imagine the original continuous function
+
+423
+00:16:51,839 --> 00:16:57,360
+shown in gray. We can approximate it
+
+424
+00:16:54,480 --> 00:16:59,519
+pie-wise using constant slices, small
+
+425
+00:16:57,360 --> 00:17:01,519
+rectangles, each with a height that
+
+426
+00:16:59,519 --> 00:17:03,680
+matches the continuous function's value
+
+427
+00:17:01,519 --> 00:17:05,919
+at that point.
+
+428
+00:17:03,680 --> 00:17:08,319
+Each rectangle corresponds to a delta
+
+429
+00:17:05,919 --> 00:17:12,160
+function or a rectangular bar scaled to
+
+430
+00:17:08,319 --> 00:17:14,319
+match the original function's height.
+
+431
+00:17:12,160 --> 00:17:16,160
+The key point is the area under each
+
+432
+00:17:14,319 --> 00:17:17,919
+rectangle is equivalent to the area
+
+433
+00:17:16,160 --> 00:17:20,240
+under the corresponding delta function
+
+434
+00:17:17,919 --> 00:17:22,160
+at that location.
+
+435
+00:17:20,240 --> 00:17:23,839
+In this way, everything ties together
+
+436
+00:17:22,160 --> 00:17:26,839
+between the continuous and discrete
+
+437
+00:17:23,839 --> 00:17:26,839
+perspectives.
+
+438
+00:17:28,640 --> 00:17:34,000
+Here you can see the idea visually.
+
+439
+00:17:31,039 --> 00:17:36,640
+Imagine the original continuous function
+
+440
+00:17:34,000 --> 00:17:39,520
+shown in gray. We can approximate it
+
+441
+00:17:36,640 --> 00:17:41,679
+pie-wise using constant slices, small
+
+442
+00:17:39,520 --> 00:17:43,760
+rectangles, each with a height that
+
+443
+00:17:41,679 --> 00:17:45,840
+matches the continuous functions value
+
+444
+00:17:43,760 --> 00:17:48,080
+at that point.
+
+445
+00:17:45,840 --> 00:17:50,480
+Each rectangle corresponds to a delta
+
+446
+00:17:48,080 --> 00:17:54,320
+function or a rectangular bar scaled to
+
+447
+00:17:50,480 --> 00:17:56,559
+match the original function's height.
+
+448
+00:17:54,320 --> 00:17:58,320
+The key point is the area under each
+
+449
+00:17:56,559 --> 00:18:00,080
+rectangle is equivalent to the area
+
+450
+00:17:58,320 --> 00:18:02,480
+under the corresponding delta function
+
+451
+00:18:00,080 --> 00:18:04,320
+at that location.
+
+452
+00:18:02,480 --> 00:18:06,000
+In this way, everything ties together
+
+453
+00:18:04,320 --> 00:18:09,000
+between the continuous and discrete
+
+454
+00:18:06,000 --> 00:18:09,000
+perspectives.
+
+455
+00:18:10,880 --> 00:18:13,919
+Now that we've developed an
+
+456
+00:18:12,240 --> 00:18:15,840
+understanding of the delta function and
+
+457
+00:18:13,919 --> 00:18:18,400
+its role in modeling discrete events,
+
+458
+00:18:15,840 --> 00:18:20,320
+let's take this idea a step further and
+
+459
+00:18:18,400 --> 00:18:24,320
+see how we can use it to represent an
+
+460
+00:18:20,320 --> 00:18:26,799
+entire discrete function. Here
+
+461
+00:18:24,320 --> 00:18:29,120
+we observe a powerful mathematical
+
+462
+00:18:26,799 --> 00:18:31,679
+concept. Any discrete function let's
+
+463
+00:18:29,120 --> 00:18:34,559
+call it g of n can be expressed as a
+
+464
+00:18:31,679 --> 00:18:36,640
+weighted sum of shifted delta functions.
+
+465
+00:18:34,559 --> 00:18:38,480
+That is we take the delta function shift
+
+466
+00:18:36,640 --> 00:18:40,400
+it to the appropriate position and scale
+
+467
+00:18:38,480 --> 00:18:42,240
+it by the function's value at that
+
+468
+00:18:40,400 --> 00:18:43,919
+point.
+
+469
+00:18:42,240 --> 00:18:46,080
+When we add all these together we
+
+470
+00:18:43,919 --> 00:18:47,840
+recover the original function dot. Here
+
+471
+00:18:46,080 --> 00:18:50,080
+you can see the mathematical expression
+
+472
+00:18:47,840 --> 00:18:52,000
+in this slide.
+
+473
+00:18:50,080 --> 00:18:54,559
+This formula tells us that each sample
+
+474
+00:18:52,000 --> 00:18:58,000
+of G contributes one impulse located at
+
+475
+00:18:54,559 --> 00:18:59,919
+N= K and scaled by G at that K. When we
+
+476
+00:18:58,000 --> 00:19:04,559
+add up all these scaled and shifted
+
+477
+00:18:59,919 --> 00:19:06,720
+impulses, we rebuild the function G.
+
+478
+00:19:04,559 --> 00:19:08,799
+Let's look at a specific example to make
+
+479
+00:19:06,720 --> 00:19:10,640
+this concrete.
+
+480
+00:19:08,799 --> 00:19:13,200
+Suppose your discrete function consists
+
+481
+00:19:10,640 --> 00:19:15,679
+of just a few nonzero points. The first
+
+482
+00:19:13,200 --> 00:19:18,320
+point is at n equals 0 with value 1.
+
+483
+00:19:15,679 --> 00:19:20,960
+That's just delta of n.
+
+484
+00:19:18,320 --> 00:19:23,679
+The second point is at n= 1 with a value
+
+485
+00:19:20,960 --> 00:19:26,080
+of negative 1. So we write that as minus
+
+486
+00:19:23,679 --> 00:19:29,440
+delta of n minus one dot. And the third
+
+487
+00:19:26,080 --> 00:19:34,320
+point is at n= 2 with a value of 1.5
+
+488
+00:19:29,440 --> 00:19:36,559
+which becomes 1.5 * delta of n minus2.
+
+489
+00:19:34,320 --> 00:19:38,799
+By adding these three impulses together,
+
+490
+00:19:36,559 --> 00:19:41,520
+we effectively reconstruct the original
+
+491
+00:19:38,799 --> 00:19:43,440
+signal point by point.
+
+492
+00:19:41,520 --> 00:19:45,600
+This approach is not only elegant, it's
+
+493
+00:19:43,440 --> 00:19:48,000
+also foundational in signal processing
+
+494
+00:19:45,600 --> 00:19:50,240
+and linear systems. It allows us to
+
+495
+00:19:48,000 --> 00:19:52,559
+treat any discrete time signal as a sum
+
+496
+00:19:50,240 --> 00:19:54,960
+of building blocks, scaled and shifted
+
+497
+00:19:52,559 --> 00:19:58,559
+impulses, making analysis and filtering
+
+498
+00:19:54,960 --> 00:20:00,320
+much easier. Later on,
+
+499
+00:19:58,559 --> 00:20:02,160
+we'll continue building on this idea
+
+500
+00:20:00,320 --> 00:20:04,240
+when we introduce convolution, which is
+
+501
+00:20:02,160 --> 00:20:08,360
+just the response of a system to this
+
+502
+00:20:04,240 --> 00:20:08,360
+kind of deltabased representation.
+
+503
+00:20:10,480 --> 00:20:14,480
+So far, we've explored both the
+
+504
+00:20:12,240 --> 00:20:16,640
+continuous and discrete versions of the
+
+505
+00:20:14,480 --> 00:20:18,799
+delta function.
+
+506
+00:20:16,640 --> 00:20:20,720
+Both approaches give us ways to express
+
+507
+00:20:18,799 --> 00:20:22,880
+functions as combinations of basic
+
+508
+00:20:20,720 --> 00:20:24,720
+building blocks.
+
+509
+00:20:22,880 --> 00:20:26,480
+Whether a system or phenomenon is
+
+510
+00:20:24,720 --> 00:20:29,760
+fundamentally continuous or discrete
+
+511
+00:20:26,480 --> 00:20:31,600
+isn't always clear. Think of water.
+
+512
+00:20:29,760 --> 00:20:33,760
+When you see a flowing stream, it seems
+
+513
+00:20:31,600 --> 00:20:36,159
+continuous. But if you zoom in, you'll
+
+514
+00:20:33,760 --> 00:20:38,240
+find discrete molecules. And if you go
+
+515
+00:20:36,159 --> 00:20:40,159
+even deeper, those molecules follow the
+
+516
+00:20:38,240 --> 00:20:42,320
+rules of quantum mechanics, where a
+
+517
+00:20:40,159 --> 00:20:45,120
+continuous probability wave describes
+
+518
+00:20:42,320 --> 00:20:47,280
+behavior.
+
+519
+00:20:45,120 --> 00:20:49,440
+In engineering, we switch between these
+
+520
+00:20:47,280 --> 00:20:53,200
+views depending on what's useful. A
+
+521
+00:20:49,440 --> 00:20:55,200
+summation represents the discrete case.
+
+522
+00:20:53,200 --> 00:20:57,440
+An integral represents the continuous
+
+523
+00:20:55,200 --> 00:20:59,280
+case. They are really two sides of the
+
+524
+00:20:57,440 --> 00:21:01,120
+same coin.
+
+525
+00:20:59,280 --> 00:21:03,360
+With this foundation, we're ready to
+
+526
+00:21:01,120 --> 00:21:05,200
+move forward and explore how delta
+
+527
+00:21:03,360 --> 00:21:07,520
+functions connect directly to shift
+
+528
+00:21:05,200 --> 00:21:11,880
+invariant systems which play a key role
+
+529
+00:21:07,520 --> 00:21:11,880
+in imaging and signal processing.
+
+530
+00:21:13,520 --> 00:21:18,559
+Let's take a look at this graph.
+
+531
+00:21:16,320 --> 00:21:21,679
+This impulse response shown here as h of
+
+532
+00:21:18,559 --> 00:21:23,280
+n is our key piece of knowledge.
+
+533
+00:21:21,679 --> 00:21:25,280
+I'm not asking you to start from
+
+534
+00:21:23,280 --> 00:21:27,440
+nothing. I'm giving you the systems
+
+535
+00:21:25,280 --> 00:21:30,799
+reaction to a standardized input, the
+
+536
+00:21:27,440 --> 00:21:33,520
+delta function applied at time zero.
+
+537
+00:21:30,799 --> 00:21:35,280
+Once you have that, you're ready.
+
+538
+00:21:33,520 --> 00:21:37,200
+Because if I give the system a more
+
+539
+00:21:35,280 --> 00:21:39,760
+general input, not just a single
+
+540
+00:21:37,200 --> 00:21:43,520
+impulse, but any arbitrary shape, you
+
+541
+00:21:39,760 --> 00:21:45,200
+can still figure out the output.
+
+542
+00:21:43,520 --> 00:21:46,960
+So the question becomes, how do you
+
+543
+00:21:45,200 --> 00:21:50,480
+compute the output from this known
+
+544
+00:21:46,960 --> 00:21:52,159
+impulse response and a general input?
+
+545
+00:21:50,480 --> 00:21:53,679
+That's exactly where convolution comes
+
+546
+00:21:52,159 --> 00:21:55,440
+in.
+
+547
+00:21:53,679 --> 00:21:57,200
+Convolution is the operation that
+
+548
+00:21:55,440 --> 00:21:59,360
+combines the input signal with the
+
+549
+00:21:57,200 --> 00:22:01,120
+impulse response to produce the final
+
+550
+00:21:59,360 --> 00:22:03,039
+output.
+
+551
+00:22:01,120 --> 00:22:06,440
+It's absolutely essential in imaging and
+
+552
+00:22:03,039 --> 00:22:06,440
+signal processing.
+
+553
+00:22:08,080 --> 00:22:12,960
+In a shift invariant system, if you know
+
+554
+00:22:10,799 --> 00:22:15,200
+the systems response to an impulse at
+
+555
+00:22:12,960 --> 00:22:19,039
+one location, you can predict its
+
+556
+00:22:15,200 --> 00:22:20,960
+response at any other location or time.
+
+557
+00:22:19,039 --> 00:22:22,799
+That's because shift invariance means
+
+558
+00:22:20,960 --> 00:22:24,559
+the system behaves the same way no
+
+559
+00:22:22,799 --> 00:22:26,400
+matter where or when you apply the
+
+560
+00:22:24,559 --> 00:22:28,080
+impulse.
+
+561
+00:22:26,400 --> 00:22:29,919
+If you apply an impulse at a different
+
+562
+00:22:28,080 --> 00:22:31,840
+time or position, you can infer the
+
+563
+00:22:29,919 --> 00:22:34,159
+output by simply shifting the known
+
+564
+00:22:31,840 --> 00:22:35,600
+response accordingly. Dot. And because
+
+565
+00:22:34,159 --> 00:22:38,480
+the system is linear, you have
+
+566
+00:22:35,600 --> 00:22:40,480
+additivity and homogeneity. Dot. If you
+
+567
+00:22:38,480 --> 00:22:42,240
+scale an input, the output will be
+
+568
+00:22:40,480 --> 00:22:44,640
+scaled in the same way. Dot. If you add
+
+569
+00:22:42,240 --> 00:22:46,799
+multiple inputs, the output will be the
+
+570
+00:22:44,640 --> 00:22:48,480
+sum of individual outputs due to each
+
+571
+00:22:46,799 --> 00:22:50,559
+input.
+
+572
+00:22:48,480 --> 00:22:52,240
+This is exactly why knowing the impulse
+
+573
+00:22:50,559 --> 00:22:54,559
+response of a system tells you
+
+574
+00:22:52,240 --> 00:22:58,400
+everything about how that system behaves
+
+575
+00:22:54,559 --> 00:23:00,400
+no matter what input you give it.
+
+576
+00:22:58,400 --> 00:23:02,640
+To summarize, for a shift invariant
+
+577
+00:23:00,400 --> 00:23:04,480
+linear system, given any input, we want
+
+578
+00:23:02,640 --> 00:23:06,480
+to compute the output dot, the critical
+
+579
+00:23:04,480 --> 00:23:08,960
+information we rely on is the systems
+
+580
+00:23:06,480 --> 00:23:10,799
+impulse response dot. If we know how the
+
+581
+00:23:08,960 --> 00:23:13,280
+system reacts to a delta function at
+
+582
+00:23:10,799 --> 00:23:17,880
+time zero, we can use that as a building
+
+583
+00:23:13,280 --> 00:23:17,880
+block to find the output for any input.
+
+584
+00:23:19,520 --> 00:23:23,840
+to be specific. Now let's see how we
+
+585
+00:23:21,360 --> 00:23:25,840
+actually compute the output y of n of a
+
+586
+00:23:23,840 --> 00:23:29,200
+shift invariant linear system to an
+
+587
+00:23:25,840 --> 00:23:32,080
+arbitrary input x of n formulated on the
+
+588
+00:23:29,200 --> 00:23:33,280
+first line.
+
+589
+00:23:32,080 --> 00:23:35,360
+Suppose I give you a system
+
+590
+00:23:33,280 --> 00:23:37,440
+characterized by its impulse response
+
+591
+00:23:35,360 --> 00:23:39,919
+written as h of n which is shown on the
+
+592
+00:23:37,440 --> 00:23:41,760
+second line. That means if you feed the
+
+593
+00:23:39,919 --> 00:23:44,480
+system a discrete delta function as
+
+594
+00:23:41,760 --> 00:23:46,640
+input the output will be h of n. This
+
+595
+00:23:44,480 --> 00:23:48,400
+response h of n is the system's
+
+596
+00:23:46,640 --> 00:23:50,080
+character.
+
+597
+00:23:48,400 --> 00:23:54,240
+But what if you give the system a more
+
+598
+00:23:50,080 --> 00:23:56,480
+general input say x of n.
+
+599
+00:23:54,240 --> 00:23:58,320
+What will the output y of n be which is
+
+600
+00:23:56,480 --> 00:24:01,679
+what I just formulated on the first
+
+601
+00:23:58,320 --> 00:24:04,559
+line. And a very important question.
+
+602
+00:24:01,679 --> 00:24:06,559
+Let's break it down step by step.
+
+603
+00:24:04,559 --> 00:24:08,720
+Since the system is shift invariant, if
+
+604
+00:24:06,559 --> 00:24:10,960
+you shift the input by k, the output
+
+605
+00:24:08,720 --> 00:24:13,360
+also shifts by k shown on the third
+
+606
+00:24:10,960 --> 00:24:15,840
+line. So if the input is delta of n
+
+607
+00:24:13,360 --> 00:24:17,520
+minus k the output becomes h of n minus
+
+608
+00:24:15,840 --> 00:24:19,760
+k
+
+609
+00:24:17,520 --> 00:24:22,240
+then because the system is linear if we
+
+610
+00:24:19,760 --> 00:24:24,960
+scale the input by x of k consequently
+
+611
+00:24:22,240 --> 00:24:27,679
+the output is also scaled by x of k that
+
+612
+00:24:24,960 --> 00:24:30,480
+gives us x of k * h of n minus k on the
+
+613
+00:24:27,679 --> 00:24:32,480
+fourth line.
+
+614
+00:24:30,480 --> 00:24:33,919
+Now to get the total output we add up
+
+615
+00:24:32,480 --> 00:24:35,919
+all of these scaled and shifted
+
+616
+00:24:33,919 --> 00:24:37,360
+responses.
+
+617
+00:24:35,919 --> 00:24:39,200
+Mathematically this gives us the
+
+618
+00:24:37,360 --> 00:24:41,520
+convolution sum on the right hand side
+
+619
+00:24:39,200 --> 00:24:43,679
+of the last two lines. y of n equals the
+
+620
+00:24:41,520 --> 00:24:48,080
+sum over k from minus infinity to
+
+621
+00:24:43,679 --> 00:24:49,919
+infinity of x of k * h of n minus k.
+
+622
+00:24:48,080 --> 00:24:53,200
+This is how the convolution is defined
+
+623
+00:24:49,919 --> 00:24:55,200
+and also why we need this concept.
+
+624
+00:24:53,200 --> 00:24:57,360
+It shows why the impulse response is so
+
+625
+00:24:55,200 --> 00:25:00,559
+powerful. It's all you need to compute
+
+626
+00:24:57,360 --> 00:25:02,720
+the systems output for any input.
+
+627
+00:25:00,559 --> 00:25:04,559
+Now convolution might seem a bit tricky
+
+628
+00:25:02,720 --> 00:25:06,880
+at first, especially because of the
+
+629
+00:25:04,559 --> 00:25:09,760
+flipping and shifting involved. that
+
+630
+00:25:06,880 --> 00:25:12,080
+negative k inside h of n minus k could
+
+631
+00:25:09,760 --> 00:25:13,919
+appear confusing.
+
+632
+00:25:12,080 --> 00:25:16,320
+But if you follow the logic step by
+
+633
+00:25:13,919 --> 00:25:18,799
+step, the structure becomes clear. This
+
+634
+00:25:16,320 --> 00:25:21,039
+convolution concept is fundamental in
+
+635
+00:25:18,799 --> 00:25:23,120
+linear systems and engineering. And
+
+636
+00:25:21,039 --> 00:25:27,240
+that's why we dedicate so much attention
+
+637
+00:25:23,120 --> 00:25:27,240
+to understanding convolution.
+
+638
+00:25:29,039 --> 00:25:33,120
+Now let's apply the same idea in the
+
+639
+00:25:30,880 --> 00:25:34,799
+continuous case. Again, you're given the
+
+640
+00:25:33,120 --> 00:25:38,400
+systems response to a delta function,
+
+641
+00:25:34,799 --> 00:25:40,799
+which we call h of t.
+
+642
+00:25:38,400 --> 00:25:43,600
+If we shift the delta to t minus toao,
+
+643
+00:25:40,799 --> 00:25:45,360
+the output becomes h of t minus toao. In
+
+644
+00:25:43,600 --> 00:25:47,679
+other words, shifting the input shifts
+
+645
+00:25:45,360 --> 00:25:49,760
+the output in the same way. That's shift
+
+646
+00:25:47,679 --> 00:25:52,640
+in variance.
+
+647
+00:25:49,760 --> 00:25:54,559
+Next, we scale the input by x of toao.
+
+648
+00:25:52,640 --> 00:25:57,679
+Because the system is linear, the output
+
+649
+00:25:54,559 --> 00:26:00,000
+also gets scaled, giving us x of * h of
+
+650
+00:25:57,679 --> 00:26:02,080
+t minus towo.
+
+651
+00:26:00,000 --> 00:26:04,240
+Finally, to build the full output for a
+
+652
+00:26:02,080 --> 00:26:06,559
+general input signal, we integrate over
+
+653
+00:26:04,240 --> 00:26:09,120
+all time summing these scaled and
+
+654
+00:26:06,559 --> 00:26:12,400
+shifted responses. This gives us the
+
+655
+00:26:09,120 --> 00:26:14,080
+continuous time convolution integral.
+
+656
+00:26:12,400 --> 00:26:16,159
+You can think of this as collecting all
+
+657
+00:26:14,080 --> 00:26:18,080
+the weighted impulse responses across
+
+658
+00:26:16,159 --> 00:26:20,320
+time and combining them to form the
+
+659
+00:26:18,080 --> 00:26:22,159
+systems output where we have utilized
+
+660
+00:26:20,320 --> 00:26:23,919
+the sampling property of the delta
+
+661
+00:26:22,159 --> 00:26:25,919
+function.
+
+662
+00:26:23,919 --> 00:26:28,159
+This is how linear shift invariant
+
+663
+00:26:25,919 --> 00:26:30,480
+systems behave in continuous time. And
+
+664
+00:26:28,159 --> 00:26:32,159
+this operation convolution lies at the
+
+665
+00:26:30,480 --> 00:26:34,720
+heart of modeling and understanding
+
+666
+00:26:32,159 --> 00:26:36,159
+them.
+
+667
+00:26:34,720 --> 00:26:38,480
+Finally, we have assumed that all
+
+668
+00:26:36,159 --> 00:26:40,000
+involved integrals or summations on the
+
+669
+00:26:38,480 --> 00:26:44,039
+previous slide converge. So
+
+670
+00:26:40,000 --> 00:26:44,039
+mathematically well defined.
+
+671
+00:26:45,600 --> 00:26:49,360
+So whether we're dealing with discrete
+
+672
+00:26:47,200 --> 00:26:52,000
+or continuous systems, convolution is
+
+673
+00:26:49,360 --> 00:26:55,120
+the tool we use to compute the output.
+
+674
+00:26:52,000 --> 00:26:57,120
+In both cases, the idea is the same.
+
+675
+00:26:55,120 --> 00:27:00,000
+First, express the input as a collection
+
+676
+00:26:57,120 --> 00:27:01,679
+of impulses. Then, for each impulse, you
+
+677
+00:27:00,000 --> 00:27:04,080
+already know the output. That's the
+
+678
+00:27:01,679 --> 00:27:06,480
+impulse response.
+
+679
+00:27:04,080 --> 00:27:08,480
+Finally, sum or integrate all of those
+
+680
+00:27:06,480 --> 00:27:10,240
+individual responses to get the final
+
+681
+00:27:08,480 --> 00:27:12,400
+output.
+
+682
+00:27:10,240 --> 00:27:14,799
+This process is captured using these two
+
+683
+00:27:12,400 --> 00:27:16,320
+key equations. We can see here discrete
+
+684
+00:27:14,799 --> 00:27:18,799
+and continuous mathematical
+
+685
+00:27:16,320 --> 00:27:21,039
+formulations. But I know from experience
+
+686
+00:27:18,799 --> 00:27:22,640
+that convolution can feel confusing at
+
+687
+00:27:21,039 --> 00:27:24,559
+first.
+
+688
+00:27:22,640 --> 00:27:27,039
+That's why it really helps to look at a
+
+689
+00:27:24,559 --> 00:27:30,039
+concrete example. Let's move on to one.
+
+690
+00:27:27,039 --> 00:27:30,039
+Now
+
+691
+00:27:31,279 --> 00:27:35,279
+let's consider a hands-on example using
+
+692
+00:27:33,200 --> 00:27:37,279
+two discrete functions each with five
+
+693
+00:27:35,279 --> 00:27:40,000
+data points.
+
+694
+00:27:37,279 --> 00:27:42,159
+Now imagine holding out both hands. Your
+
+695
+00:27:40,000 --> 00:27:44,559
+left hand represents one function. Let's
+
+696
+00:27:42,159 --> 00:27:46,640
+call it x of n. And your right hand
+
+697
+00:27:44,559 --> 00:27:49,039
+represents the other. This will be h of
+
+698
+00:27:46,640 --> 00:27:50,720
+n. the impulse response
+
+699
+00:27:49,039 --> 00:27:53,520
+because of that negative k in the
+
+700
+00:27:50,720 --> 00:27:55,120
+convolution sum. One function needs to
+
+701
+00:27:53,520 --> 00:27:56,960
+be flipped. Think of it like flipping
+
+702
+00:27:55,120 --> 00:27:59,679
+your right hand. So you see the back of
+
+703
+00:27:56,960 --> 00:28:01,279
+it. That's how we visualize h of n minus
+
+704
+00:27:59,679 --> 00:28:02,799
+k.
+
+705
+00:28:01,279 --> 00:28:04,559
+Now we shift this flipped function
+
+706
+00:28:02,799 --> 00:28:08,399
+across the input and calculate the
+
+707
+00:28:04,559 --> 00:28:10,000
+output step by step. For n equals 0, you
+
+708
+00:28:08,399 --> 00:28:12,720
+align the flipped function with the
+
+709
+00:28:10,000 --> 00:28:15,039
+origin. Multiply the overlapping points.
+
+710
+00:28:12,720 --> 00:28:18,960
+Then sum the products. This gives you
+
+711
+00:28:15,039 --> 00:28:20,880
+the output yi of zero. For n equals 1,
+
+712
+00:28:18,960 --> 00:28:23,440
+shift the flip function one step to the
+
+713
+00:28:20,880 --> 00:28:25,760
+right. Multiply again, sum the result
+
+714
+00:28:23,440 --> 00:28:27,520
+and you get you have one.
+
+715
+00:28:25,760 --> 00:28:30,320
+You keep shifting, multiplying, and
+
+716
+00:28:27,520 --> 00:28:31,600
+summing for each value of n.
+
+717
+00:28:30,320 --> 00:28:33,919
+You'll notice that when the two
+
+718
+00:28:31,600 --> 00:28:36,480
+functions fully overlap, you get the
+
+719
+00:28:33,919 --> 00:28:38,720
+largest value in the convolution. And as
+
+720
+00:28:36,480 --> 00:28:41,200
+they slide past each other, the overlap
+
+721
+00:28:38,720 --> 00:28:44,000
+decreases. So the convolution value
+
+722
+00:28:41,200 --> 00:28:46,240
+gradually falls back to zero.
+
+723
+00:28:44,000 --> 00:28:47,919
+This visual analogy with your hands is a
+
+724
+00:28:46,240 --> 00:28:50,480
+powerful way to understand discrete
+
+725
+00:28:47,919 --> 00:28:52,559
+convolution, especially how flipping,
+
+726
+00:28:50,480 --> 00:28:55,799
+shifting, multiplying, and summing all
+
+727
+00:28:52,559 --> 00:28:55,799
+come together.
+
+728
+00:28:57,360 --> 00:29:00,960
+Let's assign specific numbers to this
+
+729
+00:28:59,279 --> 00:29:02,640
+example.
+
+730
+00:29:00,960 --> 00:29:04,559
+Suppose on your left hand, your thumb
+
+731
+00:29:02,640 --> 00:29:07,360
+has value five, your index finger is
+
+732
+00:29:04,559 --> 00:29:10,320
+four, then three, two, and one for the
+
+733
+00:29:07,360 --> 00:29:12,080
+middle ring and little fingers.
+
+734
+00:29:10,320 --> 00:29:13,840
+On your right hand, the values go the
+
+735
+00:29:12,080 --> 00:29:16,559
+other way. Your little finger is one,
+
+736
+00:29:13,840 --> 00:29:18,880
+ring finger is two, and it increases up
+
+737
+00:29:16,559 --> 00:29:20,799
+to five at the thumb.
+
+738
+00:29:18,880 --> 00:29:23,440
+Now flip the right hand just like we
+
+739
+00:29:20,799 --> 00:29:25,679
+flip h of n in the convolution process.
+
+740
+00:29:23,440 --> 00:29:27,760
+Then slide it across the left hand
+
+741
+00:29:25,679 --> 00:29:30,159
+computing the pair-wise products at each
+
+742
+00:29:27,760 --> 00:29:32,320
+shift and summing them to get each value
+
+743
+00:29:30,159 --> 00:29:34,080
+of the output.
+
+744
+00:29:32,320 --> 00:29:37,120
+This is exactly what's happening in the
+
+745
+00:29:34,080 --> 00:29:41,120
+mat lab code shown on the slide.
+
+746
+00:29:37,120 --> 00:29:44,159
+We define x as the vector 5 4 3 2 1 and
+
+747
+00:29:41,120 --> 00:29:47,200
+h is 1 2 3 4 5.
+
+748
+00:29:44,159 --> 00:29:50,000
+Then we call y equals conv of x and h.
+
+749
+00:29:47,200 --> 00:29:52,399
+And finally we plot the result.
+
+750
+00:29:50,000 --> 00:29:54,720
+The plot shows a symmetric peak just as
+
+751
+00:29:52,399 --> 00:29:57,600
+we expect. The center point reflects
+
+752
+00:29:54,720 --> 00:29:59,760
+full overlap between the two sequences
+
+753
+00:29:57,600 --> 00:30:02,399
+and the values decrease symmetrically as
+
+754
+00:29:59,760 --> 00:30:04,240
+they slide past each other.
+
+755
+00:30:02,399 --> 00:30:07,200
+Also remember when you convolve two
+
+756
+00:30:04,240 --> 00:30:09,600
+sequences of lengths n1 and n2 the
+
+757
+00:30:07,200 --> 00:30:11,440
+result will have a length of n1 + n1
+
+758
+00:30:09,600 --> 00:30:13,200
+minus one.
+
+759
+00:30:11,440 --> 00:30:15,279
+Practicing with simple examples like
+
+760
+00:30:13,200 --> 00:30:17,919
+this helps you visualize and internalize
+
+761
+00:30:15,279 --> 00:30:20,960
+the convolution process. Flipping,
+
+762
+00:30:17,919 --> 00:30:22,720
+shifting, multiplying and adding
+
+763
+00:30:20,960 --> 00:30:24,399
+and in imaging systems which are
+
+764
+00:30:22,720 --> 00:30:27,120
+designed to be linear and shift
+
+765
+00:30:24,399 --> 00:30:30,000
+invariant. Convolution defines how the
+
+766
+00:30:27,120 --> 00:30:31,919
+system responds to any input.
+
+767
+00:30:30,000 --> 00:30:34,919
+That's why mastering this operation is
+
+768
+00:30:31,919 --> 00:30:34,919
+essential.
+
+769
+00:30:36,480 --> 00:30:41,039
+Let's see another example, this time
+
+770
+00:30:38,480 --> 00:30:42,720
+from medical imaging.
+
+771
+00:30:41,039 --> 00:30:45,120
+Imagine you're injecting a contrast
+
+772
+00:30:42,720 --> 00:30:47,120
+agent like iodine into the bloodstream
+
+773
+00:30:45,120 --> 00:30:48,720
+to highlight blood vessels in an X-ray
+
+774
+00:30:47,120 --> 00:30:50,880
+image.
+
+775
+00:30:48,720 --> 00:30:52,399
+Without contrast, the blood vessels and
+
+776
+00:30:50,880 --> 00:30:54,159
+surrounding tissue can look very
+
+777
+00:30:52,399 --> 00:30:56,399
+similar.
+
+778
+00:30:54,159 --> 00:30:58,240
+But when you add contrast, the vessels
+
+779
+00:30:56,399 --> 00:31:01,360
+light up more clearly, making them
+
+780
+00:30:58,240 --> 00:31:03,600
+easier to detect. and interpret.
+
+781
+00:31:01,360 --> 00:31:05,360
+Now, here's the key part. As the iodine
+
+782
+00:31:03,600 --> 00:31:07,600
+travels through the body, it moves along
+
+783
+00:31:05,360 --> 00:31:09,440
+multiple paths.
+
+784
+00:31:07,600 --> 00:31:11,600
+Some paths are fast, like major
+
+785
+00:31:09,440 --> 00:31:13,919
+arteries. Others are slower, like
+
+786
+00:31:11,600 --> 00:31:15,840
+capillaries or microvasculare.
+
+787
+00:31:13,919 --> 00:31:17,679
+Each of these paths introduces a
+
+788
+00:31:15,840 --> 00:31:20,159
+different delay before the contrast
+
+789
+00:31:17,679 --> 00:31:21,919
+reaches the detector.
+
+790
+00:31:20,159 --> 00:31:24,240
+If you could inject an ideal
+
+791
+00:31:21,919 --> 00:31:27,039
+instantaneous impulse of contrast, in
+
+792
+00:31:24,240 --> 00:31:28,960
+other words, a perfect delta function,
+
+793
+00:31:27,039 --> 00:31:32,080
+then what you would see is a collection
+
+794
+00:31:28,960 --> 00:31:35,200
+of impulse responses labeled here as H1,
+
+795
+00:31:32,080 --> 00:31:37,519
+H2, H3, and so on.
+
+796
+00:31:35,200 --> 00:31:39,279
+Each of these responses corresponds to a
+
+797
+00:31:37,519 --> 00:31:41,120
+different path and each arrives at a
+
+798
+00:31:39,279 --> 00:31:42,960
+different time.
+
+799
+00:31:41,120 --> 00:31:46,799
+But in reality, injections are not
+
+800
+00:31:42,960 --> 00:31:49,279
+perfect impulses. They take time.
+
+801
+00:31:46,799 --> 00:31:51,279
+This means the actual contrast input is
+
+802
+00:31:49,279 --> 00:31:53,919
+more spread out and the measured output
+
+803
+00:31:51,279 --> 00:31:56,480
+at the gamma camera becomes a sum of all
+
+804
+00:31:53,919 --> 00:32:00,159
+these delayed responses weighted by how
+
+805
+00:31:56,480 --> 00:32:02,640
+much contrast passes through each path.
+
+806
+00:32:00,159 --> 00:32:05,039
+In other words, the systems output is a
+
+807
+00:32:02,640 --> 00:32:08,159
+convolution of the injected input with
+
+808
+00:32:05,039 --> 00:32:10,399
+the systems impulse response.
+
+809
+00:32:08,159 --> 00:32:13,039
+This illustrates exactly why convolution
+
+810
+00:32:10,399 --> 00:32:15,679
+is so important in medical imaging. It
+
+811
+00:32:13,039 --> 00:32:17,840
+helps us model and interpret how signals
+
+812
+00:32:15,679 --> 00:32:20,480
+like contrast or radiation travel
+
+813
+00:32:17,840 --> 00:32:22,159
+through complex biological systems and
+
+814
+00:32:20,480 --> 00:32:26,840
+how we capture those signals with
+
+815
+00:32:22,159 --> 00:32:26,840
+imaging devices like a gamma camera.
+
+816
+00:32:28,320 --> 00:32:33,360
+In reality, the contrast isn't delivered
+
+817
+00:32:30,640 --> 00:32:35,519
+as a perfect impulse. It's injected over
+
+818
+00:32:33,360 --> 00:32:38,799
+a period of time with more at the start
+
+819
+00:32:35,519 --> 00:32:41,039
+and less later forming a time curve.
+
+820
+00:32:38,799 --> 00:32:43,200
+We can think of this non ideal input as
+
+821
+00:32:41,039 --> 00:32:45,760
+a sum of small impulses occurring at
+
+822
+00:32:43,200 --> 00:32:49,840
+different times. Each one representing a
+
+823
+00:32:45,760 --> 00:32:51,760
+fraction of the total injected dose.
+
+824
+00:32:49,840 --> 00:32:53,840
+For each of these small impulses, we
+
+825
+00:32:51,760 --> 00:32:55,360
+already know the systems response.
+
+826
+00:32:53,840 --> 00:32:59,440
+That's the impulse response we've
+
+827
+00:32:55,360 --> 00:33:01,679
+discussed. So what do we do?
+
+828
+00:32:59,440 --> 00:33:03,679
+We scale each impulse response based on
+
+829
+00:33:01,679 --> 00:33:06,000
+how much contrast was injected at that
+
+830
+00:33:03,679 --> 00:33:08,399
+moment. Shift it in time according to
+
+831
+00:33:06,000 --> 00:33:11,279
+when it was injected. and then add all
+
+832
+00:33:08,399 --> 00:33:13,039
+the individual responses together.
+
+833
+00:33:11,279 --> 00:33:14,960
+What we get is the system's total
+
+834
+00:33:13,039 --> 00:33:17,360
+response, the final signal that's
+
+835
+00:33:14,960 --> 00:33:19,200
+measured by the detector.
+
+836
+00:33:17,360 --> 00:33:21,200
+This is a perfect visualization of
+
+837
+00:33:19,200 --> 00:33:22,799
+discrete convolution in a real world
+
+838
+00:33:21,200 --> 00:33:25,279
+setting.
+
+839
+00:33:22,799 --> 00:33:27,600
+It shows how imaging systems handle non
+
+840
+00:33:25,279 --> 00:33:30,559
+ideal time varying inputs using the
+
+841
+00:33:27,600 --> 00:33:32,480
+exact same principles we've learned.
+
+842
+00:33:30,559 --> 00:33:34,799
+It may take some time for these ideas to
+
+843
+00:33:32,480 --> 00:33:37,200
+fully sink in, but they form the
+
+844
+00:33:34,799 --> 00:33:39,440
+foundation for understanding how imaging
+
+845
+00:33:37,200 --> 00:33:43,000
+systems process signals and generate
+
+846
+00:33:39,440 --> 00:33:43,000
+useful images.
+
+847
+00:33:44,559 --> 00:33:49,919
+Now, let's work through a more abstract
+
+848
+00:33:46,480 --> 00:33:53,200
+and slightly more mathematical example.
+
+849
+00:33:49,919 --> 00:33:55,039
+I like to call this a mindson example.
+
+850
+00:33:53,200 --> 00:33:56,480
+This example is based on continuous
+
+851
+00:33:55,039 --> 00:33:58,480
+convolution. And while it's not
+
+852
+00:33:56,480 --> 00:34:00,960
+difficult, it does require you to think
+
+853
+00:33:58,480 --> 00:34:04,000
+like in calculus.
+
+854
+00:34:00,960 --> 00:34:06,720
+So let's take our time with it. With
+
+855
+00:34:04,000 --> 00:34:08,960
+convolution, the basic process is this.
+
+856
+00:34:06,720 --> 00:34:11,200
+We flip one function, shift it, multiply
+
+857
+00:34:08,960 --> 00:34:14,399
+them point by point, and then integrate
+
+858
+00:34:11,200 --> 00:34:15,919
+over the region where they overlap.
+
+859
+00:34:14,399 --> 00:34:18,000
+At first, that might sound a little
+
+860
+00:34:15,919 --> 00:34:20,560
+mechanical. So let's break it down
+
+861
+00:34:18,000 --> 00:34:22,800
+clearly, step by step.
+
+862
+00:34:20,560 --> 00:34:25,599
+We're working with two functions here. f
+
+863
+00:34:22,800 --> 00:34:28,159
+of t shown in red. This is a triangular
+
+864
+00:34:25,599 --> 00:34:30,879
+function. It starts at zero, rises to a
+
+865
+00:34:28,159 --> 00:34:32,560
+peak at t= 2 and then drops back to
+
+866
+00:34:30,879 --> 00:34:34,879
+zero.
+
+867
+00:34:32,560 --> 00:34:38,000
+G of t shown in purple. This is a
+
+868
+00:34:34,879 --> 00:34:41,839
+rectangular pulse that spans from t= -2
+
+869
+00:34:38,000 --> 00:34:44,159
+to +2 with a constant value of 3.
+
+870
+00:34:41,839 --> 00:34:46,159
+Now, because g of t is symmetric,
+
+871
+00:34:44,159 --> 00:34:48,560
+flipping it across the vertical axis
+
+872
+00:34:46,159 --> 00:34:50,879
+doesn't change its shape, which actually
+
+873
+00:34:48,560 --> 00:34:53,520
+makes our job easier.
+
+874
+00:34:50,879 --> 00:34:55,839
+So we'll flip G to get G of T minus TOAO
+
+875
+00:34:53,520 --> 00:34:57,599
+and then slide it across F of T to
+
+876
+00:34:55,839 --> 00:34:59,680
+evaluating the convolution at each
+
+877
+00:34:57,599 --> 00:35:02,160
+position T.
+
+878
+00:34:59,680 --> 00:35:03,839
+Here's the key part. Both functions are
+
+879
+00:35:02,160 --> 00:35:07,359
+compactly supported, meaning they're
+
+880
+00:35:03,839 --> 00:35:09,119
+only non zero over a specific range.
+
+881
+00:35:07,359 --> 00:35:11,680
+That means the overlap only happens
+
+882
+00:35:09,119 --> 00:35:13,440
+during certain intervals.
+
+883
+00:35:11,680 --> 00:35:15,440
+So to compute the convolution, we'll
+
+884
+00:35:13,440 --> 00:35:18,839
+handle it case by case based on the
+
+885
+00:35:15,440 --> 00:35:18,839
+value of t.
+
+886
+00:35:20,320 --> 00:35:25,280
+Case one, when t is less than two.
+
+887
+00:35:23,520 --> 00:35:27,520
+At this stage, the flipped and shifted
+
+888
+00:35:25,280 --> 00:35:30,079
+version of g written as g of t minus
+
+889
+00:35:27,520 --> 00:35:31,920
+toao is positioned so far to the left
+
+890
+00:35:30,079 --> 00:35:34,720
+that it does not overlap with f of tow
+
+891
+00:35:31,920 --> 00:35:37,359
+at all. That means the product of the
+
+892
+00:35:34,720 --> 00:35:40,880
+two functions is zero everywhere. So the
+
+893
+00:35:37,359 --> 00:35:43,680
+convolution result y of t is also zero.
+
+894
+00:35:40,880 --> 00:35:45,599
+This is our first insight. No overlap
+
+895
+00:35:43,680 --> 00:35:48,000
+means no contribution to the integral
+
+896
+00:35:45,599 --> 00:35:50,079
+and the output is zero.
+
+897
+00:35:48,000 --> 00:35:51,760
+Case two, when t is between two and
+
+898
+00:35:50,079 --> 00:35:55,040
+zero.
+
+899
+00:35:51,760 --> 00:35:57,200
+Now we begin to see partial overlap.
+
+900
+00:35:55,040 --> 00:35:59,040
+As g of t minus toao slides to the
+
+901
+00:35:57,200 --> 00:36:02,640
+right, part of it starts to enter the
+
+902
+00:35:59,040 --> 00:36:05,680
+region where f of t tow is non zero.
+
+903
+00:36:02,640 --> 00:36:08,160
+Let's break this down mathematically.
+
+904
+00:36:05,680 --> 00:36:12,480
+Over the region where they overlap, f of
+
+905
+00:36:08,160 --> 00:36:16,000
+is defined as f of toao toao + 2 valid
+
+906
+00:36:12,480 --> 00:36:18,800
+from 0 to 2.
+
+907
+00:36:16,000 --> 00:36:20,400
+And the flip rectangle g of t minus toao
+
+908
+00:36:18,800 --> 00:36:22,880
+still has a constant height of three
+
+909
+00:36:20,400 --> 00:36:24,560
+wherever it overlaps.
+
+910
+00:36:22,880 --> 00:36:26,160
+So we're integrating the product of
+
+911
+00:36:24,560 --> 00:36:28,320
+these two functions across the
+
+912
+00:36:26,160 --> 00:36:31,440
+overlapping interval.
+
+913
+00:36:28,320 --> 00:36:34,320
+The simplifies convolution becomes 3 *
+
+914
+00:36:31,440 --> 00:36:36,240
+the integral of minus t + 2 from 0 to 2
+
+915
+00:36:34,320 --> 00:36:38,880
++ t.
+
+916
+00:36:36,240 --> 00:36:43,200
+If you evaluate this integral, you get y
+
+917
+00:36:38,880 --> 00:36:45,040
+of t = -3 t ^2 + 6.
+
+918
+00:36:43,200 --> 00:36:47,280
+So the convolution result in this case
+
+919
+00:36:45,040 --> 00:36:49,599
+is a parabolic curve rising as t
+
+920
+00:36:47,280 --> 00:36:51,920
+approaches zero.
+
+921
+00:36:49,599 --> 00:36:54,000
+This illustrates an important idea.
+
+922
+00:36:51,920 --> 00:36:56,720
+Convolution is constructed from slices
+
+923
+00:36:54,000 --> 00:36:58,720
+of overlapping areas. And in each case
+
+924
+00:36:56,720 --> 00:37:02,440
+we're summing the product over those
+
+925
+00:36:58,720 --> 00:37:02,440
+intervals of overlap.
+
+926
+00:37:04,000 --> 00:37:07,920
+Case three when t is between zero and
+
+927
+00:37:06,320 --> 00:37:09,680
+two.
+
+928
+00:37:07,920 --> 00:37:13,440
+In this case, the flipped and shifted
+
+929
+00:37:09,680 --> 00:37:15,280
+version of g that is g of t minus toao
+
+930
+00:37:13,440 --> 00:37:17,680
+completely overlaps the triangular
+
+931
+00:37:15,280 --> 00:37:19,280
+function f of toao.
+
+932
+00:37:17,680 --> 00:37:22,480
+This means we integrate across the
+
+933
+00:37:19,280 --> 00:37:24,320
+entire support of f of toao from toao 0
+
+934
+00:37:22,480 --> 00:37:29,680
+to 2
+
+935
+00:37:24,320 --> 00:37:32,800
+within this interval f of= to + 2. g of
+
+936
+00:37:29,680 --> 00:37:35,839
+t minus toao is constant at 3.
+
+937
+00:37:32,800 --> 00:37:38,800
+So the convolution becomes y of t equals
+
+938
+00:37:35,839 --> 00:37:40,880
+the integral from 0 to 2 of 3 times to +
+
+939
+00:37:38,800 --> 00:37:46,320
+2 d to
+
+940
+00:37:40,880 --> 00:37:49,119
+when we evaluate this we get y of t= 6.
+
+941
+00:37:46,320 --> 00:37:50,880
+So for t between 0 and 2 the convolution
+
+942
+00:37:49,119 --> 00:37:53,440
+gives a flat region with a constant
+
+943
+00:37:50,880 --> 00:37:54,960
+value of 6. This happens because the
+
+944
+00:37:53,440 --> 00:37:57,520
+area under the product is the same
+
+945
+00:37:54,960 --> 00:38:01,359
+across the entire interval.
+
+946
+00:37:57,520 --> 00:38:03,359
+Case four when t is between 2 and 4. Now
+
+947
+00:38:01,359 --> 00:38:08,000
+f of tao begins to slide out of the
+
+948
+00:38:03,359 --> 00:38:10,160
+rectangular window of g of t minus toao.
+
+949
+00:38:08,000 --> 00:38:12,400
+We're back to a partial overlap, but
+
+950
+00:38:10,160 --> 00:38:15,839
+this time on the opposite side, the
+
+951
+00:38:12,400 --> 00:38:18,800
+right edge of g is moving past f. The
+
+952
+00:38:15,839 --> 00:38:23,839
+new overlapping interval runs from toao
+
+953
+00:38:18,800 --> 00:38:27,119
+tus 2 toals 2. Again, we use f of t
+
+954
+00:38:23,839 --> 00:38:31,280
+toals to + 2.
+
+955
+00:38:27,119 --> 00:38:34,240
+g of t minus toao equals 3.
+
+956
+00:38:31,280 --> 00:38:37,359
+So the convolution becomes y of t equals
+
+957
+00:38:34,240 --> 00:38:40,000
+the integral from t minus 2 to 2 of 3 *
+
+958
+00:38:37,359 --> 00:38:44,320
++ 2 d to
+
+959
+00:38:40,000 --> 00:38:46,800
+evaluating this gives y of t = 3 t ^2 -
+
+960
+00:38:44,320 --> 00:38:48,800
+12 t + 24.
+
+961
+00:38:46,800 --> 00:38:51,359
+This result traces out the descending
+
+962
+00:38:48,800 --> 00:38:54,240
+part of the convolution curve as the
+
+963
+00:38:51,359 --> 00:38:56,320
+overlap shrinks towards zero.
+
+964
+00:38:54,240 --> 00:38:58,560
+Case five, when t is greater than or
+
+965
+00:38:56,320 --> 00:39:00,640
+equal to 4.
+
+966
+00:38:58,560 --> 00:39:03,680
+At this point, g of t minus toao is
+
+967
+00:39:00,640 --> 00:39:05,200
+completely moved past f of toao.
+
+968
+00:39:03,680 --> 00:39:07,680
+There's no overlap between the two
+
+969
+00:39:05,200 --> 00:39:13,000
+functions. So the convolution result
+
+970
+00:39:07,680 --> 00:39:13,000
+once again becomes i of t equals z.
+
+971
+00:39:14,400 --> 00:39:18,400
+Now let's bring all the cases together
+
+972
+00:39:16,160 --> 00:39:21,440
+to write the full peace-wise definition
+
+973
+00:39:18,400 --> 00:39:23,359
+of the convolution result.
+
+974
+00:39:21,440 --> 00:39:26,000
+We've carefully stepped through five
+
+975
+00:39:23,359 --> 00:39:28,400
+distinct intervals, each showing how the
+
+976
+00:39:26,000 --> 00:39:30,240
+amount of overlap between f of t and g
+
+977
+00:39:28,400 --> 00:39:32,160
+of t determines the value of the
+
+978
+00:39:30,240 --> 00:39:33,920
+convolution.
+
+979
+00:39:32,160 --> 00:39:36,480
+Putting everything together, we now have
+
+980
+00:39:33,920 --> 00:39:38,079
+the complete solution.
+
+981
+00:39:36,480 --> 00:39:40,480
+Each case, you know, from full overlap
+
+982
+00:39:38,079 --> 00:39:42,079
+to partial overlap to no overlap
+
+983
+00:39:40,480 --> 00:39:43,839
+contributes a segment of the final
+
+984
+00:39:42,079 --> 00:39:45,760
+output.
+
+985
+00:39:43,839 --> 00:39:48,800
+This leads to a peace-wise defined
+
+986
+00:39:45,760 --> 00:39:52,000
+function expressed as follows. I of T =
+
+987
+00:39:48,800 --> 00:39:56,000
+0 for T less than 2.
+
+988
+00:39:52,000 --> 00:40:01,760
+I of T = 3 T ^2 + 6 for T between 2 and
+
+989
+00:39:56,000 --> 00:40:06,079
+0. I of T= 6 for T between 0 and 2. I of
+
+990
+00:40:01,760 --> 00:40:09,839
+T = 3 T ^2 - 12 T + 24 for T between 2
+
+991
+00:40:06,079 --> 00:40:12,320
+and 4. Y of T = 0 for the greater than
+
+992
+00:40:09,839 --> 00:40:14,400
+or equal to 4.
+
+993
+00:40:12,320 --> 00:40:16,960
+When we plot these expressions, we get a
+
+994
+00:40:14,400 --> 00:40:18,560
+smooth continuous curve. It rises,
+
+995
+00:40:16,960 --> 00:40:21,119
+flattens out in the middle, and then
+
+996
+00:40:18,560 --> 00:40:22,880
+gradually falls again. It forms a kind
+
+997
+00:40:21,119 --> 00:40:25,839
+of bump, which is exactly what we
+
+998
+00:40:22,880 --> 00:40:29,040
+expect. As g of t slides over and past f
+
+999
+00:40:25,839 --> 00:40:30,960
+of t, this example gives us a complete
+
+1000
+00:40:29,040 --> 00:40:33,839
+mathematical walkthrough of continuous
+
+1001
+00:40:30,960 --> 00:40:36,160
+convolution from defining the problem to
+
+1002
+00:40:33,839 --> 00:40:40,560
+analyzing it case by case to combining
+
+1003
+00:40:36,160 --> 00:40:42,160
+all pieces into the final solution.
+
+1004
+00:40:40,560 --> 00:40:45,040
+It beautifully demonstrates how
+
+1005
+00:40:42,160 --> 00:40:47,599
+convolution is built by accumulating the
+
+1006
+00:40:45,040 --> 00:40:49,440
+area under the product of two functions.
+
+1007
+00:40:47,599 --> 00:40:52,720
+Each one flipped, shifted, multiplied,
+
+1008
+00:40:49,440 --> 00:40:54,720
+and then integrated step by step.
+
+1009
+00:40:52,720 --> 00:40:56,800
+It's a powerful blend of geometry and
+
+1010
+00:40:54,720 --> 00:40:58,800
+calculus. And it's absolutely
+
+1011
+00:40:56,800 --> 00:41:02,119
+foundational in signal processing and
+
+1012
+00:40:58,800 --> 00:41:02,119
+medical imaging.
+
+1013
+00:41:03,680 --> 00:41:07,839
+Now, let's look at a practical example
+
+1014
+00:41:05,440 --> 00:41:09,599
+that ties all of this together. The RC
+
+1015
+00:41:07,839 --> 00:41:11,520
+circuit.
+
+1016
+00:41:09,599 --> 00:41:14,240
+If you're not familiar with electrical
+
+1017
+00:41:11,520 --> 00:41:16,079
+circuits, don't worry. For our purposes,
+
+1018
+00:41:14,240 --> 00:41:18,720
+you can think of this setup as a black
+
+1019
+00:41:16,079 --> 00:41:21,200
+box. The input is a signal and the
+
+1020
+00:41:18,720 --> 00:41:25,440
+output depends on the systems behavior,
+
+1021
+00:41:21,200 --> 00:41:27,520
+specifically its impulse response.
+
+1022
+00:41:25,440 --> 00:41:31,200
+In this circuit, we have a resistor R
+
+1023
+00:41:27,520 --> 00:41:33,440
+and a capacitor C connected in series.
+
+1024
+00:41:31,200 --> 00:41:35,440
+The voltage signal going in is X of T
+
+1025
+00:41:33,440 --> 00:41:38,000
+and the voltage across the capacitor is
+
+1026
+00:41:35,440 --> 00:41:40,800
+the output Y of T.
+
+1027
+00:41:38,000 --> 00:41:43,200
+Now, here's the key point. If we apply a
+
+1028
+00:41:40,800 --> 00:41:46,160
+delta function as the input, meaning a
+
+1029
+00:41:43,200 --> 00:41:47,920
+sharp instantaneous impulse, the output
+
+1030
+00:41:46,160 --> 00:41:51,839
+is the circuit's impulse response,
+
+1031
+00:41:47,920 --> 00:41:54,480
+denoted h of t. The h of t of the RC
+
+1032
+00:41:51,839 --> 00:41:56,240
+circuit is a decaying exponential. It
+
+1033
+00:41:54,480 --> 00:41:58,800
+tells us how the circuit reacts over
+
+1034
+00:41:56,240 --> 00:42:00,640
+time after a sudden input.
+
+1035
+00:41:58,800 --> 00:42:02,800
+But what happens if we apply a more
+
+1036
+00:42:00,640 --> 00:42:05,760
+general input like a square pulse or a
+
+1037
+00:42:02,800 --> 00:42:07,280
+step function?
+
+1038
+00:42:05,760 --> 00:42:09,440
+Well, just like we learned, we can
+
+1039
+00:42:07,280 --> 00:42:11,839
+decompose that input into a sum of small
+
+1040
+00:42:09,440 --> 00:42:13,920
+impulse components.
+
+1041
+00:42:11,839 --> 00:42:15,760
+Each tiny impulse generates a scaled
+
+1042
+00:42:13,920 --> 00:42:17,920
+copy of the impulse response. And the
+
+1043
+00:42:15,760 --> 00:42:20,480
+total output is the convolution of the
+
+1044
+00:42:17,920 --> 00:42:22,880
+input in h of t.
+
+1045
+00:42:20,480 --> 00:42:25,040
+We can see this visually on the right.
+
+1046
+00:42:22,880 --> 00:42:27,839
+Different inputs like short pulses or
+
+1047
+00:42:25,040 --> 00:42:30,000
+longer ones are convolved with h of t
+
+1048
+00:42:27,839 --> 00:42:31,920
+and the resulting output curves smoothly
+
+1049
+00:42:30,000 --> 00:42:33,599
+reflect how the circuit responds over
+
+1050
+00:42:31,920 --> 00:42:35,280
+time.
+
+1051
+00:42:33,599 --> 00:42:38,160
+Try experimenting with this in mat lab
+
+1052
+00:42:35,280 --> 00:42:40,160
+or python. Decompose the signal, apply
+
+1053
+00:42:38,160 --> 00:42:43,440
+convolution and see how the shape of the
+
+1054
+00:42:40,160 --> 00:42:45,440
+output curve emerges naturally.
+
+1055
+00:42:43,440 --> 00:42:47,760
+This kind of modeling is not just useful
+
+1056
+00:42:45,440 --> 00:42:49,839
+for circuits. It's a powerful tool in
+
+1057
+00:42:47,760 --> 00:42:52,079
+medical imaging, signal filtering, and
+
+1058
+00:42:49,839 --> 00:42:54,160
+physiological modeling where systems
+
+1059
+00:42:52,079 --> 00:42:57,160
+respond to inputs in time dependent
+
+1060
+00:42:54,160 --> 00:42:57,160
+ways.
+
+1061
+00:42:58,560 --> 00:43:02,720
+Now that you understand how 1D
+
+1062
+00:43:00,319 --> 00:43:04,400
+convolution works, it's actually quite
+
+1063
+00:43:02,720 --> 00:43:06,160
+easy to extend the idea to two
+
+1064
+00:43:04,400 --> 00:43:08,800
+dimensions, especially when working with
+
+1065
+00:43:06,160 --> 00:43:10,880
+images.
+
+1066
+00:43:08,800 --> 00:43:13,520
+In 2D convolution, you're essentially
+
+1067
+00:43:10,880 --> 00:43:15,680
+applying the same process, but now
+
+1068
+00:43:13,520 --> 00:43:18,160
+instead of just one variable like t,
+
+1069
+00:43:15,680 --> 00:43:20,640
+you're working with two x and y in the
+
+1070
+00:43:18,160 --> 00:43:22,960
+discrete case or tow one and tow 2 in
+
+1071
+00:43:20,640 --> 00:43:24,720
+the continuous case.
+
+1072
+00:43:22,960 --> 00:43:26,160
+Let's take a look at the discrete form
+
+1073
+00:43:24,720 --> 00:43:27,920
+first.
+
+1074
+00:43:26,160 --> 00:43:31,040
+We can see the formula at the top of the
+
+1075
+00:43:27,920 --> 00:43:34,079
+slide. f of xy convolved with g of xy
+
+1076
+00:43:31,040 --> 00:43:39,280
+equals the double sum over n1 and n2 of
+
+1077
+00:43:34,079 --> 00:43:41,440
+f at n1 n2 * g at x - n1 y - n1.
+
+1078
+00:43:39,280 --> 00:43:44,319
+Just like in 1D, we flip the kernel,
+
+1079
+00:43:41,440 --> 00:43:47,359
+shift it, multiply, and sum. But now we
+
+1080
+00:43:44,319 --> 00:43:49,119
+do this across both rows and columns.
+
+1081
+00:43:47,359 --> 00:43:51,760
+In the continuous case, we do the same
+
+1082
+00:43:49,119 --> 00:43:55,359
+thing using integrals. We integrate over
+
+1083
+00:43:51,760 --> 00:43:58,000
+both variables to 1 and 2 to compute the
+
+1084
+00:43:55,359 --> 00:44:00,480
+total area under the product.
+
+1085
+00:43:58,000 --> 00:44:02,640
+So the core principle stays the same.
+
+1086
+00:44:00,480 --> 00:44:04,960
+Flip, shift, multiply, and sum or
+
+1087
+00:44:02,640 --> 00:44:07,119
+integrate. But now it happens in two
+
+1088
+00:44:04,960 --> 00:44:08,880
+directions at once across a 2D grid or
+
+1089
+00:44:07,119 --> 00:44:10,640
+surface.
+
+1090
+00:44:08,880 --> 00:44:13,520
+This extension is especially important
+
+1091
+00:44:10,640 --> 00:44:15,839
+in image processing and medical imaging
+
+1092
+00:44:13,520 --> 00:44:18,240
+where we often apply filters, masks, or
+
+1093
+00:44:15,839 --> 00:44:21,200
+system responses across 2D signals like
+
+1094
+00:44:18,240 --> 00:44:23,599
+slices or projection data.
+
+1095
+00:44:21,200 --> 00:44:25,599
+Whether you're summing or integrating,
+
+1096
+00:44:23,599 --> 00:44:27,760
+convolution gives you a systematic way
+
+1097
+00:44:25,599 --> 00:44:31,560
+to model how a signal transforms when
+
+1098
+00:44:27,760 --> 00:44:31,560
+passed through a system.
+
+1099
+00:44:32,960 --> 00:44:38,000
+In imaging, 2D convolution is a powerful
+
+1100
+00:44:35,359 --> 00:44:39,359
+tool for modeling blurring.
+
+1101
+00:44:38,000 --> 00:44:41,920
+Let's take a look at how this works
+
+1102
+00:44:39,359 --> 00:44:43,920
+using a simple example.
+
+1103
+00:44:41,920 --> 00:44:45,839
+On the left, we see an input image
+
+1104
+00:44:43,920 --> 00:44:47,920
+represented as a matrix of pixel
+
+1105
+00:44:45,839 --> 00:44:49,599
+intensities.
+
+1106
+00:44:47,920 --> 00:44:52,160
+Each number corresponds to the
+
+1107
+00:44:49,599 --> 00:44:54,480
+brightness level of a pixel.
+
+1108
+00:44:52,160 --> 00:44:57,040
+In the middle, we see a 3x3 averaging
+
+1109
+00:44:54,480 --> 00:44:59,359
+mask. All entries are one and we divide
+
+1110
+00:44:57,040 --> 00:45:03,920
+the result by 9, which means we're
+
+1111
+00:44:59,359 --> 00:45:06,800
+averaging the values in a 3x3 window.
+
+1112
+00:45:03,920 --> 00:45:08,800
+This operation is a 2D convolution. We
+
+1113
+00:45:06,800 --> 00:45:11,359
+slide the mask across the image and at
+
+1114
+00:45:08,800 --> 00:45:13,359
+each position, we multiply corresponding
+
+1115
+00:45:11,359 --> 00:45:14,960
+elements, sum them up, and store the
+
+1116
+00:45:13,359 --> 00:45:17,680
+result in the center pixel of the
+
+1117
+00:45:14,960 --> 00:45:19,200
+output.
+
+1118
+00:45:17,680 --> 00:45:20,960
+Let's focus on the region that's
+
+1119
+00:45:19,200 --> 00:45:23,119
+highlighted
+
+1120
+00:45:20,960 --> 00:45:25,760
+for the top left example. The 3x3
+
+1121
+00:45:23,119 --> 00:45:28,400
+neighborhood includes values like 1 2 3
+
+1122
+00:45:25,760 --> 00:45:30,319
+and so on. When we sum those values and
+
+1123
+00:45:28,400 --> 00:45:32,720
+divide by 9, we get the blurred output
+
+1124
+00:45:30,319 --> 00:45:34,240
+value shown in yellow.
+
+1125
+00:45:32,720 --> 00:45:36,960
+The same thing happens throughout the
+
+1126
+00:45:34,240 --> 00:45:38,880
+image. Each pixel in the output image
+
+1127
+00:45:36,960 --> 00:45:42,160
+becomes the average of itself and its
+
+1128
+00:45:38,880 --> 00:45:44,319
+eight neighbors. The result,
+
+1129
+00:45:42,160 --> 00:45:46,640
+sharp transitions are smoothed out. Fine
+
+1130
+00:45:44,319 --> 00:45:49,520
+details are softened. and the image
+
+1131
+00:45:46,640 --> 00:45:51,839
+takes on a blurred appearance.
+
+1132
+00:45:49,520 --> 00:45:54,400
+This is a fundamental application of 2D
+
+1133
+00:45:51,839 --> 00:45:56,400
+convolution and it's used not only for
+
+1134
+00:45:54,400 --> 00:45:58,720
+visual effects but also as a
+
+1135
+00:45:56,400 --> 00:46:01,680
+pre-processing step in many medical
+
+1136
+00:45:58,720 --> 00:46:05,000
+imaging tasks like noise reduction and
+
+1137
+00:46:01,680 --> 00:46:05,000
+feature extraction.
+
+1138
+00:46:06,720 --> 00:46:11,440
+Let's take a look at how blurring arises
+
+1139
+00:46:08,960 --> 00:46:13,599
+naturally in imaging systems not just
+
+1140
+00:46:11,440 --> 00:46:17,040
+from digital filters but from physical
+
+1141
+00:46:13,599 --> 00:46:18,800
+limitations. Here we observe a key
+
+1142
+00:46:17,040 --> 00:46:21,680
+concept in optics called the point
+
+1143
+00:46:18,800 --> 00:46:23,680
+spread function or PSF.
+
+1144
+00:46:21,680 --> 00:46:25,440
+In theory, if you image a perfect point
+
+1145
+00:46:23,680 --> 00:46:27,760
+of light, it should appear as a sharp
+
+1146
+00:46:25,440 --> 00:46:29,599
+dot on the detector.
+
+1147
+00:46:27,760 --> 00:46:32,160
+But in reality, that point gets blurred
+
+1148
+00:46:29,599 --> 00:46:34,480
+into a small disc, often called an airy
+
+1149
+00:46:32,160 --> 00:46:36,880
+disc, because of how light diffracts
+
+1150
+00:46:34,480 --> 00:46:38,960
+through the lens system.
+
+1151
+00:46:36,880 --> 00:46:42,079
+This is the system's impulse response in
+
+1152
+00:46:38,960 --> 00:46:44,079
+two dimensions.
+
+1153
+00:46:42,079 --> 00:46:46,960
+So even if your input is just a single
+
+1154
+00:46:44,079 --> 00:46:48,880
+point like a star in the night sky, the
+
+1155
+00:46:46,960 --> 00:46:51,760
+output captured by your imaging system
+
+1156
+00:46:48,880 --> 00:46:53,440
+is a small spread out shape.
+
+1157
+00:46:51,760 --> 00:46:55,760
+And when two bright points are placed
+
+1158
+00:46:53,440 --> 00:46:58,480
+too close together, their point spread
+
+1159
+00:46:55,760 --> 00:47:00,720
+functions begin to overlap. This overlap
+
+1160
+00:46:58,480 --> 00:47:03,760
+makes it difficult or even impossible to
+
+1161
+00:47:00,720 --> 00:47:05,440
+tell them apart in the final image.
+
+1162
+00:47:03,760 --> 00:47:07,599
+This phenomenon is at the core of what
+
+1163
+00:47:05,440 --> 00:47:09,359
+we call the resolution limit in optical
+
+1164
+00:47:07,599 --> 00:47:12,400
+systems.
+
+1165
+00:47:09,359 --> 00:47:14,000
+In fact, PSFs are not just a curiosity.
+
+1166
+00:47:12,400 --> 00:47:16,400
+They're mathematically modeled and
+
+1167
+00:47:14,000 --> 00:47:20,480
+measured, and they define how sharp or
+
+1168
+00:47:16,400 --> 00:47:22,319
+blurry every part of an image will be.
+
+1169
+00:47:20,480 --> 00:47:24,880
+So, in medical imaging, astronomy
+
+1170
+00:47:22,319 --> 00:47:26,960
+microscopy, understanding the point
+
+1171
+00:47:24,880 --> 00:47:28,720
+spread function is essential to both
+
+1172
+00:47:26,960 --> 00:47:31,720
+image formation and image
+
+1173
+00:47:28,720 --> 00:47:31,720
+reconstruction.
+
+1174
+00:47:33,599 --> 00:47:36,960
+Now, let's talk about the reverse
+
+1175
+00:47:35,040 --> 00:47:39,280
+process of blurring, a technique called
+
+1176
+00:47:36,960 --> 00:47:41,200
+deconvolution.
+
+1177
+00:47:39,280 --> 00:47:42,800
+When an image is blurred, it's often
+
+1178
+00:47:41,200 --> 00:47:44,800
+because the original scene has been
+
+1179
+00:47:42,800 --> 00:47:47,200
+convolved with a point spread function
+
+1180
+00:47:44,800 --> 00:47:49,359
+or PSF.
+
+1181
+00:47:47,200 --> 00:47:51,280
+We saw earlier that even a perfect point
+
+1182
+00:47:49,359 --> 00:47:53,760
+source becomes a blurred spot due to
+
+1183
+00:47:51,280 --> 00:47:55,680
+system limitations.
+
+1184
+00:47:53,760 --> 00:47:58,240
+Deconvolution is the process of trying
+
+1185
+00:47:55,680 --> 00:48:02,319
+to undo that effect to recover the
+
+1186
+00:47:58,240 --> 00:48:04,000
+original image from its blurred version.
+
+1187
+00:48:02,319 --> 00:48:06,640
+You can think of convolution like a kind
+
+1188
+00:48:04,000 --> 00:48:09,520
+of advanced multiplication. We blend the
+
+1189
+00:48:06,640 --> 00:48:11,599
+signal with the systems response.
+
+1190
+00:48:09,520 --> 00:48:13,040
+In that same spirit, deconvolution
+
+1191
+00:48:11,599 --> 00:48:14,960
+behaves like an advanced form of
+
+1192
+00:48:13,040 --> 00:48:18,400
+division. We're trying to undo the
+
+1193
+00:48:14,960 --> 00:48:20,160
+blending and isolate the original input.
+
+1194
+00:48:18,400 --> 00:48:22,240
+We can see that clearly in the example
+
+1195
+00:48:20,160 --> 00:48:24,319
+on this slide.
+
+1196
+00:48:22,240 --> 00:48:27,760
+The left image is a blurred photo of a
+
+1197
+00:48:24,319 --> 00:48:29,839
+car. The license plate is unreadable.
+
+1198
+00:48:27,760 --> 00:48:31,680
+After deconvolution, the right image
+
+1199
+00:48:29,839 --> 00:48:34,400
+restores the clarity. Now we can read
+
+1200
+00:48:31,680 --> 00:48:36,240
+the plate.
+
+1201
+00:48:34,400 --> 00:48:38,319
+This kind of technique is used not just
+
+1202
+00:48:36,240 --> 00:48:40,160
+in photography but in microscopy,
+
+1203
+00:48:38,319 --> 00:48:42,960
+astronomy, and especially in medical
+
+1204
+00:48:40,160 --> 00:48:44,880
+imaging where resolving fine detail can
+
+1205
+00:48:42,960 --> 00:48:46,160
+be critical.
+
+1206
+00:48:44,880 --> 00:48:48,880
+It's important to note that
+
+1207
+00:48:46,160 --> 00:48:50,800
+deconvolution is not always perfect. In
+
+1208
+00:48:48,880 --> 00:48:53,440
+real world systems, noise and distortion
+
+1209
+00:48:50,800 --> 00:48:55,440
+make it a challenging problem.
+
+1210
+00:48:53,440 --> 00:48:57,920
+But with good modeling of the PSF and
+
+1211
+00:48:55,440 --> 00:49:02,200
+proper regularization, we can often
+
+1212
+00:48:57,920 --> 00:49:02,200
+greatly enhance image quality.
+
+1213
+00:49:03,760 --> 00:49:08,800
+Here's the idea in action.
+
+1214
+00:49:06,559 --> 00:49:11,520
+This slide shows how inverse filtering
+
+1215
+00:49:08,800 --> 00:49:13,359
+works in the frequency domain.
+
+1216
+00:49:11,520 --> 00:49:15,040
+A sharp image when convolved with a
+
+1217
+00:49:13,359 --> 00:49:17,920
+point spread function results in a
+
+1218
+00:49:15,040 --> 00:49:19,839
+blurred image.
+
+1219
+00:49:17,920 --> 00:49:22,480
+In the forier domain, convolution
+
+1220
+00:49:19,839 --> 00:49:24,960
+becomes multiplication. So the forier
+
+1221
+00:49:22,480 --> 00:49:26,720
+transform of the blurred image equals
+
+1222
+00:49:24,960 --> 00:49:29,520
+the product of the transforms of the
+
+1223
+00:49:26,720 --> 00:49:31,599
+original image and the PSF.
+
+1224
+00:49:29,520 --> 00:49:33,920
+To reverse this, we perform division in
+
+1225
+00:49:31,599 --> 00:49:37,599
+the frequency domain. This is the
+
+1226
+00:49:33,920 --> 00:49:39,680
+essence of inverse filtering.
+
+1227
+00:49:37,599 --> 00:49:41,599
+In the red box below, the image on the
+
+1228
+00:49:39,680 --> 00:49:44,079
+right is the transform of the blurred
+
+1229
+00:49:41,599 --> 00:49:46,720
+image. The center is the transform of
+
+1230
+00:49:44,079 --> 00:49:48,480
+the PSF and the left is the result of
+
+1231
+00:49:46,720 --> 00:49:51,599
+dividing them recovering the original
+
+1232
+00:49:48,480 --> 00:49:53,599
+image spectrum.
+
+1233
+00:49:51,599 --> 00:49:56,720
+Applying the inverse forier transform
+
+1234
+00:49:53,599 --> 00:49:58,800
+brings us back to the spatial domain.
+
+1235
+00:49:56,720 --> 00:50:02,839
+This process forms the basis of many
+
+1236
+00:49:58,800 --> 00:50:02,839
+image restoration techniques.
+
+1237
+00:50:04,480 --> 00:50:08,960
+You might not fully grasp this yet and
+
+1238
+00:50:06,559 --> 00:50:11,359
+that's perfectly fine.
+
+1239
+00:50:08,960 --> 00:50:13,200
+Once we cover forier analysis, the
+
+1240
+00:50:11,359 --> 00:50:17,599
+connection between convolution and
+
+1241
+00:50:13,200 --> 00:50:19,440
+deconvolution will become much clearer.
+
+1242
+00:50:17,599 --> 00:50:21,839
+For now, think of convolution and
+
+1243
+00:50:19,440 --> 00:50:24,319
+deconvolution as the advanced forms of
+
+1244
+00:50:21,839 --> 00:50:25,839
+multiplication and division. Just like
+
+1245
+00:50:24,319 --> 00:50:29,559
+integration is the continuous
+
+1246
+00:50:25,839 --> 00:50:29,559
+counterpart of summation.
+
+1247
+00:50:31,119 --> 00:50:35,359
+Returning to one-dimensional signals,
+
+1248
+00:50:33,119 --> 00:50:38,000
+convolution behaves like multiplication
+
+1249
+00:50:35,359 --> 00:50:40,400
+in several key ways.
+
+1250
+00:50:38,000 --> 00:50:42,559
+Commutative H convolved with F= F
+
+1251
+00:50:40,400 --> 00:50:44,640
+convolved with H.
+
+1252
+00:50:42,559 --> 00:50:46,880
+Associative H convolved with the result
+
+1253
+00:50:44,640 --> 00:50:49,040
+of F convolved with G equals the result
+
+1254
+00:50:46,880 --> 00:50:50,960
+of H convolved with F then convolved
+
+1255
+00:50:49,040 --> 00:50:52,880
+with G.
+
+1256
+00:50:50,960 --> 00:50:55,520
+distributive h convolved with the sum of
+
+1257
+00:50:52,880 --> 00:50:57,680
+f and g equals h convolved with f plus h
+
+1258
+00:50:55,520 --> 00:50:59,599
+convolved with g.
+
+1259
+00:50:57,680 --> 00:51:01,440
+These properties show that convolution
+
+1260
+00:50:59,599 --> 00:51:03,119
+is algebraically structured and they
+
+1261
+00:51:01,440 --> 00:51:06,079
+will connect directly to forier
+
+1262
+00:51:03,119 --> 00:51:09,200
+analysis.
+
+1263
+00:51:06,079 --> 00:51:12,880
+You're invited to try a quick quiz.
+
+1264
+00:51:09,200 --> 00:51:15,920
+If y of n= h of n convolved with x of n,
+
+1265
+00:51:12,880 --> 00:51:18,640
+prove that y of n minus k equals h of n
+
+1266
+00:51:15,920 --> 00:51:20,240
+convolved with x of n minus k. This
+
+1267
+00:51:18,640 --> 00:51:23,240
+follows naturally from the meaning of
+
+1268
+00:51:20,240 --> 00:51:23,240
+convolution.
+
+1269
+00:51:25,119 --> 00:51:29,119
+We can even prove these properties. I
+
+1270
+00:51:27,440 --> 00:51:31,359
+won't go through the full proof now, but
+
+1271
+00:51:29,119 --> 00:51:33,359
+it follows directly from how convolution
+
+1272
+00:51:31,359 --> 00:51:34,880
+is defined.
+
+1273
+00:51:33,359 --> 00:51:37,520
+Here we start with the standard
+
+1274
+00:51:34,880 --> 00:51:41,760
+convolution definition. I of equals the
+
+1275
+00:51:37,520 --> 00:51:45,119
+sum over k of x of k * h of n minus k.
+
+1276
+00:51:41,760 --> 00:51:47,040
+By substituting k= n minus capital k, we
+
+1277
+00:51:45,119 --> 00:51:51,599
+change the index of summation and
+
+1278
+00:51:47,040 --> 00:51:54,240
+rewrite the expression in reverse order.
+
+1279
+00:51:51,599 --> 00:51:57,680
+This leads directly to h convolved with
+
+1280
+00:51:54,240 --> 00:52:01,720
+x= x convolved with h. So convolution is
+
+1281
+00:51:57,680 --> 00:52:01,720
+commutative just like multiplication.
+
+1282
+00:52:03,599 --> 00:52:07,839
+A related concept to convolution is
+
+1283
+00:52:05,599 --> 00:52:09,760
+crossorrelation.
+
+1284
+00:52:07,839 --> 00:52:12,160
+Mathematically the key difference is in
+
+1285
+00:52:09,760 --> 00:52:14,079
+the sign of the shift.
+
+1286
+00:52:12,160 --> 00:52:18,000
+In convolution, we compute the integral
+
+1287
+00:52:14,079 --> 00:52:20,480
+of f of x - u * g of u. In
+
+1288
+00:52:18,000 --> 00:52:23,119
+crossorrelation, it's f of x plus u * g
+
+1289
+00:52:20,480 --> 00:52:24,880
+of u.
+
+1290
+00:52:23,119 --> 00:52:26,319
+So, convolution flips one of the
+
+1291
+00:52:24,880 --> 00:52:28,800
+functions before shifting and
+
+1292
+00:52:26,319 --> 00:52:30,319
+multiplying while crossorrelation does
+
+1293
+00:52:28,800 --> 00:52:33,280
+not.
+
+1294
+00:52:30,319 --> 00:52:34,880
+Both are useful in signal processing but
+
+1295
+00:52:33,280 --> 00:52:39,079
+for different purposes like system
+
+1296
+00:52:34,880 --> 00:52:39,079
+response versus pattern matching.
+
+1297
+00:52:40,720 --> 00:52:43,839
+Let's take a closer look at the
+
+1298
+00:52:42,319 --> 00:52:46,000
+graphical differences between
+
+1299
+00:52:43,839 --> 00:52:48,319
+convolution, crossorrelation, and
+
+1300
+00:52:46,000 --> 00:52:50,559
+autocorrelation.
+
+1301
+00:52:48,319 --> 00:52:52,640
+On the left, we see convolution.
+
+1302
+00:52:50,559 --> 00:52:54,400
+Function F is in blue and function G is
+
+1303
+00:52:52,640 --> 00:52:56,400
+in red.
+
+1304
+00:52:54,400 --> 00:52:58,480
+In convolution, G is first flipped
+
+1305
+00:52:56,400 --> 00:53:00,480
+horizontally, then shifted, multiplied
+
+1306
+00:52:58,480 --> 00:53:02,160
+with F, and finally integrated or
+
+1307
+00:53:00,480 --> 00:53:04,720
+summed.
+
+1308
+00:53:02,160 --> 00:53:07,440
+As G slides across F, the overlapping
+
+1309
+00:53:04,720 --> 00:53:10,400
+area is computed at each step, producing
+
+1310
+00:53:07,440 --> 00:53:12,960
+the black output curve below.
+
+1311
+00:53:10,400 --> 00:53:14,319
+In the middle, we have crossorrelation.
+
+1312
+00:53:12,960 --> 00:53:15,920
+It follows the same steps as
+
+1313
+00:53:14,319 --> 00:53:17,680
+convolution, except there's no flipping
+
+1314
+00:53:15,920 --> 00:53:20,240
+of G.
+
+1315
+00:53:17,680 --> 00:53:23,359
+We simply shift G across F, multiply at
+
+1316
+00:53:20,240 --> 00:53:25,280
+each point, and accumulate the result.
+
+1317
+00:53:23,359 --> 00:53:27,200
+So visually, the shapes are the same,
+
+1318
+00:53:25,280 --> 00:53:29,440
+but the symmetry is different. These
+
+1319
+00:53:27,200 --> 00:53:32,400
+matters in pattern alignment and signal
+
+1320
+00:53:29,440 --> 00:53:35,040
+comparison.
+
+1321
+00:53:32,400 --> 00:53:36,319
+On the right we see autocorrelation.
+
+1322
+00:53:35,040 --> 00:53:38,160
+This is a special case of
+
+1323
+00:53:36,319 --> 00:53:40,800
+crossorrelation where the same function
+
+1324
+00:53:38,160 --> 00:53:42,880
+is compared with itself.
+
+1325
+00:53:40,800 --> 00:53:44,640
+So G and F are the same and we measure
+
+1326
+00:53:42,880 --> 00:53:46,960
+how well the signal matches its own
+
+1327
+00:53:44,640 --> 00:53:49,359
+shifted versions.
+
+1328
+00:53:46,960 --> 00:53:51,920
+The result usually peaks at zero shift
+
+1329
+00:53:49,359 --> 00:53:56,520
+showing maximum similarity with itself
+
+1330
+00:53:51,920 --> 00:53:56,520
+and falls off on either side.
+
+1331
+00:53:58,000 --> 00:54:02,960
+Crossorrelation is deeply connected to
+
+1332
+00:54:00,000 --> 00:54:04,960
+the Kochi Schwarz inequality.
+
+1333
+00:54:02,960 --> 00:54:07,520
+This fundamental result tells us that
+
+1334
+00:54:04,960 --> 00:54:09,359
+the inner product of two signals is
+
+1335
+00:54:07,520 --> 00:54:11,599
+always less than or equal to the product
+
+1336
+00:54:09,359 --> 00:54:14,160
+of their norms.
+
+1337
+00:54:11,599 --> 00:54:16,319
+Mathematically, this absolute value of
+
+1338
+00:54:14,160 --> 00:54:18,720
+the inner product is less than or equal
+
+1339
+00:54:16,319 --> 00:54:21,680
+to the square root of the sum of all the
+
+1340
+00:54:18,720 --> 00:54:25,599
+AK squared times the square root of the
+
+1341
+00:54:21,680 --> 00:54:27,680
+sum of all the BK 2.
+
+1342
+00:54:25,599 --> 00:54:29,760
+Equality holds only when the two signals
+
+1343
+00:54:27,680 --> 00:54:31,680
+are proportional.
+
+1344
+00:54:29,760 --> 00:54:34,240
+This is why crossorrelation works in
+
+1345
+00:54:31,680 --> 00:54:36,240
+this way. The output is maximized when
+
+1346
+00:54:34,240 --> 00:54:38,800
+the signal and the template are aligned
+
+1347
+00:54:36,240 --> 00:54:42,839
+in shape. A key idea in pattern
+
+1348
+00:54:38,800 --> 00:54:42,839
+recognition and signal detection.
+
+1349
+00:54:44,480 --> 00:54:49,280
+Here we observe a practical example of
+
+1350
+00:54:46,720 --> 00:54:51,520
+crossorrelation in action. A technique
+
+1351
+00:54:49,280 --> 00:54:54,079
+known as matched filtering widely used
+
+1352
+00:54:51,520 --> 00:54:56,240
+in signal detection.
+
+1353
+00:54:54,079 --> 00:54:58,000
+In the top plot, the blue curve shows a
+
+1354
+00:54:56,240 --> 00:55:00,079
+received signal that includes both the
+
+1355
+00:54:58,000 --> 00:55:02,800
+desired pulse and a lot of background
+
+1356
+00:55:00,079 --> 00:55:04,720
+noise.
+
+1357
+00:55:02,800 --> 00:55:06,880
+The red curve represents the matched
+
+1358
+00:55:04,720 --> 00:55:09,200
+filter, a reference copy of the signal
+
+1359
+00:55:06,880 --> 00:55:10,480
+we're trying to detect.
+
+1360
+00:55:09,200 --> 00:55:13,040
+The bottom plot shows the
+
+1361
+00:55:10,480 --> 00:55:15,280
+crossorrelation output.
+
+1362
+00:55:13,040 --> 00:55:17,520
+Notice the sharp peak centered around 1
+
+1363
+00:55:15,280 --> 00:55:20,000
+second. This is where the receive signal
+
+1364
+00:55:17,520 --> 00:55:21,839
+best aligns with the matched filter.
+
+1365
+00:55:20,000 --> 00:55:23,839
+That spike tells us that the target
+
+1366
+00:55:21,839 --> 00:55:25,440
+signal is present at that location in
+
+1367
+00:55:23,839 --> 00:55:27,520
+time.
+
+1368
+00:55:25,440 --> 00:55:30,000
+This is exactly what the Couchi Schwartz
+
+1369
+00:55:27,520 --> 00:55:32,640
+inequality predicted. The inner product
+
+1370
+00:55:30,000 --> 00:55:37,119
+or correlation reaches its maximum value
+
+1371
+00:55:32,640 --> 00:55:39,119
+when the two signals are best aligned.
+
+1372
+00:55:37,119 --> 00:55:42,000
+Matched filtering like this is essential
+
+1373
+00:55:39,119 --> 00:55:43,760
+in many fields from radar and sonar to
+
+1374
+00:55:42,000 --> 00:55:46,400
+wireless communication and even in
+
+1375
+00:55:43,760 --> 00:55:49,680
+medical imaging anywhere we want to pull
+
+1376
+00:55:46,400 --> 00:55:51,520
+a weak signal out of noisy data.
+
+1377
+00:55:49,680 --> 00:55:55,400
+Crossorrelation gives us a way to do
+
+1378
+00:55:51,520 --> 00:55:55,400
+that precisely and efficiently.
+
+1379
+00:55:57,119 --> 00:56:01,280
+Let's take a look at how convolution
+
+1380
+00:55:59,119 --> 00:56:03,440
+helps with feature extraction,
+
+1381
+00:56:01,280 --> 00:56:05,520
+especially edge detection, which is
+
+1382
+00:56:03,440 --> 00:56:07,680
+fundamental in medical imaging and
+
+1383
+00:56:05,520 --> 00:56:09,760
+computer vision.
+
+1384
+00:56:07,680 --> 00:56:12,000
+In this example, we're applying a soable
+
+1385
+00:56:09,760 --> 00:56:15,440
+filter often used to detect edges in the
+
+1386
+00:56:12,000 --> 00:56:17,200
+horizontal direction.
+
+1387
+00:56:15,440 --> 00:56:19,599
+We begin with the source image
+
+1388
+00:56:17,200 --> 00:56:21,359
+represented as a grid of pixel intensity
+
+1389
+00:56:19,599 --> 00:56:23,920
+values.
+
+1390
+00:56:21,359 --> 00:56:27,200
+The soil kernel shown here as a 3x3
+
+1391
+00:56:23,920 --> 00:56:29,440
+matrix contains weights negative - 1 0
+
+1392
+00:56:27,200 --> 00:56:32,720
+and positive 1 across columns designed
+
+1393
+00:56:29,440 --> 00:56:35,280
+to emphasize horizontal changes.
+
+1394
+00:56:32,720 --> 00:56:38,319
+Here's what happens. We align the filter
+
+1395
+00:56:35,280 --> 00:56:40,079
+over a 3x3 region of the input image.
+
+1396
+00:56:38,319 --> 00:56:41,599
+Then we compute the sum of products
+
+1397
+00:56:40,079 --> 00:56:45,440
+between the kernel weights and the
+
+1398
+00:56:41,599 --> 00:56:46,880
+underlying pixel values.
+
+1399
+00:56:45,440 --> 00:56:49,760
+For instance, at this highlighted
+
+1400
+00:56:46,880 --> 00:56:56,240
+region, the computation looks like this.
+
+1401
+00:56:49,760 --> 00:57:02,240
+1 * 3 + 0 * 0 + 1 * 1 + 2 * 2 + 0 * 6 +
+
+1402
+00:56:56,240 --> 00:57:04,799
+2 * 2 + 1 * 2 + 0 * 4 + 1 * 1. When we
+
+1403
+00:57:02,240 --> 00:57:06,720
+add those up, we get three. That value
+
+1404
+00:57:04,799 --> 00:57:10,079
+becomes the output for the corresponding
+
+1405
+00:57:06,720 --> 00:57:11,920
+destination pixel.
+
+1406
+00:57:10,079 --> 00:57:14,240
+Now, as the filter slides across the
+
+1407
+00:57:11,920 --> 00:57:16,000
+image pixel by pixel, this process
+
+1408
+00:57:14,240 --> 00:57:17,839
+repeats.
+
+1409
+00:57:16,000 --> 00:57:20,000
+Wherever there's a strong horizontal
+
+1410
+00:57:17,839 --> 00:57:21,920
+transition, the filter produces a large
+
+1411
+00:57:20,000 --> 00:57:23,520
+response.
+
+1412
+00:57:21,920 --> 00:57:26,319
+Where the region is uniform, the
+
+1413
+00:57:23,520 --> 00:57:29,280
+response is small or zero.
+
+1414
+00:57:26,319 --> 00:57:31,280
+This is how edge detection works.
+
+1415
+00:57:29,280 --> 00:57:33,359
+It uses convolution to detect where
+
+1416
+00:57:31,280 --> 00:57:35,359
+intensity changes rapidly, allowing us
+
+1417
+00:57:33,359 --> 00:57:38,760
+to extract important structural features
+
+1418
+00:57:35,359 --> 00:57:38,760
+from an image.
+
+1419
+00:57:40,079 --> 00:57:43,760
+To detect edges effectively across all
+
+1420
+00:57:42,319 --> 00:57:46,079
+directions, we apply multiple
+
+1421
+00:57:43,760 --> 00:57:47,839
+convolution filters, each oriented
+
+1422
+00:57:46,079 --> 00:57:49,839
+differently.
+
+1423
+00:57:47,839 --> 00:57:52,079
+The image on the left shows the original
+
+1424
+00:57:49,839 --> 00:57:54,000
+grayscale input. On the right, we see
+
+1425
+00:57:52,079 --> 00:57:55,839
+the result of applying the canny edge
+
+1426
+00:57:54,000 --> 00:57:58,720
+detector, one of the most widely used
+
+1427
+00:57:55,839 --> 00:58:00,559
+edge detection algorithms.
+
+1428
+00:57:58,720 --> 00:58:03,359
+What makes the Canny method powerful is
+
+1429
+00:58:00,559 --> 00:58:05,520
+its multi-stage approach. It starts with
+
+1430
+00:58:03,359 --> 00:58:07,920
+smoothing the image to suppress noise,
+
+1431
+00:58:05,520 --> 00:58:10,400
+then applies gradient-based filters in
+
+1432
+00:58:07,920 --> 00:58:12,079
+horizontal and vertical directions. From
+
+1433
+00:58:10,400 --> 00:58:16,319
+there, it calculates the gradient
+
+1434
+00:58:12,079 --> 00:58:18,559
+magnitude and direction at each pixel.
+
+1435
+00:58:16,319 --> 00:58:20,559
+The algorithm then performs non-maximum
+
+1436
+00:58:18,559 --> 00:58:22,400
+suppression to thin out the edges and
+
+1437
+00:58:20,559 --> 00:58:25,200
+finally applies double thresholding and
+
+1438
+00:58:22,400 --> 00:58:28,480
+edge tracking by hysteresus to preserve
+
+1439
+00:58:25,200 --> 00:58:30,720
+only the most significant contours.
+
+1440
+00:58:28,480 --> 00:58:32,720
+The result is a crisp binary edge map
+
+1441
+00:58:30,720 --> 00:58:37,400
+like the one shown here which highlights
+
+1442
+00:58:32,720 --> 00:58:37,400
+boundaries of objects and fine details.
+
+1443
+00:58:39,040 --> 00:58:44,880
+To sum up, we explored linear systems,
+
+1444
+00:58:41,839 --> 00:58:47,119
+especially shift and variant systems.
+
+1445
+00:58:44,880 --> 00:58:49,040
+We saw how convolution helps compute the
+
+1446
+00:58:47,119 --> 00:58:51,200
+system output.
+
+1447
+00:58:49,040 --> 00:58:52,799
+We saw how crossorrelation relates to
+
+1448
+00:58:51,200 --> 00:58:54,559
+convolution and supports feature
+
+1449
+00:58:52,799 --> 00:58:56,559
+detection.
+
+1450
+00:58:54,559 --> 00:58:58,480
+We learned how decomposing functions
+
+1451
+00:58:56,559 --> 00:59:00,480
+into impulses connects to these
+
+1452
+00:58:58,480 --> 00:59:02,319
+operations.
+
+1453
+00:59:00,480 --> 00:59:04,400
+Convolution can feel tricky at first,
+
+1454
+00:59:02,319 --> 00:59:07,200
+but with practice, it becomes a powerful
+
+1455
+00:59:04,400 --> 00:59:10,599
+intuitive tool.
+
+1456
+00:59:07,200 --> 00:59:10,599
+Thank you all.
+

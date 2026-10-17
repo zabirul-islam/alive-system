@@ -205,7 +205,7 @@ for suf, cap, idx in [("", "Retrieval accuracy on the lecture index", "deployed 
 \tabnotes{""" + idx[0].upper() + idx[1:] + r"""; 50 questions; target-conditioned pause scenarios (Sec.~\ref{sup:retrieval_eval}).
 Each value is the mean over 5 pause draws per question, with a bootstrap 95\% CI over questions. Random = pause uniform over the
 whole current lecture (stress test added after review). Cross-validated $\lambda$ per fold: """ + ", ".join(map(str, rv["cv_chosen_lambdas"])) + r""".
-The original (circular) protocol re-run on this single index gives NDCG@1 """ + f"{orig['semantic']['ndcg1']:.2f}" + r""" (semantic) and """ + f"{orig['timestamp']['ndcg1']:.2f}" + r""" (time-aware);
+The earlier protocol (pause placed on the annotated slide) re-run on this single index gives NDCG@1 """ + f"{orig['semantic']['ndcg1']:.2f}" + r""" (semantic) and """ + f"{orig['timestamp']['ndcg1']:.2f}" + r""" (time-aware);
 the submitted 0.300 and 0.640 came from two different indexes. Paired Wilcoxon tests on NDCG@1 (corrected vs.\ reference method),
 Holm-adjusted over the """ + str(len(rv["tests_ndcg1"])) + r""" tests: """ + tests + r""".}
 \end{table}
